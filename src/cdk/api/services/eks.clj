@@ -981,7 +981,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `addonVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:addon-version` |
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
 | `configurationValues` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-values` |
-| `preserveOnDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preserve-on-delete` |
+| `preserveOnDelete` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-on-delete` |
 | `resolveConflicts` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolve-conflicts` |
 | `serviceAccountRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-account-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1057,10 +1057,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-config` |
-| `encryptionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-config` |
+| `accessConfig` | software.amazon.awscdk.services.eks.CfnCluster$AccessConfigProperty | [[cdk.support/lookup-entry]] | `:access-config` |
+| `encryptionConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:encryption-config` |
 | `kubernetesNetworkConfig` | software.amazon.awscdk.services.eks.CfnCluster$KubernetesNetworkConfigProperty | [[cdk.support/lookup-entry]] | `:kubernetes-network-config` |
-| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
+| `logging` | software.amazon.awscdk.services.eks.CfnCluster$LoggingProperty | [[cdk.support/lookup-entry]] | `:logging` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outpostConfig` | software.amazon.awscdk.services.eks.CfnCluster$OutpostConfigProperty | [[cdk.support/lookup-entry]] | `:outpost-config` |
 | `resourcesVpcConfig` | software.amazon.awscdk.services.eks.CfnCluster$ResourcesVpcConfigProperty | [[cdk.support/lookup-entry]] | `:resources-vpc-config` |
@@ -1112,7 +1112,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabledTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled-types` |
+| `enabledTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:enabled-types` |
 "
   [^CfnCluster$ClusterLoggingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled-types)]
@@ -1233,7 +1233,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clusterLogging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cluster-logging` |
+| `clusterLogging` | software.amazon.awscdk.services.eks.CfnCluster$ClusterLoggingProperty | [[cdk.support/lookup-entry]] | `:cluster-logging` |
 "
   [^CfnCluster$LoggingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cluster-logging)]
@@ -1323,10 +1323,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-config` |
-| `encryptionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-config` |
+| `accessConfig` | software.amazon.awscdk.services.eks.CfnCluster$AccessConfigProperty | [[cdk.support/lookup-entry]] | `:access-config` |
+| `encryptionConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:encryption-config` |
 | `kubernetesNetworkConfig` | software.amazon.awscdk.services.eks.CfnCluster$KubernetesNetworkConfigProperty | [[cdk.support/lookup-entry]] | `:kubernetes-network-config` |
-| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
+| `logging` | software.amazon.awscdk.services.eks.CfnCluster$LoggingProperty | [[cdk.support/lookup-entry]] | `:logging` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outpostConfig` | software.amazon.awscdk.services.eks.CfnCluster$OutpostConfigProperty | [[cdk.support/lookup-entry]] | `:outpost-config` |
 | `resourcesVpcConfig` | software.amazon.awscdk.services.eks.CfnCluster$ResourcesVpcConfigProperty | [[cdk.support/lookup-entry]] | `:resources-vpc-config` |
@@ -1406,8 +1406,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `endpointPrivateAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-private-access` |
-| `endpointPublicAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-public-access` |
+| `endpointPrivateAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:endpoint-private-access` |
+| `endpointPublicAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:endpoint-public-access` |
 | `publicAccessCidrs` | java.util.List | [[cdk.support/lookup-entry]] | `:public-access-cidrs` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
@@ -1563,7 +1563,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `labels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:labels` |
+| `labels` | java.util.List | [[cdk.support/lookup-entry]] | `:labels` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnFargateProfile$SelectorProperty$Builder builder id config]
@@ -1755,10 +1755,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | `capacityType` | java.lang.String | [[cdk.support/lookup-entry]] | `:capacity-type` |
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
 | `diskSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:disk-size` |
-| `forceUpdateEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force-update-enabled` |
+| `forceUpdateEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:force-update-enabled` |
 | `instanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-types` |
 | `labels` | java.util.Map | [[cdk.support/lookup-entry]] | `:labels` |
-| `launchTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template` |
+| `launchTemplate` | software.amazon.awscdk.services.eks.CfnNodegroup$LaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
 | `nodeRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:node-role` |
 | `nodegroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:nodegroup-name` |
 | `releaseVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:release-version` |
@@ -1870,7 +1870,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `diskSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:disk-size` |
 | `forceUpdateEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:force-update-enabled` |
 | `instanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-types` |
-| `labels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:labels` |
+| `labels` | java.util.Map | [[cdk.support/lookup-entry]] | `:labels` |
 | `launchTemplate` | software.amazon.awscdk.services.eks.CfnNodegroup$LaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
 | `nodeRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:node-role` |
 | `nodegroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:nodegroup-name` |

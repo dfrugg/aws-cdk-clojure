@@ -190,7 +190,7 @@
 | `azureAccessTier` | java.lang.String | [[cdk.support/lookup-entry]] | `:azure-access-tier` |
 | `azureBlobAuthenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:azure-blob-authentication-type` |
 | `azureBlobContainerUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:azure-blob-container-url` |
-| `azureBlobSasConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:azure-blob-sas-configuration` |
+| `azureBlobSasConfiguration` | software.amazon.awscdk.services.datasync.CfnLocationAzureBlob$AzureBlobSasConfigurationProperty | [[cdk.support/lookup-entry]] | `:azure-blob-sas-configuration` |
 | `azureBlobType` | java.lang.String | [[cdk.support/lookup-entry]] | `:azure-blob-type` |
 | `subdirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdirectory` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -481,7 +481,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `protocol` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:protocol` |
+| `protocol` | software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP$ProtocolProperty | [[cdk.support/lookup-entry]] | `:protocol` |
 | `securityGroupArns` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-arns` |
 | `storageVirtualMachineArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-virtual-machine-arn` |
 | `subdirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdirectory` |
@@ -549,7 +549,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `mountOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mount-options` |
+| `mountOptions` | software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP$NfsMountOptionsProperty | [[cdk.support/lookup-entry]] | `:mount-options` |
 "
   [^CfnLocationFSxONTAP$NFSProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mount-options)]
@@ -617,7 +617,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `nfs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nfs` |
+| `nfs` | software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP$NFSProperty | [[cdk.support/lookup-entry]] | `:nfs` |
 | `smb` | software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP$SMBProperty | [[cdk.support/lookup-entry]] | `:smb` |
 "
   [^CfnLocationFSxONTAP$ProtocolProperty$Builder builder id config]
@@ -677,7 +677,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
-| `mountOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mount-options` |
+| `mountOptions` | software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP$SmbMountOptionsProperty | [[cdk.support/lookup-entry]] | `:mount-options` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 "
@@ -714,7 +714,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fsxFilesystemArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:fsx-filesystem-arn` |
-| `protocol` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:protocol` |
+| `protocol` | software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS$ProtocolProperty | [[cdk.support/lookup-entry]] | `:protocol` |
 | `securityGroupArns` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-arns` |
 | `subdirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdirectory` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -781,7 +781,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `mountOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mount-options` |
+| `mountOptions` | software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS$MountOptionsProperty | [[cdk.support/lookup-entry]] | `:mount-options` |
 "
   [^CfnLocationFSxOpenZFS$NFSProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mount-options)]
@@ -849,7 +849,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `nfs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nfs` |
+| `nfs` | software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS$NFSProperty | [[cdk.support/lookup-entry]] | `:nfs` |
 "
   [^CfnLocationFSxOpenZFS$ProtocolProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :nfs)]
@@ -976,7 +976,7 @@
 | `kerberosKrb5Conf` | java.lang.String | [[cdk.support/lookup-entry]] | `:kerberos-krb5-conf` |
 | `kerberosPrincipal` | java.lang.String | [[cdk.support/lookup-entry]] | `:kerberos-principal` |
 | `kmsKeyProviderUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-provider-uri` |
-| `nameNodes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:name-nodes` |
+| `nameNodes` | java.util.List | [[cdk.support/lookup-entry]] | `:name-nodes` |
 | `qopConfiguration` | software.amazon.awscdk.services.datasync.CfnLocationHDFS$QopConfigurationProperty | [[cdk.support/lookup-entry]] | `:qop-configuration` |
 | `replicationFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replication-factor` |
 | `simpleUser` | java.lang.String | [[cdk.support/lookup-entry]] | `:simple-user` |
@@ -1071,7 +1071,7 @@
 | `kerberosKrb5Conf` | java.lang.String | [[cdk.support/lookup-entry]] | `:kerberos-krb5-conf` |
 | `kerberosPrincipal` | java.lang.String | [[cdk.support/lookup-entry]] | `:kerberos-principal` |
 | `kmsKeyProviderUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-provider-uri` |
-| `nameNodes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:name-nodes` |
+| `nameNodes` | java.util.List | [[cdk.support/lookup-entry]] | `:name-nodes` |
 | `qopConfiguration` | software.amazon.awscdk.services.datasync.CfnLocationHDFS$QopConfigurationProperty | [[cdk.support/lookup-entry]] | `:qop-configuration` |
 | `replicationFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replication-factor` |
 | `simpleUser` | java.lang.String | [[cdk.support/lookup-entry]] | `:simple-user` |
@@ -1255,8 +1255,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `mountOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mount-options` |
-| `onPremConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-prem-config` |
+| `mountOptions` | software.amazon.awscdk.services.datasync.CfnLocationNFS$MountOptionsProperty | [[cdk.support/lookup-entry]] | `:mount-options` |
+| `onPremConfig` | software.amazon.awscdk.services.datasync.CfnLocationNFS$OnPremConfigProperty | [[cdk.support/lookup-entry]] | `:on-prem-config` |
 | `serverHostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-hostname` |
 | `subdirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdirectory` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1642,7 +1642,7 @@
 | `agentArns` | java.util.List | [[cdk.support/lookup-entry]] | `:agent-arns` |
 | `cloudWatchLogGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-log-group-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `serverConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-configuration` |
+| `serverConfiguration` | software.amazon.awscdk.services.datasync.CfnStorageSystem$ServerConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-configuration` |
 | `serverCredentials` | software.amazon.awscdk.services.datasync.CfnStorageSystem$ServerCredentialsProperty | [[cdk.support/lookup-entry]] | `:server-credentials` |
 | `systemType` | java.lang.String | [[cdk.support/lookup-entry]] | `:system-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1688,7 +1688,7 @@
 | `agentArns` | java.util.List | [[cdk.support/lookup-entry]] | `:agent-arns` |
 | `cloudWatchLogGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-log-group-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `serverConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-configuration` |
+| `serverConfiguration` | software.amazon.awscdk.services.datasync.CfnStorageSystem$ServerConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-configuration` |
 | `serverCredentials` | software.amazon.awscdk.services.datasync.CfnStorageSystem$ServerCredentialsProperty | [[cdk.support/lookup-entry]] | `:server-credentials` |
 | `systemType` | java.lang.String | [[cdk.support/lookup-entry]] | `:system-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1797,13 +1797,13 @@
 | `destinationLocationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-location-arn` |
 | `excludes` | java.util.List | [[cdk.support/lookup-entry]] | `:excludes` |
 | `includes` | java.util.List | [[cdk.support/lookup-entry]] | `:includes` |
-| `manifestConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manifest-config` |
+| `manifestConfig` | software.amazon.awscdk.services.datasync.CfnTask$ManifestConfigProperty | [[cdk.support/lookup-entry]] | `:manifest-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `options` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:options` |
+| `options` | software.amazon.awscdk.services.datasync.CfnTask$OptionsProperty | [[cdk.support/lookup-entry]] | `:options` |
 | `schedule` | software.amazon.awscdk.services.datasync.CfnTask$TaskScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `sourceLocationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-location-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `taskReportConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-report-config` |
+| `taskReportConfig` | software.amazon.awscdk.services.datasync.CfnTask$TaskReportConfigProperty | [[cdk.support/lookup-entry]] | `:task-report-config` |
 "
   [^CfnTask$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-log-group-arn)]
@@ -1879,7 +1879,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.datasync.CfnTask$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnTask$DestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3)]
@@ -1940,7 +1940,7 @@
 |---|---|---|---|
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
+| `source` | software.amazon.awscdk.services.datasync.CfnTask$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnTask$ManifestConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action)]
@@ -2079,10 +2079,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deleted` |
-| `skipped` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:skipped` |
+| `deleted` | software.amazon.awscdk.services.datasync.CfnTask$DeletedProperty | [[cdk.support/lookup-entry]] | `:deleted` |
+| `skipped` | software.amazon.awscdk.services.datasync.CfnTask$SkippedProperty | [[cdk.support/lookup-entry]] | `:skipped` |
 | `transferred` | software.amazon.awscdk.services.datasync.CfnTask$TransferredProperty | [[cdk.support/lookup-entry]] | `:transferred` |
-| `verified` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:verified` |
+| `verified` | software.amazon.awscdk.services.datasync.CfnTask$VerifiedProperty | [[cdk.support/lookup-entry]] | `:verified` |
 "
   [^CfnTask$OverridesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :deleted)]
@@ -2126,7 +2126,7 @@
 | `schedule` | software.amazon.awscdk.services.datasync.CfnTask$TaskScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `sourceLocationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-location-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `taskReportConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-report-config` |
+| `taskReportConfig` | software.amazon.awscdk.services.datasync.CfnTask$TaskReportConfigProperty | [[cdk.support/lookup-entry]] | `:task-report-config` |
 "
   [^CfnTaskProps$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-log-group-arn)]
@@ -2236,7 +2236,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.datasync.CfnTask$ManifestConfigSourceS3Property | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnTask$SourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3)]

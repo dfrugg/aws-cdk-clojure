@@ -105,7 +105,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `startAfter` | java.util.List | [[cdk.support/lookup-entry]] | `:start-after` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.Map | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action-id)]
@@ -268,10 +268,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `resourceArns` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-arns` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:resource-tags` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 | `selectionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:selection-mode` |
 "

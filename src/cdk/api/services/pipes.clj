@@ -289,8 +289,8 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `desiredState` | java.lang.String | [[cdk.support/lookup-entry]] | `:desired-state` |
 | `enrichment` | java.lang.String | [[cdk.support/lookup-entry]] | `:enrichment` |
-| `enrichmentParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enrichment-parameters` |
-| `logConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-configuration` |
+| `enrichmentParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeEnrichmentParametersProperty | [[cdk.support/lookup-entry]] | `:enrichment-parameters` |
+| `logConfiguration` | software.amazon.awscdk.services.pipes.CfnPipe$PipeLogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
@@ -638,9 +638,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-overrides` |
+| `containerOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:container-overrides` |
 | `cpu` | java.lang.String | [[cdk.support/lookup-entry]] | `:cpu` |
-| `ephemeralStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
+| `ephemeralStorage` | software.amazon.awscdk.services.pipes.CfnPipe$EcsEphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `inferenceAcceleratorOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:inference-accelerator-overrides` |
 | `memory` | java.lang.String | [[cdk.support/lookup-entry]] | `:memory` |
@@ -827,7 +827,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsvpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:awsvpc-configuration` |
+| `awsvpcConfiguration` | software.amazon.awscdk.services.pipes.CfnPipe$AwsVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:awsvpc-configuration` |
 "
   [^CfnPipe$NetworkConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :awsvpc-configuration)]
@@ -855,9 +855,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `headerParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-parameters` |
+| `headerParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:header-parameters` |
 | `pathParameterValues` | java.util.List | [[cdk.support/lookup-entry]] | `:path-parameter-values` |
-| `queryStringParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-string-parameters` |
+| `queryStringParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:query-string-parameters` |
 "
   [^CfnPipe$PipeEnrichmentHttpParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :header-parameters)]
@@ -889,7 +889,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `httpParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-parameters` |
+| `httpParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeEnrichmentHttpParametersProperty | [[cdk.support/lookup-entry]] | `:http-parameters` |
 | `inputTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-template` |
 "
   [^CfnPipe$PipeEnrichmentParametersProperty$Builder builder id config]
@@ -920,11 +920,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudwatchLogsLogDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloudwatch-logs-log-destination` |
-| `firehoseLogDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firehose-log-destination` |
+| `cloudwatchLogsLogDestination` | software.amazon.awscdk.services.pipes.CfnPipe$CloudwatchLogsLogDestinationProperty | [[cdk.support/lookup-entry]] | `:cloudwatch-logs-log-destination` |
+| `firehoseLogDestination` | software.amazon.awscdk.services.pipes.CfnPipe$FirehoseLogDestinationProperty | [[cdk.support/lookup-entry]] | `:firehose-log-destination` |
 | `includeExecutionData` | java.util.List | [[cdk.support/lookup-entry]] | `:include-execution-data` |
 | `level` | java.lang.String | [[cdk.support/lookup-entry]] | `:level` |
-| `s3LogDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-log-destination` |
+| `s3LogDestination` | software.amazon.awscdk.services.pipes.CfnPipe$S3LogDestinationProperty | [[cdk.support/lookup-entry]] | `:s3-log-destination` |
 "
   [^CfnPipe$PipeLogConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloudwatch-logs-log-destination)]
@@ -1047,7 +1047,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
-| `deadLetterConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
+| `deadLetterConfig` | software.amazon.awscdk.services.pipes.CfnPipe$DeadLetterConfigProperty | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
 | `maximumBatchingWindowInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-batching-window-in-seconds` |
 | `maximumRecordAgeInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-record-age-in-seconds` |
 | `maximumRetryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-retry-attempts` |
@@ -1141,13 +1141,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activeMqBrokerParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active-mq-broker-parameters` |
-| `dynamoDbStreamParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-db-stream-parameters` |
+| `activeMqBrokerParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeSourceActiveMQBrokerParametersProperty | [[cdk.support/lookup-entry]] | `:active-mq-broker-parameters` |
+| `dynamoDbStreamParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeSourceDynamoDBStreamParametersProperty | [[cdk.support/lookup-entry]] | `:dynamo-db-stream-parameters` |
 | `filterCriteria` | software.amazon.awscdk.services.pipes.CfnPipe$FilterCriteriaProperty | [[cdk.support/lookup-entry]] | `:filter-criteria` |
 | `kinesisStreamParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeSourceKinesisStreamParametersProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-parameters` |
-| `managedStreamingKafkaParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:managed-streaming-kafka-parameters` |
+| `managedStreamingKafkaParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeSourceManagedStreamingKafkaParametersProperty | [[cdk.support/lookup-entry]] | `:managed-streaming-kafka-parameters` |
 | `rabbitMqBrokerParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeSourceRabbitMQBrokerParametersProperty | [[cdk.support/lookup-entry]] | `:rabbit-mq-broker-parameters` |
-| `selfManagedKafkaParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-kafka-parameters` |
+| `selfManagedKafkaParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeSourceSelfManagedKafkaParametersProperty | [[cdk.support/lookup-entry]] | `:self-managed-kafka-parameters` |
 | `sqsQueueParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeSourceSqsQueueParametersProperty | [[cdk.support/lookup-entry]] | `:sqs-queue-parameters` |
 "
   [^CfnPipe$PipeSourceParametersProperty$Builder builder id config]
@@ -1233,7 +1233,7 @@
 | `additionalBootstrapServers` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-bootstrap-servers` |
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
 | `consumerGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:consumer-group-id` |
-| `credentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:credentials` |
+| `credentials` | software.amazon.awscdk.services.pipes.CfnPipe$SelfManagedKafkaAccessConfigurationCredentialsProperty | [[cdk.support/lookup-entry]] | `:credentials` |
 | `maximumBatchingWindowInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-batching-window-in-seconds` |
 | `serverRootCaCertificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-root-ca-certificate` |
 | `startingPosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:starting-position` |
@@ -1314,12 +1314,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arrayProperties` | software.amazon.awscdk.services.pipes.CfnPipe$BatchArrayPropertiesProperty | [[cdk.support/lookup-entry]] | `:array-properties` |
-| `containerOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-overrides` |
+| `containerOverrides` | software.amazon.awscdk.services.pipes.CfnPipe$BatchContainerOverridesProperty | [[cdk.support/lookup-entry]] | `:container-overrides` |
 | `dependsOn` | java.util.List | [[cdk.support/lookup-entry]] | `:depends-on` |
 | `jobDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition` |
 | `jobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
-| `retryStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-strategy` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
+| `retryStrategy` | software.amazon.awscdk.services.pipes.CfnPipe$BatchRetryStrategyProperty | [[cdk.support/lookup-entry]] | `:retry-strategy` |
 "
   [^CfnPipe$PipeTargetBatchJobParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :array-properties)]
@@ -1392,13 +1392,13 @@
 |---|---|---|---|
 | `capacityProviderStrategy` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
 | `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
-| `enableExecuteCommand` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
+| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
 | `group` | java.lang.String | [[cdk.support/lookup-entry]] | `:group` |
 | `launchType` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-type` |
 | `networkConfiguration` | software.amazon.awscdk.services.pipes.CfnPipe$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `overrides` | software.amazon.awscdk.services.pipes.CfnPipe$EcsTaskOverrideProperty | [[cdk.support/lookup-entry]] | `:overrides` |
 | `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-strategy` |
+| `placementStrategy` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategy` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
 | `propagateTags` | java.lang.String | [[cdk.support/lookup-entry]] | `:propagate-tags` |
 | `referenceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:reference-id` |
@@ -1500,9 +1500,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `headerParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-parameters` |
+| `headerParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:header-parameters` |
 | `pathParameterValues` | java.util.List | [[cdk.support/lookup-entry]] | `:path-parameter-values` |
-| `queryStringParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-string-parameters` |
+| `queryStringParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:query-string-parameters` |
 "
   [^CfnPipe$PipeTargetHttpParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :header-parameters)]
@@ -1591,16 +1591,16 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchJobParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetBatchJobParametersProperty | [[cdk.support/lookup-entry]] | `:batch-job-parameters` |
-| `cloudWatchLogsParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-parameters` |
-| `ecsTaskParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecs-task-parameters` |
-| `eventBridgeEventBusParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-bridge-event-bus-parameters` |
+| `cloudWatchLogsParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetCloudWatchLogsParametersProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-parameters` |
+| `ecsTaskParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetEcsTaskParametersProperty | [[cdk.support/lookup-entry]] | `:ecs-task-parameters` |
+| `eventBridgeEventBusParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetEventBridgeEventBusParametersProperty | [[cdk.support/lookup-entry]] | `:event-bridge-event-bus-parameters` |
 | `httpParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetHttpParametersProperty | [[cdk.support/lookup-entry]] | `:http-parameters` |
 | `inputTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-template` |
 | `kinesisStreamParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetKinesisStreamParametersProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-parameters` |
 | `lambdaFunctionParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetLambdaFunctionParametersProperty | [[cdk.support/lookup-entry]] | `:lambda-function-parameters` |
-| `redshiftDataParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redshift-data-parameters` |
-| `sageMakerPipelineParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sage-maker-pipeline-parameters` |
-| `sqsQueueParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs-queue-parameters` |
+| `redshiftDataParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetRedshiftDataParametersProperty | [[cdk.support/lookup-entry]] | `:redshift-data-parameters` |
+| `sageMakerPipelineParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetSageMakerPipelineParametersProperty | [[cdk.support/lookup-entry]] | `:sage-maker-pipeline-parameters` |
+| `sqsQueueParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetSqsQueueParametersProperty | [[cdk.support/lookup-entry]] | `:sqs-queue-parameters` |
 | `stepFunctionStateMachineParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeTargetStateMachineParametersProperty | [[cdk.support/lookup-entry]] | `:step-function-state-machine-parameters` |
 "
   [^CfnPipe$PipeTargetParametersProperty$Builder builder id config]
@@ -1656,7 +1656,7 @@
 | `secretManagerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-manager-arn` |
 | `sqls` | java.util.List | [[cdk.support/lookup-entry]] | `:sqls` |
 | `statementName` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement-name` |
-| `withEvent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:with-event` |
+| `withEvent` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:with-event` |
 "
   [^CfnPipe$PipeTargetRedshiftDataParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :database)]
@@ -1694,7 +1694,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pipelineParameterList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-parameter-list` |
+| `pipelineParameterList` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-parameter-list` |
 "
   [^CfnPipe$PipeTargetSageMakerPipelineParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pipeline-parameter-list)]
@@ -1846,8 +1846,8 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `desiredState` | java.lang.String | [[cdk.support/lookup-entry]] | `:desired-state` |
 | `enrichment` | java.lang.String | [[cdk.support/lookup-entry]] | `:enrichment` |
-| `enrichmentParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enrichment-parameters` |
-| `logConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-configuration` |
+| `enrichmentParameters` | software.amazon.awscdk.services.pipes.CfnPipe$PipeEnrichmentParametersProperty | [[cdk.support/lookup-entry]] | `:enrichment-parameters` |
+| `logConfiguration` | software.amazon.awscdk.services.pipes.CfnPipe$PipeLogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |

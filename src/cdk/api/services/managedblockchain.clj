@@ -130,8 +130,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invitationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:invitation-id` |
-| `memberConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:member-configuration` |
-| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `memberConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$MemberConfigurationProperty | [[cdk.support/lookup-entry]] | `:member-configuration` |
+| `networkConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `networkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-id` |
 "
   [^CfnMember$Builder builder id config]
@@ -231,7 +231,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `memberFabricConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:member-fabric-configuration` |
+| `memberFabricConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$MemberFabricConfigurationProperty | [[cdk.support/lookup-entry]] | `:member-fabric-configuration` |
 "
   [^CfnMember$MemberFrameworkConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :member-fabric-configuration)]
@@ -263,7 +263,7 @@
 | `framework` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework` |
 | `frameworkVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `networkFrameworkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-framework-configuration` |
+| `networkFrameworkConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$NetworkFrameworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-framework-configuration` |
 | `votingPolicy` | software.amazon.awscdk.services.managedblockchain.CfnMember$VotingPolicyProperty | [[cdk.support/lookup-entry]] | `:voting-policy` |
 "
   [^CfnMember$NetworkConfigurationProperty$Builder builder id config]
@@ -330,7 +330,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `networkFabricConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-fabric-configuration` |
+| `networkFabricConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$NetworkFabricConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-fabric-configuration` |
 "
   [^CfnMember$NetworkFrameworkConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :network-fabric-configuration)]
@@ -359,8 +359,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invitationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:invitation-id` |
-| `memberConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:member-configuration` |
-| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `memberConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$MemberConfigurationProperty | [[cdk.support/lookup-entry]] | `:member-configuration` |
+| `networkConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `networkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-id` |
 "
   [^CfnMemberProps$Builder builder id config]
@@ -395,7 +395,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `approvalThresholdPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:approval-threshold-policy` |
+| `approvalThresholdPolicy` | software.amazon.awscdk.services.managedblockchain.CfnMember$ApprovalThresholdPolicyProperty | [[cdk.support/lookup-entry]] | `:approval-threshold-policy` |
 "
   [^CfnMember$VotingPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :approval-threshold-policy)]

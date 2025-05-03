@@ -934,7 +934,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `metricStat` | software.amazon.awscdk.services.cloudwatch.CfnAlarm$MetricStatProperty | [[cdk.support/lookup-entry]] | `:metric-stat` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
-| `returnData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:return-data` |
+| `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |
 "
   [^CfnAlarm$MetricDataQueryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :account-id)]
@@ -1008,7 +1008,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric` |
+| `metric` | software.amazon.awscdk.services.cloudwatch.CfnAlarm$MetricProperty | [[cdk.support/lookup-entry]] | `:metric` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
@@ -1057,7 +1057,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `extendedStatistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:extended-statistic` |
 | `insufficientDataActions` | java.util.List | [[cdk.support/lookup-entry]] | `:insufficient-data-actions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
-| `metrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metrics` |
+| `metrics` | java.util.List | [[cdk.support/lookup-entry]] | `:metrics` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 | `okActions` | java.util.List | [[cdk.support/lookup-entry]] | `:ok-actions` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
@@ -1138,7 +1138,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `configuration` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$ConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
-| `metricCharacteristics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-characteristics` |
+| `metricCharacteristics` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$MetricCharacteristicsProperty | [[cdk.support/lookup-entry]] | `:metric-characteristics` |
 | `metricMathAnomalyDetector` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$MetricMathAnomalyDetectorProperty | [[cdk.support/lookup-entry]] | `:metric-math-anomaly-detector` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
@@ -1281,7 +1281,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `metricStat` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$MetricStatProperty | [[cdk.support/lookup-entry]] | `:metric-stat` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
-| `returnData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:return-data` |
+| `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |
 "
   [^CfnAnomalyDetector$MetricDataQueryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :account-id)]
@@ -1321,7 +1321,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metricDataQueries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
+| `metricDataQueries` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
 "
   [^CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :metric-data-queries)]
@@ -1383,7 +1383,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric` |
+| `metric` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$MetricProperty | [[cdk.support/lookup-entry]] | `:metric` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
@@ -1422,7 +1422,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `configuration` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$ConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
-| `metricCharacteristics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-characteristics` |
+| `metricCharacteristics` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$MetricCharacteristicsProperty | [[cdk.support/lookup-entry]] | `:metric-characteristics` |
 | `metricMathAnomalyDetector` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$MetricMathAnomalyDetectorProperty | [[cdk.support/lookup-entry]] | `:metric-math-anomaly-detector` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
@@ -1792,14 +1792,14 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludeFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-filters` |
+| `excludeFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-filters` |
 | `firehoseArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:firehose-arn` |
 | `includeFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:include-filters` |
 | `includeLinkedAccountsMetrics` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-linked-accounts-metrics` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-format` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `statisticsConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statistics-configurations` |
+| `statisticsConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:statistics-configurations` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMetricStream$Builder builder id config]
@@ -1876,7 +1876,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `additionalStatistics` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-statistics` |
-| `includeMetrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-metrics` |
+| `includeMetrics` | java.util.List | [[cdk.support/lookup-entry]] | `:include-metrics` |
 "
   [^CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :additional-statistics)]
@@ -1937,10 +1937,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludeFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-filters` |
+| `excludeFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-filters` |
 | `firehoseArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:firehose-arn` |
 | `includeFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:include-filters` |
-| `includeLinkedAccountsMetrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-linked-accounts-metrics` |
+| `includeLinkedAccountsMetrics` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-linked-accounts-metrics` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-format` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |

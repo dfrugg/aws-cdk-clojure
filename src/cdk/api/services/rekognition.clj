@@ -184,8 +184,8 @@
 |---|---|---|---|
 | `boundingBoxRegionsOfInterest` | java.util.List | [[cdk.support/lookup-entry]] | `:bounding-box-regions-of-interest` |
 | `connectedHomeSettings` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$ConnectedHomeSettingsProperty | [[cdk.support/lookup-entry]] | `:connected-home-settings` |
-| `dataSharingPreference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-sharing-preference` |
-| `faceSearchSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:face-search-settings` |
+| `dataSharingPreference` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$DataSharingPreferenceProperty | [[cdk.support/lookup-entry]] | `:data-sharing-preference` |
+| `faceSearchSettings` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$FaceSearchSettingsProperty | [[cdk.support/lookup-entry]] | `:face-search-settings` |
 | `kinesisDataStream` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$KinesisDataStreamProperty | [[cdk.support/lookup-entry]] | `:kinesis-data-stream` |
 | `kinesisVideoStream` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$KinesisVideoStreamProperty | [[cdk.support/lookup-entry]] | `:kinesis-video-stream` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
@@ -453,16 +453,16 @@
 |---|---|---|---|
 | `boundingBoxRegionsOfInterest` | java.util.List | [[cdk.support/lookup-entry]] | `:bounding-box-regions-of-interest` |
 | `connectedHomeSettings` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$ConnectedHomeSettingsProperty | [[cdk.support/lookup-entry]] | `:connected-home-settings` |
-| `dataSharingPreference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-sharing-preference` |
-| `faceSearchSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:face-search-settings` |
+| `dataSharingPreference` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$DataSharingPreferenceProperty | [[cdk.support/lookup-entry]] | `:data-sharing-preference` |
+| `faceSearchSettings` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$FaceSearchSettingsProperty | [[cdk.support/lookup-entry]] | `:face-search-settings` |
 | `kinesisDataStream` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$KinesisDataStreamProperty | [[cdk.support/lookup-entry]] | `:kinesis-data-stream` |
 | `kinesisVideoStream` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$KinesisVideoStreamProperty | [[cdk.support/lookup-entry]] | `:kinesis-video-stream` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `notificationChannel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-channel` |
+| `notificationChannel` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$NotificationChannelProperty | [[cdk.support/lookup-entry]] | `:notification-channel` |
 | `polygonRegionsOfInterest` | java.lang.Object | [[cdk.support/lookup-entry]] | `:polygon-regions-of-interest` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `s3Destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination` |
+| `s3Destination` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamProcessorProps$Builder builder id config]

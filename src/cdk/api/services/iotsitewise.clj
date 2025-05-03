@@ -52,9 +52,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `iamRole` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iam-role` |
+| `iamRole` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$IamRoleProperty | [[cdk.support/lookup-entry]] | `:iam-role` |
 | `iamUser` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$IamUserProperty | [[cdk.support/lookup-entry]] | `:iam-user` |
-| `user` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user` |
+| `user` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$UserProperty | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^CfnAccessPolicy$AccessPolicyIdentityProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :iam-role)]
@@ -87,7 +87,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `portal` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$PortalProperty | [[cdk.support/lookup-entry]] | `:portal` |
-| `project` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:project` |
+| `project` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$ProjectProperty | [[cdk.support/lookup-entry]] | `:project` |
 "
   [^CfnAccessPolicy$AccessPolicyResourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :portal)]
@@ -119,7 +119,7 @@
 |---|---|---|---|
 | `accessPolicyIdentity` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$AccessPolicyIdentityProperty | [[cdk.support/lookup-entry]] | `:access-policy-identity` |
 | `accessPolicyPermission` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-policy-permission` |
-| `accessPolicyResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-policy-resource` |
+| `accessPolicyResource` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$AccessPolicyResourceProperty | [[cdk.support/lookup-entry]] | `:access-policy-resource` |
 "
   [^CfnAccessPolicy$Builder builder id config]
   (when-some [data (lookup-entry config id :access-policy-identity)]
@@ -263,9 +263,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessPolicyIdentity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-policy-identity` |
+| `accessPolicyIdentity` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$AccessPolicyIdentityProperty | [[cdk.support/lookup-entry]] | `:access-policy-identity` |
 | `accessPolicyPermission` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-policy-permission` |
-| `accessPolicyResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-policy-resource` |
+| `accessPolicyResource` | software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy$AccessPolicyResourceProperty | [[cdk.support/lookup-entry]] | `:access-policy-resource` |
 "
   [^CfnAccessPolicyProps$Builder builder id config]
   (when-some [data (lookup-entry config id :access-policy-identity)]
@@ -407,10 +407,10 @@
 |---|---|---|---|
 | `assetDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-description` |
 | `assetExternalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-external-id` |
-| `assetHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:asset-hierarchies` |
+| `assetHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-hierarchies` |
 | `assetModelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-id` |
 | `assetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-name` |
-| `assetProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:asset-properties` |
+| `assetProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAsset$Builder builder id config]
@@ -452,7 +452,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `composedAssetModelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:composed-asset-model-id` |
-| `compositeModelProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:composite-model-properties` |
+| `compositeModelProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:composite-model-properties` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `externalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:external-id` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
@@ -623,9 +623,9 @@
 | `assetModelCompositeModels` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-model-composite-models` |
 | `assetModelDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-description` |
 | `assetModelExternalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-external-id` |
-| `assetModelHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:asset-model-hierarchies` |
+| `assetModelHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-model-hierarchies` |
 | `assetModelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-name` |
-| `assetModelProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:asset-model-properties` |
+| `assetModelProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-model-properties` |
 | `assetModelType` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -702,7 +702,7 @@
 |---|---|---|---|
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 | `variables` | java.util.List | [[cdk.support/lookup-entry]] | `:variables` |
-| `window` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:window` |
+| `window` | software.amazon.awscdk.services.iotsitewise.CfnAssetModel$MetricWindowProperty | [[cdk.support/lookup-entry]] | `:window` |
 "
   [^CfnAssetModel$MetricProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :expression)]
@@ -734,7 +734,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tumbling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tumbling` |
+| `tumbling` | software.amazon.awscdk.services.iotsitewise.CfnAssetModel$TumblingWindowProperty | [[cdk.support/lookup-entry]] | `:tumbling` |
 "
   [^CfnAssetModel$MetricWindowProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :tumbling)]
@@ -790,9 +790,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attribute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute` |
+| `attribute` | software.amazon.awscdk.services.iotsitewise.CfnAssetModel$AttributeProperty | [[cdk.support/lookup-entry]] | `:attribute` |
 | `metric` | software.amazon.awscdk.services.iotsitewise.CfnAssetModel$MetricProperty | [[cdk.support/lookup-entry]] | `:metric` |
-| `transform` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transform` |
+| `transform` | software.amazon.awscdk.services.iotsitewise.CfnAssetModel$TransformProperty | [[cdk.support/lookup-entry]] | `:transform` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
 "
   [^CfnAssetModel$PropertyTypeProperty$Builder builder id config]
@@ -832,7 +832,7 @@
 | `assetModelExternalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-external-id` |
 | `assetModelHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-model-hierarchies` |
 | `assetModelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-name` |
-| `assetModelProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:asset-model-properties` |
+| `assetModelProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-model-properties` |
 | `assetModelType` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -877,7 +877,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
-| `variables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variables` |
+| `variables` | java.util.List | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnAssetModel$TransformProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :expression)]
@@ -989,7 +989,7 @@
 | `assetHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-hierarchies` |
 | `assetModelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-model-id` |
 | `assetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:asset-name` |
-| `assetProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:asset-properties` |
+| `assetProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAssetProps$Builder builder id config]
@@ -1179,7 +1179,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `greengrass` | software.amazon.awscdk.services.iotsitewise.CfnGateway$GreengrassProperty | [[cdk.support/lookup-entry]] | `:greengrass` |
-| `greengrassV2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:greengrass-v2` |
+| `greengrassV2` | software.amazon.awscdk.services.iotsitewise.CfnGateway$GreengrassV2Property | [[cdk.support/lookup-entry]] | `:greengrass-v2` |
 "
   [^CfnGateway$GatewayPlatformProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :greengrass)]

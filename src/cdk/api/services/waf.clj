@@ -140,7 +140,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `byteMatchTuples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:byte-match-tuples` |
+| `byteMatchTuples` | java.util.List | [[cdk.support/lookup-entry]] | `:byte-match-tuples` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnByteMatchSetProps$Builder builder id config]
@@ -233,7 +233,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ipSetDescriptors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-set-descriptors` |
+| `ipSetDescriptors` | java.util.List | [[cdk.support/lookup-entry]] | `:ip-set-descriptors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnIPSetProps$Builder builder id config]
@@ -429,7 +429,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sizeConstraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size-constraints` |
+| `sizeConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:size-constraints` |
 "
   [^CfnSizeConstraintSetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -460,7 +460,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `comparisonOperator` | java.lang.String | [[cdk.support/lookup-entry]] | `:comparison-operator` |
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.waf.CfnSizeConstraintSet$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
 | `textTransformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-transformation` |
 "
@@ -559,7 +559,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sqlInjectionMatchTuples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sql-injection-match-tuples` |
+| `sqlInjectionMatchTuples` | java.util.List | [[cdk.support/lookup-entry]] | `:sql-injection-match-tuples` |
 "
   [^CfnSqlInjectionMatchSetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -620,7 +620,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
+| `action` | software.amazon.awscdk.services.waf.CfnWebACL$WafActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `ruleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-id` |
 "
@@ -654,10 +654,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-action` |
+| `defaultAction` | software.amazon.awscdk.services.waf.CfnWebACL$WafActionProperty | [[cdk.support/lookup-entry]] | `:default-action` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnWebACL$Builder builder id config]
   (when-some [data (lookup-entry config id :default-action)]
@@ -691,10 +691,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-action` |
+| `defaultAction` | software.amazon.awscdk.services.waf.CfnWebACL$WafActionProperty | [[cdk.support/lookup-entry]] | `:default-action` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnWebACLProps$Builder builder id config]
   (when-some [data (lookup-entry config id :default-action)]
@@ -819,7 +819,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `xssMatchTuples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xss-match-tuples` |
+| `xssMatchTuples` | java.util.List | [[cdk.support/lookup-entry]] | `:xss-match-tuples` |
 "
   [^CfnXssMatchSetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]

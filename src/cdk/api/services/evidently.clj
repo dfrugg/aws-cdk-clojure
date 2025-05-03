@@ -39,17 +39,17 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `metricGoals` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-goals` |
+| `metricGoals` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-goals` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `onlineAbConfig` | software.amazon.awscdk.services.evidently.CfnExperiment$OnlineAbConfigObjectProperty | [[cdk.support/lookup-entry]] | `:online-ab-config` |
 | `project` | java.lang.String | [[cdk.support/lookup-entry]] | `:project` |
 | `randomizationSalt` | java.lang.String | [[cdk.support/lookup-entry]] | `:randomization-salt` |
-| `removeSegment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-segment` |
-| `runningStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:running-status` |
+| `removeSegment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-segment` |
+| `runningStatus` | software.amazon.awscdk.services.evidently.CfnExperiment$RunningStatusObjectProperty | [[cdk.support/lookup-entry]] | `:running-status` |
 | `samplingRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sampling-rate` |
 | `segment` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `treatments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:treatments` |
+| `treatments` | java.util.List | [[cdk.support/lookup-entry]] | `:treatments` |
 "
   [^CfnExperiment$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -143,7 +143,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `controlTreatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:control-treatment-name` |
-| `treatmentWeights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:treatment-weights` |
+| `treatmentWeights` | java.util.List | [[cdk.support/lookup-entry]] | `:treatment-weights` |
 "
   [^CfnExperiment$OnlineAbConfigObjectProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :control-treatment-name)]
@@ -179,12 +179,12 @@
 | `onlineAbConfig` | software.amazon.awscdk.services.evidently.CfnExperiment$OnlineAbConfigObjectProperty | [[cdk.support/lookup-entry]] | `:online-ab-config` |
 | `project` | java.lang.String | [[cdk.support/lookup-entry]] | `:project` |
 | `randomizationSalt` | java.lang.String | [[cdk.support/lookup-entry]] | `:randomization-salt` |
-| `removeSegment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-segment` |
-| `runningStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:running-status` |
+| `removeSegment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-segment` |
+| `runningStatus` | software.amazon.awscdk.services.evidently.CfnExperiment$RunningStatusObjectProperty | [[cdk.support/lookup-entry]] | `:running-status` |
 | `samplingRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sampling-rate` |
 | `segment` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `treatments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:treatments` |
+| `treatments` | java.util.List | [[cdk.support/lookup-entry]] | `:treatments` |
 "
   [^CfnExperimentProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -468,7 +468,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `booleanValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:boolean-value` |
+| `booleanValue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:boolean-value` |
 | `doubleValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:double-value` |
 | `longValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:long-value` |
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
@@ -509,7 +509,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `executionStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution-status` |
+| `executionStatus` | software.amazon.awscdk.services.evidently.CfnLaunch$ExecutionStatusObjectProperty | [[cdk.support/lookup-entry]] | `:execution-status` |
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
 | `metricMonitors` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -703,13 +703,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `executionStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution-status` |
+| `executionStatus` | software.amazon.awscdk.services.evidently.CfnLaunch$ExecutionStatusObjectProperty | [[cdk.support/lookup-entry]] | `:execution-status` |
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
 | `metricMonitors` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `project` | java.lang.String | [[cdk.support/lookup-entry]] | `:project` |
 | `randomizationSalt` | java.lang.String | [[cdk.support/lookup-entry]] | `:randomization-salt` |
-| `scheduledSplitsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduled-splits-config` |
+| `scheduledSplitsConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:scheduled-splits-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLaunchProps$Builder builder id config]
@@ -788,7 +788,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `groupWeights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-weights` |
+| `groupWeights` | java.util.List | [[cdk.support/lookup-entry]] | `:group-weights` |
 | `segmentOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:segment-overrides` |
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 "
@@ -853,7 +853,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `appConfigResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:app-config-resource` |
+| `appConfigResource` | software.amazon.awscdk.services.evidently.CfnProject$AppConfigResourceObjectProperty | [[cdk.support/lookup-entry]] | `:app-config-resource` |
 | `dataDelivery` | software.amazon.awscdk.services.evidently.CfnProject$DataDeliveryObjectProperty | [[cdk.support/lookup-entry]] | `:data-delivery` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -894,7 +894,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.evidently.CfnProject$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnProject$DataDeliveryObjectProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :log-group)]

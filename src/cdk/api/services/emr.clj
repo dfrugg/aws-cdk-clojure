@@ -81,7 +81,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-info` |
+| `additionalInfo` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-info` |
 | `args` | java.util.List | [[cdk.support/lookup-entry]] | `:args` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
@@ -119,7 +119,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `constraints` | software.amazon.awscdk.services.emr.CfnCluster$ScalingConstraintsProperty | [[cdk.support/lookup-entry]] | `:constraints` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnCluster$AutoScalingPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :constraints)]
@@ -178,7 +178,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `scriptBootstrapAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:script-bootstrap-action` |
+| `scriptBootstrapAction` | software.amazon.awscdk.services.emr.CfnCluster$ScriptBootstrapActionConfigProperty | [[cdk.support/lookup-entry]] | `:script-bootstrap-action` |
 "
   [^CfnCluster$BootstrapActionConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -212,21 +212,21 @@
 | `applications` | java.util.List | [[cdk.support/lookup-entry]] | `:applications` |
 | `autoScalingRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-role` |
 | `autoTerminationPolicy` | software.amazon.awscdk.services.emr.CfnCluster$AutoTerminationPolicyProperty | [[cdk.support/lookup-entry]] | `:auto-termination-policy` |
-| `bootstrapActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bootstrap-actions` |
-| `configurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configurations` |
+| `bootstrapActions` | java.util.List | [[cdk.support/lookup-entry]] | `:bootstrap-actions` |
+| `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 | `customAmiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-ami-id` |
 | `ebsRootVolumeIops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ebs-root-volume-iops` |
 | `ebsRootVolumeSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ebs-root-volume-size` |
 | `ebsRootVolumeThroughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ebs-root-volume-throughput` |
 | `instances` | software.amazon.awscdk.services.emr.CfnCluster$JobFlowInstancesConfigProperty | [[cdk.support/lookup-entry]] | `:instances` |
 | `jobFlowRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-flow-role` |
-| `kerberosAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kerberos-attributes` |
+| `kerberosAttributes` | software.amazon.awscdk.services.emr.CfnCluster$KerberosAttributesProperty | [[cdk.support/lookup-entry]] | `:kerberos-attributes` |
 | `logEncryptionKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-encryption-kms-key-id` |
 | `logUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-uri` |
 | `managedScalingPolicy` | software.amazon.awscdk.services.emr.CfnCluster$ManagedScalingPolicyProperty | [[cdk.support/lookup-entry]] | `:managed-scaling-policy` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `osReleaseLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:os-release-label` |
-| `placementGroupConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-group-configs` |
+| `placementGroupConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-group-configs` |
 | `releaseLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:release-label` |
 | `scaleDownBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:scale-down-behavior` |
 | `securityConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-configuration` |
@@ -408,7 +408,7 @@
 |---|---|---|---|
 | `classification` | java.lang.String | [[cdk.support/lookup-entry]] | `:classification` |
 | `configurationProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:configuration-properties` |
-| `configurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configurations` |
+| `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 "
   [^CfnCluster$ConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :classification)]
@@ -471,8 +471,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ebsBlockDeviceConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-block-device-configs` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `ebsBlockDeviceConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:ebs-block-device-configs` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 "
   [^CfnCluster$EbsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ebs-block-device-configs)]
@@ -539,8 +539,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `instanceTypeConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-type-configs` |
-| `launchSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-specifications` |
+| `instanceTypeConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-type-configs` |
+| `launchSpecifications` | software.amazon.awscdk.services.emr.CfnCluster$InstanceFleetProvisioningSpecificationsProperty | [[cdk.support/lookup-entry]] | `:launch-specifications` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `targetOnDemandCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-on-demand-capacity` |
 | `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |
@@ -579,7 +579,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `onDemandSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-demand-specification` |
+| `onDemandSpecification` | software.amazon.awscdk.services.emr.CfnCluster$OnDemandProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:on-demand-specification` |
 | `spotSpecification` | software.amazon.awscdk.services.emr.CfnCluster$SpotProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:spot-specification` |
 "
   [^CfnCluster$InstanceFleetProvisioningSpecificationsProperty$Builder builder id config]
@@ -710,7 +710,7 @@
 |---|---|---|---|
 | `additionalMasterSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-master-security-groups` |
 | `additionalSlaveSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-slave-security-groups` |
-| `coreInstanceFleet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:core-instance-fleet` |
+| `coreInstanceFleet` | software.amazon.awscdk.services.emr.CfnCluster$InstanceFleetConfigProperty | [[cdk.support/lookup-entry]] | `:core-instance-fleet` |
 | `coreInstanceGroup` | software.amazon.awscdk.services.emr.CfnCluster$InstanceGroupConfigProperty | [[cdk.support/lookup-entry]] | `:core-instance-group` |
 | `ec2KeyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:ec2-key-name` |
 | `ec2SubnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ec2-subnet-id` |
@@ -718,14 +718,14 @@
 | `emrManagedMasterSecurityGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:emr-managed-master-security-group` |
 | `emrManagedSlaveSecurityGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:emr-managed-slave-security-group` |
 | `hadoopVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:hadoop-version` |
-| `keepJobFlowAliveWhenNoSteps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:keep-job-flow-alive-when-no-steps` |
-| `masterInstanceFleet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:master-instance-fleet` |
+| `keepJobFlowAliveWhenNoSteps` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:keep-job-flow-alive-when-no-steps` |
+| `masterInstanceFleet` | software.amazon.awscdk.services.emr.CfnCluster$InstanceFleetConfigProperty | [[cdk.support/lookup-entry]] | `:master-instance-fleet` |
 | `masterInstanceGroup` | software.amazon.awscdk.services.emr.CfnCluster$InstanceGroupConfigProperty | [[cdk.support/lookup-entry]] | `:master-instance-group` |
-| `placement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement` |
+| `placement` | software.amazon.awscdk.services.emr.CfnCluster$PlacementTypeProperty | [[cdk.support/lookup-entry]] | `:placement` |
 | `serviceAccessSecurityGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-access-security-group` |
-| `taskInstanceFleets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-instance-fleets` |
-| `taskInstanceGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-instance-groups` |
-| `terminationProtected` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:termination-protected` |
+| `taskInstanceFleets` | java.util.List | [[cdk.support/lookup-entry]] | `:task-instance-fleets` |
+| `taskInstanceGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:task-instance-groups` |
+| `terminationProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protected` |
 | `unhealthyNodeReplacement` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unhealthy-node-replacement` |
 "
   [^CfnCluster$JobFlowInstancesConfigProperty$Builder builder id config]
@@ -861,7 +861,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `computeLimits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compute-limits` |
+| `computeLimits` | software.amazon.awscdk.services.emr.CfnCluster$ComputeLimitsProperty | [[cdk.support/lookup-entry]] | `:compute-limits` |
 "
   [^CfnCluster$ManagedScalingPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :compute-limits)]
@@ -1010,19 +1010,19 @@
 | `additionalInfo` | java.lang.Object | [[cdk.support/lookup-entry]] | `:additional-info` |
 | `applications` | java.util.List | [[cdk.support/lookup-entry]] | `:applications` |
 | `autoScalingRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-role` |
-| `autoTerminationPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-termination-policy` |
+| `autoTerminationPolicy` | software.amazon.awscdk.services.emr.CfnCluster$AutoTerminationPolicyProperty | [[cdk.support/lookup-entry]] | `:auto-termination-policy` |
 | `bootstrapActions` | java.util.List | [[cdk.support/lookup-entry]] | `:bootstrap-actions` |
-| `configurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configurations` |
+| `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 | `customAmiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-ami-id` |
 | `ebsRootVolumeIops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ebs-root-volume-iops` |
 | `ebsRootVolumeSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ebs-root-volume-size` |
 | `ebsRootVolumeThroughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ebs-root-volume-throughput` |
-| `instances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instances` |
+| `instances` | software.amazon.awscdk.services.emr.CfnCluster$JobFlowInstancesConfigProperty | [[cdk.support/lookup-entry]] | `:instances` |
 | `jobFlowRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-flow-role` |
-| `kerberosAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kerberos-attributes` |
+| `kerberosAttributes` | software.amazon.awscdk.services.emr.CfnCluster$KerberosAttributesProperty | [[cdk.support/lookup-entry]] | `:kerberos-attributes` |
 | `logEncryptionKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-encryption-kms-key-id` |
 | `logUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-uri` |
-| `managedScalingPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:managed-scaling-policy` |
+| `managedScalingPolicy` | software.amazon.awscdk.services.emr.CfnCluster$ManagedScalingPolicyProperty | [[cdk.support/lookup-entry]] | `:managed-scaling-policy` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `osReleaseLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:os-release-label` |
 | `placementGroupConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-group-configs` |
@@ -1031,7 +1031,7 @@
 | `securityConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-configuration` |
 | `serviceRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role` |
 | `stepConcurrencyLevel` | java.lang.Number | [[cdk.support/lookup-entry]] | `:step-concurrency-level` |
-| `steps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:steps` |
+| `steps` | java.util.List | [[cdk.support/lookup-entry]] | `:steps` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `visibleToAllUsers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible-to-all-users` |
 "
@@ -1114,7 +1114,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `market` | java.lang.String | [[cdk.support/lookup-entry]] | `:market` |
-| `simpleScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:simple-scaling-policy-configuration` |
+| `simpleScalingPolicyConfiguration` | software.amazon.awscdk.services.emr.CfnCluster$SimpleScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:simple-scaling-policy-configuration` |
 "
   [^CfnCluster$ScalingActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :market)]
@@ -1212,7 +1212,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchAlarmDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-alarm-definition` |
+| `cloudWatchAlarmDefinition` | software.amazon.awscdk.services.emr.CfnCluster$CloudWatchAlarmDefinitionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-alarm-definition` |
 "
   [^CfnCluster$ScalingTriggerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-alarm-definition)]
@@ -1343,7 +1343,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actionOnFailure` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-on-failure` |
-| `hadoopJarStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hadoop-jar-step` |
+| `hadoopJarStep` | software.amazon.awscdk.services.emr.CfnCluster$HadoopJarStepConfigProperty | [[cdk.support/lookup-entry]] | `:hadoop-jar-step` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnCluster$StepConfigProperty$Builder builder id config]
@@ -1416,7 +1416,7 @@
 | `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
 | `instanceFleetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-fleet-type` |
 | `instanceTypeConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-type-configs` |
-| `launchSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-specifications` |
+| `launchSpecifications` | software.amazon.awscdk.services.emr.CfnInstanceFleetConfig$InstanceFleetProvisioningSpecificationsProperty | [[cdk.support/lookup-entry]] | `:launch-specifications` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `targetOnDemandCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-on-demand-capacity` |
 | `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |
@@ -1461,7 +1461,7 @@
 |---|---|---|---|
 | `classification` | java.lang.String | [[cdk.support/lookup-entry]] | `:classification` |
 | `configurationProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:configuration-properties` |
-| `configurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configurations` |
+| `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 "
   [^CfnInstanceFleetConfig$ConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :classification)]
@@ -1524,8 +1524,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ebsBlockDeviceConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-block-device-configs` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `ebsBlockDeviceConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:ebs-block-device-configs` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 "
   [^CfnInstanceFleetConfig$EbsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ebs-block-device-configs)]
@@ -1555,7 +1555,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `onDemandSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-demand-specification` |
+| `onDemandSpecification` | software.amazon.awscdk.services.emr.CfnInstanceFleetConfig$OnDemandProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:on-demand-specification` |
 | `spotSpecification` | software.amazon.awscdk.services.emr.CfnInstanceFleetConfig$SpotProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:spot-specification` |
 "
   [^CfnInstanceFleetConfig$InstanceFleetProvisioningSpecificationsProperty$Builder builder id config]
@@ -1781,7 +1781,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `constraints` | software.amazon.awscdk.services.emr.CfnInstanceGroupConfig$ScalingConstraintsProperty | [[cdk.support/lookup-entry]] | `:constraints` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnInstanceGroupConfig$AutoScalingPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :constraints)]
@@ -1811,7 +1811,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScalingPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling-policy` |
+| `autoScalingPolicy` | software.amazon.awscdk.services.emr.CfnInstanceGroupConfig$AutoScalingPolicyProperty | [[cdk.support/lookup-entry]] | `:auto-scaling-policy` |
 | `bidPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:bid-price` |
 | `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 | `customAmiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-ami-id` |
@@ -1923,7 +1923,7 @@
 |---|---|---|---|
 | `classification` | java.lang.String | [[cdk.support/lookup-entry]] | `:classification` |
 | `configurationProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:configuration-properties` |
-| `configurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configurations` |
+| `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 "
   [^CfnInstanceGroupConfig$ConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :classification)]
@@ -1986,8 +1986,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ebsBlockDeviceConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-block-device-configs` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `ebsBlockDeviceConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:ebs-block-device-configs` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 "
   [^CfnInstanceGroupConfig$EbsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ebs-block-device-configs)]
@@ -2048,7 +2048,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScalingPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling-policy` |
+| `autoScalingPolicy` | software.amazon.awscdk.services.emr.CfnInstanceGroupConfig$AutoScalingPolicyProperty | [[cdk.support/lookup-entry]] | `:auto-scaling-policy` |
 | `bidPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:bid-price` |
 | `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 | `customAmiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-ami-id` |
@@ -2107,7 +2107,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `market` | java.lang.String | [[cdk.support/lookup-entry]] | `:market` |
-| `simpleScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:simple-scaling-policy-configuration` |
+| `simpleScalingPolicyConfiguration` | software.amazon.awscdk.services.emr.CfnInstanceGroupConfig$SimpleScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:simple-scaling-policy-configuration` |
 "
   [^CfnInstanceGroupConfig$ScalingActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :market)]
@@ -2205,7 +2205,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchAlarmDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-alarm-definition` |
+| `cloudWatchAlarmDefinition` | software.amazon.awscdk.services.emr.CfnInstanceGroupConfig$CloudWatchAlarmDefinitionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-alarm-definition` |
 "
   [^CfnInstanceGroupConfig$ScalingTriggerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-alarm-definition)]

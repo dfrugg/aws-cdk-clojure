@@ -150,7 +150,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnAccountAuditConfiguration$AuditCheckConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -181,17 +181,17 @@
 | `authenticatedCognitoRoleOverlyPermissiveCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:authenticated-cognito-role-overly-permissive-check` |
 | `caCertificateExpiringCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:ca-certificate-expiring-check` |
 | `caCertificateKeyQualityCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:ca-certificate-key-quality-check` |
-| `conflictingClientIdsCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conflicting-client-ids-check` |
-| `deviceCertificateExpiringCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-certificate-expiring-check` |
-| `deviceCertificateKeyQualityCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-certificate-key-quality-check` |
+| `conflictingClientIdsCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:conflicting-client-ids-check` |
+| `deviceCertificateExpiringCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:device-certificate-expiring-check` |
+| `deviceCertificateKeyQualityCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:device-certificate-key-quality-check` |
 | `deviceCertificateSharedCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:device-certificate-shared-check` |
-| `intermediateCaRevokedForActiveDeviceCertificatesCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:intermediate-ca-revoked-for-active-device-certificates-check` |
+| `intermediateCaRevokedForActiveDeviceCertificatesCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:intermediate-ca-revoked-for-active-device-certificates-check` |
 | `ioTPolicyPotentialMisConfigurationCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:io-t-policy-potential-mis-configuration-check` |
-| `iotPolicyOverlyPermissiveCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iot-policy-overly-permissive-check` |
-| `iotRoleAliasAllowsAccessToUnusedServicesCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iot-role-alias-allows-access-to-unused-services-check` |
+| `iotPolicyOverlyPermissiveCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:iot-policy-overly-permissive-check` |
+| `iotRoleAliasAllowsAccessToUnusedServicesCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:iot-role-alias-allows-access-to-unused-services-check` |
 | `iotRoleAliasOverlyPermissiveCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:iot-role-alias-overly-permissive-check` |
 | `loggingDisabledCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:logging-disabled-check` |
-| `revokedCaCertificateStillActiveCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:revoked-ca-certificate-still-active-check` |
+| `revokedCaCertificateStillActiveCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:revoked-ca-certificate-still-active-check` |
 | `revokedDeviceCertificateStillActiveCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:revoked-device-certificate-still-active-check` |
 | `unauthenticatedCognitoRoleOverlyPermissiveCheck` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:unauthenticated-cognito-role-overly-permissive-check` |
 "
@@ -251,7 +251,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns` |
+| `sns` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditNotificationTargetProperty | [[cdk.support/lookup-entry]] | `:sns` |
 "
   [^CfnAccountAuditConfiguration$AuditNotificationTargetConfigurationsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sns)]
@@ -279,7 +279,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
@@ -315,7 +315,7 @@
 |---|---|---|---|
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 | `auditCheckConfigurations` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationsProperty | [[cdk.support/lookup-entry]] | `:audit-check-configurations` |
-| `auditNotificationTargetConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audit-notification-target-configurations` |
+| `auditNotificationTargetConfigurations` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditNotificationTargetConfigurationsProperty | [[cdk.support/lookup-entry]] | `:audit-notification-target-configurations` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnAccountAuditConfiguration$Builder builder id config]
@@ -352,7 +352,7 @@
 |---|---|---|---|
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 | `auditCheckConfigurations` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditCheckConfigurationsProperty | [[cdk.support/lookup-entry]] | `:audit-check-configurations` |
-| `auditNotificationTargetConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audit-notification-target-configurations` |
+| `auditNotificationTargetConfigurations` | software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration$AuditNotificationTargetConfigurationsProperty | [[cdk.support/lookup-entry]] | `:audit-notification-target-configurations` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnAccountAuditConfigurationProps$Builder builder id config]
@@ -389,8 +389,8 @@
 |---|---|---|---|
 | `authorizerFunctionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorizer-function-arn` |
 | `authorizerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorizer-name` |
-| `enableCachingForHttp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-caching-for-http` |
-| `signingDisabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:signing-disabled` |
+| `enableCachingForHttp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-caching-for-http` |
+| `signingDisabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:signing-disabled` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tokenKeyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-name` |
@@ -514,7 +514,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `billingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-group-name` |
-| `billingGroupProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:billing-group-properties` |
+| `billingGroupProperties` | software.amazon.awscdk.services.iot.CfnBillingGroup$BillingGroupPropertiesProperty | [[cdk.support/lookup-entry]] | `:billing-group-properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBillingGroup$Builder builder id config]
@@ -585,7 +585,7 @@
 | `caCertificatePem` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificate-pem` |
 | `certificateMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-mode` |
 | `registrationConfig` | software.amazon.awscdk.services.iot.CfnCACertificate$RegistrationConfigProperty | [[cdk.support/lookup-entry]] | `:registration-config` |
-| `removeAutoRegistration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-auto-registration` |
+| `removeAutoRegistration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-auto-registration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `verificationCertificatePem` | java.lang.String | [[cdk.support/lookup-entry]] | `:verification-certificate-pem` |
@@ -634,7 +634,7 @@
 | `caCertificatePem` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificate-pem` |
 | `certificateMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-mode` |
 | `registrationConfig` | software.amazon.awscdk.services.iot.CfnCACertificate$RegistrationConfigProperty | [[cdk.support/lookup-entry]] | `:registration-config` |
-| `removeAutoRegistration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-auto-registration` |
+| `removeAutoRegistration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-auto-registration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `verificationCertificatePem` | java.lang.String | [[cdk.support/lookup-entry]] | `:verification-certificate-pem` |
@@ -1015,7 +1015,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowAuthorizerOverride` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-authorizer-override` |
+| `allowAuthorizerOverride` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-authorizer-override` |
 | `defaultAuthorizerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authorizer-name` |
 "
   [^CfnDomainConfiguration$AuthorizerConfigProperty$Builder builder id config]
@@ -1054,7 +1054,7 @@
 | `serverCertificateConfig` | software.amazon.awscdk.services.iot.CfnDomainConfiguration$ServerCertificateConfigProperty | [[cdk.support/lookup-entry]] | `:server-certificate-config` |
 | `serviceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tlsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls-config` |
+| `tlsConfig` | software.amazon.awscdk.services.iot.CfnDomainConfiguration$TlsConfigProperty | [[cdk.support/lookup-entry]] | `:tls-config` |
 | `validationCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-certificate-arn` |
 "
   [^CfnDomainConfiguration$Builder builder id config]
@@ -1106,10 +1106,10 @@
 | `domainConfigurationStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-configuration-status` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `serverCertificateArns` | java.util.List | [[cdk.support/lookup-entry]] | `:server-certificate-arns` |
-| `serverCertificateConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-certificate-config` |
+| `serverCertificateConfig` | software.amazon.awscdk.services.iot.CfnDomainConfiguration$ServerCertificateConfigProperty | [[cdk.support/lookup-entry]] | `:server-certificate-config` |
 | `serviceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tlsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls-config` |
+| `tlsConfig` | software.amazon.awscdk.services.iot.CfnDomainConfiguration$TlsConfigProperty | [[cdk.support/lookup-entry]] | `:tls-config` |
 | `validationCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-certificate-arn` |
 "
   [^CfnDomainConfigurationProps$Builder builder id config]
@@ -1278,7 +1278,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregationField` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation-field` |
-| `aggregationType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-type` |
+| `aggregationType` | software.amazon.awscdk.services.iot.CfnFleetMetric$AggregationTypeProperty | [[cdk.support/lookup-entry]] | `:aggregation-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
@@ -1387,7 +1387,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `criteriaList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:criteria-list` |
+| `criteriaList` | java.util.List | [[cdk.support/lookup-entry]] | `:criteria-list` |
 "
   [^CfnJobTemplate$AbortConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :criteria-list)]
@@ -1458,10 +1458,10 @@
 | `document` | java.lang.String | [[cdk.support/lookup-entry]] | `:document` |
 | `documentSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-source` |
 | `jobArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-arn` |
-| `jobExecutionsRetryConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-executions-retry-config` |
+| `jobExecutionsRetryConfig` | software.amazon.awscdk.services.iot.CfnJobTemplate$JobExecutionsRetryConfigProperty | [[cdk.support/lookup-entry]] | `:job-executions-retry-config` |
 | `jobExecutionsRolloutConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:job-executions-rollout-config` |
 | `jobTemplateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-template-id` |
-| `maintenanceWindows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-windows` |
+| `maintenanceWindows` | java.util.List | [[cdk.support/lookup-entry]] | `:maintenance-windows` |
 | `presignedUrlConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:presigned-url-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeoutConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:timeout-config` |
@@ -1550,7 +1550,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `retryCriteriaList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-criteria-list` |
+| `retryCriteriaList` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-criteria-list` |
 "
   [^CfnJobTemplate$JobExecutionsRetryConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :retry-criteria-list)]
@@ -1680,7 +1680,7 @@
 | `jobExecutionsRetryConfig` | software.amazon.awscdk.services.iot.CfnJobTemplate$JobExecutionsRetryConfigProperty | [[cdk.support/lookup-entry]] | `:job-executions-retry-config` |
 | `jobExecutionsRolloutConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:job-executions-rollout-config` |
 | `jobTemplateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-template-id` |
-| `maintenanceWindows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-windows` |
+| `maintenanceWindows` | java.util.List | [[cdk.support/lookup-entry]] | `:maintenance-windows` |
 | `presignedUrlConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:presigned-url-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeoutConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:timeout-config` |
@@ -1893,12 +1893,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addThingsToThingGroupParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:add-things-to-thing-group-params` |
-| `enableIoTLoggingParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-io-t-logging-params` |
+| `addThingsToThingGroupParams` | software.amazon.awscdk.services.iot.CfnMitigationAction$AddThingsToThingGroupParamsProperty | [[cdk.support/lookup-entry]] | `:add-things-to-thing-group-params` |
+| `enableIoTLoggingParams` | software.amazon.awscdk.services.iot.CfnMitigationAction$EnableIoTLoggingParamsProperty | [[cdk.support/lookup-entry]] | `:enable-io-t-logging-params` |
 | `publishFindingToSnsParams` | software.amazon.awscdk.services.iot.CfnMitigationAction$PublishFindingToSnsParamsProperty | [[cdk.support/lookup-entry]] | `:publish-finding-to-sns-params` |
-| `replaceDefaultPolicyVersionParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replace-default-policy-version-params` |
+| `replaceDefaultPolicyVersionParams` | software.amazon.awscdk.services.iot.CfnMitigationAction$ReplaceDefaultPolicyVersionParamsProperty | [[cdk.support/lookup-entry]] | `:replace-default-policy-version-params` |
 | `updateCaCertificateParams` | software.amazon.awscdk.services.iot.CfnMitigationAction$UpdateCACertificateParamsProperty | [[cdk.support/lookup-entry]] | `:update-ca-certificate-params` |
-| `updateDeviceCertificateParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update-device-certificate-params` |
+| `updateDeviceCertificateParams` | software.amazon.awscdk.services.iot.CfnMitigationAction$UpdateDeviceCertificateParamsProperty | [[cdk.support/lookup-entry]] | `:update-device-certificate-params` |
 "
   [^CfnMitigationAction$ActionParamsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :add-things-to-thing-group-params)]
@@ -1968,7 +1968,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `actionParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-params` |
+| `actionParams` | software.amazon.awscdk.services.iot.CfnMitigationAction$ActionParamsProperty | [[cdk.support/lookup-entry]] | `:action-params` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2315,8 +2315,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `preProvisioningHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pre-provisioning-hook` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `preProvisioningHook` | software.amazon.awscdk.services.iot.CfnProvisioningTemplate$ProvisioningHookProperty | [[cdk.support/lookup-entry]] | `:pre-provisioning-hook` |
 | `provisioningRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:provisioning-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-body` |
@@ -2364,8 +2364,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `preProvisioningHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pre-provisioning-hook` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `preProvisioningHook` | software.amazon.awscdk.services.iot.CfnProvisioningTemplate$ProvisioningHookProperty | [[cdk.support/lookup-entry]] | `:pre-provisioning-hook` |
 | `provisioningRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:provisioning-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-body` |
@@ -2707,8 +2707,8 @@
 | `consecutiveDatapointsToClear` | java.lang.Number | [[cdk.support/lookup-entry]] | `:consecutive-datapoints-to-clear` |
 | `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
 | `mlDetectionConfig` | software.amazon.awscdk.services.iot.CfnSecurityProfile$MachineLearningDetectionConfigProperty | [[cdk.support/lookup-entry]] | `:ml-detection-config` |
-| `statisticalThreshold` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statistical-threshold` |
-| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
+| `statisticalThreshold` | software.amazon.awscdk.services.iot.CfnSecurityProfile$StatisticalThresholdProperty | [[cdk.support/lookup-entry]] | `:statistical-threshold` |
+| `value` | software.amazon.awscdk.services.iot.CfnSecurityProfile$MetricValueProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnSecurityProfile$BehaviorCriteriaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :comparison-operator)]
@@ -2748,12 +2748,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `criteria` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:criteria` |
+| `criteria` | software.amazon.awscdk.services.iot.CfnSecurityProfile$BehaviorCriteriaProperty | [[cdk.support/lookup-entry]] | `:criteria` |
 | `exportMetric` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:export-metric` |
 | `metric` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric` |
-| `metricDimension` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-dimension` |
+| `metricDimension` | software.amazon.awscdk.services.iot.CfnSecurityProfile$MetricDimensionProperty | [[cdk.support/lookup-entry]] | `:metric-dimension` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `suppressAlerts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suppress-alerts` |
+| `suppressAlerts` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:suppress-alerts` |
 "
   [^CfnSecurityProfile$BehaviorProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :criteria)]
@@ -2792,7 +2792,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `additionalMetricsToRetainV2` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-metrics-to-retain-v2` |
-| `alertTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alert-targets` |
+| `alertTargets` | java.util.Map | [[cdk.support/lookup-entry]] | `:alert-targets` |
 | `behaviors` | java.util.List | [[cdk.support/lookup-entry]] | `:behaviors` |
 | `metricsExportConfig` | software.amazon.awscdk.services.iot.CfnSecurityProfile$MetricsExportConfigProperty | [[cdk.support/lookup-entry]] | `:metrics-export-config` |
 | `securityProfileDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-profile-description` |
@@ -2899,9 +2899,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `exportMetric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:export-metric` |
+| `exportMetric` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:export-metric` |
 | `metric` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric` |
-| `metricDimension` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-dimension` |
+| `metricDimension` | software.amazon.awscdk.services.iot.CfnSecurityProfile$MetricDimensionProperty | [[cdk.support/lookup-entry]] | `:metric-dimension` |
 "
   [^CfnSecurityProfile$MetricToRetainProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :export-metric)]
@@ -3007,10 +3007,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalMetricsToRetainV2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-metrics-to-retain-v2` |
-| `alertTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alert-targets` |
+| `additionalMetricsToRetainV2` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-metrics-to-retain-v2` |
+| `alertTargets` | java.util.Map | [[cdk.support/lookup-entry]] | `:alert-targets` |
 | `behaviors` | java.util.List | [[cdk.support/lookup-entry]] | `:behaviors` |
-| `metricsExportConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metrics-export-config` |
+| `metricsExportConfig` | software.amazon.awscdk.services.iot.CfnSecurityProfile$MetricsExportConfigProperty | [[cdk.support/lookup-entry]] | `:metrics-export-config` |
 | `securityProfileDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-profile-description` |
 | `securityProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-profile-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -3232,7 +3232,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
 "
   [^CfnThing$AttributePayloadProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attributes)]
@@ -3291,7 +3291,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
 "
   [^CfnThingGroup$AttributePayloadProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attributes)]
@@ -3323,7 +3323,7 @@
 | `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `thingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-group-name` |
-| `thingGroupProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:thing-group-properties` |
+| `thingGroupProperties` | software.amazon.awscdk.services.iot.CfnThingGroup$ThingGroupPropertiesProperty | [[cdk.support/lookup-entry]] | `:thing-group-properties` |
 "
   [^CfnThingGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :parent-group-name)]
@@ -3363,7 +3363,7 @@
 | `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `thingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-group-name` |
-| `thingGroupProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:thing-group-properties` |
+| `thingGroupProperties` | software.amazon.awscdk.services.iot.CfnThingGroup$ThingGroupPropertiesProperty | [[cdk.support/lookup-entry]] | `:thing-group-properties` |
 "
   [^CfnThingGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :parent-group-name)]
@@ -3399,7 +3399,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributePayload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-payload` |
+| `attributePayload` | software.amazon.awscdk.services.iot.CfnThingGroup$AttributePayloadProperty | [[cdk.support/lookup-entry]] | `:attribute-payload` |
 | `thingGroupDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-group-description` |
 "
   [^CfnThingGroup$ThingGroupPropertiesProperty$Builder builder id config]
@@ -3526,7 +3526,7 @@
 | `deprecateThingType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deprecate-thing-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `thingTypeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-type-name` |
-| `thingTypeProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:thing-type-properties` |
+| `thingTypeProperties` | software.amazon.awscdk.services.iot.CfnThingType$ThingTypePropertiesProperty | [[cdk.support/lookup-entry]] | `:thing-type-properties` |
 "
   [^CfnThingType$Builder builder id config]
   (when-some [data (lookup-entry config id :deprecate-thing-type)]
@@ -3563,7 +3563,7 @@
 | `deprecateThingType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deprecate-thing-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `thingTypeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-type-name` |
-| `thingTypeProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:thing-type-properties` |
+| `thingTypeProperties` | software.amazon.awscdk.services.iot.CfnThingType$ThingTypePropertiesProperty | [[cdk.support/lookup-entry]] | `:thing-type-properties` |
 "
   [^CfnThingTypeProps$Builder builder id config]
   (when-some [data (lookup-entry config id :deprecate-thing-type)]
@@ -3630,23 +3630,23 @@
 |---|---|---|---|
 | `cloudwatchAlarm` | software.amazon.awscdk.services.iot.CfnTopicRule$CloudwatchAlarmActionProperty | [[cdk.support/lookup-entry]] | `:cloudwatch-alarm` |
 | `cloudwatchLogs` | software.amazon.awscdk.services.iot.CfnTopicRule$CloudwatchLogsActionProperty | [[cdk.support/lookup-entry]] | `:cloudwatch-logs` |
-| `cloudwatchMetric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloudwatch-metric` |
-| `dynamoDBv2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-d-bv2` |
+| `cloudwatchMetric` | software.amazon.awscdk.services.iot.CfnTopicRule$CloudwatchMetricActionProperty | [[cdk.support/lookup-entry]] | `:cloudwatch-metric` |
+| `dynamoDBv2` | software.amazon.awscdk.services.iot.CfnTopicRule$DynamoDBv2ActionProperty | [[cdk.support/lookup-entry]] | `:dynamo-d-bv2` |
 | `dynamoDb` | software.amazon.awscdk.services.iot.CfnTopicRule$DynamoDBActionProperty | [[cdk.support/lookup-entry]] | `:dynamo-db` |
 | `elasticsearch` | software.amazon.awscdk.services.iot.CfnTopicRule$ElasticsearchActionProperty | [[cdk.support/lookup-entry]] | `:elasticsearch` |
-| `firehose` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firehose` |
-| `http` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http` |
+| `firehose` | software.amazon.awscdk.services.iot.CfnTopicRule$FirehoseActionProperty | [[cdk.support/lookup-entry]] | `:firehose` |
+| `http` | software.amazon.awscdk.services.iot.CfnTopicRule$HttpActionProperty | [[cdk.support/lookup-entry]] | `:http` |
 | `iotAnalytics` | software.amazon.awscdk.services.iot.CfnTopicRule$IotAnalyticsActionProperty | [[cdk.support/lookup-entry]] | `:iot-analytics` |
 | `iotEvents` | software.amazon.awscdk.services.iot.CfnTopicRule$IotEventsActionProperty | [[cdk.support/lookup-entry]] | `:iot-events` |
 | `iotSiteWise` | software.amazon.awscdk.services.iot.CfnTopicRule$IotSiteWiseActionProperty | [[cdk.support/lookup-entry]] | `:iot-site-wise` |
-| `kafka` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka` |
-| `kinesis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis` |
+| `kafka` | software.amazon.awscdk.services.iot.CfnTopicRule$KafkaActionProperty | [[cdk.support/lookup-entry]] | `:kafka` |
+| `kinesis` | software.amazon.awscdk.services.iot.CfnTopicRule$KinesisActionProperty | [[cdk.support/lookup-entry]] | `:kinesis` |
 | `lambda` | software.amazon.awscdk.services.iot.CfnTopicRule$LambdaActionProperty | [[cdk.support/lookup-entry]] | `:lambda` |
-| `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
-| `openSearch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-search` |
+| `location` | software.amazon.awscdk.services.iot.CfnTopicRule$LocationActionProperty | [[cdk.support/lookup-entry]] | `:location` |
+| `openSearch` | software.amazon.awscdk.services.iot.CfnTopicRule$OpenSearchActionProperty | [[cdk.support/lookup-entry]] | `:open-search` |
 | `republish` | software.amazon.awscdk.services.iot.CfnTopicRule$RepublishActionProperty | [[cdk.support/lookup-entry]] | `:republish` |
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
-| `sns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns` |
+| `s3` | software.amazon.awscdk.services.iot.CfnTopicRule$S3ActionProperty | [[cdk.support/lookup-entry]] | `:s3` |
+| `sns` | software.amazon.awscdk.services.iot.CfnTopicRule$SnsActionProperty | [[cdk.support/lookup-entry]] | `:sns` |
 | `sqs` | software.amazon.awscdk.services.iot.CfnTopicRule$SqsActionProperty | [[cdk.support/lookup-entry]] | `:sqs` |
 | `stepFunctions` | software.amazon.awscdk.services.iot.CfnTopicRule$StepFunctionsActionProperty | [[cdk.support/lookup-entry]] | `:step-functions` |
 | `timestream` | software.amazon.awscdk.services.iot.CfnTopicRule$TimestreamActionProperty | [[cdk.support/lookup-entry]] | `:timestream` |
@@ -3823,7 +3823,7 @@
 |---|---|---|---|
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `topicRulePayload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:topic-rule-payload` |
+| `topicRulePayload` | software.amazon.awscdk.services.iot.CfnTopicRule$TopicRulePayloadProperty | [[cdk.support/lookup-entry]] | `:topic-rule-payload` |
 "
   [^CfnTopicRule$Builder builder id config]
   (when-some [data (lookup-entry config id :rule-name)]
@@ -3969,9 +3969,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `httpUrlProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-url-properties` |
+| `httpUrlProperties` | software.amazon.awscdk.services.iot.CfnTopicRuleDestination$HttpUrlDestinationSummaryProperty | [[cdk.support/lookup-entry]] | `:http-url-properties` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `vpcProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-properties` |
+| `vpcProperties` | software.amazon.awscdk.services.iot.CfnTopicRuleDestination$VpcDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:vpc-properties` |
 "
   [^CfnTopicRuleDestination$Builder builder id config]
   (when-some [data (lookup-entry config id :http-url-properties)]
@@ -4031,7 +4031,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `httpUrlProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-url-properties` |
+| `httpUrlProperties` | software.amazon.awscdk.services.iot.CfnTopicRuleDestination$HttpUrlDestinationSummaryProperty | [[cdk.support/lookup-entry]] | `:http-url-properties` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `vpcProperties` | software.amazon.awscdk.services.iot.CfnTopicRuleDestination$VpcDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:vpc-properties` |
 "
@@ -4102,7 +4102,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `putItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:put-item` |
+| `putItem` | software.amazon.awscdk.services.iot.CfnTopicRule$PutItemInputProperty | [[cdk.support/lookup-entry]] | `:put-item` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnTopicRule$DynamoDBv2ActionProperty$Builder builder id config]
@@ -4225,7 +4225,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `batchMode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:batch-mode` |
+| `batchMode` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:batch-mode` |
 | `deliveryStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `separator` | java.lang.String | [[cdk.support/lookup-entry]] | `:separator` |
@@ -4295,7 +4295,7 @@
 |---|---|---|---|
 | `auth` | software.amazon.awscdk.services.iot.CfnTopicRule$HttpAuthorizationProperty | [[cdk.support/lookup-entry]] | `:auth` |
 | `confirmationUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:confirmation-url` |
-| `headers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:headers` |
+| `headers` | java.util.List | [[cdk.support/lookup-entry]] | `:headers` |
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnTopicRule$HttpActionProperty$Builder builder id config]
@@ -4330,7 +4330,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sigv4` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sigv4` |
+| `sigv4` | software.amazon.awscdk.services.iot.CfnTopicRule$SigV4AuthorizationProperty | [[cdk.support/lookup-entry]] | `:sigv4` |
 "
   [^CfnTopicRule$HttpAuthorizationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sigv4)]
@@ -4392,7 +4392,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `batchMode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:batch-mode` |
+| `batchMode` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:batch-mode` |
 | `inputName` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-name` |
 | `messageId` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-id` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -4429,7 +4429,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `putAssetPropertyValueEntries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:put-asset-property-value-entries` |
+| `putAssetPropertyValueEntries` | java.util.List | [[cdk.support/lookup-entry]] | `:put-asset-property-value-entries` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnTopicRule$IotSiteWiseActionProperty$Builder builder id config]
@@ -4491,9 +4491,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-properties` |
+| `clientProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:client-properties` |
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
-| `headers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:headers` |
+| `headers` | java.util.List | [[cdk.support/lookup-entry]] | `:headers` |
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 | `partition` | java.lang.String | [[cdk.support/lookup-entry]] | `:partition` |
 | `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
@@ -4600,7 +4600,7 @@
 | `latitude` | java.lang.String | [[cdk.support/lookup-entry]] | `:latitude` |
 | `longitude` | java.lang.String | [[cdk.support/lookup-entry]] | `:longitude` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `timestamp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timestamp` |
+| `timestamp` | software.amazon.awscdk.services.iot.CfnTopicRule$TimestampProperty | [[cdk.support/lookup-entry]] | `:timestamp` |
 | `trackerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracker-name` |
 "
   [^CfnTopicRule$LocationActionProperty$Builder builder id config]
@@ -4681,7 +4681,7 @@
 |---|---|---|---|
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `topicRulePayload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:topic-rule-payload` |
+| `topicRulePayload` | software.amazon.awscdk.services.iot.CfnTopicRule$TopicRulePayloadProperty | [[cdk.support/lookup-entry]] | `:topic-rule-payload` |
 "
   [^CfnTopicRuleProps$Builder builder id config]
   (when-some [data (lookup-entry config id :rule-name)]
@@ -4717,7 +4717,7 @@
 | `entryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:entry-id` |
 | `propertyAlias` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-alias` |
 | `propertyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-id` |
-| `propertyValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-values` |
+| `propertyValues` | java.util.List | [[cdk.support/lookup-entry]] | `:property-values` |
 "
   [^CfnTopicRule$PutAssetPropertyValueEntryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :asset-id)]
@@ -4786,7 +4786,7 @@
 | `messageExpiry` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-expiry` |
 | `payloadFormatIndicator` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-format-indicator` |
 | `responseTopic` | java.lang.String | [[cdk.support/lookup-entry]] | `:response-topic` |
-| `userProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-properties` |
+| `userProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:user-properties` |
 "
   [^CfnTopicRule$RepublishActionHeadersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :content-type)]
@@ -4968,7 +4968,7 @@
 |---|---|---|---|
 | `queueUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-url` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `useBase64` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-base64` |
+| `useBase64` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-base64` |
 "
   [^CfnTopicRule$SqsActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :queue-url)]
@@ -5170,7 +5170,7 @@
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `awsIotSqlVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-iot-sql-version` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `errorAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:error-action` |
+| `errorAction` | software.amazon.awscdk.services.iot.CfnTopicRule$ActionProperty | [[cdk.support/lookup-entry]] | `:error-action` |
 | `ruleDisabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rule-disabled` |
 | `sql` | java.lang.String | [[cdk.support/lookup-entry]] | `:sql` |
 "

@@ -75,7 +75,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `kubernetes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kubernetes` |
+| `kubernetes` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNKubernetesConfigurationProperty | [[cdk.support/lookup-entry]] | `:kubernetes` |
 | `malwareProtection` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNMalwareProtectionConfigurationProperty | [[cdk.support/lookup-entry]] | `:malware-protection` |
 | `s3Logs` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNS3LogsConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-logs` |
 "
@@ -202,7 +202,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `auditLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audit-logs` |
+| `auditLogs` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNKubernetesAuditLogsConfigurationProperty | [[cdk.support/lookup-entry]] | `:audit-logs` |
 "
   [^CfnDetector$CFNKubernetesConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :audit-logs)]
@@ -230,7 +230,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `scanEc2InstanceWithFindings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scan-ec2-instance-with-findings` |
+| `scanEc2InstanceWithFindings` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNScanEc2InstanceWithFindingsConfigurationProperty | [[cdk.support/lookup-entry]] | `:scan-ec2-instance-with-findings` |
 "
   [^CfnDetector$CFNMalwareProtectionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :scan-ec2-instance-with-findings)]
@@ -493,7 +493,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `criterion` | java.lang.Object | [[cdk.support/lookup-entry]] | `:criterion` |
-| `itemType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:item-type` |
+| `itemType` | software.amazon.awscdk.services.guardduty.CfnFilter$ConditionProperty | [[cdk.support/lookup-entry]] | `:item-type` |
 "
   [^CfnFilter$FindingCriteriaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :criterion)]
@@ -724,7 +724,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
-| `disableEmailNotification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
+| `disableEmailNotification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
 | `email` | java.lang.String | [[cdk.support/lookup-entry]] | `:email` |
 | `memberId` | java.lang.String | [[cdk.support/lookup-entry]] | `:member-id` |
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
@@ -767,7 +767,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
-| `disableEmailNotification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
+| `disableEmailNotification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
 | `email` | java.lang.String | [[cdk.support/lookup-entry]] | `:email` |
 | `memberId` | java.lang.String | [[cdk.support/lookup-entry]] | `:member-id` |
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |

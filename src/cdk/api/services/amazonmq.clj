@@ -34,19 +34,19 @@
 | `dataReplicationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-replication-mode` |
 | `dataReplicationPrimaryBrokerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-replication-primary-broker-arn` |
 | `deploymentMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-mode` |
-| `encryptionOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-options` |
+| `encryptionOptions` | software.amazon.awscdk.services.amazonmq.CfnBroker$EncryptionOptionsProperty | [[cdk.support/lookup-entry]] | `:encryption-options` |
 | `engineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-type` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `hostInstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-instance-type` |
-| `ldapServerMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ldap-server-metadata` |
+| `ldapServerMetadata` | software.amazon.awscdk.services.amazonmq.CfnBroker$LdapServerMetadataProperty | [[cdk.support/lookup-entry]] | `:ldap-server-metadata` |
 | `logs` | software.amazon.awscdk.services.amazonmq.CfnBroker$LogListProperty | [[cdk.support/lookup-entry]] | `:logs` |
-| `maintenanceWindowStartTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-window-start-time` |
+| `maintenanceWindowStartTime` | software.amazon.awscdk.services.amazonmq.CfnBroker$MaintenanceWindowProperty | [[cdk.support/lookup-entry]] | `:maintenance-window-start-time` |
 | `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `users` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:users` |
+| `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnBroker$Builder builder id config]
   (when-some [data (lookup-entry config id :authentication-strategy)]
@@ -144,7 +144,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `useAwsOwnedKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-aws-owned-key` |
+| `useAwsOwnedKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-aws-owned-key` |
 "
   [^CfnBroker$EncryptionOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :kms-key-id)]
@@ -233,7 +233,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `audit` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:audit` |
-| `general` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:general` |
+| `general` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:general` |
 "
   [^CfnBroker$LogListProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :audit)]
@@ -304,19 +304,19 @@
 | `dataReplicationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-replication-mode` |
 | `dataReplicationPrimaryBrokerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-replication-primary-broker-arn` |
 | `deploymentMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-mode` |
-| `encryptionOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-options` |
+| `encryptionOptions` | software.amazon.awscdk.services.amazonmq.CfnBroker$EncryptionOptionsProperty | [[cdk.support/lookup-entry]] | `:encryption-options` |
 | `engineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-type` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `hostInstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-instance-type` |
-| `ldapServerMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ldap-server-metadata` |
+| `ldapServerMetadata` | software.amazon.awscdk.services.amazonmq.CfnBroker$LdapServerMetadataProperty | [[cdk.support/lookup-entry]] | `:ldap-server-metadata` |
 | `logs` | software.amazon.awscdk.services.amazonmq.CfnBroker$LogListProperty | [[cdk.support/lookup-entry]] | `:logs` |
-| `maintenanceWindowStartTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-window-start-time` |
+| `maintenanceWindowStartTime` | software.amazon.awscdk.services.amazonmq.CfnBroker$MaintenanceWindowProperty | [[cdk.support/lookup-entry]] | `:maintenance-window-start-time` |
 | `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `users` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:users` |
+| `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnBrokerProps$Builder builder id config]
   (when-some [data (lookup-entry config id :authentication-strategy)]

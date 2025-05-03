@@ -356,7 +356,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `items` | java.util.List | [[cdk.support/lookup-entry]] | `:items` |
-| `scoringStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scoring-strategy` |
+| `scoringStrategy` | software.amazon.awscdk.services.connect.CfnEvaluationForm$ScoringStrategyProperty | [[cdk.support/lookup-entry]] | `:scoring-strategy` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -399,7 +399,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `section` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section` |
+| `section` | software.amazon.awscdk.services.connect.CfnEvaluationForm$EvaluationFormSectionProperty | [[cdk.support/lookup-entry]] | `:section` |
 "
   [^CfnEvaluationForm$EvaluationFormBaseItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :section)]
@@ -428,7 +428,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `question` | software.amazon.awscdk.services.connect.CfnEvaluationForm$EvaluationFormQuestionProperty | [[cdk.support/lookup-entry]] | `:question` |
-| `section` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section` |
+| `section` | software.amazon.awscdk.services.connect.CfnEvaluationForm$EvaluationFormSectionProperty | [[cdk.support/lookup-entry]] | `:section` |
 "
   [^CfnEvaluationForm$EvaluationFormItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :question)]
@@ -458,7 +458,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `propertyValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-value` |
+| `propertyValue` | software.amazon.awscdk.services.connect.CfnEvaluationForm$NumericQuestionPropertyValueAutomationProperty | [[cdk.support/lookup-entry]] | `:property-value` |
 "
   [^CfnEvaluationForm$EvaluationFormNumericQuestionAutomationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :property-value)]
@@ -486,7 +486,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `automaticFail` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:automatic-fail` |
+| `automaticFail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:automatic-fail` |
 | `maxValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-value` |
 | `minValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-value` |
 | `score` | java.lang.Number | [[cdk.support/lookup-entry]] | `:score` |
@@ -526,7 +526,7 @@
 | `automation` | software.amazon.awscdk.services.connect.CfnEvaluationForm$EvaluationFormNumericQuestionAutomationProperty | [[cdk.support/lookup-entry]] | `:automation` |
 | `maxValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-value` |
 | `minValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-value` |
-| `options` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:options` |
+| `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
 "
   [^CfnEvaluationForm$EvaluationFormNumericQuestionPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :automation)]
@@ -607,7 +607,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `numeric` | software.amazon.awscdk.services.connect.CfnEvaluationForm$EvaluationFormNumericQuestionPropertiesProperty | [[cdk.support/lookup-entry]] | `:numeric` |
-| `singleSelect` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:single-select` |
+| `singleSelect` | software.amazon.awscdk.services.connect.CfnEvaluationForm$EvaluationFormSingleSelectQuestionPropertiesProperty | [[cdk.support/lookup-entry]] | `:single-select` |
 "
   [^CfnEvaluationForm$EvaluationFormQuestionTypePropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :numeric)]
@@ -638,7 +638,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `instructions` | java.lang.String | [[cdk.support/lookup-entry]] | `:instructions` |
-| `items` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:items` |
+| `items` | java.util.List | [[cdk.support/lookup-entry]] | `:items` |
 | `refId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ref-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
@@ -677,7 +677,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ruleCategory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-category` |
+| `ruleCategory` | software.amazon.awscdk.services.connect.CfnEvaluationForm$SingleSelectQuestionRuleCategoryAutomationProperty | [[cdk.support/lookup-entry]] | `:rule-category` |
 "
   [^CfnEvaluationForm$EvaluationFormSingleSelectQuestionAutomationOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :rule-category)]
@@ -736,7 +736,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `automaticFail` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:automatic-fail` |
+| `automaticFail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:automatic-fail` |
 | `refId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ref-id` |
 | `score` | java.lang.Number | [[cdk.support/lookup-entry]] | `:score` |
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
@@ -773,7 +773,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `automation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:automation` |
+| `automation` | software.amazon.awscdk.services.connect.CfnEvaluationForm$EvaluationFormSingleSelectQuestionAutomationProperty | [[cdk.support/lookup-entry]] | `:automation` |
 | `displayAs` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-as` |
 | `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
 "
@@ -990,7 +990,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `day` | java.lang.String | [[cdk.support/lookup-entry]] | `:day` |
-| `endTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:end-time` |
+| `endTime` | software.amazon.awscdk.services.connect.CfnHoursOfOperation$HoursOfOperationTimeSliceProperty | [[cdk.support/lookup-entry]] | `:end-time` |
 | `startTime` | software.amazon.awscdk.services.connect.CfnHoursOfOperation$HoursOfOperationTimeSliceProperty | [[cdk.support/lookup-entry]] | `:start-time` |
 "
   [^CfnHoursOfOperation$HoursOfOperationConfigProperty$Builder builder id config]
@@ -1054,7 +1054,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config` |
+| `config` | java.util.List | [[cdk.support/lookup-entry]] | `:config` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -1097,12 +1097,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoResolveBestVoices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-resolve-best-voices` |
-| `contactLens` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contact-lens` |
-| `contactflowLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contactflow-logs` |
+| `autoResolveBestVoices` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-resolve-best-voices` |
+| `contactLens` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:contact-lens` |
+| `contactflowLogs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:contactflow-logs` |
 | `earlyMedia` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:early-media` |
 | `inboundCalls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inbound-calls` |
-| `outboundCalls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outbound-calls` |
+| `outboundCalls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:outbound-calls` |
 | `useCustomTtsVoices` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-custom-tts-voices` |
 "
   [^CfnInstance$AttributesProperty$Builder builder id config]
@@ -1143,7 +1143,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | software.amazon.awscdk.services.connect.CfnInstance$AttributesProperty | [[cdk.support/lookup-entry]] | `:attributes` |
 | `directoryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-id` |
 | `identityManagementType` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-management-type` |
 | `instanceAlias` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-alias` |
@@ -1183,7 +1183,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | software.amazon.awscdk.services.connect.CfnInstance$AttributesProperty | [[cdk.support/lookup-entry]] | `:attributes` |
 | `directoryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-id` |
 | `identityManagementType` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-management-type` |
 | `instanceAlias` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-alias` |
@@ -1226,9 +1226,9 @@
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `kinesisFirehoseConfig` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$KinesisFirehoseConfigProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-config` |
 | `kinesisStreamConfig` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$KinesisStreamConfigProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-config` |
-| `kinesisVideoStreamConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-video-stream-config` |
+| `kinesisVideoStreamConfig` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$KinesisVideoStreamConfigProperty | [[cdk.support/lookup-entry]] | `:kinesis-video-stream-config` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `s3Config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-config` |
+| `s3Config` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$S3ConfigProperty | [[cdk.support/lookup-entry]] | `:s3-config` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 "
   [^CfnInstanceStorageConfig$Builder builder id config]
@@ -1391,11 +1391,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
-| `kinesisFirehoseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-firehose-config` |
-| `kinesisStreamConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-stream-config` |
+| `kinesisFirehoseConfig` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$KinesisFirehoseConfigProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-config` |
+| `kinesisStreamConfig` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$KinesisStreamConfigProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-config` |
 | `kinesisVideoStreamConfig` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$KinesisVideoStreamConfigProperty | [[cdk.support/lookup-entry]] | `:kinesis-video-stream-config` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `s3Config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-config` |
+| `s3Config` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$S3ConfigProperty | [[cdk.support/lookup-entry]] | `:s3-config` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 "
   [^CfnInstanceStorageConfigProps$Builder builder id config]
@@ -1438,7 +1438,7 @@
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `bucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-prefix` |
-| `encryptionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-config` |
+| `encryptionConfig` | software.amazon.awscdk.services.connect.CfnInstanceStorageConfig$EncryptionConfigProperty | [[cdk.support/lookup-entry]] | `:encryption-config` |
 "
   [^CfnInstanceStorageConfig$S3ConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bucket-name)]
@@ -1811,7 +1811,7 @@
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `maxContacts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-contacts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outboundCallerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outbound-caller-config` |
+| `outboundCallerConfig` | software.amazon.awscdk.services.connect.CfnQueue$OutboundCallerConfigProperty | [[cdk.support/lookup-entry]] | `:outbound-caller-config` |
 | `quickConnectArns` | java.util.List | [[cdk.support/lookup-entry]] | `:quick-connect-arns` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1897,7 +1897,7 @@
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `maxContacts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-contacts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outboundCallerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outbound-caller-config` |
+| `outboundCallerConfig` | software.amazon.awscdk.services.connect.CfnQueue$OutboundCallerConfigProperty | [[cdk.support/lookup-entry]] | `:outbound-caller-config` |
 | `quickConnectArns` | java.util.List | [[cdk.support/lookup-entry]] | `:quick-connect-arns` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -2083,7 +2083,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `phoneConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:phone-config` |
+| `phoneConfig` | software.amazon.awscdk.services.connect.CfnQuickConnect$PhoneNumberQuickConnectConfigProperty | [[cdk.support/lookup-entry]] | `:phone-config` |
 | `queueConfig` | software.amazon.awscdk.services.connect.CfnQuickConnect$QueueQuickConnectConfigProperty | [[cdk.support/lookup-entry]] | `:queue-config` |
 | `quickConnectType` | java.lang.String | [[cdk.support/lookup-entry]] | `:quick-connect-type` |
 | `userConfig` | software.amazon.awscdk.services.connect.CfnQuickConnect$UserQuickConnectConfigProperty | [[cdk.support/lookup-entry]] | `:user-config` |
@@ -2157,7 +2157,7 @@
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `mediaConcurrencies` | java.util.List | [[cdk.support/lookup-entry]] | `:media-concurrencies` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `queueConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:queue-configs` |
+| `queueConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:queue-configs` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRoutingProfile$Builder builder id config]
@@ -2268,7 +2268,7 @@
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `mediaConcurrencies` | java.util.List | [[cdk.support/lookup-entry]] | `:media-concurrencies` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `queueConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:queue-configs` |
+| `queueConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:queue-configs` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRoutingProfileProps$Builder builder id config]
@@ -2377,8 +2377,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `assignContactCategoryActions` | java.util.List | [[cdk.support/lookup-entry]] | `:assign-contact-category-actions` |
-| `createCaseActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-case-actions` |
-| `endAssociatedTasksActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:end-associated-tasks-actions` |
+| `createCaseActions` | java.util.List | [[cdk.support/lookup-entry]] | `:create-case-actions` |
+| `endAssociatedTasksActions` | java.util.List | [[cdk.support/lookup-entry]] | `:end-associated-tasks-actions` |
 | `eventBridgeActions` | java.util.List | [[cdk.support/lookup-entry]] | `:event-bridge-actions` |
 | `sendNotificationActions` | java.util.List | [[cdk.support/lookup-entry]] | `:send-notification-actions` |
 | `taskActions` | java.util.List | [[cdk.support/lookup-entry]] | `:task-actions` |
@@ -2422,7 +2422,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | software.amazon.awscdk.services.connect.CfnRule$ActionsProperty | [[cdk.support/lookup-entry]] | `:actions` |
 | `function` | java.lang.String | [[cdk.support/lookup-entry]] | `:function` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -2558,7 +2558,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `booleanValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:boolean-value` |
+| `booleanValue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:boolean-value` |
 | `doubleValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:double-value` |
 | `emptyValue` | java.lang.Object | [[cdk.support/lookup-entry]] | `:empty-value` |
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
@@ -2596,7 +2596,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `userArns` | java.util.List | [[cdk.support/lookup-entry]] | `:user-arns` |
-| `userTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-tags` |
+| `userTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:user-tags` |
 "
   [^CfnRule$NotificationRecipientTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :user-arns)]
@@ -2626,7 +2626,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | software.amazon.awscdk.services.connect.CfnRule$ActionsProperty | [[cdk.support/lookup-entry]] | `:actions` |
 | `function` | java.lang.String | [[cdk.support/lookup-entry]] | `:function` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -3047,7 +3047,7 @@
 | `contactFlowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-flow-arn` |
 | `defaults` | java.util.List | [[cdk.support/lookup-entry]] | `:defaults` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `fields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fields` |
+| `fields` | java.util.List | [[cdk.support/lookup-entry]] | `:fields` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
@@ -3097,9 +3097,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `invisibleFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:invisible-fields` |
+| `invisibleFields` | java.util.List | [[cdk.support/lookup-entry]] | `:invisible-fields` |
 | `readOnlyFields` | java.util.List | [[cdk.support/lookup-entry]] | `:read-only-fields` |
-| `requiredFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:required-fields` |
+| `requiredFields` | java.util.List | [[cdk.support/lookup-entry]] | `:required-fields` |
 "
   [^CfnTaskTemplate$ConstraintsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :invisible-fields)]
@@ -3260,7 +3260,7 @@
 | `contactFlowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-flow-arn` |
 | `defaults` | java.util.List | [[cdk.support/lookup-entry]] | `:defaults` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `fields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fields` |
+| `fields` | java.util.List | [[cdk.support/lookup-entry]] | `:fields` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
@@ -3671,7 +3671,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `afterContactWorkTimeLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:after-contact-work-time-limit` |
-| `autoAccept` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-accept` |
+| `autoAccept` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-accept` |
 | `deskPhoneNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:desk-phone-number` |
 | `phoneType` | java.lang.String | [[cdk.support/lookup-entry]] | `:phone-type` |
 "

@@ -24,9 +24,9 @@
 | `appAssessmentSchedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-assessment-schedule` |
 | `appTemplateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-template-body` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `eventSubscriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-subscriptions` |
+| `eventSubscriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:event-subscriptions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `permissionModel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permission-model` |
+| `permissionModel` | software.amazon.awscdk.services.resiliencehub.CfnApp$PermissionModelProperty | [[cdk.support/lookup-entry]] | `:permission-model` |
 | `resiliencyPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resiliency-policy-arn` |
 | `resourceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-mappings` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -181,9 +181,9 @@
 | `appAssessmentSchedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-assessment-schedule` |
 | `appTemplateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-template-body` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `eventSubscriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-subscriptions` |
+| `eventSubscriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:event-subscriptions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `permissionModel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permission-model` |
+| `permissionModel` | software.amazon.awscdk.services.resiliencehub.CfnApp$PermissionModelProperty | [[cdk.support/lookup-entry]] | `:permission-model` |
 | `resiliencyPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resiliency-policy-arn` |
 | `resourceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-mappings` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -233,7 +233,7 @@
 | `eksSourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:eks-source-name` |
 | `logicalStackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:logical-stack-name` |
 | `mappingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:mapping-type` |
-| `physicalResourceId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:physical-resource-id` |
+| `physicalResourceId` | software.amazon.awscdk.services.resiliencehub.CfnApp$PhysicalResourceIdProperty | [[cdk.support/lookup-entry]] | `:physical-resource-id` |
 | `resourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-name` |
 | `terraformSourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:terraform-source-name` |
 "
@@ -274,7 +274,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataLocationConstraint` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-location-constraint` |
-| `policy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policy` |
+| `policy` | java.util.Map | [[cdk.support/lookup-entry]] | `:policy` |
 | `policyDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-description` |
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |

@@ -49,14 +49,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bufferOptions` | software.amazon.awscdk.services.osis.CfnPipeline$BufferOptionsProperty | [[cdk.support/lookup-entry]] | `:buffer-options` |
-| `encryptionAtRestOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
-| `logPublishingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
+| `encryptionAtRestOptions` | software.amazon.awscdk.services.osis.CfnPipeline$EncryptionAtRestOptionsProperty | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
+| `logPublishingOptions` | software.amazon.awscdk.services.osis.CfnPipeline$LogPublishingOptionsProperty | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
 | `maxUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-units` |
 | `minUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-units` |
 | `pipelineConfigurationBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-configuration-body` |
 | `pipelineName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
+| `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnPipeline$Builder builder id config]
   (when-some [data (lookup-entry config id :buffer-options)]
@@ -156,8 +156,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-log-destination` |
-| `isLoggingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-logging-enabled` |
+| `cloudWatchLogDestination` | software.amazon.awscdk.services.osis.CfnPipeline$CloudWatchLogDestinationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-log-destination` |
+| `isLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-logging-enabled` |
 "
   [^CfnPipeline$LogPublishingOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-log-destination)]
@@ -189,7 +189,7 @@
 |---|---|---|---|
 | `bufferOptions` | software.amazon.awscdk.services.osis.CfnPipeline$BufferOptionsProperty | [[cdk.support/lookup-entry]] | `:buffer-options` |
 | `encryptionAtRestOptions` | software.amazon.awscdk.services.osis.CfnPipeline$EncryptionAtRestOptionsProperty | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
-| `logPublishingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
+| `logPublishingOptions` | software.amazon.awscdk.services.osis.CfnPipeline$LogPublishingOptionsProperty | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
 | `maxUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-units` |
 | `minUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-units` |
 | `pipelineConfigurationBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-configuration-body` |
@@ -241,7 +241,7 @@
 |---|---|---|---|
 | `vpcEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-endpoint-id` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
-| `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
+| `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnPipeline$VpcEndpointProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :vpc-endpoint-id)]

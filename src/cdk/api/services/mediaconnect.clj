@@ -186,7 +186,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `networkOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-output` |
+| `networkOutput` | software.amazon.awscdk.services.mediaconnect.CfnBridge$BridgeNetworkOutputProperty | [[cdk.support/lookup-entry]] | `:network-output` |
 "
   [^CfnBridge$BridgeOutputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :network-output)]
@@ -215,7 +215,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `flowSource` | software.amazon.awscdk.services.mediaconnect.CfnBridge$BridgeFlowSourceProperty | [[cdk.support/lookup-entry]] | `:flow-source` |
-| `networkSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-source` |
+| `networkSource` | software.amazon.awscdk.services.mediaconnect.CfnBridge$BridgeNetworkSourceProperty | [[cdk.support/lookup-entry]] | `:network-source` |
 "
   [^CfnBridge$BridgeSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :flow-source)]
@@ -245,13 +245,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `egressGatewayBridge` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress-gateway-bridge` |
-| `ingressGatewayBridge` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingress-gateway-bridge` |
+| `egressGatewayBridge` | software.amazon.awscdk.services.mediaconnect.CfnBridge$EgressGatewayBridgeProperty | [[cdk.support/lookup-entry]] | `:egress-gateway-bridge` |
+| `ingressGatewayBridge` | software.amazon.awscdk.services.mediaconnect.CfnBridge$IngressGatewayBridgeProperty | [[cdk.support/lookup-entry]] | `:ingress-gateway-bridge` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outputs` |
+| `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
 | `placementArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement-arn` |
 | `sourceFailoverConfig` | software.amazon.awscdk.services.mediaconnect.CfnBridge$FailoverConfigProperty | [[cdk.support/lookup-entry]] | `:source-failover-config` |
-| `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
+| `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
 "
   [^CfnBridge$Builder builder id config]
   (when-some [data (lookup-entry config id :egress-gateway-bridge)]
@@ -320,7 +320,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `failoverMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:failover-mode` |
-| `sourcePriority` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-priority` |
+| `sourcePriority` | software.amazon.awscdk.services.mediaconnect.CfnBridge$SourcePriorityProperty | [[cdk.support/lookup-entry]] | `:source-priority` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 "
   [^CfnBridge$FailoverConfigProperty$Builder builder id config]
@@ -492,13 +492,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `egressGatewayBridge` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress-gateway-bridge` |
-| `ingressGatewayBridge` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingress-gateway-bridge` |
+| `egressGatewayBridge` | software.amazon.awscdk.services.mediaconnect.CfnBridge$EgressGatewayBridgeProperty | [[cdk.support/lookup-entry]] | `:egress-gateway-bridge` |
+| `ingressGatewayBridge` | software.amazon.awscdk.services.mediaconnect.CfnBridge$IngressGatewayBridgeProperty | [[cdk.support/lookup-entry]] | `:ingress-gateway-bridge` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outputs` |
+| `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
 | `placementArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement-arn` |
 | `sourceFailoverConfig` | software.amazon.awscdk.services.mediaconnect.CfnBridge$FailoverConfigProperty | [[cdk.support/lookup-entry]] | `:source-failover-config` |
-| `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
+| `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
 "
   [^CfnBridgeProps$Builder builder id config]
   (when-some [data (lookup-entry config id :egress-gateway-bridge)]
@@ -539,7 +539,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `flowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-arn` |
-| `flowVpcInterfaceAttachment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:flow-vpc-interface-attachment` |
+| `flowVpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnBridgeSource$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:flow-vpc-interface-attachment` |
 "
   [^CfnBridgeSource$BridgeFlowSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :flow-arn)]
@@ -766,11 +766,11 @@
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `maintenance` | software.amazon.awscdk.services.mediaconnect.CfnFlow$MaintenanceProperty | [[cdk.support/lookup-entry]] | `:maintenance` |
-| `mediaStreams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:media-streams` |
+| `mediaStreams` | java.util.List | [[cdk.support/lookup-entry]] | `:media-streams` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `source` | software.amazon.awscdk.services.mediaconnect.CfnFlow$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `sourceFailoverConfig` | software.amazon.awscdk.services.mediaconnect.CfnFlow$FailoverConfigProperty | [[cdk.support/lookup-entry]] | `:source-failover-config` |
-| `vpcInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interfaces` |
+| `vpcInterfaces` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-interfaces` |
 "
   [^CfnFlow$Builder builder id config]
   (when-some [data (lookup-entry config id :availability-zone)]
@@ -1090,7 +1090,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bridgeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:bridge-arn` |
-| `vpcInterfaceAttachment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
+| `vpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnFlow$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlow$GatewayBridgeSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bridge-arn)]
@@ -1121,7 +1121,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `inputPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:input-port` |
-| `interfaceValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:interface-value` |
+| `interfaceValue` | software.amazon.awscdk.services.mediaconnect.CfnFlow$InterfaceProperty | [[cdk.support/lookup-entry]] | `:interface-value` |
 "
   [^CfnFlow$InputConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :input-port)]
@@ -1210,7 +1210,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fmtp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fmtp` |
+| `fmtp` | software.amazon.awscdk.services.mediaconnect.CfnFlow$FmtpProperty | [[cdk.support/lookup-entry]] | `:fmtp` |
 | `lang` | java.lang.String | [[cdk.support/lookup-entry]] | `:lang` |
 "
   [^CfnFlow$MediaStreamAttributesProperty$Builder builder id config]
@@ -1330,7 +1330,7 @@
 | `encryption` | software.amazon.awscdk.services.mediaconnect.CfnFlowOutput$EncryptionProperty | [[cdk.support/lookup-entry]] | `:encryption` |
 | `flowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-arn` |
 | `maxLatency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-latency` |
-| `mediaStreamOutputConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:media-stream-output-configurations` |
+| `mediaStreamOutputConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:media-stream-output-configurations` |
 | `minLatency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-latency` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
@@ -1338,7 +1338,7 @@
 | `remoteId` | java.lang.String | [[cdk.support/lookup-entry]] | `:remote-id` |
 | `smoothingLatency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:smoothing-latency` |
 | `streamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-id` |
-| `vpcInterfaceAttachment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
+| `vpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnFlowOutput$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlowOutput$Builder builder id config]
   (when-some [data (lookup-entry config id :cidr-allow-list)]
@@ -1567,7 +1567,7 @@
 | `encryption` | software.amazon.awscdk.services.mediaconnect.CfnFlowOutput$EncryptionProperty | [[cdk.support/lookup-entry]] | `:encryption` |
 | `flowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-arn` |
 | `maxLatency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-latency` |
-| `mediaStreamOutputConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:media-stream-output-configurations` |
+| `mediaStreamOutputConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:media-stream-output-configurations` |
 | `minLatency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-latency` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
@@ -1575,7 +1575,7 @@
 | `remoteId` | java.lang.String | [[cdk.support/lookup-entry]] | `:remote-id` |
 | `smoothingLatency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:smoothing-latency` |
 | `streamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-id` |
-| `vpcInterfaceAttachment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
+| `vpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnFlowOutput$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlowOutputProps$Builder builder id config]
   (when-some [data (lookup-entry config id :cidr-allow-list)]
@@ -1661,11 +1661,11 @@
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `maintenance` | software.amazon.awscdk.services.mediaconnect.CfnFlow$MaintenanceProperty | [[cdk.support/lookup-entry]] | `:maintenance` |
-| `mediaStreams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:media-streams` |
+| `mediaStreams` | java.util.List | [[cdk.support/lookup-entry]] | `:media-streams` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `source` | software.amazon.awscdk.services.mediaconnect.CfnFlow$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `sourceFailoverConfig` | software.amazon.awscdk.services.mediaconnect.CfnFlow$FailoverConfigProperty | [[cdk.support/lookup-entry]] | `:source-failover-config` |
-| `vpcInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interfaces` |
+| `vpcInterfaces` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-interfaces` |
 "
   [^CfnFlowProps$Builder builder id config]
   (when-some [data (lookup-entry config id :availability-zone)]
@@ -1837,7 +1837,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bridgeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:bridge-arn` |
-| `vpcInterfaceAttachment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
+| `vpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnFlowSource$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlowSource$GatewayBridgeSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bridge-arn)]
@@ -1895,10 +1895,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decryption` |
+| `decryption` | software.amazon.awscdk.services.mediaconnect.CfnFlow$EncryptionProperty | [[cdk.support/lookup-entry]] | `:decryption` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `entitlementArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:entitlement-arn` |
-| `gatewayBridgeSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gateway-bridge-source` |
+| `gatewayBridgeSource` | software.amazon.awscdk.services.mediaconnect.CfnFlow$GatewayBridgeSourceProperty | [[cdk.support/lookup-entry]] | `:gateway-bridge-source` |
 | `ingestIp` | java.lang.String | [[cdk.support/lookup-entry]] | `:ingest-ip` |
 | `ingestPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ingest-port` |
 | `maxBitrate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-bitrate` |

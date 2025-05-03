@@ -24,7 +24,7 @@
 |---|---|---|---|
 | `filterExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-expression` |
 | `groupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-name` |
-| `insightsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insights-configuration` |
+| `insightsConfiguration` | software.amazon.awscdk.services.xray.CfnGroup$InsightsConfigurationProperty | [[cdk.support/lookup-entry]] | `:insights-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGroup$Builder builder id config]
@@ -60,7 +60,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `insightsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:insights-enabled` |
-| `notificationsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notifications-enabled` |
+| `notificationsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notifications-enabled` |
 "
   [^CfnGroup$InsightsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :insights-enabled)]
@@ -196,8 +196,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
-| `samplingRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sampling-rule` |
-| `samplingRuleRecord` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sampling-rule-record` |
+| `samplingRule` | software.amazon.awscdk.services.xray.CfnSamplingRule$SamplingRuleProperty | [[cdk.support/lookup-entry]] | `:sampling-rule` |
+| `samplingRuleRecord` | software.amazon.awscdk.services.xray.CfnSamplingRule$SamplingRuleRecordProperty | [[cdk.support/lookup-entry]] | `:sampling-rule-record` |
 | `samplingRuleUpdate` | software.amazon.awscdk.services.xray.CfnSamplingRule$SamplingRuleUpdateProperty | [[cdk.support/lookup-entry]] | `:sampling-rule-update` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -236,7 +236,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
-| `samplingRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sampling-rule` |
+| `samplingRule` | software.amazon.awscdk.services.xray.CfnSamplingRule$SamplingRuleProperty | [[cdk.support/lookup-entry]] | `:sampling-rule` |
 | `samplingRuleRecord` | software.amazon.awscdk.services.xray.CfnSamplingRule$SamplingRuleRecordProperty | [[cdk.support/lookup-entry]] | `:sampling-rule-record` |
 | `samplingRuleUpdate` | software.amazon.awscdk.services.xray.CfnSamplingRule$SamplingRuleUpdateProperty | [[cdk.support/lookup-entry]] | `:sampling-rule-update` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -275,7 +275,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
 | `fixedRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:fixed-rate` |
 | `host` | java.lang.String | [[cdk.support/lookup-entry]] | `:host` |
 | `httpMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-method` |
@@ -341,7 +341,7 @@
 |---|---|---|---|
 | `createdAt` | java.lang.String | [[cdk.support/lookup-entry]] | `:created-at` |
 | `modifiedAt` | java.lang.String | [[cdk.support/lookup-entry]] | `:modified-at` |
-| `samplingRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sampling-rule` |
+| `samplingRule` | software.amazon.awscdk.services.xray.CfnSamplingRule$SamplingRuleProperty | [[cdk.support/lookup-entry]] | `:sampling-rule` |
 "
   [^CfnSamplingRule$SamplingRuleRecordProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :created-at)]

@@ -112,7 +112,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contentBasedDeduplication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
+| `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
 | `deduplicationScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:deduplication-scope` |
 | `delaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:delay-seconds` |
 | `fifoQueue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fifo-queue` |
@@ -309,10 +309,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contentBasedDeduplication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
+| `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
 | `deduplicationScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:deduplication-scope` |
 | `delaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:delay-seconds` |
-| `fifoQueue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fifo-queue` |
+| `fifoQueue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fifo-queue` |
 | `fifoThroughputLimit` | java.lang.String | [[cdk.support/lookup-entry]] | `:fifo-throughput-limit` |
 | `kmsDataKeyReusePeriodSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:kms-data-key-reuse-period-seconds` |
 | `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |

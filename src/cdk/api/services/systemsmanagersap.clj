@@ -17,7 +17,7 @@
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `applicationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-type` |
-| `credentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:credentials` |
+| `credentials` | java.util.List | [[cdk.support/lookup-entry]] | `:credentials` |
 | `instances` | java.util.List | [[cdk.support/lookup-entry]] | `:instances` |
 | `sapInstanceNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:sap-instance-number` |
 | `sid` | java.lang.String | [[cdk.support/lookup-entry]] | `:sid` |
@@ -97,7 +97,7 @@
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `applicationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-type` |
-| `credentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:credentials` |
+| `credentials` | java.util.List | [[cdk.support/lookup-entry]] | `:credentials` |
 | `instances` | java.util.List | [[cdk.support/lookup-entry]] | `:instances` |
 | `sapInstanceNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:sap-instance-number` |
 | `sid` | java.lang.String | [[cdk.support/lookup-entry]] | `:sid` |

@@ -23,7 +23,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `crossAccount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cross-account` |
+| `crossAccount` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cross-account` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

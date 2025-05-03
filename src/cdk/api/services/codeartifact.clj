@@ -99,7 +99,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `domainOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-owner` |
-| `originConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-configuration` |
+| `originConfiguration` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$OriginConfigurationProperty | [[cdk.support/lookup-entry]] | `:origin-configuration` |
 | `pattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -141,7 +141,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `restrictions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrictions` |
+| `restrictions` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$RestrictionsProperty | [[cdk.support/lookup-entry]] | `:restrictions` |
 "
   [^CfnPackageGroup$OriginConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :restrictions)]
@@ -173,7 +173,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `domainOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-owner` |
-| `originConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-configuration` |
+| `originConfiguration` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$OriginConfigurationProperty | [[cdk.support/lookup-entry]] | `:origin-configuration` |
 | `pattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -246,9 +246,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `externalUpstream` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:external-upstream` |
+| `externalUpstream` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$RestrictionTypeProperty | [[cdk.support/lookup-entry]] | `:external-upstream` |
 | `internalUpstream` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$RestrictionTypeProperty | [[cdk.support/lookup-entry]] | `:internal-upstream` |
-| `publish` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publish` |
+| `publish` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$RestrictionTypeProperty | [[cdk.support/lookup-entry]] | `:publish` |
 "
   [^CfnPackageGroup$RestrictionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :external-upstream)]

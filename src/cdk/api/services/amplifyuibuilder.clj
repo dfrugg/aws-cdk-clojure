@@ -52,14 +52,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `anchor` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentPropertyProperty | [[cdk.support/lookup-entry]] | `:anchor` |
-| `fields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fields` |
-| `global` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global` |
-| `id` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:id` |
+| `fields` | java.util.Map | [[cdk.support/lookup-entry]] | `:fields` |
+| `global` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentPropertyProperty | [[cdk.support/lookup-entry]] | `:global` |
+| `id` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentPropertyProperty | [[cdk.support/lookup-entry]] | `:id` |
 | `model` | java.lang.String | [[cdk.support/lookup-entry]] | `:model` |
 | `state` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$MutationActionSetStateParameterProperty | [[cdk.support/lookup-entry]] | `:state` |
 | `target` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentPropertyProperty | [[cdk.support/lookup-entry]] | `:target` |
 | `type` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentPropertyProperty | [[cdk.support/lookup-entry]] | `:type` |
-| `url` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:url` |
+| `url` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentPropertyProperty | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnComponent$ActionParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :anchor)]
@@ -106,13 +106,13 @@
 | `appId` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-id` |
 | `bindingProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:binding-properties` |
 | `children` | java.util.List | [[cdk.support/lookup-entry]] | `:children` |
-| `collectionProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:collection-properties` |
+| `collectionProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:collection-properties` |
 | `componentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-type` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
 | `events` | java.util.Map | [[cdk.support/lookup-entry]] | `:events` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `overrides` | java.lang.Object | [[cdk.support/lookup-entry]] | `:overrides` |
-| `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
 | `schemaVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-version` |
 | `sourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-id` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -175,7 +175,7 @@
 | `field` | java.lang.String | [[cdk.support/lookup-entry]] | `:field` |
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 | `model` | java.lang.String | [[cdk.support/lookup-entry]] | `:model` |
-| `predicates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predicates` |
+| `predicates` | java.util.List | [[cdk.support/lookup-entry]] | `:predicates` |
 | `slotName` | java.lang.String | [[cdk.support/lookup-entry]] | `:slot-name` |
 | `userAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-attribute` |
 "
@@ -219,7 +219,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bindingProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:binding-properties` |
+| `bindingProperties` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentBindingPropertiesValuePropertiesProperty | [[cdk.support/lookup-entry]] | `:binding-properties` |
 | `defaultValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-value` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -253,9 +253,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `children` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:children` |
+| `children` | java.util.List | [[cdk.support/lookup-entry]] | `:children` |
 | `componentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-type` |
-| `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
+| `events` | java.util.Map | [[cdk.support/lookup-entry]] | `:events` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
 | `sourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-id` |
@@ -345,7 +345,7 @@
 | `identifiers` | java.util.List | [[cdk.support/lookup-entry]] | `:identifiers` |
 | `model` | java.lang.String | [[cdk.support/lookup-entry]] | `:model` |
 | `predicate` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$PredicateProperty | [[cdk.support/lookup-entry]] | `:predicate` |
-| `sort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort` |
+| `sort` | java.util.List | [[cdk.support/lookup-entry]] | `:sort` |
 "
   [^CfnComponent$ComponentDataConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :identifiers)]
@@ -381,7 +381,7 @@
 |---|---|---|---|
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
 | `bindingEvent` | java.lang.String | [[cdk.support/lookup-entry]] | `:binding-event` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ActionParametersProperty | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnComponent$ComponentEventProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action)]
@@ -450,7 +450,7 @@
 | `componentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-name` |
 | `concat` | java.util.List | [[cdk.support/lookup-entry]] | `:concat` |
 | `condition` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentConditionPropertyProperty | [[cdk.support/lookup-entry]] | `:condition` |
-| `configured` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configured` |
+| `configured` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:configured` |
 | `defaultValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-value` |
 | `event` | java.lang.String | [[cdk.support/lookup-entry]] | `:event` |
 | `importedValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:imported-value` |
@@ -515,7 +515,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `overrides` | java.lang.Object | [[cdk.support/lookup-entry]] | `:overrides` |
-| `variantValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variant-values` |
+| `variantValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:variant-values` |
 "
   [^CfnComponent$ComponentVariantProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :overrides)]
@@ -615,7 +615,7 @@
 | `operand` | java.lang.String | [[cdk.support/lookup-entry]] | `:operand` |
 | `operandType` | java.lang.String | [[cdk.support/lookup-entry]] | `:operand-type` |
 | `operator` | java.lang.String | [[cdk.support/lookup-entry]] | `:operator` |
-| `or` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:or` |
+| `or` | java.util.List | [[cdk.support/lookup-entry]] | `:or` |
 "
   [^CfnComponent$PredicateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :and)]
@@ -654,19 +654,19 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appId` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-id` |
-| `bindingProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:binding-properties` |
+| `bindingProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:binding-properties` |
 | `children` | java.util.List | [[cdk.support/lookup-entry]] | `:children` |
-| `collectionProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:collection-properties` |
+| `collectionProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:collection-properties` |
 | `componentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-type` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
-| `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
+| `events` | java.util.Map | [[cdk.support/lookup-entry]] | `:events` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `overrides` | java.lang.Object | [[cdk.support/lookup-entry]] | `:overrides` |
-| `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
 | `schemaVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-version` |
 | `sourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-id` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `variants` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variants` |
+| `variants` | java.util.List | [[cdk.support/lookup-entry]] | `:variants` |
 "
   [^CfnComponentProps$Builder builder id config]
   (when-some [data (lookup-entry config id :app-id)]
@@ -752,16 +752,16 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appId` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-id` |
-| `cta` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cta` |
+| `cta` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormCTAProperty | [[cdk.support/lookup-entry]] | `:cta` |
 | `dataType` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormDataTypeConfigProperty | [[cdk.support/lookup-entry]] | `:data-type` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
-| `fields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fields` |
+| `fields` | java.util.Map | [[cdk.support/lookup-entry]] | `:fields` |
 | `formActionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:form-action-type` |
 | `labelDecorator` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-decorator` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `schemaVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-version` |
 | `sectionalElements` | java.util.Map | [[cdk.support/lookup-entry]] | `:sectional-elements` |
-| `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
+| `style` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormStyleProperty | [[cdk.support/lookup-entry]] | `:style` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnForm$Builder builder id config]
@@ -812,7 +812,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excluded` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:excluded` |
+| `excluded` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:excluded` |
 | `inputType` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FieldInputConfigProperty | [[cdk.support/lookup-entry]] | `:input-type` |
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `position` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FieldPositionProperty | [[cdk.support/lookup-entry]] | `:position` |
@@ -857,13 +857,13 @@
 | `defaultValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-value` |
 | `descriptiveText` | java.lang.String | [[cdk.support/lookup-entry]] | `:descriptive-text` |
 | `fileUploaderConfig` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FileUploaderFieldConfigProperty | [[cdk.support/lookup-entry]] | `:file-uploader-config` |
-| `isArray` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-array` |
+| `isArray` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-array` |
 | `maxValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-value` |
 | `minValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-value` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `placeholder` | java.lang.String | [[cdk.support/lookup-entry]] | `:placeholder` |
 | `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
-| `required` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:required` |
+| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
 | `step` | java.lang.Number | [[cdk.support/lookup-entry]] | `:step` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
@@ -959,7 +959,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `numValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:num-values` |
+| `numValues` | java.util.List | [[cdk.support/lookup-entry]] | `:num-values` |
 | `strValues` | java.util.List | [[cdk.support/lookup-entry]] | `:str-values` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `validationMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-message` |
@@ -998,10 +998,10 @@
 |---|---|---|---|
 | `acceptedFileTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:accepted-file-types` |
 | `accessLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-level` |
-| `isResumable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-resumable` |
+| `isResumable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-resumable` |
 | `maxFileCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-file-count` |
 | `maxSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-size` |
-| `showThumbnails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:show-thumbnails` |
+| `showThumbnails` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show-thumbnails` |
 "
   [^CfnForm$FileUploaderFieldConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :accepted-file-types)]
@@ -1073,8 +1073,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cancel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cancel` |
-| `clear` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:clear` |
+| `cancel` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormButtonProperty | [[cdk.support/lookup-entry]] | `:cancel` |
+| `clear` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormButtonProperty | [[cdk.support/lookup-entry]] | `:clear` |
 | `position` | java.lang.String | [[cdk.support/lookup-entry]] | `:position` |
 | `submit` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormButtonProperty | [[cdk.support/lookup-entry]] | `:submit` |
 "
@@ -1169,7 +1169,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bindingProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:binding-properties` |
+| `bindingProperties` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormInputBindingPropertiesValuePropertiesProperty | [[cdk.support/lookup-entry]] | `:binding-properties` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnForm$FormInputBindingPropertiesValueProperty$Builder builder id config]
@@ -1231,8 +1231,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bindingProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:binding-properties` |
-| `concat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:concat` |
+| `bindingProperties` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormInputValuePropertyBindingPropertiesProperty | [[cdk.support/lookup-entry]] | `:binding-properties` |
+| `concat` | java.util.List | [[cdk.support/lookup-entry]] | `:concat` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnForm$FormInputValuePropertyProperty$Builder builder id config]
@@ -1296,9 +1296,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `horizontalGap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:horizontal-gap` |
+| `horizontalGap` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormStyleConfigProperty | [[cdk.support/lookup-entry]] | `:horizontal-gap` |
 | `outerPadding` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormStyleConfigProperty | [[cdk.support/lookup-entry]] | `:outer-padding` |
-| `verticalGap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vertical-gap` |
+| `verticalGap` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormStyleConfigProperty | [[cdk.support/lookup-entry]] | `:vertical-gap` |
 "
   [^CfnForm$FormStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :horizontal-gap)]
@@ -1332,7 +1332,7 @@
 |---|---|---|---|
 | `appId` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-id` |
 | `cta` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormCTAProperty | [[cdk.support/lookup-entry]] | `:cta` |
-| `dataType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-type` |
+| `dataType` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormDataTypeConfigProperty | [[cdk.support/lookup-entry]] | `:data-type` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
 | `fields` | java.util.Map | [[cdk.support/lookup-entry]] | `:fields` |
 | `formActionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:form-action-type` |
@@ -1340,7 +1340,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `schemaVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-version` |
 | `sectionalElements` | java.util.Map | [[cdk.support/lookup-entry]] | `:sectional-elements` |
-| `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
+| `style` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormStyleProperty | [[cdk.support/lookup-entry]] | `:style` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFormProps$Builder builder id config]
@@ -1499,7 +1499,7 @@
 | `appId` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-id` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `overrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overrides` |
+| `overrides` | java.util.List | [[cdk.support/lookup-entry]] | `:overrides` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
@@ -1542,9 +1542,9 @@
 | `appId` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-id` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `overrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overrides` |
+| `overrides` | java.util.List | [[cdk.support/lookup-entry]] | `:overrides` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnThemeProps$Builder builder id config]
   (when-some [data (lookup-entry config id :app-id)]
@@ -1582,7 +1582,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `children` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:children` |
+| `children` | java.util.List | [[cdk.support/lookup-entry]] | `:children` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTheme$ThemeValueProperty$Builder builder id config]

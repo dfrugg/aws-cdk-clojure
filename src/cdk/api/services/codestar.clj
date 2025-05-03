@@ -19,7 +19,7 @@
 | `code` | software.amazon.awscdk.services.codestar.CfnGitHubRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
 | `connectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-arn` |
 | `enableIssues` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-issues` |
-| `isPrivate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-private` |
+| `isPrivate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-private` |
 | `repositoryAccessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-access-token` |
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
@@ -65,7 +65,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.codestar.CfnGitHubRepository$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnGitHubRepository$CodeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3)]
@@ -95,7 +95,7 @@
 |---|---|---|---|
 | `code` | software.amazon.awscdk.services.codestar.CfnGitHubRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
 | `connectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-arn` |
-| `enableIssues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-issues` |
+| `enableIssues` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-issues` |
 | `isPrivate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-private` |
 | `repositoryAccessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-access-token` |
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |

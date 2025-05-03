@@ -73,7 +73,7 @@
 |---|---|---|---|
 | `inferenceInputNameConfiguration` | software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler$InputNameConfigurationProperty | [[cdk.support/lookup-entry]] | `:inference-input-name-configuration` |
 | `inputTimeZoneOffset` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-time-zone-offset` |
-| `s3InputConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-input-configuration` |
+| `s3InputConfiguration` | software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler$S3InputConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-input-configuration` |
 "
   [^CfnInferenceScheduler$DataInputConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :inference-input-name-configuration)]

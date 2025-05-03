@@ -286,7 +286,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^ArtifactManifest$Builder builder id config]
@@ -1877,7 +1877,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `data` | software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry | [[cdk.support/lookup-entry]] | `:data` |
+| `data` | java.lang.String | [[cdk.support/lookup-entry]] | `:data` |
 | `trace` | java.util.List | [[cdk.support/lookup-entry]] | `:trace` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -1912,7 +1912,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `props` | software.amazon.awscdk.cloudassembly.schema.LoadBalancerContextQuery | [[cdk.support/lookup-entry]] | `:props` |
+| `props` | software.amazon.awscdk.cloudassembly.schema.VpcContextQuery | [[cdk.support/lookup-entry]] | `:props` |
 | `provider` | software.amazon.awscdk.cloudassembly.schema.ContextProvider | [[cdk.api.cloudassembly.schema/context-provider]] | `:provider` |
 "
   [^MissingContext$Builder builder id config]

@@ -150,8 +150,8 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `excludeAppPackagesFromCleanup` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-app-packages-from-cleanup` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `packageCleanup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:package-cleanup` |
-| `rebootAfterUse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
+| `packageCleanup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:package-cleanup` |
+| `rebootAfterUse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInstanceProfile$Builder builder id config]
@@ -193,8 +193,8 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `excludeAppPackagesFromCleanup` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-app-packages-from-cleanup` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `packageCleanup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:package-cleanup` |
-| `rebootAfterUse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
+| `packageCleanup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:package-cleanup` |
+| `rebootAfterUse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInstanceProfileProps$Builder builder id config]

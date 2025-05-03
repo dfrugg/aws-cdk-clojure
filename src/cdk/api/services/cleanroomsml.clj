@@ -90,7 +90,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `glueDataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue-data-source` |
+| `glueDataSource` | software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset$GlueDataSourceProperty | [[cdk.support/lookup-entry]] | `:glue-data-source` |
 "
   [^CfnTrainingDataset$DataSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :glue-data-source)]
@@ -119,7 +119,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataSource` | software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset$DataSourceProperty | [[cdk.support/lookup-entry]] | `:data-source` |
-| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
+| `schema` | java.util.List | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^CfnTrainingDataset$DatasetInputConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-source)]
@@ -149,7 +149,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `inputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-config` |
+| `inputConfig` | software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset$DatasetInputConfigProperty | [[cdk.support/lookup-entry]] | `:input-config` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnTrainingDataset$DatasetProperty$Builder builder id config]

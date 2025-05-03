@@ -131,7 +131,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs` |
+| `cloudWatchLogs` | software.amazon.awscdk.services.msk.CfnCluster$CloudWatchLogsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs` |
 | `firehose` | software.amazon.awscdk.services.msk.CfnCluster$FirehoseProperty | [[cdk.support/lookup-entry]] | `:firehose` |
 | `s3` | software.amazon.awscdk.services.msk.CfnCluster$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
 "
@@ -170,7 +170,7 @@
 | `connectivityInfo` | software.amazon.awscdk.services.msk.CfnCluster$ConnectivityInfoProperty | [[cdk.support/lookup-entry]] | `:connectivity-info` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
-| `storageInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-info` |
+| `storageInfo` | software.amazon.awscdk.services.msk.CfnCluster$StorageInfoProperty | [[cdk.support/lookup-entry]] | `:storage-info` |
 "
   [^CfnCluster$BrokerNodeGroupInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :broker-az-distribution)]
@@ -216,7 +216,7 @@
 | `encryptionInfo` | software.amazon.awscdk.services.msk.CfnCluster$EncryptionInfoProperty | [[cdk.support/lookup-entry]] | `:encryption-info` |
 | `enhancedMonitoring` | java.lang.String | [[cdk.support/lookup-entry]] | `:enhanced-monitoring` |
 | `kafkaVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:kafka-version` |
-| `loggingInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-info` |
+| `loggingInfo` | software.amazon.awscdk.services.msk.CfnCluster$LoggingInfoProperty | [[cdk.support/lookup-entry]] | `:logging-info` |
 | `numberOfBrokerNodes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-broker-nodes` |
 | `openMonitoring` | software.amazon.awscdk.services.msk.CfnCluster$OpenMonitoringProperty | [[cdk.support/lookup-entry]] | `:open-monitoring` |
 | `storageMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-mode` |
@@ -272,9 +272,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sasl` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sasl` |
+| `sasl` | software.amazon.awscdk.services.msk.CfnCluster$SaslProperty | [[cdk.support/lookup-entry]] | `:sasl` |
 | `tls` | software.amazon.awscdk.services.msk.CfnCluster$TlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
-| `unauthenticated` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:unauthenticated` |
+| `unauthenticated` | software.amazon.awscdk.services.msk.CfnCluster$UnauthenticatedProperty | [[cdk.support/lookup-entry]] | `:unauthenticated` |
 "
   [^CfnCluster$ClientAuthenticationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sasl)]
@@ -306,7 +306,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |
 "
   [^CfnCluster$CloudWatchLogsProperty$Builder builder id config]
@@ -368,7 +368,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `publicAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:public-access` |
+| `publicAccess` | software.amazon.awscdk.services.msk.CfnCluster$PublicAccessProperty | [[cdk.support/lookup-entry]] | `:public-access` |
 | `vpcConnectivity` | software.amazon.awscdk.services.msk.CfnCluster$VpcConnectivityProperty | [[cdk.support/lookup-entry]] | `:vpc-connectivity` |
 "
   [^CfnCluster$ConnectivityInfoProperty$Builder builder id config]
@@ -489,7 +489,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `encryptionAtRest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-at-rest` |
+| `encryptionAtRest` | software.amazon.awscdk.services.msk.CfnCluster$EncryptionAtRestProperty | [[cdk.support/lookup-entry]] | `:encryption-at-rest` |
 | `encryptionInTransit` | software.amazon.awscdk.services.msk.CfnCluster$EncryptionInTransitProperty | [[cdk.support/lookup-entry]] | `:encryption-in-transit` |
 "
   [^CfnCluster$EncryptionInfoProperty$Builder builder id config]
@@ -521,7 +521,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deliveryStream` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$FirehoseProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :delivery-stream)]
@@ -551,7 +551,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$IamProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -607,7 +607,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `brokerLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:broker-logs` |
+| `brokerLogs` | software.amazon.awscdk.services.msk.CfnCluster$BrokerLogsProperty | [[cdk.support/lookup-entry]] | `:broker-logs` |
 "
   [^CfnCluster$LoggingInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :broker-logs)]
@@ -663,7 +663,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `prometheus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prometheus` |
+| `prometheus` | software.amazon.awscdk.services.msk.CfnCluster$PrometheusProperty | [[cdk.support/lookup-entry]] | `:prometheus` |
 "
   [^CfnCluster$OpenMonitoringProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :prometheus)]
@@ -753,7 +753,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `jmxExporter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:jmx-exporter` |
+| `jmxExporter` | software.amazon.awscdk.services.msk.CfnCluster$JmxExporterProperty | [[cdk.support/lookup-entry]] | `:jmx-exporter` |
 | `nodeExporter` | software.amazon.awscdk.services.msk.CfnCluster$NodeExporterProperty | [[cdk.support/lookup-entry]] | `:node-exporter` |
 "
   [^CfnCluster$PrometheusProperty$Builder builder id config]
@@ -785,14 +785,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `brokerNodeGroupInfo` | software.amazon.awscdk.services.msk.CfnCluster$BrokerNodeGroupInfoProperty | [[cdk.support/lookup-entry]] | `:broker-node-group-info` |
-| `clientAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-authentication` |
+| `clientAuthentication` | software.amazon.awscdk.services.msk.CfnCluster$ClientAuthenticationProperty | [[cdk.support/lookup-entry]] | `:client-authentication` |
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
-| `configurationInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-info` |
+| `configurationInfo` | software.amazon.awscdk.services.msk.CfnCluster$ConfigurationInfoProperty | [[cdk.support/lookup-entry]] | `:configuration-info` |
 | `currentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-version` |
-| `encryptionInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-info` |
+| `encryptionInfo` | software.amazon.awscdk.services.msk.CfnCluster$EncryptionInfoProperty | [[cdk.support/lookup-entry]] | `:encryption-info` |
 | `enhancedMonitoring` | java.lang.String | [[cdk.support/lookup-entry]] | `:enhanced-monitoring` |
 | `kafkaVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:kafka-version` |
-| `loggingInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-info` |
+| `loggingInfo` | software.amazon.awscdk.services.msk.CfnCluster$LoggingInfoProperty | [[cdk.support/lookup-entry]] | `:logging-info` |
 | `numberOfBrokerNodes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-broker-nodes` |
 | `openMonitoring` | software.amazon.awscdk.services.msk.CfnCluster$OpenMonitoringProperty | [[cdk.support/lookup-entry]] | `:open-monitoring` |
 | `storageMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-mode` |
@@ -848,7 +848,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `volumeThroughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:volume-throughput` |
 "
   [^CfnCluster$ProvisionedThroughputProperty$Builder builder id config]
@@ -941,7 +941,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `iam` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iam` |
+| `iam` | software.amazon.awscdk.services.msk.CfnCluster$IamProperty | [[cdk.support/lookup-entry]] | `:iam` |
 | `scram` | software.amazon.awscdk.services.msk.CfnCluster$ScramProperty | [[cdk.support/lookup-entry]] | `:scram` |
 "
   [^CfnCluster$SaslProperty$Builder builder id config]
@@ -972,7 +972,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$ScramProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -1000,7 +1000,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ebsStorageInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-storage-info` |
+| `ebsStorageInfo` | software.amazon.awscdk.services.msk.CfnCluster$EBSStorageInfoProperty | [[cdk.support/lookup-entry]] | `:ebs-storage-info` |
 "
   [^CfnCluster$StorageInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ebs-storage-info)]
@@ -1029,7 +1029,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificateAuthorityArnList` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-authority-arn-list` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$TlsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate-authority-arn-list)]
@@ -1059,7 +1059,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$UnauthenticatedProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -1087,7 +1087,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sasl` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sasl` |
+| `sasl` | software.amazon.awscdk.services.msk.CfnCluster$VpcConnectivitySaslProperty | [[cdk.support/lookup-entry]] | `:sasl` |
 | `tls` | software.amazon.awscdk.services.msk.CfnCluster$VpcConnectivityTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnCluster$VpcConnectivityClientAuthenticationProperty$Builder builder id config]
@@ -1118,7 +1118,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$VpcConnectivityIamProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -1146,7 +1146,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-authentication` |
+| `clientAuthentication` | software.amazon.awscdk.services.msk.CfnCluster$VpcConnectivityClientAuthenticationProperty | [[cdk.support/lookup-entry]] | `:client-authentication` |
 "
   [^CfnCluster$VpcConnectivityProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :client-authentication)]
@@ -1174,7 +1174,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `iam` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iam` |
+| `iam` | software.amazon.awscdk.services.msk.CfnCluster$VpcConnectivityIamProperty | [[cdk.support/lookup-entry]] | `:iam` |
 | `scram` | software.amazon.awscdk.services.msk.CfnCluster$VpcConnectivityScramProperty | [[cdk.support/lookup-entry]] | `:scram` |
 "
   [^CfnCluster$VpcConnectivitySaslProperty$Builder builder id config]
@@ -1205,7 +1205,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$VpcConnectivityScramProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -1233,7 +1233,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnCluster$VpcConnectivityTlsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -1263,7 +1263,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `kafkaVersionsList` | java.util.List | [[cdk.support/lookup-entry]] | `:kafka-versions-list` |
-| `latestRevision` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:latest-revision` |
+| `latestRevision` | software.amazon.awscdk.services.msk.CfnConfiguration$LatestRevisionProperty | [[cdk.support/lookup-entry]] | `:latest-revision` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `serverProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-properties` |
 "
@@ -1337,7 +1337,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `kafkaVersionsList` | java.util.List | [[cdk.support/lookup-entry]] | `:kafka-versions-list` |
-| `latestRevision` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:latest-revision` |
+| `latestRevision` | software.amazon.awscdk.services.msk.CfnConfiguration$LatestRevisionProperty | [[cdk.support/lookup-entry]] | `:latest-revision` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `serverProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-properties` |
 "
@@ -1405,7 +1405,7 @@
 |---|---|---|---|
 | `currentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-version` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `kafkaClusters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka-clusters` |
+| `kafkaClusters` | java.util.List | [[cdk.support/lookup-entry]] | `:kafka-clusters` |
 | `replicationInfoList` | java.util.List | [[cdk.support/lookup-entry]] | `:replication-info-list` |
 | `replicatorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:replicator-name` |
 | `serviceExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-execution-role-arn` |
@@ -1451,7 +1451,7 @@
 |---|---|---|---|
 | `consumerGroupsToExclude` | java.util.List | [[cdk.support/lookup-entry]] | `:consumer-groups-to-exclude` |
 | `consumerGroupsToReplicate` | java.util.List | [[cdk.support/lookup-entry]] | `:consumer-groups-to-replicate` |
-| `detectAndCopyNewConsumerGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:detect-and-copy-new-consumer-groups` |
+| `detectAndCopyNewConsumerGroups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:detect-and-copy-new-consumer-groups` |
 | `synchroniseConsumerGroupOffsets` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:synchronise-consumer-group-offsets` |
 "
   [^CfnReplicator$ConsumerGroupReplicationProperty$Builder builder id config]
@@ -1517,7 +1517,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amazonMskCluster` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-msk-cluster` |
+| `amazonMskCluster` | software.amazon.awscdk.services.msk.CfnReplicator$AmazonMskClusterProperty | [[cdk.support/lookup-entry]] | `:amazon-msk-cluster` |
 | `vpcConfig` | software.amazon.awscdk.services.msk.CfnReplicator$KafkaClusterClientVpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnReplicator$KafkaClusterProperty$Builder builder id config]
@@ -1594,7 +1594,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `consumerGroupReplication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:consumer-group-replication` |
+| `consumerGroupReplication` | software.amazon.awscdk.services.msk.CfnReplicator$ConsumerGroupReplicationProperty | [[cdk.support/lookup-entry]] | `:consumer-group-replication` |
 | `sourceKafkaClusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-kafka-cluster-arn` |
 | `targetCompressionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-compression-type` |
 | `targetKafkaClusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-kafka-cluster-arn` |
@@ -1663,7 +1663,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `copyAccessControlListsForTopics` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-access-control-lists-for-topics` |
-| `copyTopicConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-topic-configurations` |
+| `copyTopicConfigurations` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-topic-configurations` |
 | `detectAndCopyNewTopics` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:detect-and-copy-new-topics` |
 | `startingPosition` | software.amazon.awscdk.services.msk.CfnReplicator$ReplicationStartingPositionProperty | [[cdk.support/lookup-entry]] | `:starting-position` |
 | `topicsToExclude` | java.util.List | [[cdk.support/lookup-entry]] | `:topics-to-exclude` |
@@ -1705,7 +1705,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-authentication` |
+| `clientAuthentication` | software.amazon.awscdk.services.msk.CfnServerlessCluster$ClientAuthenticationProperty | [[cdk.support/lookup-entry]] | `:client-authentication` |
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-configs` |
@@ -1742,7 +1742,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sasl` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sasl` |
+| `sasl` | software.amazon.awscdk.services.msk.CfnServerlessCluster$SaslProperty | [[cdk.support/lookup-entry]] | `:sasl` |
 "
   [^CfnServerlessCluster$ClientAuthenticationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sasl)]
@@ -1770,7 +1770,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnServerlessCluster$IamProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -1798,7 +1798,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-authentication` |
+| `clientAuthentication` | software.amazon.awscdk.services.msk.CfnServerlessCluster$ClientAuthenticationProperty | [[cdk.support/lookup-entry]] | `:client-authentication` |
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-configs` |
@@ -1835,7 +1835,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `iam` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iam` |
+| `iam` | software.amazon.awscdk.services.msk.CfnServerlessCluster$IamProperty | [[cdk.support/lookup-entry]] | `:iam` |
 "
   [^CfnServerlessCluster$SaslProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :iam)]

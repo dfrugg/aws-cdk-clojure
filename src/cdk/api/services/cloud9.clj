@@ -77,7 +77,7 @@
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `ownerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner-arn` |
-| `repositories` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:repositories` |
+| `repositories` | java.util.List | [[cdk.support/lookup-entry]] | `:repositories` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

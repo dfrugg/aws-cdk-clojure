@@ -124,7 +124,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `conditionBasedCollectionScheme` | software.amazon.awscdk.services.iotfleetwise.CfnCampaign$ConditionBasedCollectionSchemeProperty | [[cdk.support/lookup-entry]] | `:condition-based-collection-scheme` |
-| `timeBasedCollectionScheme` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-based-collection-scheme` |
+| `timeBasedCollectionScheme` | software.amazon.awscdk.services.iotfleetwise.CfnCampaign$TimeBasedCollectionSchemeProperty | [[cdk.support/lookup-entry]] | `:time-based-collection-scheme` |
 "
   [^CfnCampaign$CollectionSchemeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :condition-based-collection-scheme)]
@@ -192,7 +192,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `s3Config` | software.amazon.awscdk.services.iotfleetwise.CfnCampaign$S3ConfigProperty | [[cdk.support/lookup-entry]] | `:s3-config` |
-| `timestreamConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timestream-config` |
+| `timestreamConfig` | software.amazon.awscdk.services.iotfleetwise.CfnCampaign$TimestreamConfigProperty | [[cdk.support/lookup-entry]] | `:timestream-config` |
 "
   [^CfnCampaign$DataDestinationConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-config)]
@@ -508,7 +508,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canInterface` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:can-interface` |
+| `canInterface` | software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest$CanInterfaceProperty | [[cdk.support/lookup-entry]] | `:can-interface` |
 | `interfaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:interface-id` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -712,7 +712,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `interfaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:interface-id` |
-| `obdInterface` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:obd-interface` |
+| `obdInterface` | software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest$ObdInterfaceProperty | [[cdk.support/lookup-entry]] | `:obd-interface` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$ObdNetworkInterfaceProperty$Builder builder id config]
@@ -883,7 +883,7 @@
 | `canSignal` | software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest$CanSignalProperty | [[cdk.support/lookup-entry]] | `:can-signal` |
 | `fullyQualifiedName` | java.lang.String | [[cdk.support/lookup-entry]] | `:fully-qualified-name` |
 | `interfaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:interface-id` |
-| `obdSignal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:obd-signal` |
+| `obdSignal` | software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest$ObdSignalProperty | [[cdk.support/lookup-entry]] | `:obd-signal` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$SignalDecodersItemsProperty$Builder builder id config]
@@ -1215,7 +1215,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `nodeCounts` | software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog$NodeCountsProperty | [[cdk.support/lookup-entry]] | `:node-counts` |
-| `nodes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nodes` |
+| `nodes` | java.util.List | [[cdk.support/lookup-entry]] | `:nodes` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSignalCatalog$Builder builder id config]
@@ -1292,8 +1292,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actuator` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actuator` |
-| `attribute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute` |
+| `actuator` | software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog$ActuatorProperty | [[cdk.support/lookup-entry]] | `:actuator` |
+| `attribute` | software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog$AttributeProperty | [[cdk.support/lookup-entry]] | `:attribute` |
 | `branch` | software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog$BranchProperty | [[cdk.support/lookup-entry]] | `:branch` |
 | `sensor` | software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog$SensorProperty | [[cdk.support/lookup-entry]] | `:sensor` |
 "
@@ -1331,8 +1331,8 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `nodeCounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-counts` |
-| `nodes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nodes` |
+| `nodeCounts` | software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog$NodeCountsProperty | [[cdk.support/lookup-entry]] | `:node-counts` |
+| `nodes` | java.util.List | [[cdk.support/lookup-entry]] | `:nodes` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSignalCatalogProps$Builder builder id config]
@@ -1459,7 +1459,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `associationBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:association-behavior` |
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
 | `decoderManifestArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:decoder-manifest-arn` |
 | `modelManifestArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-manifest-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |

@@ -34,7 +34,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoAdjustType` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-adjust-type` |
-| `historicalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:historical-options` |
+| `historicalOptions` | software.amazon.awscdk.services.budgets.CfnBudget$HistoricalOptionsProperty | [[cdk.support/lookup-entry]] | `:historical-options` |
 "
   [^CfnBudget$AutoAdjustDataProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-adjust-type)]
@@ -64,12 +64,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoAdjustData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-adjust-data` |
+| `autoAdjustData` | software.amazon.awscdk.services.budgets.CfnBudget$AutoAdjustDataProperty | [[cdk.support/lookup-entry]] | `:auto-adjust-data` |
 | `budgetLimit` | software.amazon.awscdk.services.budgets.CfnBudget$SpendProperty | [[cdk.support/lookup-entry]] | `:budget-limit` |
 | `budgetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:budget-name` |
 | `budgetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:budget-type` |
 | `costFilters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:cost-filters` |
-| `costTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cost-types` |
+| `costTypes` | software.amazon.awscdk.services.budgets.CfnBudget$CostTypesProperty | [[cdk.support/lookup-entry]] | `:cost-types` |
 | `plannedBudgetLimits` | java.lang.Object | [[cdk.support/lookup-entry]] | `:planned-budget-limits` |
 | `timePeriod` | software.amazon.awscdk.services.budgets.CfnBudget$TimePeriodProperty | [[cdk.support/lookup-entry]] | `:time-period` |
 | `timeUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-unit` |
@@ -116,9 +116,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `budget` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:budget` |
+| `budget` | software.amazon.awscdk.services.budgets.CfnBudget$BudgetDataProperty | [[cdk.support/lookup-entry]] | `:budget` |
 | `notificationsWithSubscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:notifications-with-subscribers` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnBudget$Builder builder id config]
   (when-some [data (lookup-entry config id :budget)]
@@ -153,12 +153,12 @@
 | `includeCredit` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-credit` |
 | `includeDiscount` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-discount` |
 | `includeOtherSubscription` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-other-subscription` |
-| `includeRecurring` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-recurring` |
+| `includeRecurring` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-recurring` |
 | `includeRefund` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-refund` |
-| `includeSubscription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-subscription` |
-| `includeSupport` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-support` |
-| `includeTax` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-tax` |
-| `includeUpfront` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-upfront` |
+| `includeSubscription` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-subscription` |
+| `includeSupport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-support` |
+| `includeTax` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-tax` |
+| `includeUpfront` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-upfront` |
 | `useAmortized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-amortized` |
 | `useBlended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-blended` |
 "
@@ -273,7 +273,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `notification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification` |
+| `notification` | software.amazon.awscdk.services.budgets.CfnBudget$NotificationProperty | [[cdk.support/lookup-entry]] | `:notification` |
 | `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnBudget$NotificationWithSubscribersProperty$Builder builder id config]
@@ -304,9 +304,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `budget` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:budget` |
+| `budget` | software.amazon.awscdk.services.budgets.CfnBudget$BudgetDataProperty | [[cdk.support/lookup-entry]] | `:budget` |
 | `notificationsWithSubscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:notifications-with-subscribers` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnBudgetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :budget)]
@@ -501,7 +501,7 @@
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `notificationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-type` |
 | `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
-| `subscribers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscribers` |
+| `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnBudgetsAction$Builder builder id config]
   (when-some [data (lookup-entry config id :action-threshold)]
@@ -545,9 +545,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `iamActionDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iam-action-definition` |
+| `iamActionDefinition` | software.amazon.awscdk.services.budgets.CfnBudgetsAction$IamActionDefinitionProperty | [[cdk.support/lookup-entry]] | `:iam-action-definition` |
 | `scpActionDefinition` | software.amazon.awscdk.services.budgets.CfnBudgetsAction$ScpActionDefinitionProperty | [[cdk.support/lookup-entry]] | `:scp-action-definition` |
-| `ssmActionDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-action-definition` |
+| `ssmActionDefinition` | software.amazon.awscdk.services.budgets.CfnBudgetsAction$SsmActionDefinitionProperty | [[cdk.support/lookup-entry]] | `:ssm-action-definition` |
 "
   [^CfnBudgetsAction$DefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :iam-action-definition)]
@@ -624,7 +624,7 @@
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `notificationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-type` |
 | `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
-| `subscribers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscribers` |
+| `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnBudgetsActionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :action-threshold)]

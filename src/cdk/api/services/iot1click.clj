@@ -21,7 +21,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-id` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDevice$Builder builder id config]
   (when-some [data (lookup-entry config id :device-id)]
@@ -52,7 +52,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-id` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDeviceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :device-id)]
@@ -222,7 +222,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultAttributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:default-attributes` |
-| `deviceTemplates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-templates` |
+| `deviceTemplates` | java.util.Map | [[cdk.support/lookup-entry]] | `:device-templates` |
 "
   [^CfnProject$PlacementTemplateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-attributes)]

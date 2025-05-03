@@ -73,10 +73,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
-| `formatOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-options` |
+| `formatOptions` | software.amazon.awscdk.services.databrew.CfnDataset$FormatOptionsProperty | [[cdk.support/lookup-entry]] | `:format-options` |
 | `input` | software.amazon.awscdk.services.databrew.CfnDataset$InputProperty | [[cdk.support/lookup-entry]] | `:input` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `pathOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:path-options` |
+| `pathOptions` | software.amazon.awscdk.services.databrew.CfnDataset$PathOptionsProperty | [[cdk.support/lookup-entry]] | `:path-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataset$Builder builder id config]
@@ -149,7 +149,7 @@
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `tempDirectory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temp-directory` |
+| `tempDirectory` | software.amazon.awscdk.services.databrew.CfnDataset$S3LocationProperty | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnDataset$DataCatalogInputDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -186,7 +186,7 @@
 | `databaseTableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-table-name` |
 | `glueConnectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:glue-connection-name` |
 | `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
-| `tempDirectory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temp-directory` |
+| `tempDirectory` | software.amazon.awscdk.services.databrew.CfnDataset$S3LocationProperty | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnDataset$DatabaseInputDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :database-table-name)]
@@ -221,7 +221,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `createColumn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:create-column` |
-| `datetimeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datetime-options` |
+| `datetimeOptions` | software.amazon.awscdk.services.databrew.CfnDataset$DatetimeOptionsProperty | [[cdk.support/lookup-entry]] | `:datetime-options` |
 | `filter` | software.amazon.awscdk.services.databrew.CfnDataset$FilterExpressionProperty | [[cdk.support/lookup-entry]] | `:filter` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -363,7 +363,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
-| `valuesMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values-map` |
+| `valuesMap` | java.util.List | [[cdk.support/lookup-entry]] | `:values-map` |
 "
   [^CfnDataset$FilterExpressionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :expression)]
@@ -424,9 +424,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
+| `csv` | software.amazon.awscdk.services.databrew.CfnDataset$CsvOptionsProperty | [[cdk.support/lookup-entry]] | `:csv` |
 | `excel` | software.amazon.awscdk.services.databrew.CfnDataset$ExcelOptionsProperty | [[cdk.support/lookup-entry]] | `:excel` |
-| `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
+| `json` | software.amazon.awscdk.services.databrew.CfnDataset$JsonOptionsProperty | [[cdk.support/lookup-entry]] | `:json` |
 "
   [^CfnDataset$FormatOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv)]
@@ -458,7 +458,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataCatalogInputDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-catalog-input-definition` |
+| `dataCatalogInputDefinition` | software.amazon.awscdk.services.databrew.CfnDataset$DataCatalogInputDefinitionProperty | [[cdk.support/lookup-entry]] | `:data-catalog-input-definition` |
 | `databaseInputDefinition` | software.amazon.awscdk.services.databrew.CfnDataset$DatabaseInputDefinitionProperty | [[cdk.support/lookup-entry]] | `:database-input-definition` |
 | `metadata` | software.amazon.awscdk.services.databrew.CfnDataset$MetadataProperty | [[cdk.support/lookup-entry]] | `:metadata` |
 | `s3InputDefinition` | software.amazon.awscdk.services.databrew.CfnDataset$S3LocationProperty | [[cdk.support/lookup-entry]] | `:s3-input-definition` |
@@ -553,7 +553,7 @@
 |---|---|---|---|
 | `filesLimit` | software.amazon.awscdk.services.databrew.CfnDataset$FilesLimitProperty | [[cdk.support/lookup-entry]] | `:files-limit` |
 | `lastModifiedDateCondition` | software.amazon.awscdk.services.databrew.CfnDataset$FilterExpressionProperty | [[cdk.support/lookup-entry]] | `:last-modified-date-condition` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnDataset$PathOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :files-limit)]
@@ -617,10 +617,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
-| `formatOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-options` |
+| `formatOptions` | software.amazon.awscdk.services.databrew.CfnDataset$FormatOptionsProperty | [[cdk.support/lookup-entry]] | `:format-options` |
 | `input` | software.amazon.awscdk.services.databrew.CfnDataset$InputProperty | [[cdk.support/lookup-entry]] | `:input` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `pathOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:path-options` |
+| `pathOptions` | software.amazon.awscdk.services.databrew.CfnDataset$PathOptionsProperty | [[cdk.support/lookup-entry]] | `:path-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatasetProps$Builder builder id config]
@@ -723,14 +723,14 @@
 | `datasetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-name` |
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 | `encryptionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-mode` |
-| `jobSample` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-sample` |
+| `jobSample` | software.amazon.awscdk.services.databrew.CfnJob$JobSampleProperty | [[cdk.support/lookup-entry]] | `:job-sample` |
 | `logSubscription` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-subscription` |
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `maxRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-retries` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outputLocation` | software.amazon.awscdk.services.databrew.CfnJob$OutputLocationProperty | [[cdk.support/lookup-entry]] | `:output-location` |
 | `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
-| `profileConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:profile-configuration` |
+| `profileConfiguration` | software.amazon.awscdk.services.databrew.CfnJob$ProfileConfigurationProperty | [[cdk.support/lookup-entry]] | `:profile-configuration` |
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 | `recipe` | software.amazon.awscdk.services.databrew.CfnJob$RecipeProperty | [[cdk.support/lookup-entry]] | `:recipe` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -834,7 +834,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `selectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectors` |
+| `selectors` | java.util.List | [[cdk.support/lookup-entry]] | `:selectors` |
 | `statistics` | software.amazon.awscdk.services.databrew.CfnJob$StatisticsConfigurationProperty | [[cdk.support/lookup-entry]] | `:statistics` |
 "
   [^CfnJob$ColumnStatisticsConfigurationProperty$Builder builder id config]
@@ -936,7 +936,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `databaseOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:database-options` |
+| `databaseOptions` | software.amazon.awscdk.services.databrew.CfnJob$DatabaseTableOutputOptionsProperty | [[cdk.support/lookup-entry]] | `:database-options` |
 | `databaseOutputMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-output-mode` |
 | `glueConnectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:glue-connection-name` |
 "
@@ -971,7 +971,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `tempDirectory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temp-directory` |
+| `tempDirectory` | software.amazon.awscdk.services.databrew.CfnJob$S3LocationProperty | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnJob$DatabaseTableOutputOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :table-name)]
@@ -1001,7 +1001,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowedStatistics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowed-statistics` |
+| `allowedStatistics` | software.amazon.awscdk.services.databrew.CfnJob$AllowedStatisticsProperty | [[cdk.support/lookup-entry]] | `:allowed-statistics` |
 | `entityTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:entity-types` |
 "
   [^CfnJob$EntityDetectorConfigurationProperty$Builder builder id config]
@@ -1063,7 +1063,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
+| `csv` | software.amazon.awscdk.services.databrew.CfnJob$CsvOutputOptionsProperty | [[cdk.support/lookup-entry]] | `:csv` |
 "
   [^CfnJob$OutputFormatOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv)]
@@ -1128,9 +1128,9 @@
 | `compressionFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:compression-format` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 | `formatOptions` | software.amazon.awscdk.services.databrew.CfnJob$OutputFormatOptionsProperty | [[cdk.support/lookup-entry]] | `:format-options` |
-| `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
+| `location` | software.amazon.awscdk.services.databrew.CfnJob$S3LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 | `maxOutputFiles` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-output-files` |
-| `overwrite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overwrite` |
+| `overwrite` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:overwrite` |
 | `partitionColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:partition-columns` |
 "
   [^CfnJob$OutputProperty$Builder builder id config]
@@ -1172,9 +1172,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columnStatisticsConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:column-statistics-configurations` |
-| `datasetStatisticsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataset-statistics-configuration` |
+| `datasetStatisticsConfiguration` | software.amazon.awscdk.services.databrew.CfnJob$StatisticsConfigurationProperty | [[cdk.support/lookup-entry]] | `:dataset-statistics-configuration` |
 | `entityDetectorConfiguration` | software.amazon.awscdk.services.databrew.CfnJob$EntityDetectorConfigurationProperty | [[cdk.support/lookup-entry]] | `:entity-detector-configuration` |
-| `profileColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:profile-columns` |
+| `profileColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:profile-columns` |
 "
   [^CfnJob$ProfileConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column-statistics-configurations)]
@@ -1213,14 +1213,14 @@
 | `datasetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-name` |
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 | `encryptionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-mode` |
-| `jobSample` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-sample` |
+| `jobSample` | software.amazon.awscdk.services.databrew.CfnJob$JobSampleProperty | [[cdk.support/lookup-entry]] | `:job-sample` |
 | `logSubscription` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-subscription` |
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `maxRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-retries` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outputLocation` | software.amazon.awscdk.services.databrew.CfnJob$OutputLocationProperty | [[cdk.support/lookup-entry]] | `:output-location` |
 | `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
-| `profileConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:profile-configuration` |
+| `profileConfiguration` | software.amazon.awscdk.services.databrew.CfnJob$ProfileConfigurationProperty | [[cdk.support/lookup-entry]] | `:profile-configuration` |
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 | `recipe` | software.amazon.awscdk.services.databrew.CfnJob$RecipeProperty | [[cdk.support/lookup-entry]] | `:recipe` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -1418,7 +1418,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `includedStatistics` | java.util.List | [[cdk.support/lookup-entry]] | `:included-statistics` |
-| `overrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overrides` |
+| `overrides` | java.util.List | [[cdk.support/lookup-entry]] | `:overrides` |
 "
   [^CfnJob$StatisticsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :included-statistics)]
@@ -1483,7 +1483,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `recipeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:recipe-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `sample` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sample` |
+| `sample` | software.amazon.awscdk.services.databrew.CfnProject$SampleProperty | [[cdk.support/lookup-entry]] | `:sample` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProject$Builder builder id config]
@@ -1526,7 +1526,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `recipeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:recipe-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `sample` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sample` |
+| `sample` | software.amazon.awscdk.services.databrew.CfnProject$SampleProperty | [[cdk.support/lookup-entry]] | `:sample` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProjectProps$Builder builder id config]
@@ -1701,7 +1701,7 @@
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `tempDirectory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temp-directory` |
+| `tempDirectory` | software.amazon.awscdk.services.databrew.CfnRecipe$S3LocationProperty | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnRecipe$DataCatalogInputDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -1735,7 +1735,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataCatalogInputDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-catalog-input-definition` |
+| `dataCatalogInputDefinition` | software.amazon.awscdk.services.databrew.CfnRecipe$DataCatalogInputDefinitionProperty | [[cdk.support/lookup-entry]] | `:data-catalog-input-definition` |
 | `s3InputDefinition` | software.amazon.awscdk.services.databrew.CfnRecipe$S3LocationProperty | [[cdk.support/lookup-entry]] | `:s3-input-definition` |
 "
   [^CfnRecipe$InputProperty$Builder builder id config]
@@ -1768,7 +1768,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `steps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:steps` |
+| `steps` | java.util.List | [[cdk.support/lookup-entry]] | `:steps` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRecipeProps$Builder builder id config]
@@ -1871,7 +1871,7 @@
 | `sampleSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:sample-size` |
 | `sampleType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sample-type` |
 | `secondInput` | java.lang.String | [[cdk.support/lookup-entry]] | `:second-input` |
-| `secondaryInputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-inputs` |
+| `secondaryInputs` | java.util.List | [[cdk.support/lookup-entry]] | `:secondary-inputs` |
 | `sheetIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:sheet-indexes` |
 | `sheetNames` | java.util.List | [[cdk.support/lookup-entry]] | `:sheet-names` |
 | `sourceColumn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-column` |
@@ -2193,7 +2193,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataCatalogInputDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-catalog-input-definition` |
+| `dataCatalogInputDefinition` | software.amazon.awscdk.services.databrew.CfnRecipe$DataCatalogInputDefinitionProperty | [[cdk.support/lookup-entry]] | `:data-catalog-input-definition` |
 | `s3InputDefinition` | software.amazon.awscdk.services.databrew.CfnRecipe$S3LocationProperty | [[cdk.support/lookup-entry]] | `:s3-input-definition` |
 "
   [^CfnRecipe$SecondaryInputProperty$Builder builder id config]
@@ -2226,7 +2226,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
@@ -2297,7 +2297,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
@@ -2336,11 +2336,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `checkExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:check-expression` |
-| `columnSelectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-selectors` |
-| `disabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disabled` |
+| `columnSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:column-selectors` |
+| `disabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `substitutionMap` | java.util.List | [[cdk.support/lookup-entry]] | `:substitution-map` |
-| `threshold` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:threshold` |
+| `threshold` | software.amazon.awscdk.services.databrew.CfnRuleset$ThresholdProperty | [[cdk.support/lookup-entry]] | `:threshold` |
 "
   [^CfnRuleset$RuleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :check-expression)]

@@ -21,7 +21,7 @@
 |---|---|---|---|
 | `datastoreName` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-name` |
 | `datastoreTypeVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-type-version` |
-| `identityProviderConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:identity-provider-configuration` |
+| `identityProviderConfiguration` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$IdentityProviderConfigurationProperty | [[cdk.support/lookup-entry]] | `:identity-provider-configuration` |
 | `preloadDataConfig` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$PreloadDataConfigProperty | [[cdk.support/lookup-entry]] | `:preload-data-config` |
 | `sseConfiguration` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$SseConfigurationProperty | [[cdk.support/lookup-entry]] | `:sse-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -191,8 +191,8 @@
 |---|---|---|---|
 | `datastoreName` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-name` |
 | `datastoreTypeVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-type-version` |
-| `identityProviderConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:identity-provider-configuration` |
-| `preloadDataConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preload-data-config` |
+| `identityProviderConfiguration` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$IdentityProviderConfigurationProperty | [[cdk.support/lookup-entry]] | `:identity-provider-configuration` |
+| `preloadDataConfig` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$PreloadDataConfigProperty | [[cdk.support/lookup-entry]] | `:preload-data-config` |
 | `sseConfiguration` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$SseConfigurationProperty | [[cdk.support/lookup-entry]] | `:sse-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -232,7 +232,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `kmsEncryptionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kms-encryption-config` |
+| `kmsEncryptionConfig` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$KmsEncryptionConfigProperty | [[cdk.support/lookup-entry]] | `:kms-encryption-config` |
 "
   [^CfnFHIRDatastore$SseConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :kms-encryption-config)]

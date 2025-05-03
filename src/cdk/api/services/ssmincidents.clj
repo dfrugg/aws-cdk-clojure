@@ -29,8 +29,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtected` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protected` |
-| `regions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regions` |
+| `deletionProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protected` |
+| `regions` | java.util.List | [[cdk.support/lookup-entry]] | `:regions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReplicationSet$Builder builder id config]
@@ -63,8 +63,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtected` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protected` |
-| `regions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regions` |
+| `deletionProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protected` |
+| `regions` | java.util.List | [[cdk.support/lookup-entry]] | `:regions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReplicationSetProps$Builder builder id config]
@@ -156,7 +156,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ssmAutomation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-automation` |
+| `ssmAutomation` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$SsmAutomationProperty | [[cdk.support/lookup-entry]] | `:ssm-automation` |
 "
   [^CfnResponsePlan$ActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ssm-automation)]
@@ -184,12 +184,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chatChannel` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$ChatChannelProperty | [[cdk.support/lookup-entry]] | `:chat-channel` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `engagements` | java.util.List | [[cdk.support/lookup-entry]] | `:engagements` |
-| `incidentTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:incident-template` |
-| `integrations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integrations` |
+| `incidentTemplate` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$IncidentTemplateProperty | [[cdk.support/lookup-entry]] | `:incident-template` |
+| `integrations` | java.util.List | [[cdk.support/lookup-entry]] | `:integrations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -363,7 +363,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pagerDutyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pager-duty-configuration` |
+| `pagerDutyConfiguration` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$PagerDutyConfigurationProperty | [[cdk.support/lookup-entry]] | `:pager-duty-configuration` |
 "
   [^CfnResponsePlan$IntegrationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pager-duty-configuration)]
@@ -420,7 +420,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `pagerDutyIncidentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pager-duty-incident-configuration` |
+| `pagerDutyIncidentConfiguration` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$PagerDutyIncidentConfigurationProperty | [[cdk.support/lookup-entry]] | `:pager-duty-incident-configuration` |
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnResponsePlan$PagerDutyConfigurationProperty$Builder builder id config]
@@ -485,8 +485,8 @@
 | `chatChannel` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$ChatChannelProperty | [[cdk.support/lookup-entry]] | `:chat-channel` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `engagements` | java.util.List | [[cdk.support/lookup-entry]] | `:engagements` |
-| `incidentTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:incident-template` |
-| `integrations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integrations` |
+| `incidentTemplate` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$IncidentTemplateProperty | [[cdk.support/lookup-entry]] | `:incident-template` |
+| `integrations` | java.util.List | [[cdk.support/lookup-entry]] | `:integrations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -533,7 +533,7 @@
 | `documentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-name` |
 | `documentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-version` |
 | `dynamicParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:dynamic-parameters` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `targetAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-account` |
 "

@@ -17,13 +17,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `graphName` | java.lang.String | [[cdk.support/lookup-entry]] | `:graph-name` |
 | `provisionedMemory` | java.lang.Number | [[cdk.support/lookup-entry]] | `:provisioned-memory` |
-| `publicConnectivity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:public-connectivity` |
+| `publicConnectivity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-connectivity` |
 | `replicaCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replica-count` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vectorSearchConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
+| `vectorSearchConfiguration` | software.amazon.awscdk.services.neptunegraph.CfnGraph$VectorSearchConfigurationProperty | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
 "
   [^CfnGraph$Builder builder id config]
   (when-some [data (lookup-entry config id :deletion-protection)]
@@ -63,13 +63,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `graphName` | java.lang.String | [[cdk.support/lookup-entry]] | `:graph-name` |
 | `provisionedMemory` | java.lang.Number | [[cdk.support/lookup-entry]] | `:provisioned-memory` |
-| `publicConnectivity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:public-connectivity` |
+| `publicConnectivity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-connectivity` |
 | `replicaCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replica-count` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vectorSearchConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
+| `vectorSearchConfiguration` | software.amazon.awscdk.services.neptunegraph.CfnGraph$VectorSearchConfigurationProperty | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
 "
   [^CfnGraphProps$Builder builder id config]
   (when-some [data (lookup-entry config id :deletion-protection)]

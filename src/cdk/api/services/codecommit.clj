@@ -91,7 +91,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |
+| `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |
 "
   [^CfnRepository$Builder builder id config]
   (when-some [data (lookup-entry config id :code)]
@@ -165,7 +165,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |
+| `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |
 "
   [^CfnRepositoryProps$Builder builder id config]
   (when-some [data (lookup-entry config id :code)]

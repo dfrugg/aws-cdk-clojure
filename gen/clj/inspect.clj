@@ -36,58 +36,58 @@
                                           :method-arg my.method.symbol.Type
                                           :method-key :method-symbol}]}]}})
 
+(comment
 
-(def create-method
-  "The form that matches the value of the create method when reflected."
-  (symbol "create"))
-
-
-(def build-method
-  "The form that matches the value of the build method when reflected."
-  (symbol "build"))
+  (def create-method
+    "The form that matches the value of the create method when reflected."
+    (symbol "create"))
 
 
-(def ignored-builder-methods
-  "Set of builder name symbols to ignore when defining builders"
-  #{create-method build-method})
+  (def build-method
+    "The form that matches the value of the build method when reflected."
+    (symbol "build"))
 
 
-(defn public-methods
-  "Extracts all the public constructors and methods from a class or class symbol."
-  [^Class target-class]
-  (->> target-class
-       ref/reflect
-       :members
-       (filterv (comp :public :flags))
-       (filter :parameter-types)))
+  (def ignored-builder-methods
+    "Set of builder name symbols to ignore when defining builders"
+    #{create-method build-method})
 
 
-(defn decorate-inits
-  [{:keys [package-name class-name]} {:keys [inits]} methods]
-  (if-let [hints (and (seq methods) (get-in inits [package-name class-name]))]
-    (reduce (fn [v m]
-              (let [hint (get hints (:parameter-types m))]
-                (cond
-                  (nil? hint) (conj v m)
-                  (:discard? hint) v
-                  :else (conj v (assoc m :hint hint)))))
-            []
-            methods)
-    methods))
+  (defn public-methods
+    "Extracts all the public constructors and methods from a class or class symbol."
+    [^Class target-class]
+    (->> target-class
+         ref/reflect
+         :members
+         (filterv (comp :public :flags))
+         (filter :parameter-types)))
+
+  (defn decorate-inits
+    [{:keys [package-name class-name]} {:keys [inits]} methods]
+    (if-let [hints (and (seq methods) (get-in inits [package-name class-name]))]
+      (reduce (fn [v m]
+                (let [hint (get hints (:parameter-types m))]
+                  (cond
+                    (nil? hint) (conj v m)
+                    (:discard? hint) v
+                    :else (conj v (assoc m :hint hint)))))
+              []
+              methods)
+      methods))
 
 
-(defn determine-inits
-  [builder-data config methods]
-  (let [creates (->> methods
-                     (filterv #(= create-method (:name %)))
-                     (filterv (comp :static :flags))
-                     (mapv #(assoc % :init-type :create))
-                     (decorate-inits builder-data config))]
-    (if (seq creates)
-      creates
-      (->> methods
-           (filter #(= (:declaring-class %) (:name %)))
-           (mapv #(assoc % :init-type :construct))))))
+  (defn determine-inits
+    [builder-data config methods]
+    (let [creates (->> methods
+                       (filterv #(= create-method (:name %)))
+                       (filterv (comp :static :flags))
+                       (mapv #(assoc % :init-type :create))
+                       (decorate-inits builder-data config))]
+      (if (seq creates)
+        creates
+        (->> methods
+             (filter #(= (:declaring-class %) (:name %)))
+             (mapv #(assoc % :init-type :construct)))))))
 
 
 (defn describe-package
@@ -182,15 +182,24 @@
   "Describes the constructors and methods on the builder class"
   [{^Class builder-class :class :as builder-data} config]
   (let [descriptor (reflect-builder builder-class)
-        ;methods (public-methods builder-class)
-        ;inits (determine-inits builder-data config methods)
         inits (describe-inits builder-data config descriptor)
         methods (->> (reduce (fn [field-map {field-name :name :as field}]
-                               (let [param (first (:parameter-types field))]
-                                 (if (and (resolvable? param) (get field-name field-map))
-                                   field-map
+                               (let [param (first (:parameter-types field))
+                                     loaded (field-map field-name)]
+                                 (cond
+                                   ; Resolvable has already been loaded
+                                   (and loaded (-> loaded :method-arg resolvable?))
+                                   (-> field-map
+                                       (assoc-in [field-name :method-arg] param)
+                                       (update-in [field-name :method-args] conj param))
+                                   ; Non-resolvable has been loaded
+                                   loaded
+                                   (update-in field-map [field-name :method-args] conj param)
+
+                                   :else
                                    (assoc field-map field-name {:method field-name
-                                                                :method-arg (first (:parameter-types field))
+                                                                :method-arg param
+                                                                :method-args [param]
                                                                 :method-key (camel->kebab-case field-name)}))))
                              {}
                              (:methods descriptor))

@@ -79,7 +79,7 @@
 | `channelRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-role-arn` |
 | `notifyOnAddCorrespondenceToCase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notify-on-add-correspondence-to-case` |
 | `notifyOnCaseSeverity` | java.lang.String | [[cdk.support/lookup-entry]] | `:notify-on-case-severity` |
-| `notifyOnCreateOrReopenCase` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notify-on-create-or-reopen-case` |
+| `notifyOnCreateOrReopenCase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notify-on-create-or-reopen-case` |
 | `notifyOnResolveCase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notify-on-resolve-case` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 "
@@ -126,7 +126,7 @@
 | `channelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-id` |
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `channelRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-role-arn` |
-| `notifyOnAddCorrespondenceToCase` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notify-on-add-correspondence-to-case` |
+| `notifyOnAddCorrespondenceToCase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notify-on-add-correspondence-to-case` |
 | `notifyOnCaseSeverity` | java.lang.String | [[cdk.support/lookup-entry]] | `:notify-on-case-severity` |
 | `notifyOnCreateOrReopenCase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notify-on-create-or-reopen-case` |
 | `notifyOnResolveCase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notify-on-resolve-case` |

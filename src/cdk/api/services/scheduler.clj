@@ -75,7 +75,7 @@
 | `scheduleExpressionTimezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression-timezone` |
 | `startDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-date` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `target` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target` |
+| `target` | software.amazon.awscdk.services.scheduler.CfnSchedule$TargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnSchedule$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -185,14 +185,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacityProviderStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
+| `capacityProviderStrategy` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
 | `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
 | `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
 | `group` | java.lang.String | [[cdk.support/lookup-entry]] | `:group` |
 | `launchType` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-type` |
 | `networkConfiguration` | software.amazon.awscdk.services.scheduler.CfnSchedule$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-strategy` |
+| `placementStrategy` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategy` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
 | `propagateTags` | java.lang.String | [[cdk.support/lookup-entry]] | `:propagate-tags` |
 | `referenceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:reference-id` |
@@ -404,7 +404,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsvpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:awsvpc-configuration` |
+| `awsvpcConfiguration` | software.amazon.awscdk.services.scheduler.CfnSchedule$AwsVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:awsvpc-configuration` |
 "
   [^CfnSchedule$NetworkConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :awsvpc-configuration)]
@@ -504,7 +504,7 @@
 | `scheduleExpressionTimezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression-timezone` |
 | `startDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-date` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `target` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target` |
+| `target` | software.amazon.awscdk.services.scheduler.CfnSchedule$TargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnScheduleProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -614,7 +614,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pipelineParameterList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-parameter-list` |
+| `pipelineParameterList` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-parameter-list` |
 "
   [^CfnSchedule$SageMakerPipelineParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pipeline-parameter-list)]
@@ -672,13 +672,13 @@
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 | `deadLetterConfig` | software.amazon.awscdk.services.scheduler.CfnSchedule$DeadLetterConfigProperty | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
-| `ecsParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecs-parameters` |
-| `eventBridgeParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-bridge-parameters` |
+| `ecsParameters` | software.amazon.awscdk.services.scheduler.CfnSchedule$EcsParametersProperty | [[cdk.support/lookup-entry]] | `:ecs-parameters` |
+| `eventBridgeParameters` | software.amazon.awscdk.services.scheduler.CfnSchedule$EventBridgeParametersProperty | [[cdk.support/lookup-entry]] | `:event-bridge-parameters` |
 | `input` | java.lang.String | [[cdk.support/lookup-entry]] | `:input` |
-| `kinesisParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-parameters` |
-| `retryPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-policy` |
+| `kinesisParameters` | software.amazon.awscdk.services.scheduler.CfnSchedule$KinesisParametersProperty | [[cdk.support/lookup-entry]] | `:kinesis-parameters` |
+| `retryPolicy` | software.amazon.awscdk.services.scheduler.CfnSchedule$RetryPolicyProperty | [[cdk.support/lookup-entry]] | `:retry-policy` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `sageMakerPipelineParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sage-maker-pipeline-parameters` |
+| `sageMakerPipelineParameters` | software.amazon.awscdk.services.scheduler.CfnSchedule$SageMakerPipelineParametersProperty | [[cdk.support/lookup-entry]] | `:sage-maker-pipeline-parameters` |
 | `sqsParameters` | software.amazon.awscdk.services.scheduler.CfnSchedule$SqsParametersProperty | [[cdk.support/lookup-entry]] | `:sqs-parameters` |
 "
   [^CfnSchedule$TargetProperty$Builder builder id config]

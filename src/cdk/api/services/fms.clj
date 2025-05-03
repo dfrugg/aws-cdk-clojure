@@ -88,17 +88,17 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deleteAllPolicyResources` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-all-policy-resources` |
-| `excludeMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-map` |
+| `excludeMap` | software.amazon.awscdk.services.fms.CfnPolicy$IEMapProperty | [[cdk.support/lookup-entry]] | `:exclude-map` |
 | `excludeResourceTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-resource-tags` |
 | `includeMap` | software.amazon.awscdk.services.fms.CfnPolicy$IEMapProperty | [[cdk.support/lookup-entry]] | `:include-map` |
 | `policyDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-description` |
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 | `remediationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remediation-enabled` |
 | `resourceSetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-set-ids` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 | `resourceTypeList` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-type-list` |
-| `resourcesCleanUp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources-clean-up` |
+| `resourcesCleanUp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:resources-clean-up` |
 | `securityServicePolicyData` | software.amazon.awscdk.services.fms.CfnPolicy$SecurityServicePolicyDataProperty | [[cdk.support/lookup-entry]] | `:security-service-policy-data` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -213,7 +213,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `networkFirewallPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-firewall-policy` |
+| `networkFirewallPolicy` | software.amazon.awscdk.services.fms.CfnPolicy$NetworkFirewallPolicyProperty | [[cdk.support/lookup-entry]] | `:network-firewall-policy` |
 | `thirdPartyFirewallPolicy` | software.amazon.awscdk.services.fms.CfnPolicy$ThirdPartyFirewallPolicyProperty | [[cdk.support/lookup-entry]] | `:third-party-firewall-policy` |
 "
   [^CfnPolicy$PolicyOptionProperty$Builder builder id config]
@@ -276,17 +276,17 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deleteAllPolicyResources` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-all-policy-resources` |
-| `excludeMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-map` |
+| `excludeMap` | software.amazon.awscdk.services.fms.CfnPolicy$IEMapProperty | [[cdk.support/lookup-entry]] | `:exclude-map` |
 | `excludeResourceTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-resource-tags` |
 | `includeMap` | software.amazon.awscdk.services.fms.CfnPolicy$IEMapProperty | [[cdk.support/lookup-entry]] | `:include-map` |
 | `policyDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-description` |
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 | `remediationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remediation-enabled` |
 | `resourceSetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-set-ids` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 | `resourceTypeList` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-type-list` |
-| `resourcesCleanUp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources-clean-up` |
+| `resourcesCleanUp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:resources-clean-up` |
 | `securityServicePolicyData` | software.amazon.awscdk.services.fms.CfnPolicy$SecurityServicePolicyDataProperty | [[cdk.support/lookup-entry]] | `:security-service-policy-data` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

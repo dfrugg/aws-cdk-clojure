@@ -30,7 +30,7 @@
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
 | `replicationFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replication-factor` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `sseSpecification` | software.amazon.awscdk.services.dax.CfnCluster$SSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `subnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-group-name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -97,7 +97,7 @@
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
 | `replicationFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replication-factor` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `sseSpecification` | software.amazon.awscdk.services.dax.CfnCluster$SSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `subnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-group-name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "

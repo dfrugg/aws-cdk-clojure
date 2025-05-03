@@ -169,10 +169,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hostedRotationLambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hosted-rotation-lambda` |
+| `hostedRotationLambda` | software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule$HostedRotationLambdaProperty | [[cdk.support/lookup-entry]] | `:hosted-rotation-lambda` |
 | `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
 | `rotationLambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:rotation-lambda-arn` |
-| `rotationRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rotation-rules` |
+| `rotationRules` | software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule$RotationRulesProperty | [[cdk.support/lookup-entry]] | `:rotation-rules` |
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnRotationSchedule$Builder builder id config]
@@ -267,10 +267,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hostedRotationLambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hosted-rotation-lambda` |
+| `hostedRotationLambda` | software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule$HostedRotationLambdaProperty | [[cdk.support/lookup-entry]] | `:hosted-rotation-lambda` |
 | `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
 | `rotationLambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:rotation-lambda-arn` |
-| `rotationRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rotation-rules` |
+| `rotationRules` | software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule$RotationRulesProperty | [[cdk.support/lookup-entry]] | `:rotation-rules` |
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnRotationScheduleProps$Builder builder id config]
@@ -345,7 +345,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `generateSecretString` | software.amazon.awscdk.services.secretsmanager.CfnSecret$GenerateSecretStringProperty | [[cdk.support/lookup-entry]] | `:generate-secret-string` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `replicaRegions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replica-regions` |
+| `replicaRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:replica-regions` |
 | `secretString` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -391,7 +391,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `excludeLowercase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-lowercase` |
 | `excludeNumbers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-numbers` |
 | `excludePunctuation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-punctuation` |
-| `excludeUppercase` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-uppercase` |
+| `excludeUppercase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-uppercase` |
 | `generateStringKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:generate-string-key` |
 | `includeSpace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-space` |
 | `passwordLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:password-length` |
@@ -446,7 +446,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `generateSecretString` | software.amazon.awscdk.services.secretsmanager.CfnSecret$GenerateSecretStringProperty | [[cdk.support/lookup-entry]] | `:generate-secret-string` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `replicaRegions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replica-regions` |
+| `replicaRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:replica-regions` |
 | `secretString` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

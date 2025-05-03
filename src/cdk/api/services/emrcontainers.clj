@@ -17,7 +17,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-provider` |
+| `containerProvider` | software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster$ContainerProviderProperty | [[cdk.support/lookup-entry]] | `:container-provider` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -51,7 +51,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `eksInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eks-info` |
+| `eksInfo` | software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster$EksInfoProperty | [[cdk.support/lookup-entry]] | `:eks-info` |
 "
   [^CfnVirtualCluster$ContainerInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :eks-info)]
@@ -141,7 +141,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-provider` |
+| `containerProvider` | software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster$ContainerProviderProperty | [[cdk.support/lookup-entry]] | `:container-provider` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

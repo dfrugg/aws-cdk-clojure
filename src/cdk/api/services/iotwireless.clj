@@ -190,8 +190,8 @@
 | `rxDelay1` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rx-delay1` |
 | `rxDrOffset1` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rx-dr-offset1` |
 | `rxFreq2` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rx-freq2` |
-| `supports32BitFCnt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:supports32-bit-f-cnt` |
-| `supportsClassB` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:supports-class-b` |
+| `supports32BitFCnt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:supports32-bit-f-cnt` |
+| `supportsClassB` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:supports-class-b` |
 | `supportsClassC` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:supports-class-c` |
 | `supportsJoin` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:supports-join` |
 "
@@ -257,7 +257,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `loRaWan` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
+| `loRaWan` | software.amazon.awscdk.services.iotwireless.CfnDeviceProfile$LoRaWANDeviceProfileProperty | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -298,7 +298,7 @@
 | `disassociateWirelessDevice` | java.lang.String | [[cdk.support/lookup-entry]] | `:disassociate-wireless-device` |
 | `firmwareUpdateImage` | java.lang.String | [[cdk.support/lookup-entry]] | `:firmware-update-image` |
 | `firmwareUpdateRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:firmware-update-role` |
-| `loRaWan` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
+| `loRaWan` | software.amazon.awscdk.services.iotwireless.CfnFuotaTask$LoRaWANProperty | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -384,7 +384,7 @@
 | `disassociateWirelessDevice` | java.lang.String | [[cdk.support/lookup-entry]] | `:disassociate-wireless-device` |
 | `firmwareUpdateImage` | java.lang.String | [[cdk.support/lookup-entry]] | `:firmware-update-image` |
 | `firmwareUpdateRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:firmware-update-role` |
-| `loRaWan` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
+| `loRaWan` | software.amazon.awscdk.services.iotwireless.CfnFuotaTask$LoRaWANProperty | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -672,12 +672,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accountLinked` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:account-linked` |
+| `accountLinked` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:account-linked` |
 | `partnerAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:partner-account-id` |
 | `partnerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:partner-type` |
-| `sidewalk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sidewalk` |
-| `sidewalkResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sidewalk-response` |
-| `sidewalkUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sidewalk-update` |
+| `sidewalk` | software.amazon.awscdk.services.iotwireless.CfnPartnerAccount$SidewalkAccountInfoProperty | [[cdk.support/lookup-entry]] | `:sidewalk` |
+| `sidewalkResponse` | software.amazon.awscdk.services.iotwireless.CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty | [[cdk.support/lookup-entry]] | `:sidewalk-response` |
+| `sidewalkUpdate` | software.amazon.awscdk.services.iotwireless.CfnPartnerAccount$SidewalkUpdateAccountProperty | [[cdk.support/lookup-entry]] | `:sidewalk-update` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPartnerAccount$Builder builder id config]
@@ -718,12 +718,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accountLinked` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:account-linked` |
+| `accountLinked` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:account-linked` |
 | `partnerAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:partner-account-id` |
 | `partnerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:partner-type` |
 | `sidewalk` | software.amazon.awscdk.services.iotwireless.CfnPartnerAccount$SidewalkAccountInfoProperty | [[cdk.support/lookup-entry]] | `:sidewalk` |
-| `sidewalkResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sidewalk-response` |
-| `sidewalkUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sidewalk-update` |
+| `sidewalkResponse` | software.amazon.awscdk.services.iotwireless.CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty | [[cdk.support/lookup-entry]] | `:sidewalk-response` |
+| `sidewalkUpdate` | software.amazon.awscdk.services.iotwireless.CfnPartnerAccount$SidewalkUpdateAccountProperty | [[cdk.support/lookup-entry]] | `:sidewalk-update` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPartnerAccountProps$Builder builder id config]
@@ -888,7 +888,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addGwMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:add-gw-metadata` |
+| `addGwMetadata` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-gw-metadata` |
 | `channelMask` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-mask` |
 | `devStatusReqFreq` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dev-status-req-freq` |
 | `dlBucketSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dl-bucket-size` |
@@ -896,13 +896,13 @@
 | `dlRatePolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:dl-rate-policy` |
 | `drMax` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dr-max` |
 | `drMin` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dr-min` |
-| `hrAllowed` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hr-allowed` |
+| `hrAllowed` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:hr-allowed` |
 | `minGwDiversity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-gw-diversity` |
-| `nwkGeoLoc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nwk-geo-loc` |
+| `nwkGeoLoc` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:nwk-geo-loc` |
 | `prAllowed` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:pr-allowed` |
-| `raAllowed` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ra-allowed` |
-| `reportDevStatusBattery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:report-dev-status-battery` |
-| `reportDevStatusMargin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:report-dev-status-margin` |
+| `raAllowed` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ra-allowed` |
+| `reportDevStatusBattery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-dev-status-battery` |
+| `reportDevStatusMargin` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-dev-status-margin` |
 | `targetPer` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-per` |
 | `ulBucketSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ul-bucket-size` |
 | `ulRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ul-rate` |
@@ -970,7 +970,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `loRaWan` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
+| `loRaWan` | software.amazon.awscdk.services.iotwireless.CfnServiceProfile$LoRaWANServiceProfileProperty | [[cdk.support/lookup-entry]] | `:lo-ra-wan` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1005,11 +1005,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoCreateTasks` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-create-tasks` |
-| `loRaWanUpdateGatewayTaskEntry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lo-ra-wan-update-gateway-task-entry` |
+| `loRaWanUpdateGatewayTaskEntry` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty | [[cdk.support/lookup-entry]] | `:lo-ra-wan-update-gateway-task-entry` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskDefinitionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition-type` |
-| `update` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update` |
+| `update` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty | [[cdk.support/lookup-entry]] | `:update` |
 "
   [^CfnTaskDefinition$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-create-tasks)]
@@ -1119,7 +1119,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `currentVersion` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$LoRaWANGatewayVersionProperty | [[cdk.support/lookup-entry]] | `:current-version` |
-| `updateVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update-version` |
+| `updateVersion` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$LoRaWANGatewayVersionProperty | [[cdk.support/lookup-entry]] | `:update-version` |
 "
   [^CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :current-version)]
@@ -1150,11 +1150,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoCreateTasks` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-create-tasks` |
-| `loRaWanUpdateGatewayTaskEntry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lo-ra-wan-update-gateway-task-entry` |
+| `loRaWanUpdateGatewayTaskEntry` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty | [[cdk.support/lookup-entry]] | `:lo-ra-wan-update-gateway-task-entry` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskDefinitionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition-type` |
-| `update` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update` |
+| `update` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty | [[cdk.support/lookup-entry]] | `:update` |
 "
   [^CfnTaskDefinitionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-create-tasks)]
@@ -1227,7 +1227,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `devAddr` | java.lang.String | [[cdk.support/lookup-entry]] | `:dev-addr` |
-| `sessionKeys` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-keys` |
+| `sessionKeys` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$SessionKeysAbpV10xProperty | [[cdk.support/lookup-entry]] | `:session-keys` |
 "
   [^CfnWirelessDevice$AbpV10xProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dev-addr)]
@@ -1258,7 +1258,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `devAddr` | java.lang.String | [[cdk.support/lookup-entry]] | `:dev-addr` |
-| `sessionKeys` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-keys` |
+| `sessionKeys` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$SessionKeysAbpV11Property | [[cdk.support/lookup-entry]] | `:session-keys` |
 "
   [^CfnWirelessDevice$AbpV11Property$Builder builder id config]
   (when-some [data (lookup-entry config id :dev-addr)]
@@ -1445,12 +1445,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `abpV10X` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:abp-v10-x` |
-| `abpV11` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:abp-v11` |
+| `abpV10X` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$AbpV10xProperty | [[cdk.support/lookup-entry]] | `:abp-v10-x` |
+| `abpV11` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$AbpV11Property | [[cdk.support/lookup-entry]] | `:abp-v11` |
 | `devEui` | java.lang.String | [[cdk.support/lookup-entry]] | `:dev-eui` |
 | `deviceProfileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-profile-id` |
-| `otaaV10X` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:otaa-v10-x` |
-| `otaaV11` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:otaa-v11` |
+| `otaaV10X` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$OtaaV10xProperty | [[cdk.support/lookup-entry]] | `:otaa-v10-x` |
+| `otaaV11` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$OtaaV11Property | [[cdk.support/lookup-entry]] | `:otaa-v11` |
 | `serviceProfileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-profile-id` |
 "
   [^CfnWirelessDevice$LoRaWANDeviceProperty$Builder builder id config]

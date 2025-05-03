@@ -67,7 +67,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `routingStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-strategy` |
+| `routingStrategy` | software.amazon.awscdk.services.gamelift.CfnAlias$RoutingStrategyProperty | [[cdk.support/lookup-entry]] | `:routing-strategy` |
 "
   [^CfnAlias$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -101,7 +101,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `routingStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-strategy` |
+| `routingStrategy` | software.amazon.awscdk.services.gamelift.CfnAlias$RoutingStrategyProperty | [[cdk.support/lookup-entry]] | `:routing-strategy` |
 "
   [^CfnAliasProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -170,7 +170,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `operatingSystem` | java.lang.String | [[cdk.support/lookup-entry]] | `:operating-system` |
 | `serverSdkVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-sdk-version` |
-| `storageLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-location` |
+| `storageLocation` | software.amazon.awscdk.services.gamelift.CfnBuild$StorageLocationProperty | [[cdk.support/lookup-entry]] | `:storage-location` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnBuild$Builder builder id config]
@@ -210,7 +210,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `operatingSystem` | java.lang.String | [[cdk.support/lookup-entry]] | `:operating-system` |
 | `serverSdkVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-sdk-version` |
-| `storageLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-location` |
+| `storageLocation` | software.amazon.awscdk.services.gamelift.CfnBuild$StorageLocationProperty | [[cdk.support/lookup-entry]] | `:storage-location` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnBuildProps$Builder builder id config]
@@ -333,13 +333,13 @@
 | `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
 | `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
 | `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
-| `dependsOn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:depends-on` |
+| `dependsOn` | java.util.List | [[cdk.support/lookup-entry]] | `:depends-on` |
 | `entryPoint` | java.util.List | [[cdk.support/lookup-entry]] | `:entry-point` |
 | `environment` | java.util.List | [[cdk.support/lookup-entry]] | `:environment` |
 | `essential` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:essential` |
 | `healthCheck` | software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition$ContainerHealthCheckProperty | [[cdk.support/lookup-entry]] | `:health-check` |
 | `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |
-| `memoryLimits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:memory-limits` |
+| `memoryLimits` | software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition$MemoryLimitsProperty | [[cdk.support/lookup-entry]] | `:memory-limits` |
 | `portConfiguration` | software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition$PortConfigurationProperty | [[cdk.support/lookup-entry]] | `:port-configuration` |
 | `resolvedImageDigest` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolved-image-digest` |
 | `workingDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:working-directory` |
@@ -561,7 +561,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerPortRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-port-ranges` |
+| `containerPortRanges` | java.util.List | [[cdk.support/lookup-entry]] | `:container-port-ranges` |
 "
   [^CfnContainerGroupDefinition$PortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :container-port-ranges)]
@@ -663,20 +663,20 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `anywhereConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anywhere-configuration` |
+| `anywhereConfiguration` | software.amazon.awscdk.services.gamelift.CfnFleet$AnywhereConfigurationProperty | [[cdk.support/lookup-entry]] | `:anywhere-configuration` |
 | `applyCapacity` | java.lang.String | [[cdk.support/lookup-entry]] | `:apply-capacity` |
 | `buildId` | java.lang.String | [[cdk.support/lookup-entry]] | `:build-id` |
 | `certificateConfiguration` | software.amazon.awscdk.services.gamelift.CfnFleet$CertificateConfigurationProperty | [[cdk.support/lookup-entry]] | `:certificate-configuration` |
 | `computeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-type` |
-| `containerGroupsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-groups-configuration` |
+| `containerGroupsConfiguration` | software.amazon.awscdk.services.gamelift.CfnFleet$ContainerGroupsConfigurationProperty | [[cdk.support/lookup-entry]] | `:container-groups-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `desiredEc2Instances` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-ec2-instances` |
-| `ec2InboundPermissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-inbound-permissions` |
+| `ec2InboundPermissions` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-inbound-permissions` |
 | `ec2InstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ec2-instance-type` |
 | `fleetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:fleet-type` |
 | `instanceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-role-arn` |
 | `instanceRoleCredentialsProvider` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-role-credentials-provider` |
-| `locations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:locations` |
+| `locations` | java.util.List | [[cdk.support/lookup-entry]] | `:locations` |
 | `logPaths` | java.util.List | [[cdk.support/lookup-entry]] | `:log-paths` |
 | `maxSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-size` |
 | `metricGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-groups` |
@@ -831,9 +831,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `connectionPortRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-port-range` |
+| `connectionPortRange` | software.amazon.awscdk.services.gamelift.CfnFleet$ConnectionPortRangeProperty | [[cdk.support/lookup-entry]] | `:connection-port-range` |
 | `containerGroupDefinitionNames` | java.util.List | [[cdk.support/lookup-entry]] | `:container-group-definition-names` |
-| `containerGroupsPerInstance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-groups-per-instance` |
+| `containerGroupsPerInstance` | software.amazon.awscdk.services.gamelift.CfnFleet$ContainerGroupsPerInstanceProperty | [[cdk.support/lookup-entry]] | `:container-groups-per-instance` |
 "
   [^CfnFleet$ContainerGroupsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connection-port-range)]
@@ -968,7 +968,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
-| `locationCapacity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location-capacity` |
+| `locationCapacity` | software.amazon.awscdk.services.gamelift.CfnFleet$LocationCapacityProperty | [[cdk.support/lookup-entry]] | `:location-capacity` |
 "
   [^CfnFleet$LocationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :location)]
@@ -998,20 +998,20 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `anywhereConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anywhere-configuration` |
+| `anywhereConfiguration` | software.amazon.awscdk.services.gamelift.CfnFleet$AnywhereConfigurationProperty | [[cdk.support/lookup-entry]] | `:anywhere-configuration` |
 | `applyCapacity` | java.lang.String | [[cdk.support/lookup-entry]] | `:apply-capacity` |
 | `buildId` | java.lang.String | [[cdk.support/lookup-entry]] | `:build-id` |
 | `certificateConfiguration` | software.amazon.awscdk.services.gamelift.CfnFleet$CertificateConfigurationProperty | [[cdk.support/lookup-entry]] | `:certificate-configuration` |
 | `computeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-type` |
-| `containerGroupsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-groups-configuration` |
+| `containerGroupsConfiguration` | software.amazon.awscdk.services.gamelift.CfnFleet$ContainerGroupsConfigurationProperty | [[cdk.support/lookup-entry]] | `:container-groups-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `desiredEc2Instances` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-ec2-instances` |
-| `ec2InboundPermissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-inbound-permissions` |
+| `ec2InboundPermissions` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-inbound-permissions` |
 | `ec2InstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ec2-instance-type` |
 | `fleetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:fleet-type` |
 | `instanceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-role-arn` |
 | `instanceRoleCredentialsProvider` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-role-credentials-provider` |
-| `locations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:locations` |
+| `locations` | java.util.List | [[cdk.support/lookup-entry]] | `:locations` |
 | `logPaths` | java.util.List | [[cdk.support/lookup-entry]] | `:log-paths` |
 | `maxSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-size` |
 | `metricGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-groups` |
@@ -1140,7 +1140,7 @@
 |---|---|---|---|
 | `gameSessionActivationTimeoutSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:game-session-activation-timeout-seconds` |
 | `maxConcurrentGameSessionActivations` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-concurrent-game-session-activations` |
-| `serverProcesses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-processes` |
+| `serverProcesses` | java.util.List | [[cdk.support/lookup-entry]] | `:server-processes` |
 "
   [^CfnFleet$RuntimeConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :game-session-activation-timeout-seconds)]
@@ -1296,7 +1296,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `estimatedInstanceWarmup` | java.lang.Number | [[cdk.support/lookup-entry]] | `:estimated-instance-warmup` |
-| `targetTrackingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-configuration` |
+| `targetTrackingConfiguration` | software.amazon.awscdk.services.gamelift.CfnGameServerGroup$TargetTrackingConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-configuration` |
 "
   [^CfnGameServerGroup$AutoScalingPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :estimated-instance-warmup)]
@@ -1332,7 +1332,7 @@
 | `gameServerGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:game-server-group-name` |
 | `gameServerProtectionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:game-server-protection-policy` |
 | `instanceDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-definitions` |
-| `launchTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template` |
+| `launchTemplate` | software.amazon.awscdk.services.gamelift.CfnGameServerGroup$LaunchTemplateProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
 | `maxSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-size` |
 | `minSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-size` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -1457,8 +1457,8 @@
 | `deleteOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:delete-option` |
 | `gameServerGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:game-server-group-name` |
 | `gameServerProtectionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:game-server-protection-policy` |
-| `instanceDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-definitions` |
-| `launchTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template` |
+| `instanceDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-definitions` |
+| `launchTemplate` | software.amazon.awscdk.services.gamelift.CfnGameServerGroup$LaunchTemplateProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
 | `maxSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-size` |
 | `minSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-size` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -1741,7 +1741,7 @@
 |---|---|---|---|
 | `customEventData` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-event-data` |
 | `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
-| `filterConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-configuration` |
+| `filterConfiguration` | software.amazon.awscdk.services.gamelift.CfnGameSessionQueue$FilterConfigurationProperty | [[cdk.support/lookup-entry]] | `:filter-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `notificationTarget` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-target` |
 | `playerLatencyPolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:player-latency-policies` |
@@ -1968,7 +1968,7 @@
 | `customEventData` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-event-data` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `flexMatchMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:flex-match-mode` |
-| `gameProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:game-properties` |
+| `gameProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:game-properties` |
 | `gameSessionData` | java.lang.String | [[cdk.support/lookup-entry]] | `:game-session-data` |
 | `gameSessionQueueArns` | java.util.List | [[cdk.support/lookup-entry]] | `:game-session-queue-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -2142,7 +2142,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `storageLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-location` |
+| `storageLocation` | software.amazon.awscdk.services.gamelift.CfnScript$S3LocationProperty | [[cdk.support/lookup-entry]] | `:storage-location` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "

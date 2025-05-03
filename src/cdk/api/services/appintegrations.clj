@@ -23,7 +23,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `externalUrlConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:external-url-config` |
+| `externalUrlConfig` | software.amazon.awscdk.services.appintegrations.CfnApplication$ExternalUrlConfigProperty | [[cdk.support/lookup-entry]] | `:external-url-config` |
 "
   [^CfnApplication$ApplicationSourceConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :external-url-config)]
@@ -173,7 +173,7 @@
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `objectConfiguration` | java.lang.Object | [[cdk.support/lookup-entry]] | `:object-configuration` |
-| `scheduleConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule-config` |
+| `scheduleConfig` | software.amazon.awscdk.services.appintegrations.CfnDataIntegration$ScheduleConfigProperty | [[cdk.support/lookup-entry]] | `:schedule-config` |
 | `sourceUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-uri` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -253,7 +253,7 @@
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `objectConfiguration` | java.lang.Object | [[cdk.support/lookup-entry]] | `:object-configuration` |
-| `scheduleConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule-config` |
+| `scheduleConfig` | software.amazon.awscdk.services.appintegrations.CfnDataIntegration$ScheduleConfigProperty | [[cdk.support/lookup-entry]] | `:schedule-config` |
 | `sourceUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-uri` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

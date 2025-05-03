@@ -109,7 +109,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowEarlyCheckIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-early-check-in` |
+| `allowEarlyCheckIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-early-check-in` |
 | `maxTimeToLiveInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-to-live-in-minutes` |
 "
   [^CfnLicense$BorrowConfigurationProperty$Builder builder id config]
@@ -142,15 +142,15 @@
 |---|---|---|---|
 | `beneficiary` | java.lang.String | [[cdk.support/lookup-entry]] | `:beneficiary` |
 | `consumptionConfiguration` | software.amazon.awscdk.services.licensemanager.CfnLicense$ConsumptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:consumption-configuration` |
-| `entitlements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:entitlements` |
+| `entitlements` | java.util.List | [[cdk.support/lookup-entry]] | `:entitlements` |
 | `homeRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:home-region` |
-| `issuer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:issuer` |
-| `licenseMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:license-metadata` |
+| `issuer` | software.amazon.awscdk.services.licensemanager.CfnLicense$IssuerDataProperty | [[cdk.support/lookup-entry]] | `:issuer` |
+| `licenseMetadata` | java.util.List | [[cdk.support/lookup-entry]] | `:license-metadata` |
 | `licenseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:license-name` |
 | `productName` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-name` |
 | `productSku` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-sku` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `validity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity` |
+| `validity` | software.amazon.awscdk.services.licensemanager.CfnLicense$ValidityDateFormatProperty | [[cdk.support/lookup-entry]] | `:validity` |
 "
   [^CfnLicense$Builder builder id config]
   (when-some [data (lookup-entry config id :beneficiary)]
@@ -198,7 +198,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `borrowConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:borrow-configuration` |
+| `borrowConfiguration` | software.amazon.awscdk.services.licensemanager.CfnLicense$BorrowConfigurationProperty | [[cdk.support/lookup-entry]] | `:borrow-configuration` |
 | `provisionalConfiguration` | software.amazon.awscdk.services.licensemanager.CfnLicense$ProvisionalConfigurationProperty | [[cdk.support/lookup-entry]] | `:provisional-configuration` |
 | `renewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:renew-type` |
 "
@@ -235,7 +235,7 @@
 | `allowCheckIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-check-in` |
 | `maxCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-count` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `overage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overage` |
+| `overage` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:overage` |
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -339,15 +339,15 @@
 |---|---|---|---|
 | `beneficiary` | java.lang.String | [[cdk.support/lookup-entry]] | `:beneficiary` |
 | `consumptionConfiguration` | software.amazon.awscdk.services.licensemanager.CfnLicense$ConsumptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:consumption-configuration` |
-| `entitlements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:entitlements` |
+| `entitlements` | java.util.List | [[cdk.support/lookup-entry]] | `:entitlements` |
 | `homeRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:home-region` |
-| `issuer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:issuer` |
-| `licenseMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:license-metadata` |
+| `issuer` | software.amazon.awscdk.services.licensemanager.CfnLicense$IssuerDataProperty | [[cdk.support/lookup-entry]] | `:issuer` |
+| `licenseMetadata` | java.util.List | [[cdk.support/lookup-entry]] | `:license-metadata` |
 | `licenseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:license-name` |
 | `productName` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-name` |
 | `productSku` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-sku` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `validity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity` |
+| `validity` | software.amazon.awscdk.services.licensemanager.CfnLicense$ValidityDateFormatProperty | [[cdk.support/lookup-entry]] | `:validity` |
 "
   [^CfnLicenseProps$Builder builder id config]
   (when-some [data (lookup-entry config id :beneficiary)]

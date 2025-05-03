@@ -70,7 +70,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accountIds` | java.util.List | [[cdk.support/lookup-entry]] | `:account-ids` |
-| `targetResourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-resource-tags` |
+| `targetResourceTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:target-resource-tags` |
 "
   [^CfnCisScanConfiguration$CisTargetsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :account-ids)]
@@ -163,7 +163,7 @@
 | `schedule` | software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `securityLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-level` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration$CisTargetsProperty | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnCisScanConfigurationProps$Builder builder id config]
   (when-some [data (lookup-entry config id :scan-name)]
@@ -199,7 +199,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `daily` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:daily` |
+| `daily` | software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration$DailyScheduleProperty | [[cdk.support/lookup-entry]] | `:daily` |
 | `monthly` | software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration$MonthlyScheduleProperty | [[cdk.support/lookup-entry]] | `:monthly` |
 | `oneTime` | java.lang.Object | [[cdk.support/lookup-entry]] | `:one-time` |
 | `weekly` | software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration$WeeklyScheduleProperty | [[cdk.support/lookup-entry]] | `:weekly` |
@@ -369,34 +369,34 @@
 | `awsAccountId` | java.util.List | [[cdk.support/lookup-entry]] | `:aws-account-id` |
 | `componentId` | java.util.List | [[cdk.support/lookup-entry]] | `:component-id` |
 | `componentType` | java.util.List | [[cdk.support/lookup-entry]] | `:component-type` |
-| `ec2InstanceImageId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-instance-image-id` |
-| `ec2InstanceSubnetId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-instance-subnet-id` |
+| `ec2InstanceImageId` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-instance-image-id` |
+| `ec2InstanceSubnetId` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-instance-subnet-id` |
 | `ec2InstanceVpcId` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-instance-vpc-id` |
-| `ecrImageArchitecture` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecr-image-architecture` |
-| `ecrImageHash` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecr-image-hash` |
+| `ecrImageArchitecture` | java.util.List | [[cdk.support/lookup-entry]] | `:ecr-image-architecture` |
+| `ecrImageHash` | java.util.List | [[cdk.support/lookup-entry]] | `:ecr-image-hash` |
 | `ecrImagePushedAt` | java.util.List | [[cdk.support/lookup-entry]] | `:ecr-image-pushed-at` |
 | `ecrImageRegistry` | java.util.List | [[cdk.support/lookup-entry]] | `:ecr-image-registry` |
 | `ecrImageRepositoryName` | java.util.List | [[cdk.support/lookup-entry]] | `:ecr-image-repository-name` |
 | `ecrImageTags` | java.util.List | [[cdk.support/lookup-entry]] | `:ecr-image-tags` |
 | `findingArn` | java.util.List | [[cdk.support/lookup-entry]] | `:finding-arn` |
-| `findingStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:finding-status` |
-| `findingType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:finding-type` |
-| `firstObservedAt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:first-observed-at` |
+| `findingStatus` | java.util.List | [[cdk.support/lookup-entry]] | `:finding-status` |
+| `findingType` | java.util.List | [[cdk.support/lookup-entry]] | `:finding-type` |
+| `firstObservedAt` | java.util.List | [[cdk.support/lookup-entry]] | `:first-observed-at` |
 | `inspectorScore` | java.util.List | [[cdk.support/lookup-entry]] | `:inspector-score` |
 | `lastObservedAt` | java.util.List | [[cdk.support/lookup-entry]] | `:last-observed-at` |
-| `networkProtocol` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-protocol` |
-| `portRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-range` |
+| `networkProtocol` | java.util.List | [[cdk.support/lookup-entry]] | `:network-protocol` |
+| `portRange` | java.util.List | [[cdk.support/lookup-entry]] | `:port-range` |
 | `relatedVulnerabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:related-vulnerabilities` |
-| `resourceId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-id` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceId` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-id` |
+| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 | `resourceType` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `severity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:severity` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
-| `updatedAt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:updated-at` |
-| `vendorSeverity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vendor-severity` |
+| `severity` | java.util.List | [[cdk.support/lookup-entry]] | `:severity` |
+| `title` | java.util.List | [[cdk.support/lookup-entry]] | `:title` |
+| `updatedAt` | java.util.List | [[cdk.support/lookup-entry]] | `:updated-at` |
+| `vendorSeverity` | java.util.List | [[cdk.support/lookup-entry]] | `:vendor-severity` |
 | `vulnerabilityId` | java.util.List | [[cdk.support/lookup-entry]] | `:vulnerability-id` |
-| `vulnerabilitySource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vulnerability-source` |
-| `vulnerablePackages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vulnerable-packages` |
+| `vulnerabilitySource` | java.util.List | [[cdk.support/lookup-entry]] | `:vulnerability-source` |
+| `vulnerablePackages` | java.util.List | [[cdk.support/lookup-entry]] | `:vulnerable-packages` |
 "
   [^CfnFilter$FilterCriteriaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-account-id)]
@@ -549,10 +549,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `architecture` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:architecture` |
-| `epoch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:epoch` |
-| `name` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:name` |
-| `release` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:release` |
+| `architecture` | software.amazon.awscdk.services.inspectorv2.CfnFilter$StringFilterProperty | [[cdk.support/lookup-entry]] | `:architecture` |
+| `epoch` | software.amazon.awscdk.services.inspectorv2.CfnFilter$NumberFilterProperty | [[cdk.support/lookup-entry]] | `:epoch` |
+| `name` | software.amazon.awscdk.services.inspectorv2.CfnFilter$StringFilterProperty | [[cdk.support/lookup-entry]] | `:name` |
+| `release` | software.amazon.awscdk.services.inspectorv2.CfnFilter$StringFilterProperty | [[cdk.support/lookup-entry]] | `:release` |
 | `sourceLayerHash` | software.amazon.awscdk.services.inspectorv2.CfnFilter$StringFilterProperty | [[cdk.support/lookup-entry]] | `:source-layer-hash` |
 | `version` | software.amazon.awscdk.services.inspectorv2.CfnFilter$StringFilterProperty | [[cdk.support/lookup-entry]] | `:version` |
 "

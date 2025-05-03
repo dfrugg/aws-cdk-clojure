@@ -18,7 +18,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `unusedAccessConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:unused-access-configuration` |
+| `unusedAccessConfiguration` | software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer$UnusedAccessConfigurationProperty | [[cdk.support/lookup-entry]] | `:unused-access-configuration` |
 "
   [^CfnAnalyzer$AnalyzerConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :unused-access-configuration)]
@@ -77,9 +77,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `analyzerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analyzer-configuration` |
+| `analyzerConfiguration` | software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer$AnalyzerConfigurationProperty | [[cdk.support/lookup-entry]] | `:analyzer-configuration` |
 | `analyzerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:analyzer-name` |
-| `archiveRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:archive-rules` |
+| `archiveRules` | java.util.List | [[cdk.support/lookup-entry]] | `:archive-rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -119,7 +119,7 @@
 |---|---|---|---|
 | `contains` | java.util.List | [[cdk.support/lookup-entry]] | `:contains` |
 | `eq` | java.util.List | [[cdk.support/lookup-entry]] | `:eq` |
-| `exists` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exists` |
+| `exists` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exists` |
 | `neq` | java.util.List | [[cdk.support/lookup-entry]] | `:neq` |
 | `property` | java.lang.String | [[cdk.support/lookup-entry]] | `:property` |
 "
@@ -157,7 +157,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `analyzerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analyzer-configuration` |
+| `analyzerConfiguration` | software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer$AnalyzerConfigurationProperty | [[cdk.support/lookup-entry]] | `:analyzer-configuration` |
 | `analyzerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:analyzer-name` |
 | `archiveRules` | java.util.List | [[cdk.support/lookup-entry]] | `:archive-rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

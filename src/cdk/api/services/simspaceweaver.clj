@@ -18,7 +18,7 @@
 | `maximumDuration` | java.lang.String | [[cdk.support/lookup-entry]] | `:maximum-duration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `schemaS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema-s3-location` |
+| `schemaS3Location` | software.amazon.awscdk.services.simspaceweaver.CfnSimulation$S3LocationProperty | [[cdk.support/lookup-entry]] | `:schema-s3-location` |
 | `snapshotS3Location` | software.amazon.awscdk.services.simspaceweaver.CfnSimulation$S3LocationProperty | [[cdk.support/lookup-entry]] | `:snapshot-s3-location` |
 "
   [^CfnSimulation$Builder builder id config]

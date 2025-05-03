@@ -33,7 +33,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `lambdaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-configuration` |
+| `lambdaConfiguration` | software.amazon.awscdk.services.lookoutmetrics.CfnAlert$LambdaConfigurationProperty | [[cdk.support/lookup-entry]] | `:lambda-configuration` |
 | `snsConfiguration` | software.amazon.awscdk.services.lookoutmetrics.CfnAlert$SNSConfigurationProperty | [[cdk.support/lookup-entry]] | `:sns-configuration` |
 "
   [^CfnAlert$ActionProperty$Builder builder id config]
@@ -64,7 +64,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
+| `action` | software.amazon.awscdk.services.lookoutmetrics.CfnAlert$ActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `alertDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alert-description` |
 | `alertName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alert-name` |
 | `alertSensitivityThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:alert-sensitivity-threshold` |
@@ -265,7 +265,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `anomalyDetectorConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anomaly-detector-config` |
+| `anomalyDetectorConfig` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$AnomalyDetectorConfigProperty | [[cdk.support/lookup-entry]] | `:anomaly-detector-config` |
 | `anomalyDetectorDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:anomaly-detector-description` |
 | `anomalyDetectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:anomaly-detector-name` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
@@ -334,7 +334,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `charset` | java.lang.String | [[cdk.support/lookup-entry]] | `:charset` |
-| `containsHeader` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contains-header` |
+| `containsHeader` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:contains-header` |
 | `delimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:delimiter` |
 | `fileCompression` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-compression` |
 | `headerList` | java.util.List | [[cdk.support/lookup-entry]] | `:header-list` |
@@ -376,7 +376,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csvFormatDescriptor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv-format-descriptor` |
+| `csvFormatDescriptor` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$CsvFormatDescriptorProperty | [[cdk.support/lookup-entry]] | `:csv-format-descriptor` |
 | `jsonFormatDescriptor` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$JsonFormatDescriptorProperty | [[cdk.support/lookup-entry]] | `:json-format-descriptor` |
 "
   [^CfnAnomalyDetector$FileFormatDescriptorProperty$Builder builder id config]
@@ -473,7 +473,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensionList` | java.util.List | [[cdk.support/lookup-entry]] | `:dimension-list` |
-| `metricList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-list` |
+| `metricList` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-list` |
 | `metricSetDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-set-description` |
 | `metricSetFrequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-set-frequency` |
 | `metricSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-set-name` |
@@ -524,11 +524,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `appFlowConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:app-flow-config` |
-| `cloudwatchConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloudwatch-config` |
+| `appFlowConfig` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$AppFlowConfigProperty | [[cdk.support/lookup-entry]] | `:app-flow-config` |
+| `cloudwatchConfig` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$CloudwatchConfigProperty | [[cdk.support/lookup-entry]] | `:cloudwatch-config` |
 | `rdsSourceConfig` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$RDSSourceConfigProperty | [[cdk.support/lookup-entry]] | `:rds-source-config` |
 | `redshiftSourceConfig` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$RedshiftSourceConfigProperty | [[cdk.support/lookup-entry]] | `:redshift-source-config` |
-| `s3SourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-source-config` |
+| `s3SourceConfig` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$S3SourceConfigProperty | [[cdk.support/lookup-entry]] | `:s3-source-config` |
 "
   [^CfnAnomalyDetector$MetricSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :app-flow-config)]
@@ -564,7 +564,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `anomalyDetectorConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anomaly-detector-config` |
+| `anomalyDetectorConfig` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$AnomalyDetectorConfigProperty | [[cdk.support/lookup-entry]] | `:anomaly-detector-config` |
 | `anomalyDetectorDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:anomaly-detector-description` |
 | `anomalyDetectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:anomaly-detector-name` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
@@ -660,7 +660,7 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `secretManagerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-manager-arn` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+| `vpcConfiguration` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cluster-identifier)]

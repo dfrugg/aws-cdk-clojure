@@ -61,7 +61,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accountGrouping` | software.amazon.awscdk.services.billingconductor.CfnBillingGroup$AccountGroupingProperty | [[cdk.support/lookup-entry]] | `:account-grouping` |
-| `computationPreference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:computation-preference` |
+| `computationPreference` | software.amazon.awscdk.services.billingconductor.CfnBillingGroup$ComputationPreferenceProperty | [[cdk.support/lookup-entry]] | `:computation-preference` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `primaryAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-account-id` |
@@ -132,7 +132,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accountGrouping` | software.amazon.awscdk.services.billingconductor.CfnBillingGroup$AccountGroupingProperty | [[cdk.support/lookup-entry]] | `:account-grouping` |
-| `computationPreference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:computation-preference` |
+| `computationPreference` | software.amazon.awscdk.services.billingconductor.CfnBillingGroup$ComputationPreferenceProperty | [[cdk.support/lookup-entry]] | `:computation-preference` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `primaryAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-account-id` |
@@ -208,7 +208,7 @@
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 | `billingGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-group-arn` |
 | `billingPeriodRange` | software.amazon.awscdk.services.billingconductor.CfnCustomLineItem$BillingPeriodRangeProperty | [[cdk.support/lookup-entry]] | `:billing-period-range` |
-| `customLineItemChargeDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-line-item-charge-details` |
+| `customLineItemChargeDetails` | software.amazon.awscdk.services.billingconductor.CfnCustomLineItem$CustomLineItemChargeDetailsProperty | [[cdk.support/lookup-entry]] | `:custom-line-item-charge-details` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -251,7 +251,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `flat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:flat` |
+| `flat` | software.amazon.awscdk.services.billingconductor.CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty | [[cdk.support/lookup-entry]] | `:flat` |
 | `lineItemFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:line-item-filters` |
 | `percentage` | software.amazon.awscdk.services.billingconductor.CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty | [[cdk.support/lookup-entry]] | `:percentage` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -383,8 +383,8 @@
 |---|---|---|---|
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 | `billingGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-group-arn` |
-| `billingPeriodRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:billing-period-range` |
-| `customLineItemChargeDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-line-item-charge-details` |
+| `billingPeriodRange` | software.amazon.awscdk.services.billingconductor.CfnCustomLineItem$BillingPeriodRangeProperty | [[cdk.support/lookup-entry]] | `:billing-period-range` |
+| `customLineItemChargeDetails` | software.amazon.awscdk.services.billingconductor.CfnCustomLineItem$CustomLineItemChargeDetailsProperty | [[cdk.support/lookup-entry]] | `:custom-line-item-charge-details` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -509,7 +509,7 @@
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tiering` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tiering` |
+| `tiering` | software.amazon.awscdk.services.billingconductor.CfnPricingRule$TieringProperty | [[cdk.support/lookup-entry]] | `:tiering` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `usageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-type` |
 "
@@ -595,7 +595,7 @@
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tiering` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tiering` |
+| `tiering` | software.amazon.awscdk.services.billingconductor.CfnPricingRule$TieringProperty | [[cdk.support/lookup-entry]] | `:tiering` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `usageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-type` |
 "
@@ -645,7 +645,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeTier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-tier` |
+| `freeTier` | software.amazon.awscdk.services.billingconductor.CfnPricingRule$FreeTierProperty | [[cdk.support/lookup-entry]] | `:free-tier` |
 "
   [^CfnPricingRule$TieringProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :free-tier)]

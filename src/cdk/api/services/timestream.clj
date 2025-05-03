@@ -113,7 +113,7 @@
 | `dbParameterGroupIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-parameter-group-identifier` |
 | `dbStorageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-storage-type` |
 | `deploymentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-type` |
-| `logDeliveryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-delivery-configuration` |
+| `logDeliveryConfiguration` | software.amazon.awscdk.services.timestream.CfnInfluxDBInstance$LogDeliveryConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-delivery-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `organization` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
@@ -177,7 +177,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.timestream.CfnInfluxDBInstance$S3ConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 "
   [^CfnInfluxDBInstance$LogDeliveryConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-configuration)]
@@ -215,7 +215,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `organization` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
-| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 | `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
@@ -276,7 +276,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnInfluxDBInstance$S3ConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bucket-name)]
@@ -309,13 +309,13 @@
 | `clientToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-token` |
 | `errorReportConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$ErrorReportConfigurationProperty | [[cdk.support/lookup-entry]] | `:error-report-configuration` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `notificationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-configuration` |
+| `notificationConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$NotificationConfigurationProperty | [[cdk.support/lookup-entry]] | `:notification-configuration` |
 | `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
 | `scheduleConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$ScheduleConfigurationProperty | [[cdk.support/lookup-entry]] | `:schedule-configuration` |
 | `scheduledQueryExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-query-execution-role-arn` |
 | `scheduledQueryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-query-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-configuration` |
+| `targetConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$TargetConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-configuration` |
 "
   [^CfnScheduledQuery$Builder builder id config]
   (when-some [data (lookup-entry config id :client-token)]
@@ -392,7 +392,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$S3ConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 "
   [^CfnScheduledQuery$ErrorReportConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-configuration)]
@@ -494,7 +494,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `multiMeasureAttributeMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-measure-attribute-mappings` |
+| `multiMeasureAttributeMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:multi-measure-attribute-mappings` |
 | `targetMultiMeasureName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-multi-measure-name` |
 "
   [^CfnScheduledQuery$MultiMeasureMappingsProperty$Builder builder id config]
@@ -525,7 +525,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `snsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns-configuration` |
+| `snsConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$SnsConfigurationProperty | [[cdk.support/lookup-entry]] | `:sns-configuration` |
 "
   [^CfnScheduledQuery$NotificationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sns-configuration)]
@@ -556,13 +556,13 @@
 | `clientToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-token` |
 | `errorReportConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$ErrorReportConfigurationProperty | [[cdk.support/lookup-entry]] | `:error-report-configuration` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `notificationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-configuration` |
+| `notificationConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$NotificationConfigurationProperty | [[cdk.support/lookup-entry]] | `:notification-configuration` |
 | `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
 | `scheduleConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$ScheduleConfigurationProperty | [[cdk.support/lookup-entry]] | `:schedule-configuration` |
 | `scheduledQueryExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-query-execution-role-arn` |
 | `scheduledQueryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-query-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-configuration` |
+| `targetConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$TargetConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-configuration` |
 "
   [^CfnScheduledQueryProps$Builder builder id config]
   (when-some [data (lookup-entry config id :client-token)]
@@ -698,7 +698,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `timestreamConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timestream-configuration` |
+| `timestreamConfiguration` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$TimestreamConfigurationProperty | [[cdk.support/lookup-entry]] | `:timestream-configuration` |
 "
   [^CfnScheduledQuery$TargetConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :timestream-configuration)]
@@ -727,7 +727,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
-| `dimensionMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimension-mappings` |
+| `dimensionMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:dimension-mappings` |
 | `measureNameColumn` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-name-column` |
 | `mixedMeasureMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:mixed-measure-mappings` |
 | `multiMeasureMappings` | software.amazon.awscdk.services.timestream.CfnScheduledQuery$MultiMeasureMappingsProperty | [[cdk.support/lookup-entry]] | `:multi-measure-mappings` |
@@ -775,7 +775,7 @@
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `magneticStoreWriteProperties` | java.lang.Object | [[cdk.support/lookup-entry]] | `:magnetic-store-write-properties` |
 | `retentionProperties` | java.lang.Object | [[cdk.support/lookup-entry]] | `:retention-properties` |
-| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
+| `schema` | software.amazon.awscdk.services.timestream.CfnTable$SchemaProperty | [[cdk.support/lookup-entry]] | `:schema` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -815,7 +815,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.timestream.CfnTable$S3ConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 "
   [^CfnTable$MagneticStoreRejectedDataLocationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-configuration)]
@@ -1019,7 +1019,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `compositePartitionKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:composite-partition-key` |
+| `compositePartitionKey` | java.util.List | [[cdk.support/lookup-entry]] | `:composite-partition-key` |
 "
   [^CfnTable$SchemaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :composite-partition-key)]

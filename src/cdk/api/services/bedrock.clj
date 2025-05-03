@@ -93,14 +93,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionGroupExecutor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-group-executor` |
+| `actionGroupExecutor` | software.amazon.awscdk.services.bedrock.CfnAgent$ActionGroupExecutorProperty | [[cdk.support/lookup-entry]] | `:action-group-executor` |
 | `actionGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-group-name` |
 | `actionGroupState` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-group-state` |
 | `apiSchema` | software.amazon.awscdk.services.bedrock.CfnAgent$APISchemaProperty | [[cdk.support/lookup-entry]] | `:api-schema` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `functionSchema` | software.amazon.awscdk.services.bedrock.CfnAgent$FunctionSchemaProperty | [[cdk.support/lookup-entry]] | `:function-schema` |
 | `parentActionGroupSignature` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-action-group-signature` |
-| `skipResourceInUseCheckOnDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:skip-resource-in-use-check-on-delete` |
+| `skipResourceInUseCheckOnDelete` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:skip-resource-in-use-check-on-delete` |
 "
   [^CfnAgent$AgentActionGroupProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action-group-executor)]
@@ -241,7 +241,7 @@
 | `agentAliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-alias-name` |
 | `agentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `routingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-configuration` |
+| `routingConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:routing-configuration` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAgentAlias$Builder builder id config]
@@ -281,7 +281,7 @@
 | `agentAliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-alias-name` |
 | `agentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `routingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-configuration` |
+| `routingConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:routing-configuration` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAgentAliasProps$Builder builder id config]
@@ -319,7 +319,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `payload` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload` |
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.bedrock.CfnAgent$S3IdentifierProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnAgent$APISchemaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :payload)]
@@ -349,7 +349,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-groups` |
+| `actionGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:action-groups` |
 | `agentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-name` |
 | `agentResourceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-resource-role-arn` |
 | `autoPrepare` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-prepare` |
@@ -359,10 +359,10 @@
 | `idleSessionTtlInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-session-ttl-in-seconds` |
 | `instruction` | java.lang.String | [[cdk.support/lookup-entry]] | `:instruction` |
 | `knowledgeBases` | java.util.List | [[cdk.support/lookup-entry]] | `:knowledge-bases` |
-| `promptOverrideConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prompt-override-configuration` |
-| `skipResourceInUseCheckOnDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:skip-resource-in-use-check-on-delete` |
+| `promptOverrideConfiguration` | software.amazon.awscdk.services.bedrock.CfnAgent$PromptOverrideConfigurationProperty | [[cdk.support/lookup-entry]] | `:prompt-override-configuration` |
+| `skipResourceInUseCheckOnDelete` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:skip-resource-in-use-check-on-delete` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `testAliasTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:test-alias-tags` |
+| `testAliasTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:test-alias-tags` |
 "
   [^CfnAgent$Builder builder id config]
   (when-some [data (lookup-entry config id :action-groups)]
@@ -418,7 +418,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnAgent$FunctionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -450,7 +450,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `functions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:functions` |
+| `functions` | java.util.List | [[cdk.support/lookup-entry]] | `:functions` |
 "
   [^CfnAgent$FunctionSchemaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :functions)]
@@ -519,7 +519,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `required` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:required` |
+| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAgent$ParameterDetailProperty$Builder builder id config]
@@ -553,7 +553,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `basePromptTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-prompt-template` |
-| `inferenceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inference-configuration` |
+| `inferenceConfiguration` | software.amazon.awscdk.services.bedrock.CfnAgent$InferenceConfigurationProperty | [[cdk.support/lookup-entry]] | `:inference-configuration` |
 | `parserMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:parser-mode` |
 | `promptCreationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:prompt-creation-mode` |
 | `promptState` | java.lang.String | [[cdk.support/lookup-entry]] | `:prompt-state` |
@@ -626,7 +626,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-groups` |
+| `actionGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:action-groups` |
 | `agentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-name` |
 | `agentResourceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-resource-role-arn` |
 | `autoPrepare` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-prepare` |
@@ -636,10 +636,10 @@
 | `idleSessionTtlInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-session-ttl-in-seconds` |
 | `instruction` | java.lang.String | [[cdk.support/lookup-entry]] | `:instruction` |
 | `knowledgeBases` | java.util.List | [[cdk.support/lookup-entry]] | `:knowledge-bases` |
-| `promptOverrideConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prompt-override-configuration` |
-| `skipResourceInUseCheckOnDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:skip-resource-in-use-check-on-delete` |
+| `promptOverrideConfiguration` | software.amazon.awscdk.services.bedrock.CfnAgent$PromptOverrideConfigurationProperty | [[cdk.support/lookup-entry]] | `:prompt-override-configuration` |
+| `skipResourceInUseCheckOnDelete` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:skip-resource-in-use-check-on-delete` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `testAliasTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:test-alias-tags` |
+| `testAliasTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:test-alias-tags` |
 "
   [^CfnAgentProps$Builder builder id config]
   (when-some [data (lookup-entry config id :action-groups)]
@@ -725,7 +725,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataDeletionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-deletion-policy` |
-| `dataSourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
+| `dataSourceConfiguration` | software.amazon.awscdk.services.bedrock.CfnDataSource$DataSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `knowledgeBaseId` | java.lang.String | [[cdk.support/lookup-entry]] | `:knowledge-base-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -771,7 +771,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `chunkingStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:chunking-strategy` |
-| `fixedSizeChunkingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fixed-size-chunking-configuration` |
+| `fixedSizeChunkingConfiguration` | software.amazon.awscdk.services.bedrock.CfnDataSource$FixedSizeChunkingConfigurationProperty | [[cdk.support/lookup-entry]] | `:fixed-size-chunking-configuration` |
 "
   [^CfnDataSource$ChunkingConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :chunking-strategy)]
@@ -801,7 +801,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.bedrock.CfnDataSource$S3DataSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDataSource$DataSourceConfigurationProperty$Builder builder id config]
@@ -864,7 +864,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataDeletionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-deletion-policy` |
-| `dataSourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
+| `dataSourceConfiguration` | software.amazon.awscdk.services.bedrock.CfnDataSource$DataSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `knowledgeBaseId` | java.lang.String | [[cdk.support/lookup-entry]] | `:knowledge-base-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -971,7 +971,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `chunkingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chunking-configuration` |
+| `chunkingConfiguration` | software.amazon.awscdk.services.bedrock.CfnDataSource$ChunkingConfigurationProperty | [[cdk.support/lookup-entry]] | `:chunking-configuration` |
 "
   [^CfnDataSource$VectorIngestionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :chunking-configuration)]
@@ -1001,14 +1001,14 @@
 |---|---|---|---|
 | `blockedInputMessaging` | java.lang.String | [[cdk.support/lookup-entry]] | `:blocked-input-messaging` |
 | `blockedOutputsMessaging` | java.lang.String | [[cdk.support/lookup-entry]] | `:blocked-outputs-messaging` |
-| `contentPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-policy-config` |
+| `contentPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$ContentPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:content-policy-config` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sensitiveInformationPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sensitive-information-policy-config` |
+| `sensitiveInformationPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$SensitiveInformationPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:sensitive-information-policy-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `topicPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$TopicPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:topic-policy-config` |
-| `wordPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:word-policy-config` |
+| `wordPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$WordPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:word-policy-config` |
 "
   [^CfnGuardrail$Builder builder id config]
   (when-some [data (lookup-entry config id :blocked-input-messaging)]
@@ -1088,7 +1088,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filtersConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters-config` |
+| `filtersConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:filters-config` |
 "
   [^CfnGuardrail$ContentPolicyConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :filters-config)]
@@ -1177,14 +1177,14 @@
 |---|---|---|---|
 | `blockedInputMessaging` | java.lang.String | [[cdk.support/lookup-entry]] | `:blocked-input-messaging` |
 | `blockedOutputsMessaging` | java.lang.String | [[cdk.support/lookup-entry]] | `:blocked-outputs-messaging` |
-| `contentPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-policy-config` |
+| `contentPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$ContentPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:content-policy-config` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sensitiveInformationPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sensitive-information-policy-config` |
+| `sensitiveInformationPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$SensitiveInformationPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:sensitive-information-policy-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `topicPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$TopicPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:topic-policy-config` |
-| `wordPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:word-policy-config` |
+| `wordPolicyConfig` | software.amazon.awscdk.services.bedrock.CfnGuardrail$WordPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:word-policy-config` |
 "
   [^CfnGuardrailProps$Builder builder id config]
   (when-some [data (lookup-entry config id :blocked-input-messaging)]
@@ -1267,7 +1267,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `piiEntitiesConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pii-entities-config` |
+| `piiEntitiesConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:pii-entities-config` |
 | `regexesConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:regexes-config` |
 "
   [^CfnGuardrail$SensitiveInformationPolicyConfigProperty$Builder builder id config]
@@ -1335,7 +1335,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `topicsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:topics-config` |
+| `topicsConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:topics-config` |
 "
   [^CfnGuardrail$TopicPolicyConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :topics-config)]
@@ -1453,7 +1453,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `managedWordListsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:managed-word-lists-config` |
+| `managedWordListsConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-word-lists-config` |
 | `wordsConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:words-config` |
 "
   [^CfnGuardrail$WordPolicyConfigProperty$Builder builder id config]
@@ -1488,7 +1488,7 @@
 | `knowledgeBaseConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$KnowledgeBaseConfigurationProperty | [[cdk.support/lookup-entry]] | `:knowledge-base-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `storageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-configuration` |
+| `storageConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$StorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:storage-configuration` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKnowledgeBase$Builder builder id config]
@@ -1528,7 +1528,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `vectorKnowledgeBaseConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vector-knowledge-base-configuration` |
+| `vectorKnowledgeBaseConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$VectorKnowledgeBaseConfigurationProperty | [[cdk.support/lookup-entry]] | `:vector-knowledge-base-configuration` |
 "
   [^CfnKnowledgeBase$KnowledgeBaseConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :type)]
@@ -1698,7 +1698,7 @@
 | `knowledgeBaseConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$KnowledgeBaseConfigurationProperty | [[cdk.support/lookup-entry]] | `:knowledge-base-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `storageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-configuration` |
+| `storageConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$StorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:storage-configuration` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKnowledgeBaseProps$Builder builder id config]
@@ -1814,7 +1814,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `opensearchServerlessConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:opensearch-serverless-configuration` |
+| `opensearchServerlessConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$OpenSearchServerlessConfigurationProperty | [[cdk.support/lookup-entry]] | `:opensearch-serverless-configuration` |
 | `pineconeConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$PineconeConfigurationProperty | [[cdk.support/lookup-entry]] | `:pinecone-configuration` |
 | `rdsConfiguration` | software.amazon.awscdk.services.bedrock.CfnKnowledgeBase$RdsConfigurationProperty | [[cdk.support/lookup-entry]] | `:rds-configuration` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |

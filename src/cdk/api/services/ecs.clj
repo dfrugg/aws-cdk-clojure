@@ -2168,7 +2168,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScalingGroupProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling-group-provider` |
+| `autoScalingGroupProvider` | software.amazon.awscdk.services.ecs.CfnCapacityProvider$AutoScalingGroupProviderProperty | [[cdk.support/lookup-entry]] | `:auto-scaling-group-provider` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2242,7 +2242,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScalingGroupProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling-group-provider` |
+| `autoScalingGroupProvider` | software.amazon.awscdk.services.ecs.CfnCapacityProvider$AutoScalingGroupProviderProperty | [[cdk.support/lookup-entry]] | `:auto-scaling-group-provider` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2280,7 +2280,7 @@ __Create Form:__ ___[java.lang.String]___
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
 | `clusterSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:cluster-settings` |
 | `configuration` | software.amazon.awscdk.services.ecs.CfnCluster$ClusterConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
-| `defaultCapacityProviderStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-capacity-provider-strategy` |
+| `defaultCapacityProviderStrategy` | java.util.List | [[cdk.support/lookup-entry]] | `:default-capacity-provider-strategy` |
 | `serviceConnectDefaults` | software.amazon.awscdk.services.ecs.CfnCluster$ServiceConnectDefaultsProperty | [[cdk.support/lookup-entry]] | `:service-connect-defaults` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2458,7 +2458,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `executeCommandConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execute-command-configuration` |
+| `executeCommandConfiguration` | software.amazon.awscdk.services.ecs.CfnCluster$ExecuteCommandConfigurationProperty | [[cdk.support/lookup-entry]] | `:execute-command-configuration` |
 "
   [^CfnCluster$ClusterConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :execute-command-configuration)]
@@ -2767,29 +2767,29 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacityProviderStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
+| `capacityProviderStrategy` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
 | `cluster` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster` |
 | `deploymentConfiguration` | software.amazon.awscdk.services.ecs.CfnService$DeploymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:deployment-configuration` |
 | `deploymentController` | software.amazon.awscdk.services.ecs.CfnService$DeploymentControllerProperty | [[cdk.support/lookup-entry]] | `:deployment-controller` |
 | `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
-| `enableEcsManagedTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
-| `enableExecuteCommand` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
+| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
+| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
 | `healthCheckGracePeriodSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-grace-period-seconds` |
 | `launchType` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-type` |
-| `loadBalancers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:load-balancers` |
+| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
 | `networkConfiguration` | software.amazon.awscdk.services.ecs.CfnService$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
 | `propagateTags` | java.lang.String | [[cdk.support/lookup-entry]] | `:propagate-tags` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 | `schedulingStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduling-strategy` |
-| `serviceConnectConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-connect-configuration` |
+| `serviceConnectConfiguration` | software.amazon.awscdk.services.ecs.CfnService$ServiceConnectConfigurationProperty | [[cdk.support/lookup-entry]] | `:service-connect-configuration` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `serviceRegistries` | java.util.List | [[cdk.support/lookup-entry]] | `:service-registries` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition` |
-| `volumeConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volume-configurations` |
+| `volumeConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:volume-configurations` |
 "
   [^CfnService$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-provider-strategy)]
@@ -2896,7 +2896,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alarmNames` | java.util.List | [[cdk.support/lookup-entry]] | `:alarm-names` |
-| `enable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable` |
+| `enable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable` |
 | `rollback` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rollback` |
 "
   [^CfnService$DeploymentAlarmsProperty$Builder builder id config]
@@ -2930,7 +2930,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable` |
-| `rollback` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rollback` |
+| `rollback` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rollback` |
 "
   [^CfnService$DeploymentCircuitBreakerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable)]
@@ -2960,7 +2960,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarms` |
+| `alarms` | software.amazon.awscdk.services.ecs.CfnService$DeploymentAlarmsProperty | [[cdk.support/lookup-entry]] | `:alarms` |
 | `deploymentCircuitBreaker` | software.amazon.awscdk.services.ecs.CfnService$DeploymentCircuitBreakerProperty | [[cdk.support/lookup-entry]] | `:deployment-circuit-breaker` |
 | `maximumPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-percent` |
 | `minimumHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-healthy-percent` |
@@ -3130,7 +3130,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsvpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:awsvpc-configuration` |
+| `awsvpcConfiguration` | software.amazon.awscdk.services.ecs.CfnService$AwsVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:awsvpc-configuration` |
 "
   [^CfnService$NetworkConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :awsvpc-configuration)]
@@ -3220,29 +3220,29 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacityProviderStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
+| `capacityProviderStrategy` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
 | `cluster` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster` |
 | `deploymentConfiguration` | software.amazon.awscdk.services.ecs.CfnService$DeploymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:deployment-configuration` |
-| `deploymentController` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-controller` |
+| `deploymentController` | software.amazon.awscdk.services.ecs.CfnService$DeploymentControllerProperty | [[cdk.support/lookup-entry]] | `:deployment-controller` |
 | `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
-| `enableEcsManagedTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
-| `enableExecuteCommand` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
+| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
+| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
 | `healthCheckGracePeriodSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-grace-period-seconds` |
 | `launchType` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-type` |
 | `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
 | `networkConfiguration` | software.amazon.awscdk.services.ecs.CfnService$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
-| `placementConstraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-constraints` |
+| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
 | `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
 | `propagateTags` | java.lang.String | [[cdk.support/lookup-entry]] | `:propagate-tags` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 | `schedulingStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduling-strategy` |
-| `serviceConnectConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-connect-configuration` |
+| `serviceConnectConfiguration` | software.amazon.awscdk.services.ecs.CfnService$ServiceConnectConfigurationProperty | [[cdk.support/lookup-entry]] | `:service-connect-configuration` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
-| `serviceRegistries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-registries` |
+| `serviceRegistries` | java.util.List | [[cdk.support/lookup-entry]] | `:service-registries` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition` |
-| `volumeConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volume-configurations` |
+| `volumeConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:volume-configurations` |
 "
   [^CfnServiceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-provider-strategy)]
@@ -3376,10 +3376,10 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `logConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-configuration` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `logConfiguration` | software.amazon.awscdk.services.ecs.CfnService$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
-| `services` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:services` |
+| `services` | java.util.List | [[cdk.support/lookup-entry]] | `:services` |
 "
   [^CfnService$ServiceConnectConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -3417,8 +3417,8 @@ __Create Form:__ ___[java.lang.String]___
 | `discoveryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:discovery-name` |
 | `ingressPortOverride` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ingress-port-override` |
 | `portName` | java.lang.String | [[cdk.support/lookup-entry]] | `:port-name` |
-| `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
+| `timeout` | software.amazon.awscdk.services.ecs.CfnService$TimeoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:timeout` |
+| `tls` | software.amazon.awscdk.services.ecs.CfnService$ServiceConnectTlsConfigurationProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnService$ServiceConnectServiceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :client-aliases)]
@@ -3484,7 +3484,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `issuerCertificateAuthority` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:issuer-certificate-authority` |
+| `issuerCertificateAuthority` | software.amazon.awscdk.services.ecs.CfnService$ServiceConnectTlsCertificateAuthorityProperty | [[cdk.support/lookup-entry]] | `:issuer-certificate-authority` |
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
@@ -3518,7 +3518,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `filesystemType` | java.lang.String | [[cdk.support/lookup-entry]] | `:filesystem-type` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
@@ -3610,7 +3610,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `managedEbsVolume` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:managed-ebs-volume` |
+| `managedEbsVolume` | software.amazon.awscdk.services.ecs.CfnService$ServiceManagedEBSVolumeConfigurationProperty | [[cdk.support/lookup-entry]] | `:managed-ebs-volume` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnService$ServiceVolumeConfigurationProperty$Builder builder id config]
@@ -3705,7 +3705,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `containerDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:container-definitions` |
 | `cpu` | java.lang.String | [[cdk.support/lookup-entry]] | `:cpu` |
-| `ephemeralStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
+| `ephemeralStorage` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
 | `inferenceAccelerators` | java.util.List | [[cdk.support/lookup-entry]] | `:inference-accelerators` |
@@ -3716,7 +3716,7 @@ __Create Form:__ ___[java.lang.String]___
 | `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
 | `proxyConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$ProxyConfigurationProperty | [[cdk.support/lookup-entry]] | `:proxy-configuration` |
 | `requiresCompatibilities` | java.util.List | [[cdk.support/lookup-entry]] | `:requires-compatibilities` |
-| `runtimePlatform` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-platform` |
+| `runtimePlatform` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$RuntimePlatformProperty | [[cdk.support/lookup-entry]] | `:runtime-platform` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-role-arn` |
 | `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
@@ -3782,24 +3782,24 @@ __Create Form:__ ___[java.lang.String]___
 | `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
 | `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
 | `credentialSpecs` | java.util.List | [[cdk.support/lookup-entry]] | `:credential-specs` |
-| `dependsOn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:depends-on` |
-| `disableNetworking` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-networking` |
+| `dependsOn` | java.util.List | [[cdk.support/lookup-entry]] | `:depends-on` |
+| `disableNetworking` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-networking` |
 | `dnsSearchDomains` | java.util.List | [[cdk.support/lookup-entry]] | `:dns-search-domains` |
 | `dnsServers` | java.util.List | [[cdk.support/lookup-entry]] | `:dns-servers` |
-| `dockerLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:docker-labels` |
+| `dockerLabels` | java.util.Map | [[cdk.support/lookup-entry]] | `:docker-labels` |
 | `dockerSecurityOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:docker-security-options` |
 | `entryPoint` | java.util.List | [[cdk.support/lookup-entry]] | `:entry-point` |
 | `environment` | java.util.List | [[cdk.support/lookup-entry]] | `:environment` |
 | `environmentFiles` | java.util.List | [[cdk.support/lookup-entry]] | `:environment-files` |
 | `essential` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:essential` |
-| `extraHosts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:extra-hosts` |
+| `extraHosts` | java.util.List | [[cdk.support/lookup-entry]] | `:extra-hosts` |
 | `firelensConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$FirelensConfigurationProperty | [[cdk.support/lookup-entry]] | `:firelens-configuration` |
-| `healthCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check` |
+| `healthCheck` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$HealthCheckProperty | [[cdk.support/lookup-entry]] | `:health-check` |
 | `hostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname` |
 | `image` | java.lang.String | [[cdk.support/lookup-entry]] | `:image` |
 | `interactive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:interactive` |
 | `links` | java.util.List | [[cdk.support/lookup-entry]] | `:links` |
-| `linuxParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:linux-parameters` |
+| `linuxParameters` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$LinuxParametersProperty | [[cdk.support/lookup-entry]] | `:linux-parameters` |
 | `logConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `memory` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory` |
 | `memoryReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation` |
@@ -3809,13 +3809,13 @@ __Create Form:__ ___[java.lang.String]___
 | `privileged` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:privileged` |
 | `pseudoTerminal` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:pseudo-terminal` |
 | `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
-| `repositoryCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:repository-credentials` |
-| `resourceRequirements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-requirements` |
-| `secrets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secrets` |
+| `repositoryCredentials` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$RepositoryCredentialsProperty | [[cdk.support/lookup-entry]] | `:repository-credentials` |
+| `resourceRequirements` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-requirements` |
+| `secrets` | java.util.List | [[cdk.support/lookup-entry]] | `:secrets` |
 | `startTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-timeout` |
 | `stopTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:stop-timeout` |
-| `systemControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:system-controls` |
-| `ulimits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ulimits` |
+| `systemControls` | java.util.List | [[cdk.support/lookup-entry]] | `:system-controls` |
+| `ulimits` | java.util.List | [[cdk.support/lookup-entry]] | `:ulimits` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 | `volumesFrom` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes-from` |
 | `workingDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:working-directory` |
@@ -3989,10 +3989,10 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoprovision` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:autoprovision` |
+| `autoprovision` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:autoprovision` |
 | `driver` | java.lang.String | [[cdk.support/lookup-entry]] | `:driver` |
 | `driverOpts` | java.util.Map | [[cdk.support/lookup-entry]] | `:driver-opts` |
-| `labels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:labels` |
+| `labels` | java.util.Map | [[cdk.support/lookup-entry]] | `:labels` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 "
   [^CfnTaskDefinition$DockerVolumeConfigurationProperty$Builder builder id config]
@@ -4159,7 +4159,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authorizationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorization-config` |
+| `authorizationConfig` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$FSxAuthorizationConfigProperty | [[cdk.support/lookup-entry]] | `:authorization-config` |
 | `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
 | `rootDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-directory` |
 "
@@ -4418,11 +4418,11 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `capabilities` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$KernelCapabilitiesProperty | [[cdk.support/lookup-entry]] | `:capabilities` |
 | `devices` | java.util.List | [[cdk.support/lookup-entry]] | `:devices` |
-| `initProcessEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:init-process-enabled` |
+| `initProcessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:init-process-enabled` |
 | `maxSwap` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-swap` |
 | `sharedMemorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shared-memory-size` |
 | `swappiness` | java.lang.Number | [[cdk.support/lookup-entry]] | `:swappiness` |
-| `tmpfs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tmpfs` |
+| `tmpfs` | java.util.List | [[cdk.support/lookup-entry]] | `:tmpfs` |
 "
   [^CfnTaskDefinition$LinuxParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :capabilities)]
@@ -4497,7 +4497,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
-| `readOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:read-only` |
+| `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
 | `sourceVolume` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-volume` |
 "
   [^CfnTaskDefinition$MountPointProperty$Builder builder id config]
@@ -4573,20 +4573,20 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-definitions` |
+| `containerDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:container-definitions` |
 | `cpu` | java.lang.String | [[cdk.support/lookup-entry]] | `:cpu` |
 | `ephemeralStorage` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
-| `inferenceAccelerators` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inference-accelerators` |
+| `inferenceAccelerators` | java.util.List | [[cdk.support/lookup-entry]] | `:inference-accelerators` |
 | `ipcMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipc-mode` |
 | `memory` | java.lang.String | [[cdk.support/lookup-entry]] | `:memory` |
 | `networkMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-mode` |
 | `pidMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:pid-mode` |
-| `placementConstraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-constraints` |
+| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
 | `proxyConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$ProxyConfigurationProperty | [[cdk.support/lookup-entry]] | `:proxy-configuration` |
 | `requiresCompatibilities` | java.util.List | [[cdk.support/lookup-entry]] | `:requires-compatibilities` |
-| `runtimePlatform` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-platform` |
+| `runtimePlatform` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$RuntimePlatformProperty | [[cdk.support/lookup-entry]] | `:runtime-platform` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-role-arn` |
 | `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
@@ -4650,7 +4650,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
-| `proxyConfigurationProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:proxy-configuration-properties` |
+| `proxyConfigurationProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:proxy-configuration-properties` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnTaskDefinition$ProxyConfigurationProperty$Builder builder id config]
@@ -4934,7 +4934,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `readOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:read-only` |
+| `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
 | `sourceContainer` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-container` |
 "
   [^CfnTaskDefinition$VolumeFromProperty$Builder builder id config]
@@ -4965,11 +4965,11 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuredAtLaunch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configured-at-launch` |
+| `configuredAtLaunch` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:configured-at-launch` |
 | `dockerVolumeConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$DockerVolumeConfigurationProperty | [[cdk.support/lookup-entry]] | `:docker-volume-configuration` |
 | `efsVolumeConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$EFSVolumeConfigurationProperty | [[cdk.support/lookup-entry]] | `:efs-volume-configuration` |
 | `fSxWindowsFileServerVolumeConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$FSxWindowsFileServerVolumeConfigurationProperty | [[cdk.support/lookup-entry]] | `:f-sx-windows-file-server-volume-configuration` |
-| `host` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:host` |
+| `host` | software.amazon.awscdk.services.ecs.CfnTaskDefinition$HostVolumePropertiesProperty | [[cdk.support/lookup-entry]] | `:host` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnTaskDefinition$VolumeProperty$Builder builder id config]
@@ -5045,12 +5045,12 @@ __Create Form:__ ___[java.lang.String]___
 | `cluster` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster` |
 | `externalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:external-id` |
 | `launchType` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-type` |
-| `loadBalancers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:load-balancers` |
-| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
+| `networkConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskSet$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
 | `scale` | software.amazon.awscdk.services.ecs.CfnTaskSet$ScaleProperty | [[cdk.support/lookup-entry]] | `:scale` |
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
-| `serviceRegistries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-registries` |
+| `serviceRegistries` | java.util.List | [[cdk.support/lookup-entry]] | `:service-registries` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition` |
 "
@@ -5134,7 +5134,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsVpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-vpc-configuration` |
+| `awsVpcConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskSet$AwsVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:aws-vpc-configuration` |
 "
   [^CfnTaskSet$NetworkConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-vpc-configuration)]
@@ -5165,10 +5165,10 @@ __Create Form:__ ___[java.lang.String]___
 | `cluster` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster` |
 | `externalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:external-id` |
 | `launchType` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-type` |
-| `loadBalancers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:load-balancers` |
-| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
+| `networkConfiguration` | software.amazon.awscdk.services.ecs.CfnTaskSet$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
-| `scale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scale` |
+| `scale` | software.amazon.awscdk.services.ecs.CfnTaskSet$ScaleProperty | [[cdk.support/lookup-entry]] | `:scale` |
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 | `serviceRegistries` | java.util.List | [[cdk.support/lookup-entry]] | `:service-registries` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

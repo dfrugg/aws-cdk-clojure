@@ -28,7 +28,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `keyspaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:keyspace-name` |
-| `replicationSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replication-specification` |
+| `replicationSpecification` | software.amazon.awscdk.services.cassandra.CfnKeyspace$ReplicationSpecificationProperty | [[cdk.support/lookup-entry]] | `:replication-specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKeyspace$Builder builder id config]
@@ -129,7 +129,7 @@
 | `autoScalingDisabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-scaling-disabled` |
 | `maximumUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-units` |
 | `minimumUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-units` |
-| `scalingPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scaling-policy` |
+| `scalingPolicy` | software.amazon.awscdk.services.cassandra.CfnTable$ScalingPolicyProperty | [[cdk.support/lookup-entry]] | `:scaling-policy` |
 "
   [^CfnTable$AutoScalingSettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-scaling-disabled)]
@@ -164,7 +164,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `readCapacityAutoScaling` | software.amazon.awscdk.services.cassandra.CfnTable$AutoScalingSettingProperty | [[cdk.support/lookup-entry]] | `:read-capacity-auto-scaling` |
-| `writeCapacityAutoScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling` |
+| `writeCapacityAutoScaling` | software.amazon.awscdk.services.cassandra.CfnTable$AutoScalingSettingProperty | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling` |
 "
   [^CfnTable$AutoScalingSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :read-capacity-auto-scaling)]
@@ -195,7 +195,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
-| `provisionedThroughput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
+| `provisionedThroughput` | software.amazon.awscdk.services.cassandra.CfnTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
 "
   [^CfnTable$BillingModeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mode)]
@@ -225,16 +225,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScalingSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling-specifications` |
-| `billingMode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:billing-mode` |
+| `autoScalingSpecifications` | software.amazon.awscdk.services.cassandra.CfnTable$AutoScalingSpecificationProperty | [[cdk.support/lookup-entry]] | `:auto-scaling-specifications` |
+| `billingMode` | software.amazon.awscdk.services.cassandra.CfnTable$BillingModeProperty | [[cdk.support/lookup-entry]] | `:billing-mode` |
 | `clientSideTimestampsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:client-side-timestamps-enabled` |
-| `clusteringKeyColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:clustering-key-columns` |
+| `clusteringKeyColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:clustering-key-columns` |
 | `defaultTimeToLive` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-time-to-live` |
 | `encryptionSpecification` | software.amazon.awscdk.services.cassandra.CfnTable$EncryptionSpecificationProperty | [[cdk.support/lookup-entry]] | `:encryption-specification` |
 | `keyspaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:keyspace-name` |
-| `partitionKeyColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:partition-key-columns` |
-| `pointInTimeRecoveryEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
-| `regularColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regular-columns` |
+| `partitionKeyColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:partition-key-columns` |
+| `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
+| `regularColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:regular-columns` |
 | `replicaSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:replica-specifications` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -382,16 +382,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScalingSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling-specifications` |
-| `billingMode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:billing-mode` |
+| `autoScalingSpecifications` | software.amazon.awscdk.services.cassandra.CfnTable$AutoScalingSpecificationProperty | [[cdk.support/lookup-entry]] | `:auto-scaling-specifications` |
+| `billingMode` | software.amazon.awscdk.services.cassandra.CfnTable$BillingModeProperty | [[cdk.support/lookup-entry]] | `:billing-mode` |
 | `clientSideTimestampsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:client-side-timestamps-enabled` |
-| `clusteringKeyColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:clustering-key-columns` |
+| `clusteringKeyColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:clustering-key-columns` |
 | `defaultTimeToLive` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-time-to-live` |
 | `encryptionSpecification` | software.amazon.awscdk.services.cassandra.CfnTable$EncryptionSpecificationProperty | [[cdk.support/lookup-entry]] | `:encryption-specification` |
 | `keyspaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:keyspace-name` |
-| `partitionKeyColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:partition-key-columns` |
-| `pointInTimeRecoveryEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
-| `regularColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regular-columns` |
+| `partitionKeyColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:partition-key-columns` |
+| `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
+| `regularColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:regular-columns` |
 | `replicaSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:replica-specifications` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -511,7 +511,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
+| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.cassandra.CfnTable$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
 "
   [^CfnTable$ScalingPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
@@ -539,7 +539,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `disableScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
+| `disableScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
 | `scaleInCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |

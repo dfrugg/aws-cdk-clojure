@@ -114,7 +114,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectorLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-label` |
-| `connectorProvisioningConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-provisioning-config` |
+| `connectorProvisioningConfig` | software.amazon.awscdk.services.appflow.CfnConnector$ConnectorProvisioningConfigProperty | [[cdk.support/lookup-entry]] | `:connector-provisioning-config` |
 | `connectorProvisioningType` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-provisioning-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
@@ -374,7 +374,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectorProfileCredentials` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:connector-profile-credentials` |
-| `connectorProfileProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-profile-properties` |
+| `connectorProfileProperties` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:connector-profile-properties` |
 "
   [^CfnConnectorProfile$ConnectorProfileConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connector-profile-credentials)]
@@ -404,24 +404,24 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amplitude` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amplitude` |
-| `customConnector` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-connector` |
-| `datadog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datadog` |
+| `amplitude` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$AmplitudeConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:amplitude` |
+| `customConnector` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$CustomConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:custom-connector` |
+| `datadog` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$DatadogConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:datadog` |
 | `dynatrace` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$DynatraceConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:dynatrace` |
-| `googleAnalytics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:google-analytics` |
+| `googleAnalytics` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$GoogleAnalyticsConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:google-analytics` |
 | `inforNexus` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$InforNexusConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:infor-nexus` |
 | `marketo` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$MarketoConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:marketo` |
 | `pardot` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$PardotConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:pardot` |
 | `redshift` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$RedshiftConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:redshift` |
-| `salesforce` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:salesforce` |
-| `sapoData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sapo-data` |
+| `salesforce` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SalesforceConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:salesforce` |
+| `sapoData` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SAPODataConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:sapo-data` |
 | `serviceNow` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ServiceNowConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:service-now` |
 | `singular` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SingularConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:singular` |
-| `slack` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slack` |
-| `snowflake` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snowflake` |
-| `trendmicro` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trendmicro` |
+| `slack` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SlackConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:slack` |
+| `snowflake` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SnowflakeConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:snowflake` |
+| `trendmicro` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$TrendmicroConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:trendmicro` |
 | `veeva` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$VeevaConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:veeva` |
-| `zendesk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zendesk` |
+| `zendesk` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ZendeskConnectorProfileCredentialsProperty | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnConnectorProfile$ConnectorProfileCredentialsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :amplitude)]
@@ -484,19 +484,19 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customConnector` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$CustomConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:custom-connector` |
-| `datadog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datadog` |
+| `datadog` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$DatadogConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:datadog` |
 | `dynatrace` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$DynatraceConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:dynatrace` |
-| `inforNexus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:infor-nexus` |
+| `inforNexus` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$InforNexusConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:infor-nexus` |
 | `marketo` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$MarketoConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:marketo` |
 | `pardot` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$PardotConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:pardot` |
 | `redshift` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$RedshiftConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:redshift` |
-| `salesforce` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:salesforce` |
-| `sapoData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sapo-data` |
-| `serviceNow` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-now` |
+| `salesforce` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SalesforceConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:salesforce` |
+| `sapoData` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SAPODataConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:sapo-data` |
+| `serviceNow` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ServiceNowConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:service-now` |
 | `slack` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SlackConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:slack` |
 | `snowflake` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$SnowflakeConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:snowflake` |
-| `veeva` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:veeva` |
-| `zendesk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zendesk` |
+| `veeva` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$VeevaConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:veeva` |
+| `zendesk` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ZendeskConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnConnectorProfile$ConnectorProfilePropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-connector)]
@@ -550,7 +550,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `credentialsMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:credentials-map` |
+| `credentialsMap` | java.util.Map | [[cdk.support/lookup-entry]] | `:credentials-map` |
 | `customAuthenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-authentication-type` |
 "
   [^CfnConnectorProfile$CustomAuthCredentialsProperty$Builder builder id config]
@@ -584,8 +584,8 @@
 | `apiKey` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ApiKeyCredentialsProperty | [[cdk.support/lookup-entry]] | `:api-key` |
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
 | `basic` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$BasicAuthCredentialsProperty | [[cdk.support/lookup-entry]] | `:basic` |
-| `custom` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom` |
-| `oauth2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:oauth2` |
+| `custom` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$CustomAuthCredentialsProperty | [[cdk.support/lookup-entry]] | `:custom` |
+| `oauth2` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$OAuth2CredentialsProperty | [[cdk.support/lookup-entry]] | `:oauth2` |
 "
   [^CfnConnectorProfile$CustomConnectorProfileCredentialsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :api-key)]
@@ -621,7 +621,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `oAuth2Properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:o-auth2-properties` |
+| `oAuth2Properties` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$OAuth2PropertiesProperty | [[cdk.support/lookup-entry]] | `:o-auth2-properties` |
 | `profileProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:profile-properties` |
 "
   [^CfnConnectorProfile$CustomConnectorProfilePropertiesProperty$Builder builder id config]
@@ -770,7 +770,7 @@
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
+| `connectorOAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$GoogleAnalyticsConnectorProfileCredentialsProperty$Builder builder id config]
@@ -875,7 +875,7 @@
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
+| `connectorOAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 "
   [^CfnConnectorProfile$MarketoConnectorProfileCredentialsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-token)]
@@ -940,7 +940,7 @@
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
+| `connectorOAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$OAuthCredentialsProperty$Builder builder id config]
@@ -1014,7 +1014,7 @@
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `oAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:o-auth-request` |
+| `oAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:o-auth-request` |
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$OAuth2CredentialsProperty$Builder builder id config]
@@ -1053,7 +1053,7 @@
 |---|---|---|---|
 | `oAuth2GrantType` | java.lang.String | [[cdk.support/lookup-entry]] | `:o-auth2-grant-type` |
 | `tokenUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-url` |
-| `tokenUrlCustomProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:token-url-custom-properties` |
+| `tokenUrlCustomProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:token-url-custom-properties` |
 "
   [^CfnConnectorProfile$OAuth2PropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :o-auth2-grant-type)]
@@ -1158,7 +1158,7 @@
 |---|---|---|---|
 | `connectionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-mode` |
 | `connectorLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-label` |
-| `connectorProfileConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-profile-config` |
+| `connectorProfileConfig` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorProfileConfigProperty | [[cdk.support/lookup-entry]] | `:connector-profile-config` |
 | `connectorProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-profile-name` |
 | `connectorType` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-type` |
 | `kmsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-arn` |
@@ -1284,7 +1284,7 @@
 |---|---|---|---|
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
 | `clientCredentialsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-credentials-arn` |
-| `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
+| `connectorOAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 | `jwtToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:jwt-token` |
 | `oAuth2GrantType` | java.lang.String | [[cdk.support/lookup-entry]] | `:o-auth2-grant-type` |
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
@@ -1326,7 +1326,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
-| `isSandboxEnvironment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-sandbox-environment` |
+| `isSandboxEnvironment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-sandbox-environment` |
 | `usePrivateLinkForMetadataAndAuthorization` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-private-link-for-metadata-and-authorization` |
 "
   [^CfnConnectorProfile$SalesforceConnectorProfilePropertiesProperty$Builder builder id config]
@@ -1359,7 +1359,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `basicAuthCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:basic-auth-credentials` |
+| `basicAuthCredentials` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$BasicAuthCredentialsProperty | [[cdk.support/lookup-entry]] | `:basic-auth-credentials` |
 | `oAuthCredentials` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$OAuthCredentialsProperty | [[cdk.support/lookup-entry]] | `:o-auth-credentials` |
 "
   [^CfnConnectorProfile$SAPODataConnectorProfileCredentialsProperty$Builder builder id config]
@@ -1393,7 +1393,7 @@
 | `applicationHostUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-host-url` |
 | `applicationServicePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-service-path` |
 | `clientNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-number` |
-| `disableSso` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-sso` |
+| `disableSso` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-sso` |
 | `logonLanguage` | java.lang.String | [[cdk.support/lookup-entry]] | `:logon-language` |
 | `oAuthProperties` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$OAuthPropertiesProperty | [[cdk.support/lookup-entry]] | `:o-auth-properties` |
 | `portNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port-number` |
@@ -1532,7 +1532,7 @@
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
+| `connectorOAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 "
   [^CfnConnectorProfile$SlackConnectorProfileCredentialsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-token)]
@@ -1761,7 +1761,7 @@
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
+| `connectorOAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 "
   [^CfnConnectorProfile$ZendeskConnectorProfileCredentialsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-token)]
@@ -1824,7 +1824,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectorLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-label` |
-| `connectorProvisioningConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-provisioning-config` |
+| `connectorProvisioningConfig` | software.amazon.awscdk.services.appflow.CfnConnector$ConnectorProvisioningConfigProperty | [[cdk.support/lookup-entry]] | `:connector-provisioning-config` |
 | `connectorProvisioningType` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-provisioning-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
@@ -1920,15 +1920,15 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `destinationFlowConfigList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-flow-config-list` |
+| `destinationFlowConfigList` | java.util.List | [[cdk.support/lookup-entry]] | `:destination-flow-config-list` |
 | `flowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-name` |
 | `flowStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-status` |
 | `kmsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-arn` |
 | `metadataCatalogConfig` | software.amazon.awscdk.services.appflow.CfnFlow$MetadataCatalogConfigProperty | [[cdk.support/lookup-entry]] | `:metadata-catalog-config` |
-| `sourceFlowConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-flow-config` |
+| `sourceFlowConfig` | software.amazon.awscdk.services.appflow.CfnFlow$SourceFlowConfigProperty | [[cdk.support/lookup-entry]] | `:source-flow-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tasks` | java.util.List | [[cdk.support/lookup-entry]] | `:tasks` |
-| `triggerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trigger-config` |
+| `triggerConfig` | software.amazon.awscdk.services.appflow.CfnFlow$TriggerConfigProperty | [[cdk.support/lookup-entry]] | `:trigger-config` |
 "
   [^CfnFlow$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -2091,7 +2091,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-properties` |
-| `dataTransferApi` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-transfer-api` |
+| `dataTransferApi` | software.amazon.awscdk.services.appflow.CfnFlow$DataTransferApiProperty | [[cdk.support/lookup-entry]] | `:data-transfer-api` |
 | `entityName` | java.lang.String | [[cdk.support/lookup-entry]] | `:entity-name` |
 "
   [^CfnFlow$CustomConnectorSourcePropertiesProperty$Builder builder id config]
@@ -2184,13 +2184,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customConnector` | software.amazon.awscdk.services.appflow.CfnFlow$CustomConnectorDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:custom-connector` |
-| `eventBridge` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-bridge` |
+| `eventBridge` | software.amazon.awscdk.services.appflow.CfnFlow$EventBridgeDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:event-bridge` |
 | `lookoutMetrics` | software.amazon.awscdk.services.appflow.CfnFlow$LookoutMetricsDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:lookout-metrics` |
-| `marketo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:marketo` |
+| `marketo` | software.amazon.awscdk.services.appflow.CfnFlow$MarketoDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:marketo` |
 | `redshift` | software.amazon.awscdk.services.appflow.CfnFlow$RedshiftDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:redshift` |
 | `s3` | software.amazon.awscdk.services.appflow.CfnFlow$S3DestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:s3` |
 | `salesforce` | software.amazon.awscdk.services.appflow.CfnFlow$SalesforceDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:salesforce` |
-| `sapoData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sapo-data` |
+| `sapoData` | software.amazon.awscdk.services.appflow.CfnFlow$SAPODataDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:sapo-data` |
 | `snowflake` | software.amazon.awscdk.services.appflow.CfnFlow$SnowflakeDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:snowflake` |
 | `upsolver` | software.amazon.awscdk.services.appflow.CfnFlow$UpsolverDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:upsolver` |
 | `zendesk` | software.amazon.awscdk.services.appflow.CfnFlow$ZendeskDestinationPropertiesProperty | [[cdk.support/lookup-entry]] | `:zendesk` |
@@ -2244,7 +2244,7 @@
 | `apiVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-version` |
 | `connectorProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-profile-name` |
 | `connectorType` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-type` |
-| `destinationConnectorProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-connector-properties` |
+| `destinationConnectorProperties` | software.amazon.awscdk.services.appflow.CfnFlow$DestinationConnectorPropertiesProperty | [[cdk.support/lookup-entry]] | `:destination-connector-properties` |
 "
   [^CfnFlow$DestinationFlowConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :api-version)]
@@ -2340,7 +2340,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `errorHandlingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:error-handling-config` |
+| `errorHandlingConfig` | software.amazon.awscdk.services.appflow.CfnFlow$ErrorHandlingConfigProperty | [[cdk.support/lookup-entry]] | `:error-handling-config` |
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$EventBridgeDestinationPropertiesProperty$Builder builder id config]
@@ -2517,7 +2517,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `errorHandlingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:error-handling-config` |
+| `errorHandlingConfig` | software.amazon.awscdk.services.appflow.CfnFlow$ErrorHandlingConfigProperty | [[cdk.support/lookup-entry]] | `:error-handling-config` |
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$MarketoDestinationPropertiesProperty$Builder builder id config]
@@ -2576,7 +2576,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `glueDataCatalog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue-data-catalog` |
+| `glueDataCatalog` | software.amazon.awscdk.services.appflow.CfnFlow$GlueDataCatalogProperty | [[cdk.support/lookup-entry]] | `:glue-data-catalog` |
 "
   [^CfnFlow$MetadataCatalogConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :glue-data-catalog)]
@@ -2672,7 +2672,7 @@
 | `flowStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-status` |
 | `kmsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-arn` |
 | `metadataCatalogConfig` | software.amazon.awscdk.services.appflow.CfnFlow$MetadataCatalogConfigProperty | [[cdk.support/lookup-entry]] | `:metadata-catalog-config` |
-| `sourceFlowConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-flow-config` |
+| `sourceFlowConfig` | software.amazon.awscdk.services.appflow.CfnFlow$SourceFlowConfigProperty | [[cdk.support/lookup-entry]] | `:source-flow-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tasks` | java.util.List | [[cdk.support/lookup-entry]] | `:tasks` |
 | `triggerConfig` | software.amazon.awscdk.services.appflow.CfnFlow$TriggerConfigProperty | [[cdk.support/lookup-entry]] | `:trigger-config` |
@@ -2760,7 +2760,7 @@
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `bucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-prefix` |
-| `s3OutputFormatConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-output-format-config` |
+| `s3OutputFormatConfig` | software.amazon.awscdk.services.appflow.CfnFlow$S3OutputFormatConfigProperty | [[cdk.support/lookup-entry]] | `:s3-output-format-config` |
 "
   [^CfnFlow$S3DestinationPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bucket-name)]
@@ -2823,7 +2823,7 @@
 | `aggregationConfig` | software.amazon.awscdk.services.appflow.CfnFlow$AggregationConfigProperty | [[cdk.support/lookup-entry]] | `:aggregation-config` |
 | `fileType` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-type` |
 | `prefixConfig` | software.amazon.awscdk.services.appflow.CfnFlow$PrefixConfigProperty | [[cdk.support/lookup-entry]] | `:prefix-config` |
-| `preserveSourceDataTyping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preserve-source-data-typing` |
+| `preserveSourceDataTyping` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-source-data-typing` |
 "
   [^CfnFlow$S3OutputFormatConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-config)]
@@ -2859,7 +2859,7 @@
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `bucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-prefix` |
-| `s3InputFormatConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-input-format-config` |
+| `s3InputFormatConfig` | software.amazon.awscdk.services.appflow.CfnFlow$S3InputFormatConfigProperty | [[cdk.support/lookup-entry]] | `:s3-input-format-config` |
 "
   [^CfnFlow$S3SourcePropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bucket-name)]
@@ -2932,7 +2932,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataTransferApi` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-transfer-api` |
-| `enableDynamicFieldUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-dynamic-field-update` |
+| `enableDynamicFieldUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-dynamic-field-update` |
 | `includeDeletedRecords` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-deleted-records` |
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
@@ -2971,7 +2971,7 @@
 | `errorHandlingConfig` | software.amazon.awscdk.services.appflow.CfnFlow$ErrorHandlingConfigProperty | [[cdk.support/lookup-entry]] | `:error-handling-config` |
 | `idFieldNames` | java.util.List | [[cdk.support/lookup-entry]] | `:id-field-names` |
 | `objectPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-path` |
-| `successResponseHandlingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:success-response-handling-config` |
+| `successResponseHandlingConfig` | software.amazon.awscdk.services.appflow.CfnFlow$SuccessResponseHandlingConfigProperty | [[cdk.support/lookup-entry]] | `:success-response-handling-config` |
 | `writeOperationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:write-operation-type` |
 "
   [^CfnFlow$SAPODataDestinationPropertiesProperty$Builder builder id config]
@@ -3066,7 +3066,7 @@
 |---|---|---|---|
 | `objectPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-path` |
 | `paginationConfig` | software.amazon.awscdk.services.appflow.CfnFlow$SAPODataPaginationConfigProperty | [[cdk.support/lookup-entry]] | `:pagination-config` |
-| `parallelismConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parallelism-config` |
+| `parallelismConfig` | software.amazon.awscdk.services.appflow.CfnFlow$SAPODataParallelismConfigProperty | [[cdk.support/lookup-entry]] | `:parallelism-config` |
 "
   [^CfnFlow$SAPODataSourcePropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :object-path)]
@@ -3269,22 +3269,22 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `amplitude` | software.amazon.awscdk.services.appflow.CfnFlow$AmplitudeSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:amplitude` |
-| `customConnector` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-connector` |
-| `datadog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datadog` |
+| `customConnector` | software.amazon.awscdk.services.appflow.CfnFlow$CustomConnectorSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:custom-connector` |
+| `datadog` | software.amazon.awscdk.services.appflow.CfnFlow$DatadogSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:datadog` |
 | `dynatrace` | software.amazon.awscdk.services.appflow.CfnFlow$DynatraceSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:dynatrace` |
-| `googleAnalytics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:google-analytics` |
-| `inforNexus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:infor-nexus` |
+| `googleAnalytics` | software.amazon.awscdk.services.appflow.CfnFlow$GoogleAnalyticsSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:google-analytics` |
+| `inforNexus` | software.amazon.awscdk.services.appflow.CfnFlow$InforNexusSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:infor-nexus` |
 | `marketo` | software.amazon.awscdk.services.appflow.CfnFlow$MarketoSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:marketo` |
 | `pardot` | software.amazon.awscdk.services.appflow.CfnFlow$PardotSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:pardot` |
 | `s3` | software.amazon.awscdk.services.appflow.CfnFlow$S3SourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:s3` |
 | `salesforce` | software.amazon.awscdk.services.appflow.CfnFlow$SalesforceSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:salesforce` |
 | `sapoData` | software.amazon.awscdk.services.appflow.CfnFlow$SAPODataSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:sapo-data` |
-| `serviceNow` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-now` |
-| `singular` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:singular` |
-| `slack` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slack` |
+| `serviceNow` | software.amazon.awscdk.services.appflow.CfnFlow$ServiceNowSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:service-now` |
+| `singular` | software.amazon.awscdk.services.appflow.CfnFlow$SingularSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:singular` |
+| `slack` | software.amazon.awscdk.services.appflow.CfnFlow$SlackSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:slack` |
 | `trendmicro` | software.amazon.awscdk.services.appflow.CfnFlow$TrendmicroSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:trendmicro` |
 | `veeva` | software.amazon.awscdk.services.appflow.CfnFlow$VeevaSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:veeva` |
-| `zendesk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zendesk` |
+| `zendesk` | software.amazon.awscdk.services.appflow.CfnFlow$ZendeskSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnFlow$SourceConnectorPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :amplitude)]
@@ -3348,7 +3348,7 @@
 | `connectorProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-profile-name` |
 | `connectorType` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-type` |
 | `incrementalPullConfig` | software.amazon.awscdk.services.appflow.CfnFlow$IncrementalPullConfigProperty | [[cdk.support/lookup-entry]] | `:incremental-pull-config` |
-| `sourceConnectorProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-connector-properties` |
+| `sourceConnectorProperties` | software.amazon.awscdk.services.appflow.CfnFlow$SourceConnectorPropertiesProperty | [[cdk.support/lookup-entry]] | `:source-connector-properties` |
 "
   [^CfnFlow$SourceFlowConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :api-version)]
@@ -3446,7 +3446,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `connectorOperator` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-operator` |
+| `connectorOperator` | software.amazon.awscdk.services.appflow.CfnFlow$ConnectorOperatorProperty | [[cdk.support/lookup-entry]] | `:connector-operator` |
 | `destinationField` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-field` |
 | `sourceFields` | java.util.List | [[cdk.support/lookup-entry]] | `:source-fields` |
 | `taskProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:task-properties` |
@@ -3514,7 +3514,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `triggerProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trigger-properties` |
+| `triggerProperties` | software.amazon.awscdk.services.appflow.CfnFlow$ScheduledTriggerPropertiesProperty | [[cdk.support/lookup-entry]] | `:trigger-properties` |
 | `triggerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-type` |
 "
   [^CfnFlow$TriggerConfigProperty$Builder builder id config]
@@ -3581,7 +3581,7 @@
 |---|---|---|---|
 | `aggregationConfig` | software.amazon.awscdk.services.appflow.CfnFlow$AggregationConfigProperty | [[cdk.support/lookup-entry]] | `:aggregation-config` |
 | `fileType` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-type` |
-| `prefixConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prefix-config` |
+| `prefixConfig` | software.amazon.awscdk.services.appflow.CfnFlow$PrefixConfigProperty | [[cdk.support/lookup-entry]] | `:prefix-config` |
 "
   [^CfnFlow$UpsolverS3OutputFormatConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-config)]
@@ -3614,9 +3614,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `documentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-type` |
-| `includeAllVersions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-all-versions` |
+| `includeAllVersions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-all-versions` |
 | `includeRenditions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-renditions` |
-| `includeSourceFiles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-source-files` |
+| `includeSourceFiles` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-source-files` |
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$VeevaSourcePropertiesProperty$Builder builder id config]

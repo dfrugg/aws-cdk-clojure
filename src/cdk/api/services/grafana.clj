@@ -75,7 +75,7 @@
 | `organizationRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-role-name` |
 | `organizationalUnits` | java.util.List | [[cdk.support/lookup-entry]] | `:organizational-units` |
 | `permissionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission-type` |
-| `pluginAdminEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:plugin-admin-enabled` |
+| `pluginAdminEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:plugin-admin-enabled` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `samlConfiguration` | software.amazon.awscdk.services.grafana.CfnWorkspace$SamlConfigurationProperty | [[cdk.support/lookup-entry]] | `:saml-configuration` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
@@ -213,7 +213,7 @@
 | `organizationRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-role-name` |
 | `organizationalUnits` | java.util.List | [[cdk.support/lookup-entry]] | `:organizational-units` |
 | `permissionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission-type` |
-| `pluginAdminEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:plugin-admin-enabled` |
+| `pluginAdminEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:plugin-admin-enabled` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `samlConfiguration` | software.amazon.awscdk.services.grafana.CfnWorkspace$SamlConfigurationProperty | [[cdk.support/lookup-entry]] | `:saml-configuration` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |

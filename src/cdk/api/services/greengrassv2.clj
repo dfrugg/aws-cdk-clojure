@@ -39,7 +39,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `inlineRecipe` | java.lang.String | [[cdk.support/lookup-entry]] | `:inline-recipe` |
-| `lambdaFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-function` |
+| `lambdaFunction` | software.amazon.awscdk.services.greengrassv2.CfnComponentVersion$LambdaFunctionRecipeSourceProperty | [[cdk.support/lookup-entry]] | `:lambda-function` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnComponentVersion$Builder builder id config]
@@ -103,7 +103,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnComponentVersion$ComponentPlatformProperty$Builder builder id config]
@@ -134,10 +134,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `devices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:devices` |
+| `devices` | java.util.List | [[cdk.support/lookup-entry]] | `:devices` |
 | `memorySizeInKb` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-size-in-kb` |
-| `mountRoSysfs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mount-ro-sysfs` |
-| `volumes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volumes` |
+| `mountRoSysfs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:mount-ro-sysfs` |
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
 "
   [^CfnComponentVersion$LambdaContainerParamsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :devices)]
@@ -236,15 +236,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `environmentVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment-variables` |
-| `eventSources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-sources` |
+| `environmentVariables` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment-variables` |
+| `eventSources` | java.util.List | [[cdk.support/lookup-entry]] | `:event-sources` |
 | `execArgs` | java.util.List | [[cdk.support/lookup-entry]] | `:exec-args` |
 | `inputPayloadEncodingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-payload-encoding-type` |
-| `linuxProcessParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:linux-process-params` |
+| `linuxProcessParams` | software.amazon.awscdk.services.greengrassv2.CfnComponentVersion$LambdaLinuxProcessParamsProperty | [[cdk.support/lookup-entry]] | `:linux-process-params` |
 | `maxIdleTimeInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-idle-time-in-seconds` |
 | `maxInstancesCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-instances-count` |
 | `maxQueueSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-queue-size` |
-| `pinned` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pinned` |
+| `pinned` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:pinned` |
 | `statusTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:status-timeout-in-seconds` |
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
@@ -294,10 +294,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `componentDependencies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:component-dependencies` |
-| `componentLambdaParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:component-lambda-parameters` |
+| `componentDependencies` | java.util.Map | [[cdk.support/lookup-entry]] | `:component-dependencies` |
+| `componentLambdaParameters` | software.amazon.awscdk.services.greengrassv2.CfnComponentVersion$LambdaExecutionParametersProperty | [[cdk.support/lookup-entry]] | `:component-lambda-parameters` |
 | `componentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-name` |
-| `componentPlatforms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:component-platforms` |
+| `componentPlatforms` | java.util.List | [[cdk.support/lookup-entry]] | `:component-platforms` |
 | `componentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-version` |
 | `lambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-arn` |
 "
@@ -337,7 +337,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-params` |
+| `containerParams` | software.amazon.awscdk.services.greengrassv2.CfnComponentVersion$LambdaContainerParamsProperty | [[cdk.support/lookup-entry]] | `:container-params` |
 | `isolationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:isolation-mode` |
 "
   [^CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder builder id config]
@@ -368,7 +368,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addGroupOwner` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:add-group-owner` |
+| `addGroupOwner` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-group-owner` |
 | `destinationPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-path` |
 | `permission` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission` |
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
@@ -441,7 +441,7 @@
 |---|---|---|---|
 | `components` | java.util.Map | [[cdk.support/lookup-entry]] | `:components` |
 | `deploymentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-name` |
-| `deploymentPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-policies` |
+| `deploymentPolicies` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$DeploymentPoliciesProperty | [[cdk.support/lookup-entry]] | `:deployment-policies` |
 | `iotJobConfiguration` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$DeploymentIoTJobConfigurationProperty | [[cdk.support/lookup-entry]] | `:iot-job-configuration` |
 | `parentTargetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-target-arn` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -518,7 +518,7 @@
 |---|---|---|---|
 | `componentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-version` |
 | `configurationUpdate` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$ComponentConfigurationUpdateProperty | [[cdk.support/lookup-entry]] | `:configuration-update` |
-| `runWith` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-with` |
+| `runWith` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$ComponentRunWithProperty | [[cdk.support/lookup-entry]] | `:run-with` |
 "
   [^CfnDeployment$ComponentDeploymentSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :component-version)]
@@ -643,9 +643,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `abortConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:abort-config` |
+| `abortConfig` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$IoTJobAbortConfigProperty | [[cdk.support/lookup-entry]] | `:abort-config` |
 | `jobExecutionsRolloutConfig` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$IoTJobExecutionsRolloutConfigProperty | [[cdk.support/lookup-entry]] | `:job-executions-rollout-config` |
-| `timeoutConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-config` |
+| `timeoutConfig` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$IoTJobTimeoutConfigProperty | [[cdk.support/lookup-entry]] | `:timeout-config` |
 "
   [^CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :abort-config)]
@@ -677,7 +677,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `componentUpdatePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:component-update-policy` |
+| `componentUpdatePolicy` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$DeploymentComponentUpdatePolicyProperty | [[cdk.support/lookup-entry]] | `:component-update-policy` |
 | `configurationValidationPolicy` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$DeploymentConfigurationValidationPolicyProperty | [[cdk.support/lookup-entry]] | `:configuration-validation-policy` |
 | `failureHandlingPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:failure-handling-policy` |
 "
@@ -711,7 +711,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `criteriaList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:criteria-list` |
+| `criteriaList` | java.util.List | [[cdk.support/lookup-entry]] | `:criteria-list` |
 "
   [^CfnDeployment$IoTJobAbortConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :criteria-list)]
@@ -776,7 +776,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `exponentialRate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exponential-rate` |
+| `exponentialRate` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$IoTJobExponentialRolloutRateProperty | [[cdk.support/lookup-entry]] | `:exponential-rate` |
 | `maximumPerMinute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-per-minute` |
 "
   [^CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder builder id config]
@@ -871,7 +871,7 @@
 |---|---|---|---|
 | `components` | java.util.Map | [[cdk.support/lookup-entry]] | `:components` |
 | `deploymentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-name` |
-| `deploymentPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-policies` |
+| `deploymentPolicies` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$DeploymentPoliciesProperty | [[cdk.support/lookup-entry]] | `:deployment-policies` |
 | `iotJobConfiguration` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$DeploymentIoTJobConfigurationProperty | [[cdk.support/lookup-entry]] | `:iot-job-configuration` |
 | `parentTargetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-target-arn` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |

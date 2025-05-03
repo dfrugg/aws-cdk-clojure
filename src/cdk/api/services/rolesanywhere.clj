@@ -62,7 +62,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `crlData` | java.lang.String | [[cdk.support/lookup-entry]] | `:crl-data` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `trustAnchorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-anchor-arn` |
@@ -105,7 +105,7 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `requireInstanceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
+| `requireInstanceProperties` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
 | `roleArns` | java.util.List | [[cdk.support/lookup-entry]] | `:role-arns` |
 | `sessionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-policy` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -151,10 +151,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `requireInstanceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
+| `requireInstanceProperties` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
 | `roleArns` | java.util.List | [[cdk.support/lookup-entry]] | `:role-arns` |
 | `sessionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-policy` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -240,7 +240,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channel` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `event` | java.lang.String | [[cdk.support/lookup-entry]] | `:event` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
 "
@@ -276,9 +276,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `notificationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-settings` |
+| `notificationSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-settings` |
 | `source` | software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -347,7 +347,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-data` |
+| `sourceData` | software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor$SourceDataProperty | [[cdk.support/lookup-entry]] | `:source-data` |
 | `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |
 "
   [^CfnTrustAnchor$SourceProperty$Builder builder id config]

@@ -89,13 +89,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attachMissingPermission` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:attach-missing-permission` |
-| `autoConfigurationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-configuration-enabled` |
+| `autoConfigurationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-configuration-enabled` |
 | `componentMonitoringSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:component-monitoring-settings` |
 | `customComponents` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-components` |
 | `cweMonitorEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cwe-monitor-enabled` |
 | `groupingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:grouping-type` |
 | `logPatternSets` | java.util.List | [[cdk.support/lookup-entry]] | `:log-pattern-sets` |
-| `opsCenterEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ops-center-enabled` |
+| `opsCenterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ops-center-enabled` |
 | `opsItemSnsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ops-item-sns-topic-arn` |
 | `resourceGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -146,7 +146,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configurationDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-details` |
+| `configurationDetails` | software.amazon.awscdk.services.applicationinsights.CfnApplication$ConfigurationDetailsProperty | [[cdk.support/lookup-entry]] | `:configuration-details` |
 | `subComponentTypeConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:sub-component-type-configurations` |
 "
   [^CfnApplication$ComponentConfigurationProperty$Builder builder id config]
@@ -180,7 +180,7 @@
 | `componentArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-arn` |
 | `componentConfigurationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-configuration-mode` |
 | `componentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-name` |
-| `customComponentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-component-configuration` |
+| `customComponentConfiguration` | software.amazon.awscdk.services.applicationinsights.CfnApplication$ComponentConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-component-configuration` |
 | `defaultOverwriteComponentConfiguration` | software.amazon.awscdk.services.applicationinsights.CfnApplication$ComponentConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-overwrite-component-configuration` |
 | `tier` | java.lang.String | [[cdk.support/lookup-entry]] | `:tier` |
 "
@@ -221,12 +221,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alarmMetrics` | java.util.List | [[cdk.support/lookup-entry]] | `:alarm-metrics` |
-| `alarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarms` |
+| `alarms` | java.util.List | [[cdk.support/lookup-entry]] | `:alarms` |
 | `haClusterPrometheusExporter` | software.amazon.awscdk.services.applicationinsights.CfnApplication$HAClusterPrometheusExporterProperty | [[cdk.support/lookup-entry]] | `:ha-cluster-prometheus-exporter` |
-| `hanaPrometheusExporter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hana-prometheus-exporter` |
+| `hanaPrometheusExporter` | software.amazon.awscdk.services.applicationinsights.CfnApplication$HANAPrometheusExporterProperty | [[cdk.support/lookup-entry]] | `:hana-prometheus-exporter` |
 | `jmxPrometheusExporter` | software.amazon.awscdk.services.applicationinsights.CfnApplication$JMXPrometheusExporterProperty | [[cdk.support/lookup-entry]] | `:jmx-prometheus-exporter` |
-| `logs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logs` |
-| `windowsEvents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows-events` |
+| `logs` | java.util.List | [[cdk.support/lookup-entry]] | `:logs` |
+| `windowsEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:windows-events` |
 "
   [^CfnApplication$ConfigurationDetailsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :alarm-metrics)]
@@ -505,13 +505,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attachMissingPermission` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:attach-missing-permission` |
-| `autoConfigurationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-configuration-enabled` |
+| `autoConfigurationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-configuration-enabled` |
 | `componentMonitoringSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:component-monitoring-settings` |
 | `customComponents` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-components` |
 | `cweMonitorEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cwe-monitor-enabled` |
 | `groupingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:grouping-type` |
 | `logPatternSets` | java.util.List | [[cdk.support/lookup-entry]] | `:log-pattern-sets` |
-| `opsCenterEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ops-center-enabled` |
+| `opsCenterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ops-center-enabled` |
 | `opsItemSnsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ops-item-sns-topic-arn` |
 | `resourceGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -562,7 +562,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alarmMetrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-metrics` |
+| `alarmMetrics` | java.util.List | [[cdk.support/lookup-entry]] | `:alarm-metrics` |
 | `logs` | java.util.List | [[cdk.support/lookup-entry]] | `:logs` |
 | `windowsEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:windows-events` |
 "
@@ -596,7 +596,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `subComponentConfigurationDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sub-component-configuration-details` |
+| `subComponentConfigurationDetails` | software.amazon.awscdk.services.applicationinsights.CfnApplication$SubComponentConfigurationDetailsProperty | [[cdk.support/lookup-entry]] | `:sub-component-configuration-details` |
 | `subComponentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sub-component-type` |
 "
   [^CfnApplication$SubComponentTypeConfigurationProperty$Builder builder id config]

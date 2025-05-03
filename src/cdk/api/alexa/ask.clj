@@ -51,8 +51,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authenticationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
-| `skillPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:skill-package` |
+| `authenticationConfiguration` | software.amazon.awscdk.alexa.ask.CfnSkill$AuthenticationConfigurationProperty | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
+| `skillPackage` | software.amazon.awscdk.alexa.ask.CfnSkill$SkillPackageProperty | [[cdk.support/lookup-entry]] | `:skill-package` |
 | `vendorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor-id` |
 "
   [^CfnSkill$Builder builder id config]
@@ -113,7 +113,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authenticationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
+| `authenticationConfiguration` | software.amazon.awscdk.alexa.ask.CfnSkill$AuthenticationConfigurationProperty | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
 | `skillPackage` | software.amazon.awscdk.alexa.ask.CfnSkill$SkillPackageProperty | [[cdk.support/lookup-entry]] | `:skill-package` |
 | `vendorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor-id` |
 "

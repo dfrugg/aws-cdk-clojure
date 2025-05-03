@@ -474,7 +474,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `accessPointTags` | java.util.List | [[cdk.support/lookup-entry]] | `:access-point-tags` |
 | `clientToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-token` |
 | `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
-| `posixUser` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:posix-user` |
+| `posixUser` | software.amazon.awscdk.services.efs.CfnAccessPoint$PosixUserProperty | [[cdk.support/lookup-entry]] | `:posix-user` |
 | `rootDirectory` | software.amazon.awscdk.services.efs.CfnAccessPoint$RootDirectoryProperty | [[cdk.support/lookup-entry]] | `:root-directory` |
 "
   [^CfnAccessPointProps$Builder builder id config]
@@ -511,7 +511,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `creationInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:creation-info` |
+| `creationInfo` | software.amazon.awscdk.services.efs.CfnAccessPoint$CreationInfoProperty | [[cdk.support/lookup-entry]] | `:creation-info` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^CfnAccessPoint$RootDirectoryProperty$Builder builder id config]
@@ -571,7 +571,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone-name` |
-| `backupPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backup-policy` |
+| `backupPolicy` | software.amazon.awscdk.services.efs.CfnFileSystem$BackupPolicyProperty | [[cdk.support/lookup-entry]] | `:backup-policy` |
 | `bypassPolicyLockoutSafetyCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:bypass-policy-lockout-safety-check` |
 | `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `fileSystemPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:file-system-policy` |
@@ -581,7 +581,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `lifecyclePolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:lifecycle-policies` |
 | `performanceMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:performance-mode` |
 | `provisionedThroughputInMibps` | java.lang.Number | [[cdk.support/lookup-entry]] | `:provisioned-throughput-in-mibps` |
-| `replicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replication-configuration` |
+| `replicationConfiguration` | software.amazon.awscdk.services.efs.CfnFileSystem$ReplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:replication-configuration` |
 | `throughputMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:throughput-mode` |
 "
   [^CfnFileSystem$Builder builder id config]
@@ -728,14 +728,14 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone-name` |
-| `backupPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backup-policy` |
-| `bypassPolicyLockoutSafetyCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bypass-policy-lockout-safety-check` |
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `backupPolicy` | software.amazon.awscdk.services.efs.CfnFileSystem$BackupPolicyProperty | [[cdk.support/lookup-entry]] | `:backup-policy` |
+| `bypassPolicyLockoutSafetyCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:bypass-policy-lockout-safety-check` |
+| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `fileSystemPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:file-system-policy` |
-| `fileSystemProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file-system-protection` |
+| `fileSystemProtection` | software.amazon.awscdk.services.efs.CfnFileSystem$FileSystemProtectionProperty | [[cdk.support/lookup-entry]] | `:file-system-protection` |
 | `fileSystemTags` | java.util.List | [[cdk.support/lookup-entry]] | `:file-system-tags` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `lifecyclePolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle-policies` |
+| `lifecyclePolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:lifecycle-policies` |
 | `performanceMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:performance-mode` |
 | `provisionedThroughputInMibps` | java.lang.Number | [[cdk.support/lookup-entry]] | `:provisioned-throughput-in-mibps` |
 | `replicationConfiguration` | software.amazon.awscdk.services.efs.CfnFileSystem$ReplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:replication-configuration` |
@@ -791,7 +791,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
+| `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
 "
   [^CfnFileSystem$ReplicationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destinations)]

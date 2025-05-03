@@ -258,12 +258,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `batchImportMetaDataOnCreate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:batch-import-meta-data-on-create` |
+| `batchImportMetaDataOnCreate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:batch-import-meta-data-on-create` |
 | `dataRepositoryPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-repository-path` |
 | `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
 | `fileSystemPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-path` |
 | `importedFileChunkSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:imported-file-chunk-size` |
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataRepositoryAssociationProps$Builder builder id config]
@@ -304,7 +304,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoExportPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-export-policy` |
+| `autoExportPolicy` | software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation$AutoExportPolicyProperty | [[cdk.support/lookup-entry]] | `:auto-export-policy` |
 | `autoImportPolicy` | software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation$AutoImportPolicyProperty | [[cdk.support/lookup-entry]] | `:auto-import-policy` |
 "
   [^CfnDataRepositoryAssociation$S3Property$Builder builder id config]
@@ -373,15 +373,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `fileSystemType` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-type` |
 | `fileSystemTypeVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-type-version` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `lustreConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lustre-configuration` |
+| `lustreConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$LustreConfigurationProperty | [[cdk.support/lookup-entry]] | `:lustre-configuration` |
 | `ontapConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$OntapConfigurationProperty | [[cdk.support/lookup-entry]] | `:ontap-configuration` |
-| `openZfsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
+| `openZfsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$OpenZFSConfigurationProperty | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `storageCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `windowsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows-configuration` |
+| `windowsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$WindowsConfigurationProperty | [[cdk.support/lookup-entry]] | `:windows-configuration` |
 "
   [^CfnFileSystem$Builder builder id config]
   (when-some [data (lookup-entry config id :backup-id)]
@@ -556,7 +556,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-configurations` |
+| `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |
 "
   [^CfnFileSystem$NfsExportsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :client-configurations)]
@@ -654,7 +654,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `endpointIpAddressRange` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-ip-address-range` |
 | `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
 | `preferredSubnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-subnet-id` |
-| `rootVolumeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:root-volume-configuration` |
+| `rootVolumeConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$RootVolumeConfigurationProperty | [[cdk.support/lookup-entry]] | `:root-volume-configuration` |
 | `routeTableIds` | java.util.List | [[cdk.support/lookup-entry]] | `:route-table-ids` |
 | `throughputCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput-capacity` |
 | `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
@@ -714,14 +714,14 @@ function on the data with the provided namespace id and item-key.  The found val
 | `fileSystemTypeVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-type-version` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `lustreConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$LustreConfigurationProperty | [[cdk.support/lookup-entry]] | `:lustre-configuration` |
-| `ontapConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ontap-configuration` |
+| `ontapConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$OntapConfigurationProperty | [[cdk.support/lookup-entry]] | `:ontap-configuration` |
 | `openZfsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$OpenZFSConfigurationProperty | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `storageCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `windowsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows-configuration` |
+| `windowsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$WindowsConfigurationProperty | [[cdk.support/lookup-entry]] | `:windows-configuration` |
 "
   [^CfnFileSystemProps$Builder builder id config]
   (when-some [data (lookup-entry config id :backup-id)]
@@ -773,10 +773,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `copyTagsToSnapshots` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshots` |
+| `copyTagsToSnapshots` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshots` |
 | `dataCompressionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-compression-type` |
-| `nfsExports` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nfs-exports` |
-| `readOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:read-only` |
+| `nfsExports` | java.util.List | [[cdk.support/lookup-entry]] | `:nfs-exports` |
+| `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
 | `recordSizeKiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:record-size-ki-b` |
 | `userAndGroupQuotas` | java.util.List | [[cdk.support/lookup-entry]] | `:user-and-group-quotas` |
 "
@@ -897,12 +897,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `aliases` | java.util.List | [[cdk.support/lookup-entry]] | `:aliases` |
 | `auditLogConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$AuditLogConfigurationProperty | [[cdk.support/lookup-entry]] | `:audit-log-configuration` |
 | `automaticBackupRetentionDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:automatic-backup-retention-days` |
-| `copyTagsToBackups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags-to-backups` |
+| `copyTagsToBackups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags-to-backups` |
 | `dailyAutomaticBackupStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:daily-automatic-backup-start-time` |
 | `deploymentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-type` |
 | `diskIopsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$DiskIopsConfigurationProperty | [[cdk.support/lookup-entry]] | `:disk-iops-configuration` |
 | `preferredSubnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-subnet-id` |
-| `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |
+| `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |
 | `throughputCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput-capacity` |
 | `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
 "
@@ -1023,7 +1023,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `netBiosName` | java.lang.String | [[cdk.support/lookup-entry]] | `:net-bios-name` |
-| `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |
+| `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |
 "
   [^CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :net-bios-name)]
@@ -1096,7 +1096,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activeDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active-directory-configuration` |
+| `activeDirectoryConfiguration` | software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty | [[cdk.support/lookup-entry]] | `:active-directory-configuration` |
 | `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rootVolumeSecurityStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-volume-security-style` |
@@ -1247,7 +1247,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `backupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `ontapConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$OntapConfigurationProperty | [[cdk.support/lookup-entry]] | `:ontap-configuration` |
-| `openZfsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
+| `openZfsConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$OpenZFSConfigurationProperty | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |
 "
@@ -1318,7 +1318,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-configurations` |
+| `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |
 "
   [^CfnVolume$NfsExportsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :client-configurations)]
@@ -1346,7 +1346,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregate-configuration` |
+| `aggregateConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$AggregateConfigurationProperty | [[cdk.support/lookup-entry]] | `:aggregate-configuration` |
 | `copyTagsToBackups` | java.lang.String | [[cdk.support/lookup-entry]] | `:copy-tags-to-backups` |
 | `junctionPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:junction-path` |
 | `ontapVolumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ontap-volume-type` |
@@ -1412,7 +1412,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `copyTagsToSnapshots` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshots` |
 | `dataCompressionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-compression-type` |
-| `nfsExports` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nfs-exports` |
+| `nfsExports` | java.util.List | [[cdk.support/lookup-entry]] | `:nfs-exports` |
 | `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
 | `originSnapshot` | software.amazon.awscdk.services.fsx.CfnVolume$OriginSnapshotProperty | [[cdk.support/lookup-entry]] | `:origin-snapshot` |
 | `parentVolumeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-volume-id` |
@@ -1502,7 +1502,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `backupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `ontapConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$OntapConfigurationProperty | [[cdk.support/lookup-entry]] | `:ontap-configuration` |
-| `openZfsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
+| `openZfsConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$OpenZFSConfigurationProperty | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |
 "
@@ -1574,9 +1574,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `auditLogVolume` | java.lang.String | [[cdk.support/lookup-entry]] | `:audit-log-volume` |
-| `autocommitPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:autocommit-period` |
+| `autocommitPeriod` | software.amazon.awscdk.services.fsx.CfnVolume$AutocommitPeriodProperty | [[cdk.support/lookup-entry]] | `:autocommit-period` |
 | `privilegedDelete` | java.lang.String | [[cdk.support/lookup-entry]] | `:privileged-delete` |
-| `retentionPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retention-period` |
+| `retentionPeriod` | software.amazon.awscdk.services.fsx.CfnVolume$SnaplockRetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `snaplockType` | java.lang.String | [[cdk.support/lookup-entry]] | `:snaplock-type` |
 | `volumeAppendModeEnabled` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-append-mode-enabled` |
 "
@@ -1616,9 +1616,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultRetention` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-retention` |
+| `defaultRetention` | software.amazon.awscdk.services.fsx.CfnVolume$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:default-retention` |
 | `maximumRetention` | software.amazon.awscdk.services.fsx.CfnVolume$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:maximum-retention` |
-| `minimumRetention` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:minimum-retention` |
+| `minimumRetention` | software.amazon.awscdk.services.fsx.CfnVolume$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:minimum-retention` |
 "
   [^CfnVolume$SnaplockRetentionPeriodProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-retention)]

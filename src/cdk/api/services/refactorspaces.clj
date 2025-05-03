@@ -56,7 +56,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiGatewayProxy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-gateway-proxy` |
+| `apiGatewayProxy` | software.amazon.awscdk.services.refactorspaces.CfnApplication$ApiGatewayProxyInputProperty | [[cdk.support/lookup-entry]] | `:api-gateway-proxy` |
 | `environmentIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-identifier` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `proxyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:proxy-type` |
@@ -99,7 +99,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiGatewayProxy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-gateway-proxy` |
+| `apiGatewayProxy` | software.amazon.awscdk.services.refactorspaces.CfnApplication$ApiGatewayProxyInputProperty | [[cdk.support/lookup-entry]] | `:api-gateway-proxy` |
 | `environmentIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-identifier` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `proxyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:proxy-type` |
@@ -217,12 +217,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-identifier` |
-| `defaultRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-route` |
+| `defaultRoute` | software.amazon.awscdk.services.refactorspaces.CfnRoute$DefaultRouteInputProperty | [[cdk.support/lookup-entry]] | `:default-route` |
 | `environmentIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-identifier` |
 | `routeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-type` |
 | `serviceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-identifier` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `uriPathRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uri-path-route` |
+| `uriPathRoute` | software.amazon.awscdk.services.refactorspaces.CfnRoute$UriPathRouteInputProperty | [[cdk.support/lookup-entry]] | `:uri-path-route` |
 "
   [^CfnRoute$Builder builder id config]
   (when-some [data (lookup-entry config id :application-identifier)]
@@ -296,7 +296,7 @@
 | `routeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-type` |
 | `serviceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-identifier` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `uriPathRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uri-path-route` |
+| `uriPathRoute` | software.amazon.awscdk.services.refactorspaces.CfnRoute$UriPathRouteInputProperty | [[cdk.support/lookup-entry]] | `:uri-path-route` |
 "
   [^CfnRouteProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-identifier)]
@@ -337,8 +337,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `activationState` | java.lang.String | [[cdk.support/lookup-entry]] | `:activation-state` |
-| `appendSourcePath` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:append-source-path` |
-| `includeChildPaths` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-child-paths` |
+| `appendSourcePath` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:append-source-path` |
+| `includeChildPaths` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-child-paths` |
 | `methods` | java.util.List | [[cdk.support/lookup-entry]] | `:methods` |
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "

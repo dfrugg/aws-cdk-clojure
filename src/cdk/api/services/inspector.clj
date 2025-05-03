@@ -84,7 +84,7 @@
 | `assessmentTemplateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:assessment-template-name` |
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 | `rulesPackageArns` | java.util.List | [[cdk.support/lookup-entry]] | `:rules-package-arns` |
-| `userAttributesForFindings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
+| `userAttributesForFindings` | java.util.List | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
 "
   [^CfnAssessmentTemplate$Builder builder id config]
   (when-some [data (lookup-entry config id :assessment-target-arn)]
@@ -124,7 +124,7 @@
 | `assessmentTemplateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:assessment-template-name` |
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 | `rulesPackageArns` | java.util.List | [[cdk.support/lookup-entry]] | `:rules-package-arns` |
-| `userAttributesForFindings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
+| `userAttributesForFindings` | java.util.List | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
 "
   [^CfnAssessmentTemplateProps$Builder builder id config]
   (when-some [data (lookup-entry config id :assessment-target-arn)]
@@ -160,7 +160,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourceGroupTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
+| `resourceGroupTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
 "
   [^CfnResourceGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :resource-group-tags)]
@@ -188,7 +188,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourceGroupTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
+| `resourceGroupTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
 "
   [^CfnResourceGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :resource-group-tags)]

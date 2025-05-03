@@ -329,7 +329,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `groupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-name` |
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 "
   [^CfnGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :group-name)]
@@ -465,7 +465,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `groupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-name` |
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 "
   [^CfnGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :group-name)]
@@ -1243,7 +1243,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `permissionsBoundary` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
@@ -1422,7 +1422,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `permissionsBoundary` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "

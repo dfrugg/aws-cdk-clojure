@@ -83,8 +83,8 @@
 |---|---|---|---|
 | `blockedDates` | java.util.List | [[cdk.support/lookup-entry]] | `:blocked-dates` |
 | `blockedWindows` | java.util.List | [[cdk.support/lookup-entry]] | `:blocked-windows` |
-| `blockingAlarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blocking-alarms` |
-| `outcomeAlarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outcome-alarms` |
+| `blockingAlarms` | java.util.List | [[cdk.support/lookup-entry]] | `:blocking-alarms` |
+| `outcomeAlarms` | java.util.List | [[cdk.support/lookup-entry]] | `:outcome-alarms` |
 "
   [^CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :blocked-dates)]

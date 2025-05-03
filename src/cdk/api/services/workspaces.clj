@@ -119,10 +119,10 @@
 |---|---|---|---|
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
 | `directoryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-id` |
-| `rootVolumeEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:root-volume-encryption-enabled` |
+| `rootVolumeEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:root-volume-encryption-enabled` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
-| `userVolumeEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-volume-encryption-enabled` |
+| `userVolumeEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-volume-encryption-enabled` |
 | `volumeEncryptionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-encryption-key` |
 | `workspaceProperties` | software.amazon.awscdk.services.workspaces.CfnWorkspace$WorkspacePropertiesProperty | [[cdk.support/lookup-entry]] | `:workspace-properties` |
 "
@@ -173,7 +173,7 @@
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 | `userVolumeEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-volume-encryption-enabled` |
 | `volumeEncryptionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-encryption-key` |
-| `workspaceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workspace-properties` |
+| `workspaceProperties` | software.amazon.awscdk.services.workspaces.CfnWorkspace$WorkspacePropertiesProperty | [[cdk.support/lookup-entry]] | `:workspace-properties` |
 "
   [^CfnWorkspaceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :bundle-id)]

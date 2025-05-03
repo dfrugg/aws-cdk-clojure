@@ -51,7 +51,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `emitInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:emit-interval` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `s3BucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-name` |
 | `s3BucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-prefix` |
 "
@@ -118,18 +118,18 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLoggingPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-logging-policy` |
+| `accessLoggingPolicy` | software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer$AccessLoggingPolicyProperty | [[cdk.support/lookup-entry]] | `:access-logging-policy` |
 | `appCookieStickinessPolicy` | java.util.List | [[cdk.support/lookup-entry]] | `:app-cookie-stickiness-policy` |
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
 | `connectionDrainingPolicy` | software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer$ConnectionDrainingPolicyProperty | [[cdk.support/lookup-entry]] | `:connection-draining-policy` |
-| `connectionSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-settings` |
+| `connectionSettings` | software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer$ConnectionSettingsProperty | [[cdk.support/lookup-entry]] | `:connection-settings` |
 | `crossZone` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cross-zone` |
-| `healthCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check` |
+| `healthCheck` | software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer$HealthCheckProperty | [[cdk.support/lookup-entry]] | `:health-check` |
 | `instances` | java.util.List | [[cdk.support/lookup-entry]] | `:instances` |
 | `lbCookieStickinessPolicy` | java.util.List | [[cdk.support/lookup-entry]] | `:lb-cookie-stickiness-policy` |
-| `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 | `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
@@ -191,7 +191,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder builder id config]
@@ -410,10 +410,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | `connectionDrainingPolicy` | software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer$ConnectionDrainingPolicyProperty | [[cdk.support/lookup-entry]] | `:connection-draining-policy` |
 | `connectionSettings` | software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer$ConnectionSettingsProperty | [[cdk.support/lookup-entry]] | `:connection-settings` |
 | `crossZone` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cross-zone` |
-| `healthCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check` |
+| `healthCheck` | software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer$HealthCheckProperty | [[cdk.support/lookup-entry]] | `:health-check` |
 | `instances` | java.util.List | [[cdk.support/lookup-entry]] | `:instances` |
-| `lbCookieStickinessPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lb-cookie-stickiness-policy` |
-| `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |
+| `lbCookieStickinessPolicy` | java.util.List | [[cdk.support/lookup-entry]] | `:lb-cookie-stickiness-policy` |
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
 | `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 | `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |

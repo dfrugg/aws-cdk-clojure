@@ -134,7 +134,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customDocumentEnrichmentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-document-enrichment-configuration` |
+| `customDocumentEnrichmentConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$CustomDocumentEnrichmentConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-document-enrichment-configuration` |
 | `dataSourceConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$DataSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `indexId` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-id` |
@@ -193,7 +193,7 @@
 | `documentDataColumnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-data-column-name` |
 | `documentIdColumnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-id-column-name` |
 | `documentTitleColumnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-title-column-name` |
-| `fieldMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-mappings` |
+| `fieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:field-mappings` |
 "
   [^CfnDataSource$ColumnConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :change-detecting-columns)]
@@ -294,7 +294,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `blogFieldMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blog-field-mappings` |
+| `blogFieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:blog-field-mappings` |
 "
   [^CfnDataSource$ConfluenceBlogConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :blog-field-mappings)]
@@ -356,14 +356,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attachmentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attachment-configuration` |
+| `attachmentConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ConfluenceAttachmentConfigurationProperty | [[cdk.support/lookup-entry]] | `:attachment-configuration` |
 | `blogConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ConfluenceBlogConfigurationProperty | [[cdk.support/lookup-entry]] | `:blog-configuration` |
 | `exclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:exclusion-patterns` |
 | `inclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:inclusion-patterns` |
 | `pageConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ConfluencePageConfigurationProperty | [[cdk.support/lookup-entry]] | `:page-configuration` |
 | `secretArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-arn` |
 | `serverUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-url` |
-| `spaceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:space-configuration` |
+| `spaceConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ConfluenceSpaceConfigurationProperty | [[cdk.support/lookup-entry]] | `:space-configuration` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 | `vpcConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$DataSourceVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
@@ -411,7 +411,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pageFieldMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:page-field-mappings` |
+| `pageFieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:page-field-mappings` |
 "
   [^CfnDataSource$ConfluencePageConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :page-field-mappings)]
@@ -473,7 +473,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `crawlArchivedSpaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:crawl-archived-spaces` |
+| `crawlArchivedSpaces` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crawl-archived-spaces` |
 | `crawlPersonalSpaces` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crawl-personal-spaces` |
 | `excludeSpaces` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-spaces` |
 | `includeSpaces` | java.util.List | [[cdk.support/lookup-entry]] | `:include-spaces` |
@@ -588,8 +588,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `inlineConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:inline-configurations` |
-| `postExtractionHookConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:post-extraction-hook-configuration` |
-| `preExtractionHookConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pre-extraction-hook-configuration` |
+| `postExtractionHookConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$HookConfigurationProperty | [[cdk.support/lookup-entry]] | `:post-extraction-hook-configuration` |
+| `preExtractionHookConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$HookConfigurationProperty | [[cdk.support/lookup-entry]] | `:pre-extraction-hook-configuration` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDataSource$CustomDocumentEnrichmentConfigurationProperty$Builder builder id config]
@@ -625,14 +625,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `confluenceConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ConfluenceConfigurationProperty | [[cdk.support/lookup-entry]] | `:confluence-configuration` |
-| `databaseConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:database-configuration` |
+| `databaseConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$DatabaseConfigurationProperty | [[cdk.support/lookup-entry]] | `:database-configuration` |
 | `googleDriveConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$GoogleDriveConfigurationProperty | [[cdk.support/lookup-entry]] | `:google-drive-configuration` |
-| `oneDriveConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:one-drive-configuration` |
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `oneDriveConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$OneDriveConfigurationProperty | [[cdk.support/lookup-entry]] | `:one-drive-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.kendra.CfnDataSource$S3DataSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `salesforceConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$SalesforceConfigurationProperty | [[cdk.support/lookup-entry]] | `:salesforce-configuration` |
 | `serviceNowConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ServiceNowConfigurationProperty | [[cdk.support/lookup-entry]] | `:service-now-configuration` |
 | `sharePointConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$SharePointConfigurationProperty | [[cdk.support/lookup-entry]] | `:share-point-configuration` |
-| `templateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-configuration` |
+| `templateConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$TemplateConfigurationProperty | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `webCrawlerConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$WebCrawlerConfigurationProperty | [[cdk.support/lookup-entry]] | `:web-crawler-configuration` |
 | `workDocsConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$WorkDocsConfigurationProperty | [[cdk.support/lookup-entry]] | `:work-docs-configuration` |
 "
@@ -747,9 +747,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aclConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:acl-configuration` |
-| `columnConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-configuration` |
-| `connectionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-configuration` |
+| `aclConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$AclConfigurationProperty | [[cdk.support/lookup-entry]] | `:acl-configuration` |
+| `columnConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ColumnConfigurationProperty | [[cdk.support/lookup-entry]] | `:column-configuration` |
+| `connectionConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ConnectionConfigurationProperty | [[cdk.support/lookup-entry]] | `:connection-configuration` |
 | `databaseEngineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-engine-type` |
 | `sqlConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$SqlConfigurationProperty | [[cdk.support/lookup-entry]] | `:sql-configuration` |
 | `vpcConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$DataSourceVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
@@ -969,7 +969,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `invocationCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:invocation-condition` |
+| `invocationCondition` | software.amazon.awscdk.services.kendra.CfnDataSource$DocumentAttributeConditionProperty | [[cdk.support/lookup-entry]] | `:invocation-condition` |
 | `lambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-arn` |
 | `s3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket` |
 "
@@ -1003,9 +1003,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `condition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:condition` |
-| `documentContentDeletion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-content-deletion` |
-| `target` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target` |
+| `condition` | software.amazon.awscdk.services.kendra.CfnDataSource$DocumentAttributeConditionProperty | [[cdk.support/lookup-entry]] | `:condition` |
+| `documentContentDeletion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:document-content-deletion` |
+| `target` | software.amazon.awscdk.services.kendra.CfnDataSource$DocumentAttributeTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnDataSource$InlineCustomDocumentEnrichmentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :condition)]
@@ -1037,11 +1037,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `disableLocalGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-local-groups` |
+| `disableLocalGroups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-local-groups` |
 | `exclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:exclusion-patterns` |
 | `fieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:field-mappings` |
 | `inclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:inclusion-patterns` |
-| `oneDriveUsers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:one-drive-users` |
+| `oneDriveUsers` | software.amazon.awscdk.services.kendra.CfnDataSource$OneDriveUsersProperty | [[cdk.support/lookup-entry]] | `:one-drive-users` |
 | `secretArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-arn` |
 | `tenantDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:tenant-domain` |
 "
@@ -1084,7 +1084,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `oneDriveUserList` | java.util.List | [[cdk.support/lookup-entry]] | `:one-drive-user-list` |
-| `oneDriveUserS3Path` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:one-drive-user-s3-path` |
+| `oneDriveUserS3Path` | software.amazon.awscdk.services.kendra.CfnDataSource$S3PathProperty | [[cdk.support/lookup-entry]] | `:one-drive-user-s3-path` |
 "
   [^CfnDataSource$OneDriveUsersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :one-drive-user-list)]
@@ -1114,7 +1114,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customDocumentEnrichmentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-document-enrichment-configuration` |
+| `customDocumentEnrichmentConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$CustomDocumentEnrichmentConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-document-enrichment-configuration` |
 | `dataSourceConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$DataSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `indexId` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-id` |
@@ -1205,7 +1205,7 @@
 |---|---|---|---|
 | `accessControlListConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$AccessControlListConfigurationProperty | [[cdk.support/lookup-entry]] | `:access-control-list-configuration` |
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
-| `documentsMetadataConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:documents-metadata-configuration` |
+| `documentsMetadataConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$DocumentsMetadataConfigurationProperty | [[cdk.support/lookup-entry]] | `:documents-metadata-configuration` |
 | `exclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:exclusion-patterns` |
 | `inclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:inclusion-patterns` |
 | `inclusionPrefixes` | java.util.List | [[cdk.support/lookup-entry]] | `:inclusion-prefixes` |
@@ -1314,8 +1314,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `chatterFeedConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chatter-feed-configuration` |
-| `crawlAttachments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:crawl-attachments` |
+| `chatterFeedConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$SalesforceChatterFeedConfigurationProperty | [[cdk.support/lookup-entry]] | `:chatter-feed-configuration` |
+| `crawlAttachments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crawl-attachments` |
 | `excludeAttachmentFilePatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-attachment-file-patterns` |
 | `includeAttachmentFilePatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:include-attachment-file-patterns` |
 | `knowledgeArticleConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$SalesforceKnowledgeArticleConfigurationProperty | [[cdk.support/lookup-entry]] | `:knowledge-article-configuration` |
@@ -1405,7 +1405,7 @@
 |---|---|---|---|
 | `customKnowledgeArticleTypeConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-knowledge-article-type-configurations` |
 | `includedStates` | java.util.List | [[cdk.support/lookup-entry]] | `:included-states` |
-| `standardKnowledgeArticleTypeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:standard-knowledge-article-type-configuration` |
+| `standardKnowledgeArticleTypeConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$SalesforceStandardKnowledgeArticleTypeConfigurationProperty | [[cdk.support/lookup-entry]] | `:standard-knowledge-article-type-configuration` |
 "
   [^CfnDataSource$SalesforceKnowledgeArticleConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-knowledge-article-type-configurations)]
@@ -1472,7 +1472,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `documentTitleFieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-title-field-name` |
-| `fieldMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-mappings` |
+| `fieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:field-mappings` |
 "
   [^CfnDataSource$SalesforceStandardObjectAttachmentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :document-title-field-name)]
@@ -1541,9 +1541,9 @@
 |---|---|---|---|
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
 | `hostUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-url` |
-| `knowledgeArticleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:knowledge-article-configuration` |
+| `knowledgeArticleConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ServiceNowKnowledgeArticleConfigurationProperty | [[cdk.support/lookup-entry]] | `:knowledge-article-configuration` |
 | `secretArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-arn` |
-| `serviceCatalogConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-catalog-configuration` |
+| `serviceCatalogConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$ServiceNowServiceCatalogConfigurationProperty | [[cdk.support/lookup-entry]] | `:service-catalog-configuration` |
 | `serviceNowBuildVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-now-build-version` |
 "
   [^CfnDataSource$ServiceNowConfigurationProperty$Builder builder id config]
@@ -1582,11 +1582,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `crawlAttachments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:crawl-attachments` |
+| `crawlAttachments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crawl-attachments` |
 | `documentDataFieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-data-field-name` |
 | `documentTitleFieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-title-field-name` |
 | `excludeAttachmentFilePatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-attachment-file-patterns` |
-| `fieldMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-mappings` |
+| `fieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:field-mappings` |
 | `filterQuery` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-query` |
 | `includeAttachmentFilePatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:include-attachment-file-patterns` |
 "
@@ -1672,7 +1672,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `crawlAttachments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crawl-attachments` |
-| `disableLocalGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-local-groups` |
+| `disableLocalGroups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-local-groups` |
 | `documentTitleFieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-title-field-name` |
 | `exclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:exclusion-patterns` |
 | `fieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:field-mappings` |
@@ -1682,7 +1682,7 @@
 | `sslCertificateS3Path` | software.amazon.awscdk.services.kendra.CfnDataSource$S3PathProperty | [[cdk.support/lookup-entry]] | `:ssl-certificate-s3-path` |
 | `urls` | java.util.List | [[cdk.support/lookup-entry]] | `:urls` |
 | `useChangeLog` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-change-log` |
-| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+| `vpcConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$DataSourceVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnDataSource$SharePointConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :crawl-attachments)]
@@ -1788,7 +1788,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `basicAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:basic-authentication` |
+| `basicAuthentication` | java.util.List | [[cdk.support/lookup-entry]] | `:basic-authentication` |
 "
   [^CfnDataSource$WebCrawlerAuthenticationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :basic-authentication)]
@@ -1961,7 +1961,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `seedUrlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:seed-url-configuration` |
+| `seedUrlConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$WebCrawlerSeedUrlConfigurationProperty | [[cdk.support/lookup-entry]] | `:seed-url-configuration` |
 | `siteMapsConfiguration` | software.amazon.awscdk.services.kendra.CfnDataSource$WebCrawlerSiteMapsConfigurationProperty | [[cdk.support/lookup-entry]] | `:site-maps-configuration` |
 "
   [^CfnDataSource$WebCrawlerUrlsProperty$Builder builder id config]
@@ -1992,12 +1992,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `crawlComments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:crawl-comments` |
+| `crawlComments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crawl-comments` |
 | `exclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:exclusion-patterns` |
-| `fieldMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-mappings` |
+| `fieldMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:field-mappings` |
 | `inclusionPatterns` | java.util.List | [[cdk.support/lookup-entry]] | `:inclusion-patterns` |
 | `organizationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-id` |
-| `useChangeLog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-change-log` |
+| `useChangeLog` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-change-log` |
 "
   [^CfnDataSource$WorkDocsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :crawl-comments)]
@@ -2090,7 +2090,7 @@
 | `languageCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-code` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `s3Path` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-path` |
+| `s3Path` | software.amazon.awscdk.services.kendra.CfnFaq$S3PathProperty | [[cdk.support/lookup-entry]] | `:s3-path` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFaqProps$Builder builder id config]
@@ -2166,14 +2166,14 @@
 |---|---|---|---|
 | `capacityUnits` | software.amazon.awscdk.services.kendra.CfnIndex$CapacityUnitsConfigurationProperty | [[cdk.support/lookup-entry]] | `:capacity-units` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `documentMetadataConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-metadata-configurations` |
+| `documentMetadataConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:document-metadata-configurations` |
 | `edition` | java.lang.String | [[cdk.support/lookup-entry]] | `:edition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `serverSideEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
+| `serverSideEncryptionConfiguration` | software.amazon.awscdk.services.kendra.CfnIndex$ServerSideEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userContextPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-context-policy` |
-| `userTokenConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-token-configurations` |
+| `userTokenConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:user-token-configurations` |
 "
   [^CfnIndex$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-units)]
@@ -2251,7 +2251,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `relevance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relevance` |
+| `relevance` | software.amazon.awscdk.services.kendra.CfnIndex$RelevanceProperty | [[cdk.support/lookup-entry]] | `:relevance` |
 | `search` | software.amazon.awscdk.services.kendra.CfnIndex$SearchProperty | [[cdk.support/lookup-entry]] | `:search` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -2366,14 +2366,14 @@
 |---|---|---|---|
 | `capacityUnits` | software.amazon.awscdk.services.kendra.CfnIndex$CapacityUnitsConfigurationProperty | [[cdk.support/lookup-entry]] | `:capacity-units` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `documentMetadataConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-metadata-configurations` |
+| `documentMetadataConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:document-metadata-configurations` |
 | `edition` | java.lang.String | [[cdk.support/lookup-entry]] | `:edition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `serverSideEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
+| `serverSideEncryptionConfiguration` | software.amazon.awscdk.services.kendra.CfnIndex$ServerSideEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userContextPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-context-policy` |
-| `userTokenConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-token-configurations` |
+| `userTokenConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:user-token-configurations` |
 "
   [^CfnIndexProps$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-units)]
@@ -2420,7 +2420,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `duration` | java.lang.String | [[cdk.support/lookup-entry]] | `:duration` |
-| `freshness` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:freshness` |
+| `freshness` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:freshness` |
 | `importance` | java.lang.Number | [[cdk.support/lookup-entry]] | `:importance` |
 | `rankOrder` | java.lang.String | [[cdk.support/lookup-entry]] | `:rank-order` |
 | `valueImportanceItems` | java.util.List | [[cdk.support/lookup-entry]] | `:value-importance-items` |
@@ -2459,10 +2459,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:displayable` |
+| `displayable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:displayable` |
 | `facetable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:facetable` |
 | `searchable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:searchable` |
-| `sortable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sortable` |
+| `sortable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sortable` |
 "
   [^CfnIndex$SearchProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :displayable)]
@@ -2524,7 +2524,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `jsonTokenTypeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json-token-type-configuration` |
+| `jsonTokenTypeConfiguration` | software.amazon.awscdk.services.kendra.CfnIndex$JsonTokenTypeConfigurationProperty | [[cdk.support/lookup-entry]] | `:json-token-type-configuration` |
 | `jwtTokenTypeConfiguration` | software.amazon.awscdk.services.kendra.CfnIndex$JwtTokenTypeConfigurationProperty | [[cdk.support/lookup-entry]] | `:jwt-token-type-configuration` |
 "
   [^CfnIndex$UserTokenConfigurationProperty$Builder builder id config]

@@ -152,12 +152,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxConcurrency` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-concurrency` |
 | `maxErrors` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-errors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outputLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-location` |
+| `outputLocation` | software.amazon.awscdk.services.ssm.CfnAssociation$InstanceAssociationOutputLocationProperty | [[cdk.support/lookup-entry]] | `:output-location` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
 | `scheduleOffset` | java.lang.Number | [[cdk.support/lookup-entry]] | `:schedule-offset` |
 | `syncCompliance` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-compliance` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 | `waitForSuccessTimeoutSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-for-success-timeout-seconds` |
 "
   [^CfnAssociation$Builder builder id config]
@@ -218,7 +218,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-location` |
+| `s3Location` | software.amazon.awscdk.services.ssm.CfnAssociation$S3OutputLocationProperty | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^CfnAssociation$InstanceAssociationOutputLocationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-location)]
@@ -256,7 +256,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxConcurrency` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-concurrency` |
 | `maxErrors` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-errors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outputLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-location` |
+| `outputLocation` | software.amazon.awscdk.services.ssm.CfnAssociation$InstanceAssociationOutputLocationProperty | [[cdk.support/lookup-entry]] | `:output-location` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
 | `scheduleOffset` | java.lang.Number | [[cdk.support/lookup-entry]] | `:schedule-offset` |
@@ -421,12 +421,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attachments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attachments` |
+| `attachments` | java.util.List | [[cdk.support/lookup-entry]] | `:attachments` |
 | `content` | java.lang.Object | [[cdk.support/lookup-entry]] | `:content` |
 | `documentFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-format` |
 | `documentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `requires` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:requires` |
+| `requires` | java.util.List | [[cdk.support/lookup-entry]] | `:requires` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 | `updateMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-method` |
@@ -507,12 +507,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attachments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attachments` |
+| `attachments` | java.util.List | [[cdk.support/lookup-entry]] | `:attachments` |
 | `content` | java.lang.Object | [[cdk.support/lookup-entry]] | `:content` |
 | `documentFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-format` |
 | `documentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `requires` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:requires` |
+| `requires` | java.util.List | [[cdk.support/lookup-entry]] | `:requires` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 | `updateMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-method` |
@@ -562,7 +562,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowUnassociatedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-unassociated-targets` |
+| `allowUnassociatedTargets` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-unassociated-targets` |
 | `cutoff` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cutoff` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `duration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration` |
@@ -620,7 +620,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowUnassociatedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-unassociated-targets` |
+| `allowUnassociatedTargets` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-unassociated-targets` |
 | `cutoff` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cutoff` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `duration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration` |
@@ -682,7 +682,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `ownerInformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner-information` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 | `windowId` | java.lang.String | [[cdk.support/lookup-entry]] | `:window-id` |
 "
   [^CfnMaintenanceWindowTarget$Builder builder id config]
@@ -797,15 +797,15 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `cutoffBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:cutoff-behavior` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `loggingInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-info` |
+| `loggingInfo` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$LoggingInfoProperty | [[cdk.support/lookup-entry]] | `:logging-info` |
 | `maxConcurrency` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-concurrency` |
 | `maxErrors` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-errors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 | `taskArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-arn` |
-| `taskInvocationParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-invocation-parameters` |
+| `taskInvocationParameters` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$TaskInvocationParametersProperty | [[cdk.support/lookup-entry]] | `:task-invocation-parameters` |
 | `taskParameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:task-parameters` |
 | `taskType` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-type` |
 | `windowId` | java.lang.String | [[cdk.support/lookup-entry]] | `:window-id` |
@@ -992,12 +992,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchOutputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-output-config` |
+| `cloudWatchOutputConfig` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$CloudWatchOutputConfigProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-output-config` |
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 | `documentHash` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-hash` |
 | `documentHashType` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-hash-type` |
 | `documentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-version` |
-| `notificationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-config` |
+| `notificationConfig` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$NotificationConfigProperty | [[cdk.support/lookup-entry]] | `:notification-config` |
 | `outputS3BucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-s3-bucket-name` |
 | `outputS3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-s3-key-prefix` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
@@ -1117,13 +1117,13 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `cutoffBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:cutoff-behavior` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `loggingInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-info` |
+| `loggingInfo` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$LoggingInfoProperty | [[cdk.support/lookup-entry]] | `:logging-info` |
 | `maxConcurrency` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-concurrency` |
 | `maxErrors` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-errors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 | `taskArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-arn` |
 | `taskInvocationParameters` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$TaskInvocationParametersProperty | [[cdk.support/lookup-entry]] | `:task-invocation-parameters` |
 | `taskParameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:task-parameters` |
@@ -1214,8 +1214,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maintenanceWindowAutomationParameters` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$MaintenanceWindowAutomationParametersProperty | [[cdk.support/lookup-entry]] | `:maintenance-window-automation-parameters` |
-| `maintenanceWindowLambdaParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-window-lambda-parameters` |
-| `maintenanceWindowRunCommandParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-window-run-command-parameters` |
+| `maintenanceWindowLambdaParameters` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$MaintenanceWindowLambdaParametersProperty | [[cdk.support/lookup-entry]] | `:maintenance-window-lambda-parameters` |
+| `maintenanceWindowRunCommandParameters` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$MaintenanceWindowRunCommandParametersProperty | [[cdk.support/lookup-entry]] | `:maintenance-window-run-command-parameters` |
 | `maintenanceWindowStepFunctionsParameters` | software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask$MaintenanceWindowStepFunctionsParametersProperty | [[cdk.support/lookup-entry]] | `:maintenance-window-step-functions-parameters` |
 "
   [^CfnMaintenanceWindowTask$TaskInvocationParametersProperty$Builder builder id config]
@@ -1354,13 +1354,13 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `approvalRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:approval-rules` |
+| `approvalRules` | software.amazon.awscdk.services.ssm.CfnPatchBaseline$RuleGroupProperty | [[cdk.support/lookup-entry]] | `:approval-rules` |
 | `approvedPatches` | java.util.List | [[cdk.support/lookup-entry]] | `:approved-patches` |
 | `approvedPatchesComplianceLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:approved-patches-compliance-level` |
 | `approvedPatchesEnableNonSecurity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:approved-patches-enable-non-security` |
-| `defaultBaseline` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-baseline` |
+| `defaultBaseline` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:default-baseline` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `globalFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-filters` |
+| `globalFilters` | software.amazon.awscdk.services.ssm.CfnPatchBaseline$PatchFilterGroupProperty | [[cdk.support/lookup-entry]] | `:global-filters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `operatingSystem` | java.lang.String | [[cdk.support/lookup-entry]] | `:operating-system` |
 | `patchGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:patch-groups` |
@@ -1421,7 +1421,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `patchFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:patch-filters` |
+| `patchFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:patch-filters` |
 "
   [^CfnPatchBaseline$PatchFilterGroupProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :patch-filters)]
@@ -1514,10 +1514,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `approvalRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:approval-rules` |
+| `approvalRules` | software.amazon.awscdk.services.ssm.CfnPatchBaseline$RuleGroupProperty | [[cdk.support/lookup-entry]] | `:approval-rules` |
 | `approvedPatches` | java.util.List | [[cdk.support/lookup-entry]] | `:approved-patches` |
 | `approvedPatchesComplianceLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:approved-patches-compliance-level` |
-| `approvedPatchesEnableNonSecurity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:approved-patches-enable-non-security` |
+| `approvedPatchesEnableNonSecurity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:approved-patches-enable-non-security` |
 | `defaultBaseline` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:default-baseline` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `globalFilters` | software.amazon.awscdk.services.ssm.CfnPatchBaseline$PatchFilterGroupProperty | [[cdk.support/lookup-entry]] | `:global-filters` |
@@ -1526,7 +1526,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `patchGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:patch-groups` |
 | `rejectedPatches` | java.util.List | [[cdk.support/lookup-entry]] | `:rejected-patches` |
 | `rejectedPatchesAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:rejected-patches-action` |
-| `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
+| `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPatchBaselineProps$Builder builder id config]
@@ -1581,7 +1581,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `patchRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:patch-rules` |
+| `patchRules` | java.util.List | [[cdk.support/lookup-entry]] | `:patch-rules` |
 "
   [^CfnPatchBaseline$RuleGroupProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :patch-rules)]
@@ -1612,7 +1612,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `approveAfterDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:approve-after-days` |
 | `approveUntilDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:approve-until-date` |
 | `complianceLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:compliance-level` |
-| `enableNonSecurity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-non-security` |
+| `enableNonSecurity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-non-security` |
 | `patchFilterGroup` | software.amazon.awscdk.services.ssm.CfnPatchBaseline$PatchFilterGroupProperty | [[cdk.support/lookup-entry]] | `:patch-filter-group` |
 "
   [^CfnPatchBaseline$RuleProperty$Builder builder id config]
@@ -1687,7 +1687,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Destination` | software.amazon.awscdk.services.ssm.CfnResourceDataSync$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
 | `syncFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-format` |
 | `syncName` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-name` |
-| `syncSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sync-source` |
+| `syncSource` | software.amazon.awscdk.services.ssm.CfnResourceDataSync$SyncSourceProperty | [[cdk.support/lookup-entry]] | `:sync-source` |
 | `syncType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-type` |
 "
   [^CfnResourceDataSync$Builder builder id config]
@@ -1736,10 +1736,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | `bucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-prefix` |
 | `bucketRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-region` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
-| `s3Destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination` |
+| `s3Destination` | software.amazon.awscdk.services.ssm.CfnResourceDataSync$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
 | `syncFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-format` |
 | `syncName` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-name` |
-| `syncSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sync-source` |
+| `syncSource` | software.amazon.awscdk.services.ssm.CfnResourceDataSync$SyncSourceProperty | [[cdk.support/lookup-entry]] | `:sync-source` |
 | `syncType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-type` |
 "
   [^CfnResourceDataSyncProps$Builder builder id config]

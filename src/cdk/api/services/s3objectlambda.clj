@@ -86,7 +86,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `objectLambdaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
+| `objectLambdaConfiguration` | software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint$ObjectLambdaConfigurationProperty | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
 "
   [^CfnAccessPoint$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -116,7 +116,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsLambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-lambda` |
+| `awsLambda` | software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint$AwsLambdaProperty | [[cdk.support/lookup-entry]] | `:aws-lambda` |
 "
   [^CfnAccessPoint$ContentTransformationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-lambda)]
@@ -145,9 +145,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowedFeatures` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-features` |
-| `cloudWatchMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
+| `cloudWatchMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
 | `supportingAccessPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:supporting-access-point` |
-| `transformationConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transformation-configurations` |
+| `transformationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:transformation-configurations` |
 "
   [^CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allowed-features)]
@@ -243,7 +243,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `isPublic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-public` |
+| `isPublic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-public` |
 "
   [^CfnAccessPoint$PolicyStatusProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :is-public)]
@@ -272,7 +272,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `objectLambdaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
+| `objectLambdaConfiguration` | software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint$ObjectLambdaConfigurationProperty | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
 "
   [^CfnAccessPointProps$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -302,10 +302,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `blockPublicAcls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-public-acls` |
+| `blockPublicAcls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-acls` |
 | `blockPublicPolicy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-policy` |
 | `ignorePublicAcls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ignore-public-acls` |
-| `restrictPublicBuckets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrict-public-buckets` |
+| `restrictPublicBuckets` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:restrict-public-buckets` |
 "
   [^CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :block-public-acls)]

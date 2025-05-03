@@ -3958,7 +3958,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `endDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-date` |
 | `endDateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-date-type` |
 | `ephemeralStorage` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
@@ -4025,9 +4025,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `endDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-date` |
 | `instanceMatchCriteria` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-match-criteria` |
 | `instanceTypeSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-type-specifications` |
-| `noRemoveEndDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-remove-end-date` |
+| `noRemoveEndDate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-remove-end-date` |
 | `removeEndDate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-end-date` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `tenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tenancy` |
 | `totalTargetCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total-target-capacity` |
 "
@@ -4075,7 +4075,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `availabilityZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone-id` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `instancePlatform` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-platform` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
@@ -4123,9 +4123,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `endDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-date` |
 | `instanceMatchCriteria` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-match-criteria` |
 | `instanceTypeSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-type-specifications` |
-| `noRemoveEndDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-remove-end-date` |
+| `noRemoveEndDate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-remove-end-date` |
 | `removeEndDate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-end-date` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `tenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tenancy` |
 | `totalTargetCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total-target-capacity` |
 "
@@ -4203,7 +4203,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `endDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-date` |
 | `endDateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-date-type` |
 | `ephemeralStorage` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
@@ -4360,7 +4360,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-group-id` |
-| `authorizeAllGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorize-all-groups` |
+| `authorizeAllGroups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:authorize-all-groups` |
 | `clientVpnEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-vpn-endpoint-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `targetNetworkCidr` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-network-cidr` |
@@ -4400,7 +4400,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-group-id` |
-| `authorizeAllGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorize-all-groups` |
+| `authorizeAllGroups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:authorize-all-groups` |
 | `clientVpnEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-vpn-endpoint-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `targetNetworkCidr` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-network-cidr` |
@@ -4441,7 +4441,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `authenticationOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:authentication-options` |
 | `clientCidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-cidr-block` |
-| `clientConnectOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-connect-options` |
+| `clientConnectOptions` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$ClientConnectOptionsProperty | [[cdk.support/lookup-entry]] | `:client-connect-options` |
 | `clientLoginBannerOptions` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty | [[cdk.support/lookup-entry]] | `:client-login-banner-options` |
 | `connectionLogOptions` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$ConnectionLogOptionsProperty | [[cdk.support/lookup-entry]] | `:connection-log-options` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -4451,7 +4451,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serverCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-certificate-arn` |
 | `sessionTimeoutHours` | java.lang.Number | [[cdk.support/lookup-entry]] | `:session-timeout-hours` |
 | `splitTunnel` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:split-tunnel` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `transportProtocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:transport-protocol` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 | `vpnPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vpn-port` |
@@ -4540,9 +4540,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activeDirectory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active-directory` |
+| `activeDirectory` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$DirectoryServiceAuthenticationRequestProperty | [[cdk.support/lookup-entry]] | `:active-directory` |
 | `federatedAuthentication` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$FederatedAuthenticationRequestProperty | [[cdk.support/lookup-entry]] | `:federated-authentication` |
-| `mutualAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
+| `mutualAuthentication` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$CertificateAuthenticationRequestProperty | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnClientVpnEndpoint$ClientAuthenticationRequestProperty$Builder builder id config]
@@ -4577,7 +4577,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `lambdaFunctionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-function-arn` |
 "
   [^CfnClientVpnEndpoint$ClientConnectOptionsProperty$Builder builder id config]
@@ -4609,7 +4609,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bannerText` | java.lang.String | [[cdk.support/lookup-entry]] | `:banner-text` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :banner-text)]
@@ -4641,7 +4641,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `cloudwatchLogGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloudwatch-log-group` |
 | `cloudwatchLogStream` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloudwatch-log-stream` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnClientVpnEndpoint$ConnectionLogOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloudwatch-log-group)]
@@ -4734,7 +4734,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `authenticationOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:authentication-options` |
 | `clientCidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-cidr-block` |
-| `clientConnectOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-connect-options` |
+| `clientConnectOptions` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$ClientConnectOptionsProperty | [[cdk.support/lookup-entry]] | `:client-connect-options` |
 | `clientLoginBannerOptions` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty | [[cdk.support/lookup-entry]] | `:client-login-banner-options` |
 | `connectionLogOptions` | software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint$ConnectionLogOptionsProperty | [[cdk.support/lookup-entry]] | `:connection-log-options` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -4744,7 +4744,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serverCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-certificate-arn` |
 | `sessionTimeoutHours` | java.lang.Number | [[cdk.support/lookup-entry]] | `:session-timeout-hours` |
 | `splitTunnel` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:split-tunnel` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `transportProtocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:transport-protocol` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 | `vpnPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vpn-port` |
@@ -5245,13 +5245,13 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `context` | java.lang.String | [[cdk.support/lookup-entry]] | `:context` |
 | `excessCapacityTerminationPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:excess-capacity-termination-policy` |
-| `launchTemplateConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template-configs` |
+| `launchTemplateConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:launch-template-configs` |
 | `onDemandOptions` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$OnDemandOptionsRequestProperty | [[cdk.support/lookup-entry]] | `:on-demand-options` |
-| `replaceUnhealthyInstances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replace-unhealthy-instances` |
+| `replaceUnhealthyInstances` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replace-unhealthy-instances` |
 | `spotOptions` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$SpotOptionsRequestProperty | [[cdk.support/lookup-entry]] | `:spot-options` |
 | `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `targetCapacitySpecification` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$TargetCapacitySpecificationRequestProperty | [[cdk.support/lookup-entry]] | `:target-capacity-specification` |
-| `terminateInstancesWithExpiration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:terminate-instances-with-expiration` |
+| `terminateInstancesWithExpiration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:terminate-instances-with-expiration` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `validFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:valid-from` |
 | `validUntil` | java.lang.String | [[cdk.support/lookup-entry]] | `:valid-until` |
@@ -5364,7 +5364,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `launchTemplateSpecification` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$FleetLaunchTemplateSpecificationRequestProperty | [[cdk.support/lookup-entry]] | `:launch-template-specification` |
-| `overrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overrides` |
+| `overrides` | java.util.List | [[cdk.support/lookup-entry]] | `:overrides` |
 "
   [^CfnEC2Fleet$FleetLaunchTemplateConfigRequestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :launch-template-specification)]
@@ -5395,10 +5395,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `instanceRequirements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-requirements` |
+| `instanceRequirements` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$InstanceRequirementsRequestProperty | [[cdk.support/lookup-entry]] | `:instance-requirements` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `maxPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-price` |
-| `placement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement` |
+| `placement` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$PlacementProperty | [[cdk.support/lookup-entry]] | `:placement` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `weightedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weighted-capacity` |
@@ -5480,11 +5480,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `acceleratorCount` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$AcceleratorCountRequestProperty | [[cdk.support/lookup-entry]] | `:accelerator-count` |
 | `acceleratorManufacturers` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-manufacturers` |
 | `acceleratorNames` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-names` |
-| `acceleratorTotalMemoryMiB` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:accelerator-total-memory-mi-b` |
+| `acceleratorTotalMemoryMiB` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$AcceleratorTotalMemoryMiBRequestProperty | [[cdk.support/lookup-entry]] | `:accelerator-total-memory-mi-b` |
 | `acceleratorTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-types` |
 | `allowedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-instance-types` |
 | `bareMetal` | java.lang.String | [[cdk.support/lookup-entry]] | `:bare-metal` |
-| `baselineEbsBandwidthMbps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
+| `baselineEbsBandwidthMbps` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$BaselineEbsBandwidthMbpsRequestProperty | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
 | `burstablePerformance` | java.lang.String | [[cdk.support/lookup-entry]] | `:burstable-performance` |
 | `cpuManufacturers` | java.util.List | [[cdk.support/lookup-entry]] | `:cpu-manufacturers` |
 | `excludedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-instance-types` |
@@ -5494,13 +5494,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxSpotPriceAsPercentageOfOptimalOnDemandPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-spot-price-as-percentage-of-optimal-on-demand-price` |
 | `memoryGiBPerVCpu` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$MemoryGiBPerVCpuRequestProperty | [[cdk.support/lookup-entry]] | `:memory-gi-b-per-v-cpu` |
 | `memoryMiB` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$MemoryMiBRequestProperty | [[cdk.support/lookup-entry]] | `:memory-mi-b` |
-| `networkBandwidthGbps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-bandwidth-gbps` |
-| `networkInterfaceCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interface-count` |
+| `networkBandwidthGbps` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$NetworkBandwidthGbpsRequestProperty | [[cdk.support/lookup-entry]] | `:network-bandwidth-gbps` |
+| `networkInterfaceCount` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$NetworkInterfaceCountRequestProperty | [[cdk.support/lookup-entry]] | `:network-interface-count` |
 | `onDemandMaxPricePercentageOverLowestPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:on-demand-max-price-percentage-over-lowest-price` |
 | `requireHibernateSupport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-hibernate-support` |
 | `spotMaxPricePercentageOverLowestPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:spot-max-price-percentage-over-lowest-price` |
-| `totalLocalStorageGb` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-local-storage-gb` |
-| `vCpuCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
+| `totalLocalStorageGb` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$TotalLocalStorageGBRequestProperty | [[cdk.support/lookup-entry]] | `:total-local-storage-gb` |
+| `vCpuCount` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$VCpuCountRangeRequestProperty | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
 "
   [^CfnEC2Fleet$InstanceRequirementsRequestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :accelerator-count)]
@@ -5574,7 +5574,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacityRebalance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-rebalance` |
+| `capacityRebalance` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$CapacityRebalanceProperty | [[cdk.support/lookup-entry]] | `:capacity-rebalance` |
 "
   [^CfnEC2Fleet$MaintenanceStrategiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-rebalance)]
@@ -5727,7 +5727,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allocationStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:allocation-strategy` |
-| `capacityReservationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-reservation-options` |
+| `capacityReservationOptions` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$CapacityReservationOptionsRequestProperty | [[cdk.support/lookup-entry]] | `:capacity-reservation-options` |
 | `maxTotalPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-total-price` |
 | `minTargetCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-target-capacity` |
 | `singleAvailabilityZone` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:single-availability-zone` |
@@ -5821,12 +5821,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `context` | java.lang.String | [[cdk.support/lookup-entry]] | `:context` |
 | `excessCapacityTerminationPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:excess-capacity-termination-policy` |
 | `launchTemplateConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:launch-template-configs` |
-| `onDemandOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-demand-options` |
-| `replaceUnhealthyInstances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replace-unhealthy-instances` |
-| `spotOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spot-options` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
-| `targetCapacitySpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-capacity-specification` |
-| `terminateInstancesWithExpiration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:terminate-instances-with-expiration` |
+| `onDemandOptions` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$OnDemandOptionsRequestProperty | [[cdk.support/lookup-entry]] | `:on-demand-options` |
+| `replaceUnhealthyInstances` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replace-unhealthy-instances` |
+| `spotOptions` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$SpotOptionsRequestProperty | [[cdk.support/lookup-entry]] | `:spot-options` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `targetCapacitySpecification` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$TargetCapacitySpecificationRequestProperty | [[cdk.support/lookup-entry]] | `:target-capacity-specification` |
+| `terminateInstancesWithExpiration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:terminate-instances-with-expiration` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `validFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:valid-from` |
 | `validUntil` | java.lang.String | [[cdk.support/lookup-entry]] | `:valid-until` |
@@ -5882,11 +5882,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `allocationStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:allocation-strategy` |
 | `instanceInterruptionBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-interruption-behavior` |
 | `instancePoolsToUseCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-pools-to-use-count` |
-| `maintenanceStrategies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-strategies` |
+| `maintenanceStrategies` | software.amazon.awscdk.services.ec2.CfnEC2Fleet$MaintenanceStrategiesProperty | [[cdk.support/lookup-entry]] | `:maintenance-strategies` |
 | `maxTotalPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-total-price` |
 | `minTargetCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-target-capacity` |
 | `singleAvailabilityZone` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:single-availability-zone` |
-| `singleInstanceType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:single-instance-type` |
+| `singleInstanceType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:single-instance-type` |
 "
   [^CfnEC2Fleet$SpotOptionsRequestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allocation-strategy)]
@@ -6407,7 +6407,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fileFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-format` |
-| `hiveCompatiblePartitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hive-compatible-partitions` |
+| `hiveCompatiblePartitions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:hive-compatible-partitions` |
 | `perHourPartition` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:per-hour-partition` |
 "
   [^CfnFlowLog$DestinationOptionsProperty$Builder builder id config]
@@ -6732,12 +6732,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `additionalInfo` | java.lang.String | [[cdk.support/lookup-entry]] | `:additional-info` |
 | `affinity` | java.lang.String | [[cdk.support/lookup-entry]] | `:affinity` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `blockDeviceMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
+| `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
 | `cpuOptions` | software.amazon.awscdk.services.ec2.CfnInstance$CpuOptionsProperty | [[cdk.support/lookup-entry]] | `:cpu-options` |
 | `creditSpecification` | software.amazon.awscdk.services.ec2.CfnInstance$CreditSpecificationProperty | [[cdk.support/lookup-entry]] | `:credit-specification` |
-| `disableApiTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-api-termination` |
+| `disableApiTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-api-termination` |
 | `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
-| `elasticGpuSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elastic-gpu-specifications` |
+| `elasticGpuSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-gpu-specifications` |
 | `elasticInferenceAccelerators` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-inference-accelerators` |
 | `enclaveOptions` | software.amazon.awscdk.services.ec2.CfnInstance$EnclaveOptionsProperty | [[cdk.support/lookup-entry]] | `:enclave-options` |
 | `hibernationOptions` | software.amazon.awscdk.services.ec2.CfnInstance$HibernationOptionsProperty | [[cdk.support/lookup-entry]] | `:hibernation-options` |
@@ -6748,7 +6748,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instanceInitiatedShutdownBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-initiated-shutdown-behavior` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `ipv6AddressCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-address-count` |
-| `ipv6Addresses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
+| `ipv6Addresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
 | `kernelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kernel-id` |
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
 | `launchTemplate` | software.amazon.awscdk.services.ec2.CfnInstance$LaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
@@ -6762,8 +6762,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ramdiskId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ramdisk-id` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
-| `sourceDestCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-dest-check` |
-| `ssmAssociations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-associations` |
+| `sourceDestCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:source-dest-check` |
+| `ssmAssociations` | java.util.List | [[cdk.support/lookup-entry]] | `:ssm-associations` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tenancy` |
@@ -6875,7 +6875,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clientToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-token` |
-| `preserveClientIp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
+| `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -6915,7 +6915,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clientToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-token` |
-| `preserveClientIp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
+| `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -7118,7 +7118,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnInstance$EnclaveOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -7264,9 +7264,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `associateCarrierIpAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associate-carrier-ip-address` |
+| `associateCarrierIpAddress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:associate-carrier-ip-address` |
 | `associatePublicIpAddress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `deviceIndex` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-index` |
 | `groupSet` | java.util.List | [[cdk.support/lookup-entry]] | `:group-set` |
@@ -7334,7 +7334,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableResourceNameDnsARecord` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-a-record` |
+| `enableResourceNameDnsARecord` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-a-record` |
 | `enableResourceNameDnsAaaaRecord` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-aaaa-record` |
 | `hostnameType` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname-type` |
 "
@@ -7405,12 +7405,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
 | `cpuOptions` | software.amazon.awscdk.services.ec2.CfnInstance$CpuOptionsProperty | [[cdk.support/lookup-entry]] | `:cpu-options` |
 | `creditSpecification` | software.amazon.awscdk.services.ec2.CfnInstance$CreditSpecificationProperty | [[cdk.support/lookup-entry]] | `:credit-specification` |
-| `disableApiTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-api-termination` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `disableApiTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-api-termination` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `elasticGpuSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-gpu-specifications` |
-| `elasticInferenceAccelerators` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elastic-inference-accelerators` |
-| `enclaveOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enclave-options` |
-| `hibernationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hibernation-options` |
+| `elasticInferenceAccelerators` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-inference-accelerators` |
+| `enclaveOptions` | software.amazon.awscdk.services.ec2.CfnInstance$EnclaveOptionsProperty | [[cdk.support/lookup-entry]] | `:enclave-options` |
+| `hibernationOptions` | software.amazon.awscdk.services.ec2.CfnInstance$HibernationOptionsProperty | [[cdk.support/lookup-entry]] | `:hibernation-options` |
 | `hostId` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-id` |
 | `hostResourceGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-resource-group-arn` |
 | `iamInstanceProfile` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-instance-profile` |
@@ -7423,8 +7423,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
 | `launchTemplate` | software.amazon.awscdk.services.ec2.CfnInstance$LaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
 | `licenseSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:license-specifications` |
-| `monitoring` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring` |
-| `networkInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interfaces` |
+| `monitoring` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:monitoring` |
+| `networkInterfaces` | java.util.List | [[cdk.support/lookup-entry]] | `:network-interfaces` |
 | `placementGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement-group-name` |
 | `privateDnsNameOptions` | software.amazon.awscdk.services.ec2.CfnInstance$PrivateDnsNameOptionsProperty | [[cdk.support/lookup-entry]] | `:private-dns-name-options` |
 | `privateIpAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-ip-address` |
@@ -7432,13 +7432,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ramdiskId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ramdisk-id` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
-| `sourceDestCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-dest-check` |
-| `ssmAssociations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-associations` |
+| `sourceDestCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:source-dest-check` |
+| `ssmAssociations` | java.util.List | [[cdk.support/lookup-entry]] | `:ssm-associations` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tenancy` |
 | `userData` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-data` |
-| `volumes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volumes` |
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
 "
   [^CfnInstanceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :additional-info)]
@@ -7544,7 +7544,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `associationParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:association-parameters` |
+| `associationParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:association-parameters` |
 | `documentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-name` |
 "
   [^CfnInstance$SsmAssociationProperty$Builder builder id config]
@@ -7836,17 +7836,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `allocationDefaultNetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocation-default-netmask-length` |
 | `allocationMaxNetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocation-max-netmask-length` |
 | `allocationMinNetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocation-min-netmask-length` |
-| `allocationResourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allocation-resource-tags` |
-| `autoImport` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-import` |
+| `allocationResourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:allocation-resource-tags` |
+| `autoImport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-import` |
 | `awsService` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-service` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `ipamScopeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipam-scope-id` |
 | `locale` | java.lang.String | [[cdk.support/lookup-entry]] | `:locale` |
-| `provisionedCidrs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-cidrs` |
+| `provisionedCidrs` | java.util.List | [[cdk.support/lookup-entry]] | `:provisioned-cidrs` |
 | `publicIpSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:public-ip-source` |
-| `publiclyAdvertisable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-advertisable` |
+| `publiclyAdvertisable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-advertisable` |
 | `sourceIpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-ipam-pool-id` |
-| `sourceResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-resource` |
+| `sourceResource` | software.amazon.awscdk.services.ec2.CfnIPAMPool$SourceResourceProperty | [[cdk.support/lookup-entry]] | `:source-resource` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIPAMPool$Builder builder id config]
@@ -7978,12 +7978,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `allocationMaxNetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocation-max-netmask-length` |
 | `allocationMinNetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocation-min-netmask-length` |
 | `allocationResourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:allocation-resource-tags` |
-| `autoImport` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-import` |
+| `autoImport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-import` |
 | `awsService` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-service` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `ipamScopeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipam-scope-id` |
 | `locale` | java.lang.String | [[cdk.support/lookup-entry]] | `:locale` |
-| `provisionedCidrs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-cidrs` |
+| `provisionedCidrs` | java.util.List | [[cdk.support/lookup-entry]] | `:provisioned-cidrs` |
 | `publicIpSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:public-ip-source` |
 | `publiclyAdvertisable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-advertisable` |
 | `sourceIpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-ipam-pool-id` |
@@ -8217,7 +8217,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `operatingRegions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:operating-regions` |
+| `operatingRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:operating-regions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIPAMResourceDiscovery$Builder builder id config]
@@ -8590,9 +8590,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `launchTemplateData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template-data` |
+| `launchTemplateData` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$LaunchTemplateDataProperty | [[cdk.support/lookup-entry]] | `:launch-template-data` |
 | `launchTemplateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-template-name` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `versionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-description` |
 "
   [^CfnLaunchTemplate$Builder builder id config]
@@ -8628,7 +8628,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `capacityReservationPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:capacity-reservation-preference` |
-| `capacityReservationTarget` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-reservation-target` |
+| `capacityReservationTarget` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$CapacityReservationTargetProperty | [[cdk.support/lookup-entry]] | `:capacity-reservation-target` |
 "
   [^CfnLaunchTemplate$CapacityReservationSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-reservation-preference)]
@@ -8921,7 +8921,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnLaunchTemplate$EnclaveOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -9009,7 +9009,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `marketType` | java.lang.String | [[cdk.support/lookup-entry]] | `:market-type` |
-| `spotOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spot-options` |
+| `spotOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$SpotOptionsProperty | [[cdk.support/lookup-entry]] | `:spot-options` |
 "
   [^CfnLaunchTemplate$InstanceMarketOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :market-type)]
@@ -9042,11 +9042,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `acceleratorCount` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$AcceleratorCountProperty | [[cdk.support/lookup-entry]] | `:accelerator-count` |
 | `acceleratorManufacturers` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-manufacturers` |
 | `acceleratorNames` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-names` |
-| `acceleratorTotalMemoryMiB` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:accelerator-total-memory-mi-b` |
+| `acceleratorTotalMemoryMiB` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$AcceleratorTotalMemoryMiBProperty | [[cdk.support/lookup-entry]] | `:accelerator-total-memory-mi-b` |
 | `acceleratorTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-types` |
 | `allowedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-instance-types` |
 | `bareMetal` | java.lang.String | [[cdk.support/lookup-entry]] | `:bare-metal` |
-| `baselineEbsBandwidthMbps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
+| `baselineEbsBandwidthMbps` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$BaselineEbsBandwidthMbpsProperty | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
 | `burstablePerformance` | java.lang.String | [[cdk.support/lookup-entry]] | `:burstable-performance` |
 | `cpuManufacturers` | java.util.List | [[cdk.support/lookup-entry]] | `:cpu-manufacturers` |
 | `excludedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-instance-types` |
@@ -9056,13 +9056,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxSpotPriceAsPercentageOfOptimalOnDemandPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-spot-price-as-percentage-of-optimal-on-demand-price` |
 | `memoryGiBPerVCpu` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$MemoryGiBPerVCpuProperty | [[cdk.support/lookup-entry]] | `:memory-gi-b-per-v-cpu` |
 | `memoryMiB` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$MemoryMiBProperty | [[cdk.support/lookup-entry]] | `:memory-mi-b` |
-| `networkBandwidthGbps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-bandwidth-gbps` |
-| `networkInterfaceCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interface-count` |
+| `networkBandwidthGbps` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$NetworkBandwidthGbpsProperty | [[cdk.support/lookup-entry]] | `:network-bandwidth-gbps` |
+| `networkInterfaceCount` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$NetworkInterfaceCountProperty | [[cdk.support/lookup-entry]] | `:network-interface-count` |
 | `onDemandMaxPricePercentageOverLowestPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:on-demand-max-price-percentage-over-lowest-price` |
 | `requireHibernateSupport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-hibernate-support` |
 | `spotMaxPricePercentageOverLowestPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:spot-max-price-percentage-over-lowest-price` |
-| `totalLocalStorageGb` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-local-storage-gb` |
-| `vCpuCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
+| `totalLocalStorageGb` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$TotalLocalStorageGBProperty | [[cdk.support/lookup-entry]] | `:total-local-storage-gb` |
+| `vCpuCount` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$VCpuCountProperty | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
 "
   [^CfnLaunchTemplate$InstanceRequirementsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :accelerator-count)]
@@ -9223,33 +9223,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
 | `capacityReservationSpecification` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$CapacityReservationSpecificationProperty | [[cdk.support/lookup-entry]] | `:capacity-reservation-specification` |
 | `cpuOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$CpuOptionsProperty | [[cdk.support/lookup-entry]] | `:cpu-options` |
-| `creditSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:credit-specification` |
-| `disableApiStop` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-api-stop` |
-| `disableApiTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-api-termination` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `creditSpecification` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$CreditSpecificationProperty | [[cdk.support/lookup-entry]] | `:credit-specification` |
+| `disableApiStop` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-api-stop` |
+| `disableApiTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-api-termination` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `elasticGpuSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-gpu-specifications` |
-| `elasticInferenceAccelerators` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elastic-inference-accelerators` |
-| `enclaveOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enclave-options` |
+| `elasticInferenceAccelerators` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-inference-accelerators` |
+| `enclaveOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$EnclaveOptionsProperty | [[cdk.support/lookup-entry]] | `:enclave-options` |
 | `hibernationOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$HibernationOptionsProperty | [[cdk.support/lookup-entry]] | `:hibernation-options` |
 | `iamInstanceProfile` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$IamInstanceProfileProperty | [[cdk.support/lookup-entry]] | `:iam-instance-profile` |
 | `imageId` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-id` |
 | `instanceInitiatedShutdownBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-initiated-shutdown-behavior` |
-| `instanceMarketOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-market-options` |
-| `instanceRequirements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-requirements` |
+| `instanceMarketOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$InstanceMarketOptionsProperty | [[cdk.support/lookup-entry]] | `:instance-market-options` |
+| `instanceRequirements` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$InstanceRequirementsProperty | [[cdk.support/lookup-entry]] | `:instance-requirements` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `kernelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kernel-id` |
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
-| `licenseSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:license-specifications` |
-| `maintenanceOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-options` |
+| `licenseSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:license-specifications` |
+| `maintenanceOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$MaintenanceOptionsProperty | [[cdk.support/lookup-entry]] | `:maintenance-options` |
 | `metadataOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$MetadataOptionsProperty | [[cdk.support/lookup-entry]] | `:metadata-options` |
-| `monitoring` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring` |
-| `networkInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interfaces` |
-| `placement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement` |
+| `monitoring` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$MonitoringProperty | [[cdk.support/lookup-entry]] | `:monitoring` |
+| `networkInterfaces` | java.util.List | [[cdk.support/lookup-entry]] | `:network-interfaces` |
+| `placement` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$PlacementProperty | [[cdk.support/lookup-entry]] | `:placement` |
 | `privateDnsNameOptions` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$PrivateDnsNameOptionsProperty | [[cdk.support/lookup-entry]] | `:private-dns-name-options` |
 | `ramDiskId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ram-disk-id` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `userData` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-data` |
 "
   [^CfnLaunchTemplate$LaunchTemplateDataProperty$Builder builder id config]
@@ -9558,7 +9558,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnLaunchTemplate$MonitoringProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -9648,10 +9648,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `associateCarrierIpAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associate-carrier-ip-address` |
-| `associatePublicIpAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
-| `connectionTrackingSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-tracking-specification` |
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `associateCarrierIpAddress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:associate-carrier-ip-address` |
+| `associatePublicIpAddress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
+| `connectionTrackingSpecification` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$ConnectionTrackingSpecificationProperty | [[cdk.support/lookup-entry]] | `:connection-tracking-specification` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `deviceIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:device-index` |
 | `enaSrdSpecification` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$EnaSrdSpecificationProperty | [[cdk.support/lookup-entry]] | `:ena-srd-specification` |
@@ -9662,10 +9662,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipv6AddressCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-address-count` |
 | `ipv6Addresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
 | `ipv6PrefixCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-prefix-count` |
-| `ipv6Prefixes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-prefixes` |
+| `ipv6Prefixes` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-prefixes` |
 | `networkCardIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:network-card-index` |
 | `networkInterfaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-interface-id` |
-| `primaryIpv6` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-ipv6` |
+| `primaryIpv6` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:primary-ipv6` |
 | `privateIpAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-ip-address` |
 | `privateIpAddresses` | java.util.List | [[cdk.support/lookup-entry]] | `:private-ip-addresses` |
 | `secondaryPrivateIpAddressCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:secondary-private-ip-address-count` |
@@ -9791,7 +9791,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableResourceNameDnsARecord` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-a-record` |
+| `enableResourceNameDnsARecord` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-a-record` |
 | `enableResourceNameDnsAaaaRecord` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-aaaa-record` |
 | `hostnameType` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname-type` |
 "
@@ -9856,9 +9856,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `launchTemplateData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template-data` |
+| `launchTemplateData` | software.amazon.awscdk.services.ec2.CfnLaunchTemplate$LaunchTemplateDataProperty | [[cdk.support/lookup-entry]] | `:launch-template-data` |
 | `launchTemplateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-template-name` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `versionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-description` |
 "
   [^CfnLaunchTemplateProps$Builder builder id config]
@@ -10440,11 +10440,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr-block` |
-| `egress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress` |
-| `icmp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icmp` |
+| `egress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:egress` |
+| `icmp` | software.amazon.awscdk.services.ec2.CfnNetworkAclEntry$IcmpProperty | [[cdk.support/lookup-entry]] | `:icmp` |
 | `ipv6CidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6-cidr-block` |
 | `networkAclId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-acl-id` |
-| `portRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-range` |
+| `portRange` | software.amazon.awscdk.services.ec2.CfnNetworkAclEntry$PortRangeProperty | [[cdk.support/lookup-entry]] | `:port-range` |
 | `protocol` | java.lang.Number | [[cdk.support/lookup-entry]] | `:protocol` |
 | `ruleAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-action` |
 | `ruleNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rule-number` |
@@ -10554,11 +10554,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr-block` |
-| `egress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress` |
-| `icmp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icmp` |
+| `egress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:egress` |
+| `icmp` | software.amazon.awscdk.services.ec2.CfnNetworkAclEntry$IcmpProperty | [[cdk.support/lookup-entry]] | `:icmp` |
 | `ipv6CidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6-cidr-block` |
 | `networkAclId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-acl-id` |
-| `portRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-range` |
+| `portRange` | software.amazon.awscdk.services.ec2.CfnNetworkAclEntry$PortRangeProperty | [[cdk.support/lookup-entry]] | `:port-range` |
 | `protocol` | java.lang.Number | [[cdk.support/lookup-entry]] | `:protocol` |
 | `ruleAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-action` |
 | `ruleNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rule-number` |
@@ -10638,7 +10638,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `destination` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope$PathStatementRequestProperty | [[cdk.support/lookup-entry]] | `:destination` |
 | `source` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope$PathStatementRequestProperty | [[cdk.support/lookup-entry]] | `:source` |
-| `throughResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:through-resources` |
+| `throughResources` | java.util.List | [[cdk.support/lookup-entry]] | `:through-resources` |
 "
   [^CfnNetworkInsightsAccessScope$AccessScopePathRequestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination)]
@@ -10732,7 +10732,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludePaths` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-paths` |
+| `excludePaths` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-paths` |
 | `matchPaths` | java.util.List | [[cdk.support/lookup-entry]] | `:match-paths` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -10812,7 +10812,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `packetHeaderStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:packet-header-statement` |
+| `packetHeaderStatement` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope$PacketHeaderStatementRequestProperty | [[cdk.support/lookup-entry]] | `:packet-header-statement` |
 | `resourceStatement` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope$ResourceStatementRequestProperty | [[cdk.support/lookup-entry]] | `:resource-statement` |
 "
   [^CfnNetworkInsightsAccessScope$PathStatementRequestProperty$Builder builder id config]
@@ -10843,7 +10843,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludePaths` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-paths` |
+| `excludePaths` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-paths` |
 | `matchPaths` | java.util.List | [[cdk.support/lookup-entry]] | `:match-paths` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -10908,7 +10908,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourceStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-statement` |
+| `resourceStatement` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope$ResourceStatementRequestProperty | [[cdk.support/lookup-entry]] | `:resource-statement` |
 "
   [^CfnNetworkInsightsAccessScope$ThroughResourcesStatementRequestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :resource-statement)]
@@ -10938,7 +10938,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `additionalDetailType` | java.lang.String | [[cdk.support/lookup-entry]] | `:additional-detail-type` |
 | `component` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:component` |
-| `loadBalancers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:load-balancers` |
+| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^CfnNetworkInsightsAnalysis$AdditionalDetailProperty$Builder builder id config]
@@ -11150,7 +11150,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `destinationPortRanges` | java.util.List | [[cdk.support/lookup-entry]] | `:destination-port-ranges` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `sourceAddresses` | java.util.List | [[cdk.support/lookup-entry]] | `:source-addresses` |
-| `sourcePortRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-port-ranges` |
+| `sourcePortRanges` | java.util.List | [[cdk.support/lookup-entry]] | `:source-port-ranges` |
 "
   [^CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination-addresses)]
@@ -11246,7 +11246,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `cidr` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr` |
 | `direction` | java.lang.String | [[cdk.support/lookup-entry]] | `:direction` |
-| `portRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-range` |
+| `portRange` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$PortRangeProperty | [[cdk.support/lookup-entry]] | `:port-range` |
 | `prefixListId` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix-list-id` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `securityGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-group-id` |
@@ -11328,7 +11328,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `aclRule` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisAclRuleProperty | [[cdk.support/lookup-entry]] | `:acl-rule` |
 | `address` | java.lang.String | [[cdk.support/lookup-entry]] | `:address` |
 | `addresses` | java.util.List | [[cdk.support/lookup-entry]] | `:addresses` |
-| `attachedTo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attached-to` |
+| `attachedTo` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:attached-to` |
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
 | `cidrs` | java.util.List | [[cdk.support/lookup-entry]] | `:cidrs` |
 | `classicLoadBalancerListener` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisLoadBalancerListenerProperty | [[cdk.support/lookup-entry]] | `:classic-load-balancer-listener` |
@@ -11336,10 +11336,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | `componentAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-account` |
 | `componentRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-region` |
 | `customerGateway` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:customer-gateway` |
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
-| `destinationVpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-vpc` |
+| `destination` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:destination` |
+| `destinationVpc` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:destination-vpc` |
 | `direction` | java.lang.String | [[cdk.support/lookup-entry]] | `:direction` |
-| `elasticLoadBalancerListener` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elastic-load-balancer-listener` |
+| `elasticLoadBalancerListener` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:elastic-load-balancer-listener` |
 | `explanationCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:explanation-code` |
 | `ingressRouteTable` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:ingress-route-table` |
 | `internetGateway` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:internet-gateway` |
@@ -11350,18 +11350,18 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loadBalancerTargetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancer-target-groups` |
 | `loadBalancerTargetPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:load-balancer-target-port` |
 | `missingComponent` | java.lang.String | [[cdk.support/lookup-entry]] | `:missing-component` |
-| `natGateway` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nat-gateway` |
-| `networkInterface` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interface` |
+| `natGateway` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:nat-gateway` |
+| `networkInterface` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:network-interface` |
 | `packetField` | java.lang.String | [[cdk.support/lookup-entry]] | `:packet-field` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `portRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-ranges` |
+| `portRanges` | java.util.List | [[cdk.support/lookup-entry]] | `:port-ranges` |
 | `prefixList` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:prefix-list` |
 | `protocols` | java.util.List | [[cdk.support/lookup-entry]] | `:protocols` |
 | `routeTable` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:route-table` |
 | `routeTableRoute` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisRouteTableRouteProperty | [[cdk.support/lookup-entry]] | `:route-table-route` |
 | `securityGroup` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:security-group` |
 | `securityGroupRule` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisSecurityGroupRuleProperty | [[cdk.support/lookup-entry]] | `:security-group-rule` |
-| `securityGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-groups` |
+| `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `sourceVpc` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:source-vpc` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 | `subnet` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:subnet` |
@@ -11369,12 +11369,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `transitGateway` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:transit-gateway` |
 | `transitGatewayAttachment` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:transit-gateway-attachment` |
 | `transitGatewayRouteTable` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table` |
-| `transitGatewayRouteTableRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-route` |
-| `vpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-endpoint` |
+| `transitGatewayRouteTableRoute` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$TransitGatewayRouteTableRouteProperty | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-route` |
+| `vpc` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:vpc` |
+| `vpcEndpoint` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:vpc-endpoint` |
 | `vpcPeeringConnection` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:vpc-peering-connection` |
-| `vpnConnection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpn-connection` |
-| `vpnGateway` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpn-gateway` |
+| `vpnConnection` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:vpn-connection` |
+| `vpnGateway` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:vpn-gateway` |
 "
   [^CfnNetworkInsightsAnalysis$ExplanationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :acl)]
@@ -11506,7 +11506,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `additionalDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-details` |
 | `component` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:component` |
 | `destinationVpc` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:destination-vpc` |
-| `elasticLoadBalancerListener` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elastic-load-balancer-listener` |
+| `elasticLoadBalancerListener` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisComponentProperty | [[cdk.support/lookup-entry]] | `:elastic-load-balancer-listener` |
 | `explanations` | java.util.List | [[cdk.support/lookup-entry]] | `:explanations` |
 | `inboundHeader` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty | [[cdk.support/lookup-entry]] | `:inbound-header` |
 | `outboundHeader` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty | [[cdk.support/lookup-entry]] | `:outbound-header` |
@@ -11695,7 +11695,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `destination` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination` |
 | `destinationIp` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-ip` |
 | `destinationPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:destination-port` |
-| `filterAtDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-at-destination` |
+| `filterAtDestination` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath$PathFilterProperty | [[cdk.support/lookup-entry]] | `:filter-at-destination` |
 | `filterAtSource` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath$PathFilterProperty | [[cdk.support/lookup-entry]] | `:filter-at-source` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
@@ -11778,7 +11778,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `destinationAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-address` |
 | `destinationPortRange` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath$FilterPortRangeProperty | [[cdk.support/lookup-entry]] | `:destination-port-range` |
 | `sourceAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-address` |
-| `sourcePortRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-port-range` |
+| `sourcePortRange` | software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath$FilterPortRangeProperty | [[cdk.support/lookup-entry]] | `:source-port-range` |
 "
   [^CfnNetworkInsightsPath$PathFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination-address)]
@@ -11866,7 +11866,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `deviceIndex` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-index` |
-| `enaSrdSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ena-srd-specification` |
+| `enaSrdSpecification` | software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment$EnaSrdSpecificationProperty | [[cdk.support/lookup-entry]] | `:ena-srd-specification` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
 | `networkInterfaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-interface-id` |
 "
@@ -11963,9 +11963,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `deviceIndex` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-index` |
-| `enaSrdSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ena-srd-specification` |
+| `enaSrdSpecification` | software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment$EnaSrdSpecificationProperty | [[cdk.support/lookup-entry]] | `:ena-srd-specification` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
 | `networkInterfaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-interface-id` |
 "
@@ -12005,17 +12005,17 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `connectionTrackingSpecification` | software.amazon.awscdk.services.ec2.CfnNetworkInterface$ConnectionTrackingSpecificationProperty | [[cdk.support/lookup-entry]] | `:connection-tracking-specification` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enablePrimaryIpv6` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-primary-ipv6` |
+| `enablePrimaryIpv6` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-primary-ipv6` |
 | `groupSet` | java.util.List | [[cdk.support/lookup-entry]] | `:group-set` |
 | `interfaceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:interface-type` |
 | `ipv4PrefixCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv4-prefix-count` |
 | `ipv4Prefixes` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv4-prefixes` |
 | `ipv6AddressCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-address-count` |
-| `ipv6Addresses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
+| `ipv6Addresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
 | `ipv6PrefixCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-prefix-count` |
-| `ipv6Prefixes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-prefixes` |
+| `ipv6Prefixes` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-prefixes` |
 | `privateIpAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-ip-address` |
-| `privateIpAddresses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-ip-addresses` |
+| `privateIpAddresses` | java.util.List | [[cdk.support/lookup-entry]] | `:private-ip-addresses` |
 | `secondaryPrivateIpAddressCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:secondary-private-ip-address-count` |
 | `sourceDestCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:source-dest-check` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
@@ -12298,17 +12298,17 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `connectionTrackingSpecification` | software.amazon.awscdk.services.ec2.CfnNetworkInterface$ConnectionTrackingSpecificationProperty | [[cdk.support/lookup-entry]] | `:connection-tracking-specification` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enablePrimaryIpv6` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-primary-ipv6` |
+| `enablePrimaryIpv6` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-primary-ipv6` |
 | `groupSet` | java.util.List | [[cdk.support/lookup-entry]] | `:group-set` |
 | `interfaceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:interface-type` |
 | `ipv4PrefixCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv4-prefix-count` |
 | `ipv4Prefixes` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv4-prefixes` |
 | `ipv6AddressCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-address-count` |
-| `ipv6Addresses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
+| `ipv6Addresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
 | `ipv6PrefixCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-prefix-count` |
-| `ipv6Prefixes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-prefixes` |
+| `ipv6Prefixes` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-prefixes` |
 | `privateIpAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-ip-address` |
-| `privateIpAddresses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-ip-addresses` |
+| `privateIpAddresses` | java.util.List | [[cdk.support/lookup-entry]] | `:private-ip-addresses` |
 | `secondaryPrivateIpAddressCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:secondary-private-ip-address-count` |
 | `sourceDestCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:source-dest-check` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
@@ -12521,7 +12521,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `addressFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:address-family` |
-| `entries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:entries` |
+| `entries` | java.util.List | [[cdk.support/lookup-entry]] | `:entries` |
 | `maxEntries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-entries` |
 | `prefixListName` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix-list-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -12835,8 +12835,8 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `groupDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-description` |
 | `groupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-name` |
-| `securityGroupEgress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-group-egress` |
-| `securityGroupIngress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-group-ingress` |
+| `securityGroupEgress` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-egress` |
+| `securityGroupIngress` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ingress` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
@@ -13208,8 +13208,8 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `groupDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-description` |
 | `groupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-name` |
-| `securityGroupEgress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-group-egress` |
-| `securityGroupIngress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-group-ingress` |
+| `securityGroupEgress` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-egress` |
+| `securityGroupIngress` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ingress` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
@@ -13435,7 +13435,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `spotFleetRequestConfigData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spot-fleet-request-config-data` |
+| `spotFleetRequestConfigData` | software.amazon.awscdk.services.ec2.CfnSpotFleet$SpotFleetRequestConfigDataProperty | [[cdk.support/lookup-entry]] | `:spot-fleet-request-config-data` |
 "
   [^CfnSpotFleet$Builder builder id config]
   (when-some [data (lookup-entry config id :spot-fleet-request-config-data)]
@@ -13491,7 +13491,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `classicLoadBalancers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:classic-load-balancers` |
+| `classicLoadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:classic-load-balancers` |
 "
   [^CfnSpotFleet$ClassicLoadBalancersConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :classic-load-balancers)]
@@ -13519,7 +13519,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `snapshotId` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-id` |
@@ -13680,8 +13680,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `associatePublicIpAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `associatePublicIpAddress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `deviceIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:device-index` |
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
@@ -13741,11 +13741,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `acceleratorCount` | software.amazon.awscdk.services.ec2.CfnSpotFleet$AcceleratorCountRequestProperty | [[cdk.support/lookup-entry]] | `:accelerator-count` |
 | `acceleratorManufacturers` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-manufacturers` |
 | `acceleratorNames` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-names` |
-| `acceleratorTotalMemoryMiB` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:accelerator-total-memory-mi-b` |
+| `acceleratorTotalMemoryMiB` | software.amazon.awscdk.services.ec2.CfnSpotFleet$AcceleratorTotalMemoryMiBRequestProperty | [[cdk.support/lookup-entry]] | `:accelerator-total-memory-mi-b` |
 | `acceleratorTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-types` |
 | `allowedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-instance-types` |
 | `bareMetal` | java.lang.String | [[cdk.support/lookup-entry]] | `:bare-metal` |
-| `baselineEbsBandwidthMbps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
+| `baselineEbsBandwidthMbps` | software.amazon.awscdk.services.ec2.CfnSpotFleet$BaselineEbsBandwidthMbpsRequestProperty | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
 | `burstablePerformance` | java.lang.String | [[cdk.support/lookup-entry]] | `:burstable-performance` |
 | `cpuManufacturers` | java.util.List | [[cdk.support/lookup-entry]] | `:cpu-manufacturers` |
 | `excludedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-instance-types` |
@@ -13755,13 +13755,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxSpotPriceAsPercentageOfOptimalOnDemandPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-spot-price-as-percentage-of-optimal-on-demand-price` |
 | `memoryGiBPerVCpu` | software.amazon.awscdk.services.ec2.CfnSpotFleet$MemoryGiBPerVCpuRequestProperty | [[cdk.support/lookup-entry]] | `:memory-gi-b-per-v-cpu` |
 | `memoryMiB` | software.amazon.awscdk.services.ec2.CfnSpotFleet$MemoryMiBRequestProperty | [[cdk.support/lookup-entry]] | `:memory-mi-b` |
-| `networkBandwidthGbps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-bandwidth-gbps` |
-| `networkInterfaceCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interface-count` |
+| `networkBandwidthGbps` | software.amazon.awscdk.services.ec2.CfnSpotFleet$NetworkBandwidthGbpsRequestProperty | [[cdk.support/lookup-entry]] | `:network-bandwidth-gbps` |
+| `networkInterfaceCount` | software.amazon.awscdk.services.ec2.CfnSpotFleet$NetworkInterfaceCountRequestProperty | [[cdk.support/lookup-entry]] | `:network-interface-count` |
 | `onDemandMaxPricePercentageOverLowestPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:on-demand-max-price-percentage-over-lowest-price` |
 | `requireHibernateSupport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-hibernate-support` |
 | `spotMaxPricePercentageOverLowestPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:spot-max-price-percentage-over-lowest-price` |
-| `totalLocalStorageGb` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-local-storage-gb` |
-| `vCpuCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
+| `totalLocalStorageGb` | software.amazon.awscdk.services.ec2.CfnSpotFleet$TotalLocalStorageGBRequestProperty | [[cdk.support/lookup-entry]] | `:total-local-storage-gb` |
+| `vCpuCount` | software.amazon.awscdk.services.ec2.CfnSpotFleet$VCpuCountRangeRequestProperty | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
 "
   [^CfnSpotFleet$InstanceRequirementsRequestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :accelerator-count)]
@@ -13836,7 +13836,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `launchTemplateSpecification` | software.amazon.awscdk.services.ec2.CfnSpotFleet$FleetLaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template-specification` |
-| `overrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overrides` |
+| `overrides` | java.util.List | [[cdk.support/lookup-entry]] | `:overrides` |
 "
   [^CfnSpotFleet$LaunchTemplateConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :launch-template-specification)]
@@ -13912,7 +13912,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `classicLoadBalancersConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:classic-load-balancers-config` |
+| `classicLoadBalancersConfig` | software.amazon.awscdk.services.ec2.CfnSpotFleet$ClassicLoadBalancersConfigProperty | [[cdk.support/lookup-entry]] | `:classic-load-balancers-config` |
 | `targetGroupsConfig` | software.amazon.awscdk.services.ec2.CfnSpotFleet$TargetGroupsConfigProperty | [[cdk.support/lookup-entry]] | `:target-groups-config` |
 "
   [^CfnSpotFleet$LoadBalancersConfigProperty$Builder builder id config]
@@ -14098,7 +14098,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `spotFleetRequestConfigData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spot-fleet-request-config-data` |
+| `spotFleetRequestConfigData` | software.amazon.awscdk.services.ec2.CfnSpotFleet$SpotFleetRequestConfigDataProperty | [[cdk.support/lookup-entry]] | `:spot-fleet-request-config-data` |
 "
   [^CfnSpotFleetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :spot-fleet-request-config-data)]
@@ -14157,22 +14157,22 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `blockDeviceMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
+| `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
 | `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
-| `iamInstanceProfile` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iam-instance-profile` |
+| `iamInstanceProfile` | software.amazon.awscdk.services.ec2.CfnSpotFleet$IamInstanceProfileSpecificationProperty | [[cdk.support/lookup-entry]] | `:iam-instance-profile` |
 | `imageId` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-id` |
-| `instanceRequirements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-requirements` |
+| `instanceRequirements` | software.amazon.awscdk.services.ec2.CfnSpotFleet$InstanceRequirementsRequestProperty | [[cdk.support/lookup-entry]] | `:instance-requirements` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `kernelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kernel-id` |
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
 | `monitoring` | software.amazon.awscdk.services.ec2.CfnSpotFleet$SpotFleetMonitoringProperty | [[cdk.support/lookup-entry]] | `:monitoring` |
-| `networkInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interfaces` |
-| `placement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement` |
+| `networkInterfaces` | java.util.List | [[cdk.support/lookup-entry]] | `:network-interfaces` |
+| `placement` | software.amazon.awscdk.services.ec2.CfnSpotFleet$SpotPlacementProperty | [[cdk.support/lookup-entry]] | `:placement` |
 | `ramdiskId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ramdisk-id` |
-| `securityGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-groups` |
+| `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `spotPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:spot-price` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
-| `tagSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-specifications` |
+| `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
 | `userData` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-data` |
 | `weightedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weighted-capacity` |
 "
@@ -14236,7 +14236,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnSpotFleet$SpotFleetMonitoringProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -14270,14 +14270,14 @@ function on the data with the provided namespace id and item-key.  The found val
 | `iamFleetRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-fleet-role` |
 | `instanceInterruptionBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-interruption-behavior` |
 | `instancePoolsToUseCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-pools-to-use-count` |
-| `launchSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-specifications` |
-| `launchTemplateConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template-configs` |
+| `launchSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:launch-specifications` |
+| `launchTemplateConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:launch-template-configs` |
 | `loadBalancersConfig` | software.amazon.awscdk.services.ec2.CfnSpotFleet$LoadBalancersConfigProperty | [[cdk.support/lookup-entry]] | `:load-balancers-config` |
 | `onDemandAllocationStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-demand-allocation-strategy` |
 | `onDemandMaxTotalPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-demand-max-total-price` |
 | `onDemandTargetCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:on-demand-target-capacity` |
-| `replaceUnhealthyInstances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replace-unhealthy-instances` |
-| `spotMaintenanceStrategies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spot-maintenance-strategies` |
+| `replaceUnhealthyInstances` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replace-unhealthy-instances` |
+| `spotMaintenanceStrategies` | software.amazon.awscdk.services.ec2.CfnSpotFleet$SpotMaintenanceStrategiesProperty | [[cdk.support/lookup-entry]] | `:spot-maintenance-strategies` |
 | `spotMaxTotalPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:spot-max-total-price` |
 | `spotPrice` | java.lang.String | [[cdk.support/lookup-entry]] | `:spot-price` |
 | `tagSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-specifications` |
@@ -14389,7 +14389,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacityRebalance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-rebalance` |
+| `capacityRebalance` | software.amazon.awscdk.services.ec2.CfnSpotFleet$SpotCapacityRebalanceProperty | [[cdk.support/lookup-entry]] | `:capacity-rebalance` |
 "
   [^CfnSpotFleet$SpotMaintenanceStrategiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-rebalance)]
@@ -14479,7 +14479,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^CfnSpotFleet$TargetGroupsConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-groups)]
@@ -14569,11 +14569,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `assignIpv6AddressOnCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:assign-ipv6-address-on-creation` |
+| `assignIpv6AddressOnCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:assign-ipv6-address-on-creation` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `availabilityZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone-id` |
 | `cidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr-block` |
-| `enableDns64` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-dns64` |
+| `enableDns64` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-dns64` |
 | `enableLniAtDeviceIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:enable-lni-at-device-index` |
 | `ipv4IpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4-ipam-pool-id` |
 | `ipv4NetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv4-netmask-length` |
@@ -14582,7 +14582,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipv6IpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6-ipam-pool-id` |
 | `ipv6Native` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ipv6-native` |
 | `ipv6NetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-netmask-length` |
-| `mapPublicIpOnLaunch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:map-public-ip-on-launch` |
+| `mapPublicIpOnLaunch` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:map-public-ip-on-launch` |
 | `outpostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-arn` |
 | `privateDnsNameOptionsOnLaunch` | java.lang.Object | [[cdk.support/lookup-entry]] | `:private-dns-name-options-on-launch` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -14784,7 +14784,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableResourceNameDnsARecord` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-a-record` |
+| `enableResourceNameDnsARecord` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-a-record` |
 | `enableResourceNameDnsAaaaRecord` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-resource-name-dns-aaaa-record` |
 | `hostnameType` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname-type` |
 "
@@ -14818,11 +14818,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `assignIpv6AddressOnCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:assign-ipv6-address-on-creation` |
+| `assignIpv6AddressOnCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:assign-ipv6-address-on-creation` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `availabilityZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone-id` |
 | `cidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr-block` |
-| `enableDns64` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-dns64` |
+| `enableDns64` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-dns64` |
 | `enableLniAtDeviceIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:enable-lni-at-device-index` |
 | `ipv4IpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4-ipam-pool-id` |
 | `ipv4NetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv4-netmask-length` |
@@ -14831,7 +14831,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipv6IpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6-ipam-pool-id` |
 | `ipv6Native` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ipv6-native` |
 | `ipv6NetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv6-netmask-length` |
-| `mapPublicIpOnLaunch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:map-public-ip-on-launch` |
+| `mapPublicIpOnLaunch` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:map-public-ip-on-launch` |
 | `outpostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-arn` |
 | `privateDnsNameOptionsOnLaunch` | java.lang.Object | [[cdk.support/lookup-entry]] | `:private-dns-name-options-on-launch` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -15034,7 +15034,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-action` |
 | `ruleNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rule-number` |
 | `sourceCidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-cidr-block` |
-| `sourcePortRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-port-range` |
+| `sourcePortRange` | software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule$TrafficMirrorPortRangeProperty | [[cdk.support/lookup-entry]] | `:source-port-range` |
 | `trafficDirection` | java.lang.String | [[cdk.support/lookup-entry]] | `:traffic-direction` |
 | `trafficMirrorFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:traffic-mirror-filter-id` |
 "
@@ -15089,7 +15089,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-action` |
 | `ruleNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rule-number` |
 | `sourceCidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-cidr-block` |
-| `sourcePortRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-port-range` |
+| `sourcePortRange` | software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule$TrafficMirrorPortRangeProperty | [[cdk.support/lookup-entry]] | `:source-port-range` |
 | `trafficDirection` | java.lang.String | [[cdk.support/lookup-entry]] | `:traffic-direction` |
 | `trafficMirrorFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:traffic-mirror-filter-id` |
 "
@@ -16098,7 +16098,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `blackhole` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blackhole` |
+| `blackhole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:blackhole` |
 | `destinationCidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-cidr-block` |
 | `transitGatewayAttachmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-attachment-id` |
 | `transitGatewayRouteTableId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-id` |
@@ -16135,7 +16135,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `blackhole` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blackhole` |
+| `blackhole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:blackhole` |
 | `destinationCidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-cidr-block` |
 | `transitGatewayAttachmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-attachment-id` |
 | `transitGatewayRouteTableId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-id` |
@@ -16491,7 +16491,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `endpointDomainPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-domain-prefix` |
 | `endpointType` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-type` |
 | `loadBalancerOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint$LoadBalancerOptionsProperty | [[cdk.support/lookup-entry]] | `:load-balancer-options` |
-| `networkInterfaceOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interface-options` |
+| `networkInterfaceOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint$NetworkInterfaceOptionsProperty | [[cdk.support/lookup-entry]] | `:network-interface-options` |
 | `policyDocument` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-document` |
 | `policyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:policy-enabled` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
@@ -16629,7 +16629,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `endpointDomainPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-domain-prefix` |
 | `endpointType` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-type` |
 | `loadBalancerOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint$LoadBalancerOptionsProperty | [[cdk.support/lookup-entry]] | `:load-balancer-options` |
-| `networkInterfaceOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interface-options` |
+| `networkInterfaceOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint$NetworkInterfaceOptionsProperty | [[cdk.support/lookup-entry]] | `:network-interface-options` |
 | `policyDocument` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-document` |
 | `policyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:policy-enabled` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
@@ -16689,7 +16689,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedKeyEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-key-enabled` |
+| `customerManagedKeyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:customer-managed-key-enabled` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnVerifiedAccessEndpoint$SseSpecificationProperty$Builder builder id config]
@@ -16723,7 +16723,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `policyDocument` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-document` |
 | `policyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:policy-enabled` |
-| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `sseSpecification` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup$SseSpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `verifiedAccessInstanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:verified-access-instance-id` |
 "
@@ -16766,7 +16766,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `policyDocument` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-document` |
 | `policyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:policy-enabled` |
-| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `sseSpecification` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup$SseSpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `verifiedAccessInstanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:verified-access-instance-id` |
 "
@@ -16806,7 +16806,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedKeyEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-key-enabled` |
+| `customerManagedKeyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:customer-managed-key-enabled` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnVerifiedAccessGroup$SseSpecificationProperty$Builder builder id config]
@@ -16839,10 +16839,10 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `fipsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fips-enabled` |
-| `loggingConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-configurations` |
+| `loggingConfigurations` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance$VerifiedAccessLogsProperty | [[cdk.support/lookup-entry]] | `:logging-configurations` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `verifiedAccessTrustProviderIds` | java.util.List | [[cdk.support/lookup-entry]] | `:verified-access-trust-provider-ids` |
-| `verifiedAccessTrustProviders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:verified-access-trust-providers` |
+| `verifiedAccessTrustProviders` | java.util.List | [[cdk.support/lookup-entry]] | `:verified-access-trust-providers` |
 "
   [^CfnVerifiedAccessInstance$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -16880,7 +16880,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |
 "
   [^CfnVerifiedAccessInstance$CloudWatchLogsProperty$Builder builder id config]
@@ -16912,7 +16912,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deliveryStream` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnVerifiedAccessInstance$KinesisDataFirehoseProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :delivery-stream)]
@@ -16947,7 +16947,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loggingConfigurations` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance$VerifiedAccessLogsProperty | [[cdk.support/lookup-entry]] | `:logging-configurations` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `verifiedAccessTrustProviderIds` | java.util.List | [[cdk.support/lookup-entry]] | `:verified-access-trust-provider-ids` |
-| `verifiedAccessTrustProviders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:verified-access-trust-providers` |
+| `verifiedAccessTrustProviders` | java.util.List | [[cdk.support/lookup-entry]] | `:verified-access-trust-providers` |
 "
   [^CfnVerifiedAccessInstanceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -17022,11 +17022,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs` |
+| `cloudWatchLogs` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance$CloudWatchLogsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs` |
 | `includeTrustContext` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-trust-context` |
 | `kinesisDataFirehose` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance$KinesisDataFirehoseProperty | [[cdk.support/lookup-entry]] | `:kinesis-data-firehose` |
 | `logVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-version` |
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnVerifiedAccessInstance$VerifiedAccessLogsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-logs)]
@@ -17103,11 +17103,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `deviceOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-options` |
+| `deviceOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider$DeviceOptionsProperty | [[cdk.support/lookup-entry]] | `:device-options` |
 | `deviceTrustProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-trust-provider-type` |
 | `oidcOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider$OidcOptionsProperty | [[cdk.support/lookup-entry]] | `:oidc-options` |
 | `policyReferenceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-reference-name` |
-| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `sseSpecification` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider$SseSpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `trustProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-provider-type` |
 | `userTrustProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-trust-provider-type` |
@@ -17232,11 +17232,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `deviceOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-options` |
+| `deviceOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider$DeviceOptionsProperty | [[cdk.support/lookup-entry]] | `:device-options` |
 | `deviceTrustProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-trust-provider-type` |
 | `oidcOptions` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider$OidcOptionsProperty | [[cdk.support/lookup-entry]] | `:oidc-options` |
 | `policyReferenceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-reference-name` |
-| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `sseSpecification` | software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider$SseSpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `trustProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-provider-type` |
 | `userTrustProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-trust-provider-type` |
@@ -17283,7 +17283,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedKeyEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-key-enabled` |
+| `customerManagedKeyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:customer-managed-key-enabled` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnVerifiedAccessTrustProvider$SseSpecificationProperty$Builder builder id config]
@@ -17384,10 +17384,10 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `autoEnableIo` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-enable-io` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `multiAttachEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-attach-enabled` |
+| `multiAttachEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-attach-enabled` |
 | `outpostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-arn` |
 | `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
 | `snapshotId` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-id` |
@@ -17443,9 +17443,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoEnableIo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-enable-io` |
+| `autoEnableIo` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-enable-io` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `multiAttachEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-attach-enabled` |
@@ -17506,7 +17506,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `cidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr-block` |
 | `enableDnsHostnames` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-dns-hostnames` |
-| `enableDnsSupport` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-dns-support` |
+| `enableDnsSupport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-dns-support` |
 | `instanceTenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-tenancy` |
 | `ipv4IpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4-ipam-pool-id` |
 | `ipv4NetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv4-netmask-length` |
@@ -17550,7 +17550,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amazonProvidedIpv6CidrBlock` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-provided-ipv6-cidr-block` |
+| `amazonProvidedIpv6CidrBlock` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:amazon-provided-ipv6-cidr-block` |
 | `cidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr-block` |
 | `ipv4IpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4-ipam-pool-id` |
 | `ipv4NetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv4-netmask-length` |
@@ -17602,7 +17602,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amazonProvidedIpv6CidrBlock` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-provided-ipv6-cidr-block` |
+| `amazonProvidedIpv6CidrBlock` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:amazon-provided-ipv6-cidr-block` |
 | `cidrBlock` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr-block` |
 | `ipv4IpamPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4-ipam-pool-id` |
 | `ipv4NetmaskLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ipv4-netmask-length` |
@@ -17655,7 +17655,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `privateDnsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-dns-enabled` |
+| `privateDnsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:private-dns-enabled` |
 | `routeTableIds` | java.util.List | [[cdk.support/lookup-entry]] | `:route-table-ids` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
@@ -17826,7 +17826,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `acceptanceRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:acceptance-required` |
+| `acceptanceRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:acceptance-required` |
 | `contributorInsightsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:contributor-insights-enabled` |
 | `gatewayLoadBalancerArns` | java.util.List | [[cdk.support/lookup-entry]] | `:gateway-load-balancer-arns` |
 | `networkLoadBalancerArns` | java.util.List | [[cdk.support/lookup-entry]] | `:network-load-balancer-arns` |
@@ -17928,8 +17928,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `acceptanceRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:acceptance-required` |
-| `contributorInsightsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contributor-insights-enabled` |
+| `acceptanceRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:acceptance-required` |
+| `contributorInsightsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:contributor-insights-enabled` |
 | `gatewayLoadBalancerArns` | java.util.List | [[cdk.support/lookup-entry]] | `:gateway-load-balancer-arns` |
 | `networkLoadBalancerArns` | java.util.List | [[cdk.support/lookup-entry]] | `:network-load-balancer-arns` |
 | `payerResponsibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:payer-responsibility` |
@@ -18231,12 +18231,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customerGatewayId` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-gateway-id` |
-| `staticRoutesOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-routes-only` |
+| `staticRoutesOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:static-routes-only` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `transitGatewayId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-id` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `vpnGatewayId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpn-gateway-id` |
-| `vpnTunnelOptionsSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpn-tunnel-options-specifications` |
+| `vpnTunnelOptionsSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:vpn-tunnel-options-specifications` |
 "
   [^CfnVPNConnection$Builder builder id config]
   (when-some [data (lookup-entry config id :customer-gateway-id)]

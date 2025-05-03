@@ -109,7 +109,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^AssetManifestArtifact$Builder builder id config]
@@ -309,7 +309,7 @@ __Create Form:__ ___[]___
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^CloudFormationStackArtifact$Builder builder id config]
@@ -560,7 +560,7 @@ __Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `data` | java.util.List | [[cdk.support/lookup-entry]] | `:data` |
+| `data` | java.lang.String | [[cdk.support/lookup-entry]] | `:data` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `trace` | java.util.List | [[cdk.support/lookup-entry]] | `:trace` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -601,7 +601,7 @@ __Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^NestedCloudAssemblyArtifact$Builder builder id config]
@@ -714,7 +714,7 @@ __Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^TreeCloudArtifact$Builder builder id config]

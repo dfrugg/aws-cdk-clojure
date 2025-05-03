@@ -152,7 +152,7 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
-| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `storageConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:storage-configurations` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
@@ -306,7 +306,7 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
-| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `storageConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:storage-configurations` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
@@ -362,7 +362,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `efs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:efs` |
+| `efs` | software.amazon.awscdk.services.m2.CfnEnvironment$EfsStorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:efs` |
 | `fsx` | software.amazon.awscdk.services.m2.CfnEnvironment$FsxStorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:fsx` |
 "
   [^CfnEnvironment$StorageConfigurationProperty$Builder builder id config]

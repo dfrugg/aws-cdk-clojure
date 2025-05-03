@@ -248,7 +248,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes` |
 "
   [^CfnDataset$SchemaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attributes)]

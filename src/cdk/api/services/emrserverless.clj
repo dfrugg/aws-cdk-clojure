@@ -29,7 +29,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnApplication$AutoStartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -57,7 +57,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `idleTimeoutMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-timeout-minutes` |
 "
   [^CfnApplication$AutoStopConfigurationProperty$Builder builder id config]
@@ -89,16 +89,16 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `architecture` | java.lang.String | [[cdk.support/lookup-entry]] | `:architecture` |
-| `autoStartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-start-configuration` |
+| `autoStartConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$AutoStartConfigurationProperty | [[cdk.support/lookup-entry]] | `:auto-start-configuration` |
 | `autoStopConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$AutoStopConfigurationProperty | [[cdk.support/lookup-entry]] | `:auto-stop-configuration` |
-| `imageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-configuration` |
-| `initialCapacity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-capacity` |
+| `imageConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$ImageConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:image-configuration` |
+| `initialCapacity` | java.util.List | [[cdk.support/lookup-entry]] | `:initial-capacity` |
 | `maximumCapacity` | software.amazon.awscdk.services.emrserverless.CfnApplication$MaximumAllowedResourcesProperty | [[cdk.support/lookup-entry]] | `:maximum-capacity` |
-| `monitoringConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-configuration` |
+| `monitoringConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$MonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:monitoring-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `networkConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `releaseLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:release-label` |
-| `runtimeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-configuration` |
+| `runtimeConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:runtime-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `workerTypeSpecifications` | java.util.Map | [[cdk.support/lookup-entry]] | `:worker-type-specifications` |
@@ -155,11 +155,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 | `logGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-name` |
 | `logStreamNamePrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name-prefix` |
-| `logTypeMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-type-map` |
+| `logTypeMap` | java.util.List | [[cdk.support/lookup-entry]] | `:log-type-map` |
 "
   [^CfnApplication$CloudWatchLoggingConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -350,7 +350,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 "
   [^CfnApplication$ManagedPersistenceMonitoringConfigurationProperty$Builder builder id config]
@@ -415,9 +415,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLoggingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-configuration` |
+| `cloudWatchLoggingConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$CloudWatchLoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-configuration` |
 | `managedPersistenceMonitoringConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$ManagedPersistenceMonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:managed-persistence-monitoring-configuration` |
-| `s3MonitoringConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-monitoring-configuration` |
+| `s3MonitoringConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$S3MonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-monitoring-configuration` |
 "
   [^CfnApplication$MonitoringConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-logging-configuration)]
@@ -483,14 +483,14 @@
 | `architecture` | java.lang.String | [[cdk.support/lookup-entry]] | `:architecture` |
 | `autoStartConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$AutoStartConfigurationProperty | [[cdk.support/lookup-entry]] | `:auto-start-configuration` |
 | `autoStopConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$AutoStopConfigurationProperty | [[cdk.support/lookup-entry]] | `:auto-stop-configuration` |
-| `imageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-configuration` |
+| `imageConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$ImageConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:image-configuration` |
 | `initialCapacity` | java.util.List | [[cdk.support/lookup-entry]] | `:initial-capacity` |
-| `maximumCapacity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maximum-capacity` |
+| `maximumCapacity` | software.amazon.awscdk.services.emrserverless.CfnApplication$MaximumAllowedResourcesProperty | [[cdk.support/lookup-entry]] | `:maximum-capacity` |
 | `monitoringConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$MonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:monitoring-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `networkConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `releaseLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:release-label` |
-| `runtimeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-configuration` |
+| `runtimeConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:runtime-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `workerTypeSpecifications` | java.util.Map | [[cdk.support/lookup-entry]] | `:worker-type-specifications` |
@@ -612,7 +612,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `imageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-configuration` |
+| `imageConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$ImageConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:image-configuration` |
 "
   [^CfnApplication$WorkerTypeSpecificationInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :image-configuration)]

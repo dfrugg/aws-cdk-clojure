@@ -163,7 +163,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `productType` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-type` |
 | `provisioningArtifactParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:provisioning-artifact-parameters` |
 | `replaceProvisioningArtifacts` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replace-provisioning-artifacts` |
-| `sourceConnection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-connection` |
+| `sourceConnection` | software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct$SourceConnectionProperty | [[cdk.support/lookup-entry]] | `:source-connection` |
 | `supportDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:support-description` |
 | `supportEmail` | java.lang.String | [[cdk.support/lookup-entry]] | `:support-email` |
 | `supportUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:support-url` |
@@ -256,7 +256,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `codeStar` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-star` |
+| `codeStar` | software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct$CodeStarParametersProperty | [[cdk.support/lookup-entry]] | `:code-star` |
 "
   [^CfnCloudFormationProduct$ConnectionParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :code-star)]
@@ -292,7 +292,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `productType` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-type` |
 | `provisioningArtifactParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:provisioning-artifact-parameters` |
 | `replaceProvisioningArtifacts` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replace-provisioning-artifacts` |
-| `sourceConnection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-connection` |
+| `sourceConnection` | software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct$SourceConnectionProperty | [[cdk.support/lookup-entry]] | `:source-connection` |
 | `supportDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:support-description` |
 | `supportEmail` | java.lang.String | [[cdk.support/lookup-entry]] | `:support-email` |
 | `supportUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:support-url` |
@@ -388,7 +388,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `connectionParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-parameters` |
+| `connectionParameters` | software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct$ConnectionParametersProperty | [[cdk.support/lookup-entry]] | `:connection-parameters` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnCloudFormationProduct$SourceConnectionProperty$Builder builder id config]
@@ -429,7 +429,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `provisioningArtifactId` | java.lang.String | [[cdk.support/lookup-entry]] | `:provisioning-artifact-id` |
 | `provisioningArtifactName` | java.lang.String | [[cdk.support/lookup-entry]] | `:provisioning-artifact-name` |
 | `provisioningParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:provisioning-parameters` |
-| `provisioningPreferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioning-preferences` |
+| `provisioningPreferences` | software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct$ProvisioningPreferencesProperty | [[cdk.support/lookup-entry]] | `:provisioning-preferences` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCloudFormationProvisionedProduct$Builder builder id config]
@@ -1095,7 +1095,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `acceptLanguage` | java.lang.String | [[cdk.support/lookup-entry]] | `:accept-language` |
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 | `portfolioId` | java.lang.String | [[cdk.support/lookup-entry]] | `:portfolio-id` |
-| `shareTagOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:share-tag-options` |
+| `shareTagOptions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:share-tag-options` |
 "
   [^CfnPortfolioShare$Builder builder id config]
   (when-some [data (lookup-entry config id :accept-language)]
@@ -1315,7 +1315,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `acceptLanguage` | java.lang.String | [[cdk.support/lookup-entry]] | `:accept-language` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | java.util.List | [[cdk.support/lookup-entry]] | `:definition` |
 | `definitionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -1386,7 +1386,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `acceptLanguage` | java.lang.String | [[cdk.support/lookup-entry]] | `:accept-language` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | java.util.List | [[cdk.support/lookup-entry]] | `:definition` |
 | `definitionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -1591,7 +1591,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `active` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active` |
+| `active` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:active` |
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -1625,7 +1625,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `active` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active` |
+| `active` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:active` |
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "

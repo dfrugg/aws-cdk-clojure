@@ -255,7 +255,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `samlOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:saml-options` |
+| `samlOptions` | software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig$SamlConfigOptionsProperty | [[cdk.support/lookup-entry]] | `:saml-options` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSecurityConfig$Builder builder id config]
@@ -292,7 +292,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `samlOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:saml-options` |
+| `samlOptions` | software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig$SamlConfigOptionsProperty | [[cdk.support/lookup-entry]] | `:saml-options` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSecurityConfigProps$Builder builder id config]

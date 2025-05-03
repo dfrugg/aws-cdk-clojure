@@ -231,7 +231,7 @@
 |---|---|---|---|
 | `resourceSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-set-name` |
 | `resourceSetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-set-type` |
-| `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
+| `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceSet$Builder builder id config]
@@ -439,7 +439,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `nlbResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nlb-resource` |
+| `nlbResource` | software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet$NLBResourceProperty | [[cdk.support/lookup-entry]] | `:nlb-resource` |
 | `r53Resource` | software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet$R53ResourceRecordProperty | [[cdk.support/lookup-entry]] | `:r53-resource` |
 "
   [^CfnResourceSet$TargetResourceProperty$Builder builder id config]

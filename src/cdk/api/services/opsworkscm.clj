@@ -23,7 +23,7 @@
 | `customPrivateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-private-key` |
 | `disableAutomatedBackup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-automated-backup` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
-| `engineAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:engine-attributes` |
+| `engineAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:engine-attributes` |
 | `engineModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-model` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `instanceProfileArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-profile-arn` |
@@ -142,7 +142,7 @@
 | `customPrivateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-private-key` |
 | `disableAutomatedBackup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-automated-backup` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
-| `engineAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:engine-attributes` |
+| `engineAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:engine-attributes` |
 | `engineModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-model` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `instanceProfileArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-profile-arn` |

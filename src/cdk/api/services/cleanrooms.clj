@@ -139,12 +139,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `analysisParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analysis-parameters` |
+| `analysisParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:analysis-parameters` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 | `membershipIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:membership-identifier` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
+| `source` | software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate$AnalysisSourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAnalysisTemplate$Builder builder id config]
@@ -185,7 +185,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `analysisParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analysis-parameters` |
+| `analysisParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:analysis-parameters` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 | `membershipIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:membership-identifier` |
@@ -285,8 +285,8 @@
 |---|---|---|---|
 | `allowCleartext` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-cleartext` |
 | `allowDuplicates` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-duplicates` |
-| `allowJoinsOnColumnsWithDifferentNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-joins-on-columns-with-different-names` |
-| `preserveNulls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preserve-nulls` |
+| `allowJoinsOnColumnsWithDifferentNames` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-joins-on-columns-with-different-names` |
+| `preserveNulls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-nulls` |
 "
   [^CfnCollaboration$DataEncryptionMetadataProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allow-cleartext)]
@@ -323,7 +323,7 @@
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `memberAbilities` | java.util.List | [[cdk.support/lookup-entry]] | `:member-abilities` |
-| `paymentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payment-configuration` |
+| `paymentConfiguration` | software.amazon.awscdk.services.cleanrooms.CfnCollaboration$PaymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:payment-configuration` |
 "
   [^CfnCollaboration$MemberSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :account-id)]
@@ -357,7 +357,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `queryCompute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-compute` |
+| `queryCompute` | software.amazon.awscdk.services.cleanrooms.CfnCollaboration$QueryComputePaymentConfigProperty | [[cdk.support/lookup-entry]] | `:query-compute` |
 "
   [^CfnCollaboration$PaymentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :query-compute)]
@@ -530,7 +530,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregateColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregate-columns` |
+| `aggregateColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:aggregate-columns` |
 | `allowedJoinOperators` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-join-operators` |
 | `dimensionColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:dimension-columns` |
 | `joinColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:join-columns` |
@@ -835,9 +835,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation` |
+| `aggregation` | software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable$AnalysisRuleAggregationProperty | [[cdk.support/lookup-entry]] | `:aggregation` |
 | `custom` | software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable$AnalysisRuleCustomProperty | [[cdk.support/lookup-entry]] | `:custom` |
-| `list` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:list` |
+| `list` | software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable$AnalysisRuleListProperty | [[cdk.support/lookup-entry]] | `:list` |
 "
   [^CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation)]
@@ -897,7 +897,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
 "
   [^CfnConfiguredTable$DifferentialPrivacyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :columns)]
@@ -961,7 +961,7 @@
 | `analysisRules` | java.util.List | [[cdk.support/lookup-entry]] | `:analysis-rules` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tableReference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-reference` |
+| `tableReference` | software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable$TableReferenceProperty | [[cdk.support/lookup-entry]] | `:table-reference` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfiguredTableProps$Builder builder id config]
@@ -1002,7 +1002,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `glue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue` |
+| `glue` | software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable$GlueTableReferenceProperty | [[cdk.support/lookup-entry]] | `:glue` |
 "
   [^CfnConfiguredTable$TableReferenceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :glue)]
@@ -1032,7 +1032,7 @@
 |---|---|---|---|
 | `collaborationIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:collaboration-identifier` |
 | `defaultResultConfiguration` | software.amazon.awscdk.services.cleanrooms.CfnMembership$MembershipProtectedQueryResultConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-result-configuration` |
-| `paymentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payment-configuration` |
+| `paymentConfiguration` | software.amazon.awscdk.services.cleanrooms.CfnMembership$MembershipPaymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:payment-configuration` |
 | `queryLogStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-log-status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1070,7 +1070,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `queryCompute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-compute` |
+| `queryCompute` | software.amazon.awscdk.services.cleanrooms.CfnMembership$MembershipQueryComputePaymentConfigProperty | [[cdk.support/lookup-entry]] | `:query-compute` |
 "
   [^CfnMembership$MembershipPaymentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :query-compute)]
@@ -1098,7 +1098,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.cleanrooms.CfnMembership$ProtectedQueryS3OutputConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3)]
@@ -1187,7 +1187,7 @@
 |---|---|---|---|
 | `collaborationIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:collaboration-identifier` |
 | `defaultResultConfiguration` | software.amazon.awscdk.services.cleanrooms.CfnMembership$MembershipProtectedQueryResultConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-result-configuration` |
-| `paymentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payment-configuration` |
+| `paymentConfiguration` | software.amazon.awscdk.services.cleanrooms.CfnMembership$MembershipPaymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:payment-configuration` |
 | `queryLogStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-log-status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1261,7 +1261,7 @@
 |---|---|---|---|
 | `autoRefresh` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-refresh` |
 | `membershipIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:membership-identifier` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | software.amazon.awscdk.services.cleanrooms.CfnPrivacyBudgetTemplate$ParametersProperty | [[cdk.support/lookup-entry]] | `:parameters` |
 | `privacyBudgetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:privacy-budget-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

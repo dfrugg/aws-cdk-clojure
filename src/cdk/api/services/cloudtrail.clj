@@ -200,7 +200,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
+| `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -237,7 +237,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldSelectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-selectors` |
+| `fieldSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:field-selectors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnEventDataStore$AdvancedEventSelectorProperty$Builder builder id config]
@@ -316,7 +316,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `advancedEventSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:advanced-event-selectors` |
 | `billingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-mode` |
-| `federationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:federation-enabled` |
+| `federationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:federation-enabled` |
 | `federationRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:federation-role-arn` |
 | `ingestionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ingestion-enabled` |
 | `insightSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:insight-selectors` |
@@ -324,7 +324,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `multiRegionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-region-enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `organizationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-enabled` |
+| `organizationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:organization-enabled` |
 | `retentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `terminationProtectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |
@@ -409,11 +409,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `advancedEventSelectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-event-selectors` |
+| `advancedEventSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:advanced-event-selectors` |
 | `billingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-mode` |
 | `federationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:federation-enabled` |
 | `federationRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:federation-role-arn` |
-| `ingestionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingestion-enabled` |
+| `ingestionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ingestion-enabled` |
 | `insightSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:insight-selectors` |
 | `insightsDestination` | java.lang.String | [[cdk.support/lookup-entry]] | `:insights-destination` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
@@ -422,7 +422,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `organizationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:organization-enabled` |
 | `retentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `terminationProtectionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |
+| `terminationProtectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |
 "
   [^CfnEventDataStoreProps$Builder builder id config]
   (when-some [data (lookup-entry config id :advanced-event-selectors)]
@@ -538,7 +538,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldSelectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-selectors` |
+| `fieldSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:field-selectors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnTrail$AdvancedEventSelectorProperty$Builder builder id config]
@@ -615,16 +615,16 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `advancedEventSelectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-event-selectors` |
+| `advancedEventSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:advanced-event-selectors` |
 | `cloudWatchLogsLogGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-log-group-arn` |
 | `cloudWatchLogsRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-role-arn` |
-| `enableLogFileValidation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-log-file-validation` |
+| `enableLogFileValidation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-log-file-validation` |
 | `eventSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:event-selectors` |
 | `includeGlobalServiceEvents` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-global-service-events` |
 | `insightSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:insight-selectors` |
 | `isLogging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-logging` |
 | `isMultiRegionTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-region-trail` |
-| `isOrganizationTrail` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-organization-trail` |
+| `isOrganizationTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-organization-trail` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `s3BucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-name` |
 | `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
@@ -719,7 +719,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-resources` |
+| `dataResources` | java.util.List | [[cdk.support/lookup-entry]] | `:data-resources` |
 | `excludeManagementEventSources` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-management-event-sources` |
 | `includeManagementEvents` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-management-events` |
 | `readWriteType` | java.lang.String | [[cdk.support/lookup-entry]] | `:read-write-type` |
@@ -784,16 +784,16 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `advancedEventSelectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-event-selectors` |
+| `advancedEventSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:advanced-event-selectors` |
 | `cloudWatchLogsLogGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-log-group-arn` |
 | `cloudWatchLogsRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-role-arn` |
-| `enableLogFileValidation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-log-file-validation` |
+| `enableLogFileValidation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-log-file-validation` |
 | `eventSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:event-selectors` |
 | `includeGlobalServiceEvents` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-global-service-events` |
 | `insightSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:insight-selectors` |
 | `isLogging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-logging` |
 | `isMultiRegionTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-region-trail` |
-| `isOrganizationTrail` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-organization-trail` |
+| `isOrganizationTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-organization-trail` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `s3BucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-name` |
 | `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |

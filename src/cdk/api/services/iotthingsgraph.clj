@@ -16,7 +16,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `compatibleNamespaceVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:compatible-namespace-version` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate$DefinitionDocumentProperty | [[cdk.support/lookup-entry]] | `:definition` |
 "
   [^CfnFlowTemplate$Builder builder id config]
   (when-some [data (lookup-entry config id :compatible-namespace-version)]
@@ -78,7 +78,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `compatibleNamespaceVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:compatible-namespace-version` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate$DefinitionDocumentProperty | [[cdk.support/lookup-entry]] | `:definition` |
 "
   [^CfnFlowTemplateProps$Builder builder id config]
   (when-some [data (lookup-entry config id :compatible-namespace-version)]

@@ -493,9 +493,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-environment-name` |
-| `computeResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compute-resources` |
-| `eksConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eks-configuration` |
-| `replaceComputeEnvironment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replace-compute-environment` |
+| `computeResources` | software.amazon.awscdk.services.batch.CfnComputeEnvironment$ComputeResourcesProperty | [[cdk.support/lookup-entry]] | `:compute-resources` |
+| `eksConfiguration` | software.amazon.awscdk.services.batch.CfnComputeEnvironment$EksConfigurationProperty | [[cdk.support/lookup-entry]] | `:eks-configuration` |
+| `replaceComputeEnvironment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replace-compute-environment` |
 | `serviceRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -564,7 +564,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `updateToLatestImageVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
+| `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 "
   [^CfnComputeEnvironment$ComputeResourcesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allocation-strategy)]
@@ -726,9 +726,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-environment-name` |
-| `computeResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compute-resources` |
-| `eksConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eks-configuration` |
-| `replaceComputeEnvironment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replace-compute-environment` |
+| `computeResources` | software.amazon.awscdk.services.batch.CfnComputeEnvironment$ComputeResourcesProperty | [[cdk.support/lookup-entry]] | `:compute-resources` |
+| `eksConfiguration` | software.amazon.awscdk.services.batch.CfnComputeEnvironment$EksConfigurationProperty | [[cdk.support/lookup-entry]] | `:eks-configuration` |
+| `replaceComputeEnvironment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replace-compute-environment` |
 | `serviceRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -843,17 +843,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$ContainerPropertiesProperty | [[cdk.support/lookup-entry]] | `:container-properties` |
-| `ecsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecs-properties` |
-| `eksProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eks-properties` |
+| `ecsProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$EcsPropertiesProperty | [[cdk.support/lookup-entry]] | `:ecs-properties` |
+| `eksProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$EksPropertiesProperty | [[cdk.support/lookup-entry]] | `:eks-properties` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `nodeProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-properties` |
+| `nodeProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$NodePropertiesProperty | [[cdk.support/lookup-entry]] | `:node-properties` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `platformCapabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:platform-capabilities` |
 | `propagateTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:propagate-tags` |
 | `retryStrategy` | software.amazon.awscdk.services.batch.CfnJobDefinition$RetryStrategyProperty | [[cdk.support/lookup-entry]] | `:retry-strategy` |
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
+| `timeout` | software.amazon.awscdk.services.batch.CfnJobDefinition$TimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnJobDefinition$Builder builder id config]
@@ -907,24 +907,24 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
-| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
+| `environment` | java.util.List | [[cdk.support/lookup-entry]] | `:environment` |
 | `ephemeralStorage` | software.amazon.awscdk.services.batch.CfnJobDefinition$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `fargatePlatformConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fargate-platform-configuration` |
+| `fargatePlatformConfiguration` | software.amazon.awscdk.services.batch.CfnJobDefinition$FargatePlatformConfigurationProperty | [[cdk.support/lookup-entry]] | `:fargate-platform-configuration` |
 | `image` | java.lang.String | [[cdk.support/lookup-entry]] | `:image` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `jobRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-role-arn` |
 | `linuxParameters` | software.amazon.awscdk.services.batch.CfnJobDefinition$LinuxParametersProperty | [[cdk.support/lookup-entry]] | `:linux-parameters` |
-| `logConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-configuration` |
+| `logConfiguration` | software.amazon.awscdk.services.batch.CfnJobDefinition$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `memory` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory` |
-| `mountPoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mount-points` |
+| `mountPoints` | java.util.List | [[cdk.support/lookup-entry]] | `:mount-points` |
 | `networkConfiguration` | software.amazon.awscdk.services.batch.CfnJobDefinition$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
-| `privileged` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:privileged` |
-| `readonlyRootFilesystem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
+| `privileged` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:privileged` |
+| `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
 | `repositoryCredentials` | software.amazon.awscdk.services.batch.CfnJobDefinition$RepositoryCredentialsProperty | [[cdk.support/lookup-entry]] | `:repository-credentials` |
 | `resourceRequirements` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-requirements` |
-| `runtimePlatform` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-platform` |
-| `secrets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secrets` |
+| `runtimePlatform` | software.amazon.awscdk.services.batch.CfnJobDefinition$RuntimePlatformProperty | [[cdk.support/lookup-entry]] | `:runtime-platform` |
+| `secrets` | java.util.List | [[cdk.support/lookup-entry]] | `:secrets` |
 | `ulimits` | java.util.List | [[cdk.support/lookup-entry]] | `:ulimits` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 | `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |
@@ -1034,7 +1034,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `taskProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-properties` |
+| `taskProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:task-properties` |
 "
   [^CfnJobDefinition$EcsPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :task-properties)]
@@ -1062,14 +1062,14 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:containers` |
-| `ephemeralStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
+| `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
+| `ephemeralStorage` | software.amazon.awscdk.services.batch.CfnJobDefinition$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `ipcMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipc-mode` |
-| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `networkConfiguration` | software.amazon.awscdk.services.batch.CfnJobDefinition$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `pidMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:pid-mode` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
-| `runtimePlatform` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-platform` |
+| `runtimePlatform` | software.amazon.awscdk.services.batch.CfnJobDefinition$RuntimePlatformProperty | [[cdk.support/lookup-entry]] | `:runtime-platform` |
 | `taskRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-role-arn` |
 | `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
 "
@@ -1194,9 +1194,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `image` | java.lang.String | [[cdk.support/lookup-entry]] | `:image` |
 | `imagePullPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-pull-policy` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
-| `securityContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-context` |
-| `volumeMounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volume-mounts` |
+| `resources` | software.amazon.awscdk.services.batch.CfnJobDefinition$ResourcesProperty | [[cdk.support/lookup-entry]] | `:resources` |
+| `securityContext` | software.amazon.awscdk.services.batch.CfnJobDefinition$SecurityContextProperty | [[cdk.support/lookup-entry]] | `:security-context` |
+| `volumeMounts` | java.util.List | [[cdk.support/lookup-entry]] | `:volume-mounts` |
 "
   [^CfnJobDefinition$EksContainerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :args)]
@@ -1242,7 +1242,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:read-only` |
+| `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
 "
   [^CfnJobDefinition$EksContainerVolumeMountProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mount-path)]
@@ -1274,7 +1274,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `podProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pod-properties` |
+| `podProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$PodPropertiesProperty | [[cdk.support/lookup-entry]] | `:pod-properties` |
 "
   [^CfnJobDefinition$EksPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pod-properties)]
@@ -1333,10 +1333,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `emptyDir` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:empty-dir` |
+| `emptyDir` | software.amazon.awscdk.services.batch.CfnJobDefinition$EmptyDirProperty | [[cdk.support/lookup-entry]] | `:empty-dir` |
 | `hostPath` | software.amazon.awscdk.services.batch.CfnJobDefinition$HostPathProperty | [[cdk.support/lookup-entry]] | `:host-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `secret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secret` |
+| `secret` | software.amazon.awscdk.services.batch.CfnJobDefinition$EksSecretProperty | [[cdk.support/lookup-entry]] | `:secret` |
 "
   [^CfnJobDefinition$EksVolumeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :empty-dir)]
@@ -1586,7 +1586,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxSwap` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-swap` |
 | `sharedMemorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shared-memory-size` |
 | `swappiness` | java.lang.Number | [[cdk.support/lookup-entry]] | `:swappiness` |
-| `tmpfs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tmpfs` |
+| `tmpfs` | java.util.List | [[cdk.support/lookup-entry]] | `:tmpfs` |
 "
   [^CfnJobDefinition$LinuxParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :devices)]
@@ -1687,7 +1687,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
-| `readOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:read-only` |
+| `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
 | `sourceVolume` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-volume` |
 "
   [^CfnJobDefinition$MountPointsProperty$Builder builder id config]
@@ -1783,7 +1783,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `container` | software.amazon.awscdk.services.batch.CfnJobDefinition$ContainerPropertiesProperty | [[cdk.support/lookup-entry]] | `:container` |
-| `ecsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecs-properties` |
+| `ecsProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$EcsPropertiesProperty | [[cdk.support/lookup-entry]] | `:ecs-properties` |
 | `instanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-types` |
 | `targetNodes` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-nodes` |
 "
@@ -1821,13 +1821,13 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
 | `dnsPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:dns-policy` |
-| `hostNetwork` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:host-network` |
-| `imagePullSecrets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-pull-secrets` |
-| `initContainers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:init-containers` |
+| `hostNetwork` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:host-network` |
+| `imagePullSecrets` | java.util.List | [[cdk.support/lookup-entry]] | `:image-pull-secrets` |
+| `initContainers` | java.util.List | [[cdk.support/lookup-entry]] | `:init-containers` |
 | `metadata` | software.amazon.awscdk.services.batch.CfnJobDefinition$MetadataProperty | [[cdk.support/lookup-entry]] | `:metadata` |
 | `serviceAccountName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-account-name` |
-| `shareProcessNamespace` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:share-process-namespace` |
-| `volumes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volumes` |
+| `shareProcessNamespace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:share-process-namespace` |
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
 "
   [^CfnJobDefinition$PodPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :containers)]
@@ -1872,17 +1872,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$ContainerPropertiesProperty | [[cdk.support/lookup-entry]] | `:container-properties` |
-| `ecsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecs-properties` |
-| `eksProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eks-properties` |
+| `ecsProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$EcsPropertiesProperty | [[cdk.support/lookup-entry]] | `:ecs-properties` |
+| `eksProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$EksPropertiesProperty | [[cdk.support/lookup-entry]] | `:eks-properties` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `nodeProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-properties` |
+| `nodeProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$NodePropertiesProperty | [[cdk.support/lookup-entry]] | `:node-properties` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `platformCapabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:platform-capabilities` |
 | `propagateTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:propagate-tags` |
 | `retryStrategy` | software.amazon.awscdk.services.batch.CfnJobDefinition$RetryStrategyProperty | [[cdk.support/lookup-entry]] | `:retry-strategy` |
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
+| `timeout` | software.amazon.awscdk.services.batch.CfnJobDefinition$TimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnJobDefinitionProps$Builder builder id config]
@@ -2026,7 +2026,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:attempts` |
-| `evaluateOnExit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:evaluate-on-exit` |
+| `evaluateOnExit` | java.util.List | [[cdk.support/lookup-entry]] | `:evaluate-on-exit` |
 "
   [^CfnJobDefinition$RetryStrategyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attempts)]
@@ -2118,11 +2118,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowPrivilegeEscalation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-privilege-escalation` |
+| `allowPrivilegeEscalation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-privilege-escalation` |
 | `privileged` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:privileged` |
-| `readOnlyRootFilesystem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:read-only-root-filesystem` |
+| `readOnlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only-root-filesystem` |
 | `runAsGroup` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-group` |
-| `runAsNonRoot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-as-non-root` |
+| `runAsNonRoot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:run-as-non-root` |
 | `runAsUser` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-user` |
 "
   [^CfnJobDefinition$SecurityContextProperty$Builder builder id config]
@@ -2193,20 +2193,20 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
-| `dependsOn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:depends-on` |
+| `dependsOn` | java.util.List | [[cdk.support/lookup-entry]] | `:depends-on` |
 | `environment` | java.util.List | [[cdk.support/lookup-entry]] | `:environment` |
 | `essential` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:essential` |
 | `image` | java.lang.String | [[cdk.support/lookup-entry]] | `:image` |
 | `linuxParameters` | software.amazon.awscdk.services.batch.CfnJobDefinition$LinuxParametersProperty | [[cdk.support/lookup-entry]] | `:linux-parameters` |
 | `logConfiguration` | software.amazon.awscdk.services.batch.CfnJobDefinition$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
-| `mountPoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mount-points` |
+| `mountPoints` | java.util.List | [[cdk.support/lookup-entry]] | `:mount-points` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `privileged` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:privileged` |
-| `readonlyRootFilesystem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
+| `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
 | `repositoryCredentials` | software.amazon.awscdk.services.batch.CfnJobDefinition$RepositoryCredentialsProperty | [[cdk.support/lookup-entry]] | `:repository-credentials` |
-| `resourceRequirements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-requirements` |
+| `resourceRequirements` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-requirements` |
 | `secrets` | java.util.List | [[cdk.support/lookup-entry]] | `:secrets` |
-| `ulimits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ulimits` |
+| `ulimits` | java.util.List | [[cdk.support/lookup-entry]] | `:ulimits` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^CfnJobDefinition$TaskContainerPropertiesProperty$Builder builder id config]
@@ -2389,8 +2389,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `efsVolumeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:efs-volume-configuration` |
-| `host` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:host` |
+| `efsVolumeConfiguration` | software.amazon.awscdk.services.batch.CfnJobDefinition$EfsVolumeConfigurationProperty | [[cdk.support/lookup-entry]] | `:efs-volume-configuration` |
+| `host` | software.amazon.awscdk.services.batch.CfnJobDefinition$VolumesHostProperty | [[cdk.support/lookup-entry]] | `:host` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnJobDefinition$VolumesProperty$Builder builder id config]
@@ -2537,7 +2537,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `computeEnvironmentOrder` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compute-environment-order` |
+| `computeEnvironmentOrder` | java.util.List | [[cdk.support/lookup-entry]] | `:compute-environment-order` |
 | `jobQueueName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-queue-name` |
 | `jobStateTimeLimitActions` | java.util.List | [[cdk.support/lookup-entry]] | `:job-state-time-limit-actions` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
@@ -2619,7 +2619,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `computeReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:compute-reservation` |
 | `shareDecaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:share-decay-seconds` |
-| `shareDistribution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:share-distribution` |
+| `shareDistribution` | java.util.List | [[cdk.support/lookup-entry]] | `:share-distribution` |
 "
   [^CfnSchedulingPolicy$FairsharePolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :compute-reservation)]
@@ -2651,7 +2651,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fairsharePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fairshare-policy` |
+| `fairsharePolicy` | software.amazon.awscdk.services.batch.CfnSchedulingPolicy$FairsharePolicyProperty | [[cdk.support/lookup-entry]] | `:fairshare-policy` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "

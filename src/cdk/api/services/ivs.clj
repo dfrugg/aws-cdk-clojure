@@ -35,7 +35,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authorized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:authorized` |
-| `insecureIngest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insecure-ingest` |
+| `insecureIngest` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:insecure-ingest` |
 | `latencyMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:latency-mode` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `preset` | java.lang.String | [[cdk.support/lookup-entry]] | `:preset` |
@@ -83,8 +83,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authorized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorized` |
-| `insecureIngest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insecure-ingest` |
+| `authorized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:authorized` |
+| `insecureIngest` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:insecure-ingest` |
 | `latencyMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:latency-mode` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `preset` | java.lang.String | [[cdk.support/lookup-entry]] | `:preset` |
@@ -134,7 +134,7 @@
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `video` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video` |
+| `video` | software.amazon.awscdk.services.ivs.CfnEncoderConfiguration$VideoProperty | [[cdk.support/lookup-entry]] | `:video` |
 "
   [^CfnEncoderConfiguration$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -307,7 +307,7 @@
 |---|---|---|---|
 | `allowedCountries` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-countries` |
 | `allowedOrigins` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-origins` |
-| `enableStrictOriginEnforcement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-strict-origin-enforcement` |
+| `enableStrictOriginEnforcement` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-strict-origin-enforcement` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -347,7 +347,7 @@
 |---|---|---|---|
 | `allowedCountries` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-countries` |
 | `allowedOrigins` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-origins` |
-| `enableStrictOriginEnforcement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-strict-origin-enforcement` |
+| `enableStrictOriginEnforcement` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-strict-origin-enforcement` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -385,10 +385,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-configuration` |
+| `destinationConfiguration` | software.amazon.awscdk.services.ivs.CfnRecordingConfiguration$DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:destination-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `recordingReconnectWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:recording-reconnect-window-seconds` |
-| `renditionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendition-configuration` |
+| `renditionConfiguration` | software.amazon.awscdk.services.ivs.CfnRecordingConfiguration$RenditionConfigurationProperty | [[cdk.support/lookup-entry]] | `:rendition-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `thumbnailConfiguration` | software.amazon.awscdk.services.ivs.CfnRecordingConfiguration$ThumbnailConfigurationProperty | [[cdk.support/lookup-entry]] | `:thumbnail-configuration` |
 "
@@ -428,7 +428,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.ivs.CfnRecordingConfiguration$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnRecordingConfiguration$DestinationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3)]
@@ -658,7 +658,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.ivs.CfnStorageConfiguration$S3StorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStorageConfiguration$Builder builder id config]
@@ -692,7 +692,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.services.ivs.CfnStorageConfiguration$S3StorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStorageConfigurationProps$Builder builder id config]

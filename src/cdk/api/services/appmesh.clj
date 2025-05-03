@@ -541,7 +541,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `gatewayRouteName` | java.lang.String | [[cdk.support/lookup-entry]] | `:gateway-route-name` |
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
-| `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
+| `spec` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
@@ -642,7 +642,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
+| `range` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteRangeMatchProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
@@ -749,7 +749,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `virtualService` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-service` |
+| `virtualService` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteVirtualServiceProperty | [[cdk.support/lookup-entry]] | `:virtual-service` |
 "
   [^CfnGatewayRoute$GatewayRouteTargetProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :port)]
@@ -838,7 +838,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hostname` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hostname` |
+| `hostname` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteHostnameMatchProperty | [[cdk.support/lookup-entry]] | `:hostname` |
 | `metadata` | java.util.List | [[cdk.support/lookup-entry]] | `:metadata` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
@@ -876,7 +876,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:invert` |
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+| `match` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteMetadataMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder builder id config]
@@ -940,7 +940,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hostname` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hostname` |
+| `hostname` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteHostnameRewriteProperty | [[cdk.support/lookup-entry]] | `:hostname` |
 "
   [^CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :hostname)]
@@ -1001,7 +1001,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
+| `range` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteRangeMatchProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
@@ -1040,7 +1040,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:invert` |
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+| `match` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder builder id config]
@@ -1079,7 +1079,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpPathMatchProperty | [[cdk.support/lookup-entry]] | `:path` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `queryParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-parameters` |
+| `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :headers)]
@@ -1211,7 +1211,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `hostname` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteHostnameRewriteProperty | [[cdk.support/lookup-entry]] | `:hostname` |
 | `path` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty | [[cdk.support/lookup-entry]] | `:path` |
-| `prefix` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prefix` |
+| `prefix` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :hostname)]
@@ -1466,7 +1466,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `egressFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress-filter` |
+| `egressFilter` | software.amazon.awscdk.services.appmesh.CfnMesh$EgressFilterProperty | [[cdk.support/lookup-entry]] | `:egress-filter` |
 | `serviceDiscovery` | software.amazon.awscdk.services.appmesh.CfnMesh$MeshServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:service-discovery` |
 "
   [^CfnMesh$MeshSpecProperty$Builder builder id config]
@@ -1534,7 +1534,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
-| `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
+| `spec` | software.amazon.awscdk.services.appmesh.CfnRoute$RouteSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
@@ -1645,7 +1645,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^CfnRoute$GrpcRouteActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :weighted-targets)]
@@ -1673,7 +1673,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metadata` |
+| `metadata` | java.util.List | [[cdk.support/lookup-entry]] | `:metadata` |
 | `methodName` | java.lang.String | [[cdk.support/lookup-entry]] | `:method-name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
@@ -1712,7 +1712,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
+| `range` | software.amazon.awscdk.services.appmesh.CfnRoute$MatchRangeProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
@@ -1751,7 +1751,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:invert` |
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+| `match` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcRouteMetadataMatchMethodProperty | [[cdk.support/lookup-entry]] | `:match` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRoute$GrpcRouteMetadataProperty$Builder builder id config]
@@ -1786,7 +1786,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcRouteActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
-| `retryPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-policy` |
+| `retryPolicy` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcRetryPolicyProperty | [[cdk.support/lookup-entry]] | `:retry-policy` |
 | `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnRoute$GrpcRouteProperty$Builder builder id config]
@@ -1821,7 +1821,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
+| `idle` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
 | `perRequest` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnRoute$GrpcTimeoutProperty$Builder builder id config]
@@ -1854,7 +1854,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
+| `range` | software.amazon.awscdk.services.appmesh.CfnRoute$MatchRangeProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
@@ -1988,7 +1988,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^CfnRoute$HttpRouteActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :weighted-targets)]
@@ -2017,7 +2017,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:invert` |
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+| `match` | software.amazon.awscdk.services.appmesh.CfnRoute$HeaderMatchMethodProperty | [[cdk.support/lookup-entry]] | `:match` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRoute$HttpRouteHeaderProperty$Builder builder id config]
@@ -2052,10 +2052,10 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `headers` | java.util.List | [[cdk.support/lookup-entry]] | `:headers` |
 | `method` | java.lang.String | [[cdk.support/lookup-entry]] | `:method` |
-| `path` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:path` |
+| `path` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpPathMatchProperty | [[cdk.support/lookup-entry]] | `:path` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `queryParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-parameters` |
+| `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
 | `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |
 "
   [^CfnRoute$HttpRouteMatchProperty$Builder builder id config]
@@ -2098,7 +2098,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
-| `retryPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-policy` |
+| `retryPolicy` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRetryPolicyProperty | [[cdk.support/lookup-entry]] | `:retry-policy` |
 | `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnRoute$HttpRouteProperty$Builder builder id config]
@@ -2133,7 +2133,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
+| `idle` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
 | `perRequest` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnRoute$HttpTimeoutProperty$Builder builder id config]
@@ -2270,7 +2270,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `grpcRoute` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcRouteProperty | [[cdk.support/lookup-entry]] | `:grpc-route` |
-| `http2Route` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http2-route` |
+| `http2Route` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteProperty | [[cdk.support/lookup-entry]] | `:http2-route` |
 | `httpRoute` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteProperty | [[cdk.support/lookup-entry]] | `:http-route` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `tcpRoute` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteProperty | [[cdk.support/lookup-entry]] | `:tcp-route` |
@@ -2309,7 +2309,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^CfnRoute$TcpRouteActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :weighted-targets)]
@@ -2367,7 +2367,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
-| `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
+| `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnRoute$TcpRouteProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action)]
@@ -2399,7 +2399,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
+| `idle` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
 "
   [^CfnRoute$TcpTimeoutProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :idle)]
@@ -2463,7 +2463,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
-| `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
+| `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewaySpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
@@ -2532,7 +2532,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
+| `json` | java.util.List | [[cdk.support/lookup-entry]] | `:json` |
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
 "
   [^CfnVirtualGateway$LoggingFormatProperty$Builder builder id config]
@@ -2687,7 +2687,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
+| `clientPolicy` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayClientPolicyProperty | [[cdk.support/lookup-entry]] | `:client-policy` |
 "
   [^CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :client-policy)]
@@ -2715,7 +2715,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
+| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :tls)]
@@ -2743,10 +2743,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate` |
-| `enforce` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enforce` |
+| `certificate` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:certificate` |
+| `enforce` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce` |
 | `ports` | java.util.List | [[cdk.support/lookup-entry]] | `:ports` |
-| `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |
+| `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate)]
@@ -2813,7 +2813,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `grpc` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:grpc` |
 | `http` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http` |
-| `http2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http2` |
+| `http2` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http2` |
 "
   [^CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :grpc)]
@@ -3009,10 +3009,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `connectionPool` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-pool` |
-| `healthCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check` |
-| `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |
-| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
+| `connectionPool` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:connection-pool` |
+| `healthCheck` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty | [[cdk.support/lookup-entry]] | `:health-check` |
+| `portMapping` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayPortMappingProperty | [[cdk.support/lookup-entry]] | `:port-mapping` |
+| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connection-pool)]
@@ -3076,7 +3076,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :acm)]
@@ -3139,7 +3139,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate` |
+| `certificate` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:certificate` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 | `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
 "
@@ -3201,7 +3201,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `subjectAlternativeNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
+| `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$SubjectAlternativeNamesProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder builder id config]
@@ -3263,7 +3263,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log` |
+| `accessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayAccessLogProperty | [[cdk.support/lookup-entry]] | `:access-log` |
 "
   [^CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-log)]
@@ -3323,8 +3323,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backendDefaults` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty | [[cdk.support/lookup-entry]] | `:backend-defaults` |
-| `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |
-| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
+| `logging` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayLoggingProperty | [[cdk.support/lookup-entry]] | `:logging` |
 "
   [^CfnVirtualGateway$VirtualGatewaySpecProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :backend-defaults)]
@@ -3412,7 +3412,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `subjectAlternativeNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
+| `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$SubjectAlternativeNamesProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder builder id config]
@@ -3473,7 +3473,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :acm)]
@@ -3601,7 +3601,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
+| `clientPolicy` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ClientPolicyProperty | [[cdk.support/lookup-entry]] | `:client-policy` |
 "
   [^CfnVirtualNode$BackendDefaultsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :client-policy)]
@@ -3629,7 +3629,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `virtualService` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-service` |
+| `virtualService` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualServiceBackendProperty | [[cdk.support/lookup-entry]] | `:virtual-service` |
 "
   [^CfnVirtualNode$BackendProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :virtual-service)]
@@ -3659,7 +3659,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
-| `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
+| `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualNodeSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
@@ -3697,7 +3697,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
+| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ClientPolicyTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualNode$ClientPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :tls)]
@@ -3725,10 +3725,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate` |
-| `enforce` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enforce` |
+| `certificate` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ClientTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:certificate` |
+| `enforce` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce` |
 | `ports` | java.util.List | [[cdk.support/lookup-entry]] | `:ports` |
-| `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |
+| `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^CfnVirtualNode$ClientPolicyTlsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate)]
@@ -3889,7 +3889,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
+| `idle` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
 | `perRequest` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnVirtualNode$GrpcTimeoutProperty$Builder builder id config]
@@ -3966,7 +3966,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
+| `idle` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
 | `perRequest` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnVirtualNode$HttpTimeoutProperty$Builder builder id config]
@@ -4028,12 +4028,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `connectionPool` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-pool` |
+| `connectionPool` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualNodeConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:connection-pool` |
 | `healthCheck` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$HealthCheckProperty | [[cdk.support/lookup-entry]] | `:health-check` |
-| `outlierDetection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outlier-detection` |
-| `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |
-| `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
+| `outlierDetection` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$OutlierDetectionProperty | [[cdk.support/lookup-entry]] | `:outlier-detection` |
+| `portMapping` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$PortMappingProperty | [[cdk.support/lookup-entry]] | `:port-mapping` |
+| `timeout` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
+| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualNode$ListenerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connection-pool)]
@@ -4073,8 +4073,8 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `grpc` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$GrpcTimeoutProperty | [[cdk.support/lookup-entry]] | `:grpc` |
 | `http` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$HttpTimeoutProperty | [[cdk.support/lookup-entry]] | `:http` |
-| `http2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http2` |
-| `tcp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp` |
+| `http2` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$HttpTimeoutProperty | [[cdk.support/lookup-entry]] | `:http2` |
+| `tcp` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:tcp` |
 "
   [^CfnVirtualNode$ListenerTimeoutProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :grpc)]
@@ -4138,7 +4138,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsAcmCertificateProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsFileCertificateProperty | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsSdsCertificateProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualNode$ListenerTlsCertificateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :acm)]
@@ -4201,7 +4201,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate` |
+| `certificate` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:certificate` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 | `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
 "
@@ -4263,7 +4263,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `subjectAlternativeNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
+| `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$SubjectAlternativeNamesProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualNode$ListenerTlsValidationContextProperty$Builder builder id config]
@@ -4325,7 +4325,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
+| `json` | java.util.List | [[cdk.support/lookup-entry]] | `:json` |
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
 "
   [^CfnVirtualNode$LoggingFormatProperty$Builder builder id config]
@@ -4356,7 +4356,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log` |
+| `accessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AccessLogProperty | [[cdk.support/lookup-entry]] | `:access-log` |
 "
   [^CfnVirtualNode$LoggingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-log)]
@@ -4384,7 +4384,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `baseEjectionDuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:base-ejection-duration` |
+| `baseEjectionDuration` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:base-ejection-duration` |
 | `interval` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:interval` |
 | `maxEjectionPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-ejection-percent` |
 | `maxServerErrors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-server-errors` |
@@ -4492,7 +4492,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsCloudMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-cloud-map` |
+| `awsCloudMap` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:aws-cloud-map` |
 | `dns` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DnsServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:dns` |
 "
   [^CfnVirtualNode$ServiceDiscoveryProperty$Builder builder id config]
@@ -4579,7 +4579,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
+| `idle` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
 "
   [^CfnVirtualNode$TcpTimeoutProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :idle)]
@@ -4663,7 +4663,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `subjectAlternativeNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
+| `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$SubjectAlternativeNamesProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualNode$TlsValidationContextProperty$Builder builder id config]
@@ -4724,7 +4724,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextAcmTrustProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextFileTrustProperty | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualNode$TlsValidationContextTrustProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :acm)]
@@ -4758,8 +4758,8 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `grpc` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:grpc` |
 | `http` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http` |
-| `http2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http2` |
-| `tcp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp` |
+| `http2` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http2` |
+| `tcp` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:tcp` |
 "
   [^CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :grpc)]
@@ -4880,10 +4880,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backendDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backend-defaults` |
+| `backendDefaults` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$BackendDefaultsProperty | [[cdk.support/lookup-entry]] | `:backend-defaults` |
 | `backends` | java.util.List | [[cdk.support/lookup-entry]] | `:backends` |
-| `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |
-| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
+| `logging` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$LoggingProperty | [[cdk.support/lookup-entry]] | `:logging` |
 | `serviceDiscovery` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:service-discovery` |
 "
   [^CfnVirtualNode$VirtualNodeSpecProperty$Builder builder id config]
@@ -4948,7 +4948,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
+| `clientPolicy` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ClientPolicyProperty | [[cdk.support/lookup-entry]] | `:client-policy` |
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
 "
   [^CfnVirtualNode$VirtualServiceBackendProperty$Builder builder id config]
@@ -4981,7 +4981,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
-| `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
+| `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualRouter$VirtualRouterSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
@@ -5090,7 +5090,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |
+| `portMapping` | software.amazon.awscdk.services.appmesh.CfnVirtualRouter$PortMappingProperty | [[cdk.support/lookup-entry]] | `:port-mapping` |
 "
   [^CfnVirtualRouter$VirtualRouterListenerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :port-mapping)]
@@ -5118,7 +5118,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 "
   [^CfnVirtualRouter$VirtualRouterSpecProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :listeners)]
@@ -5148,7 +5148,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
-| `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
+| `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualServiceSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
 "
@@ -5283,7 +5283,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `virtualNode` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualNodeServiceProviderProperty | [[cdk.support/lookup-entry]] | `:virtual-node` |
-| `virtualRouter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-router` |
+| `virtualRouter` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualRouterServiceProviderProperty | [[cdk.support/lookup-entry]] | `:virtual-router` |
 "
   [^CfnVirtualService$VirtualServiceProviderProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :virtual-node)]

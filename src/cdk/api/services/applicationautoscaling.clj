@@ -417,7 +417,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
 | `scheduledActions` | java.util.List | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
-| `suspendedState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suspended-state` |
+| `suspendedState` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$SuspendedStateProperty | [[cdk.support/lookup-entry]] | `:suspended-state` |
 "
   [^CfnScalableTarget$Builder builder id config]
   (when-some [data (lookup-entry config id :max-capacity)]
@@ -466,7 +466,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
 | `scheduledActions` | java.util.List | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
-| `suspendedState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suspended-state` |
+| `suspendedState` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$SuspendedStateProperty | [[cdk.support/lookup-entry]] | `:suspended-state` |
 "
   [^CfnScalableTargetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :max-capacity)]
@@ -539,11 +539,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `endTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:end-time` |
+| `endTime` | java.time.Instant | [[cdk.support/lookup-entry]] | `:end-time` |
 | `scalableTargetAction` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$ScalableTargetActionProperty | [[cdk.support/lookup-entry]] | `:scalable-target-action` |
 | `schedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule` |
 | `scheduledActionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-action-name` |
-| `startTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:start-time` |
+| `startTime` | java.time.Instant | [[cdk.support/lookup-entry]] | `:start-time` |
 | `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |
 "
   [^CfnScalableTarget$ScheduledActionProperty$Builder builder id config]
@@ -583,7 +583,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dynamicScalingInSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dynamic-scaling-in-suspended` |
-| `dynamicScalingOutSuspended` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-scaling-out-suspended` |
+| `dynamicScalingOutSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dynamic-scaling-out-suspended` |
 | `scheduledScalingSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:scheduled-scaling-suspended` |
 "
   [^CfnScalableTarget$SuspendedStateProperty$Builder builder id config]
@@ -857,7 +857,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `cooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cooldown` |
 | `metricAggregationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-aggregation-type` |
 | `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
-| `stepAdjustments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-adjustments` |
+| `stepAdjustments` | java.util.List | [[cdk.support/lookup-entry]] | `:step-adjustments` |
 "
   [^CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :adjustment-type)]
@@ -1033,8 +1033,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customizedMetricSpecification` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$CustomizedMetricSpecificationProperty | [[cdk.support/lookup-entry]] | `:customized-metric-specification` |
-| `disableScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
-| `predefinedMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-metric-specification` |
+| `disableScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
+| `predefinedMetricSpecification` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$PredefinedMetricSpecificationProperty | [[cdk.support/lookup-entry]] | `:predefined-metric-specification` |
 | `scaleInCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |

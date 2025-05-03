@@ -33,10 +33,10 @@
 |---|---|---|---|
 | `deliveryOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$DeliveryOptionsProperty | [[cdk.support/lookup-entry]] | `:delivery-options` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reputationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reputation-options` |
-| `sendingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sending-options` |
+| `reputationOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$ReputationOptionsProperty | [[cdk.support/lookup-entry]] | `:reputation-options` |
+| `sendingOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$SendingOptionsProperty | [[cdk.support/lookup-entry]] | `:sending-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trackingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracking-options` |
+| `trackingOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$TrackingOptionsProperty | [[cdk.support/lookup-entry]] | `:tracking-options` |
 "
   [^CfnConfigurationSet$Builder builder id config]
   (when-some [data (lookup-entry config id :delivery-options)]
@@ -103,7 +103,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `configurationSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-set-name` |
-| `eventDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-destination` |
+| `eventDestination` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination$EventDestinationProperty | [[cdk.support/lookup-entry]] | `:event-destination` |
 | `eventDestinationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-destination-name` |
 "
   [^CfnConfigurationSetEventDestination$Builder builder id config]
@@ -136,7 +136,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensionConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimension-configurations` |
+| `dimensionConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:dimension-configurations` |
 "
   [^CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dimension-configurations)]
@@ -198,12 +198,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-destination` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `cloudWatchDestination` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination$CloudWatchDestinationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-destination` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `kinesisFirehoseDestination` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-destination` |
 | `matchingEventTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:matching-event-types` |
 | `pinpointDestination` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination$PinpointDestinationProperty | [[cdk.support/lookup-entry]] | `:pinpoint-destination` |
-| `snsDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns-destination` |
+| `snsDestination` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination$SnsDestinationProperty | [[cdk.support/lookup-entry]] | `:sns-destination` |
 "
   [^CfnConfigurationSetEventDestination$EventDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-destination)]
@@ -301,7 +301,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `configurationSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-set-name` |
-| `eventDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-destination` |
+| `eventDestination` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination$EventDestinationProperty | [[cdk.support/lookup-entry]] | `:event-destination` |
 | `eventDestinationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-destination-name` |
 "
   [^CfnConfigurationSetEventDestinationProps$Builder builder id config]
@@ -364,10 +364,10 @@
 |---|---|---|---|
 | `deliveryOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$DeliveryOptionsProperty | [[cdk.support/lookup-entry]] | `:delivery-options` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reputationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reputation-options` |
-| `sendingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sending-options` |
+| `reputationOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$ReputationOptionsProperty | [[cdk.support/lookup-entry]] | `:reputation-options` |
+| `sendingOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$SendingOptionsProperty | [[cdk.support/lookup-entry]] | `:sending-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trackingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracking-options` |
+| `trackingOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$TrackingOptionsProperty | [[cdk.support/lookup-entry]] | `:tracking-options` |
 "
   [^CfnConfigurationSetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :delivery-options)]
@@ -552,8 +552,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dkimSigningEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dkim-signing-enabled` |
-| `feedbackForwardingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:feedback-forwarding-enabled` |
-| `mailFromAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
+| `feedbackForwardingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:feedback-forwarding-enabled` |
+| `mailFromAttributes` | software.amazon.awscdk.services.pinpointemail.CfnIdentity$MailFromAttributesProperty | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -623,8 +623,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dkimSigningEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dkim-signing-enabled` |
-| `feedbackForwardingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:feedback-forwarding-enabled` |
-| `mailFromAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
+| `feedbackForwardingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:feedback-forwarding-enabled` |
+| `mailFromAttributes` | software.amazon.awscdk.services.pinpointemail.CfnIdentity$MailFromAttributesProperty | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

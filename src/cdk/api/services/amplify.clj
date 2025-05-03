@@ -34,8 +34,8 @@
 | `enableAutoBranchCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-branch-creation` |
 | `enableAutoBuild` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-build` |
 | `enablePerformanceMode` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-performance-mode` |
-| `enablePullRequestPreview` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-pull-request-preview` |
-| `environmentVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment-variables` |
+| `enablePullRequestPreview` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-pull-request-preview` |
+| `environmentVariables` | java.util.List | [[cdk.support/lookup-entry]] | `:environment-variables` |
 | `framework` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework` |
 | `pullRequestEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pull-request-environment-name` |
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
@@ -86,7 +86,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableBasicAuth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-basic-auth` |
+| `enableBasicAuth` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-basic-auth` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
@@ -121,8 +121,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
-| `autoBranchCreationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-branch-creation-config` |
-| `basicAuthConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:basic-auth-config` |
+| `autoBranchCreationConfig` | software.amazon.awscdk.services.amplify.CfnApp$AutoBranchCreationConfigProperty | [[cdk.support/lookup-entry]] | `:auto-branch-creation-config` |
+| `basicAuthConfig` | software.amazon.awscdk.services.amplify.CfnApp$BasicAuthConfigProperty | [[cdk.support/lookup-entry]] | `:basic-auth-config` |
 | `buildSpec` | java.lang.String | [[cdk.support/lookup-entry]] | `:build-spec` |
 | `customHeaders` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-headers` |
 | `customRules` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-rules` |
@@ -259,8 +259,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-token` |
-| `autoBranchCreationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-branch-creation-config` |
-| `basicAuthConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:basic-auth-config` |
+| `autoBranchCreationConfig` | software.amazon.awscdk.services.amplify.CfnApp$AutoBranchCreationConfigProperty | [[cdk.support/lookup-entry]] | `:auto-branch-creation-config` |
+| `basicAuthConfig` | software.amazon.awscdk.services.amplify.CfnApp$BasicAuthConfigProperty | [[cdk.support/lookup-entry]] | `:basic-auth-config` |
 | `buildSpec` | java.lang.String | [[cdk.support/lookup-entry]] | `:build-spec` |
 | `customHeaders` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-headers` |
 | `customRules` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-rules` |
@@ -356,7 +356,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableBasicAuth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-basic-auth` |
+| `enableBasicAuth` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-basic-auth` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
@@ -398,7 +398,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `enableAutoBuild` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-build` |
 | `enablePerformanceMode` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-performance-mode` |
-| `enablePullRequestPreview` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-pull-request-preview` |
+| `enablePullRequestPreview` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-pull-request-preview` |
 | `environmentVariables` | java.util.List | [[cdk.support/lookup-entry]] | `:environment-variables` |
 | `framework` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework` |
 | `pullRequestEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pull-request-environment-name` |
@@ -496,7 +496,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `enableAutoBuild` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-build` |
 | `enablePerformanceMode` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-performance-mode` |
-| `enablePullRequestPreview` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-pull-request-preview` |
+| `enablePullRequestPreview` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-pull-request-preview` |
 | `environmentVariables` | java.util.List | [[cdk.support/lookup-entry]] | `:environment-variables` |
 | `framework` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework` |
 | `pullRequestEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pull-request-environment-name` |
@@ -561,7 +561,7 @@
 | `certificateSettings` | software.amazon.awscdk.services.amplify.CfnDomain$CertificateSettingsProperty | [[cdk.support/lookup-entry]] | `:certificate-settings` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `enableAutoSubDomain` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-sub-domain` |
-| `subDomainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
+| `subDomainSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
 "
   [^CfnDomain$Builder builder id config]
   (when-some [data (lookup-entry config id :app-id)]
@@ -672,7 +672,7 @@
 | `certificateSettings` | software.amazon.awscdk.services.amplify.CfnDomain$CertificateSettingsProperty | [[cdk.support/lookup-entry]] | `:certificate-settings` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `enableAutoSubDomain` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-sub-domain` |
-| `subDomainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
+| `subDomainSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
 "
   [^CfnDomainProps$Builder builder id config]
   (when-some [data (lookup-entry config id :app-id)]

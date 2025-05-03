@@ -35,7 +35,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference` |
+| `reference` | software.amazon.awscdk.services.omics.CfnAnnotationStore$ReferenceItemProperty | [[cdk.support/lookup-entry]] | `:reference` |
 | `sseConfig` | software.amazon.awscdk.services.omics.CfnAnnotationStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `storeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:store-format` |
 | `storeOptions` | software.amazon.awscdk.services.omics.CfnAnnotationStore$StoreOptionsProperty | [[cdk.support/lookup-entry]] | `:store-options` |
@@ -184,7 +184,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tsvStoreOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tsv-store-options` |
+| `tsvStoreOptions` | software.amazon.awscdk.services.omics.CfnAnnotationStore$TsvStoreOptionsProperty | [[cdk.support/lookup-entry]] | `:tsv-store-options` |
 "
   [^CfnAnnotationStore$StoreOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :tsv-store-options)]
@@ -213,7 +213,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `annotationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:annotation-type` |
-| `formatToHeader` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-to-header` |
+| `formatToHeader` | java.util.Map | [[cdk.support/lookup-entry]] | `:format-to-header` |
 | `schema` | java.lang.Object | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^CfnAnnotationStore$TsvStoreOptionsProperty$Builder builder id config]
@@ -248,7 +248,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-config` |
+| `sseConfig` | software.amazon.awscdk.services.omics.CfnReferenceStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReferenceStore$Builder builder id config]
@@ -591,7 +591,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `reference` | software.amazon.awscdk.services.omics.CfnVariantStore$ReferenceItemProperty | [[cdk.support/lookup-entry]] | `:reference` |
-| `sseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-config` |
+| `sseConfig` | software.amazon.awscdk.services.omics.CfnVariantStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnVariantStoreProps$Builder builder id config]

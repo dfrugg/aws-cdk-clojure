@@ -65,11 +65,11 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `expireTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:expire-time` |
-| `forceDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force-delete` |
-| `forceUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force-update` |
+| `forceDelete` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:force-delete` |
+| `forceUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:force-update` |
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
-| `noExpiry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-expiry` |
-| `restrictions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrictions` |
+| `noExpiry` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-expiry` |
+| `restrictions` | software.amazon.awscdk.services.location.CfnAPIKey$ApiKeyRestrictionsProperty | [[cdk.support/lookup-entry]] | `:restrictions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAPIKey$Builder builder id config]
@@ -114,11 +114,11 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `expireTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:expire-time` |
-| `forceDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force-delete` |
-| `forceUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force-update` |
+| `forceDelete` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:force-delete` |
+| `forceUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:force-update` |
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
-| `noExpiry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-expiry` |
-| `restrictions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrictions` |
+| `noExpiry` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-expiry` |
+| `restrictions` | software.amazon.awscdk.services.location.CfnAPIKey$ApiKeyRestrictionsProperty | [[cdk.support/lookup-entry]] | `:restrictions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAPIKeyProps$Builder builder id config]
@@ -247,7 +247,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.location.CfnMap$MapConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `mapName` | java.lang.String | [[cdk.support/lookup-entry]] | `:map-name` |
 | `pricingPlan` | java.lang.String | [[cdk.support/lookup-entry]] | `:pricing-plan` |
@@ -433,7 +433,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-source` |
-| `dataSourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
+| `dataSourceConfiguration` | software.amazon.awscdk.services.location.CfnPlaceIndex$DataSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-source-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `pricingPlan` | java.lang.String | [[cdk.support/lookup-entry]] | `:pricing-plan` |

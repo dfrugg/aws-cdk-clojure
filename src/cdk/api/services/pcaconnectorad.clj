@@ -57,7 +57,7 @@
 | `certificateAuthorityArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-authority-arn` |
 | `directoryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-id` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcInformation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-information` |
+| `vpcInformation` | software.amazon.awscdk.services.pcaconnectorad.CfnConnector$VpcInformationProperty | [[cdk.support/lookup-entry]] | `:vpc-information` |
 "
   [^CfnConnector$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate-authority-arn)]
@@ -280,8 +280,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `critical` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:critical` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
+| `critical` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:critical` |
+| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 "
   [^CfnTemplate$ApplicationPoliciesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :critical)]
@@ -343,7 +343,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-arn` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$TemplateDefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `reenrollAllCertificateHolders` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reenroll-all-certificate-holders` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -382,7 +382,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `renewalPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:renewal-period` |
+| `renewalPeriod` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ValidityPeriodProperty | [[cdk.support/lookup-entry]] | `:renewal-period` |
 | `validityPeriod` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ValidityPeriodProperty | [[cdk.support/lookup-entry]] | `:validity-period` |
 "
   [^CfnTemplate$CertificateValidityProperty$Builder builder id config]
@@ -415,9 +415,9 @@
 |---|---|---|---|
 | `enableKeyReuseOnNtTokenKeysetStorageFull` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-key-reuse-on-nt-token-keyset-storage-full` |
 | `includeSymmetricAlgorithms` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-symmetric-algorithms` |
-| `noSecurityExtension` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-security-extension` |
+| `noSecurityExtension` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-security-extension` |
 | `removeInvalidCertificateFromPersonalStore` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-invalid-certificate-from-personal-store` |
-| `userInteractionRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
+| `userInteractionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
 "
   [^CfnTemplate$EnrollmentFlagsV2Property$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
@@ -455,9 +455,9 @@
 |---|---|---|---|
 | `enableKeyReuseOnNtTokenKeysetStorageFull` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-key-reuse-on-nt-token-keyset-storage-full` |
 | `includeSymmetricAlgorithms` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-symmetric-algorithms` |
-| `noSecurityExtension` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-security-extension` |
+| `noSecurityExtension` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-security-extension` |
 | `removeInvalidCertificateFromPersonalStore` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-invalid-certificate-from-personal-store` |
-| `userInteractionRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
+| `userInteractionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
 "
   [^CfnTemplate$EnrollmentFlagsV3Property$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
@@ -495,9 +495,9 @@
 |---|---|---|---|
 | `enableKeyReuseOnNtTokenKeysetStorageFull` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-key-reuse-on-nt-token-keyset-storage-full` |
 | `includeSymmetricAlgorithms` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-symmetric-algorithms` |
-| `noSecurityExtension` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-security-extension` |
+| `noSecurityExtension` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-security-extension` |
 | `removeInvalidCertificateFromPersonalStore` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-invalid-certificate-from-personal-store` |
-| `userInteractionRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
+| `userInteractionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
 "
   [^CfnTemplate$EnrollmentFlagsV4Property$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
@@ -533,7 +533,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applicationPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-policies` |
+| `applicationPolicies` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ApplicationPoliciesProperty | [[cdk.support/lookup-entry]] | `:application-policies` |
 | `keyUsage` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$KeyUsageProperty | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnTemplate$ExtensionsV2Property$Builder builder id config]
@@ -564,7 +564,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applicationPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-policies` |
+| `applicationPolicies` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ApplicationPoliciesProperty | [[cdk.support/lookup-entry]] | `:application-policies` |
 | `keyUsage` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$KeyUsageProperty | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnTemplate$ExtensionsV3Property$Builder builder id config]
@@ -595,7 +595,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applicationPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-policies` |
+| `applicationPolicies` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ApplicationPoliciesProperty | [[cdk.support/lookup-entry]] | `:application-policies` |
 | `keyUsage` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$KeyUsageProperty | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnTemplate$ExtensionsV4Property$Builder builder id config]
@@ -627,7 +627,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoEnrollment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-enrollment` |
-| `machineType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:machine-type` |
+| `machineType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:machine-type` |
 "
   [^CfnTemplate$GeneralFlagsV2Property$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-enrollment)]
@@ -658,7 +658,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoEnrollment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-enrollment` |
-| `machineType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:machine-type` |
+| `machineType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:machine-type` |
 "
   [^CfnTemplate$GeneralFlagsV3Property$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-enrollment)]
@@ -689,7 +689,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoEnrollment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-enrollment` |
-| `machineType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:machine-type` |
+| `machineType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:machine-type` |
 "
   [^CfnTemplate$GeneralFlagsV4Property$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-enrollment)]
@@ -826,8 +826,8 @@
 |---|---|---|---|
 | `dataEncipherment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-encipherment` |
 | `digitalSignature` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:digital-signature` |
-| `keyAgreement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-agreement` |
-| `keyEncipherment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-encipherment` |
+| `keyAgreement` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-agreement` |
+| `keyEncipherment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-encipherment` |
 | `nonRepudiation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:non-repudiation` |
 "
   [^CfnTemplate$KeyUsageFlagsProperty$Builder builder id config]
@@ -864,8 +864,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `critical` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:critical` |
-| `usageFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:usage-flags` |
+| `critical` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:critical` |
+| `usageFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$KeyUsageFlagsProperty | [[cdk.support/lookup-entry]] | `:usage-flags` |
 "
   [^CfnTemplate$KeyUsageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :critical)]
@@ -895,8 +895,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decrypt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decrypt` |
-| `keyAgreement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-agreement` |
+| `decrypt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:decrypt` |
+| `keyAgreement` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-agreement` |
 | `sign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sign` |
 "
   [^CfnTemplate$KeyUsagePropertyFlagsProperty$Builder builder id config]
@@ -1037,7 +1037,7 @@
 | `algorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:algorithm` |
 | `cryptoProviders` | java.util.List | [[cdk.support/lookup-entry]] | `:crypto-providers` |
 | `keySpec` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-spec` |
-| `keyUsageProperty` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-usage-property` |
+| `keyUsageProperty` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$KeyUsagePropertyProperty | [[cdk.support/lookup-entry]] | `:key-usage-property` |
 | `minimalKeyLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimal-key-length` |
 "
   [^CfnTemplate$PrivateKeyAttributesV4Property$Builder builder id config]
@@ -1075,7 +1075,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clientVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-version` |
-| `exportableKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exportable-key` |
+| `exportableKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exportable-key` |
 | `strongKeyProtectionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:strong-key-protection-required` |
 "
   [^CfnTemplate$PrivateKeyFlagsV2Property$Builder builder id config]
@@ -1111,7 +1111,7 @@
 | `clientVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-version` |
 | `exportableKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exportable-key` |
 | `requireAlternateSignatureAlgorithm` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-alternate-signature-algorithm` |
-| `strongKeyProtectionRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:strong-key-protection-required` |
+| `strongKeyProtectionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:strong-key-protection-required` |
 "
   [^CfnTemplate$PrivateKeyFlagsV3Property$Builder builder id config]
   (when-some [data (lookup-entry config id :client-version)]
@@ -1147,10 +1147,10 @@
 |---|---|---|---|
 | `clientVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-version` |
 | `exportableKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exportable-key` |
-| `requireAlternateSignatureAlgorithm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-alternate-signature-algorithm` |
-| `requireSameKeyRenewal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-same-key-renewal` |
+| `requireAlternateSignatureAlgorithm` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-alternate-signature-algorithm` |
+| `requireSameKeyRenewal` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-same-key-renewal` |
 | `strongKeyProtectionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:strong-key-protection-required` |
-| `useLegacyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-legacy-provider` |
+| `useLegacyProvider` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-legacy-provider` |
 "
   [^CfnTemplate$PrivateKeyFlagsV4Property$Builder builder id config]
   (when-some [data (lookup-entry config id :client-version)]
@@ -1191,7 +1191,7 @@
 | `connectorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-arn` |
 | `definition` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$TemplateDefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reenrollAllCertificateHolders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reenroll-all-certificate-holders` |
+| `reenrollAllCertificateHolders` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reenroll-all-certificate-holders` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTemplateProps$Builder builder id config]
@@ -1228,16 +1228,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `requireCommonName` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-common-name` |
+| `requireCommonName` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-common-name` |
 | `requireDirectoryPath` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-directory-path` |
 | `requireDnsAsCn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-dns-as-cn` |
 | `requireEmail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-email` |
-| `sanRequireDirectoryGuid` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-directory-guid` |
+| `sanRequireDirectoryGuid` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-directory-guid` |
 | `sanRequireDns` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-dns` |
 | `sanRequireDomainDns` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-domain-dns` |
 | `sanRequireEmail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-email` |
-| `sanRequireSpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-spn` |
-| `sanRequireUpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-upn` |
+| `sanRequireSpn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-spn` |
+| `sanRequireUpn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-upn` |
 "
   [^CfnTemplate$SubjectNameFlagsV2Property$Builder builder id config]
   (when-some [data (lookup-entry config id :require-common-name)]
@@ -1283,16 +1283,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `requireCommonName` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-common-name` |
+| `requireCommonName` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-common-name` |
 | `requireDirectoryPath` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-directory-path` |
 | `requireDnsAsCn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-dns-as-cn` |
 | `requireEmail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-email` |
-| `sanRequireDirectoryGuid` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-directory-guid` |
+| `sanRequireDirectoryGuid` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-directory-guid` |
 | `sanRequireDns` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-dns` |
 | `sanRequireDomainDns` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-domain-dns` |
 | `sanRequireEmail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-email` |
-| `sanRequireSpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-spn` |
-| `sanRequireUpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-upn` |
+| `sanRequireSpn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-spn` |
+| `sanRequireUpn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-upn` |
 "
   [^CfnTemplate$SubjectNameFlagsV3Property$Builder builder id config]
   (when-some [data (lookup-entry config id :require-common-name)]
@@ -1338,16 +1338,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `requireCommonName` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-common-name` |
+| `requireCommonName` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-common-name` |
 | `requireDirectoryPath` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-directory-path` |
 | `requireDnsAsCn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-dns-as-cn` |
 | `requireEmail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-email` |
-| `sanRequireDirectoryGuid` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-directory-guid` |
+| `sanRequireDirectoryGuid` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-directory-guid` |
 | `sanRequireDns` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-dns` |
 | `sanRequireDomainDns` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-domain-dns` |
 | `sanRequireEmail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-email` |
-| `sanRequireSpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-spn` |
-| `sanRequireUpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-upn` |
+| `sanRequireSpn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-spn` |
+| `sanRequireUpn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-upn` |
 "
   [^CfnTemplate$SubjectNameFlagsV4Property$Builder builder id config]
   (when-some [data (lookup-entry config id :require-common-name)]
@@ -1393,9 +1393,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `templateV2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-v2` |
+| `templateV2` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$TemplateV2Property | [[cdk.support/lookup-entry]] | `:template-v2` |
 | `templateV3` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$TemplateV3Property | [[cdk.support/lookup-entry]] | `:template-v3` |
-| `templateV4` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-v4` |
+| `templateV4` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$TemplateV4Property | [[cdk.support/lookup-entry]] | `:template-v4` |
 "
   [^CfnTemplate$TemplateDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :template-v2)]
@@ -1427,12 +1427,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateValidity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-validity` |
-| `enrollmentFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enrollment-flags` |
-| `extensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:extensions` |
-| `generalFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:general-flags` |
-| `privateKeyAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-key-attributes` |
-| `privateKeyFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-key-flags` |
+| `certificateValidity` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$CertificateValidityProperty | [[cdk.support/lookup-entry]] | `:certificate-validity` |
+| `enrollmentFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$EnrollmentFlagsV2Property | [[cdk.support/lookup-entry]] | `:enrollment-flags` |
+| `extensions` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ExtensionsV2Property | [[cdk.support/lookup-entry]] | `:extensions` |
+| `generalFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$GeneralFlagsV2Property | [[cdk.support/lookup-entry]] | `:general-flags` |
+| `privateKeyAttributes` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$PrivateKeyAttributesV2Property | [[cdk.support/lookup-entry]] | `:private-key-attributes` |
+| `privateKeyFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$PrivateKeyFlagsV2Property | [[cdk.support/lookup-entry]] | `:private-key-flags` |
 | `subjectNameFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$SubjectNameFlagsV2Property | [[cdk.support/lookup-entry]] | `:subject-name-flags` |
 | `supersededTemplates` | java.util.List | [[cdk.support/lookup-entry]] | `:superseded-templates` |
 "
@@ -1476,13 +1476,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateValidity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-validity` |
+| `certificateValidity` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$CertificateValidityProperty | [[cdk.support/lookup-entry]] | `:certificate-validity` |
 | `enrollmentFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$EnrollmentFlagsV3Property | [[cdk.support/lookup-entry]] | `:enrollment-flags` |
-| `extensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:extensions` |
+| `extensions` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ExtensionsV3Property | [[cdk.support/lookup-entry]] | `:extensions` |
 | `generalFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$GeneralFlagsV3Property | [[cdk.support/lookup-entry]] | `:general-flags` |
 | `hashAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:hash-algorithm` |
 | `privateKeyAttributes` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$PrivateKeyAttributesV3Property | [[cdk.support/lookup-entry]] | `:private-key-attributes` |
-| `privateKeyFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-key-flags` |
+| `privateKeyFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$PrivateKeyFlagsV3Property | [[cdk.support/lookup-entry]] | `:private-key-flags` |
 | `subjectNameFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$SubjectNameFlagsV3Property | [[cdk.support/lookup-entry]] | `:subject-name-flags` |
 | `supersededTemplates` | java.util.List | [[cdk.support/lookup-entry]] | `:superseded-templates` |
 "
@@ -1528,14 +1528,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateValidity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-validity` |
+| `certificateValidity` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$CertificateValidityProperty | [[cdk.support/lookup-entry]] | `:certificate-validity` |
 | `enrollmentFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$EnrollmentFlagsV4Property | [[cdk.support/lookup-entry]] | `:enrollment-flags` |
-| `extensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:extensions` |
+| `extensions` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ExtensionsV4Property | [[cdk.support/lookup-entry]] | `:extensions` |
 | `generalFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$GeneralFlagsV4Property | [[cdk.support/lookup-entry]] | `:general-flags` |
 | `hashAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:hash-algorithm` |
-| `privateKeyAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-key-attributes` |
-| `privateKeyFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-key-flags` |
-| `subjectNameFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-name-flags` |
+| `privateKeyAttributes` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$PrivateKeyAttributesV4Property | [[cdk.support/lookup-entry]] | `:private-key-attributes` |
+| `privateKeyFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$PrivateKeyFlagsV4Property | [[cdk.support/lookup-entry]] | `:private-key-flags` |
+| `subjectNameFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$SubjectNameFlagsV4Property | [[cdk.support/lookup-entry]] | `:subject-name-flags` |
 | `supersededTemplates` | java.util.List | [[cdk.support/lookup-entry]] | `:superseded-templates` |
 "
   [^CfnTemplate$TemplateV4Property$Builder builder id config]

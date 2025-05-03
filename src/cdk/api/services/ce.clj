@@ -25,7 +25,7 @@
 | `monitorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-name` |
 | `monitorSpecification` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-specification` |
 | `monitorType` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-type` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnAnomalyMonitor$Builder builder id config]
   (when-some [data (lookup-entry config id :monitor-dimension)]
@@ -65,7 +65,7 @@
 | `monitorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-name` |
 | `monitorSpecification` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-specification` |
 | `monitorType` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-type` |
-| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnAnomalyMonitorProps$Builder builder id config]
   (when-some [data (lookup-entry config id :monitor-dimension)]
@@ -181,7 +181,7 @@
 | `frequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:frequency` |
 | `monitorArnList` | java.util.List | [[cdk.support/lookup-entry]] | `:monitor-arn-list` |
 | `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
-| `subscribers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscribers` |
+| `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 | `subscriptionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-name` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
 | `thresholdExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:threshold-expression` |

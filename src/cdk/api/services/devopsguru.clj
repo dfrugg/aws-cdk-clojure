@@ -41,7 +41,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config` |
+| `config` | software.amazon.awscdk.services.devopsguru.CfnNotificationChannel$NotificationChannelConfigProperty | [[cdk.support/lookup-entry]] | `:config` |
 "
   [^CfnNotificationChannel$Builder builder id config]
   (when-some [data (lookup-entry config id :config)]
@@ -131,7 +131,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config` |
+| `config` | software.amazon.awscdk.services.devopsguru.CfnNotificationChannel$NotificationChannelConfigProperty | [[cdk.support/lookup-entry]] | `:config` |
 "
   [^CfnNotificationChannelProps$Builder builder id config]
   (when-some [data (lookup-entry config id :config)]
@@ -187,7 +187,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourceCollectionFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-collection-filter` |
+| `resourceCollectionFilter` | software.amazon.awscdk.services.devopsguru.CfnResourceCollection$ResourceCollectionFilterProperty | [[cdk.support/lookup-entry]] | `:resource-collection-filter` |
 "
   [^CfnResourceCollection$Builder builder id config]
   (when-some [data (lookup-entry config id :resource-collection-filter)]
@@ -243,7 +243,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourceCollectionFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-collection-filter` |
+| `resourceCollectionFilter` | software.amazon.awscdk.services.devopsguru.CfnResourceCollection$ResourceCollectionFilterProperty | [[cdk.support/lookup-entry]] | `:resource-collection-filter` |
 "
   [^CfnResourceCollectionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :resource-collection-filter)]
@@ -271,7 +271,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudFormation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-formation` |
+| `cloudFormation` | software.amazon.awscdk.services.devopsguru.CfnResourceCollection$CloudFormationCollectionFilterProperty | [[cdk.support/lookup-entry]] | `:cloud-formation` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceCollection$ResourceCollectionFilterProperty$Builder builder id config]

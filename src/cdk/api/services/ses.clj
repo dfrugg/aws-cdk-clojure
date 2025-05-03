@@ -462,9 +462,9 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `deliveryOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$DeliveryOptionsProperty | [[cdk.support/lookup-entry]] | `:delivery-options` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reputationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reputation-options` |
+| `reputationOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$ReputationOptionsProperty | [[cdk.support/lookup-entry]] | `:reputation-options` |
 | `sendingOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$SendingOptionsProperty | [[cdk.support/lookup-entry]] | `:sending-options` |
-| `suppressionOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suppression-options` |
+| `suppressionOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$SuppressionOptionsProperty | [[cdk.support/lookup-entry]] | `:suppression-options` |
 | `trackingOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$TrackingOptionsProperty | [[cdk.support/lookup-entry]] | `:tracking-options` |
 | `vdmOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$VdmOptionsProperty | [[cdk.support/lookup-entry]] | `:vdm-options` |
 "
@@ -596,7 +596,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensionConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimension-configurations` |
+| `dimensionConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:dimension-configurations` |
 "
   [^CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dimension-configurations)]
@@ -658,9 +658,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-destination` |
+| `cloudWatchDestination` | software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination$CloudWatchDestinationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-destination` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `kinesisFirehoseDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-firehose-destination` |
+| `kinesisFirehoseDestination` | software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-destination` |
 | `matchingEventTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:matching-event-types` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `snsDestination` | software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination$SnsDestinationProperty | [[cdk.support/lookup-entry]] | `:sns-destination` |
@@ -733,7 +733,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `configurationSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-set-name` |
-| `eventDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-destination` |
+| `eventDestination` | software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination$EventDestinationProperty | [[cdk.support/lookup-entry]] | `:event-destination` |
 "
   [^CfnConfigurationSetEventDestinationProps$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration-set-name)]
@@ -823,9 +823,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `reputationOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$ReputationOptionsProperty | [[cdk.support/lookup-entry]] | `:reputation-options` |
 | `sendingOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$SendingOptionsProperty | [[cdk.support/lookup-entry]] | `:sending-options` |
-| `suppressionOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suppression-options` |
-| `trackingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracking-options` |
-| `vdmOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vdm-options` |
+| `suppressionOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$SuppressionOptionsProperty | [[cdk.support/lookup-entry]] | `:suppression-options` |
+| `trackingOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$TrackingOptionsProperty | [[cdk.support/lookup-entry]] | `:tracking-options` |
+| `vdmOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$VdmOptionsProperty | [[cdk.support/lookup-entry]] | `:vdm-options` |
 "
   [^CfnConfigurationSetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :delivery-options)]
@@ -977,7 +977,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dashboardOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dashboard-options` |
+| `dashboardOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$DashboardOptionsProperty | [[cdk.support/lookup-entry]] | `:dashboard-options` |
 | `guardianOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$GuardianOptionsProperty | [[cdk.support/lookup-entry]] | `:guardian-options` |
 "
   [^CfnConfigurationSet$VdmOptionsProperty$Builder builder id config]
@@ -1048,7 +1048,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `contactListName` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-list-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `topics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:topics` |
+| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^CfnContactListProps$Builder builder id config]
   (when-some [data (lookup-entry config id :contact-list-name)]
@@ -1181,12 +1181,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configurationSetAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-set-attributes` |
+| `configurationSetAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$ConfigurationSetAttributesProperty | [[cdk.support/lookup-entry]] | `:configuration-set-attributes` |
 | `dkimAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$DkimAttributesProperty | [[cdk.support/lookup-entry]] | `:dkim-attributes` |
-| `dkimSigningAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dkim-signing-attributes` |
+| `dkimSigningAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$DkimSigningAttributesProperty | [[cdk.support/lookup-entry]] | `:dkim-signing-attributes` |
 | `emailIdentity` | java.lang.String | [[cdk.support/lookup-entry]] | `:email-identity` |
-| `feedbackAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:feedback-attributes` |
-| `mailFromAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
+| `feedbackAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$FeedbackAttributesProperty | [[cdk.support/lookup-entry]] | `:feedback-attributes` |
+| `mailFromAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$MailFromAttributesProperty | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
 "
   [^CfnEmailIdentity$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration-set-attributes)]
@@ -1373,12 +1373,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configurationSetAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-set-attributes` |
+| `configurationSetAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$ConfigurationSetAttributesProperty | [[cdk.support/lookup-entry]] | `:configuration-set-attributes` |
 | `dkimAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$DkimAttributesProperty | [[cdk.support/lookup-entry]] | `:dkim-attributes` |
 | `dkimSigningAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$DkimSigningAttributesProperty | [[cdk.support/lookup-entry]] | `:dkim-signing-attributes` |
 | `emailIdentity` | java.lang.String | [[cdk.support/lookup-entry]] | `:email-identity` |
-| `feedbackAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:feedback-attributes` |
-| `mailFromAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
+| `feedbackAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$FeedbackAttributesProperty | [[cdk.support/lookup-entry]] | `:feedback-attributes` |
+| `mailFromAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$MailFromAttributesProperty | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
 "
   [^CfnEmailIdentityProps$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration-set-attributes)]
@@ -1416,7 +1416,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter` |
+| `filter` | software.amazon.awscdk.services.ses.CfnReceiptFilter$FilterProperty | [[cdk.support/lookup-entry]] | `:filter` |
 "
   [^CfnReceiptFilter$Builder builder id config]
   (when-some [data (lookup-entry config id :filter)]
@@ -1444,7 +1444,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ipFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-filter` |
+| `ipFilter` | software.amazon.awscdk.services.ses.CfnReceiptFilter$IpFilterProperty | [[cdk.support/lookup-entry]] | `:ip-filter` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnReceiptFilter$FilterProperty$Builder builder id config]
@@ -1534,10 +1534,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addHeaderAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:add-header-action` |
-| `bounceAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bounce-action` |
+| `addHeaderAction` | software.amazon.awscdk.services.ses.CfnReceiptRule$AddHeaderActionProperty | [[cdk.support/lookup-entry]] | `:add-header-action` |
+| `bounceAction` | software.amazon.awscdk.services.ses.CfnReceiptRule$BounceActionProperty | [[cdk.support/lookup-entry]] | `:bounce-action` |
 | `lambdaAction` | software.amazon.awscdk.services.ses.CfnReceiptRule$LambdaActionProperty | [[cdk.support/lookup-entry]] | `:lambda-action` |
-| `s3Action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-action` |
+| `s3Action` | software.amazon.awscdk.services.ses.CfnReceiptRule$S3ActionProperty | [[cdk.support/lookup-entry]] | `:s3-action` |
 | `snsAction` | software.amazon.awscdk.services.ses.CfnReceiptRule$SNSActionProperty | [[cdk.support/lookup-entry]] | `:sns-action` |
 | `stopAction` | software.amazon.awscdk.services.ses.CfnReceiptRule$StopActionProperty | [[cdk.support/lookup-entry]] | `:stop-action` |
 | `workmailAction` | software.amazon.awscdk.services.ses.CfnReceiptRule$WorkmailActionProperty | [[cdk.support/lookup-entry]] | `:workmail-action` |
@@ -1757,7 +1757,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `recipients` | java.util.List | [[cdk.support/lookup-entry]] | `:recipients` |
-| `scanEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scan-enabled` |
+| `scanEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:scan-enabled` |
 | `tlsPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tls-policy` |
 "
   [^CfnReceiptRule$RuleProperty$Builder builder id config]
@@ -1982,7 +1982,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `template` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template` |
+| `template` | software.amazon.awscdk.services.ses.CfnTemplate$TemplateProperty | [[cdk.support/lookup-entry]] | `:template` |
 "
   [^CfnTemplate$Builder builder id config]
   (when-some [data (lookup-entry config id :template)]
@@ -2010,7 +2010,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `template` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template` |
+| `template` | software.amazon.awscdk.services.ses.CfnTemplate$TemplateProperty | [[cdk.support/lookup-entry]] | `:template` |
 "
   [^CfnTemplateProps$Builder builder id config]
   (when-some [data (lookup-entry config id :template)]
@@ -2075,8 +2075,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dashboardAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dashboard-attributes` |
-| `guardianAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:guardian-attributes` |
+| `dashboardAttributes` | software.amazon.awscdk.services.ses.CfnVdmAttributes$DashboardAttributesProperty | [[cdk.support/lookup-entry]] | `:dashboard-attributes` |
+| `guardianAttributes` | software.amazon.awscdk.services.ses.CfnVdmAttributes$GuardianAttributesProperty | [[cdk.support/lookup-entry]] | `:guardian-attributes` |
 "
   [^CfnVdmAttributes$Builder builder id config]
   (when-some [data (lookup-entry config id :dashboard-attributes)]
@@ -2162,7 +2162,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dashboardAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dashboard-attributes` |
+| `dashboardAttributes` | software.amazon.awscdk.services.ses.CfnVdmAttributes$DashboardAttributesProperty | [[cdk.support/lookup-entry]] | `:dashboard-attributes` |
 | `guardianAttributes` | software.amazon.awscdk.services.ses.CfnVdmAttributes$GuardianAttributesProperty | [[cdk.support/lookup-entry]] | `:guardian-attributes` |
 "
   [^CfnVdmAttributesProps$Builder builder id config]

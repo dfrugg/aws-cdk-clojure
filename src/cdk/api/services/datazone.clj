@@ -114,7 +114,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `glueRunConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue-run-configuration` |
+| `glueRunConfiguration` | software.amazon.awscdk.services.datazone.CfnDataSource$GlueRunConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:glue-run-configuration` |
 | `redshiftRunConfiguration` | software.amazon.awscdk.services.datazone.CfnDataSource$RedshiftRunConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:redshift-run-configuration` |
 "
   [^CfnDataSource$DataSourceConfigurationInputProperty$Builder builder id config]
@@ -213,9 +213,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoImportDataQualityResult` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-import-data-quality-result` |
+| `autoImportDataQualityResult` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-import-data-quality-result` |
 | `dataAccessRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-access-role` |
-| `relationalFilterConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relational-filter-configurations` |
+| `relationalFilterConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:relational-filter-configurations` |
 "
   [^CfnDataSource$GlueRunConfigurationInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-import-data-quality-result)]
@@ -248,7 +248,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `assetFormsInput` | java.util.List | [[cdk.support/lookup-entry]] | `:asset-forms-input` |
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.datazone.CfnDataSource$DataSourceConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `domainIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-identifier` |
 | `enableSetting` | java.lang.String | [[cdk.support/lookup-entry]] | `:enable-setting` |
@@ -257,7 +257,7 @@
 | `projectIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-identifier` |
 | `publishOnImport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publish-on-import` |
 | `recommendation` | software.amazon.awscdk.services.datazone.CfnDataSource$RecommendationConfigurationProperty | [[cdk.support/lookup-entry]] | `:recommendation` |
-| `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
+| `schedule` | software.amazon.awscdk.services.datazone.CfnDataSource$ScheduleConfigurationProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDataSourceProps$Builder builder id config]
@@ -393,9 +393,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataAccessRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-access-role` |
-| `redshiftCredentialConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redshift-credential-configuration` |
-| `redshiftStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redshift-storage` |
-| `relationalFilterConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relational-filter-configurations` |
+| `redshiftCredentialConfiguration` | software.amazon.awscdk.services.datazone.CfnDataSource$RedshiftCredentialConfigurationProperty | [[cdk.support/lookup-entry]] | `:redshift-credential-configuration` |
+| `redshiftStorage` | software.amazon.awscdk.services.datazone.CfnDataSource$RedshiftStorageProperty | [[cdk.support/lookup-entry]] | `:redshift-storage` |
+| `relationalFilterConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:relational-filter-configurations` |
 "
   [^CfnDataSource$RedshiftRunConfigurationInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-access-role)]
@@ -457,7 +457,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `redshiftClusterSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redshift-cluster-source` |
+| `redshiftClusterSource` | software.amazon.awscdk.services.datazone.CfnDataSource$RedshiftClusterStorageProperty | [[cdk.support/lookup-entry]] | `:redshift-cluster-source` |
 | `redshiftServerlessSource` | software.amazon.awscdk.services.datazone.CfnDataSource$RedshiftServerlessStorageProperty | [[cdk.support/lookup-entry]] | `:redshift-serverless-source` |
 "
   [^CfnDataSource$RedshiftStorageProperty$Builder builder id config]
@@ -600,7 +600,7 @@
 | `domainExecutionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-execution-role` |
 | `kmsKeyIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-identifier` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `singleSignOn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:single-sign-on` |
+| `singleSignOn` | software.amazon.awscdk.services.datazone.CfnDomain$SingleSignOnProperty | [[cdk.support/lookup-entry]] | `:single-sign-on` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDomainProps$Builder builder id config]
@@ -793,7 +793,7 @@
 | `glossaryTerms` | java.util.List | [[cdk.support/lookup-entry]] | `:glossary-terms` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `projectIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-identifier` |
-| `userParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-parameters` |
+| `userParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:user-parameters` |
 "
   [^CfnEnvironment$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -871,7 +871,7 @@
 | `environmentBlueprintIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-blueprint-identifier` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `projectIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-identifier` |
-| `userParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-parameters` |
+| `userParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:user-parameters` |
 "
   [^CfnEnvironmentProfile$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-account-id)]
@@ -999,7 +999,7 @@
 | `glossaryTerms` | java.util.List | [[cdk.support/lookup-entry]] | `:glossary-terms` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `projectIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-identifier` |
-| `userParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-parameters` |
+| `userParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:user-parameters` |
 "
   [^CfnEnvironmentProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -1345,7 +1345,7 @@
 | `manageAccessRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:manage-access-role` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `provider` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider` |
-| `subscriptionTargetConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscription-target-config` |
+| `subscriptionTargetConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:subscription-target-config` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSubscriptionTargetProps$Builder builder id config]
@@ -1557,7 +1557,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `iam` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iam` |
+| `iam` | software.amazon.awscdk.services.datazone.CfnUserProfile$IamUserProfileDetailsProperty | [[cdk.support/lookup-entry]] | `:iam` |
 | `sso` | software.amazon.awscdk.services.datazone.CfnUserProfile$SsoUserProfileDetailsProperty | [[cdk.support/lookup-entry]] | `:sso` |
 "
   [^CfnUserProfile$UserProfileDetailsProperty$Builder builder id config]

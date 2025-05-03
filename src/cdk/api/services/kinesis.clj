@@ -68,7 +68,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `retentionPeriodHours` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retention-period-hours` |
 | `shardCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shard-count` |
 | `streamEncryption` | software.amazon.awscdk.services.kinesis.CfnStream$StreamEncryptionProperty | [[cdk.support/lookup-entry]] | `:stream-encryption` |
-| `streamModeDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-mode-details` |
+| `streamModeDetails` | software.amazon.awscdk.services.kinesis.CfnStream$StreamModeDetailsProperty | [[cdk.support/lookup-entry]] | `:stream-mode-details` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStream$Builder builder id config]

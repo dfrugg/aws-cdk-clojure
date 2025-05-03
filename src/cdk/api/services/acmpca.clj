@@ -48,7 +48,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `extensions` | software.amazon.awscdk.services.acmpca.CfnCertificate$ExtensionsProperty | [[cdk.support/lookup-entry]] | `:extensions` |
-| `subject` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject` |
+| `subject` | software.amazon.awscdk.services.acmpca.CfnCertificate$SubjectProperty | [[cdk.support/lookup-entry]] | `:subject` |
 "
   [^CfnCertificate$ApiPassthroughProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :extensions)]
@@ -78,7 +78,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-location` |
+| `accessLocation` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$GeneralNameProperty | [[cdk.support/lookup-entry]] | `:access-location` |
 | `accessMethod` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$AccessMethodProperty | [[cdk.support/lookup-entry]] | `:access-method` |
 "
   [^CfnCertificateAuthority$AccessDescriptionProperty$Builder builder id config]
@@ -217,7 +217,7 @@
 | `csrExtensions` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$CsrExtensionsProperty | [[cdk.support/lookup-entry]] | `:csr-extensions` |
 | `keyAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `keyStorageSecurityStandard` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-storage-security-standard` |
-| `revocationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:revocation-configuration` |
+| `revocationConfiguration` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$RevocationConfigurationProperty | [[cdk.support/lookup-entry]] | `:revocation-configuration` |
 | `signingAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:signing-algorithm` |
 | `subject` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$SubjectProperty | [[cdk.support/lookup-entry]] | `:subject` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -268,7 +268,7 @@
 |---|---|---|---|
 | `crlDistributionPointExtensionConfiguration` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$CrlDistributionPointExtensionConfigurationProperty | [[cdk.support/lookup-entry]] | `:crl-distribution-point-extension-configuration` |
 | `customCname` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-cname` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `expirationInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:expiration-in-days` |
 | `s3BucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-name` |
 | `s3ObjectAcl` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-acl` |
@@ -338,7 +338,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `keyUsage` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$KeyUsageProperty | [[cdk.support/lookup-entry]] | `:key-usage` |
-| `subjectInformationAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-information-access` |
+| `subjectInformationAccess` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-information-access` |
 "
   [^CfnCertificateAuthority$CsrExtensionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :key-usage)]
@@ -434,7 +434,7 @@
 | `dnsName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dns-name` |
 | `ediPartyName` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$EdiPartyNameProperty | [[cdk.support/lookup-entry]] | `:edi-party-name` |
 | `ipAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address` |
-| `otherName` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:other-name` |
+| `otherName` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$OtherNameProperty | [[cdk.support/lookup-entry]] | `:other-name` |
 | `registeredId` | java.lang.String | [[cdk.support/lookup-entry]] | `:registered-id` |
 | `rfc822Name` | java.lang.String | [[cdk.support/lookup-entry]] | `:rfc822-name` |
 | `uniformResourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:uniform-resource-identifier` |
@@ -482,12 +482,12 @@
 | `crlSign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crl-sign` |
 | `dataEncipherment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-encipherment` |
 | `decipherOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:decipher-only` |
-| `digitalSignature` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:digital-signature` |
-| `encipherOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encipher-only` |
-| `keyAgreement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-agreement` |
+| `digitalSignature` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:digital-signature` |
+| `encipherOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encipher-only` |
+| `keyAgreement` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-agreement` |
 | `keyCertSign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-cert-sign` |
-| `keyEncipherment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-encipherment` |
-| `nonRepudiation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:non-repudiation` |
+| `keyEncipherment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-encipherment` |
+| `nonRepudiation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:non-repudiation` |
 "
   [^CfnCertificateAuthority$KeyUsageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :crl-sign)]
@@ -531,7 +531,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `ocspCustomCname` | java.lang.String | [[cdk.support/lookup-entry]] | `:ocsp-custom-cname` |
 "
   [^CfnCertificateAuthority$OcspConfigurationProperty$Builder builder id config]
@@ -596,7 +596,7 @@
 | `csrExtensions` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$CsrExtensionsProperty | [[cdk.support/lookup-entry]] | `:csr-extensions` |
 | `keyAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `keyStorageSecurityStandard` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-storage-security-standard` |
-| `revocationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:revocation-configuration` |
+| `revocationConfiguration` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$RevocationConfigurationProperty | [[cdk.support/lookup-entry]] | `:revocation-configuration` |
 | `signingAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:signing-algorithm` |
 | `subject` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$SubjectProperty | [[cdk.support/lookup-entry]] | `:subject` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -645,7 +645,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `crlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:crl-configuration` |
+| `crlConfiguration` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$CrlConfigurationProperty | [[cdk.support/lookup-entry]] | `:crl-configuration` |
 | `ocspConfiguration` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$OcspConfigurationProperty | [[cdk.support/lookup-entry]] | `:ocsp-configuration` |
 "
   [^CfnCertificateAuthority$RevocationConfigurationProperty$Builder builder id config]
@@ -746,13 +746,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiPassthrough` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-passthrough` |
+| `apiPassthrough` | software.amazon.awscdk.services.acmpca.CfnCertificate$ApiPassthroughProperty | [[cdk.support/lookup-entry]] | `:api-passthrough` |
 | `certificateAuthorityArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-authority-arn` |
 | `certificateSigningRequest` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-signing-request` |
 | `signingAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:signing-algorithm` |
 | `templateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-arn` |
 | `validity` | software.amazon.awscdk.services.acmpca.CfnCertificate$ValidityProperty | [[cdk.support/lookup-entry]] | `:validity` |
-| `validityNotBefore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity-not-before` |
+| `validityNotBefore` | software.amazon.awscdk.services.acmpca.CfnCertificate$ValidityProperty | [[cdk.support/lookup-entry]] | `:validity-not-before` |
 "
   [^CfnCertificate$Builder builder id config]
   (when-some [data (lookup-entry config id :api-passthrough)]
@@ -823,7 +823,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `critical` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:critical` |
+| `critical` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:critical` |
 | `objectIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-identifier` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -919,8 +919,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificatePolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-policies` |
-| `customExtensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-extensions` |
+| `certificatePolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-policies` |
+| `customExtensions` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-extensions` |
 | `extendedKeyUsage` | java.util.List | [[cdk.support/lookup-entry]] | `:extended-key-usage` |
 | `keyUsage` | software.amazon.awscdk.services.acmpca.CfnCertificate$KeyUsageProperty | [[cdk.support/lookup-entry]] | `:key-usage` |
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
@@ -963,7 +963,7 @@
 | `dnsName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dns-name` |
 | `ediPartyName` | software.amazon.awscdk.services.acmpca.CfnCertificate$EdiPartyNameProperty | [[cdk.support/lookup-entry]] | `:edi-party-name` |
 | `ipAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address` |
-| `otherName` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:other-name` |
+| `otherName` | software.amazon.awscdk.services.acmpca.CfnCertificate$OtherNameProperty | [[cdk.support/lookup-entry]] | `:other-name` |
 | `registeredId` | java.lang.String | [[cdk.support/lookup-entry]] | `:registered-id` |
 | `rfc822Name` | java.lang.String | [[cdk.support/lookup-entry]] | `:rfc822-name` |
 | `uniformResourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:uniform-resource-identifier` |
@@ -1011,12 +1011,12 @@
 | `crlSign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:crl-sign` |
 | `dataEncipherment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-encipherment` |
 | `decipherOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:decipher-only` |
-| `digitalSignature` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:digital-signature` |
-| `encipherOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encipher-only` |
-| `keyAgreement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-agreement` |
+| `digitalSignature` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:digital-signature` |
+| `encipherOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encipher-only` |
+| `keyAgreement` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-agreement` |
 | `keyCertSign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-cert-sign` |
-| `keyEncipherment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-encipherment` |
-| `nonRepudiation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:non-repudiation` |
+| `keyEncipherment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key-encipherment` |
+| `nonRepudiation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:non-repudiation` |
 "
   [^CfnCertificate$KeyUsageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :crl-sign)]
@@ -1092,7 +1092,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certPolicyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cert-policy-id` |
-| `policyQualifiers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policy-qualifiers` |
+| `policyQualifiers` | java.util.List | [[cdk.support/lookup-entry]] | `:policy-qualifiers` |
 "
   [^CfnCertificate$PolicyInformationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cert-policy-id)]
@@ -1123,7 +1123,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policyQualifierId` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-qualifier-id` |
-| `qualifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:qualifier` |
+| `qualifier` | software.amazon.awscdk.services.acmpca.CfnCertificate$QualifierProperty | [[cdk.support/lookup-entry]] | `:qualifier` |
 "
   [^CfnCertificate$PolicyQualifierInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :policy-qualifier-id)]
@@ -1153,13 +1153,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiPassthrough` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-passthrough` |
+| `apiPassthrough` | software.amazon.awscdk.services.acmpca.CfnCertificate$ApiPassthroughProperty | [[cdk.support/lookup-entry]] | `:api-passthrough` |
 | `certificateAuthorityArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-authority-arn` |
 | `certificateSigningRequest` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-signing-request` |
 | `signingAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:signing-algorithm` |
 | `templateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-arn` |
 | `validity` | software.amazon.awscdk.services.acmpca.CfnCertificate$ValidityProperty | [[cdk.support/lookup-entry]] | `:validity` |
-| `validityNotBefore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity-not-before` |
+| `validityNotBefore` | software.amazon.awscdk.services.acmpca.CfnCertificate$ValidityProperty | [[cdk.support/lookup-entry]] | `:validity-not-before` |
 "
   [^CfnCertificateProps$Builder builder id config]
   (when-some [data (lookup-entry config id :api-passthrough)]

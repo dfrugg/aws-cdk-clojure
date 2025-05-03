@@ -1776,9 +1776,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authenticateCognitoConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$AuthenticateCognitoConfigProperty | [[cdk.support/lookup-entry]] | `:authenticate-cognito-config` |
-| `authenticateOidcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authenticate-oidc-config` |
-| `fixedResponseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fixed-response-config` |
-| `forwardConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forward-config` |
+| `authenticateOidcConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$AuthenticateOidcConfigProperty | [[cdk.support/lookup-entry]] | `:authenticate-oidc-config` |
+| `fixedResponseConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$FixedResponseConfigProperty | [[cdk.support/lookup-entry]] | `:fixed-response-config` |
+| `forwardConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$ForwardConfigProperty | [[cdk.support/lookup-entry]] | `:forward-config` |
 | `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |
 | `redirectConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$RedirectConfigProperty | [[cdk.support/lookup-entry]] | `:redirect-config` |
 | `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
@@ -1873,7 +1873,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authenticationRequestExtraParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-request-extra-params` |
+| `authenticationRequestExtraParams` | java.util.Map | [[cdk.support/lookup-entry]] | `:authentication-request-extra-params` |
 | `authorizationEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorization-endpoint` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
@@ -1883,7 +1883,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sessionCookieName` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-cookie-name` |
 | `sessionTimeout` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `tokenEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-endpoint` |
-| `useExistingClientSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-existing-client-secret` |
+| `useExistingClientSecret` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-existing-client-secret` |
 | `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
 "
   [^CfnListener$AuthenticateOidcConfigProperty$Builder builder id config]
@@ -1936,9 +1936,9 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `alpnPolicy` | java.util.List | [[cdk.support/lookup-entry]] | `:alpn-policy` |
 | `certificates` | java.util.List | [[cdk.support/lookup-entry]] | `:certificates` |
-| `defaultActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-actions` |
+| `defaultActions` | java.util.List | [[cdk.support/lookup-entry]] | `:default-actions` |
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `mutualAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
+| `mutualAuthentication` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$MutualAuthenticationProperty | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |
@@ -1983,7 +1983,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificates` |
+| `certificates` | java.util.List | [[cdk.support/lookup-entry]] | `:certificates` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
 "
   [^CfnListenerCertificate$Builder builder id config]
@@ -2136,7 +2136,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetGroupStickinessConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$TargetGroupStickinessConfigProperty | [[cdk.support/lookup-entry]] | `:target-group-stickiness-config` |
-| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^CfnListener$ForwardConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-group-stickiness-config)]
@@ -2201,10 +2201,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alpnPolicy` | java.util.List | [[cdk.support/lookup-entry]] | `:alpn-policy` |
-| `certificates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificates` |
+| `certificates` | java.util.List | [[cdk.support/lookup-entry]] | `:certificates` |
 | `defaultActions` | java.util.List | [[cdk.support/lookup-entry]] | `:default-actions` |
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `mutualAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
+| `mutualAuthentication` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$MutualAuthenticationProperty | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |
@@ -2293,9 +2293,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authenticateCognitoConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$AuthenticateCognitoConfigProperty | [[cdk.support/lookup-entry]] | `:authenticate-cognito-config` |
-| `authenticateOidcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authenticate-oidc-config` |
-| `fixedResponseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fixed-response-config` |
-| `forwardConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forward-config` |
+| `authenticateOidcConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$AuthenticateOidcConfigProperty | [[cdk.support/lookup-entry]] | `:authenticate-oidc-config` |
+| `fixedResponseConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$FixedResponseConfigProperty | [[cdk.support/lookup-entry]] | `:fixed-response-config` |
+| `forwardConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$ForwardConfigProperty | [[cdk.support/lookup-entry]] | `:forward-config` |
 | `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |
 | `redirectConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$RedirectConfigProperty | [[cdk.support/lookup-entry]] | `:redirect-config` |
 | `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
@@ -2390,7 +2390,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authenticationRequestExtraParams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-request-extra-params` |
+| `authenticationRequestExtraParams` | java.util.Map | [[cdk.support/lookup-entry]] | `:authentication-request-extra-params` |
 | `authorizationEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorization-endpoint` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
@@ -2400,7 +2400,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sessionCookieName` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-cookie-name` |
 | `sessionTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `tokenEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-endpoint` |
-| `useExistingClientSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-existing-client-secret` |
+| `useExistingClientSecret` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-existing-client-secret` |
 | `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
 "
   [^CfnListenerRule$AuthenticateOidcConfigProperty$Builder builder id config]
@@ -2451,7 +2451,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
@@ -2523,7 +2523,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetGroupStickinessConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$TargetGroupStickinessConfigProperty | [[cdk.support/lookup-entry]] | `:target-group-stickiness-config` |
-| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^CfnListenerRule$ForwardConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-group-stickiness-config)]
@@ -2668,7 +2668,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
@@ -2809,9 +2809,9 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `field` | java.lang.String | [[cdk.support/lookup-entry]] | `:field` |
 | `hostHeaderConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$HostHeaderConfigProperty | [[cdk.support/lookup-entry]] | `:host-header-config` |
-| `httpHeaderConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-header-config` |
+| `httpHeaderConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$HttpHeaderConfigProperty | [[cdk.support/lookup-entry]] | `:http-header-config` |
 | `httpRequestMethodConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$HttpRequestMethodConfigProperty | [[cdk.support/lookup-entry]] | `:http-request-method-config` |
-| `pathPatternConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:path-pattern-config` |
+| `pathPatternConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$PathPatternConfigProperty | [[cdk.support/lookup-entry]] | `:path-pattern-config` |
 | `queryStringConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$QueryStringConfigProperty | [[cdk.support/lookup-entry]] | `:query-string-config` |
 | `sourceIpConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$SourceIpConfigProperty | [[cdk.support/lookup-entry]] | `:source-ip-config` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
@@ -2885,7 +2885,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnListenerRule$TargetGroupStickinessConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :duration-seconds)]
@@ -2947,7 +2947,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnListener$TargetGroupStickinessConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :duration-seconds)]
@@ -3014,7 +3014,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
-| `subnetMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subnet-mappings` |
+| `subnetMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-mappings` |
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -3186,7 +3186,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `healthCheckEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-enabled` |
+| `healthCheckEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:health-check-enabled` |
 | `healthCheckIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-interval-seconds` |
 | `healthCheckPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-check-path` |
 | `healthCheckPort` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-check-port` |
@@ -3194,7 +3194,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `healthCheckTimeoutSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-timeout-seconds` |
 | `healthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:healthy-threshold-count` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
-| `matcher` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:matcher` |
+| `matcher` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup$MatcherProperty | [[cdk.support/lookup-entry]] | `:matcher` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
@@ -3202,7 +3202,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetGroupAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:target-group-attributes` |
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 | `unhealthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold-count` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
@@ -3313,7 +3313,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `protocolVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol-version` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetGroupAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-group-attributes` |
+| `targetGroupAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:target-group-attributes` |
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 | `unhealthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold-count` |

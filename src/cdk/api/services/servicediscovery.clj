@@ -520,7 +520,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `soa` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:soa` |
+| `soa` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$SOAProperty | [[cdk.support/lookup-entry]] | `:soa` |
 "
   [^CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :soa)]
@@ -548,7 +548,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |
+| `dnsProperties` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty | [[cdk.support/lookup-entry]] | `:dns-properties` |
 "
   [^CfnPrivateDnsNamespace$PropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dns-properties)]
@@ -578,7 +578,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$PropertiesProperty | [[cdk.support/lookup-entry]] | `:properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpc` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc` |
 "
@@ -681,7 +681,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |
+| `dnsProperties` | software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty | [[cdk.support/lookup-entry]] | `:dns-properties` |
 "
   [^CfnPublicDnsNamespace$PropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dns-properties)]
@@ -711,7 +711,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace$PropertiesProperty | [[cdk.support/lookup-entry]] | `:properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPublicDnsNamespaceProps$Builder builder id config]
@@ -746,7 +746,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `soa` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:soa` |
+| `soa` | software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace$SOAProperty | [[cdk.support/lookup-entry]] | `:soa` |
 "
   [^CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :soa)]
@@ -804,7 +804,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `dnsConfig` | software.amazon.awscdk.services.servicediscovery.CfnService$DnsConfigProperty | [[cdk.support/lookup-entry]] | `:dns-config` |
-| `healthCheckConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-config` |
+| `healthCheckConfig` | software.amazon.awscdk.services.servicediscovery.CfnService$HealthCheckConfigProperty | [[cdk.support/lookup-entry]] | `:health-check-config` |
 | `healthCheckCustomConfig` | software.amazon.awscdk.services.servicediscovery.CfnService$HealthCheckCustomConfigProperty | [[cdk.support/lookup-entry]] | `:health-check-custom-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
@@ -981,7 +981,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `dnsConfig` | software.amazon.awscdk.services.servicediscovery.CfnService$DnsConfigProperty | [[cdk.support/lookup-entry]] | `:dns-config` |
 | `healthCheckConfig` | software.amazon.awscdk.services.servicediscovery.CfnService$HealthCheckConfigProperty | [[cdk.support/lookup-entry]] | `:health-check-config` |
-| `healthCheckCustomConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-custom-config` |
+| `healthCheckCustomConfig` | software.amazon.awscdk.services.servicediscovery.CfnService$HealthCheckCustomConfigProperty | [[cdk.support/lookup-entry]] | `:health-check-custom-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

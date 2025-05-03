@@ -85,7 +85,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `emergencyContactList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
+| `emergencyContactList` | java.util.List | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
 | `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |
 "
   [^CfnProactiveEngagement$Builder builder id config]

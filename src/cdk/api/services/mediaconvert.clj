@@ -48,7 +48,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accelerationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:acceleration-settings` |
+| `accelerationSettings` | software.amazon.awscdk.services.mediaconvert.CfnJobTemplate$AccelerationSettingsProperty | [[cdk.support/lookup-entry]] | `:acceleration-settings` |
 | `category` | java.lang.String | [[cdk.support/lookup-entry]] | `:category` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `hopDestinations` | java.util.List | [[cdk.support/lookup-entry]] | `:hop-destinations` |
@@ -137,7 +137,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accelerationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:acceleration-settings` |
+| `accelerationSettings` | software.amazon.awscdk.services.mediaconvert.CfnJobTemplate$AccelerationSettingsProperty | [[cdk.support/lookup-entry]] | `:acceleration-settings` |
 | `category` | java.lang.String | [[cdk.support/lookup-entry]] | `:category` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `hopDestinations` | java.util.List | [[cdk.support/lookup-entry]] | `:hop-destinations` |

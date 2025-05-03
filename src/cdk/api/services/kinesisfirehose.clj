@@ -103,7 +103,7 @@
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `vpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder builder id config]
@@ -209,10 +209,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bufferingHints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:buffering-hints` |
+| `bufferingHints` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty | [[cdk.support/lookup-entry]] | `:buffering-hints` |
 | `cloudWatchLoggingOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CloudWatchLoggingOptionsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
 | `clusterEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-endpoint` |
-| `documentIdOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-id-options` |
+| `documentIdOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DocumentIdOptionsProperty | [[cdk.support/lookup-entry]] | `:document-id-options` |
 | `domainArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-arn` |
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `indexRotationPeriod` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-rotation-period` |
@@ -220,9 +220,9 @@
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
-| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+| `vpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :buffering-hints)]
@@ -367,18 +367,18 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `amazonOpenSearchServerlessDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:amazon-open-search-serverless-destination-configuration` |
-| `amazonopensearchserviceDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazonopensearchservice-destination-configuration` |
+| `amazonopensearchserviceDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:amazonopensearchservice-destination-configuration` |
 | `deliveryStreamEncryptionConfigurationInput` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:delivery-stream-encryption-configuration-input` |
 | `deliveryStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-name` |
 | `deliveryStreamType` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-type` |
-| `elasticsearchDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elasticsearch-destination-configuration` |
+| `elasticsearchDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:elasticsearch-destination-configuration` |
 | `extendedS3DestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:extended-s3-destination-configuration` |
-| `httpEndpointDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-endpoint-destination-configuration` |
+| `httpEndpointDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:http-endpoint-destination-configuration` |
 | `kinesisStreamSourceConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$KinesisStreamSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-source-configuration` |
-| `mskSourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:msk-source-configuration` |
-| `redshiftDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redshift-destination-configuration` |
-| `s3DestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
-| `snowflakeDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snowflake-destination-configuration` |
+| `mskSourceConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$MSKSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:msk-source-configuration` |
+| `redshiftDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$RedshiftDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:redshift-destination-configuration` |
+| `s3DestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
+| `snowflakeDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:snowflake-destination-configuration` |
 | `splunkDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SplunkDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:splunk-destination-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -436,7 +436,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `logGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-name` |
 | `logStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name` |
 "
@@ -504,10 +504,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `inputFormatConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$InputFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:input-format-configuration` |
-| `outputFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-format-configuration` |
-| `schemaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema-configuration` |
+| `outputFormatConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$OutputFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:output-format-configuration` |
+| `schemaConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SchemaConfigurationProperty | [[cdk.support/lookup-entry]] | `:schema-configuration` |
 "
   [^CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -572,7 +572,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hiveJsonSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hive-json-ser-de` |
+| `hiveJsonSerDe` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$HiveJsonSerDeProperty | [[cdk.support/lookup-entry]] | `:hive-json-ser-de` |
 | `openXJsonSerDe` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$OpenXJsonSerDeProperty | [[cdk.support/lookup-entry]] | `:open-x-json-ser-de` |
 "
   [^CfnDeliveryStream$DeserializerProperty$Builder builder id config]
@@ -631,7 +631,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$RetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 "
   [^CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder builder id config]
@@ -693,10 +693,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bufferingHints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:buffering-hints` |
+| `bufferingHints` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ElasticsearchBufferingHintsProperty | [[cdk.support/lookup-entry]] | `:buffering-hints` |
 | `cloudWatchLoggingOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CloudWatchLoggingOptionsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
 | `clusterEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-endpoint` |
-| `documentIdOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-id-options` |
+| `documentIdOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DocumentIdOptionsProperty | [[cdk.support/lookup-entry]] | `:document-id-options` |
 | `domainArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-arn` |
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `indexRotationPeriod` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-rotation-period` |
@@ -704,9 +704,9 @@
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ElasticsearchRetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
-| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+| `vpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :buffering-hints)]
@@ -821,7 +821,7 @@
 |---|---|---|---|
 | `bucketArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-arn` |
 | `bufferingHints` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$BufferingHintsProperty | [[cdk.support/lookup-entry]] | `:buffering-hints` |
-| `cloudWatchLoggingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
+| `cloudWatchLoggingOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CloudWatchLoggingOptionsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
 | `compressionFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:compression-format` |
 | `customTimeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-time-zone` |
 | `dataFormatConversionConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DataFormatConversionConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-format-conversion-configuration` |
@@ -830,9 +830,9 @@
 | `errorOutputPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:error-output-prefix` |
 | `fileExtension` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-extension` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `processingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processing-configuration` |
+| `processingConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ProcessingConfigurationProperty | [[cdk.support/lookup-entry]] | `:processing-configuration` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `s3BackupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-backup-configuration` |
+| `s3BackupConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-backup-configuration` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 "
   [^CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder builder id config]
@@ -984,13 +984,13 @@
 |---|---|---|---|
 | `bufferingHints` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$BufferingHintsProperty | [[cdk.support/lookup-entry]] | `:buffering-hints` |
 | `cloudWatchLoggingOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CloudWatchLoggingOptionsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
-| `endpointConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
-| `processingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processing-configuration` |
-| `requestConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-configuration` |
+| `endpointConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$HttpEndpointConfigurationProperty | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
+| `processingConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ProcessingConfigurationProperty | [[cdk.support/lookup-entry]] | `:processing-configuration` |
+| `requestConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$HttpEndpointRequestConfigurationProperty | [[cdk.support/lookup-entry]] | `:request-configuration` |
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$RetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 "
   [^CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :buffering-hints)]
@@ -1065,7 +1065,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deserializer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deserializer` |
+| `deserializer` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DeserializerProperty | [[cdk.support/lookup-entry]] | `:deserializer` |
 "
   [^CfnDeliveryStream$InputFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :deserializer)]
@@ -1275,7 +1275,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `serializer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:serializer` |
+| `serializer` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SerializerProperty | [[cdk.support/lookup-entry]] | `:serializer` |
 "
   [^CfnDeliveryStream$OutputFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :serializer)]
@@ -1346,7 +1346,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `processors` | java.util.List | [[cdk.support/lookup-entry]] | `:processors` |
 "
   [^CfnDeliveryStream$ProcessingConfigurationProperty$Builder builder id config]
@@ -1439,20 +1439,20 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amazonOpenSearchServerlessDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-open-search-serverless-destination-configuration` |
+| `amazonOpenSearchServerlessDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:amazon-open-search-serverless-destination-configuration` |
 | `amazonopensearchserviceDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:amazonopensearchservice-destination-configuration` |
-| `deliveryStreamEncryptionConfigurationInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delivery-stream-encryption-configuration-input` |
+| `deliveryStreamEncryptionConfigurationInput` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty | [[cdk.support/lookup-entry]] | `:delivery-stream-encryption-configuration-input` |
 | `deliveryStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-name` |
 | `deliveryStreamType` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-type` |
-| `elasticsearchDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elasticsearch-destination-configuration` |
+| `elasticsearchDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:elasticsearch-destination-configuration` |
 | `extendedS3DestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:extended-s3-destination-configuration` |
-| `httpEndpointDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-endpoint-destination-configuration` |
-| `kinesisStreamSourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-stream-source-configuration` |
-| `mskSourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:msk-source-configuration` |
+| `httpEndpointDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:http-endpoint-destination-configuration` |
+| `kinesisStreamSourceConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$KinesisStreamSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-source-configuration` |
+| `mskSourceConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$MSKSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:msk-source-configuration` |
 | `redshiftDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$RedshiftDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:redshift-destination-configuration` |
-| `s3DestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
-| `snowflakeDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snowflake-destination-configuration` |
-| `splunkDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:splunk-destination-configuration` |
+| `s3DestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
+| `snowflakeDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:snowflake-destination-configuration` |
+| `splunkDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SplunkDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:splunk-destination-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliveryStreamProps$Builder builder id config]
@@ -1511,12 +1511,12 @@
 |---|---|---|---|
 | `cloudWatchLoggingOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CloudWatchLoggingOptionsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
 | `clusterJdbcurl` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-jdbcurl` |
-| `copyCommand` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-command` |
+| `copyCommand` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CopyCommandProperty | [[cdk.support/lookup-entry]] | `:copy-command` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `processingConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ProcessingConfigurationProperty | [[cdk.support/lookup-entry]] | `:processing-configuration` |
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$RedshiftRetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `s3BackupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-backup-configuration` |
+| `s3BackupConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-backup-configuration` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
@@ -1716,7 +1716,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `orcSerDe` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$OrcSerDeProperty | [[cdk.support/lookup-entry]] | `:orc-ser-de` |
-| `parquetSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet-ser-de` |
+| `parquetSerDe` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ParquetSerDeProperty | [[cdk.support/lookup-entry]] | `:parquet-ser-de` |
 "
   [^CfnDeliveryStream$SerializerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :orc-ser-de)]
@@ -1747,7 +1747,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accountUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-url` |
-| `cloudWatchLoggingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
+| `cloudWatchLoggingOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CloudWatchLoggingOptionsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
 | `contentColumnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-column-name` |
 | `dataLoadingOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-loading-option` |
 | `database` | java.lang.String | [[cdk.support/lookup-entry]] | `:database` |
@@ -1755,13 +1755,13 @@
 | `metaDataColumnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:meta-data-column-name` |
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `processingConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ProcessingConfigurationProperty | [[cdk.support/lookup-entry]] | `:processing-configuration` |
-| `retryOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-options` |
+| `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeRetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
-| `s3Configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `schema` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema` |
-| `snowflakeRoleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snowflake-role-configuration` |
-| `snowflakeVpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snowflake-vpc-configuration` |
+| `snowflakeRoleConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeRoleConfigurationProperty | [[cdk.support/lookup-entry]] | `:snowflake-role-configuration` |
+| `snowflakeVpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:snowflake-vpc-configuration` |
 | `table` | java.lang.String | [[cdk.support/lookup-entry]] | `:table` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 "
@@ -1853,7 +1853,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `snowflakeRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:snowflake-role` |
 "
   [^CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder builder id config]
@@ -1943,13 +1943,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bufferingHints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:buffering-hints` |
-| `cloudWatchLoggingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
+| `bufferingHints` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SplunkBufferingHintsProperty | [[cdk.support/lookup-entry]] | `:buffering-hints` |
+| `cloudWatchLoggingOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$CloudWatchLoggingOptionsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-options` |
 | `hecAcknowledgmentTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:hec-acknowledgment-timeout-in-seconds` |
 | `hecEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:hec-endpoint` |
 | `hecEndpointType` | java.lang.String | [[cdk.support/lookup-entry]] | `:hec-endpoint-type` |
 | `hecToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:hec-token` |
-| `processingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processing-configuration` |
+| `processingConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$ProcessingConfigurationProperty | [[cdk.support/lookup-entry]] | `:processing-configuration` |
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SplunkRetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |

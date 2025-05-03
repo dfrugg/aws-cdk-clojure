@@ -80,9 +80,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `exportable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exportable` |
-| `keyAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-attributes` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `exportable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exportable` |
+| `keyAttributes` | software.amazon.awscdk.services.paymentcryptography.CfnKey$KeyAttributesProperty | [[cdk.support/lookup-entry]] | `:key-attributes` |
 | `keyCheckValueAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-check-value-algorithm` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -157,14 +157,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decrypt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decrypt` |
-| `deriveKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:derive-key` |
+| `decrypt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:decrypt` |
+| `deriveKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:derive-key` |
 | `encrypt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypt` |
 | `generate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:generate` |
 | `noRestrictions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-restrictions` |
 | `sign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sign` |
 | `unwrap` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unwrap` |
-| `verify` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:verify` |
+| `verify` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:verify` |
 | `wrap` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:wrap` |
 "
   [^CfnKey$KeyModesOfUseProperty$Builder builder id config]
@@ -209,9 +209,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `exportable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exportable` |
-| `keyAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-attributes` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `exportable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exportable` |
+| `keyAttributes` | software.amazon.awscdk.services.paymentcryptography.CfnKey$KeyAttributesProperty | [[cdk.support/lookup-entry]] | `:key-attributes` |
 | `keyCheckValueAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-check-value-algorithm` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

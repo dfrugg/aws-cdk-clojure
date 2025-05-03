@@ -33,11 +33,11 @@
 | `iamRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:iam-roles` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `logExports` | java.util.List | [[cdk.support/lookup-entry]] | `:log-exports` |
-| `manageAdminPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-admin-password` |
+| `manageAdminPassword` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:manage-admin-password` |
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
 | `namespaceResourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:namespace-resource-policy` |
 | `redshiftIdcApplicationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:redshift-idc-application-arn` |
-| `snapshotCopyConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-copy-configurations` |
+| `snapshotCopyConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:snapshot-copy-configurations` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnNamespace$Builder builder id config]
@@ -170,11 +170,11 @@
 | `iamRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:iam-roles` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `logExports` | java.util.List | [[cdk.support/lookup-entry]] | `:log-exports` |
-| `manageAdminPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-admin-password` |
+| `manageAdminPassword` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:manage-admin-password` |
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
 | `namespaceResourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:namespace-resource-policy` |
 | `redshiftIdcApplicationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:redshift-idc-application-arn` |
-| `snapshotCopyConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-copy-configurations` |
+| `snapshotCopyConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:snapshot-copy-configurations` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnNamespaceProps$Builder builder id config]
@@ -268,8 +268,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `baseCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:base-capacity` |
-| `configParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config-parameters` |
-| `enhancedVpcRouting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
+| `configParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:config-parameters` |
+| `enhancedVpcRouting` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
@@ -428,8 +428,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `baseCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:base-capacity` |
-| `configParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config-parameters` |
-| `enhancedVpcRouting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
+| `configParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:config-parameters` |
+| `enhancedVpcRouting` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
@@ -485,7 +485,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `networkInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interfaces` |
+| `networkInterfaces` | java.util.List | [[cdk.support/lookup-entry]] | `:network-interfaces` |
 | `vpcEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-endpoint-id` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
@@ -523,10 +523,10 @@
 | `configParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:config-parameters` |
 | `creationDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:creation-date` |
 | `endpoint` | software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup$EndpointProperty | [[cdk.support/lookup-entry]] | `:endpoint` |
-| `enhancedVpcRouting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
+| `enhancedVpcRouting` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
-| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |

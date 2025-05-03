@@ -17,7 +17,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionsMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-mode` |
@@ -57,7 +57,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionsMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-mode` |
@@ -99,7 +99,7 @@
 |---|---|---|---|
 | `exclusiveEndTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:exclusive-end-time` |
 | `inclusiveStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:inclusive-start-time` |
-| `kinesisConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-configuration` |
+| `kinesisConfiguration` | software.amazon.awscdk.services.qldb.CfnStream$KinesisConfigurationProperty | [[cdk.support/lookup-entry]] | `:kinesis-configuration` |
 | `ledgerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:ledger-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
@@ -143,7 +143,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-enabled` |
+| `aggregationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:aggregation-enabled` |
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^CfnStream$KinesisConfigurationProperty$Builder builder id config]
@@ -176,7 +176,7 @@
 |---|---|---|---|
 | `exclusiveEndTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:exclusive-end-time` |
 | `inclusiveStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:inclusive-start-time` |
-| `kinesisConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-configuration` |
+| `kinesisConfiguration` | software.amazon.awscdk.services.qldb.CfnStream$KinesisConfigurationProperty | [[cdk.support/lookup-entry]] | `:kinesis-configuration` |
 | `ledgerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:ledger-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |

@@ -103,7 +103,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `portalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:portal-options` |
+| `portalOptions` | software.amazon.awscdk.services.sso.CfnApplication$PortalOptionsConfigurationProperty | [[cdk.support/lookup-entry]] | `:portal-options` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -180,7 +180,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `portalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:portal-options` |
+| `portalOptions` | software.amazon.awscdk.services.sso.CfnApplication$PortalOptionsConfigurationProperty | [[cdk.support/lookup-entry]] | `:portal-options` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -432,7 +432,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessControlAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
+| `accessControlAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
 "
   [^CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-control-attributes)]
@@ -461,7 +461,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessControlAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
-| `instanceAccessControlAttributeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-access-control-attribute-configuration` |
+| `instanceAccessControlAttributeConfiguration` | software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty | [[cdk.support/lookup-entry]] | `:instance-access-control-attribute-configuration` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 "
   [^CfnInstanceAccessControlAttributeConfigurationProps$Builder builder id config]
@@ -556,7 +556,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedPolicyReferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-policy-references` |
+| `customerManagedPolicyReferences` | java.util.List | [[cdk.support/lookup-entry]] | `:customer-managed-policy-references` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `inlinePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:inline-policy` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
@@ -642,7 +642,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedPolicyReference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-policy-reference` |
+| `customerManagedPolicyReference` | software.amazon.awscdk.services.sso.CfnPermissionSet$CustomerManagedPolicyReferenceProperty | [[cdk.support/lookup-entry]] | `:customer-managed-policy-reference` |
 | `managedPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:managed-policy-arn` |
 "
   [^CfnPermissionSet$PermissionsBoundaryProperty$Builder builder id config]
@@ -673,7 +673,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedPolicyReferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-policy-references` |
+| `customerManagedPolicyReferences` | java.util.List | [[cdk.support/lookup-entry]] | `:customer-managed-policy-references` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `inlinePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:inline-policy` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |

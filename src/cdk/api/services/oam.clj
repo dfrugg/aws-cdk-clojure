@@ -19,7 +19,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `labelTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-template` |
-| `linkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:link-configuration` |
+| `linkConfiguration` | software.amazon.awscdk.services.oam.CfnLink$LinkConfigurationProperty | [[cdk.support/lookup-entry]] | `:link-configuration` |
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
 | `sinkIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:sink-identifier` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -58,7 +58,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `logGroupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-group-configuration` |
+| `logGroupConfiguration` | software.amazon.awscdk.services.oam.CfnLink$LinkFilterProperty | [[cdk.support/lookup-entry]] | `:log-group-configuration` |
 | `metricConfiguration` | software.amazon.awscdk.services.oam.CfnLink$LinkFilterProperty | [[cdk.support/lookup-entry]] | `:metric-configuration` |
 "
   [^CfnLink$LinkConfigurationProperty$Builder builder id config]
@@ -118,7 +118,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `labelTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-template` |
-| `linkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:link-configuration` |
+| `linkConfiguration` | software.amazon.awscdk.services.oam.CfnLink$LinkConfigurationProperty | [[cdk.support/lookup-entry]] | `:link-configuration` |
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
 | `sinkIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:sink-identifier` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |

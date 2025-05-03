@@ -18,13 +18,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `createAlias` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-alias` |
+| `createAlias` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:create-alias` |
 | `edition` | java.lang.String | [[cdk.support/lookup-entry]] | `:edition` |
-| `enableSso` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-sso` |
+| `enableSso` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-sso` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `shortName` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-name` |
-| `vpcSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-settings` |
+| `vpcSettings` | software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD$VpcSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnMicrosoftAD$Builder builder id config]
   (when-some [data (lookup-entry config id :create-alias)]
@@ -64,13 +64,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `createAlias` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-alias` |
+| `createAlias` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:create-alias` |
 | `edition` | java.lang.String | [[cdk.support/lookup-entry]] | `:edition` |
-| `enableSso` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-sso` |
+| `enableSso` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-sso` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `shortName` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-name` |
-| `vpcSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-settings` |
+| `vpcSettings` | software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD$VpcSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnMicrosoftADProps$Builder builder id config]
   (when-some [data (lookup-entry config id :create-alias)]
@@ -141,14 +141,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `createAlias` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-alias` |
+| `createAlias` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:create-alias` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enableSso` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-sso` |
+| `enableSso` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-sso` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `shortName` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-name` |
 | `size` | java.lang.String | [[cdk.support/lookup-entry]] | `:size` |
-| `vpcSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-settings` |
+| `vpcSettings` | software.amazon.awscdk.services.directoryservice.CfnSimpleAD$VpcSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnSimpleAD$Builder builder id config]
   (when-some [data (lookup-entry config id :create-alias)]
@@ -190,14 +190,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `createAlias` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-alias` |
+| `createAlias` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:create-alias` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `enableSso` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-sso` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `shortName` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-name` |
 | `size` | java.lang.String | [[cdk.support/lookup-entry]] | `:size` |
-| `vpcSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-settings` |
+| `vpcSettings` | software.amazon.awscdk.services.directoryservice.CfnSimpleAD$VpcSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnSimpleADProps$Builder builder id config]
   (when-some [data (lookup-entry config id :create-alias)]

@@ -178,9 +178,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `anonymousAuthDisableDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:anonymous-auth-disable-date` |
-| `anonymousAuthEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anonymous-auth-enabled` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `internalUserDatabaseEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:internal-user-database-enabled` |
+| `anonymousAuthEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:anonymous-auth-enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `internalUserDatabaseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:internal-user-database-enabled` |
 | `masterUserOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$MasterUserOptionsProperty | [[cdk.support/lookup-entry]] | `:master-user-options` |
 | `samlOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$SAMLOptionsProperty | [[cdk.support/lookup-entry]] | `:saml-options` |
 "
@@ -222,20 +222,20 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `accessPolicies` | java.lang.Object | [[cdk.support/lookup-entry]] | `:access-policies` |
 | `advancedOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:advanced-options` |
-| `advancedSecurityOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-security-options` |
+| `advancedSecurityOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$AdvancedSecurityOptionsInputProperty | [[cdk.support/lookup-entry]] | `:advanced-security-options` |
 | `clusterConfig` | software.amazon.awscdk.services.opensearchservice.CfnDomain$ClusterConfigProperty | [[cdk.support/lookup-entry]] | `:cluster-config` |
 | `cognitoOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$CognitoOptionsProperty | [[cdk.support/lookup-entry]] | `:cognito-options` |
 | `domainArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-arn` |
-| `domainEndpointOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain-endpoint-options` |
+| `domainEndpointOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$DomainEndpointOptionsProperty | [[cdk.support/lookup-entry]] | `:domain-endpoint-options` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `ebsOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-options` |
+| `ebsOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$EBSOptionsProperty | [[cdk.support/lookup-entry]] | `:ebs-options` |
 | `encryptionAtRestOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$EncryptionAtRestOptionsProperty | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
-| `logPublishingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
+| `logPublishingOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
 | `nodeToNodeEncryptionOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$NodeToNodeEncryptionOptionsProperty | [[cdk.support/lookup-entry]] | `:node-to-node-encryption-options` |
-| `offPeakWindowOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:off-peak-window-options` |
-| `snapshotOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-options` |
+| `offPeakWindowOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$OffPeakWindowOptionsProperty | [[cdk.support/lookup-entry]] | `:off-peak-window-options` |
+| `snapshotOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$SnapshotOptionsProperty | [[cdk.support/lookup-entry]] | `:snapshot-options` |
 | `softwareUpdateOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$SoftwareUpdateOptionsProperty | [[cdk.support/lookup-entry]] | `:software-update-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$VPCOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
@@ -302,18 +302,18 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `coldStorageOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cold-storage-options` |
+| `coldStorageOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$ColdStorageOptionsProperty | [[cdk.support/lookup-entry]] | `:cold-storage-options` |
 | `dedicatedMasterCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dedicated-master-count` |
 | `dedicatedMasterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dedicated-master-enabled` |
 | `dedicatedMasterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:dedicated-master-type` |
 | `instanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-count` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
-| `multiAzWithStandbyEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-az-with-standby-enabled` |
+| `multiAzWithStandbyEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-az-with-standby-enabled` |
 | `warmCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:warm-count` |
 | `warmEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:warm-enabled` |
 | `warmType` | java.lang.String | [[cdk.support/lookup-entry]] | `:warm-type` |
 | `zoneAwarenessConfig` | software.amazon.awscdk.services.opensearchservice.CfnDomain$ZoneAwarenessConfigProperty | [[cdk.support/lookup-entry]] | `:zone-awareness-config` |
-| `zoneAwarenessEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zone-awareness-enabled` |
+| `zoneAwarenessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:zone-awareness-enabled` |
 "
   [^CfnDomain$ClusterConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cold-storage-options)]
@@ -363,7 +363,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `identityPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-pool-id` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
@@ -400,7 +400,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDomain$ColdStorageOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -508,7 +508,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
   [^CfnDomain$EncryptionAtRestOptionsProperty$Builder builder id config]
@@ -571,7 +571,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cloudWatchLogsLogGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-log-group-arn` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDomain$LogPublishingOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
@@ -635,7 +635,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -663,7 +663,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `offPeakWindow` | software.amazon.awscdk.services.opensearchservice.CfnDomain$OffPeakWindowProperty | [[cdk.support/lookup-entry]] | `:off-peak-window` |
 "
   [^CfnDomain$OffPeakWindowOptionsProperty$Builder builder id config]
@@ -694,7 +694,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `windowStartTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:window-start-time` |
+| `windowStartTime` | software.amazon.awscdk.services.opensearchservice.CfnDomain$WindowStartTimeProperty | [[cdk.support/lookup-entry]] | `:window-start-time` |
 "
   [^CfnDomain$OffPeakWindowProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :window-start-time)]
@@ -723,24 +723,24 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessPolicies` | java.lang.Object | [[cdk.support/lookup-entry]] | `:access-policies` |
-| `advancedOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-options` |
+| `advancedOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:advanced-options` |
 | `advancedSecurityOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$AdvancedSecurityOptionsInputProperty | [[cdk.support/lookup-entry]] | `:advanced-security-options` |
 | `clusterConfig` | software.amazon.awscdk.services.opensearchservice.CfnDomain$ClusterConfigProperty | [[cdk.support/lookup-entry]] | `:cluster-config` |
-| `cognitoOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cognito-options` |
+| `cognitoOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$CognitoOptionsProperty | [[cdk.support/lookup-entry]] | `:cognito-options` |
 | `domainArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-arn` |
-| `domainEndpointOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain-endpoint-options` |
+| `domainEndpointOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$DomainEndpointOptionsProperty | [[cdk.support/lookup-entry]] | `:domain-endpoint-options` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `ebsOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$EBSOptionsProperty | [[cdk.support/lookup-entry]] | `:ebs-options` |
 | `encryptionAtRestOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$EncryptionAtRestOptionsProperty | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
 | `logPublishingOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
-| `nodeToNodeEncryptionOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-to-node-encryption-options` |
-| `offPeakWindowOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:off-peak-window-options` |
-| `snapshotOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-options` |
+| `nodeToNodeEncryptionOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$NodeToNodeEncryptionOptionsProperty | [[cdk.support/lookup-entry]] | `:node-to-node-encryption-options` |
+| `offPeakWindowOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$OffPeakWindowOptionsProperty | [[cdk.support/lookup-entry]] | `:off-peak-window-options` |
+| `snapshotOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$SnapshotOptionsProperty | [[cdk.support/lookup-entry]] | `:snapshot-options` |
 | `softwareUpdateOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$SoftwareUpdateOptionsProperty | [[cdk.support/lookup-entry]] | `:software-update-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
+| `vpcOptions` | software.amazon.awscdk.services.opensearchservice.CfnDomain$VPCOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnDomainProps$Builder builder id config]
   (when-some [data (lookup-entry config id :access-policies)]
@@ -804,7 +804,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `idp` | software.amazon.awscdk.services.opensearchservice.CfnDomain$IdpProperty | [[cdk.support/lookup-entry]] | `:idp` |
 | `masterBackendRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-backend-role` |
 | `masterUserName` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-user-name` |
@@ -856,7 +856,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `newVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:new-version` |
 | `optionalDeployment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optional-deployment` |
-| `updateAvailable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update-available` |
+| `updateAvailable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-available` |
 | `updateStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-status` |
 "
   [^CfnDomain$ServiceSoftwareOptionsProperty$Builder builder id config]

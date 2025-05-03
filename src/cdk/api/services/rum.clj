@@ -18,8 +18,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowCookies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-cookies` |
-| `enableXRay` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-x-ray` |
+| `allowCookies` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-cookies` |
+| `enableXRay` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-x-ray` |
 | `excludedPages` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-pages` |
 | `favoritePages` | java.util.List | [[cdk.support/lookup-entry]] | `:favorite-pages` |
 | `guestRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:guest-role-arn` |
@@ -74,7 +74,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appMonitorConfiguration` | software.amazon.awscdk.services.rum.CfnAppMonitor$AppMonitorConfigurationProperty | [[cdk.support/lookup-entry]] | `:app-monitor-configuration` |
-| `customEvents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-events` |
+| `customEvents` | software.amazon.awscdk.services.rum.CfnAppMonitor$CustomEventsProperty | [[cdk.support/lookup-entry]] | `:custom-events` |
 | `cwLogEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cw-log-enabled` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -144,7 +144,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensionKeys` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimension-keys` |
+| `dimensionKeys` | java.util.Map | [[cdk.support/lookup-entry]] | `:dimension-keys` |
 | `eventPattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-pattern` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
@@ -190,7 +190,7 @@
 | `destination` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination` |
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
 | `iamRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-role-arn` |
-| `metricDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-definitions` |
+| `metricDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-definitions` |
 "
   [^CfnAppMonitor$MetricDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination)]
@@ -224,7 +224,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `appMonitorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:app-monitor-configuration` |
+| `appMonitorConfiguration` | software.amazon.awscdk.services.rum.CfnAppMonitor$AppMonitorConfigurationProperty | [[cdk.support/lookup-entry]] | `:app-monitor-configuration` |
 | `customEvents` | software.amazon.awscdk.services.rum.CfnAppMonitor$CustomEventsProperty | [[cdk.support/lookup-entry]] | `:custom-events` |
 | `cwLogEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cw-log-enabled` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |

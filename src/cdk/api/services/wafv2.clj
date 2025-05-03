@@ -272,7 +272,7 @@
 |---|---|---|---|
 | `logDestinationConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:log-destination-configs` |
 | `loggingFilter` | java.lang.Object | [[cdk.support/lookup-entry]] | `:logging-filter` |
-| `redactedFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redacted-fields` |
+| `redactedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:redacted-fields` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnLoggingConfiguration$Builder builder id config]
@@ -307,7 +307,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-condition` |
+| `actionCondition` | software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration$ActionConditionProperty | [[cdk.support/lookup-entry]] | `:action-condition` |
 | `labelNameCondition` | software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration$LabelNameConditionProperty | [[cdk.support/lookup-entry]] | `:label-name-condition` |
 "
   [^CfnLoggingConfiguration$ConditionProperty$Builder builder id config]
@@ -413,7 +413,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invalidFallbackBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:invalid-fallback-behavior` |
-| `matchPattern` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match-pattern` |
+| `matchPattern` | software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration$MatchPatternProperty | [[cdk.support/lookup-entry]] | `:match-pattern` |
 | `matchScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:match-scope` |
 "
   [^CfnLoggingConfiguration$JsonBodyProperty$Builder builder id config]
@@ -538,7 +538,7 @@
 |---|---|---|---|
 | `logDestinationConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:log-destination-configs` |
 | `loggingFilter` | java.lang.Object | [[cdk.support/lookup-entry]] | `:logging-filter` |
-| `redactedFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redacted-fields` |
+| `redactedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:redacted-fields` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnLoggingConfigurationProps$Builder builder id config]
@@ -681,7 +681,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnRuleGroup$AllowProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -709,7 +709,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `statements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statements` |
+| `statements` | java.util.List | [[cdk.support/lookup-entry]] | `:statements` |
 "
   [^CfnRuleGroup$AndStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :statements)]
@@ -737,7 +737,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-response` |
+| `customResponse` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CustomResponseProperty | [[cdk.support/lookup-entry]] | `:custom-response` |
 "
   [^CfnRuleGroup$BlockProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-response)]
@@ -796,13 +796,13 @@
 | `availableLabels` | java.util.List | [[cdk.support/lookup-entry]] | `:available-labels` |
 | `capacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:capacity` |
 | `consumedLabels` | java.util.List | [[cdk.support/lookup-entry]] | `:consumed-labels` |
-| `customResponseBodies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-response-bodies` |
+| `customResponseBodies` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-response-bodies` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `visibilityConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visibility-config` |
+| `visibilityConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$VisibilityConfigProperty | [[cdk.support/lookup-entry]] | `:visibility-config` |
 "
   [^CfnRuleGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :available-labels)]
@@ -848,11 +848,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `positionalConstraint` | java.lang.String | [[cdk.support/lookup-entry]] | `:positional-constraint` |
 | `searchString` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-string` |
 | `searchStringBase64` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-string-base64` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$ByteMatchStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-to-match)]
@@ -888,7 +888,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `immunityTimeProperty` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
+| `immunityTimeProperty` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$ImmunityTimePropertyProperty | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
 "
   [^CfnRuleGroup$CaptchaConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :immunity-time-property)]
@@ -916,7 +916,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnRuleGroup$CaptchaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -944,7 +944,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `immunityTimeProperty` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
+| `immunityTimeProperty` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$ImmunityTimePropertyProperty | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
 "
   [^CfnRuleGroup$ChallengeConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :immunity-time-property)]
@@ -972,7 +972,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnRuleGroup$ChallengeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -1034,7 +1034,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `matchPattern` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match-pattern` |
+| `matchPattern` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CookieMatchPatternProperty | [[cdk.support/lookup-entry]] | `:match-pattern` |
 | `matchScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:match-scope` |
 | `oversizeHandling` | java.lang.String | [[cdk.support/lookup-entry]] | `:oversize-handling` |
 "
@@ -1068,7 +1068,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnRuleGroup$CountProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -1127,7 +1127,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `insertHeaders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insert-headers` |
+| `insertHeaders` | java.util.List | [[cdk.support/lookup-entry]] | `:insert-headers` |
 "
   [^CfnRuleGroup$CustomRequestHandlingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :insert-headers)]
@@ -1188,7 +1188,7 @@
 |---|---|---|---|
 | `customResponseBodyKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-response-body-key` |
 | `responseCode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:response-code` |
-| `responseHeaders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-headers` |
+| `responseHeaders` | java.util.List | [[cdk.support/lookup-entry]] | `:response-headers` |
 "
   [^CfnRuleGroup$CustomResponseProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-response-body-key)]
@@ -1222,7 +1222,7 @@
 |---|---|---|---|
 | `allQueryArguments` | java.lang.Object | [[cdk.support/lookup-entry]] | `:all-query-arguments` |
 | `body` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$BodyProperty | [[cdk.support/lookup-entry]] | `:body` |
-| `cookies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookies` |
+| `cookies` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CookiesProperty | [[cdk.support/lookup-entry]] | `:cookies` |
 | `headers` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$HeadersProperty | [[cdk.support/lookup-entry]] | `:headers` |
 | `ja3Fingerprint` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$JA3FingerprintProperty | [[cdk.support/lookup-entry]] | `:ja3-fingerprint` |
 | `jsonBody` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$JsonBodyProperty | [[cdk.support/lookup-entry]] | `:json-body` |
@@ -1310,7 +1310,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `countryCodes` | java.util.List | [[cdk.support/lookup-entry]] | `:country-codes` |
-| `forwardedIpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
+| `forwardedIpConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$ForwardedIPConfigurationProperty | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
 "
   [^CfnRuleGroup$GeoMatchStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :country-codes)]
@@ -1374,7 +1374,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `matchPattern` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match-pattern` |
+| `matchPattern` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$HeaderMatchPatternProperty | [[cdk.support/lookup-entry]] | `:match-pattern` |
 | `matchScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:match-scope` |
 | `oversizeHandling` | java.lang.String | [[cdk.support/lookup-entry]] | `:oversize-handling` |
 "
@@ -1471,7 +1471,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
-| `ipSetForwardedIpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-set-forwarded-ip-config` |
+| `ipSetForwardedIpConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$IPSetForwardedIPConfigurationProperty | [[cdk.support/lookup-entry]] | `:ip-set-forwarded-ip-config` |
 "
   [^CfnRuleGroup$IPSetReferenceStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arn)]
@@ -1684,7 +1684,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `statement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statement` |
+| `statement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$StatementProperty | [[cdk.support/lookup-entry]] | `:statement` |
 "
   [^CfnRuleGroup$NotStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :statement)]
@@ -1712,7 +1712,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `statements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statements` |
+| `statements` | java.util.List | [[cdk.support/lookup-entry]] | `:statements` |
 "
   [^CfnRuleGroup$OrStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :statements)]
@@ -1742,14 +1742,14 @@
 |---|---|---|---|
 | `availableLabels` | java.util.List | [[cdk.support/lookup-entry]] | `:available-labels` |
 | `capacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:capacity` |
-| `consumedLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:consumed-labels` |
+| `consumedLabels` | java.util.List | [[cdk.support/lookup-entry]] | `:consumed-labels` |
 | `customResponseBodies` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-response-bodies` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `visibilityConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visibility-config` |
+| `visibilityConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$VisibilityConfigProperty | [[cdk.support/lookup-entry]] | `:visibility-config` |
 "
   [^CfnRuleGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :available-labels)]
@@ -1795,14 +1795,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cookie` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookie` |
+| `cookie` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RateLimitCookieProperty | [[cdk.support/lookup-entry]] | `:cookie` |
 | `forwardedIp` | java.lang.Object | [[cdk.support/lookup-entry]] | `:forwarded-ip` |
-| `header` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header` |
+| `header` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RateLimitHeaderProperty | [[cdk.support/lookup-entry]] | `:header` |
 | `httpMethod` | java.lang.Object | [[cdk.support/lookup-entry]] | `:http-method` |
 | `ip` | java.lang.Object | [[cdk.support/lookup-entry]] | `:ip` |
 | `labelNamespace` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RateLimitLabelNamespaceProperty | [[cdk.support/lookup-entry]] | `:label-namespace` |
 | `queryArgument` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RateLimitQueryArgumentProperty | [[cdk.support/lookup-entry]] | `:query-argument` |
-| `queryString` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-string` |
+| `queryString` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RateLimitQueryStringProperty | [[cdk.support/lookup-entry]] | `:query-string` |
 | `uriPath` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RateLimitUriPathProperty | [[cdk.support/lookup-entry]] | `:uri-path` |
 "
   [^CfnRuleGroup$RateBasedStatementCustomKeyProperty$Builder builder id config]
@@ -1848,9 +1848,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregateKeyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregate-key-type` |
-| `customKeys` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-keys` |
+| `customKeys` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-keys` |
 | `evaluationWindowSec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-window-sec` |
-| `forwardedIpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
+| `forwardedIpConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$ForwardedIPConfigurationProperty | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
 | `limit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:limit` |
 | `scopeDownStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$StatementProperty | [[cdk.support/lookup-entry]] | `:scope-down-statement` |
 "
@@ -1891,7 +1891,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$RateLimitCookieProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -1922,7 +1922,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$RateLimitHeaderProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -1981,7 +1981,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$RateLimitQueryArgumentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -2011,7 +2011,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$RateLimitQueryStringProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :text-transformations)]
@@ -2039,7 +2039,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$RateLimitUriPathProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :text-transformations)]
@@ -2067,9 +2067,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `regexString` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex-string` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$RegexMatchStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-to-match)]
@@ -2103,7 +2103,7 @@
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 | `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$RegexPatternSetReferenceStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arn)]
@@ -2177,12 +2177,12 @@
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RuleActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `captchaConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$CaptchaConfigProperty | [[cdk.support/lookup-entry]] | `:captcha-config` |
-| `challengeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:challenge-config` |
+| `challengeConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$ChallengeConfigProperty | [[cdk.support/lookup-entry]] | `:challenge-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `ruleLabels` | java.util.List | [[cdk.support/lookup-entry]] | `:rule-labels` |
-| `statement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statement` |
-| `visibilityConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visibility-config` |
+| `statement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$StatementProperty | [[cdk.support/lookup-entry]] | `:statement` |
+| `visibilityConfig` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$VisibilityConfigProperty | [[cdk.support/lookup-entry]] | `:visibility-config` |
 "
   [^CfnRuleGroup$RuleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action)]
@@ -2281,7 +2281,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `comparisonOperator` | java.lang.String | [[cdk.support/lookup-entry]] | `:comparison-operator` |
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
 | `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
@@ -2317,7 +2317,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `sensitivityLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:sensitivity-level` |
 | `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
@@ -2351,19 +2351,19 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `andStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:and-statement` |
-| `byteMatchStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:byte-match-statement` |
+| `andStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$AndStatementProperty | [[cdk.support/lookup-entry]] | `:and-statement` |
+| `byteMatchStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$ByteMatchStatementProperty | [[cdk.support/lookup-entry]] | `:byte-match-statement` |
 | `geoMatchStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$GeoMatchStatementProperty | [[cdk.support/lookup-entry]] | `:geo-match-statement` |
-| `ipSetReferenceStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-set-reference-statement` |
+| `ipSetReferenceStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$IPSetReferenceStatementProperty | [[cdk.support/lookup-entry]] | `:ip-set-reference-statement` |
 | `labelMatchStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$LabelMatchStatementProperty | [[cdk.support/lookup-entry]] | `:label-match-statement` |
-| `notStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:not-statement` |
+| `notStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$NotStatementProperty | [[cdk.support/lookup-entry]] | `:not-statement` |
 | `orStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$OrStatementProperty | [[cdk.support/lookup-entry]] | `:or-statement` |
 | `rateBasedStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RateBasedStatementProperty | [[cdk.support/lookup-entry]] | `:rate-based-statement` |
-| `regexMatchStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regex-match-statement` |
+| `regexMatchStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RegexMatchStatementProperty | [[cdk.support/lookup-entry]] | `:regex-match-statement` |
 | `regexPatternSetReferenceStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$RegexPatternSetReferenceStatementProperty | [[cdk.support/lookup-entry]] | `:regex-pattern-set-reference-statement` |
 | `sizeConstraintStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$SizeConstraintStatementProperty | [[cdk.support/lookup-entry]] | `:size-constraint-statement` |
-| `sqliMatchStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqli-match-statement` |
-| `xssMatchStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xss-match-statement` |
+| `sqliMatchStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$SqliMatchStatementProperty | [[cdk.support/lookup-entry]] | `:sqli-match-statement` |
+| `xssMatchStatement` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$XssMatchStatementProperty | [[cdk.support/lookup-entry]] | `:xss-match-statement` |
 "
   [^CfnRuleGroup$StatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :and-statement)]
@@ -2480,7 +2480,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnRuleGroup$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnRuleGroup$XssMatchStatementProperty$Builder builder id config]
@@ -2511,7 +2511,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnWebACL$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnWebACL$AllowActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -2539,7 +2539,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `statements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statements` |
+| `statements` | java.util.List | [[cdk.support/lookup-entry]] | `:statements` |
 "
   [^CfnWebACL$AndStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :statements)]
@@ -2598,7 +2598,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `requestBody` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-body` |
+| `requestBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-body` |
 "
   [^CfnWebACL$AssociationConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :request-body)]
@@ -2660,7 +2660,7 @@
 | `creationPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:creation-path` |
 | `enableRegexInPath` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-regex-in-path` |
 | `registrationPagePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:registration-page-path` |
-| `requestInspection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-inspection` |
+| `requestInspection` | software.amazon.awscdk.services.wafv2.CfnWebACL$RequestInspectionACFPProperty | [[cdk.support/lookup-entry]] | `:request-inspection` |
 | `responseInspection` | software.amazon.awscdk.services.wafv2.CfnWebACL$ResponseInspectionProperty | [[cdk.support/lookup-entry]] | `:response-inspection` |
 "
   [^CfnWebACL$AWSManagedRulesACFPRuleSetProperty$Builder builder id config]
@@ -2697,10 +2697,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableRegexInPath` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-regex-in-path` |
+| `enableRegexInPath` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-regex-in-path` |
 | `loginPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:login-path` |
 | `requestInspection` | software.amazon.awscdk.services.wafv2.CfnWebACL$RequestInspectionProperty | [[cdk.support/lookup-entry]] | `:request-inspection` |
-| `responseInspection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-inspection` |
+| `responseInspection` | software.amazon.awscdk.services.wafv2.CfnWebACL$ResponseInspectionProperty | [[cdk.support/lookup-entry]] | `:response-inspection` |
 "
   [^CfnWebACL$AWSManagedRulesATPRuleSetProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-regex-in-path)]
@@ -2765,7 +2765,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-response` |
+| `customResponse` | software.amazon.awscdk.services.wafv2.CfnWebACL$CustomResponseProperty | [[cdk.support/lookup-entry]] | `:custom-response` |
 "
   [^CfnWebACL$BlockActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-response)]
@@ -2821,10 +2821,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `associationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:association-config` |
+| `associationConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$AssociationConfigProperty | [[cdk.support/lookup-entry]] | `:association-config` |
 | `captchaConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$CaptchaConfigProperty | [[cdk.support/lookup-entry]] | `:captcha-config` |
 | `challengeConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$ChallengeConfigProperty | [[cdk.support/lookup-entry]] | `:challenge-config` |
-| `customResponseBodies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-response-bodies` |
+| `customResponseBodies` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-response-bodies` |
 | `defaultAction` | software.amazon.awscdk.services.wafv2.CfnWebACL$DefaultActionProperty | [[cdk.support/lookup-entry]] | `:default-action` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -2882,11 +2882,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `positionalConstraint` | java.lang.String | [[cdk.support/lookup-entry]] | `:positional-constraint` |
 | `searchString` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-string` |
 | `searchStringBase64` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-string-base64` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$ByteMatchStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-to-match)]
@@ -2922,7 +2922,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnWebACL$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnWebACL$CaptchaActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -2950,7 +2950,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `immunityTimeProperty` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
+| `immunityTimeProperty` | software.amazon.awscdk.services.wafv2.CfnWebACL$ImmunityTimePropertyProperty | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
 "
   [^CfnWebACL$CaptchaConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :immunity-time-property)]
@@ -2978,7 +2978,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnWebACL$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnWebACL$ChallengeActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -3006,7 +3006,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `immunityTimeProperty` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
+| `immunityTimeProperty` | software.amazon.awscdk.services.wafv2.CfnWebACL$ImmunityTimePropertyProperty | [[cdk.support/lookup-entry]] | `:immunity-time-property` |
 "
   [^CfnWebACL$ChallengeConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :immunity-time-property)]
@@ -3068,7 +3068,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `matchPattern` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match-pattern` |
+| `matchPattern` | software.amazon.awscdk.services.wafv2.CfnWebACL$CookieMatchPatternProperty | [[cdk.support/lookup-entry]] | `:match-pattern` |
 | `matchScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:match-scope` |
 | `oversizeHandling` | java.lang.String | [[cdk.support/lookup-entry]] | `:oversize-handling` |
 "
@@ -3102,7 +3102,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customRequestHandling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
+| `customRequestHandling` | software.amazon.awscdk.services.wafv2.CfnWebACL$CustomRequestHandlingProperty | [[cdk.support/lookup-entry]] | `:custom-request-handling` |
 "
   [^CfnWebACL$CountActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-request-handling)]
@@ -3161,7 +3161,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `insertHeaders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insert-headers` |
+| `insertHeaders` | java.util.List | [[cdk.support/lookup-entry]] | `:insert-headers` |
 "
   [^CfnWebACL$CustomRequestHandlingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :insert-headers)]
@@ -3222,7 +3222,7 @@
 |---|---|---|---|
 | `customResponseBodyKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-response-body-key` |
 | `responseCode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:response-code` |
-| `responseHeaders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-headers` |
+| `responseHeaders` | java.util.List | [[cdk.support/lookup-entry]] | `:response-headers` |
 "
   [^CfnWebACL$CustomResponseProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-response-body-key)]
@@ -3343,7 +3343,7 @@
 |---|---|---|---|
 | `allQueryArguments` | java.lang.Object | [[cdk.support/lookup-entry]] | `:all-query-arguments` |
 | `body` | software.amazon.awscdk.services.wafv2.CfnWebACL$BodyProperty | [[cdk.support/lookup-entry]] | `:body` |
-| `cookies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookies` |
+| `cookies` | software.amazon.awscdk.services.wafv2.CfnWebACL$CookiesProperty | [[cdk.support/lookup-entry]] | `:cookies` |
 | `headers` | software.amazon.awscdk.services.wafv2.CfnWebACL$HeadersProperty | [[cdk.support/lookup-entry]] | `:headers` |
 | `ja3Fingerprint` | software.amazon.awscdk.services.wafv2.CfnWebACL$JA3FingerprintProperty | [[cdk.support/lookup-entry]] | `:ja3-fingerprint` |
 | `jsonBody` | software.amazon.awscdk.services.wafv2.CfnWebACL$JsonBodyProperty | [[cdk.support/lookup-entry]] | `:json-body` |
@@ -3431,7 +3431,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `countryCodes` | java.util.List | [[cdk.support/lookup-entry]] | `:country-codes` |
-| `forwardedIpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
+| `forwardedIpConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$ForwardedIPConfigurationProperty | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
 "
   [^CfnWebACL$GeoMatchStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :country-codes)]
@@ -3495,7 +3495,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `matchPattern` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match-pattern` |
+| `matchPattern` | software.amazon.awscdk.services.wafv2.CfnWebACL$HeaderMatchPatternProperty | [[cdk.support/lookup-entry]] | `:match-pattern` |
 | `matchScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:match-scope` |
 | `oversizeHandling` | java.lang.String | [[cdk.support/lookup-entry]] | `:oversize-handling` |
 "
@@ -3592,7 +3592,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
-| `ipSetForwardedIpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-set-forwarded-ip-config` |
+| `ipSetForwardedIpConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$IPSetForwardedIPConfigurationProperty | [[cdk.support/lookup-entry]] | `:ip-set-forwarded-ip-config` |
 "
   [^CfnWebACL$IPSetReferenceStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arn)]
@@ -3823,11 +3823,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludedRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:excluded-rules` |
-| `managedRuleGroupConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:managed-rule-group-configs` |
+| `excludedRules` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-rules` |
+| `managedRuleGroupConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-rule-group-configs` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `ruleActionOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-action-overrides` |
-| `scopeDownStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope-down-statement` |
+| `ruleActionOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:rule-action-overrides` |
+| `scopeDownStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$StatementProperty | [[cdk.support/lookup-entry]] | `:scope-down-statement` |
 | `vendorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor-name` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
@@ -3869,7 +3869,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `statement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statement` |
+| `statement` | software.amazon.awscdk.services.wafv2.CfnWebACL$StatementProperty | [[cdk.support/lookup-entry]] | `:statement` |
 "
   [^CfnWebACL$NotStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :statement)]
@@ -3897,7 +3897,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `statements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statements` |
+| `statements` | java.util.List | [[cdk.support/lookup-entry]] | `:statements` |
 "
   [^CfnWebACL$OrStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :statements)]
@@ -3956,11 +3956,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `associationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:association-config` |
-| `captchaConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:captcha-config` |
-| `challengeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:challenge-config` |
-| `customResponseBodies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-response-bodies` |
-| `defaultAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-action` |
+| `associationConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$AssociationConfigProperty | [[cdk.support/lookup-entry]] | `:association-config` |
+| `captchaConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$CaptchaConfigProperty | [[cdk.support/lookup-entry]] | `:captcha-config` |
+| `challengeConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$ChallengeConfigProperty | [[cdk.support/lookup-entry]] | `:challenge-config` |
+| `customResponseBodies` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-response-bodies` |
+| `defaultAction` | software.amazon.awscdk.services.wafv2.CfnWebACL$DefaultActionProperty | [[cdk.support/lookup-entry]] | `:default-action` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
@@ -4017,14 +4017,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cookie` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookie` |
+| `cookie` | software.amazon.awscdk.services.wafv2.CfnWebACL$RateLimitCookieProperty | [[cdk.support/lookup-entry]] | `:cookie` |
 | `forwardedIp` | java.lang.Object | [[cdk.support/lookup-entry]] | `:forwarded-ip` |
-| `header` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header` |
+| `header` | software.amazon.awscdk.services.wafv2.CfnWebACL$RateLimitHeaderProperty | [[cdk.support/lookup-entry]] | `:header` |
 | `httpMethod` | java.lang.Object | [[cdk.support/lookup-entry]] | `:http-method` |
 | `ip` | java.lang.Object | [[cdk.support/lookup-entry]] | `:ip` |
 | `labelNamespace` | software.amazon.awscdk.services.wafv2.CfnWebACL$RateLimitLabelNamespaceProperty | [[cdk.support/lookup-entry]] | `:label-namespace` |
 | `queryArgument` | software.amazon.awscdk.services.wafv2.CfnWebACL$RateLimitQueryArgumentProperty | [[cdk.support/lookup-entry]] | `:query-argument` |
-| `queryString` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-string` |
+| `queryString` | software.amazon.awscdk.services.wafv2.CfnWebACL$RateLimitQueryStringProperty | [[cdk.support/lookup-entry]] | `:query-string` |
 | `uriPath` | software.amazon.awscdk.services.wafv2.CfnWebACL$RateLimitUriPathProperty | [[cdk.support/lookup-entry]] | `:uri-path` |
 "
   [^CfnWebACL$RateBasedStatementCustomKeyProperty$Builder builder id config]
@@ -4070,9 +4070,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregateKeyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregate-key-type` |
-| `customKeys` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-keys` |
+| `customKeys` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-keys` |
 | `evaluationWindowSec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-window-sec` |
-| `forwardedIpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
+| `forwardedIpConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$ForwardedIPConfigurationProperty | [[cdk.support/lookup-entry]] | `:forwarded-ip-config` |
 | `limit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:limit` |
 | `scopeDownStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$StatementProperty | [[cdk.support/lookup-entry]] | `:scope-down-statement` |
 "
@@ -4113,7 +4113,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$RateLimitCookieProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -4144,7 +4144,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$RateLimitHeaderProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -4203,7 +4203,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$RateLimitQueryArgumentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -4233,7 +4233,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$RateLimitQueryStringProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :text-transformations)]
@@ -4261,7 +4261,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$RateLimitUriPathProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :text-transformations)]
@@ -4289,9 +4289,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `regexString` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex-string` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$RegexMatchStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-to-match)]
@@ -4325,7 +4325,7 @@
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 | `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
-| `textTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-transformations` |
+| `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$RegexPatternSetReferenceStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arn)]
@@ -4385,12 +4385,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addressFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:address-fields` |
+| `addressFields` | java.util.List | [[cdk.support/lookup-entry]] | `:address-fields` |
 | `emailField` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldIdentifierProperty | [[cdk.support/lookup-entry]] | `:email-field` |
 | `passwordField` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldIdentifierProperty | [[cdk.support/lookup-entry]] | `:password-field` |
 | `payloadType` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-type` |
-| `phoneNumberFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:phone-number-fields` |
-| `usernameField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:username-field` |
+| `phoneNumberFields` | java.util.List | [[cdk.support/lookup-entry]] | `:phone-number-fields` |
+| `usernameField` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldIdentifierProperty | [[cdk.support/lookup-entry]] | `:username-field` |
 "
   [^CfnWebACL$RequestInspectionACFPProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :address-fields)]
@@ -4428,9 +4428,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `passwordField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:password-field` |
+| `passwordField` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldIdentifierProperty | [[cdk.support/lookup-entry]] | `:password-field` |
 | `payloadType` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-type` |
-| `usernameField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:username-field` |
+| `usernameField` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldIdentifierProperty | [[cdk.support/lookup-entry]] | `:username-field` |
 "
   [^CfnWebACL$RequestInspectionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :password-field)]
@@ -4561,10 +4561,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bodyContains` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-contains` |
-| `header` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header` |
-| `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
-| `statusCode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:status-code` |
+| `bodyContains` | software.amazon.awscdk.services.wafv2.CfnWebACL$ResponseInspectionBodyContainsProperty | [[cdk.support/lookup-entry]] | `:body-contains` |
+| `header` | software.amazon.awscdk.services.wafv2.CfnWebACL$ResponseInspectionHeaderProperty | [[cdk.support/lookup-entry]] | `:header` |
+| `json` | software.amazon.awscdk.services.wafv2.CfnWebACL$ResponseInspectionJsonProperty | [[cdk.support/lookup-entry]] | `:json` |
+| `statusCode` | software.amazon.awscdk.services.wafv2.CfnWebACL$ResponseInspectionStatusCodeProperty | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnWebACL$ResponseInspectionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :body-contains)]
@@ -4598,7 +4598,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `failureCodes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-codes` |
+| `failureCodes` | java.util.List | [[cdk.support/lookup-entry]] | `:failure-codes` |
 | `successCodes` | java.util.List | [[cdk.support/lookup-entry]] | `:success-codes` |
 "
   [^CfnWebACL$ResponseInspectionStatusCodeProperty$Builder builder id config]
@@ -4629,7 +4629,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionToUse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-to-use` |
+| `actionToUse` | software.amazon.awscdk.services.wafv2.CfnWebACL$RuleActionProperty | [[cdk.support/lookup-entry]] | `:action-to-use` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnWebACL$RuleActionOverrideProperty$Builder builder id config]
@@ -4660,10 +4660,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allow` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow` |
+| `allow` | software.amazon.awscdk.services.wafv2.CfnWebACL$AllowActionProperty | [[cdk.support/lookup-entry]] | `:allow` |
 | `block` | software.amazon.awscdk.services.wafv2.CfnWebACL$BlockActionProperty | [[cdk.support/lookup-entry]] | `:block` |
-| `captcha` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:captcha` |
-| `challenge` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:challenge` |
+| `captcha` | software.amazon.awscdk.services.wafv2.CfnWebACL$CaptchaActionProperty | [[cdk.support/lookup-entry]] | `:captcha` |
+| `challenge` | software.amazon.awscdk.services.wafv2.CfnWebACL$ChallengeActionProperty | [[cdk.support/lookup-entry]] | `:challenge` |
 | `count` | software.amazon.awscdk.services.wafv2.CfnWebACL$CountActionProperty | [[cdk.support/lookup-entry]] | `:count` |
 "
   [^CfnWebACL$RuleActionProperty$Builder builder id config]
@@ -4702,7 +4702,7 @@
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 | `excludedRules` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-rules` |
-| `ruleActionOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-action-overrides` |
+| `ruleActionOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:rule-action-overrides` |
 "
   [^CfnWebACL$RuleGroupReferenceStatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arn)]
@@ -4736,11 +4736,11 @@
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.wafv2.CfnWebACL$RuleActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `captchaConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$CaptchaConfigProperty | [[cdk.support/lookup-entry]] | `:captcha-config` |
-| `challengeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:challenge-config` |
+| `challengeConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$ChallengeConfigProperty | [[cdk.support/lookup-entry]] | `:challenge-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `overrideAction` | software.amazon.awscdk.services.wafv2.CfnWebACL$OverrideActionProperty | [[cdk.support/lookup-entry]] | `:override-action` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `ruleLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-labels` |
+| `ruleLabels` | java.util.List | [[cdk.support/lookup-entry]] | `:rule-labels` |
 | `statement` | software.amazon.awscdk.services.wafv2.CfnWebACL$StatementProperty | [[cdk.support/lookup-entry]] | `:statement` |
 | `visibilityConfig` | software.amazon.awscdk.services.wafv2.CfnWebACL$VisibilityConfigProperty | [[cdk.support/lookup-entry]] | `:visibility-config` |
 "
@@ -4843,7 +4843,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `comparisonOperator` | java.lang.String | [[cdk.support/lookup-entry]] | `:comparison-operator` |
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
 | `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
@@ -4879,7 +4879,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `sensitivityLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:sensitivity-level` |
 | `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
@@ -4914,20 +4914,20 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `andStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$AndStatementProperty | [[cdk.support/lookup-entry]] | `:and-statement` |
-| `byteMatchStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:byte-match-statement` |
+| `byteMatchStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$ByteMatchStatementProperty | [[cdk.support/lookup-entry]] | `:byte-match-statement` |
 | `geoMatchStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$GeoMatchStatementProperty | [[cdk.support/lookup-entry]] | `:geo-match-statement` |
 | `ipSetReferenceStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$IPSetReferenceStatementProperty | [[cdk.support/lookup-entry]] | `:ip-set-reference-statement` |
-| `labelMatchStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-match-statement` |
-| `managedRuleGroupStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:managed-rule-group-statement` |
+| `labelMatchStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$LabelMatchStatementProperty | [[cdk.support/lookup-entry]] | `:label-match-statement` |
+| `managedRuleGroupStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$ManagedRuleGroupStatementProperty | [[cdk.support/lookup-entry]] | `:managed-rule-group-statement` |
 | `notStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$NotStatementProperty | [[cdk.support/lookup-entry]] | `:not-statement` |
 | `orStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$OrStatementProperty | [[cdk.support/lookup-entry]] | `:or-statement` |
 | `rateBasedStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$RateBasedStatementProperty | [[cdk.support/lookup-entry]] | `:rate-based-statement` |
 | `regexMatchStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$RegexMatchStatementProperty | [[cdk.support/lookup-entry]] | `:regex-match-statement` |
-| `regexPatternSetReferenceStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regex-pattern-set-reference-statement` |
-| `ruleGroupReferenceStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-group-reference-statement` |
-| `sizeConstraintStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size-constraint-statement` |
+| `regexPatternSetReferenceStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$RegexPatternSetReferenceStatementProperty | [[cdk.support/lookup-entry]] | `:regex-pattern-set-reference-statement` |
+| `ruleGroupReferenceStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$RuleGroupReferenceStatementProperty | [[cdk.support/lookup-entry]] | `:rule-group-reference-statement` |
+| `sizeConstraintStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$SizeConstraintStatementProperty | [[cdk.support/lookup-entry]] | `:size-constraint-statement` |
 | `sqliMatchStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$SqliMatchStatementProperty | [[cdk.support/lookup-entry]] | `:sqli-match-statement` |
-| `xssMatchStatement` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xss-match-statement` |
+| `xssMatchStatement` | software.amazon.awscdk.services.wafv2.CfnWebACL$XssMatchStatementProperty | [[cdk.support/lookup-entry]] | `:xss-match-statement` |
 "
   [^CfnWebACL$StatementProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :and-statement)]
@@ -5048,7 +5048,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-to-match` |
+| `fieldToMatch` | software.amazon.awscdk.services.wafv2.CfnWebACL$FieldToMatchProperty | [[cdk.support/lookup-entry]] | `:field-to-match` |
 | `textTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:text-transformations` |
 "
   [^CfnWebACL$XssMatchStatementProperty$Builder builder id config]

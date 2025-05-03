@@ -18,9 +18,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `healthEventsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-events-config` |
+| `healthEventsConfig` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$HealthEventsConfigProperty | [[cdk.support/lookup-entry]] | `:health-events-config` |
 | `includeLinkedAccounts` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-linked-accounts` |
-| `internetMeasurementsLogDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:internet-measurements-log-delivery` |
+| `internetMeasurementsLogDelivery` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$InternetMeasurementsLogDeliveryProperty | [[cdk.support/lookup-entry]] | `:internet-measurements-log-delivery` |
 | `linkedAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:linked-account-id` |
 | `maxCityNetworksToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-city-networks-to-monitor` |
 | `monitorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-name` |
@@ -79,9 +79,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `availabilityLocalHealthEventsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:availability-local-health-events-config` |
+| `availabilityLocalHealthEventsConfig` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$LocalHealthEventsConfigProperty | [[cdk.support/lookup-entry]] | `:availability-local-health-events-config` |
 | `availabilityScoreThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:availability-score-threshold` |
-| `performanceLocalHealthEventsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:performance-local-health-events-config` |
+| `performanceLocalHealthEventsConfig` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$LocalHealthEventsConfigProperty | [[cdk.support/lookup-entry]] | `:performance-local-health-events-config` |
 | `performanceScoreThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:performance-score-threshold` |
 "
   [^CfnMonitor$HealthEventsConfigProperty$Builder builder id config]
@@ -116,7 +116,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-config` |
+| `s3Config` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$S3ConfigProperty | [[cdk.support/lookup-entry]] | `:s3-config` |
 "
   [^CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-config)]
@@ -180,7 +180,7 @@
 |---|---|---|---|
 | `healthEventsConfig` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$HealthEventsConfigProperty | [[cdk.support/lookup-entry]] | `:health-events-config` |
 | `includeLinkedAccounts` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-linked-accounts` |
-| `internetMeasurementsLogDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:internet-measurements-log-delivery` |
+| `internetMeasurementsLogDelivery` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$InternetMeasurementsLogDeliveryProperty | [[cdk.support/lookup-entry]] | `:internet-measurements-log-delivery` |
 | `linkedAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:linked-account-id` |
 | `maxCityNetworksToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-city-networks-to-monitor` |
 | `monitorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitor-name` |

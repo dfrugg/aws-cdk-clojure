@@ -31,7 +31,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `browserPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:browser-policy` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -68,7 +68,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `browserPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:browser-policy` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -183,7 +183,7 @@
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
-| `ipRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-rules` |
+| `ipRules` | java.util.List | [[cdk.support/lookup-entry]] | `:ip-rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIpAccessSettings$Builder builder id config]
@@ -257,7 +257,7 @@
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
-| `ipRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-rules` |
+| `ipRules` | java.util.List | [[cdk.support/lookup-entry]] | `:ip-rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIpAccessSettingsProps$Builder builder id config]
@@ -370,7 +370,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
 | `browserSettingsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:browser-settings-arn` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
@@ -623,7 +623,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
-| `cookieSynchronizationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookie-synchronization-configuration` |
+| `cookieSynchronizationConfiguration` | software.amazon.awscdk.services.workspacesweb.CfnUserSettings$CookieSynchronizationConfigurationProperty | [[cdk.support/lookup-entry]] | `:cookie-synchronization-configuration` |
 | `copyAllowed` | java.lang.String | [[cdk.support/lookup-entry]] | `:copy-allowed` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `disconnectTimeoutInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:disconnect-timeout-in-minutes` |
@@ -714,7 +714,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowlist` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowlist` |
+| `allowlist` | java.util.List | [[cdk.support/lookup-entry]] | `:allowlist` |
 | `blocklist` | java.util.List | [[cdk.support/lookup-entry]] | `:blocklist` |
 "
   [^CfnUserSettings$CookieSynchronizationConfigurationProperty$Builder builder id config]
@@ -745,8 +745,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
-| `cookieSynchronizationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookie-synchronization-configuration` |
+| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `cookieSynchronizationConfiguration` | software.amazon.awscdk.services.workspacesweb.CfnUserSettings$CookieSynchronizationConfigurationProperty | [[cdk.support/lookup-entry]] | `:cookie-synchronization-configuration` |
 | `copyAllowed` | java.lang.String | [[cdk.support/lookup-entry]] | `:copy-allowed` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `disconnectTimeoutInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:disconnect-timeout-in-minutes` |
