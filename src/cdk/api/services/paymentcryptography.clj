@@ -80,9 +80,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `exportable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exportable` |
-| `keyAttributes` | software.amazon.awscdk.services.paymentcryptography.CfnKey$KeyAttributesProperty | [[cdk.support/lookup-entry]] | `:key-attributes` |
+| `keyAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-attributes` |
 | `keyCheckValueAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-check-value-algorithm` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -122,7 +122,7 @@
 |---|---|---|---|
 | `keyAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `keyClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-class` |
-| `keyModesOfUse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-modes-of-use` |
+| `keyModesOfUse` | software.amazon.awscdk.services.paymentcryptography.CfnKey$KeyModesOfUseProperty | [[cdk.support/lookup-entry]] | `:key-modes-of-use` |
 | `keyUsage` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnKey$KeyAttributesProperty$Builder builder id config]
@@ -161,11 +161,11 @@
 | `deriveKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:derive-key` |
 | `encrypt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypt` |
 | `generate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:generate` |
-| `noRestrictions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-restrictions` |
-| `sign` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sign` |
+| `noRestrictions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-restrictions` |
+| `sign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sign` |
 | `unwrap` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unwrap` |
-| `verify` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:verify` |
-| `wrap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:wrap` |
+| `verify` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:verify` |
+| `wrap` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:wrap` |
 "
   [^CfnKey$KeyModesOfUseProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :decrypt)]

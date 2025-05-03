@@ -23,7 +23,7 @@
 | `customPrivateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-private-key` |
 | `disableAutomatedBackup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-automated-backup` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
-| `engineAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:engine-attributes` |
+| `engineAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:engine-attributes` |
 | `engineModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-model` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `instanceProfileArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-profile-arn` |
@@ -134,13 +134,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `associatePublicIpAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
+| `associatePublicIpAddress` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
 | `backupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-id` |
 | `backupRetentionCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:backup-retention-count` |
 | `customCertificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-certificate` |
 | `customDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-domain` |
 | `customPrivateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-private-key` |
-| `disableAutomatedBackup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-automated-backup` |
+| `disableAutomatedBackup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-automated-backup` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:engine-attributes` |
 | `engineModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-model` |

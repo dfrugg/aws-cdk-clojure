@@ -65,7 +65,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnAlarmModel$AcknowledgeFlowProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -93,14 +93,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamoDBv2` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$DynamoDBv2Property | [[cdk.support/lookup-entry]] | `:dynamo-d-bv2` |
+| `dynamoDBv2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-d-bv2` |
 | `dynamoDb` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-db` |
 | `firehose` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firehose` |
 | `iotEvents` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$IotEventsProperty | [[cdk.support/lookup-entry]] | `:iot-events` |
 | `iotSiteWise` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iot-site-wise` |
 | `iotTopicPublish` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$IotTopicPublishProperty | [[cdk.support/lookup-entry]] | `:iot-topic-publish` |
-| `lambda` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$LambdaProperty | [[cdk.support/lookup-entry]] | `:lambda` |
-| `sns` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$SnsProperty | [[cdk.support/lookup-entry]] | `:sns` |
+| `lambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda` |
+| `sns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns` |
 | `sqs` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$SqsProperty | [[cdk.support/lookup-entry]] | `:sqs` |
 "
   [^CfnAlarmModel$AlarmActionProperty$Builder builder id config]
@@ -176,7 +176,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alarmActions` | java.util.List | [[cdk.support/lookup-entry]] | `:alarm-actions` |
+| `alarmActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-actions` |
 "
   [^CfnAlarmModel$AlarmEventActionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :alarm-actions)]
@@ -204,7 +204,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `simpleRule` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$SimpleRuleProperty | [[cdk.support/lookup-entry]] | `:simple-rule` |
+| `simpleRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:simple-rule` |
 "
   [^CfnAlarmModel$AlarmRuleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :simple-rule)]
@@ -264,7 +264,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `quality` | java.lang.String | [[cdk.support/lookup-entry]] | `:quality` |
-| `timestamp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timestamp` |
+| `timestamp` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AssetPropertyTimestampProperty | [[cdk.support/lookup-entry]] | `:timestamp` |
 | `value` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AssetPropertyVariantProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAlarmModel$AssetPropertyValueProperty$Builder builder id config]
@@ -335,10 +335,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alarmCapabilities` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-capabilities` |
-| `alarmEventActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-event-actions` |
+| `alarmEventActions` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AlarmEventActionsProperty | [[cdk.support/lookup-entry]] | `:alarm-event-actions` |
 | `alarmModelDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-model-description` |
 | `alarmModelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-model-name` |
-| `alarmRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-rule` |
+| `alarmRule` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AlarmRuleProperty | [[cdk.support/lookup-entry]] | `:alarm-rule` |
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `severity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:severity` |
@@ -386,7 +386,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `payload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payload` |
+| `payload` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnAlarmModel$DynamoDBv2Property$Builder builder id config]
@@ -421,7 +421,7 @@
 | `hashKeyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:hash-key-type` |
 | `hashKeyValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:hash-key-value` |
 | `operation` | java.lang.String | [[cdk.support/lookup-entry]] | `:operation` |
-| `payload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payload` |
+| `payload` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 | `payloadField` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-field` |
 | `rangeKeyField` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-key-field` |
 | `rangeKeyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-key-type` |
@@ -473,7 +473,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deliveryStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-name` |
-| `payload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payload` |
+| `payload` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 | `separator` | java.lang.String | [[cdk.support/lookup-entry]] | `:separator` |
 "
   [^CfnAlarmModel$FirehoseProperty$Builder builder id config]
@@ -506,7 +506,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `disabledOnInitialization` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disabled-on-initialization` |
+| `disabledOnInitialization` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disabled-on-initialization` |
 "
   [^CfnAlarmModel$InitializationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :disabled-on-initialization)]
@@ -569,7 +569,7 @@
 | `entryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:entry-id` |
 | `propertyAlias` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-alias` |
 | `propertyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-id` |
-| `propertyValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-value` |
+| `propertyValue` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AssetPropertyValueProperty | [[cdk.support/lookup-entry]] | `:property-value` |
 "
   [^CfnAlarmModel$IotSiteWiseProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :asset-id)]
@@ -702,7 +702,7 @@
 | `alarmEventActions` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AlarmEventActionsProperty | [[cdk.support/lookup-entry]] | `:alarm-event-actions` |
 | `alarmModelDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-model-description` |
 | `alarmModelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-model-name` |
-| `alarmRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-rule` |
+| `alarmRule` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AlarmRuleProperty | [[cdk.support/lookup-entry]] | `:alarm-rule` |
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `severity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:severity` |
@@ -784,7 +784,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `payload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payload` |
+| `payload` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnAlarmModel$SnsProperty$Builder builder id config]
@@ -817,7 +817,7 @@
 |---|---|---|---|
 | `payload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payload` |
 | `queueUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-url` |
-| `useBase64` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-base64` |
+| `useBase64` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-base64` |
 "
   [^CfnAlarmModel$SqsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :payload)]
@@ -849,17 +849,17 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clearTimer` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$ClearTimerProperty | [[cdk.support/lookup-entry]] | `:clear-timer` |
+| `clearTimer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:clear-timer` |
 | `dynamoDBv2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-d-bv2` |
 | `dynamoDb` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-db` |
-| `firehose` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$FirehoseProperty | [[cdk.support/lookup-entry]] | `:firehose` |
-| `iotEvents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iot-events` |
+| `firehose` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firehose` |
+| `iotEvents` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$IotEventsProperty | [[cdk.support/lookup-entry]] | `:iot-events` |
 | `iotSiteWise` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$IotSiteWiseProperty | [[cdk.support/lookup-entry]] | `:iot-site-wise` |
 | `iotTopicPublish` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$IotTopicPublishProperty | [[cdk.support/lookup-entry]] | `:iot-topic-publish` |
-| `lambda` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$LambdaProperty | [[cdk.support/lookup-entry]] | `:lambda` |
+| `lambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda` |
 | `resetTimer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reset-timer` |
-| `setTimer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:set-timer` |
-| `setVariable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:set-variable` |
+| `setTimer` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$SetTimerProperty | [[cdk.support/lookup-entry]] | `:set-timer` |
+| `setVariable` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$SetVariableProperty | [[cdk.support/lookup-entry]] | `:set-variable` |
 | `sns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns` |
 | `sqs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs` |
 "
@@ -945,8 +945,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `quality` | java.lang.String | [[cdk.support/lookup-entry]] | `:quality` |
-| `timestamp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timestamp` |
-| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
+| `timestamp` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$AssetPropertyTimestampProperty | [[cdk.support/lookup-entry]] | `:timestamp` |
+| `value` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$AssetPropertyVariantProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDetectorModel$AssetPropertyValueProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :quality)]
@@ -1015,7 +1015,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `detectorModelDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:detector-model-definition` |
+| `detectorModelDefinition` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$DetectorModelDefinitionProperty | [[cdk.support/lookup-entry]] | `:detector-model-definition` |
 | `detectorModelDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-model-description` |
 | `detectorModelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-model-name` |
 | `evaluationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:evaluation-method` |
@@ -1155,7 +1155,7 @@
 | `hashKeyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:hash-key-type` |
 | `hashKeyValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:hash-key-value` |
 | `operation` | java.lang.String | [[cdk.support/lookup-entry]] | `:operation` |
-| `payload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payload` |
+| `payload` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 | `payloadField` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-field` |
 | `rangeKeyField` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-key-field` |
 | `rangeKeyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-key-type` |
@@ -1206,7 +1206,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `condition` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition` |
 | `eventName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-name` |
 "
@@ -1241,7 +1241,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deliveryStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-name` |
-| `payload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:payload` |
+| `payload` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 | `separator` | java.lang.String | [[cdk.support/lookup-entry]] | `:separator` |
 "
   [^CfnDetectorModel$FirehoseProperty$Builder builder id config]
@@ -1435,7 +1435,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
+| `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^CfnDetectorModel$OnExitProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :events)]
@@ -1463,8 +1463,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `transitionEvents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transition-events` |
+| `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
+| `transitionEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:transition-events` |
 "
   [^CfnDetectorModel$OnInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :events)]
@@ -1729,7 +1729,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `onEnter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-enter` |
+| `onEnter` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$OnEnterProperty | [[cdk.support/lookup-entry]] | `:on-enter` |
 | `onExit` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$OnExitProperty | [[cdk.support/lookup-entry]] | `:on-exit` |
 | `onInput` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$OnInputProperty | [[cdk.support/lookup-entry]] | `:on-input` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
@@ -1896,7 +1896,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `inputDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-definition` |
+| `inputDefinition` | software.amazon.awscdk.services.iotevents.CfnInput$InputDefinitionProperty | [[cdk.support/lookup-entry]] | `:input-definition` |
 | `inputDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-description` |
 | `inputName` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

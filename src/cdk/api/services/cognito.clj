@@ -518,11 +518,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `allowUnauthenticatedIdentities` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-unauthenticated-identities` |
 | `cognitoEvents` | java.lang.Object | [[cdk.support/lookup-entry]] | `:cognito-events` |
 | `cognitoIdentityProviders` | java.util.List | [[cdk.support/lookup-entry]] | `:cognito-identity-providers` |
-| `cognitoStreams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cognito-streams` |
+| `cognitoStreams` | software.amazon.awscdk.services.cognito.CfnIdentityPool$CognitoStreamsProperty | [[cdk.support/lookup-entry]] | `:cognito-streams` |
 | `developerProviderName` | java.lang.String | [[cdk.support/lookup-entry]] | `:developer-provider-name` |
 | `identityPoolName` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-pool-name` |
 | `openIdConnectProviderArns` | java.util.List | [[cdk.support/lookup-entry]] | `:open-id-connect-provider-arns` |
-| `pushSync` | software.amazon.awscdk.services.cognito.CfnIdentityPool$PushSyncProperty | [[cdk.support/lookup-entry]] | `:push-sync` |
+| `pushSync` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:push-sync` |
 | `samlProviderArns` | java.util.List | [[cdk.support/lookup-entry]] | `:saml-provider-arns` |
 | `supportedLoginProviders` | java.lang.Object | [[cdk.support/lookup-entry]] | `:supported-login-providers` |
 "
@@ -574,7 +574,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `providerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-name` |
-| `serverSideTokenCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-side-token-check` |
+| `serverSideTokenCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:server-side-token-check` |
 "
   [^CfnIdentityPool$CognitoIdentityProviderProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :client-id)]
@@ -643,7 +643,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `identityPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-pool-id` |
 | `identityProviderName` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-provider-name` |
 | `principalTags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:principal-tags` |
-| `useDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-defaults` |
+| `useDefaults` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-defaults` |
 "
   [^CfnIdentityPoolPrincipalTag$Builder builder id config]
   (when-some [data (lookup-entry config id :identity-pool-id)]
@@ -715,9 +715,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowClassicFlow` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-classic-flow` |
-| `allowUnauthenticatedIdentities` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-unauthenticated-identities` |
+| `allowUnauthenticatedIdentities` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-unauthenticated-identities` |
 | `cognitoEvents` | java.lang.Object | [[cdk.support/lookup-entry]] | `:cognito-events` |
-| `cognitoIdentityProviders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cognito-identity-providers` |
+| `cognitoIdentityProviders` | java.util.List | [[cdk.support/lookup-entry]] | `:cognito-identity-providers` |
 | `cognitoStreams` | software.amazon.awscdk.services.cognito.CfnIdentityPool$CognitoStreamsProperty | [[cdk.support/lookup-entry]] | `:cognito-streams` |
 | `developerProviderName` | java.lang.String | [[cdk.support/lookup-entry]] | `:developer-provider-name` |
 | `identityPoolName` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-pool-name` |
@@ -804,7 +804,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `identityPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-pool-id` |
-| `roleMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:role-mappings` |
+| `roleMappings` | java.util.Map | [[cdk.support/lookup-entry]] | `:role-mappings` |
 | `roles` | java.lang.Object | [[cdk.support/lookup-entry]] | `:roles` |
 "
   [^CfnIdentityPoolRoleAttachment$Builder builder id config]
@@ -910,7 +910,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `ambiguousRoleResolution` | java.lang.String | [[cdk.support/lookup-entry]] | `:ambiguous-role-resolution` |
 | `identityProvider` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-provider` |
-| `rulesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules-configuration` |
+| `rulesConfiguration` | software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment$RulesConfigurationTypeProperty | [[cdk.support/lookup-entry]] | `:rules-configuration` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnIdentityPoolRoleAttachment$RoleMappingProperty$Builder builder id config]
@@ -1032,7 +1032,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-configuration` |
+| `cloudWatchLogsConfiguration` | software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration$CloudWatchLogsConfigurationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-configuration` |
 | `eventSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-source` |
 | `logLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-level` |
 "
@@ -1125,7 +1125,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowAdminCreateUserOnly` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-admin-create-user-only` |
+| `allowAdminCreateUserOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-admin-create-user-only` |
 | `inviteMessageTemplate` | software.amazon.awscdk.services.cognito.CfnUserPool$InviteMessageTemplateProperty | [[cdk.support/lookup-entry]] | `:invite-message-template` |
 | `unusedAccountValidityDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unused-account-validity-days` |
 "
@@ -1169,7 +1169,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `emailVerificationMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:email-verification-message` |
 | `emailVerificationSubject` | java.lang.String | [[cdk.support/lookup-entry]] | `:email-verification-subject` |
 | `enabledMfas` | java.util.List | [[cdk.support/lookup-entry]] | `:enabled-mfas` |
-| `lambdaConfig` | software.amazon.awscdk.services.cognito.CfnUserPool$LambdaConfigProperty | [[cdk.support/lookup-entry]] | `:lambda-config` |
+| `lambdaConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-config` |
 | `mfaConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:mfa-configuration` |
 | `policies` | software.amazon.awscdk.services.cognito.CfnUserPool$PoliciesProperty | [[cdk.support/lookup-entry]] | `:policies` |
 | `schema` | java.util.List | [[cdk.support/lookup-entry]] | `:schema` |
@@ -1177,12 +1177,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `smsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sms-configuration` |
 | `smsVerificationMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:sms-verification-message` |
 | `userAttributeUpdateSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attribute-update-settings` |
-| `userPoolAddOns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-pool-add-ons` |
+| `userPoolAddOns` | software.amazon.awscdk.services.cognito.CfnUserPool$UserPoolAddOnsProperty | [[cdk.support/lookup-entry]] | `:user-pool-add-ons` |
 | `userPoolName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-name` |
 | `userPoolTags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:user-pool-tags` |
 | `usernameAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:username-attributes` |
-| `usernameConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPool$UsernameConfigurationProperty | [[cdk.support/lookup-entry]] | `:username-configuration` |
-| `verificationMessageTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:verification-message-template` |
+| `usernameConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:username-configuration` |
+| `verificationMessageTemplate` | software.amazon.awscdk.services.cognito.CfnUserPool$VerificationMessageTemplateProperty | [[cdk.support/lookup-entry]] | `:verification-message-template` |
 "
   [^CfnUserPool$Builder builder id config]
   (when-some [data (lookup-entry config id :account-recovery-setting)]
@@ -1260,7 +1260,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `externalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:external-id` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `userDataShared` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-data-shared` |
+| `userDataShared` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-data-shared` |
 "
   [^CfnUserPoolClient$AnalyticsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :application-arn)]
@@ -1298,17 +1298,17 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `accessTokenValidity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:access-token-validity` |
 | `allowedOAuthFlows` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-o-auth-flows` |
-| `allowedOAuthFlowsUserPoolClient` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allowed-o-auth-flows-user-pool-client` |
+| `allowedOAuthFlowsUserPoolClient` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowed-o-auth-flows-user-pool-client` |
 | `allowedOAuthScopes` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-o-auth-scopes` |
-| `analyticsConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPoolClient$AnalyticsConfigurationProperty | [[cdk.support/lookup-entry]] | `:analytics-configuration` |
+| `analyticsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analytics-configuration` |
 | `authSessionValidity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:auth-session-validity` |
 | `callbackUrLs` | java.util.List | [[cdk.support/lookup-entry]] | `:callback-ur-ls` |
 | `clientName` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-name` |
 | `defaultRedirectUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-redirect-uri` |
-| `enablePropagateAdditionalUserContextData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-propagate-additional-user-context-data` |
+| `enablePropagateAdditionalUserContextData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-propagate-additional-user-context-data` |
 | `enableTokenRevocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-token-revocation` |
 | `explicitAuthFlows` | java.util.List | [[cdk.support/lookup-entry]] | `:explicit-auth-flows` |
-| `generateSecret` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:generate-secret` |
+| `generateSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:generate-secret` |
 | `idTokenValidity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:id-token-validity` |
 | `logoutUrLs` | java.util.List | [[cdk.support/lookup-entry]] | `:logout-ur-ls` |
 | `preventUserExistenceErrors` | java.lang.String | [[cdk.support/lookup-entry]] | `:prevent-user-existence-errors` |
@@ -1389,7 +1389,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `accessTokenValidity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:access-token-validity` |
 | `allowedOAuthFlows` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-o-auth-flows` |
-| `allowedOAuthFlowsUserPoolClient` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allowed-o-auth-flows-user-pool-client` |
+| `allowedOAuthFlowsUserPoolClient` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowed-o-auth-flows-user-pool-client` |
 | `allowedOAuthScopes` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-o-auth-scopes` |
 | `analyticsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analytics-configuration` |
 | `authSessionValidity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:auth-session-validity` |
@@ -1399,7 +1399,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enablePropagateAdditionalUserContextData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-propagate-additional-user-context-data` |
 | `enableTokenRevocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-token-revocation` |
 | `explicitAuthFlows` | java.util.List | [[cdk.support/lookup-entry]] | `:explicit-auth-flows` |
-| `generateSecret` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:generate-secret` |
+| `generateSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:generate-secret` |
 | `idTokenValidity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:id-token-validity` |
 | `logoutUrLs` | java.util.List | [[cdk.support/lookup-entry]] | `:logout-ur-ls` |
 | `preventUserExistenceErrors` | java.lang.String | [[cdk.support/lookup-entry]] | `:prevent-user-existence-errors` |
@@ -1574,8 +1574,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `challengeRequiredOnNewDevice` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:challenge-required-on-new-device` |
-| `deviceOnlyRememberedOnUserPrompt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:device-only-remembered-on-user-prompt` |
+| `challengeRequiredOnNewDevice` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:challenge-required-on-new-device` |
+| `deviceOnlyRememberedOnUserPrompt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-only-remembered-on-user-prompt` |
 "
   [^CfnUserPool$DeviceConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :challenge-required-on-new-device)]
@@ -1942,7 +1942,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `createAuthChallenge` | java.lang.String | [[cdk.support/lookup-entry]] | `:create-auth-challenge` |
-| `customEmailSender` | software.amazon.awscdk.services.cognito.CfnUserPool$CustomEmailSenderProperty | [[cdk.support/lookup-entry]] | `:custom-email-sender` |
+| `customEmailSender` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-email-sender` |
 | `customMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-message` |
 | `customSmsSender` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-sms-sender` |
 | `defineAuthChallenge` | java.lang.String | [[cdk.support/lookup-entry]] | `:define-auth-challenge` |
@@ -2041,7 +2041,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `minimumLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-length` |
 | `requireLowercase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-lowercase` |
-| `requireNumbers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-numbers` |
+| `requireNumbers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-numbers` |
 | `requireSymbols` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-symbols` |
 | `requireUppercase` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-uppercase` |
 | `temporaryPasswordValidityDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:temporary-password-validity-days` |
@@ -2082,7 +2082,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `passwordPolicy` | software.amazon.awscdk.services.cognito.CfnUserPool$PasswordPolicyProperty | [[cdk.support/lookup-entry]] | `:password-policy` |
+| `passwordPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:password-policy` |
 "
   [^CfnUserPool$PoliciesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :password-policy)]
@@ -2142,29 +2142,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accountRecoverySetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:account-recovery-setting` |
-| `adminCreateUserConfig` | software.amazon.awscdk.services.cognito.CfnUserPool$AdminCreateUserConfigProperty | [[cdk.support/lookup-entry]] | `:admin-create-user-config` |
+| `adminCreateUserConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:admin-create-user-config` |
 | `aliasAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:alias-attributes` |
 | `autoVerifiedAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:auto-verified-attributes` |
 | `deletionProtection` | java.lang.String | [[cdk.support/lookup-entry]] | `:deletion-protection` |
-| `deviceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-configuration` |
-| `emailConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPool$EmailConfigurationProperty | [[cdk.support/lookup-entry]] | `:email-configuration` |
+| `deviceConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPool$DeviceConfigurationProperty | [[cdk.support/lookup-entry]] | `:device-configuration` |
+| `emailConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:email-configuration` |
 | `emailVerificationMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:email-verification-message` |
 | `emailVerificationSubject` | java.lang.String | [[cdk.support/lookup-entry]] | `:email-verification-subject` |
 | `enabledMfas` | java.util.List | [[cdk.support/lookup-entry]] | `:enabled-mfas` |
 | `lambdaConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-config` |
 | `mfaConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:mfa-configuration` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
-| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
+| `policies` | software.amazon.awscdk.services.cognito.CfnUserPool$PoliciesProperty | [[cdk.support/lookup-entry]] | `:policies` |
+| `schema` | java.util.List | [[cdk.support/lookup-entry]] | `:schema` |
 | `smsAuthenticationMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:sms-authentication-message` |
 | `smsConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPool$SmsConfigurationProperty | [[cdk.support/lookup-entry]] | `:sms-configuration` |
 | `smsVerificationMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:sms-verification-message` |
-| `userAttributeUpdateSettings` | software.amazon.awscdk.services.cognito.CfnUserPool$UserAttributeUpdateSettingsProperty | [[cdk.support/lookup-entry]] | `:user-attribute-update-settings` |
-| `userPoolAddOns` | software.amazon.awscdk.services.cognito.CfnUserPool$UserPoolAddOnsProperty | [[cdk.support/lookup-entry]] | `:user-pool-add-ons` |
+| `userAttributeUpdateSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attribute-update-settings` |
+| `userPoolAddOns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-pool-add-ons` |
 | `userPoolName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-name` |
 | `userPoolTags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:user-pool-tags` |
 | `usernameAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:username-attributes` |
 | `usernameConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPool$UsernameConfigurationProperty | [[cdk.support/lookup-entry]] | `:username-configuration` |
-| `verificationMessageTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:verification-message-template` |
+| `verificationMessageTemplate` | software.amazon.awscdk.services.cognito.CfnUserPool$VerificationMessageTemplateProperty | [[cdk.support/lookup-entry]] | `:verification-message-template` |
 "
   [^CfnUserPoolProps$Builder builder id config]
   (when-some [data (lookup-entry config id :account-recovery-setting)]
@@ -2308,7 +2308,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `identifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:identifier` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `scopes` | java.util.List | [[cdk.support/lookup-entry]] | `:scopes` |
+| `scopes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scopes` |
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
 "
   [^CfnUserPoolResourceServerProps$Builder builder id config]
@@ -2406,8 +2406,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `highAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:high-action` |
-| `lowAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:low-action` |
-| `mediumAction` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$AccountTakeoverActionTypeProperty | [[cdk.support/lookup-entry]] | `:medium-action` |
+| `lowAction` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$AccountTakeoverActionTypeProperty | [[cdk.support/lookup-entry]] | `:low-action` |
+| `mediumAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:medium-action` |
 "
   [^CfnUserPoolRiskConfigurationAttachment$AccountTakeoverActionsTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :high-action)]
@@ -2439,7 +2439,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$AccountTakeoverActionsTypeProperty | [[cdk.support/lookup-entry]] | `:actions` |
 | `notifyConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$NotifyConfigurationTypeProperty | [[cdk.support/lookup-entry]] | `:notify-configuration` |
 "
   [^CfnUserPoolRiskConfigurationAttachment$AccountTakeoverRiskConfigurationTypeProperty$Builder builder id config]
@@ -2472,8 +2472,8 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `accountTakeoverRiskConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:account-takeover-risk-configuration` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
-| `compromisedCredentialsRiskConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compromised-credentials-risk-configuration` |
-| `riskExceptionConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$RiskExceptionConfigurationTypeProperty | [[cdk.support/lookup-entry]] | `:risk-exception-configuration` |
+| `compromisedCredentialsRiskConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$CompromisedCredentialsRiskConfigurationTypeProperty | [[cdk.support/lookup-entry]] | `:compromised-credentials-risk-configuration` |
+| `riskExceptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:risk-exception-configuration` |
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
 "
   [^CfnUserPoolRiskConfigurationAttachment$Builder builder id config]
@@ -2538,7 +2538,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$CompromisedCredentialsActionsTypeProperty | [[cdk.support/lookup-entry]] | `:actions` |
 | `eventFilter` | java.util.List | [[cdk.support/lookup-entry]] | `:event-filter` |
 "
   [^CfnUserPoolRiskConfigurationAttachment$CompromisedCredentialsRiskConfigurationTypeProperty$Builder builder id config]
@@ -2569,10 +2569,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `blockEmail` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-email` |
+| `blockEmail` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$NotifyEmailTypeProperty | [[cdk.support/lookup-entry]] | `:block-email` |
 | `from` | java.lang.String | [[cdk.support/lookup-entry]] | `:from` |
 | `mfaEmail` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mfa-email` |
-| `noActionEmail` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-action-email` |
+| `noActionEmail` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$NotifyEmailTypeProperty | [[cdk.support/lookup-entry]] | `:no-action-email` |
 | `replyTo` | java.lang.String | [[cdk.support/lookup-entry]] | `:reply-to` |
 | `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |
 "
@@ -2646,9 +2646,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accountTakeoverRiskConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$AccountTakeoverRiskConfigurationTypeProperty | [[cdk.support/lookup-entry]] | `:account-takeover-risk-configuration` |
+| `accountTakeoverRiskConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:account-takeover-risk-configuration` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
-| `compromisedCredentialsRiskConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compromised-credentials-risk-configuration` |
+| `compromisedCredentialsRiskConfiguration` | software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment$CompromisedCredentialsRiskConfigurationTypeProperty | [[cdk.support/lookup-entry]] | `:compromised-credentials-risk-configuration` |
 | `riskExceptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:risk-exception-configuration` |
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
 "
@@ -2719,11 +2719,11 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `attributeDataType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-data-type` |
 | `developerOnlyAttribute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:developer-only-attribute` |
-| `mutable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutable` |
+| `mutable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:mutable` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `numberAttributeConstraints` | software.amazon.awscdk.services.cognito.CfnUserPool$NumberAttributeConstraintsProperty | [[cdk.support/lookup-entry]] | `:number-attribute-constraints` |
-| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
-| `stringAttributeConstraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-attribute-constraints` |
+| `required` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:required` |
+| `stringAttributeConstraints` | software.amazon.awscdk.services.cognito.CfnUserPool$StringAttributeConstraintsProperty | [[cdk.support/lookup-entry]] | `:string-attribute-constraints` |
 "
   [^CfnUserPool$SchemaAttributeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attribute-data-type)]
@@ -2955,14 +2955,14 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientMetadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:client-metadata` |
+| `clientMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-metadata` |
 | `desiredDeliveryMediums` | java.util.List | [[cdk.support/lookup-entry]] | `:desired-delivery-mediums` |
 | `forceAliasCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force-alias-creation` |
 | `messageAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-action` |
 | `userAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:user-attributes` |
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
-| `validationData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-data` |
+| `validationData` | java.util.List | [[cdk.support/lookup-entry]] | `:validation-data` |
 "
   [^CfnUserPoolUser$Builder builder id config]
   (when-some [data (lookup-entry config id :client-metadata)]
@@ -3036,7 +3036,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `desiredDeliveryMediums` | java.util.List | [[cdk.support/lookup-entry]] | `:desired-delivery-mediums` |
 | `forceAliasCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force-alias-creation` |
 | `messageAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-action` |
-| `userAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attributes` |
+| `userAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:user-attributes` |
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 | `validationData` | java.util.List | [[cdk.support/lookup-entry]] | `:validation-data` |

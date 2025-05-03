@@ -125,7 +125,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applicationSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-source-config` |
+| `applicationSourceConfig` | software.amazon.awscdk.services.appintegrations.CfnApplication$ApplicationSourceConfigProperty | [[cdk.support/lookup-entry]] | `:application-source-config` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
@@ -169,11 +169,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `fileConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file-configuration` |
+| `fileConfiguration` | software.amazon.awscdk.services.appintegrations.CfnDataIntegration$FileConfigurationProperty | [[cdk.support/lookup-entry]] | `:file-configuration` |
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `objectConfiguration` | java.lang.Object | [[cdk.support/lookup-entry]] | `:object-configuration` |
-| `scheduleConfig` | software.amazon.awscdk.services.appintegrations.CfnDataIntegration$ScheduleConfigProperty | [[cdk.support/lookup-entry]] | `:schedule-config` |
+| `scheduleConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule-config` |
 | `sourceUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-uri` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -333,7 +333,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `eventBridgeBus` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-bridge-bus` |
-| `eventFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-filter` |
+| `eventFilter` | software.amazon.awscdk.services.appintegrations.CfnEventIntegration$EventFilterProperty | [[cdk.support/lookup-entry]] | `:event-filter` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -401,7 +401,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `eventBridgeBus` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-bridge-bus` |
-| `eventFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-filter` |
+| `eventFilter` | software.amazon.awscdk.services.appintegrations.CfnEventIntegration$EventFilterProperty | [[cdk.support/lookup-entry]] | `:event-filter` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

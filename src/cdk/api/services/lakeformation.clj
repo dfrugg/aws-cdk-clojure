@@ -55,10 +55,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columnNames` | java.util.List | [[cdk.support/lookup-entry]] | `:column-names` |
-| `columnWildcard` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-wildcard` |
+| `columnWildcard` | software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter$ColumnWildcardProperty | [[cdk.support/lookup-entry]] | `:column-wildcard` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `rowFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-filter` |
+| `rowFilter` | software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter$RowFilterProperty | [[cdk.support/lookup-entry]] | `:row-filter` |
 | `tableCatalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-catalog-id` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
@@ -129,7 +129,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columnNames` | java.util.List | [[cdk.support/lookup-entry]] | `:column-names` |
-| `columnWildcard` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-wildcard` |
+| `columnWildcard` | software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter$ColumnWildcardProperty | [[cdk.support/lookup-entry]] | `:column-wildcard` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rowFilter` | software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter$RowFilterProperty | [[cdk.support/lookup-entry]] | `:row-filter` |
@@ -207,7 +207,7 @@
 |---|---|---|---|
 | `admins` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:admins` |
 | `allowExternalDataFiltering` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-external-data-filtering` |
-| `allowFullTableExternalDataAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-full-table-external-data-access` |
+| `allowFullTableExternalDataAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-full-table-external-data-access` |
 | `authorizedSessionTagValueList` | java.util.List | [[cdk.support/lookup-entry]] | `:authorized-session-tag-value-list` |
 | `createDatabaseDefaultPermissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-database-default-permissions` |
 | `createTableDefaultPermissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-table-default-permissions` |
@@ -289,7 +289,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
-| `principal` | software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings$DataLakePrincipalProperty | [[cdk.support/lookup-entry]] | `:principal` |
+| `principal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:principal` |
 "
   [^CfnDataLakeSettings$PrincipalPermissionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :permissions)]
@@ -319,13 +319,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `admins` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:admins` |
+| `admins` | java.util.List | [[cdk.support/lookup-entry]] | `:admins` |
 | `allowExternalDataFiltering` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-external-data-filtering` |
-| `allowFullTableExternalDataAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-full-table-external-data-access` |
+| `allowFullTableExternalDataAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-full-table-external-data-access` |
 | `authorizedSessionTagValueList` | java.util.List | [[cdk.support/lookup-entry]] | `:authorized-session-tag-value-list` |
-| `createDatabaseDefaultPermissions` | java.util.List | [[cdk.support/lookup-entry]] | `:create-database-default-permissions` |
-| `createTableDefaultPermissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-table-default-permissions` |
-| `externalDataFilteringAllowList` | java.util.List | [[cdk.support/lookup-entry]] | `:external-data-filtering-allow-list` |
+| `createDatabaseDefaultPermissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-database-default-permissions` |
+| `createTableDefaultPermissions` | java.util.List | [[cdk.support/lookup-entry]] | `:create-table-default-permissions` |
+| `externalDataFilteringAllowList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:external-data-filtering-allow-list` |
 | `mutationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:mutation-type` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `trustedResourceOwners` | java.util.List | [[cdk.support/lookup-entry]] | `:trusted-resource-owners` |
@@ -377,7 +377,7 @@
 | `dataLakePrincipal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-lake-principal` |
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
 | `permissionsWithGrantOption` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions-with-grant-option` |
-| `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
+| `resource` | software.amazon.awscdk.services.lakeformation.CfnPermissions$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPermissions$Builder builder id config]
   (when-some [data (lookup-entry config id :data-lake-principal)]
@@ -529,10 +529,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataLakePrincipal` | software.amazon.awscdk.services.lakeformation.CfnPermissions$DataLakePrincipalProperty | [[cdk.support/lookup-entry]] | `:data-lake-principal` |
+| `dataLakePrincipal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-lake-principal` |
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
 | `permissionsWithGrantOption` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions-with-grant-option` |
-| `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
+| `resource` | software.amazon.awscdk.services.lakeformation.CfnPermissions$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPermissionsProps$Builder builder id config]
   (when-some [data (lookup-entry config id :data-lake-principal)]
@@ -566,8 +566,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataLocationResource` | software.amazon.awscdk.services.lakeformation.CfnPermissions$DataLocationResourceProperty | [[cdk.support/lookup-entry]] | `:data-location-resource` |
-| `databaseResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:database-resource` |
+| `dataLocationResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-location-resource` |
+| `databaseResource` | software.amazon.awscdk.services.lakeformation.CfnPermissions$DatabaseResourceProperty | [[cdk.support/lookup-entry]] | `:database-resource` |
 | `tableResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-resource` |
 | `tableWithColumnsResource` | software.amazon.awscdk.services.lakeformation.CfnPermissions$TableWithColumnsResourceProperty | [[cdk.support/lookup-entry]] | `:table-with-columns-resource` |
 "
@@ -606,7 +606,7 @@
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tableWildcard` | software.amazon.awscdk.services.lakeformation.CfnPermissions$TableWildcardProperty | [[cdk.support/lookup-entry]] | `:table-wildcard` |
+| `tableWildcard` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-wildcard` |
 "
   [^CfnPermissions$TableResourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -648,7 +648,7 @@
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `columnNames` | java.util.List | [[cdk.support/lookup-entry]] | `:column-names` |
-| `columnWildcard` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-wildcard` |
+| `columnWildcard` | software.amazon.awscdk.services.lakeformation.CfnPermissions$ColumnWildcardProperty | [[cdk.support/lookup-entry]] | `:column-wildcard` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
@@ -689,8 +689,8 @@
 | `catalog` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog` |
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
 | `permissionsWithGrantOption` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions-with-grant-option` |
-| `principal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:principal` |
-| `resource` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
+| `principal` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$DataLakePrincipalProperty | [[cdk.support/lookup-entry]] | `:principal` |
+| `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPrincipalPermissions$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog)]
@@ -983,8 +983,8 @@
 | `catalog` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog` |
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
 | `permissionsWithGrantOption` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions-with-grant-option` |
-| `principal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:principal` |
-| `resource` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
+| `principal` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$DataLakePrincipalProperty | [[cdk.support/lookup-entry]] | `:principal` |
+| `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPrincipalPermissionsProps$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog)]
@@ -1023,11 +1023,11 @@
 | `catalog` | java.lang.Object | [[cdk.support/lookup-entry]] | `:catalog` |
 | `dataCellsFilter` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$DataCellsFilterResourceProperty | [[cdk.support/lookup-entry]] | `:data-cells-filter` |
 | `dataLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-location` |
-| `database` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$DatabaseResourceProperty | [[cdk.support/lookup-entry]] | `:database` |
+| `database` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:database` |
 | `lfTag` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lf-tag` |
 | `lfTagPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lf-tag-policy` |
-| `table` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$TableResourceProperty | [[cdk.support/lookup-entry]] | `:table` |
-| `tableWithColumns` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$TableWithColumnsResourceProperty | [[cdk.support/lookup-entry]] | `:table-with-columns` |
+| `table` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table` |
+| `tableWithColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-with-columns` |
 "
   [^CfnPrincipalPermissions$ResourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog)]
@@ -1146,7 +1146,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hybridAccessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:hybrid-access-enabled` |
+| `hybridAccessEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hybrid-access-enabled` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `useServiceLinkedRole` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-service-linked-role` |
@@ -1186,11 +1186,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hybridAccessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:hybrid-access-enabled` |
+| `hybridAccessEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hybrid-access-enabled` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `useServiceLinkedRole` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-service-linked-role` |
-| `withFederation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:with-federation` |
+| `withFederation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:with-federation` |
 "
   [^CfnResourceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :hybrid-access-enabled)]
@@ -1226,7 +1226,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `lfTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lf-tags` |
+| `lfTags` | java.util.List | [[cdk.support/lookup-entry]] | `:lf-tags` |
 | `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnTagAssociation$Builder builder id config]
@@ -1323,7 +1323,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `lfTags` | java.util.List | [[cdk.support/lookup-entry]] | `:lf-tags` |
-| `resource` | software.amazon.awscdk.services.lakeformation.CfnTagAssociation$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
+| `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnTagAssociationProps$Builder builder id config]
   (when-some [data (lookup-entry config id :lf-tags)]
@@ -1354,9 +1354,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalog` | java.lang.Object | [[cdk.support/lookup-entry]] | `:catalog` |
-| `database` | software.amazon.awscdk.services.lakeformation.CfnTagAssociation$DatabaseResourceProperty | [[cdk.support/lookup-entry]] | `:database` |
-| `table` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table` |
-| `tableWithColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-with-columns` |
+| `database` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:database` |
+| `table` | software.amazon.awscdk.services.lakeformation.CfnTagAssociation$TableResourceProperty | [[cdk.support/lookup-entry]] | `:table` |
+| `tableWithColumns` | software.amazon.awscdk.services.lakeformation.CfnTagAssociation$TableWithColumnsResourceProperty | [[cdk.support/lookup-entry]] | `:table-with-columns` |
 "
   [^CfnTagAssociation$ResourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog)]

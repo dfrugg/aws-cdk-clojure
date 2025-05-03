@@ -17,7 +17,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLoggingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-logging-enabled` |
+| `accessLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:access-logging-enabled` |
 | `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
 | `corsPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cors-policy` |
 | `lifecyclePolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
@@ -104,7 +104,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerLevelMetrics` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-level-metrics` |
-| `metricPolicyRules` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-policy-rules` |
+| `metricPolicyRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-policy-rules` |
 "
   [^CfnContainer$MetricPolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :container-level-metrics)]
@@ -169,7 +169,7 @@
 | `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
 | `corsPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cors-policy` |
 | `lifecyclePolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
-| `metricPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-policy` |
+| `metricPolicy` | software.amazon.awscdk.services.mediastore.CfnContainer$MetricPolicyProperty | [[cdk.support/lookup-entry]] | `:metric-policy` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

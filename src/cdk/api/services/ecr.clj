@@ -382,7 +382,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnReplicationConfiguration$ReplicationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :rules)]
@@ -505,7 +505,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `emptyOnDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:empty-on-delete` |
 | `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
-| `imageScanningConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
+| `imageScanningConfiguration` | software.amazon.awscdk.services.ecr.CfnRepository$ImageScanningConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
 | `imageTagMutability` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-tag-mutability` |
 | `lifecyclePolicy` | software.amazon.awscdk.services.ecr.CfnRepository$LifecyclePolicyProperty | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
@@ -634,12 +634,12 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `appliedFor` | java.util.List | [[cdk.support/lookup-entry]] | `:applied-for` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `encryptionConfiguration` | software.amazon.awscdk.services.ecr.CfnRepositoryCreationTemplate$EncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
+| `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `imageTagMutability` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-tag-mutability` |
 | `lifecyclePolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `repositoryPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-policy` |
-| `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
+| `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnRepositoryCreationTemplateProps$Builder builder id config]
   (when-some [data (lookup-entry config id :applied-for)]
@@ -771,11 +771,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `emptyOnDelete` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:empty-on-delete` |
-| `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
+| `emptyOnDelete` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:empty-on-delete` |
+| `encryptionConfiguration` | software.amazon.awscdk.services.ecr.CfnRepository$EncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `imageScanningConfiguration` | software.amazon.awscdk.services.ecr.CfnRepository$ImageScanningConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
 | `imageTagMutability` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-tag-mutability` |
-| `lifecyclePolicy` | software.amazon.awscdk.services.ecr.CfnRepository$LifecyclePolicyProperty | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
+| `lifecyclePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 | `repositoryPolicyText` | java.lang.Object | [[cdk.support/lookup-entry]] | `:repository-policy-text` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

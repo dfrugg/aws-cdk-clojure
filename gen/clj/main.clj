@@ -4,6 +4,7 @@
             [config :as co]
             [engine :as e]
             [inspect :as in]
+            [reflect :refer [reflect-builder]]
             [state :as st]))
 
 
@@ -33,3 +34,20 @@
         schema  (-> (cp/classify config)
                     (in/describe-classpath config))]
     (e/build schema config)))
+
+
+(defn check-method-multi-arity
+  []
+  (let [config (co/load)
+        builders (:builders (cp/classify config))]
+    (doseq [builder builders]
+      (let [multis (->> (reflect-builder builder)
+                        :methods
+                        (group-by :name)
+                        (filterv #(< 1 (-> % second count))))]
+        (doseq [[k v] multis]
+          (let [params (->> (map :parameter-types v)
+                            concat
+                            flatten)]
+            (when (< 2 (count params))
+              (println builder " - " k " - " params))))))))

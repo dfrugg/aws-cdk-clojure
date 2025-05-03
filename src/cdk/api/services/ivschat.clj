@@ -21,7 +21,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationConfiguration` | software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration$DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:destination-configuration` |
+| `destinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -83,7 +83,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogs` | software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs` |
+| `cloudWatchLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs` |
 | `firehose` | software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:firehose` |
 | `s3` | software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
@@ -145,7 +145,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationConfiguration` | software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration$DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:destination-configuration` |
+| `destinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

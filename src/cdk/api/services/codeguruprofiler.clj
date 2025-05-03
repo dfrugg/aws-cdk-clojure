@@ -67,7 +67,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `agentPermissions` | java.lang.Object | [[cdk.support/lookup-entry]] | `:agent-permissions` |
-| `anomalyDetectionNotificationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anomaly-detection-notification-configuration` |
+| `anomalyDetectionNotificationConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:anomaly-detection-notification-configuration` |
 | `computePlatform` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-platform` |
 | `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

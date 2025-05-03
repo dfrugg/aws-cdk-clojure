@@ -299,7 +299,7 @@
 | `as2Config` | java.lang.Object | [[cdk.support/lookup-entry]] | `:as2-config` |
 | `loggingRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:logging-role` |
 | `securityPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-policy-name` |
-| `sftpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sftp-config` |
+| `sftpConfig` | software.amazon.awscdk.services.transfer.CfnConnector$SftpConfigProperty | [[cdk.support/lookup-entry]] | `:sftp-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
@@ -496,18 +496,18 @@
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
 | `endpointDetails` | software.amazon.awscdk.services.transfer.CfnServer$EndpointDetailsProperty | [[cdk.support/lookup-entry]] | `:endpoint-details` |
 | `endpointType` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-type` |
-| `identityProviderDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:identity-provider-details` |
+| `identityProviderDetails` | software.amazon.awscdk.services.transfer.CfnServer$IdentityProviderDetailsProperty | [[cdk.support/lookup-entry]] | `:identity-provider-details` |
 | `identityProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-provider-type` |
 | `loggingRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:logging-role` |
 | `postAuthenticationLoginBanner` | java.lang.String | [[cdk.support/lookup-entry]] | `:post-authentication-login-banner` |
 | `preAuthenticationLoginBanner` | java.lang.String | [[cdk.support/lookup-entry]] | `:pre-authentication-login-banner` |
-| `protocolDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:protocol-details` |
+| `protocolDetails` | software.amazon.awscdk.services.transfer.CfnServer$ProtocolDetailsProperty | [[cdk.support/lookup-entry]] | `:protocol-details` |
 | `protocols` | java.util.List | [[cdk.support/lookup-entry]] | `:protocols` |
-| `s3StorageOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-storage-options` |
+| `s3StorageOptions` | software.amazon.awscdk.services.transfer.CfnServer$S3StorageOptionsProperty | [[cdk.support/lookup-entry]] | `:s3-storage-options` |
 | `securityPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-policy-name` |
 | `structuredLogDestinations` | java.util.List | [[cdk.support/lookup-entry]] | `:structured-log-destinations` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `workflowDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workflow-details` |
+| `workflowDetails` | software.amazon.awscdk.services.transfer.CfnServer$WorkflowDetailsProperty | [[cdk.support/lookup-entry]] | `:workflow-details` |
 "
   [^CfnServer$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate)]
@@ -656,11 +656,11 @@
 | `preAuthenticationLoginBanner` | java.lang.String | [[cdk.support/lookup-entry]] | `:pre-authentication-login-banner` |
 | `protocolDetails` | software.amazon.awscdk.services.transfer.CfnServer$ProtocolDetailsProperty | [[cdk.support/lookup-entry]] | `:protocol-details` |
 | `protocols` | java.util.List | [[cdk.support/lookup-entry]] | `:protocols` |
-| `s3StorageOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-storage-options` |
+| `s3StorageOptions` | software.amazon.awscdk.services.transfer.CfnServer$S3StorageOptionsProperty | [[cdk.support/lookup-entry]] | `:s3-storage-options` |
 | `securityPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-policy-name` |
 | `structuredLogDestinations` | java.util.List | [[cdk.support/lookup-entry]] | `:structured-log-destinations` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `workflowDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workflow-details` |
+| `workflowDetails` | software.amazon.awscdk.services.transfer.CfnServer$WorkflowDetailsProperty | [[cdk.support/lookup-entry]] | `:workflow-details` |
 "
   [^CfnServerProps$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate)]
@@ -846,7 +846,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `homeDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:home-directory` |
-| `homeDirectoryMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:home-directory-mappings` |
+| `homeDirectoryMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:home-directory-mappings` |
 | `homeDirectoryType` | java.lang.String | [[cdk.support/lookup-entry]] | `:home-directory-type` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
 | `posixProfile` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:posix-profile` |
@@ -935,7 +935,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `gid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:gid` |
-| `secondaryGids` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-gids` |
+| `secondaryGids` | java.util.List | [[cdk.support/lookup-entry]] | `:secondary-gids` |
 | `uid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uid` |
 "
   [^CfnUser$PosixProfileProperty$Builder builder id config]
@@ -1024,8 +1024,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `onExceptionSteps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-exception-steps` |
-| `steps` | java.util.List | [[cdk.support/lookup-entry]] | `:steps` |
+| `onExceptionSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:on-exception-steps` |
+| `steps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:steps` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnWorkflow$Builder builder id config]
@@ -1134,7 +1134,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationFileLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-file-location` |
+| `destinationFileLocation` | software.amazon.awscdk.services.transfer.CfnWorkflow$InputFileLocationProperty | [[cdk.support/lookup-entry]] | `:destination-file-location` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `overwriteExisting` | java.lang.String | [[cdk.support/lookup-entry]] | `:overwrite-existing` |
 | `sourceFileLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-file-location` |
@@ -1237,7 +1237,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `efsFileLocation` | software.amazon.awscdk.services.transfer.CfnWorkflow$EfsInputFileLocationProperty | [[cdk.support/lookup-entry]] | `:efs-file-location` |
-| `s3FileLocation` | software.amazon.awscdk.services.transfer.CfnWorkflow$S3InputFileLocationProperty | [[cdk.support/lookup-entry]] | `:s3-file-location` |
+| `s3FileLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-file-location` |
 "
   [^CfnWorkflow$InputFileLocationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :efs-file-location)]
@@ -1268,7 +1268,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `onExceptionSteps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-exception-steps` |
+| `onExceptionSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:on-exception-steps` |
 | `steps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:steps` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1304,7 +1304,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3FileLocation` | software.amazon.awscdk.services.transfer.CfnWorkflow$S3InputFileLocationProperty | [[cdk.support/lookup-entry]] | `:s3-file-location` |
+| `s3FileLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-file-location` |
 "
   [^CfnWorkflow$S3FileLocationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-file-location)]

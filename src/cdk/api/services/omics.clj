@@ -38,7 +38,7 @@
 | `reference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference` |
 | `sseConfig` | software.amazon.awscdk.services.omics.CfnAnnotationStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `storeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:store-format` |
-| `storeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:store-options` |
+| `storeOptions` | software.amazon.awscdk.services.omics.CfnAnnotationStore$StoreOptionsProperty | [[cdk.support/lookup-entry]] | `:store-options` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAnnotationStore$Builder builder id config]
@@ -81,7 +81,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference` |
+| `reference` | software.amazon.awscdk.services.omics.CfnAnnotationStore$ReferenceItemProperty | [[cdk.support/lookup-entry]] | `:reference` |
 | `sseConfig` | software.amazon.awscdk.services.omics.CfnAnnotationStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `storeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:store-format` |
 | `storeOptions` | software.amazon.awscdk.services.omics.CfnAnnotationStore$StoreOptionsProperty | [[cdk.support/lookup-entry]] | `:store-options` |
@@ -248,7 +248,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sseConfig` | software.amazon.awscdk.services.omics.CfnReferenceStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
+| `sseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReferenceStore$Builder builder id config]
@@ -440,7 +440,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `fallbackLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:fallback-location` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-config` |
+| `sseConfig` | software.amazon.awscdk.services.omics.CfnSequenceStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSequenceStore$Builder builder id config]
@@ -480,7 +480,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `fallbackLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:fallback-location` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `sseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-config` |
+| `sseConfig` | software.amazon.awscdk.services.omics.CfnSequenceStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSequenceStoreProps$Builder builder id config]
@@ -550,7 +550,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference` |
+| `reference` | software.amazon.awscdk.services.omics.CfnVariantStore$ReferenceItemProperty | [[cdk.support/lookup-entry]] | `:reference` |
 | `sseConfig` | software.amazon.awscdk.services.omics.CfnVariantStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -590,8 +590,8 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `reference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference` |
-| `sseConfig` | software.amazon.awscdk.services.omics.CfnVariantStore$SseConfigProperty | [[cdk.support/lookup-entry]] | `:sse-config` |
+| `reference` | software.amazon.awscdk.services.omics.CfnVariantStore$ReferenceItemProperty | [[cdk.support/lookup-entry]] | `:reference` |
+| `sseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-config` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnVariantStoreProps$Builder builder id config]
@@ -693,7 +693,7 @@
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `main` | java.lang.String | [[cdk.support/lookup-entry]] | `:main` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameterTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-template` |
+| `parameterTemplate` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameter-template` |
 | `storageCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -745,7 +745,7 @@
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `main` | java.lang.String | [[cdk.support/lookup-entry]] | `:main` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameterTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-template` |
+| `parameterTemplate` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameter-template` |
 | `storageCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -792,7 +792,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `optional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:optional` |
+| `optional` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optional` |
 "
   [^CfnWorkflow$WorkflowParameterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]

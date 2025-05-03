@@ -25,7 +25,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `criteria` | software.amazon.awscdk.services.macie.CfnAllowList$CriteriaProperty | [[cdk.support/lookup-entry]] | `:criteria` |
+| `criteria` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:criteria` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -63,7 +63,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
-| `s3WordsList` | software.amazon.awscdk.services.macie.CfnAllowList$S3WordsListProperty | [[cdk.support/lookup-entry]] | `:s3-words-list` |
+| `s3WordsList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-words-list` |
 "
   [^CfnAllowList$CriteriaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :regex)]
@@ -339,7 +339,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `criterion` | java.util.Map | [[cdk.support/lookup-entry]] | `:criterion` |
+| `criterion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:criterion` |
 "
   [^CfnFindingsFilter$FindingCriteriaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :criterion)]
@@ -400,7 +400,7 @@
 |---|---|---|---|
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `findingCriteria` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:finding-criteria` |
+| `findingCriteria` | software.amazon.awscdk.services.macie.CfnFindingsFilter$FindingCriteriaProperty | [[cdk.support/lookup-entry]] | `:finding-criteria` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `position` | java.lang.Number | [[cdk.support/lookup-entry]] | `:position` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

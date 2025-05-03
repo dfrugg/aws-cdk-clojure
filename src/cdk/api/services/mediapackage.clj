@@ -132,7 +132,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `egressEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:egress-endpoints` |
+| `egressEndpoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress-endpoints` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `packagingGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:packaging-group-id` |
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
@@ -180,9 +180,9 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `egressAccessLogs` | software.amazon.awscdk.services.mediapackage.CfnChannel$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:egress-access-logs` |
-| `hlsIngest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-ingest` |
+| `hlsIngest` | software.amazon.awscdk.services.mediapackage.CfnChannel$HlsIngestProperty | [[cdk.support/lookup-entry]] | `:hls-ingest` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `ingressAccessLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingress-access-logs` |
+| `ingressAccessLogs` | software.amazon.awscdk.services.mediapackage.CfnChannel$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:ingress-access-logs` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnChannel$Builder builder id config]
@@ -221,7 +221,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ingestEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:ingest-endpoints` |
+| `ingestEndpoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingest-endpoints` |
 "
   [^CfnChannel$HlsIngestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ingest-endpoints)]
@@ -390,13 +390,13 @@
 |---|---|---|---|
 | `authorization` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorization` |
 | `channelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-id` |
-| `cmafPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cmaf-package` |
+| `cmafPackage` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$CmafPackageProperty | [[cdk.support/lookup-entry]] | `:cmaf-package` |
 | `dashPackage` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$DashPackageProperty | [[cdk.support/lookup-entry]] | `:dash-package` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `hlsPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-package` |
+| `hlsPackage` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$HlsPackageProperty | [[cdk.support/lookup-entry]] | `:hls-package` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `manifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-name` |
-| `mssPackage` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$MssPackageProperty | [[cdk.support/lookup-entry]] | `:mss-package` |
+| `mssPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mss-package` |
 | `origination` | java.lang.String | [[cdk.support/lookup-entry]] | `:origination` |
 | `startoverWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:startover-window-seconds` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -492,7 +492,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption` |
+| `encryption` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$CmafEncryptionProperty | [[cdk.support/lookup-entry]] | `:encryption` |
 | `hlsManifests` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-manifests` |
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 | `segmentPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-prefix` |
@@ -671,7 +671,7 @@
 | `encryptionMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-method` |
 | `keyRotationIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:key-rotation-interval-seconds` |
 | `repeatExtXKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:repeat-ext-x-key` |
-| `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
+| `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnOriginEndpoint$HlsEncryptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :constant-initialization-vector)]
@@ -711,7 +711,7 @@
 | `adTriggers` | java.util.List | [[cdk.support/lookup-entry]] | `:ad-triggers` |
 | `adsOnDeliveryRestrictions` | java.lang.String | [[cdk.support/lookup-entry]] | `:ads-on-delivery-restrictions` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `includeIframeOnlyStream` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-iframe-only-stream` |
+| `includeIframeOnlyStream` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-iframe-only-stream` |
 | `manifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-name` |
 | `playlistType` | java.lang.String | [[cdk.support/lookup-entry]] | `:playlist-type` |
 | `playlistWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:playlist-window-seconds` |
@@ -766,7 +766,7 @@
 | `adTriggers` | java.util.List | [[cdk.support/lookup-entry]] | `:ad-triggers` |
 | `adsOnDeliveryRestrictions` | java.lang.String | [[cdk.support/lookup-entry]] | `:ads-on-delivery-restrictions` |
 | `encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption` |
-| `includeDvbSubtitles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-dvb-subtitles` |
+| `includeDvbSubtitles` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-dvb-subtitles` |
 | `includeIframeOnlyStream` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-iframe-only-stream` |
 | `playlistType` | java.lang.String | [[cdk.support/lookup-entry]] | `:playlist-type` |
 | `playlistWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:playlist-window-seconds` |
@@ -823,7 +823,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
+| `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnOriginEndpoint$MssEncryptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :speke-key-provider)]
@@ -854,7 +854,7 @@
 | `encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption` |
 | `manifestWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:manifest-window-seconds` |
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
-| `streamSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-selection` |
+| `streamSelection` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$StreamSelectionProperty | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnOriginEndpoint$MssPackageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :encryption)]
@@ -890,10 +890,10 @@
 |---|---|---|---|
 | `authorization` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorization` |
 | `channelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-id` |
-| `cmafPackage` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$CmafPackageProperty | [[cdk.support/lookup-entry]] | `:cmaf-package` |
+| `cmafPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cmaf-package` |
 | `dashPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dash-package` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `hlsPackage` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$HlsPackageProperty | [[cdk.support/lookup-entry]] | `:hls-package` |
+| `hlsPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-package` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `manifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-name` |
 | `mssPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mss-package` |
@@ -1032,8 +1032,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cmafPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$CmafPackageProperty | [[cdk.support/lookup-entry]] | `:cmaf-package` |
-| `dashPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dash-package` |
+| `cmafPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cmaf-package` |
+| `dashPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$DashPackageProperty | [[cdk.support/lookup-entry]] | `:dash-package` |
 | `hlsPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$HlsPackageProperty | [[cdk.support/lookup-entry]] | `:hls-package` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `mssPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$MssPackageProperty | [[cdk.support/lookup-entry]] | `:mss-package` |
@@ -1107,7 +1107,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption` |
-| `hlsManifests` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-manifests` |
+| `hlsManifests` | java.util.List | [[cdk.support/lookup-entry]] | `:hls-manifests` |
 | `includeEncoderConfigurationInSegments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-encoder-configuration-in-segments` |
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 "
@@ -1176,7 +1176,7 @@
 | `minBufferTimeSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-buffer-time-seconds` |
 | `profile` | java.lang.String | [[cdk.support/lookup-entry]] | `:profile` |
 | `scteMarkersSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:scte-markers-source` |
-| `streamSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-selection` |
+| `streamSelection` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$StreamSelectionProperty | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnPackagingConfiguration$DashManifestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :manifest-layout)]
@@ -1214,10 +1214,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dashManifests` | java.util.List | [[cdk.support/lookup-entry]] | `:dash-manifests` |
-| `encryption` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$DashEncryptionProperty | [[cdk.support/lookup-entry]] | `:encryption` |
-| `includeEncoderConfigurationInSegments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-encoder-configuration-in-segments` |
-| `includeIframeOnlyStream` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-iframe-only-stream` |
+| `dashManifests` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dash-manifests` |
+| `encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption` |
+| `includeEncoderConfigurationInSegments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-encoder-configuration-in-segments` |
+| `includeIframeOnlyStream` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-iframe-only-stream` |
 | `periodTriggers` | java.util.List | [[cdk.support/lookup-entry]] | `:period-triggers` |
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 | `segmentTemplateFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-template-format` |
@@ -1293,7 +1293,7 @@
 |---|---|---|---|
 | `constantInitializationVector` | java.lang.String | [[cdk.support/lookup-entry]] | `:constant-initialization-vector` |
 | `encryptionMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-method` |
-| `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
+| `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnPackagingConfiguration$HlsEncryptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :constant-initialization-vector)]
@@ -1326,10 +1326,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `adMarkers` | java.lang.String | [[cdk.support/lookup-entry]] | `:ad-markers` |
-| `includeIframeOnlyStream` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-iframe-only-stream` |
+| `includeIframeOnlyStream` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-iframe-only-stream` |
 | `manifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-name` |
 | `programDateTimeIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:program-date-time-interval-seconds` |
-| `repeatExtXKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:repeat-ext-x-key` |
+| `repeatExtXKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:repeat-ext-x-key` |
 | `streamSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnPackagingConfiguration$HlsManifestProperty$Builder builder id config]
@@ -1408,7 +1408,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
+| `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnPackagingConfiguration$MssEncryptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :speke-key-provider)]
@@ -1437,7 +1437,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `manifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-name` |
-| `streamSelection` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$StreamSelectionProperty | [[cdk.support/lookup-entry]] | `:stream-selection` |
+| `streamSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnPackagingConfiguration$MssManifestProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :manifest-name)]
@@ -1467,7 +1467,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption` |
+| `encryption` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$MssEncryptionProperty | [[cdk.support/lookup-entry]] | `:encryption` |
 | `mssManifests` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mss-manifests` |
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 "
@@ -1501,11 +1501,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cmafPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cmaf-package` |
-| `dashPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dash-package` |
+| `cmafPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$CmafPackageProperty | [[cdk.support/lookup-entry]] | `:cmaf-package` |
+| `dashPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$DashPackageProperty | [[cdk.support/lookup-entry]] | `:dash-package` |
 | `hlsPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$HlsPackageProperty | [[cdk.support/lookup-entry]] | `:hls-package` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `mssPackage` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$MssPackageProperty | [[cdk.support/lookup-entry]] | `:mss-package` |
+| `mssPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mss-package` |
 | `packagingGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:packaging-group-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1649,8 +1649,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authorization` | software.amazon.awscdk.services.mediapackage.CfnPackagingGroup$AuthorizationProperty | [[cdk.support/lookup-entry]] | `:authorization` |
-| `egressAccessLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress-access-logs` |
+| `authorization` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorization` |
+| `egressAccessLogs` | software.amazon.awscdk.services.mediapackage.CfnPackagingGroup$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:egress-access-logs` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1714,7 +1714,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authorization` | software.amazon.awscdk.services.mediapackage.CfnPackagingGroup$AuthorizationProperty | [[cdk.support/lookup-entry]] | `:authorization` |
+| `authorization` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authorization` |
 | `egressAccessLogs` | software.amazon.awscdk.services.mediapackage.CfnPackagingGroup$LogConfigurationProperty | [[cdk.support/lookup-entry]] | `:egress-access-logs` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

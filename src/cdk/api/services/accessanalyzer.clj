@@ -79,7 +79,7 @@
 |---|---|---|---|
 | `analyzerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analyzer-configuration` |
 | `analyzerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:analyzer-name` |
-| `archiveRules` | java.util.List | [[cdk.support/lookup-entry]] | `:archive-rules` |
+| `archiveRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:archive-rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -119,7 +119,7 @@
 |---|---|---|---|
 | `contains` | java.util.List | [[cdk.support/lookup-entry]] | `:contains` |
 | `eq` | java.util.List | [[cdk.support/lookup-entry]] | `:eq` |
-| `exists` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exists` |
+| `exists` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exists` |
 | `neq` | java.util.List | [[cdk.support/lookup-entry]] | `:neq` |
 | `property` | java.lang.String | [[cdk.support/lookup-entry]] | `:property` |
 "

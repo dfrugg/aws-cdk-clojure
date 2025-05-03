@@ -51,10 +51,10 @@
 | `dataBundles` | java.util.List | [[cdk.support/lookup-entry]] | `:data-bundles` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `federationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:federation-mode` |
-| `federationParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:federation-parameters` |
+| `federationParameters` | software.amazon.awscdk.services.finspace.CfnEnvironment$FederationParametersProperty | [[cdk.support/lookup-entry]] | `:federation-parameters` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `superuserParameters` | software.amazon.awscdk.services.finspace.CfnEnvironment$SuperuserParametersProperty | [[cdk.support/lookup-entry]] | `:superuser-parameters` |
+| `superuserParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:superuser-parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironment$Builder builder id config]
@@ -143,7 +143,7 @@
 | `dataBundles` | java.util.List | [[cdk.support/lookup-entry]] | `:data-bundles` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `federationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:federation-mode` |
-| `federationParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:federation-parameters` |
+| `federationParameters` | software.amazon.awscdk.services.finspace.CfnEnvironment$FederationParametersProperty | [[cdk.support/lookup-entry]] | `:federation-parameters` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `superuserParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:superuser-parameters` |

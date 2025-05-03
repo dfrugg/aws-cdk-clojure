@@ -182,7 +182,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultAction` | software.amazon.awscdk.services.vpclattice.CfnListener$DefaultActionProperty | [[cdk.support/lookup-entry]] | `:default-action` |
+| `defaultAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-action` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
@@ -226,7 +226,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fixedResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fixed-response` |
-| `forward` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forward` |
+| `forward` | software.amazon.awscdk.services.vpclattice.CfnListener$ForwardProperty | [[cdk.support/lookup-entry]] | `:forward` |
 "
   [^CfnListener$DefaultActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :fixed-response)]
@@ -284,7 +284,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^CfnListener$ForwardProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-groups)]
@@ -312,7 +312,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultAction` | software.amazon.awscdk.services.vpclattice.CfnListener$DefaultActionProperty | [[cdk.support/lookup-entry]] | `:default-action` |
+| `defaultAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-action` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
@@ -449,7 +449,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fixedResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fixed-response` |
-| `forward` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forward` |
+| `forward` | software.amazon.awscdk.services.vpclattice.CfnRule$ForwardProperty | [[cdk.support/lookup-entry]] | `:forward` |
 "
   [^CfnRule$ActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :fixed-response)]
@@ -553,7 +553,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^CfnRule$ForwardProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-groups)]
@@ -581,8 +581,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `caseSensitive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:case-sensitive` |
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+| `caseSensitive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:case-sensitive` |
+| `match` | software.amazon.awscdk.services.vpclattice.CfnRule$HeaderMatchTypeProperty | [[cdk.support/lookup-entry]] | `:match` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRule$HeaderMatchProperty$Builder builder id config]
@@ -651,7 +651,7 @@
 |---|---|---|---|
 | `headerMatches` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-matches` |
 | `method` | java.lang.String | [[cdk.support/lookup-entry]] | `:method` |
-| `pathMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:path-match` |
+| `pathMatch` | software.amazon.awscdk.services.vpclattice.CfnRule$PathMatchProperty | [[cdk.support/lookup-entry]] | `:path-match` |
 "
   [^CfnRule$HttpMatchProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :header-matches)]
@@ -683,7 +683,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `httpMatch` | software.amazon.awscdk.services.vpclattice.CfnRule$HttpMatchProperty | [[cdk.support/lookup-entry]] | `:http-match` |
+| `httpMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-match` |
 "
   [^CfnRule$MatchProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :http-match)]
@@ -711,7 +711,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `caseSensitive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:case-sensitive` |
+| `caseSensitive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:case-sensitive` |
 | `match` | software.amazon.awscdk.services.vpclattice.CfnRule$PathMatchTypeProperty | [[cdk.support/lookup-entry]] | `:match` |
 "
   [^CfnRule$PathMatchProperty$Builder builder id config]
@@ -992,7 +992,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dnsEntry` | software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation$DnsEntryProperty | [[cdk.support/lookup-entry]] | `:dns-entry` |
+| `dnsEntry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-entry` |
 | `serviceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-identifier` |
 | `serviceNetworkIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-network-identifier` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1214,7 +1214,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config` |
+| `config` | software.amazon.awscdk.services.vpclattice.CfnTargetGroup$TargetGroupConfigProperty | [[cdk.support/lookup-entry]] | `:config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
@@ -1258,7 +1258,7 @@
 | `healthCheckIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-interval-seconds` |
 | `healthCheckTimeoutSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-timeout-seconds` |
 | `healthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:healthy-threshold-count` |
-| `matcher` | software.amazon.awscdk.services.vpclattice.CfnTargetGroup$MatcherProperty | [[cdk.support/lookup-entry]] | `:matcher` |
+| `matcher` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:matcher` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
@@ -1337,10 +1337,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config` |
+| `config` | software.amazon.awscdk.services.vpclattice.CfnTargetGroup$TargetGroupConfigProperty | [[cdk.support/lookup-entry]] | `:config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnTargetGroupProps$Builder builder id config]

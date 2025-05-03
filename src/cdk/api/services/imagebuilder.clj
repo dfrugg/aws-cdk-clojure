@@ -184,7 +184,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `components` | java.util.List | [[cdk.support/lookup-entry]] | `:components` |
+| `components` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:components` |
 | `containerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `dockerfileTemplateData` | java.lang.String | [[cdk.support/lookup-entry]] | `:dockerfile-template-data` |
@@ -196,7 +196,7 @@
 | `parentImage` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-image` |
 | `platformOverride` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-override` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetRepository` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-repository` |
+| `targetRepository` | software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe$TargetContainerRepositoryProperty | [[cdk.support/lookup-entry]] | `:target-repository` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 | `workingDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:working-directory` |
 "
@@ -255,7 +255,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `componentArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-arn` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnContainerRecipe$ComponentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :component-arn)]
@@ -316,7 +316,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
@@ -366,7 +366,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-name` |
-| `ebs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs` |
+| `ebs` | software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe$EbsInstanceBlockDeviceSpecificationProperty | [[cdk.support/lookup-entry]] | `:ebs` |
 | `noDevice` | java.lang.String | [[cdk.support/lookup-entry]] | `:no-device` |
 | `virtualName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-name` |
 "
@@ -433,19 +433,19 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `components` | java.util.List | [[cdk.support/lookup-entry]] | `:components` |
+| `components` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:components` |
 | `containerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `dockerfileTemplateData` | java.lang.String | [[cdk.support/lookup-entry]] | `:dockerfile-template-data` |
 | `dockerfileTemplateUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:dockerfile-template-uri` |
 | `imageOsVersionOverride` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-os-version-override` |
-| `instanceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-configuration` |
+| `instanceConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe$InstanceConfigurationProperty | [[cdk.support/lookup-entry]] | `:instance-configuration` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parentImage` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-image` |
 | `platformOverride` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-override` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetRepository` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-repository` |
+| `targetRepository` | software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe$TargetContainerRepositoryProperty | [[cdk.support/lookup-entry]] | `:target-repository` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 | `workingDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:working-directory` |
 "
@@ -534,10 +534,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amiTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:ami-tags` |
+| `amiTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ami-tags` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `launchPermissionConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration$LaunchPermissionConfigurationProperty | [[cdk.support/lookup-entry]] | `:launch-permission-configuration` |
+| `launchPermissionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-permission-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `targetAccountIds` | java.util.List | [[cdk.support/lookup-entry]] | `:target-account-ids` |
 "
@@ -578,7 +578,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `distributions` | java.util.List | [[cdk.support/lookup-entry]] | `:distributions` |
+| `distributions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:distributions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -693,9 +693,9 @@
 |---|---|---|---|
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `launchTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template` |
+| `launchTemplate` | software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration$FastLaunchLaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
 | `maxParallelLaunches` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-parallel-launches` |
-| `snapshotConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration$FastLaunchSnapshotConfigurationProperty | [[cdk.support/lookup-entry]] | `:snapshot-configuration` |
+| `snapshotConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-configuration` |
 "
   [^CfnDistributionConfiguration$FastLaunchConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :account-id)]
@@ -937,11 +937,11 @@
 | `enhancedImageMetadataEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enhanced-image-metadata-enabled` |
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `imageRecipeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-recipe-arn` |
-| `imageScanningConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
-| `imageTestsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-tests-configuration` |
+| `imageScanningConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImage$ImageScanningConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
+| `imageTestsConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImage$ImageTestsConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-tests-configuration` |
 | `infrastructureConfigurationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:infrastructure-configuration-arn` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `workflows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workflows` |
+| `workflows` | java.util.List | [[cdk.support/lookup-entry]] | `:workflows` |
 "
   [^CfnImage$Builder builder id config]
   (when-some [data (lookup-entry config id :container-recipe-arn)]
@@ -1018,7 +1018,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ecrConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImage$EcrConfigurationProperty | [[cdk.support/lookup-entry]] | `:ecr-configuration` |
+| `ecrConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecr-configuration` |
 | `imageScanningEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-scanning-enabled` |
 "
   [^CfnImage$ImageScanningConfigurationProperty$Builder builder id config]
@@ -1093,7 +1093,7 @@
 | `schedule` | software.amazon.awscdk.services.imagebuilder.CfnImagePipeline$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `workflows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workflows` |
+| `workflows` | java.util.List | [[cdk.support/lookup-entry]] | `:workflows` |
 "
   [^CfnImagePipeline$Builder builder id config]
   (when-some [data (lookup-entry config id :container-recipe-arn)]
@@ -1178,7 +1178,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ecrConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImagePipeline$EcrConfigurationProperty | [[cdk.support/lookup-entry]] | `:ecr-configuration` |
+| `ecrConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecr-configuration` |
 | `imageScanningEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-scanning-enabled` |
 "
   [^CfnImagePipeline$ImageScanningConfigurationProperty$Builder builder id config]
@@ -1246,14 +1246,14 @@
 | `enhancedImageMetadataEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enhanced-image-metadata-enabled` |
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `imageRecipeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-recipe-arn` |
-| `imageScanningConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImagePipeline$ImageScanningConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
+| `imageScanningConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
 | `imageTestsConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImagePipeline$ImageTestsConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-tests-configuration` |
 | `infrastructureConfigurationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:infrastructure-configuration-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `schedule` | software.amazon.awscdk.services.imagebuilder.CfnImagePipeline$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `workflows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workflows` |
+| `workflows` | java.util.List | [[cdk.support/lookup-entry]] | `:workflows` |
 "
   [^CfnImagePipelineProps$Builder builder id config]
   (when-some [data (lookup-entry config id :container-recipe-arn)]
@@ -1340,7 +1340,7 @@
 |---|---|---|---|
 | `onFailure` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-failure` |
 | `parallelGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:parallel-group` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `workflowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-arn` |
 "
   [^CfnImagePipeline$WorkflowConfigurationProperty$Builder builder id config]
@@ -1411,7 +1411,7 @@
 | `enhancedImageMetadataEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enhanced-image-metadata-enabled` |
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `imageRecipeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-recipe-arn` |
-| `imageScanningConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
+| `imageScanningConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImage$ImageScanningConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-scanning-configuration` |
 | `imageTestsConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImage$ImageTestsConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-tests-configuration` |
 | `infrastructureConfigurationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:infrastructure-configuration-arn` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1493,7 +1493,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `additionalInstanceConfiguration` | software.amazon.awscdk.services.imagebuilder.CfnImageRecipe$AdditionalInstanceConfigurationProperty | [[cdk.support/lookup-entry]] | `:additional-instance-configuration` |
-| `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
+| `blockDeviceMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
 | `components` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:components` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -1545,7 +1545,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `componentArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-arn` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnImageRecipe$ComponentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :component-arn)]
@@ -1606,8 +1606,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `snapshotId` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-id` |
@@ -1656,7 +1656,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-name` |
-| `ebs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs` |
+| `ebs` | software.amazon.awscdk.services.imagebuilder.CfnImageRecipe$EbsInstanceBlockDeviceSpecificationProperty | [[cdk.support/lookup-entry]] | `:ebs` |
 | `noDevice` | java.lang.String | [[cdk.support/lookup-entry]] | `:no-device` |
 | `virtualName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-name` |
 "
@@ -1774,7 +1774,7 @@
 |---|---|---|---|
 | `onFailure` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-failure` |
 | `parallelGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:parallel-group` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `workflowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-arn` |
 "
   [^CfnImage$WorkflowConfigurationProperty$Builder builder id config]
@@ -1841,18 +1841,18 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `instanceMetadataOptions` | software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration$InstanceMetadataOptionsProperty | [[cdk.support/lookup-entry]] | `:instance-metadata-options` |
+| `instanceMetadataOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-metadata-options` |
 | `instanceProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-profile-name` |
 | `instanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-types` |
 | `keyPair` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-pair` |
-| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
+| `logging` | software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration$LoggingProperty | [[cdk.support/lookup-entry]] | `:logging` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resourceTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:resource-tags` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `terminateInstanceOnFailure` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:terminate-instance-on-failure` |
+| `terminateInstanceOnFailure` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:terminate-instance-on-failure` |
 "
   [^CfnInfrastructureConfiguration$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -1935,7 +1935,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Logs` | software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration$S3LogsProperty | [[cdk.support/lookup-entry]] | `:s3-logs` |
+| `s3Logs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-logs` |
 "
   [^CfnInfrastructureConfiguration$LoggingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-logs)]
@@ -2058,7 +2058,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `includeResources` | software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy$IncludeResourcesProperty | [[cdk.support/lookup-entry]] | `:include-resources` |
+| `includeResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-resources` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLifecyclePolicy$ActionProperty$Builder builder id config]
@@ -2133,7 +2133,7 @@
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policyDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:policy-details` |
-| `resourceSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-selection` |
+| `resourceSelection` | software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy$ResourceSelectionProperty | [[cdk.support/lookup-entry]] | `:resource-selection` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -2178,7 +2178,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amis` | software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy$AmiExclusionRulesProperty | [[cdk.support/lookup-entry]] | `:amis` |
+| `amis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amis` |
 | `tagMap` | java.util.Map | [[cdk.support/lookup-entry]] | `:tag-map` |
 "
   [^CfnLifecyclePolicy$ExclusionRulesProperty$Builder builder id config]
@@ -2246,9 +2246,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amis` |
-| `containers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:containers` |
-| `snapshots` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshots` |
+| `amis` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:amis` |
+| `containers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:containers` |
+| `snapshots` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:snapshots` |
 "
   [^CfnLifecyclePolicy$IncludeResourcesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :amis)]
@@ -2311,9 +2311,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
+| `action` | software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy$ActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `exclusionRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclusion-rules` |
-| `filter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter` |
+| `filter` | software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy$FilterProperty | [[cdk.support/lookup-entry]] | `:filter` |
 "
   [^CfnLifecyclePolicy$PolicyDetailProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action)]
@@ -2425,7 +2425,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `recipes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recipes` |
+| `recipes` | java.util.List | [[cdk.support/lookup-entry]] | `:recipes` |
 | `tagMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-map` |
 "
   [^CfnLifecyclePolicy$ResourceSelectionProperty$Builder builder id config]

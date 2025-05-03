@@ -1165,7 +1165,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `autoScalingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-group-name` |
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
-| `capacityRebalance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-rebalance` |
+| `capacityRebalance` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:capacity-rebalance` |
 | `context` | java.lang.String | [[cdk.support/lookup-entry]] | `:context` |
 | `cooldown` | java.lang.String | [[cdk.support/lookup-entry]] | `:cooldown` |
 | `defaultInstanceWarmup` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-instance-warmup` |
@@ -1177,16 +1177,16 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instanceMaintenancePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-maintenance-policy` |
 | `launchConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-configuration-name` |
 | `launchTemplate` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$LaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
-| `lifecycleHookSpecificationList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle-hook-specification-list` |
+| `lifecycleHookSpecificationList` | java.util.List | [[cdk.support/lookup-entry]] | `:lifecycle-hook-specification-list` |
 | `loadBalancerNames` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancer-names` |
 | `maxInstanceLifetime` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-instance-lifetime` |
 | `maxSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-size` |
-| `metricsCollection` | java.util.List | [[cdk.support/lookup-entry]] | `:metrics-collection` |
+| `metricsCollection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metrics-collection` |
 | `minSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:min-size` |
 | `mixedInstancesPolicy` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$MixedInstancesPolicyProperty | [[cdk.support/lookup-entry]] | `:mixed-instances-policy` |
-| `newInstancesProtectedFromScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:new-instances-protected-from-scale-in` |
-| `notificationConfiguration` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$NotificationConfigurationProperty | [[cdk.support/lookup-entry]] | `:notification-configuration` |
-| `notificationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-configurations` |
+| `newInstancesProtectedFromScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:new-instances-protected-from-scale-in` |
+| `notificationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-configuration` |
+| `notificationConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-configurations` |
 | `placementGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement-group` |
 | `serviceLinkedRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-linked-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1316,7 +1316,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `acceleratorTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-types` |
 | `allowedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-instance-types` |
 | `bareMetal` | java.lang.String | [[cdk.support/lookup-entry]] | `:bare-metal` |
-| `baselineEbsBandwidthMbps` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$BaselineEbsBandwidthMbpsRequestProperty | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
+| `baselineEbsBandwidthMbps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:baseline-ebs-bandwidth-mbps` |
 | `burstablePerformance` | java.lang.String | [[cdk.support/lookup-entry]] | `:burstable-performance` |
 | `cpuManufacturers` | java.util.List | [[cdk.support/lookup-entry]] | `:cpu-manufacturers` |
 | `excludedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-instance-types` |
@@ -1325,7 +1325,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `localStorageTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:local-storage-types` |
 | `maxSpotPriceAsPercentageOfOptimalOnDemandPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-spot-price-as-percentage-of-optimal-on-demand-price` |
 | `memoryGiBPerVCpu` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$MemoryGiBPerVCpuRequestProperty | [[cdk.support/lookup-entry]] | `:memory-gi-b-per-v-cpu` |
-| `memoryMiB` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$MemoryMiBRequestProperty | [[cdk.support/lookup-entry]] | `:memory-mi-b` |
+| `memoryMiB` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:memory-mi-b` |
 | `networkBandwidthGbps` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$NetworkBandwidthGbpsRequestProperty | [[cdk.support/lookup-entry]] | `:network-bandwidth-gbps` |
 | `networkInterfaceCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interface-count` |
 | `onDemandMaxPricePercentageOverLowestPrice` | java.lang.Number | [[cdk.support/lookup-entry]] | `:on-demand-max-price-percentage-over-lowest-price` |
@@ -1451,7 +1451,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `instanceRequirements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-requirements` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
-| `launchTemplateSpecification` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$LaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template-specification` |
+| `launchTemplateSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template-specification` |
 | `weightedCapacity` | java.lang.String | [[cdk.support/lookup-entry]] | `:weighted-capacity` |
 "
   [^CfnAutoScalingGroup$LaunchTemplateOverridesProperty$Builder builder id config]
@@ -1827,7 +1827,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
 | `instanceMaintenancePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-maintenance-policy` |
 | `launchConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-configuration-name` |
-| `launchTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:launch-template` |
+| `launchTemplate` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$LaunchTemplateSpecificationProperty | [[cdk.support/lookup-entry]] | `:launch-template` |
 | `lifecycleHookSpecificationList` | java.util.List | [[cdk.support/lookup-entry]] | `:lifecycle-hook-specification-list` |
 | `loadBalancerNames` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancer-names` |
 | `maxInstanceLifetime` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-instance-lifetime` |
@@ -1836,8 +1836,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:min-size` |
 | `mixedInstancesPolicy` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$MixedInstancesPolicyProperty | [[cdk.support/lookup-entry]] | `:mixed-instances-policy` |
 | `newInstancesProtectedFromScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:new-instances-protected-from-scale-in` |
-| `notificationConfiguration` | software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup$NotificationConfigurationProperty | [[cdk.support/lookup-entry]] | `:notification-configuration` |
-| `notificationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-configurations` |
+| `notificationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-configuration` |
+| `notificationConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-configurations` |
 | `placementGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement-group` |
 | `serviceLinkedRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-linked-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1930,7 +1930,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `propagateAtLaunch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:propagate-at-launch` |
+| `propagateAtLaunch` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:propagate-at-launch` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAutoScalingGroup$TagPropertyProperty$Builder builder id config]
@@ -2027,7 +2027,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `deviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-name` |
 | `ebs` | software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration$BlockDeviceProperty | [[cdk.support/lookup-entry]] | `:ebs` |
-| `noDevice` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-device` |
+| `noDevice` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-device` |
 | `virtualName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-name` |
 "
   [^CfnLaunchConfiguration$BlockDeviceMappingProperty$Builder builder id config]
@@ -2062,8 +2062,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `snapshotId` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-id` |
 | `throughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput` |
@@ -2121,7 +2121,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `kernelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kernel-id` |
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
 | `launchConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-configuration-name` |
-| `metadataOptions` | software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration$MetadataOptionsProperty | [[cdk.support/lookup-entry]] | `:metadata-options` |
+| `metadataOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metadata-options` |
 | `placementTenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement-tenancy` |
 | `ramDiskId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ram-disk-id` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
@@ -2225,19 +2225,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `associatePublicIpAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associate-public-ip-address` |
-| `blockDeviceMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
+| `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
 | `classicLinkVpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:classic-link-vpc-id` |
 | `classicLinkVpcSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:classic-link-vpc-security-groups` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `iamInstanceProfile` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-instance-profile` |
 | `imageId` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-id` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `instanceMonitoring` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-monitoring` |
+| `instanceMonitoring` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:instance-monitoring` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `kernelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kernel-id` |
 | `keyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-name` |
 | `launchConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-configuration-name` |
-| `metadataOptions` | software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration$MetadataOptionsProperty | [[cdk.support/lookup-entry]] | `:metadata-options` |
+| `metadataOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metadata-options` |
 | `placementTenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement-tenancy` |
 | `ramDiskId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ram-disk-id` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
@@ -2413,8 +2413,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-type` |
 | `predictiveScalingConfiguration` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$PredictiveScalingConfigurationProperty | [[cdk.support/lookup-entry]] | `:predictive-scaling-configuration` |
 | `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |
-| `stepAdjustments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-adjustments` |
-| `targetTrackingConfiguration` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$TargetTrackingConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-configuration` |
+| `stepAdjustments` | java.util.List | [[cdk.support/lookup-entry]] | `:step-adjustments` |
+| `targetTrackingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-configuration` |
 "
   [^CfnScalingPolicy$Builder builder id config]
   (when-some [data (lookup-entry config id :adjustment-type)]
@@ -2506,7 +2506,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `metricStat` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$MetricStatProperty | [[cdk.support/lookup-entry]] | `:metric-stat` |
-| `returnData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:return-data` |
+| `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |
 "
   [^CfnScalingPolicy$MetricDataQueryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :expression)]
@@ -2674,7 +2674,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `maxCapacityBreachBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-capacity-breach-behavior` |
 | `maxCapacityBuffer` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity-buffer` |
-| `metricSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-specifications` |
+| `metricSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-specifications` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 | `schedulingBufferTime` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-buffer-time` |
 "
@@ -2712,7 +2712,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metricDataQueries` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
+| `metricDataQueries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
 "
   [^CfnScalingPolicy$PredictiveScalingCustomizedCapacityMetricProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :metric-data-queries)]
@@ -2768,7 +2768,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metricDataQueries` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
+| `metricDataQueries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
 "
   [^CfnScalingPolicy$PredictiveScalingCustomizedScalingMetricProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :metric-data-queries)]
@@ -2798,9 +2798,9 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `customizedCapacityMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customized-capacity-metric-specification` |
 | `customizedLoadMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customized-load-metric-specification` |
-| `customizedScalingMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customized-scaling-metric-specification` |
-| `predefinedLoadMetricSpecification` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$PredictiveScalingPredefinedLoadMetricProperty | [[cdk.support/lookup-entry]] | `:predefined-load-metric-specification` |
-| `predefinedMetricPairSpecification` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$PredictiveScalingPredefinedMetricPairProperty | [[cdk.support/lookup-entry]] | `:predefined-metric-pair-specification` |
+| `customizedScalingMetricSpecification` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$PredictiveScalingCustomizedScalingMetricProperty | [[cdk.support/lookup-entry]] | `:customized-scaling-metric-specification` |
+| `predefinedLoadMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-load-metric-specification` |
+| `predefinedMetricPairSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-metric-pair-specification` |
 | `predefinedScalingMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-scaling-metric-specification` |
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
@@ -2942,10 +2942,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | `metricAggregationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-aggregation-type` |
 | `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
 | `policyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-type` |
-| `predictiveScalingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predictive-scaling-configuration` |
+| `predictiveScalingConfiguration` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$PredictiveScalingConfigurationProperty | [[cdk.support/lookup-entry]] | `:predictive-scaling-configuration` |
 | `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |
-| `stepAdjustments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-adjustments` |
-| `targetTrackingConfiguration` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$TargetTrackingConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-configuration` |
+| `stepAdjustments` | java.util.List | [[cdk.support/lookup-entry]] | `:step-adjustments` |
+| `targetTrackingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-configuration` |
 "
   [^CfnScalingPolicyProps$Builder builder id config]
   (when-some [data (lookup-entry config id :adjustment-type)]
@@ -3027,9 +3027,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customizedMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customized-metric-specification` |
-| `disableScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
-| `predefinedMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-metric-specification` |
+| `customizedMetricSpecification` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$CustomizedMetricSpecificationProperty | [[cdk.support/lookup-entry]] | `:customized-metric-specification` |
+| `disableScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
+| `predefinedMetricSpecification` | software.amazon.awscdk.services.autoscaling.CfnScalingPolicy$PredefinedMetricSpecificationProperty | [[cdk.support/lookup-entry]] | `:predefined-metric-specification` |
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^CfnScalingPolicy$TargetTrackingConfigurationProperty$Builder builder id config]
@@ -3202,7 +3202,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `reuseOnScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reuse-on-scale-in` |
+| `reuseOnScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reuse-on-scale-in` |
 "
   [^CfnWarmPool$InstanceReusePolicyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :reuse-on-scale-in)]
@@ -3231,7 +3231,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoScalingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-group-name` |
-| `instanceReusePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-reuse-policy` |
+| `instanceReusePolicy` | software.amazon.awscdk.services.autoscaling.CfnWarmPool$InstanceReusePolicyProperty | [[cdk.support/lookup-entry]] | `:instance-reuse-policy` |
 | `maxGroupPreparedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-group-prepared-capacity` |
 | `minSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-size` |
 | `poolState` | java.lang.String | [[cdk.support/lookup-entry]] | `:pool-state` |

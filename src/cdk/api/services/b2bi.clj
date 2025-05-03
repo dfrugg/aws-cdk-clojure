@@ -28,7 +28,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `configuration` | software.amazon.awscdk.services.b2bi.CfnCapability$CapabilityConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
-| `instructionsDocuments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instructions-documents` |
+| `instructionsDocuments` | java.util.List | [[cdk.support/lookup-entry]] | `:instructions-documents` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -96,7 +96,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `inputLocation` | software.amazon.awscdk.services.b2bi.CfnCapability$S3LocationProperty | [[cdk.support/lookup-entry]] | `:input-location` |
-| `outputLocation` | software.amazon.awscdk.services.b2bi.CfnCapability$S3LocationProperty | [[cdk.support/lookup-entry]] | `:output-location` |
+| `outputLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-location` |
 | `transformerId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transformer-id` |
 | `type` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -160,7 +160,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.b2bi.CfnCapability$CapabilityConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `instructionsDocuments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instructions-documents` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -434,7 +434,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ediType` | software.amazon.awscdk.services.b2bi.CfnTransformer$EdiTypeProperty | [[cdk.support/lookup-entry]] | `:edi-type` |
+| `ediType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:edi-type` |
 | `fileFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-format` |
 | `mappingTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:mapping-template` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -480,7 +480,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `x12Details` | software.amazon.awscdk.services.b2bi.CfnTransformer$X12DetailsProperty | [[cdk.support/lookup-entry]] | `:x12-details` |
+| `x12Details` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x12-details` |
 "
   [^CfnTransformer$EdiTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :x12-details)]

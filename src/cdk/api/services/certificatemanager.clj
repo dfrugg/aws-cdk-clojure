@@ -167,7 +167,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
+| `expiryEventsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
 "
   [^CfnAccount$Builder builder id config]
   (when-some [data (lookup-entry config id :expiry-events-configuration)]
@@ -223,7 +223,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
+| `expiryEventsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
 "
   [^CfnAccountProps$Builder builder id config]
   (when-some [data (lookup-entry config id :expiry-events-configuration)]
@@ -337,7 +337,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateAuthorityArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-authority-arn` |
 | `certificateTransparencyLoggingPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-transparency-logging-preference` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `domainValidationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain-validation-options` |
+| `domainValidationOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:domain-validation-options` |
 | `keyAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

@@ -513,7 +513,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `retrievalRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:retrieval-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `validators` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validators` |
+| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
 "
   [^CfnConfigurationProfileProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-id)]
@@ -593,7 +593,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `configurationVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-version` |
 | `deploymentStrategyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-strategy-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `dynamicExtensionParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-extension-parameters` |
+| `dynamicExtensionParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:dynamic-extension-parameters` |
 | `environmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-id` |
 | `kmsKeyIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-identifier` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -826,7 +826,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |
+| `monitors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -928,7 +928,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `monitors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitors` |
+| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1127,7 +1127,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `dynamic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic` |
+| `dynamic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dynamic` |
 | `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
 "
   [^CfnExtension$ParameterProperty$Builder builder id config]
@@ -1164,7 +1164,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnExtensionProps$Builder builder id config]

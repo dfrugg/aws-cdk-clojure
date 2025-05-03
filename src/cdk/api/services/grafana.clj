@@ -75,9 +75,9 @@
 | `organizationRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-role-name` |
 | `organizationalUnits` | java.util.List | [[cdk.support/lookup-entry]] | `:organizational-units` |
 | `permissionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission-type` |
-| `pluginAdminEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:plugin-admin-enabled` |
+| `pluginAdminEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:plugin-admin-enabled` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `samlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:saml-configuration` |
+| `samlConfiguration` | software.amazon.awscdk.services.grafana.CfnWorkspace$SamlConfigurationProperty | [[cdk.support/lookup-entry]] | `:saml-configuration` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `vpcConfiguration` | software.amazon.awscdk.services.grafana.CfnWorkspace$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
@@ -309,8 +309,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowedOrganizations` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-organizations` |
-| `assertionAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:assertion-attributes` |
-| `idpMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idp-metadata` |
+| `assertionAttributes` | software.amazon.awscdk.services.grafana.CfnWorkspace$AssertionAttributesProperty | [[cdk.support/lookup-entry]] | `:assertion-attributes` |
+| `idpMetadata` | software.amazon.awscdk.services.grafana.CfnWorkspace$IdpMetadataProperty | [[cdk.support/lookup-entry]] | `:idp-metadata` |
 | `loginValidityDuration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:login-validity-duration` |
 | `roleValues` | software.amazon.awscdk.services.grafana.CfnWorkspace$RoleValuesProperty | [[cdk.support/lookup-entry]] | `:role-values` |
 "

@@ -253,10 +253,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | `compliance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compliance` |
 | `configRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:config-rule-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `evaluationModes` | java.util.List | [[cdk.support/lookup-entry]] | `:evaluation-modes` |
+| `evaluationModes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:evaluation-modes` |
 | `inputParameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:input-parameters` |
 | `maximumExecutionFrequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:maximum-execution-frequency` |
-| `scope` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope` |
+| `scope` | software.amazon.awscdk.services.config.CfnConfigRule$ScopeProperty | [[cdk.support/lookup-entry]] | `:scope` |
 | `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnConfigRule$Builder builder id config]
@@ -327,7 +327,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableDebugLogDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-debug-log-delivery` |
+| `enableDebugLogDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-debug-log-delivery` |
 | `policyRuntime` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-runtime` |
 | `policyText` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-text` |
 "
@@ -389,14 +389,14 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `compliance` | software.amazon.awscdk.services.config.CfnConfigRule$ComplianceProperty | [[cdk.support/lookup-entry]] | `:compliance` |
+| `compliance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compliance` |
 | `configRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:config-rule-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `evaluationModes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:evaluation-modes` |
 | `inputParameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:input-parameters` |
 | `maximumExecutionFrequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:maximum-execution-frequency` |
 | `scope` | software.amazon.awscdk.services.config.CfnConfigRule$ScopeProperty | [[cdk.support/lookup-entry]] | `:scope` |
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
+| `source` | software.amazon.awscdk.services.config.CfnConfigRule$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnConfigRuleProps$Builder builder id config]
   (when-some [data (lookup-entry config id :compliance)]
@@ -509,9 +509,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customPolicyDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-policy-details` |
+| `customPolicyDetails` | software.amazon.awscdk.services.config.CfnConfigRule$CustomPolicyDetailsProperty | [[cdk.support/lookup-entry]] | `:custom-policy-details` |
 | `owner` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner` |
-| `sourceDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:source-details` |
+| `sourceDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-details` |
 | `sourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-identifier` |
 "
   [^CfnConfigRule$SourceProperty$Builder builder id config]
@@ -617,7 +617,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allAwsRegions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:all-aws-regions` |
+| `allAwsRegions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:all-aws-regions` |
 | `awsRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:aws-regions` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
@@ -651,9 +651,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accountAggregationSources` | java.util.List | [[cdk.support/lookup-entry]] | `:account-aggregation-sources` |
+| `accountAggregationSources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:account-aggregation-sources` |
 | `configurationAggregatorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-aggregator-name` |
-| `organizationAggregationSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-aggregation-source` |
+| `organizationAggregationSource` | software.amazon.awscdk.services.config.CfnConfigurationAggregator$OrganizationAggregationSourceProperty | [[cdk.support/lookup-entry]] | `:organization-aggregation-source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfigurationAggregatorProps$Builder builder id config]
@@ -689,7 +689,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `recordingGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recording-group` |
+| `recordingGroup` | software.amazon.awscdk.services.config.CfnConfigurationRecorder$RecordingGroupProperty | [[cdk.support/lookup-entry]] | `:recording-group` |
 | `recordingMode` | software.amazon.awscdk.services.config.CfnConfigurationRecorder$RecordingModeProperty | [[cdk.support/lookup-entry]] | `:recording-mode` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
@@ -755,7 +755,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `recordingGroup` | software.amazon.awscdk.services.config.CfnConfigurationRecorder$RecordingGroupProperty | [[cdk.support/lookup-entry]] | `:recording-group` |
-| `recordingMode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recording-mode` |
+| `recordingMode` | software.amazon.awscdk.services.config.CfnConfigurationRecorder$RecordingModeProperty | [[cdk.support/lookup-entry]] | `:recording-mode` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnConfigurationRecorderProps$Builder builder id config]
@@ -790,8 +790,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allSupported` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:all-supported` |
-| `exclusionByResourceTypes` | software.amazon.awscdk.services.config.CfnConfigurationRecorder$ExclusionByResourceTypesProperty | [[cdk.support/lookup-entry]] | `:exclusion-by-resource-types` |
+| `allSupported` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:all-supported` |
+| `exclusionByResourceTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclusion-by-resource-types` |
 | `includeGlobalResourceTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-global-resource-types` |
 | `recordingStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recording-strategy` |
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
@@ -1195,7 +1195,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `organizationConfigRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-config-rule-name` |
 | `organizationCustomPolicyRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-custom-policy-rule-metadata` |
 | `organizationCustomRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-custom-rule-metadata` |
-| `organizationManagedRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-managed-rule-metadata` |
+| `organizationManagedRuleMetadata` | software.amazon.awscdk.services.config.CfnOrganizationConfigRule$OrganizationManagedRuleMetadataProperty | [[cdk.support/lookup-entry]] | `:organization-managed-rule-metadata` |
 "
   [^CfnOrganizationConfigRule$Builder builder id config]
   (when-some [data (lookup-entry config id :excluded-accounts)]
@@ -1392,9 +1392,9 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `excludedAccounts` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-accounts` |
 | `organizationConfigRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-config-rule-name` |
-| `organizationCustomPolicyRuleMetadata` | software.amazon.awscdk.services.config.CfnOrganizationConfigRule$OrganizationCustomPolicyRuleMetadataProperty | [[cdk.support/lookup-entry]] | `:organization-custom-policy-rule-metadata` |
-| `organizationCustomRuleMetadata` | software.amazon.awscdk.services.config.CfnOrganizationConfigRule$OrganizationCustomRuleMetadataProperty | [[cdk.support/lookup-entry]] | `:organization-custom-rule-metadata` |
-| `organizationManagedRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-managed-rule-metadata` |
+| `organizationCustomPolicyRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-custom-policy-rule-metadata` |
+| `organizationCustomRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-custom-rule-metadata` |
+| `organizationManagedRuleMetadata` | software.amazon.awscdk.services.config.CfnOrganizationConfigRule$OrganizationManagedRuleMetadataProperty | [[cdk.support/lookup-entry]] | `:organization-managed-rule-metadata` |
 "
   [^CfnOrganizationConfigRuleProps$Builder builder id config]
   (when-some [data (lookup-entry config id :excluded-accounts)]
@@ -1430,7 +1430,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conformancePackInputParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:conformance-pack-input-parameters` |
+| `conformancePackInputParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conformance-pack-input-parameters` |
 | `deliveryS3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-s3-bucket` |
 | `deliveryS3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-s3-key-prefix` |
 | `excludedAccounts` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-accounts` |
@@ -1507,7 +1507,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conformancePackInputParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:conformance-pack-input-parameters` |
+| `conformancePackInputParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conformance-pack-input-parameters` |
 | `deliveryS3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-s3-bucket` |
 | `deliveryS3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-s3-key-prefix` |
 | `excludedAccounts` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-accounts` |
@@ -1555,7 +1555,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `automatic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:automatic` |
 | `configRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:config-rule-name` |
-| `executionControls` | software.amazon.awscdk.services.config.CfnRemediationConfiguration$ExecutionControlsProperty | [[cdk.support/lookup-entry]] | `:execution-controls` |
+| `executionControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution-controls` |
 | `maximumAutomaticAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-automatic-attempts` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
@@ -1608,7 +1608,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ssmControls` | software.amazon.awscdk.services.config.CfnRemediationConfiguration$SsmControlsProperty | [[cdk.support/lookup-entry]] | `:ssm-controls` |
+| `ssmControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-controls` |
 "
   [^CfnRemediationConfiguration$ExecutionControlsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ssm-controls)]
@@ -1636,9 +1636,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `automatic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:automatic` |
+| `automatic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:automatic` |
 | `configRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:config-rule-name` |
-| `executionControls` | software.amazon.awscdk.services.config.CfnRemediationConfiguration$ExecutionControlsProperty | [[cdk.support/lookup-entry]] | `:execution-controls` |
+| `executionControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution-controls` |
 | `maximumAutomaticAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-automatic-attempts` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |

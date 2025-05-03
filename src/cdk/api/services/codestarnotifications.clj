@@ -49,7 +49,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-address` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnNotificationRule$Builder builder id config]
   (when-some [data (lookup-entry config id :created-by)]

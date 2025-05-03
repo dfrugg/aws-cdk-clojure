@@ -190,7 +190,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnConnectorDefinition$ConnectorDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -290,7 +290,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectorDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-definition-id` |
-| `connectors` | java.util.List | [[cdk.support/lookup-entry]] | `:connectors` |
+| `connectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connectors` |
 "
   [^CfnConnectorDefinitionVersionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :connector-definition-id)]
@@ -320,7 +320,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnCoreDefinition$CoreDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -354,7 +354,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cores` | java.util.List | [[cdk.support/lookup-entry]] | `:cores` |
+| `cores` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cores` |
 "
   [^CfnCoreDefinition$CoreDefinitionVersionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cores)]
@@ -384,7 +384,7 @@
 |---|---|---|---|
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `syncShadow` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sync-shadow` |
+| `syncShadow` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sync-shadow` |
 | `thingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-arn` |
 "
   [^CfnCoreDefinition$CoreProperty$Builder builder id config]
@@ -419,7 +419,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnCoreDefinition$CoreDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -552,7 +552,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnDeviceDefinition$DeviceDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -586,7 +586,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `devices` | java.util.List | [[cdk.support/lookup-entry]] | `:devices` |
+| `devices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:devices` |
 "
   [^CfnDeviceDefinition$DeviceDefinitionVersionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :devices)]
@@ -616,7 +616,7 @@
 |---|---|---|---|
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `syncShadow` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sync-shadow` |
+| `syncShadow` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sync-shadow` |
 | `thingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-arn` |
 "
   [^CfnDeviceDefinition$DeviceProperty$Builder builder id config]
@@ -686,7 +686,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-definition-id` |
-| `devices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:devices` |
+| `devices` | java.util.List | [[cdk.support/lookup-entry]] | `:devices` |
 "
   [^CfnDeviceDefinitionVersion$Builder builder id config]
   (when-some [data (lookup-entry config id :device-definition-id)]
@@ -846,9 +846,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessSysfs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-sysfs` |
-| `execution` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinition$ExecutionProperty | [[cdk.support/lookup-entry]] | `:execution` |
-| `resourceAccessPolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-access-policies` |
+| `accessSysfs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:access-sysfs` |
+| `execution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution` |
+| `resourceAccessPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-access-policies` |
 | `variables` | java.lang.Object | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnFunctionDefinition$EnvironmentProperty$Builder builder id config]
@@ -915,7 +915,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encodingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:encoding-type` |
-| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
+| `environment` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinition$EnvironmentProperty | [[cdk.support/lookup-entry]] | `:environment` |
 | `execArgs` | java.lang.String | [[cdk.support/lookup-entry]] | `:exec-args` |
 | `executable` | java.lang.String | [[cdk.support/lookup-entry]] | `:executable` |
 | `memorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-size` |
@@ -961,7 +961,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultConfig` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinition$DefaultConfigProperty | [[cdk.support/lookup-entry]] | `:default-config` |
-| `functions` | java.util.List | [[cdk.support/lookup-entry]] | `:functions` |
+| `functions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:functions` |
 "
   [^CfnFunctionDefinition$FunctionDefinitionVersionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-config)]
@@ -1025,7 +1025,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinition$FunctionDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1121,7 +1121,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-config` |
+| `defaultConfig` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion$DefaultConfigProperty | [[cdk.support/lookup-entry]] | `:default-config` |
 | `functionDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-definition-id` |
 | `functions` | java.util.List | [[cdk.support/lookup-entry]] | `:functions` |
 "
@@ -1185,7 +1185,7 @@
 |---|---|---|---|
 | `accessSysfs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:access-sysfs` |
 | `execution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution` |
-| `resourceAccessPolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-access-policies` |
+| `resourceAccessPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-access-policies` |
 | `variables` | java.lang.Object | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnFunctionDefinitionVersion$EnvironmentProperty$Builder builder id config]
@@ -1221,7 +1221,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `isolationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:isolation-mode` |
-| `runAs` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion$RunAsProperty | [[cdk.support/lookup-entry]] | `:run-as` |
+| `runAs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-as` |
 "
   [^CfnFunctionDefinitionVersion$ExecutionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :isolation-mode)]
@@ -1256,7 +1256,7 @@
 | `execArgs` | java.lang.String | [[cdk.support/lookup-entry]] | `:exec-args` |
 | `executable` | java.lang.String | [[cdk.support/lookup-entry]] | `:executable` |
 | `memorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-size` |
-| `pinned` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pinned` |
+| `pinned` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:pinned` |
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnFunctionDefinitionVersion$FunctionConfigurationProperty$Builder builder id config]
@@ -1298,7 +1298,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `functionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-arn` |
-| `functionConfiguration` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion$FunctionConfigurationProperty | [[cdk.support/lookup-entry]] | `:function-configuration` |
+| `functionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:function-configuration` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 "
   [^CfnFunctionDefinitionVersion$FunctionProperty$Builder builder id config]
@@ -1331,9 +1331,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultConfig` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion$DefaultConfigProperty | [[cdk.support/lookup-entry]] | `:default-config` |
+| `defaultConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-config` |
 | `functionDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-definition-id` |
-| `functions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:functions` |
+| `functions` | java.util.List | [[cdk.support/lookup-entry]] | `:functions` |
 "
   [^CfnFunctionDefinitionVersionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :default-config)]
@@ -1645,7 +1645,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnLoggerDefinition$LoggerDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1679,7 +1679,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `loggers` | java.util.List | [[cdk.support/lookup-entry]] | `:loggers` |
+| `loggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:loggers` |
 "
   [^CfnLoggerDefinition$LoggerDefinitionVersionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :loggers)]
@@ -1917,7 +1917,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoAddGroupOwner` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-add-group-owner` |
+| `autoAddGroupOwner` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-add-group-owner` |
 | `groupOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-owner` |
 "
   [^CfnResourceDefinition$GroupOwnerSettingProperty$Builder builder id config]
@@ -1980,7 +1980,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-path` |
-| `groupOwnerSetting` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$GroupOwnerSettingProperty | [[cdk.support/lookup-entry]] | `:group-owner-setting` |
+| `groupOwnerSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-owner-setting` |
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnResourceDefinition$LocalVolumeResourceDataProperty$Builder builder id config]
@@ -2013,7 +2013,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$ResourceDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2047,11 +2047,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `localDeviceResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$LocalDeviceResourceDataProperty | [[cdk.support/lookup-entry]] | `:local-device-resource-data` |
-| `localVolumeResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$LocalVolumeResourceDataProperty | [[cdk.support/lookup-entry]] | `:local-volume-resource-data` |
-| `s3MachineLearningModelResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-machine-learning-model-resource-data` |
+| `localDeviceResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:local-device-resource-data` |
+| `localVolumeResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:local-volume-resource-data` |
+| `s3MachineLearningModelResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$S3MachineLearningModelResourceDataProperty | [[cdk.support/lookup-entry]] | `:s3-machine-learning-model-resource-data` |
 | `sageMakerMachineLearningModelResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$SageMakerMachineLearningModelResourceDataProperty | [[cdk.support/lookup-entry]] | `:sage-maker-machine-learning-model-resource-data` |
-| `secretsManagerSecretResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$SecretsManagerSecretResourceDataProperty | [[cdk.support/lookup-entry]] | `:secrets-manager-secret-resource-data` |
+| `secretsManagerSecretResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secrets-manager-secret-resource-data` |
 "
   [^CfnResourceDefinition$ResourceDataContainerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :local-device-resource-data)]
@@ -2148,7 +2148,7 @@
 |---|---|---|---|
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `resourceDataContainer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-data-container` |
+| `resourceDataContainer` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$ResourceDataContainerProperty | [[cdk.support/lookup-entry]] | `:resource-data-container` |
 "
   [^CfnResourceDefinition$ResourceInstanceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :id)]
@@ -2215,7 +2215,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-path` |
-| `ownerSetting` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$ResourceDownloadOwnerSettingProperty | [[cdk.support/lookup-entry]] | `:owner-setting` |
+| `ownerSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:owner-setting` |
 | `sageMakerJobArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sage-maker-job-arn` |
 "
   [^CfnResourceDefinition$SageMakerMachineLearningModelResourceDataProperty$Builder builder id config]
@@ -2280,7 +2280,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `resourceDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-definition-id` |
-| `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
+| `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
 "
   [^CfnResourceDefinitionVersion$Builder builder id config]
   (when-some [data (lookup-entry config id :resource-definition-id)]
@@ -2310,7 +2310,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoAddGroupOwner` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-add-group-owner` |
+| `autoAddGroupOwner` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-add-group-owner` |
 | `groupOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-owner` |
 "
   [^CfnResourceDefinitionVersion$GroupOwnerSettingProperty$Builder builder id config]
@@ -2373,7 +2373,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-path` |
-| `groupOwnerSetting` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$GroupOwnerSettingProperty | [[cdk.support/lookup-entry]] | `:group-owner-setting` |
+| `groupOwnerSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-owner-setting` |
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnResourceDefinitionVersion$LocalVolumeResourceDataProperty$Builder builder id config]
@@ -2407,7 +2407,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `resourceDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-definition-id` |
-| `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
+| `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
 "
   [^CfnResourceDefinitionVersionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :resource-definition-id)]
@@ -2437,10 +2437,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `localDeviceResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$LocalDeviceResourceDataProperty | [[cdk.support/lookup-entry]] | `:local-device-resource-data` |
-| `localVolumeResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$LocalVolumeResourceDataProperty | [[cdk.support/lookup-entry]] | `:local-volume-resource-data` |
-| `s3MachineLearningModelResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-machine-learning-model-resource-data` |
-| `sageMakerMachineLearningModelResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sage-maker-machine-learning-model-resource-data` |
+| `localDeviceResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:local-device-resource-data` |
+| `localVolumeResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:local-volume-resource-data` |
+| `s3MachineLearningModelResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$S3MachineLearningModelResourceDataProperty | [[cdk.support/lookup-entry]] | `:s3-machine-learning-model-resource-data` |
+| `sageMakerMachineLearningModelResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$SageMakerMachineLearningModelResourceDataProperty | [[cdk.support/lookup-entry]] | `:sage-maker-machine-learning-model-resource-data` |
 | `secretsManagerSecretResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secrets-manager-secret-resource-data` |
 "
   [^CfnResourceDefinitionVersion$ResourceDataContainerProperty$Builder builder id config]
@@ -2543,7 +2543,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-path` |
-| `ownerSetting` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$ResourceDownloadOwnerSettingProperty | [[cdk.support/lookup-entry]] | `:owner-setting` |
+| `ownerSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:owner-setting` |
 | `s3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-uri` |
 "
   [^CfnResourceDefinitionVersion$S3MachineLearningModelResourceDataProperty$Builder builder id config]
@@ -2577,7 +2577,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-path` |
-| `ownerSetting` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$ResourceDownloadOwnerSettingProperty | [[cdk.support/lookup-entry]] | `:owner-setting` |
+| `ownerSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:owner-setting` |
 | `sageMakerJobArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sage-maker-job-arn` |
 "
   [^CfnResourceDefinitionVersion$SageMakerMachineLearningModelResourceDataProperty$Builder builder id config]
@@ -2641,7 +2641,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition$SubscriptionDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2675,7 +2675,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `initialVersion` | software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition$SubscriptionDefinitionVersionProperty | [[cdk.support/lookup-entry]] | `:initial-version` |
+| `initialVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2775,7 +2775,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subscriptionDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-definition-id` |
-| `subscriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscriptions` |
+| `subscriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:subscriptions` |
 "
   [^CfnSubscriptionDefinitionVersion$Builder builder id config]
   (when-some [data (lookup-entry config id :subscription-definition-id)]
@@ -2806,7 +2806,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subscriptionDefinitionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-definition-id` |
-| `subscriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:subscriptions` |
+| `subscriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscriptions` |
 "
   [^CfnSubscriptionDefinitionVersionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :subscription-definition-id)]

@@ -53,7 +53,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `queryStatement` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-statement` |
-| `tableConfigurations` | java.util.Map | [[cdk.support/lookup-entry]] | `:table-configurations` |
+| `tableConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-configurations` |
 "
   [^CfnExport$DataQueryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :query-statement)]
@@ -83,7 +83,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Destination` | software.amazon.awscdk.services.bcmdataexports.CfnExport$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
+| `s3Destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination` |
 "
   [^CfnExport$DestinationConfigurationsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-destination)]
@@ -111,9 +111,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataQuery` | software.amazon.awscdk.services.bcmdataexports.CfnExport$DataQueryProperty | [[cdk.support/lookup-entry]] | `:data-query` |
+| `dataQuery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-query` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `destinationConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-configurations` |
+| `destinationConfigurations` | software.amazon.awscdk.services.bcmdataexports.CfnExport$DestinationConfigurationsProperty | [[cdk.support/lookup-entry]] | `:destination-configurations` |
 | `exportArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:export-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `refreshCadence` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:refresh-cadence` |
@@ -154,7 +154,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `export` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:export` |
+| `export` | software.amazon.awscdk.services.bcmdataexports.CfnExport$ExportProperty | [[cdk.support/lookup-entry]] | `:export` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnExportProps$Builder builder id config]

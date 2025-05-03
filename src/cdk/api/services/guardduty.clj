@@ -36,8 +36,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataSources` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNDataSourceConfigurationsProperty | [[cdk.support/lookup-entry]] | `:data-sources` |
-| `enable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable` |
-| `features` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:features` |
+| `enable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable` |
+| `features` | java.util.List | [[cdk.support/lookup-entry]] | `:features` |
 | `findingPublishingFrequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:finding-publishing-frequency` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -75,7 +75,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `kubernetes` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNKubernetesConfigurationProperty | [[cdk.support/lookup-entry]] | `:kubernetes` |
+| `kubernetes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kubernetes` |
 | `malwareProtection` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNMalwareProtectionConfigurationProperty | [[cdk.support/lookup-entry]] | `:malware-protection` |
 | `s3Logs` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNS3LogsConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-logs` |
 "
@@ -140,7 +140,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-configuration` |
+| `additionalConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
@@ -174,7 +174,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable` |
+| `enable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable` |
 "
   [^CfnDetector$CFNKubernetesAuditLogsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable)]
@@ -286,7 +286,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable` |
+| `enable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable` |
 "
   [^CfnDetector$CFNS3LogsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable)]
@@ -315,8 +315,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataSources` | software.amazon.awscdk.services.guardduty.CfnDetector$CFNDataSourceConfigurationsProperty | [[cdk.support/lookup-entry]] | `:data-sources` |
-| `enable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable` |
-| `features` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:features` |
+| `enable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable` |
+| `features` | java.util.List | [[cdk.support/lookup-entry]] | `:features` |
 | `findingPublishingFrequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:finding-publishing-frequency` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -388,7 +388,7 @@
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
-| `findingCriteria` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:finding-criteria` |
+| `findingCriteria` | software.amazon.awscdk.services.guardduty.CfnFilter$FindingCriteriaProperty | [[cdk.support/lookup-entry]] | `:finding-criteria` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rank` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rank` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -493,7 +493,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `criterion` | java.lang.Object | [[cdk.support/lookup-entry]] | `:criterion` |
-| `itemType` | software.amazon.awscdk.services.guardduty.CfnFilter$ConditionProperty | [[cdk.support/lookup-entry]] | `:item-type` |
+| `itemType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:item-type` |
 "
   [^CfnFilter$FindingCriteriaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :criterion)]
@@ -569,7 +569,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:activate` |
+| `activate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:activate` |
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
@@ -724,7 +724,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
-| `disableEmailNotification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
+| `disableEmailNotification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
 | `email` | java.lang.String | [[cdk.support/lookup-entry]] | `:email` |
 | `memberId` | java.lang.String | [[cdk.support/lookup-entry]] | `:member-id` |
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
@@ -767,7 +767,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
-| `disableEmailNotification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
+| `disableEmailNotification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
 | `email` | java.lang.String | [[cdk.support/lookup-entry]] | `:email` |
 | `memberId` | java.lang.String | [[cdk.support/lookup-entry]] | `:member-id` |
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
@@ -809,7 +809,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:activate` |
+| `activate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:activate` |
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
@@ -852,7 +852,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:activate` |
+| `activate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:activate` |
 | `detectorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-id` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |

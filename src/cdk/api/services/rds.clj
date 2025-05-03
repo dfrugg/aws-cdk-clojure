@@ -570,7 +570,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceCustomDbEngineVersionIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-custom-db-engine-version-identifier` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `useAwsProvidedLatestImage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-aws-provided-latest-image` |
+| `useAwsProvidedLatestImage` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-aws-provided-latest-image` |
 "
   [^CfnCustomDBEngineVersion$Builder builder id config]
   (when-some [data (lookup-entry config id :database-installation-files-s3-bucket-name)]
@@ -631,7 +631,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceCustomDbEngineVersionIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-custom-db-engine-version-identifier` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `useAwsProvidedLatestImage` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-aws-provided-latest-image` |
+| `useAwsProvidedLatestImage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-aws-provided-latest-image` |
 "
   [^CfnCustomDBEngineVersionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :database-installation-files-s3-bucket-name)]
@@ -682,12 +682,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allocatedStorage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocated-storage` |
-| `associatedRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:associated-roles` |
+| `associatedRoles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associated-roles` |
 | `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
 | `backtrackWindow` | java.lang.Number | [[cdk.support/lookup-entry]] | `:backtrack-window` |
 | `backupRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:backup-retention-period` |
-| `copyTagsToSnapshot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshot` |
+| `copyTagsToSnapshot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshot` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `dbClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-cluster-identifier` |
 | `dbClusterInstanceClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-cluster-instance-class` |
@@ -695,12 +695,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dbInstanceParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-instance-parameter-group-name` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
 | `dbSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-system-id` |
-| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
 | `domainIamRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-iam-role-name` |
 | `enableCloudwatchLogsExports` | java.util.List | [[cdk.support/lookup-entry]] | `:enable-cloudwatch-logs-exports` |
-| `enableGlobalWriteForwarding` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-global-write-forwarding` |
-| `enableHttpEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-http-endpoint` |
+| `enableGlobalWriteForwarding` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-global-write-forwarding` |
+| `enableHttpEndpoint` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-http-endpoint` |
 | `enableIamDatabaseAuthentication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-iam-database-authentication` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-mode` |
@@ -708,32 +708,32 @@ function on the data with the provided namespace id and item-key.  The found val
 | `globalClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-cluster-identifier` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `manageMasterUserPassword` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:manage-master-user-password` |
+| `manageMasterUserPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-master-user-password` |
 | `masterUserPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-user-password` |
-| `masterUserSecret` | software.amazon.awscdk.services.rds.CfnDBCluster$MasterUserSecretProperty | [[cdk.support/lookup-entry]] | `:master-user-secret` |
+| `masterUserSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:master-user-secret` |
 | `masterUsername` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-username` |
 | `monitoringInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:monitoring-interval` |
 | `monitoringRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitoring-role-arn` |
 | `networkType` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-type` |
-| `performanceInsightsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:performance-insights-enabled` |
+| `performanceInsightsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:performance-insights-enabled` |
 | `performanceInsightsKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:performance-insights-kms-key-id` |
 | `performanceInsightsRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:performance-insights-retention-period` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `preferredBackupWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-backup-window` |
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
-| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `replicationSourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:replication-source-identifier` |
 | `restoreToTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:restore-to-time` |
 | `restoreType` | java.lang.String | [[cdk.support/lookup-entry]] | `:restore-type` |
 | `scalingConfiguration` | software.amazon.awscdk.services.rds.CfnDBCluster$ScalingConfigurationProperty | [[cdk.support/lookup-entry]] | `:scaling-configuration` |
-| `serverlessV2ScalingConfiguration` | software.amazon.awscdk.services.rds.CfnDBCluster$ServerlessV2ScalingConfigurationProperty | [[cdk.support/lookup-entry]] | `:serverless-v2-scaling-configuration` |
+| `serverlessV2ScalingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:serverless-v2-scaling-configuration` |
 | `snapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-identifier` |
 | `sourceDbClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-db-cluster-identifier` |
 | `sourceRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-region` |
 | `storageEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `useLatestRestorableTime` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
+| `useLatestRestorableTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
 | `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
 "
   [^CfnDBCluster$Builder builder id config]
@@ -1043,7 +1043,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `allocatedStorage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocated-storage` |
 | `associatedRoles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associated-roles` |
-| `autoMinorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
+| `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
 | `backtrackWindow` | java.lang.Number | [[cdk.support/lookup-entry]] | `:backtrack-window` |
 | `backupRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:backup-retention-period` |
@@ -1055,12 +1055,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dbInstanceParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-instance-parameter-group-name` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
 | `dbSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-system-id` |
-| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
 | `domainIamRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-iam-role-name` |
 | `enableCloudwatchLogsExports` | java.util.List | [[cdk.support/lookup-entry]] | `:enable-cloudwatch-logs-exports` |
-| `enableGlobalWriteForwarding` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-global-write-forwarding` |
-| `enableHttpEndpoint` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-http-endpoint` |
+| `enableGlobalWriteForwarding` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-global-write-forwarding` |
+| `enableHttpEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-http-endpoint` |
 | `enableIamDatabaseAuthentication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-iam-database-authentication` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-mode` |
@@ -1070,12 +1070,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `manageMasterUserPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-master-user-password` |
 | `masterUserPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-user-password` |
-| `masterUserSecret` | software.amazon.awscdk.services.rds.CfnDBCluster$MasterUserSecretProperty | [[cdk.support/lookup-entry]] | `:master-user-secret` |
+| `masterUserSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:master-user-secret` |
 | `masterUsername` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-username` |
 | `monitoringInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:monitoring-interval` |
 | `monitoringRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitoring-role-arn` |
 | `networkType` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-type` |
-| `performanceInsightsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:performance-insights-enabled` |
+| `performanceInsightsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:performance-insights-enabled` |
 | `performanceInsightsKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:performance-insights-kms-key-id` |
 | `performanceInsightsRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:performance-insights-retention-period` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
@@ -1090,7 +1090,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `snapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-identifier` |
 | `sourceDbClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-db-cluster-identifier` |
 | `sourceRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-region` |
-| `storageEncrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
+| `storageEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `useLatestRestorableTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
@@ -1256,7 +1256,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoPause` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-pause` |
+| `autoPause` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-pause` |
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 | `secondsBeforeTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seconds-before-timeout` |
@@ -1332,7 +1332,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `allocatedStorage` | java.lang.String | [[cdk.support/lookup-entry]] | `:allocated-storage` |
 | `allowMajorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-major-version-upgrade` |
-| `associatedRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:associated-roles` |
+| `associatedRoles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associated-roles` |
 | `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
 | `automaticBackupReplicationKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:automatic-backup-replication-kms-key-id` |
 | `automaticBackupReplicationRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:automatic-backup-replication-region` |
@@ -1340,7 +1340,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `backupRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:backup-retention-period` |
 | `caCertificateIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificate-identifier` |
 | `certificateDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-details` |
-| `certificateRotationRestart` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-rotation-restart` |
+| `certificateRotationRestart` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:certificate-rotation-restart` |
 | `characterSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:character-set-name` |
 | `copyTagsToSnapshot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshot` |
 | `customIamInstanceProfile` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-iam-instance-profile` |
@@ -1354,7 +1354,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dbSnapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-snapshot-identifier` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
 | `dedicatedLogVolume` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dedicated-log-volume` |
-| `deleteAutomatedBackups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-automated-backups` |
+| `deleteAutomatedBackups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-automated-backups` |
 | `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
 | `domainAuthSecretArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-auth-secret-arn` |
@@ -1365,7 +1365,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enableCloudwatchLogsExports` | java.util.List | [[cdk.support/lookup-entry]] | `:enable-cloudwatch-logs-exports` |
 | `enableIamDatabaseAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-iam-database-authentication` |
 | `enablePerformanceInsights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-performance-insights` |
-| `endpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint` |
+| `endpoint` | software.amazon.awscdk.services.rds.CfnDBInstance$EndpointProperty | [[cdk.support/lookup-entry]] | `:endpoint` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
@@ -1378,7 +1378,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxAllocatedStorage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-allocated-storage` |
 | `monitoringInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:monitoring-interval` |
 | `monitoringRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitoring-role-arn` |
-| `multiAz` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-az` |
+| `multiAz` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-az` |
 | `ncharCharacterSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:nchar-character-set-name` |
 | `networkType` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-type` |
 | `optionGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:option-group-name` |
@@ -1389,7 +1389,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
 | `processorFeatures` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processor-features` |
 | `promotionTier` | java.lang.Number | [[cdk.support/lookup-entry]] | `:promotion-tier` |
-| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `replicaMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:replica-mode` |
 | `restoreTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:restore-time` |
 | `sourceDbClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-db-cluster-identifier` |
@@ -1404,8 +1404,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tdeCredentialArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:tde-credential-arn` |
 | `tdeCredentialPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:tde-credential-password` |
 | `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |
-| `useDefaultProcessorFeatures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-default-processor-features` |
-| `useLatestRestorableTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
+| `useDefaultProcessorFeatures` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-default-processor-features` |
+| `useLatestRestorableTime` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
 | `vpcSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-groups` |
 "
   [^CfnDBInstance$Builder builder id config]
@@ -1746,17 +1746,17 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `allocatedStorage` | java.lang.String | [[cdk.support/lookup-entry]] | `:allocated-storage` |
 | `allowMajorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-major-version-upgrade` |
-| `associatedRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:associated-roles` |
+| `associatedRoles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:associated-roles` |
 | `autoMinorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
 | `automaticBackupReplicationKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:automatic-backup-replication-kms-key-id` |
 | `automaticBackupReplicationRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:automatic-backup-replication-region` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `backupRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:backup-retention-period` |
 | `caCertificateIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificate-identifier` |
-| `certificateDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-details` |
-| `certificateRotationRestart` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-rotation-restart` |
+| `certificateDetails` | software.amazon.awscdk.services.rds.CfnDBInstance$CertificateDetailsProperty | [[cdk.support/lookup-entry]] | `:certificate-details` |
+| `certificateRotationRestart` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:certificate-rotation-restart` |
 | `characterSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:character-set-name` |
-| `copyTagsToSnapshot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshot` |
+| `copyTagsToSnapshot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags-to-snapshot` |
 | `customIamInstanceProfile` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-iam-instance-profile` |
 | `dbClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-cluster-identifier` |
 | `dbClusterSnapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-cluster-snapshot-identifier` |
@@ -1767,7 +1767,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dbSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:db-security-groups` |
 | `dbSnapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-snapshot-identifier` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
-| `dedicatedLogVolume` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dedicated-log-volume` |
+| `dedicatedLogVolume` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dedicated-log-volume` |
 | `deleteAutomatedBackups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-automated-backups` |
 | `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
@@ -1777,7 +1777,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `domainIamRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-iam-role-name` |
 | `domainOu` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-ou` |
 | `enableCloudwatchLogsExports` | java.util.List | [[cdk.support/lookup-entry]] | `:enable-cloudwatch-logs-exports` |
-| `enableIamDatabaseAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-iam-database-authentication` |
+| `enableIamDatabaseAuthentication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-iam-database-authentication` |
 | `enablePerformanceInsights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-performance-insights` |
 | `endpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
@@ -1785,9 +1785,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `licenseModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:license-model` |
-| `manageMasterUserPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-master-user-password` |
+| `manageMasterUserPassword` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:manage-master-user-password` |
 | `masterUserPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-user-password` |
-| `masterUserSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:master-user-secret` |
+| `masterUserSecret` | software.amazon.awscdk.services.rds.CfnDBInstance$MasterUserSecretProperty | [[cdk.support/lookup-entry]] | `:master-user-secret` |
 | `masterUsername` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-username` |
 | `maxAllocatedStorage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-allocated-storage` |
 | `monitoringInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:monitoring-interval` |
@@ -1811,14 +1811,14 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceDbInstanceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-db-instance-identifier` |
 | `sourceDbiResourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-dbi-resource-id` |
 | `sourceRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-region` |
-| `storageEncrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
+| `storageEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
 | `storageThroughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-throughput` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tdeCredentialArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:tde-credential-arn` |
 | `tdeCredentialPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:tde-credential-password` |
 | `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |
-| `useDefaultProcessorFeatures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-default-processor-features` |
+| `useDefaultProcessorFeatures` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-default-processor-features` |
 | `useLatestRestorableTime` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
 | `vpcSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-groups` |
 "
@@ -2120,12 +2120,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `auth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auth` |
+| `auth` | java.util.List | [[cdk.support/lookup-entry]] | `:auth` |
 | `dbProxyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-proxy-name` |
-| `debugLogging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:debug-logging` |
+| `debugLogging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:debug-logging` |
 | `engineFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-family` |
 | `idleClientTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-client-timeout` |
-| `requireTls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-tls` |
+| `requireTls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-tls` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
@@ -2294,10 +2294,10 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `auth` | java.util.List | [[cdk.support/lookup-entry]] | `:auth` |
 | `dbProxyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-proxy-name` |
-| `debugLogging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:debug-logging` |
+| `debugLogging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:debug-logging` |
 | `engineFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-family` |
 | `idleClientTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-client-timeout` |
-| `requireTls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-tls` |
+| `requireTls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-tls` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
@@ -2855,12 +2855,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `globalClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-cluster-identifier` |
 | `sourceDbClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-db-cluster-identifier` |
-| `storageEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
+| `storageEncrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
 "
   [^CfnGlobalCluster$Builder builder id config]
   (when-some [data (lookup-entry config id :deletion-protection)]
@@ -2990,7 +2990,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `dataFilter` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-filter` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `integrationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:integration-name` |

@@ -49,11 +49,11 @@
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `fillerSlate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filler-slate` |
 | `logConfiguration` | software.amazon.awscdk.services.mediatailor.CfnChannel$LogConfigurationForChannelProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
-| `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
+| `outputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outputs` |
 | `playbackMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:playback-mode` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tier` | java.lang.String | [[cdk.support/lookup-entry]] | `:tier` |
-| `timeShiftConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-shift-configuration` |
+| `timeShiftConfiguration` | software.amazon.awscdk.services.mediatailor.CfnChannel$TimeShiftConfigurationProperty | [[cdk.support/lookup-entry]] | `:time-shift-configuration` |
 "
   [^CfnChannel$Builder builder id config]
   (when-some [data (lookup-entry config id :audiences)]
@@ -258,7 +258,7 @@
 | `audiences` | java.util.List | [[cdk.support/lookup-entry]] | `:audiences` |
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `fillerSlate` | software.amazon.awscdk.services.mediatailor.CfnChannel$SlateSourceProperty | [[cdk.support/lookup-entry]] | `:filler-slate` |
-| `logConfiguration` | software.amazon.awscdk.services.mediatailor.CfnChannel$LogConfigurationForChannelProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
+| `logConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
 | `playbackMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:playback-mode` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -474,7 +474,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `httpPackageConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-package-configurations` |
+| `httpPackageConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:http-package-configurations` |
 | `liveSourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:live-source-name` |
 | `sourceLocationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-location-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -575,13 +575,13 @@
 |---|---|---|---|
 | `adDecisionServerUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:ad-decision-server-url` |
 | `availSuppression` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:avail-suppression` |
-| `bumper` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$BumperProperty | [[cdk.support/lookup-entry]] | `:bumper` |
+| `bumper` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bumper` |
 | `cdnConfiguration` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$CdnConfigurationProperty | [[cdk.support/lookup-entry]] | `:cdn-configuration` |
 | `configurationAliases` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-aliases` |
-| `dashConfiguration` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$DashConfigurationProperty | [[cdk.support/lookup-entry]] | `:dash-configuration` |
+| `dashConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dash-configuration` |
 | `hlsConfiguration` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$HlsConfigurationProperty | [[cdk.support/lookup-entry]] | `:hls-configuration` |
 | `livePreRollConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:live-pre-roll-configuration` |
-| `manifestProcessingRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manifest-processing-rules` |
+| `manifestProcessingRules` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$ManifestProcessingRulesProperty | [[cdk.support/lookup-entry]] | `:manifest-processing-rules` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `personalizationThresholdSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:personalization-threshold-seconds` |
 | `slateAdUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:slate-ad-url` |
@@ -798,7 +798,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `adMarkerPassthrough` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$AdMarkerPassthroughProperty | [[cdk.support/lookup-entry]] | `:ad-marker-passthrough` |
+| `adMarkerPassthrough` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ad-marker-passthrough` |
 "
   [^CfnPlaybackConfiguration$ManifestProcessingRulesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ad-marker-passthrough)]
@@ -828,12 +828,12 @@
 |---|---|---|---|
 | `adDecisionServerUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:ad-decision-server-url` |
 | `availSuppression` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:avail-suppression` |
-| `bumper` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$BumperProperty | [[cdk.support/lookup-entry]] | `:bumper` |
+| `bumper` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bumper` |
 | `cdnConfiguration` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$CdnConfigurationProperty | [[cdk.support/lookup-entry]] | `:cdn-configuration` |
 | `configurationAliases` | java.util.Map | [[cdk.support/lookup-entry]] | `:configuration-aliases` |
-| `dashConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dash-configuration` |
+| `dashConfiguration` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$DashConfigurationProperty | [[cdk.support/lookup-entry]] | `:dash-configuration` |
 | `hlsConfiguration` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$HlsConfigurationProperty | [[cdk.support/lookup-entry]] | `:hls-configuration` |
-| `livePreRollConfiguration` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$LivePreRollConfigurationProperty | [[cdk.support/lookup-entry]] | `:live-pre-roll-configuration` |
+| `livePreRollConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:live-pre-roll-configuration` |
 | `manifestProcessingRules` | software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration$ManifestProcessingRulesProperty | [[cdk.support/lookup-entry]] | `:manifest-processing-rules` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `personalizationThresholdSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:personalization-threshold-seconds` |
@@ -897,7 +897,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessType` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-type` |
-| `secretsManagerAccessTokenConfiguration` | software.amazon.awscdk.services.mediatailor.CfnSourceLocation$SecretsManagerAccessTokenConfigurationProperty | [[cdk.support/lookup-entry]] | `:secrets-manager-access-token-configuration` |
+| `secretsManagerAccessTokenConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secrets-manager-access-token-configuration` |
 "
   [^CfnSourceLocation$AccessConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-type)]
@@ -929,7 +929,7 @@
 |---|---|---|---|
 | `accessConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-configuration` |
 | `defaultSegmentDeliveryConfiguration` | software.amazon.awscdk.services.mediatailor.CfnSourceLocation$DefaultSegmentDeliveryConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-segment-delivery-configuration` |
-| `httpConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-configuration` |
+| `httpConfiguration` | software.amazon.awscdk.services.mediatailor.CfnSourceLocation$HttpConfigurationProperty | [[cdk.support/lookup-entry]] | `:http-configuration` |
 | `segmentDeliveryConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:segment-delivery-configurations` |
 | `sourceLocationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-location-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1026,10 +1026,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessConfiguration` | software.amazon.awscdk.services.mediatailor.CfnSourceLocation$AccessConfigurationProperty | [[cdk.support/lookup-entry]] | `:access-configuration` |
-| `defaultSegmentDeliveryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-segment-delivery-configuration` |
-| `httpConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-configuration` |
-| `segmentDeliveryConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:segment-delivery-configurations` |
+| `accessConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-configuration` |
+| `defaultSegmentDeliveryConfiguration` | software.amazon.awscdk.services.mediatailor.CfnSourceLocation$DefaultSegmentDeliveryConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-segment-delivery-configuration` |
+| `httpConfiguration` | software.amazon.awscdk.services.mediatailor.CfnSourceLocation$HttpConfigurationProperty | [[cdk.support/lookup-entry]] | `:http-configuration` |
+| `segmentDeliveryConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:segment-delivery-configurations` |
 | `sourceLocationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-location-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1134,7 +1134,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `httpPackageConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:http-package-configurations` |
+| `httpPackageConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-package-configurations` |
 | `sourceLocationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-location-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vodSourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vod-source-name` |

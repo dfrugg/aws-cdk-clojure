@@ -361,9 +361,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `assertionRule` | software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule$AssertionRuleProperty | [[cdk.support/lookup-entry]] | `:assertion-rule` |
+| `assertionRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:assertion-rule` |
 | `controlPanelArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:control-panel-arn` |
-| `gatingRule` | software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule$GatingRuleProperty | [[cdk.support/lookup-entry]] | `:gating-rule` |
+| `gatingRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gating-rule` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `ruleConfig` | software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule$RuleConfigProperty | [[cdk.support/lookup-entry]] | `:rule-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -404,7 +404,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `inverted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inverted` |
+| `inverted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inverted` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "

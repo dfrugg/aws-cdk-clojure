@@ -44,12 +44,12 @@
 | `onlineAbConfig` | software.amazon.awscdk.services.evidently.CfnExperiment$OnlineAbConfigObjectProperty | [[cdk.support/lookup-entry]] | `:online-ab-config` |
 | `project` | java.lang.String | [[cdk.support/lookup-entry]] | `:project` |
 | `randomizationSalt` | java.lang.String | [[cdk.support/lookup-entry]] | `:randomization-salt` |
-| `removeSegment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-segment` |
+| `removeSegment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-segment` |
 | `runningStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:running-status` |
 | `samplingRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sampling-rate` |
 | `segment` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `treatments` | java.util.List | [[cdk.support/lookup-entry]] | `:treatments` |
+| `treatments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:treatments` |
 "
   [^CfnExperiment$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -179,7 +179,7 @@
 | `onlineAbConfig` | software.amazon.awscdk.services.evidently.CfnExperiment$OnlineAbConfigObjectProperty | [[cdk.support/lookup-entry]] | `:online-ab-config` |
 | `project` | java.lang.String | [[cdk.support/lookup-entry]] | `:project` |
 | `randomizationSalt` | java.lang.String | [[cdk.support/lookup-entry]] | `:randomization-salt` |
-| `removeSegment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-segment` |
+| `removeSegment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-segment` |
 | `runningStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:running-status` |
 | `samplingRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sampling-rate` |
 | `segment` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment` |
@@ -341,12 +341,12 @@
 |---|---|---|---|
 | `defaultVariation` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-variation` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `entityOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:entity-overrides` |
+| `entityOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:entity-overrides` |
 | `evaluationStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:evaluation-strategy` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `project` | java.lang.String | [[cdk.support/lookup-entry]] | `:project` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `variations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variations` |
+| `variations` | java.util.List | [[cdk.support/lookup-entry]] | `:variations` |
 "
   [^CfnFeature$Builder builder id config]
   (when-some [data (lookup-entry config id :default-variation)]
@@ -509,7 +509,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `executionStatus` | software.amazon.awscdk.services.evidently.CfnLaunch$ExecutionStatusObjectProperty | [[cdk.support/lookup-entry]] | `:execution-status` |
+| `executionStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution-status` |
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
 | `metricMonitors` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -704,7 +704,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `executionStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution-status` |
-| `groups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:groups` |
+| `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
 | `metricMonitors` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `project` | java.lang.String | [[cdk.support/lookup-entry]] | `:project` |
@@ -756,7 +756,7 @@
 |---|---|---|---|
 | `evaluationOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-order` |
 | `segment` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment` |
-| `weights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weights` |
+| `weights` | java.util.List | [[cdk.support/lookup-entry]] | `:weights` |
 "
   [^CfnLaunch$SegmentOverrideProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :evaluation-order)]
@@ -788,7 +788,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `groupWeights` | java.util.List | [[cdk.support/lookup-entry]] | `:group-weights` |
+| `groupWeights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-weights` |
 | `segmentOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:segment-overrides` |
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 "
@@ -894,7 +894,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |
-| `s3` | software.amazon.awscdk.services.evidently.CfnProject$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3` |
+| `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnProject$DataDeliveryObjectProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :log-group)]

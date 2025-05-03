@@ -57,7 +57,7 @@
 |---|---|---|---|
 | `coreNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-id` |
 | `edgeLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:edge-location` |
-| `options` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:options` |
+| `options` | software.amazon.awscdk.services.networkmanager.CfnConnectAttachment$ConnectAttachmentOptionsProperty | [[cdk.support/lookup-entry]] | `:options` |
 | `proposedSegmentChange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `transportAttachmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transport-attachment-id` |
@@ -231,7 +231,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bgpOptions` | software.amazon.awscdk.services.networkmanager.CfnConnectPeer$BgpOptionsProperty | [[cdk.support/lookup-entry]] | `:bgp-options` |
+| `bgpOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bgp-options` |
 | `connectAttachmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:connect-attachment-id` |
 | `coreNetworkAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-address` |
 | `insideCidrBlocks` | java.util.List | [[cdk.support/lookup-entry]] | `:inside-cidr-blocks` |
@@ -314,7 +314,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bgpConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bgp-configurations` |
+| `bgpConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:bgp-configurations` |
 | `coreNetworkAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-address` |
 | `insideCidrBlocks` | java.util.List | [[cdk.support/lookup-entry]] | `:inside-cidr-blocks` |
 | `peerAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:peer-address` |
@@ -354,7 +354,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bgpOptions` | software.amazon.awscdk.services.networkmanager.CfnConnectPeer$BgpOptionsProperty | [[cdk.support/lookup-entry]] | `:bgp-options` |
+| `bgpOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bgp-options` |
 | `connectAttachmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:connect-attachment-id` |
 | `coreNetworkAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-address` |
 | `insideCidrBlocks` | java.util.List | [[cdk.support/lookup-entry]] | `:inside-cidr-blocks` |
@@ -647,7 +647,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-location` |
+| `awsLocation` | software.amazon.awscdk.services.networkmanager.CfnDevice$AWSLocationProperty | [[cdk.support/lookup-entry]] | `:aws-location` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `globalNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-network-id` |
 | `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
@@ -736,7 +736,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-location` |
+| `awsLocation` | software.amazon.awscdk.services.networkmanager.CfnDevice$AWSLocationProperty | [[cdk.support/lookup-entry]] | `:aws-location` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `globalNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-network-id` |
 | `location` | software.amazon.awscdk.services.networkmanager.CfnDevice$LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
@@ -964,7 +964,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bandwidth` | software.amazon.awscdk.services.networkmanager.CfnLink$BandwidthProperty | [[cdk.support/lookup-entry]] | `:bandwidth` |
+| `bandwidth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bandwidth` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `globalNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-network-id` |
 | `provider` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider` |
@@ -1010,7 +1010,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bandwidth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bandwidth` |
+| `bandwidth` | software.amazon.awscdk.services.networkmanager.CfnLink$BandwidthProperty | [[cdk.support/lookup-entry]] | `:bandwidth` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `globalNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-network-id` |
 | `provider` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider` |
@@ -1058,7 +1058,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `globalNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-network-id` |
-| `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
+| `location` | software.amazon.awscdk.services.networkmanager.CfnSite$LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSite$Builder builder id config]
@@ -1129,7 +1129,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `globalNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-network-id` |
-| `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
+| `location` | software.amazon.awscdk.services.networkmanager.CfnSite$LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSiteProps$Builder builder id config]
@@ -1165,7 +1165,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `coreNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-id` |
-| `proposedSegmentChange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
+| `proposedSegmentChange` | software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment$ProposedSegmentChangeProperty | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpnConnectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpn-connection-arn` |
 "
@@ -1236,7 +1236,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `coreNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-id` |
-| `proposedSegmentChange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
+| `proposedSegmentChange` | software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment$ProposedSegmentChangeProperty | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpnConnectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpn-connection-arn` |
 "
@@ -1403,7 +1403,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `peeringId` | java.lang.String | [[cdk.support/lookup-entry]] | `:peering-id` |
-| `proposedSegmentChange` | software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment$ProposedSegmentChangeProperty | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
+| `proposedSegmentChange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `transitGatewayRouteTableArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-arn` |
 "
@@ -1474,7 +1474,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `peeringId` | java.lang.String | [[cdk.support/lookup-entry]] | `:peering-id` |
-| `proposedSegmentChange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
+| `proposedSegmentChange` | software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment$ProposedSegmentChangeProperty | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `transitGatewayRouteTableArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-arn` |
 "
@@ -1512,7 +1512,7 @@
 |---|---|---|---|
 | `coreNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-id` |
 | `options` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:options` |
-| `proposedSegmentChange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
+| `proposedSegmentChange` | software.amazon.awscdk.services.networkmanager.CfnVpcAttachment$ProposedSegmentChangeProperty | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
 | `subnetArns` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-arns` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-arn` |
@@ -1588,7 +1588,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `coreNetworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:core-network-id` |
-| `options` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:options` |
+| `options` | software.amazon.awscdk.services.networkmanager.CfnVpcAttachment$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:options` |
 | `proposedSegmentChange` | software.amazon.awscdk.services.networkmanager.CfnVpcAttachment$ProposedSegmentChangeProperty | [[cdk.support/lookup-entry]] | `:proposed-segment-change` |
 | `subnetArns` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-arns` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1630,8 +1630,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applianceModeSupport` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:appliance-mode-support` |
-| `ipv6Support` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ipv6-support` |
+| `applianceModeSupport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:appliance-mode-support` |
+| `ipv6Support` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-support` |
 "
   [^CfnVpcAttachment$VpcOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :appliance-mode-support)]

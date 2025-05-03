@@ -360,7 +360,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `m2TsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:m2-ts-settings` |
-| `rawSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:raw-settings` |
+| `rawSettings` | software.amazon.awscdk.services.medialive.CfnChannel$RawSettingsProperty | [[cdk.support/lookup-entry]] | `:raw-settings` |
 "
   [^CfnChannel$ArchiveContainerSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :m2-ts-settings)]
@@ -390,7 +390,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `archiveCdnSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:archive-cdn-settings` |
+| `archiveCdnSettings` | software.amazon.awscdk.services.medialive.CfnChannel$ArchiveCdnSettingsProperty | [[cdk.support/lookup-entry]] | `:archive-cdn-settings` |
 | `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
 | `rolloverInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rollover-interval` |
 "
@@ -424,7 +424,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-settings` |
+| `containerSettings` | software.amazon.awscdk.services.medialive.CfnChannel$ArchiveContainerSettingsProperty | [[cdk.support/lookup-entry]] | `:container-settings` |
 | `extension` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension` |
 | `nameModifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:name-modifier` |
 "
@@ -498,7 +498,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `inputChannelLevels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-channel-levels` |
+| `inputChannelLevels` | java.util.List | [[cdk.support/lookup-entry]] | `:input-channel-levels` |
 | `outputChannel` | java.lang.Number | [[cdk.support/lookup-entry]] | `:output-channel` |
 "
   [^CfnChannel$AudioChannelMappingProperty$Builder builder id config]
@@ -531,11 +531,11 @@
 |---|---|---|---|
 | `aacSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aac-settings` |
 | `ac3Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Ac3SettingsProperty | [[cdk.support/lookup-entry]] | `:ac3-settings` |
-| `eac3AtmosSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eac3-atmos-settings` |
-| `eac3Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eac3-settings` |
+| `eac3AtmosSettings` | software.amazon.awscdk.services.medialive.CfnChannel$Eac3AtmosSettingsProperty | [[cdk.support/lookup-entry]] | `:eac3-atmos-settings` |
+| `eac3Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Eac3SettingsProperty | [[cdk.support/lookup-entry]] | `:eac3-settings` |
 | `mp2Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Mp2SettingsProperty | [[cdk.support/lookup-entry]] | `:mp2-settings` |
-| `passThroughSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pass-through-settings` |
-| `wavSettings` | software.amazon.awscdk.services.medialive.CfnChannel$WavSettingsProperty | [[cdk.support/lookup-entry]] | `:wav-settings` |
+| `passThroughSettings` | software.amazon.awscdk.services.medialive.CfnChannel$PassThroughSettingsProperty | [[cdk.support/lookup-entry]] | `:pass-through-settings` |
+| `wavSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:wav-settings` |
 "
   [^CfnChannel$AudioCodecSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aac-settings)]
@@ -576,12 +576,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `audioDashRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:audio-dash-roles` |
-| `audioNormalizationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-normalization-settings` |
+| `audioNormalizationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AudioNormalizationSettingsProperty | [[cdk.support/lookup-entry]] | `:audio-normalization-settings` |
 | `audioSelectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:audio-selector-name` |
 | `audioType` | java.lang.String | [[cdk.support/lookup-entry]] | `:audio-type` |
 | `audioTypeControl` | java.lang.String | [[cdk.support/lookup-entry]] | `:audio-type-control` |
-| `audioWatermarkingSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-watermarking-settings` |
-| `codecSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:codec-settings` |
+| `audioWatermarkingSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AudioWatermarkSettingsProperty | [[cdk.support/lookup-entry]] | `:audio-watermarking-settings` |
+| `codecSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AudioCodecSettingsProperty | [[cdk.support/lookup-entry]] | `:codec-settings` |
 | `dvbDashAccessibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:dvb-dash-accessibility` |
 | `languageCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-code` |
 | `languageCodeControl` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-code-control` |
@@ -859,7 +859,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `audioHlsRenditionSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-hls-rendition-selection` |
+| `audioHlsRenditionSelection` | software.amazon.awscdk.services.medialive.CfnChannel$AudioHlsRenditionSelectionProperty | [[cdk.support/lookup-entry]] | `:audio-hls-rendition-selection` |
 | `audioLanguageSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-language-selection` |
 | `audioPidSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-pid-selection` |
 | `audioTrackSelection` | software.amazon.awscdk.services.medialive.CfnChannel$AudioTrackSelectionProperty | [[cdk.support/lookup-entry]] | `:audio-track-selection` |
@@ -956,7 +956,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dolbyEDecode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dolby-e-decode` |
-| `tracks` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracks` |
+| `tracks` | java.util.List | [[cdk.support/lookup-entry]] | `:tracks` |
 "
   [^CfnChannel$AudioTrackSelectionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dolby-e-decode)]
@@ -986,7 +986,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `nielsenWatermarksSettings` | software.amazon.awscdk.services.medialive.CfnChannel$NielsenWatermarksSettingsProperty | [[cdk.support/lookup-entry]] | `:nielsen-watermarks-settings` |
+| `nielsenWatermarksSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nielsen-watermarks-settings` |
 "
   [^CfnChannel$AudioWatermarkSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :nielsen-watermarks-settings)]
@@ -1149,7 +1149,7 @@
 |---|---|---|---|
 | `blackoutSlateImage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blackout-slate-image` |
 | `networkEndBlackout` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-end-blackout` |
-| `networkEndBlackoutImage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-end-blackout-image` |
+| `networkEndBlackoutImage` | software.amazon.awscdk.services.medialive.CfnChannel$InputLocationProperty | [[cdk.support/lookup-entry]] | `:network-end-blackout-image` |
 | `networkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-id` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 "
@@ -1189,10 +1189,10 @@
 |---|---|---|---|
 | `cdiInputSpecification` | software.amazon.awscdk.services.medialive.CfnChannel$CdiInputSpecificationProperty | [[cdk.support/lookup-entry]] | `:cdi-input-specification` |
 | `channelClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-class` |
-| `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
-| `encoderSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encoder-settings` |
+| `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
+| `encoderSettings` | software.amazon.awscdk.services.medialive.CfnChannel$EncoderSettingsProperty | [[cdk.support/lookup-entry]] | `:encoder-settings` |
 | `inputAttachments` | java.util.List | [[cdk.support/lookup-entry]] | `:input-attachments` |
-| `inputSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-specification` |
+| `inputSpecification` | software.amazon.awscdk.services.medialive.CfnChannel$InputSpecificationProperty | [[cdk.support/lookup-entry]] | `:input-specification` |
 | `logLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-level` |
 | `maintenance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -1327,7 +1327,7 @@
 | `accessibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:accessibility` |
 | `captionDashRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:caption-dash-roles` |
 | `captionSelectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:caption-selector-name` |
-| `destinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-settings` |
+| `destinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$CaptionDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:destination-settings` |
 | `dvbDashAccessibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:dvb-dash-accessibility` |
 | `languageCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-code` |
 | `languageDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-description` |
@@ -1373,17 +1373,17 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aribDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AribDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:arib-destination-settings` |
-| `burnInDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$BurnInDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:burn-in-destination-settings` |
+| `aribDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:arib-destination-settings` |
+| `burnInDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:burn-in-destination-settings` |
 | `dvbSubDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$DvbSubDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:dvb-sub-destination-settings` |
 | `ebuTtDDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebu-tt-d-destination-settings` |
-| `embeddedDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$EmbeddedDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:embedded-destination-settings` |
-| `embeddedPlusScte20DestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:embedded-plus-scte20-destination-settings` |
-| `rtmpCaptionInfoDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$RtmpCaptionInfoDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:rtmp-caption-info-destination-settings` |
+| `embeddedDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:embedded-destination-settings` |
+| `embeddedPlusScte20DestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:embedded-plus-scte20-destination-settings` |
+| `rtmpCaptionInfoDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rtmp-caption-info-destination-settings` |
 | `scte20PlusEmbeddedDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:scte20-plus-embedded-destination-settings` |
 | `scte27DestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$Scte27DestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:scte27-destination-settings` |
-| `smpteTtDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$SmpteTtDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:smpte-tt-destination-settings` |
-| `teletextDestinationSettings` | software.amazon.awscdk.services.medialive.CfnChannel$TeletextDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:teletext-destination-settings` |
+| `smpteTtDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:smpte-tt-destination-settings` |
+| `teletextDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:teletext-destination-settings` |
 | `ttmlDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ttml-destination-settings` |
 | `webvttDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:webvtt-destination-settings` |
 "
@@ -1544,9 +1544,9 @@
 |---|---|---|---|
 | `ancillarySourceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ancillary-source-settings` |
 | `aribSourceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AribSourceSettingsProperty | [[cdk.support/lookup-entry]] | `:arib-source-settings` |
-| `dvbSubSourceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dvb-sub-source-settings` |
+| `dvbSubSourceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$DvbSubSourceSettingsProperty | [[cdk.support/lookup-entry]] | `:dvb-sub-source-settings` |
 | `embeddedSourceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$EmbeddedSourceSettingsProperty | [[cdk.support/lookup-entry]] | `:embedded-source-settings` |
-| `scte20SourceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scte20-source-settings` |
+| `scte20SourceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$Scte20SourceSettingsProperty | [[cdk.support/lookup-entry]] | `:scte20-source-settings` |
 | `scte27SourceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$Scte27SourceSettingsProperty | [[cdk.support/lookup-entry]] | `:scte27-source-settings` |
 | `teletextSourceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:teletext-source-settings` |
 "
@@ -1616,7 +1616,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
+| `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
 | `nielsenId3Behavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:nielsen-id3-behavior` |
 | `scte35Type` | java.lang.String | [[cdk.support/lookup-entry]] | `:scte35-type` |
 | `segmentLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-length` |
@@ -1721,7 +1721,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `globalColorCorrections` | java.util.List | [[cdk.support/lookup-entry]] | `:global-color-corrections` |
+| `globalColorCorrections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-color-corrections` |
 "
   [^CfnChannel$ColorCorrectionSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :global-color-corrections)]
@@ -1835,7 +1835,7 @@
 | `alignment` | java.lang.String | [[cdk.support/lookup-entry]] | `:alignment` |
 | `backgroundColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:background-color` |
 | `backgroundOpacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:background-opacity` |
-| `font` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font` |
+| `font` | software.amazon.awscdk.services.medialive.CfnChannel$InputLocationProperty | [[cdk.support/lookup-entry]] | `:font` |
 | `fontColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:font-color` |
 | `fontOpacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:font-opacity` |
 | `fontResolution` | java.lang.Number | [[cdk.support/lookup-entry]] | `:font-resolution` |
@@ -2184,20 +2184,20 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `audioDescriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-descriptions` |
-| `availBlanking` | software.amazon.awscdk.services.medialive.CfnChannel$AvailBlankingProperty | [[cdk.support/lookup-entry]] | `:avail-blanking` |
-| `availConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:avail-configuration` |
-| `blackoutSlate` | software.amazon.awscdk.services.medialive.CfnChannel$BlackoutSlateProperty | [[cdk.support/lookup-entry]] | `:blackout-slate` |
-| `captionDescriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:caption-descriptions` |
-| `colorCorrectionSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-correction-settings` |
+| `audioDescriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:audio-descriptions` |
+| `availBlanking` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:avail-blanking` |
+| `availConfiguration` | software.amazon.awscdk.services.medialive.CfnChannel$AvailConfigurationProperty | [[cdk.support/lookup-entry]] | `:avail-configuration` |
+| `blackoutSlate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blackout-slate` |
+| `captionDescriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:caption-descriptions` |
+| `colorCorrectionSettings` | software.amazon.awscdk.services.medialive.CfnChannel$ColorCorrectionSettingsProperty | [[cdk.support/lookup-entry]] | `:color-correction-settings` |
 | `featureActivations` | software.amazon.awscdk.services.medialive.CfnChannel$FeatureActivationsProperty | [[cdk.support/lookup-entry]] | `:feature-activations` |
 | `globalConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-configuration` |
-| `motionGraphicsConfiguration` | software.amazon.awscdk.services.medialive.CfnChannel$MotionGraphicsConfigurationProperty | [[cdk.support/lookup-entry]] | `:motion-graphics-configuration` |
-| `nielsenConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nielsen-configuration` |
+| `motionGraphicsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:motion-graphics-configuration` |
+| `nielsenConfiguration` | software.amazon.awscdk.services.medialive.CfnChannel$NielsenConfigurationProperty | [[cdk.support/lookup-entry]] | `:nielsen-configuration` |
 | `outputGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:output-groups` |
 | `thumbnailConfiguration` | software.amazon.awscdk.services.medialive.CfnChannel$ThumbnailConfigurationProperty | [[cdk.support/lookup-entry]] | `:thumbnail-configuration` |
 | `timecodeConfig` | software.amazon.awscdk.services.medialive.CfnChannel$TimecodeConfigProperty | [[cdk.support/lookup-entry]] | `:timecode-config` |
-| `videoDescriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-descriptions` |
+| `videoDescriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:video-descriptions` |
 "
   [^CfnChannel$EncoderSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :audio-descriptions)]
@@ -2353,7 +2353,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `audioSilenceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AudioSilenceFailoverSettingsProperty | [[cdk.support/lookup-entry]] | `:audio-silence-settings` |
+| `audioSilenceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-silence-settings` |
 | `inputLossSettings` | software.amazon.awscdk.services.medialive.CfnChannel$InputLossFailoverSettingsProperty | [[cdk.support/lookup-entry]] | `:input-loss-settings` |
 | `videoBlackSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-black-settings` |
 "
@@ -2515,7 +2515,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
-| `frameCaptureCdnSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:frame-capture-cdn-settings` |
+| `frameCaptureCdnSettings` | software.amazon.awscdk.services.medialive.CfnChannel$FrameCaptureCdnSettingsProperty | [[cdk.support/lookup-entry]] | `:frame-capture-cdn-settings` |
 "
   [^CfnChannel$FrameCaptureGroupSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination)]
@@ -2609,7 +2609,7 @@
 |---|---|---|---|
 | `captureInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:capture-interval` |
 | `captureIntervalUnits` | java.lang.String | [[cdk.support/lookup-entry]] | `:capture-interval-units` |
-| `timecodeBurninSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timecode-burnin-settings` |
+| `timecodeBurninSettings` | software.amazon.awscdk.services.medialive.CfnChannel$TimecodeBurninSettingsProperty | [[cdk.support/lookup-entry]] | `:timecode-burnin-settings` |
 "
   [^CfnChannel$FrameCaptureSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :capture-interval)]
@@ -2643,7 +2643,7 @@
 |---|---|---|---|
 | `initialAudioGain` | java.lang.Number | [[cdk.support/lookup-entry]] | `:initial-audio-gain` |
 | `inputEndAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-end-action` |
-| `inputLossBehavior` | software.amazon.awscdk.services.medialive.CfnChannel$InputLossBehaviorProperty | [[cdk.support/lookup-entry]] | `:input-loss-behavior` |
+| `inputLossBehavior` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-loss-behavior` |
 | `outputLockingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-locking-mode` |
 | `outputLockingSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-locking-settings` |
 | `outputTimingSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-timing-source` |
@@ -2687,9 +2687,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colorSpacePassthroughSettings` | software.amazon.awscdk.services.medialive.CfnChannel$ColorSpacePassthroughSettingsProperty | [[cdk.support/lookup-entry]] | `:color-space-passthrough-settings` |
-| `rec601Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rec601-settings` |
-| `rec709Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rec709-settings` |
+| `colorSpacePassthroughSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-space-passthrough-settings` |
+| `rec601Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Rec601SettingsProperty | [[cdk.support/lookup-entry]] | `:rec601-settings` |
+| `rec709Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Rec709SettingsProperty | [[cdk.support/lookup-entry]] | `:rec709-settings` |
 "
   [^CfnChannel$H264ColorSpaceSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color-space-passthrough-settings)]
@@ -2789,7 +2789,7 @@
 | `subgopLength` | java.lang.String | [[cdk.support/lookup-entry]] | `:subgop-length` |
 | `syntax` | java.lang.String | [[cdk.support/lookup-entry]] | `:syntax` |
 | `temporalAq` | java.lang.String | [[cdk.support/lookup-entry]] | `:temporal-aq` |
-| `timecodeBurninSettings` | software.amazon.awscdk.services.medialive.CfnChannel$TimecodeBurninSettingsProperty | [[cdk.support/lookup-entry]] | `:timecode-burnin-settings` |
+| `timecodeBurninSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timecode-burnin-settings` |
 | `timecodeInsertion` | java.lang.String | [[cdk.support/lookup-entry]] | `:timecode-insertion` |
 "
   [^CfnChannel$H264SettingsProperty$Builder builder id config]
@@ -2900,10 +2900,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colorSpacePassthroughSettings` | software.amazon.awscdk.services.medialive.CfnChannel$ColorSpacePassthroughSettingsProperty | [[cdk.support/lookup-entry]] | `:color-space-passthrough-settings` |
+| `colorSpacePassthroughSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-space-passthrough-settings` |
 | `dolbyVision81Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dolby-vision81-settings` |
-| `hdr10Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hdr10-settings` |
-| `rec601Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Rec601SettingsProperty | [[cdk.support/lookup-entry]] | `:rec601-settings` |
+| `hdr10Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Hdr10SettingsProperty | [[cdk.support/lookup-entry]] | `:hdr10-settings` |
+| `rec601Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rec601-settings` |
 | `rec709Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Rec709SettingsProperty | [[cdk.support/lookup-entry]] | `:rec709-settings` |
 "
   [^CfnChannel$H265ColorSpaceSettingsProperty$Builder builder id config]
@@ -2940,7 +2940,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `temporalFilterSettings` | software.amazon.awscdk.services.medialive.CfnChannel$TemporalFilterSettingsProperty | [[cdk.support/lookup-entry]] | `:temporal-filter-settings` |
+| `temporalFilterSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temporal-filter-settings` |
 "
   [^CfnChannel$H265FilterSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :temporal-filter-settings)]
@@ -2974,7 +2974,7 @@
 | `bitrate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:bitrate` |
 | `bufSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:buf-size` |
 | `colorMetadata` | java.lang.String | [[cdk.support/lookup-entry]] | `:color-metadata` |
-| `colorSpaceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-space-settings` |
+| `colorSpaceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$H265ColorSpaceSettingsProperty | [[cdk.support/lookup-entry]] | `:color-space-settings` |
 | `filterSettings` | software.amazon.awscdk.services.medialive.CfnChannel$H265FilterSettingsProperty | [[cdk.support/lookup-entry]] | `:filter-settings` |
 | `fixedAfd` | java.lang.String | [[cdk.support/lookup-entry]] | `:fixed-afd` |
 | `flickerAq` | java.lang.String | [[cdk.support/lookup-entry]] | `:flicker-aq` |
@@ -3217,9 +3217,9 @@
 |---|---|---|---|
 | `hlsAkamaiSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-akamai-settings` |
 | `hlsBasicPutSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-basic-put-settings` |
-| `hlsMediaStoreSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-media-store-settings` |
-| `hlsS3Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-s3-settings` |
-| `hlsWebdavSettings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsWebdavSettingsProperty | [[cdk.support/lookup-entry]] | `:hls-webdav-settings` |
+| `hlsMediaStoreSettings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsMediaStoreSettingsProperty | [[cdk.support/lookup-entry]] | `:hls-media-store-settings` |
+| `hlsS3Settings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsS3SettingsProperty | [[cdk.support/lookup-entry]] | `:hls-s3-settings` |
+| `hlsWebdavSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-webdav-settings` |
 "
   [^CfnChannel$HlsCdnSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :hls-akamai-settings)]
@@ -3260,16 +3260,16 @@
 | `baseUrlContent1` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-url-content1` |
 | `baseUrlManifest` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-url-manifest` |
 | `baseUrlManifest1` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-url-manifest1` |
-| `captionLanguageMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:caption-language-mappings` |
+| `captionLanguageMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:caption-language-mappings` |
 | `captionLanguageSetting` | java.lang.String | [[cdk.support/lookup-entry]] | `:caption-language-setting` |
 | `clientCache` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-cache` |
 | `codecSpecification` | java.lang.String | [[cdk.support/lookup-entry]] | `:codec-specification` |
 | `constantIv` | java.lang.String | [[cdk.support/lookup-entry]] | `:constant-iv` |
-| `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
+| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
 | `directoryStructure` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-structure` |
 | `discontinuityTags` | java.lang.String | [[cdk.support/lookup-entry]] | `:discontinuity-tags` |
 | `encryptionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-type` |
-| `hlsCdnSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-cdn-settings` |
+| `hlsCdnSettings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsCdnSettingsProperty | [[cdk.support/lookup-entry]] | `:hls-cdn-settings` |
 | `hlsId3SegmentTagging` | java.lang.String | [[cdk.support/lookup-entry]] | `:hls-id3-segment-tagging` |
 | `iFrameOnlyPlaylists` | java.lang.String | [[cdk.support/lookup-entry]] | `:i-frame-only-playlists` |
 | `incompleteSegmentBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:incomplete-segment-behavior` |
@@ -3554,10 +3554,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `audioOnlyHlsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-only-hls-settings` |
-| `fmp4HlsSettings` | software.amazon.awscdk.services.medialive.CfnChannel$Fmp4HlsSettingsProperty | [[cdk.support/lookup-entry]] | `:fmp4-hls-settings` |
+| `audioOnlyHlsSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AudioOnlyHlsSettingsProperty | [[cdk.support/lookup-entry]] | `:audio-only-hls-settings` |
+| `fmp4HlsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fmp4-hls-settings` |
 | `frameCaptureHlsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:frame-capture-hls-settings` |
-| `standardHlsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:standard-hls-settings` |
+| `standardHlsSettings` | software.amazon.awscdk.services.medialive.CfnChannel$StandardHlsSettingsProperty | [[cdk.support/lookup-entry]] | `:standard-hls-settings` |
 "
   [^CfnChannel$HlsSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :audio-only-hls-settings)]
@@ -3640,7 +3640,7 @@
 | `automaticInputFailoverSettings` | software.amazon.awscdk.services.medialive.CfnChannel$AutomaticInputFailoverSettingsProperty | [[cdk.support/lookup-entry]] | `:automatic-input-failover-settings` |
 | `inputAttachmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-attachment-name` |
 | `inputId` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-id` |
-| `inputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-settings` |
+| `inputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$InputSettingsProperty | [[cdk.support/lookup-entry]] | `:input-settings` |
 "
   [^CfnChannel$InputAttachmentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :automatic-input-failover-settings)]
@@ -3817,7 +3817,7 @@
 | `scte35Pid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scte35-pid` |
 | `smpte2038DataPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:smpte2038-data-preference` |
 | `sourceEndBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-end-behavior` |
-| `videoSelector` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-selector` |
+| `videoSelector` | software.amazon.awscdk.services.medialive.CfnChannel$VideoSelectorProperty | [[cdk.support/lookup-entry]] | `:video-selector` |
 "
   [^CfnChannel$InputSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :audio-selectors)]
@@ -3938,10 +3938,10 @@
 | `bitrate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:bitrate` |
 | `bufferModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:buffer-model` |
 | `ccDescriptor` | java.lang.String | [[cdk.support/lookup-entry]] | `:cc-descriptor` |
-| `dvbNitSettings` | software.amazon.awscdk.services.medialive.CfnChannel$DvbNitSettingsProperty | [[cdk.support/lookup-entry]] | `:dvb-nit-settings` |
-| `dvbSdtSettings` | software.amazon.awscdk.services.medialive.CfnChannel$DvbSdtSettingsProperty | [[cdk.support/lookup-entry]] | `:dvb-sdt-settings` |
+| `dvbNitSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dvb-nit-settings` |
+| `dvbSdtSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dvb-sdt-settings` |
 | `dvbSubPids` | java.lang.String | [[cdk.support/lookup-entry]] | `:dvb-sub-pids` |
-| `dvbTdtSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dvb-tdt-settings` |
+| `dvbTdtSettings` | software.amazon.awscdk.services.medialive.CfnChannel$DvbTdtSettingsProperty | [[cdk.support/lookup-entry]] | `:dvb-tdt-settings` |
 | `dvbTeletextPid` | java.lang.String | [[cdk.support/lookup-entry]] | `:dvb-teletext-pid` |
 | `ebif` | java.lang.String | [[cdk.support/lookup-entry]] | `:ebif` |
 | `ebpAudioInterval` | java.lang.String | [[cdk.support/lookup-entry]] | `:ebp-audio-interval` |
@@ -4243,7 +4243,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
+| `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
 "
   [^CfnChannel$MediaPackageGroupSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination)]
@@ -4398,7 +4398,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `temporalFilterSettings` | software.amazon.awscdk.services.medialive.CfnChannel$TemporalFilterSettingsProperty | [[cdk.support/lookup-entry]] | `:temporal-filter-settings` |
+| `temporalFilterSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temporal-filter-settings` |
 "
   [^CfnChannel$Mpeg2FilterSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :temporal-filter-settings)]
@@ -4621,7 +4621,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
+| `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
 "
   [^CfnChannel$MultiplexOutputSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination)]
@@ -4680,7 +4680,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hlsInputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-input-settings` |
+| `hlsInputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsInputSettingsProperty | [[cdk.support/lookup-entry]] | `:hls-input-settings` |
 | `serverValidation` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-validation` |
 "
   [^CfnChannel$NetworkInputSettingsProperty$Builder builder id config]
@@ -4812,7 +4812,7 @@
 |---|---|---|---|
 | `nielsenCbetSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nielsen-cbet-settings` |
 | `nielsenDistributionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:nielsen-distribution-type` |
-| `nielsenNaesIiNwSettings` | software.amazon.awscdk.services.medialive.CfnChannel$NielsenNaesIiNwProperty | [[cdk.support/lookup-entry]] | `:nielsen-naes-ii-nw-settings` |
+| `nielsenNaesIiNwSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nielsen-naes-ii-nw-settings` |
 "
   [^CfnChannel$NielsenWatermarksSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :nielsen-cbet-settings)]
@@ -4847,7 +4847,7 @@
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `mediaPackageSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:media-package-settings` |
 | `multiplexSettings` | software.amazon.awscdk.services.medialive.CfnChannel$MultiplexProgramChannelDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:multiplex-settings` |
-| `settings` | java.util.List | [[cdk.support/lookup-entry]] | `:settings` |
+| `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
 "
   [^CfnChannel$OutputDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :id)]
@@ -4954,12 +4954,12 @@
 |---|---|---|---|
 | `archiveGroupSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:archive-group-settings` |
 | `cmafIngestGroupSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cmaf-ingest-group-settings` |
-| `frameCaptureGroupSettings` | software.amazon.awscdk.services.medialive.CfnChannel$FrameCaptureGroupSettingsProperty | [[cdk.support/lookup-entry]] | `:frame-capture-group-settings` |
+| `frameCaptureGroupSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:frame-capture-group-settings` |
 | `hlsGroupSettings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsGroupSettingsProperty | [[cdk.support/lookup-entry]] | `:hls-group-settings` |
-| `mediaPackageGroupSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:media-package-group-settings` |
+| `mediaPackageGroupSettings` | software.amazon.awscdk.services.medialive.CfnChannel$MediaPackageGroupSettingsProperty | [[cdk.support/lookup-entry]] | `:media-package-group-settings` |
 | `msSmoothGroupSettings` | software.amazon.awscdk.services.medialive.CfnChannel$MsSmoothGroupSettingsProperty | [[cdk.support/lookup-entry]] | `:ms-smooth-group-settings` |
 | `multiplexGroupSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multiplex-group-settings` |
-| `rtmpGroupSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rtmp-group-settings` |
+| `rtmpGroupSettings` | software.amazon.awscdk.services.medialive.CfnChannel$RtmpGroupSettingsProperty | [[cdk.support/lookup-entry]] | `:rtmp-group-settings` |
 | `udpGroupSettings` | software.amazon.awscdk.services.medialive.CfnChannel$UdpGroupSettingsProperty | [[cdk.support/lookup-entry]] | `:udp-group-settings` |
 "
   [^CfnChannel$OutputGroupSettingsProperty$Builder builder id config]
@@ -5032,7 +5032,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `epochLockingSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:epoch-locking-settings` |
+| `epochLockingSettings` | software.amazon.awscdk.services.medialive.CfnChannel$EpochLockingSettingsProperty | [[cdk.support/lookup-entry]] | `:epoch-locking-settings` |
 | `pipelineLockingSettings` | java.lang.Object | [[cdk.support/lookup-entry]] | `:pipeline-locking-settings` |
 "
   [^CfnChannel$OutputLockingSettingsProperty$Builder builder id config]
@@ -5103,15 +5103,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `archiveOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$ArchiveOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:archive-output-settings` |
-| `cmafIngestOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$CmafIngestOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:cmaf-ingest-output-settings` |
-| `frameCaptureOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$FrameCaptureOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:frame-capture-output-settings` |
+| `archiveOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:archive-output-settings` |
+| `cmafIngestOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cmaf-ingest-output-settings` |
+| `frameCaptureOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:frame-capture-output-settings` |
 | `hlsOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:hls-output-settings` |
 | `mediaPackageOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$MediaPackageOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:media-package-output-settings` |
-| `msSmoothOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ms-smooth-output-settings` |
+| `msSmoothOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$MsSmoothOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:ms-smooth-output-settings` |
 | `multiplexOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multiplex-output-settings` |
 | `rtmpOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$RtmpOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:rtmp-output-settings` |
-| `udpOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:udp-output-settings` |
+| `udpOutputSettings` | software.amazon.awscdk.services.medialive.CfnChannel$UdpOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:udp-output-settings` |
 "
   [^CfnChannel$OutputSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :archive-output-settings)]
@@ -5163,16 +5163,16 @@
 |---|---|---|---|
 | `cdiInputSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cdi-input-specification` |
 | `channelClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-class` |
-| `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
-| `encoderSettings` | software.amazon.awscdk.services.medialive.CfnChannel$EncoderSettingsProperty | [[cdk.support/lookup-entry]] | `:encoder-settings` |
+| `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
+| `encoderSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encoder-settings` |
 | `inputAttachments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-attachments` |
-| `inputSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-specification` |
+| `inputSpecification` | software.amazon.awscdk.services.medialive.CfnChannel$InputSpecificationProperty | [[cdk.support/lookup-entry]] | `:input-specification` |
 | `logLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-level` |
-| `maintenance` | software.amazon.awscdk.services.medialive.CfnChannel$MaintenanceCreateSettingsProperty | [[cdk.support/lookup-entry]] | `:maintenance` |
+| `maintenance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc` |
+| `vpc` | software.amazon.awscdk.services.medialive.CfnChannel$VpcOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnChannelProps$Builder builder id config]
   (when-some [data (lookup-entry config id :cdi-input-specification)]
@@ -5331,7 +5331,7 @@
 |---|---|---|---|
 | `certificateMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-mode` |
 | `connectionRetryInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:connection-retry-interval` |
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
+| `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
 | `numRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-retries` |
 "
   [^CfnChannel$RtmpOutputSettingsProperty$Builder builder id config]
@@ -5515,7 +5515,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `audioRenditionSets` | java.lang.String | [[cdk.support/lookup-entry]] | `:audio-rendition-sets` |
-| `m3U8Settings` | software.amazon.awscdk.services.medialive.CfnChannel$M3u8SettingsProperty | [[cdk.support/lookup-entry]] | `:m3-u8-settings` |
+| `m3U8Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:m3-u8-settings` |
 "
   [^CfnChannel$StandardHlsSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :audio-rendition-sets)]
@@ -5765,7 +5765,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `m2TsSettings` | software.amazon.awscdk.services.medialive.CfnChannel$M2tsSettingsProperty | [[cdk.support/lookup-entry]] | `:m2-ts-settings` |
+| `m2TsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:m2-ts-settings` |
 "
   [^CfnChannel$UdpContainerSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :m2-ts-settings)]
@@ -5828,7 +5828,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bufferMsec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:buffer-msec` |
-| `containerSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-settings` |
+| `containerSettings` | software.amazon.awscdk.services.medialive.CfnChannel$UdpContainerSettingsProperty | [[cdk.support/lookup-entry]] | `:container-settings` |
 | `destination` | software.amazon.awscdk.services.medialive.CfnChannel$OutputLocationRefProperty | [[cdk.support/lookup-entry]] | `:destination` |
 | `fecOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fec-output-settings` |
 "
@@ -5932,7 +5932,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `codecSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:codec-settings` |
+| `codecSettings` | software.amazon.awscdk.services.medialive.CfnChannel$VideoCodecSettingsProperty | [[cdk.support/lookup-entry]] | `:codec-settings` |
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `respondToAfd` | java.lang.String | [[cdk.support/lookup-entry]] | `:respond-to-afd` |
@@ -6063,9 +6063,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `colorSpace` | java.lang.String | [[cdk.support/lookup-entry]] | `:color-space` |
-| `colorSpaceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-space-settings` |
+| `colorSpaceSettings` | software.amazon.awscdk.services.medialive.CfnChannel$VideoSelectorColorSpaceSettingsProperty | [[cdk.support/lookup-entry]] | `:color-space-settings` |
 | `colorSpaceUsage` | java.lang.String | [[cdk.support/lookup-entry]] | `:color-space-usage` |
-| `selectorSettings` | software.amazon.awscdk.services.medialive.CfnChannel$VideoSelectorSettingsProperty | [[cdk.support/lookup-entry]] | `:selector-settings` |
+| `selectorSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selector-settings` |
 "
   [^CfnChannel$VideoSelectorProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color-space)]
@@ -6099,7 +6099,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `videoSelectorPid` | software.amazon.awscdk.services.medialive.CfnChannel$VideoSelectorPidProperty | [[cdk.support/lookup-entry]] | `:video-selector-pid` |
+| `videoSelectorPid` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-selector-pid` |
 | `videoSelectorProgramId` | software.amazon.awscdk.services.medialive.CfnChannel$VideoSelectorProgramIdProperty | [[cdk.support/lookup-entry]] | `:video-selector-program-id` |
 "
   [^CfnChannel$VideoSelectorSettingsProperty$Builder builder id config]
@@ -6235,7 +6235,7 @@
 | `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `vpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc` |
+| `vpc` | software.amazon.awscdk.services.medialive.CfnInput$InputVpcRequestProperty | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnInput$Builder builder id config]
   (when-some [data (lookup-entry config id :destinations)]
@@ -6459,9 +6459,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
-| `inputDevices` | java.util.List | [[cdk.support/lookup-entry]] | `:input-devices` |
+| `inputDevices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-devices` |
 | `inputSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:input-security-groups` |
-| `mediaConnectFlows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:media-connect-flows` |
+| `mediaConnectFlows` | java.util.List | [[cdk.support/lookup-entry]] | `:media-connect-flows` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
@@ -6514,7 +6514,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `whitelistRules` | java.util.List | [[cdk.support/lookup-entry]] | `:whitelist-rules` |
+| `whitelistRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:whitelist-rules` |
 "
   [^CfnInputSecurityGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :tags)]
@@ -6573,7 +6573,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `whitelistRules` | java.util.List | [[cdk.support/lookup-entry]] | `:whitelist-rules` |
+| `whitelistRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:whitelist-rules` |
 "
   [^CfnInputSecurityGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :tags)]
@@ -6605,7 +6605,7 @@
 |---|---|---|---|
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
 | `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
-| `multiplexSettings` | software.amazon.awscdk.services.medialive.CfnMultiplex$MultiplexSettingsProperty | [[cdk.support/lookup-entry]] | `:multiplex-settings` |
+| `multiplexSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multiplex-settings` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -6671,7 +6671,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `multiplexMediaConnectOutputDestinationSettings` | software.amazon.awscdk.services.medialive.CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:multiplex-media-connect-output-destination-settings` |
+| `multiplexMediaConnectOutputDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multiplex-media-connect-output-destination-settings` |
 "
   [^CfnMultiplex$MultiplexOutputDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :multiplex-media-connect-output-destination-settings)]
@@ -6737,8 +6737,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
-| `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
-| `multiplexSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multiplex-settings` |
+| `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
+| `multiplexSettings` | software.amazon.awscdk.services.medialive.CfnMultiplex$MultiplexSettingsProperty | [[cdk.support/lookup-entry]] | `:multiplex-settings` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -6778,9 +6778,9 @@
 |---|---|---|---|
 | `channelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-id` |
 | `multiplexId` | java.lang.String | [[cdk.support/lookup-entry]] | `:multiplex-id` |
-| `multiplexProgramSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multiplex-program-settings` |
+| `multiplexProgramSettings` | software.amazon.awscdk.services.medialive.CfnMultiplexprogram$MultiplexProgramSettingsProperty | [[cdk.support/lookup-entry]] | `:multiplex-program-settings` |
 | `packetIdentifiersMap` | software.amazon.awscdk.services.medialive.CfnMultiplexprogram$MultiplexProgramPacketIdentifiersMapProperty | [[cdk.support/lookup-entry]] | `:packet-identifiers-map` |
-| `pipelineDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-details` |
+| `pipelineDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-details` |
 | `preferredChannelPipeline` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-channel-pipeline` |
 | `programName` | java.lang.String | [[cdk.support/lookup-entry]] | `:program-name` |
 "
@@ -6823,11 +6823,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `audioPids` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-pids` |
-| `dvbSubPids` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dvb-sub-pids` |
+| `dvbSubPids` | java.util.List | [[cdk.support/lookup-entry]] | `:dvb-sub-pids` |
 | `dvbTeletextPid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dvb-teletext-pid` |
 | `etvPlatformPid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:etv-platform-pid` |
 | `etvSignalPid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:etv-signal-pid` |
-| `klvDataPids` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:klv-data-pids` |
+| `klvDataPids` | java.util.List | [[cdk.support/lookup-entry]] | `:klv-data-pids` |
 | `pcrPid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pcr-pid` |
 | `pmtPid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pmt-pid` |
 | `privateMetadataPid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:private-metadata-pid` |
@@ -6951,7 +6951,7 @@
 | `preferredChannelPipeline` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-channel-pipeline` |
 | `programNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:program-number` |
 | `serviceDescriptor` | software.amazon.awscdk.services.medialive.CfnMultiplexprogram$MultiplexProgramServiceDescriptorProperty | [[cdk.support/lookup-entry]] | `:service-descriptor` |
-| `videoSettings` | software.amazon.awscdk.services.medialive.CfnMultiplexprogram$MultiplexVideoSettingsProperty | [[cdk.support/lookup-entry]] | `:video-settings` |
+| `videoSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-settings` |
 "
   [^CfnMultiplexprogram$MultiplexProgramSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :preferred-channel-pipeline)]
@@ -7052,9 +7052,9 @@
 |---|---|---|---|
 | `channelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-id` |
 | `multiplexId` | java.lang.String | [[cdk.support/lookup-entry]] | `:multiplex-id` |
-| `multiplexProgramSettings` | software.amazon.awscdk.services.medialive.CfnMultiplexprogram$MultiplexProgramSettingsProperty | [[cdk.support/lookup-entry]] | `:multiplex-program-settings` |
-| `packetIdentifiersMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:packet-identifiers-map` |
-| `pipelineDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-details` |
+| `multiplexProgramSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multiplex-program-settings` |
+| `packetIdentifiersMap` | software.amazon.awscdk.services.medialive.CfnMultiplexprogram$MultiplexProgramPacketIdentifiersMapProperty | [[cdk.support/lookup-entry]] | `:packet-identifiers-map` |
+| `pipelineDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-details` |
 | `preferredChannelPipeline` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-channel-pipeline` |
 | `programName` | java.lang.String | [[cdk.support/lookup-entry]] | `:program-name` |
 "

@@ -46,7 +46,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `componentTypeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-type-id` |
-| `compositeComponentTypes` | java.util.Map | [[cdk.support/lookup-entry]] | `:composite-component-types` |
+| `compositeComponentTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:composite-component-types` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `extendsFrom` | java.util.List | [[cdk.support/lookup-entry]] | `:extends-from` |
 | `functions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:functions` |
@@ -129,7 +129,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `isNative` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-native` |
-| `lambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda` |
+| `lambda` | software.amazon.awscdk.services.iottwinmaker.CfnComponentType$LambdaFunctionProperty | [[cdk.support/lookup-entry]] | `:lambda` |
 "
   [^CfnComponentType$DataConnectorProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :is-native)]
@@ -199,7 +199,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `booleanValue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:boolean-value` |
+| `booleanValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:boolean-value` |
 | `doubleValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:double-value` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 | `integerValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:integer-value` |
@@ -282,7 +282,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `implementedBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:implemented-by` |
+| `implementedBy` | software.amazon.awscdk.services.iottwinmaker.CfnComponentType$DataConnectorProperty | [[cdk.support/lookup-entry]] | `:implemented-by` |
 | `requiredProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:required-properties` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 "
@@ -344,12 +344,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configurations` |
+| `configurations` | java.util.Map | [[cdk.support/lookup-entry]] | `:configurations` |
 | `dataType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-type` |
-| `defaultValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value` |
-| `isExternalId` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-external-id` |
-| `isRequiredInEntity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-required-in-entity` |
-| `isStoredExternally` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-stored-externally` |
+| `defaultValue` | software.amazon.awscdk.services.iottwinmaker.CfnComponentType$DataValueProperty | [[cdk.support/lookup-entry]] | `:default-value` |
+| `isExternalId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-external-id` |
+| `isRequiredInEntity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-required-in-entity` |
+| `isStoredExternally` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-stored-externally` |
 | `isTimeSeries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-time-series` |
 "
   [^CfnComponentType$PropertyDefinitionProperty$Builder builder id config]
@@ -422,13 +422,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `componentTypeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-type-id` |
-| `compositeComponentTypes` | java.util.Map | [[cdk.support/lookup-entry]] | `:composite-component-types` |
+| `compositeComponentTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:composite-component-types` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `extendsFrom` | java.util.List | [[cdk.support/lookup-entry]] | `:extends-from` |
-| `functions` | java.util.Map | [[cdk.support/lookup-entry]] | `:functions` |
+| `functions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:functions` |
 | `isSingleton` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-singleton` |
-| `propertyDefinitions` | java.util.Map | [[cdk.support/lookup-entry]] | `:property-definitions` |
-| `propertyGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-groups` |
+| `propertyDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-definitions` |
+| `propertyGroups` | java.util.Map | [[cdk.support/lookup-entry]] | `:property-groups` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `workspaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:workspace-id` |
 "
@@ -622,9 +622,9 @@
 | `componentTypeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-type-id` |
 | `definedIn` | java.lang.String | [[cdk.support/lookup-entry]] | `:defined-in` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
 | `propertyGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-groups` |
-| `status` | software.amazon.awscdk.services.iottwinmaker.CfnEntity$StatusProperty | [[cdk.support/lookup-entry]] | `:status` |
+| `status` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnEntity$ComponentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :component-name)]
@@ -668,9 +668,9 @@
 | `componentPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-path` |
 | `componentTypeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:component-type-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
 | `propertyGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-groups` |
-| `status` | software.amazon.awscdk.services.iottwinmaker.CfnEntity$StatusProperty | [[cdk.support/lookup-entry]] | `:status` |
+| `status` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnEntity$CompositeComponentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :component-name)]
@@ -710,9 +710,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowedValues` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-values` |
+| `allowedValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowed-values` |
 | `nestedType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:nested-type` |
-| `relationship` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relationship` |
+| `relationship` | software.amazon.awscdk.services.iottwinmaker.CfnEntity$RelationshipProperty | [[cdk.support/lookup-entry]] | `:relationship` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `unitOfMeasure` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit-of-measure` |
 "
@@ -750,7 +750,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `booleanValue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:boolean-value` |
+| `booleanValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:boolean-value` |
 | `doubleValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:double-value` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 | `integerValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:integer-value` |
@@ -803,15 +803,15 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
-| `dataType` | software.amazon.awscdk.services.iottwinmaker.CfnEntity$DataTypeProperty | [[cdk.support/lookup-entry]] | `:data-type` |
+| `dataType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-type` |
 | `defaultValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value` |
-| `isExternalId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-external-id` |
-| `isFinal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-final` |
-| `isImported` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-imported` |
+| `isExternalId` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-external-id` |
+| `isFinal` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-final` |
+| `isImported` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-imported` |
 | `isInherited` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-inherited` |
-| `isRequiredInEntity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-required-in-entity` |
-| `isStoredExternally` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-stored-externally` |
-| `isTimeSeries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-time-series` |
+| `isRequiredInEntity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-required-in-entity` |
+| `isStoredExternally` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-stored-externally` |
+| `isTimeSeries` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-time-series` |
 "
   [^CfnEntity$DefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration)]
@@ -920,7 +920,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `definition` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition` |
-| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.services.iottwinmaker.CfnEntity$DataValueProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnEntity$PropertyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :definition)]
@@ -950,8 +950,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `components` | java.util.Map | [[cdk.support/lookup-entry]] | `:components` |
-| `compositeComponents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:composite-components` |
+| `components` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:components` |
+| `compositeComponents` | java.util.Map | [[cdk.support/lookup-entry]] | `:composite-components` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `entityId` | java.lang.String | [[cdk.support/lookup-entry]] | `:entity-id` |
 | `entityName` | java.lang.String | [[cdk.support/lookup-entry]] | `:entity-name` |
@@ -1096,7 +1096,7 @@
 | `contentLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-location` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `sceneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:scene-id` |
-| `sceneMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scene-metadata` |
+| `sceneMetadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:scene-metadata` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `workspaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:workspace-id` |
 "
@@ -1142,7 +1142,7 @@
 | `contentLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-location` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `sceneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:scene-id` |
-| `sceneMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scene-metadata` |
+| `sceneMetadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:scene-metadata` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `workspaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:workspace-id` |
 "

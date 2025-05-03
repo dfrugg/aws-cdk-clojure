@@ -115,12 +115,12 @@
 |---|---|---|---|
 | `assessmentReportsDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:assessment-reports-destination` |
 | `awsAccount` | software.amazon.awscdk.services.auditmanager.CfnAssessment$AWSAccountProperty | [[cdk.support/lookup-entry]] | `:aws-account` |
-| `delegations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delegations` |
+| `delegations` | java.util.List | [[cdk.support/lookup-entry]] | `:delegations` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `frameworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `roles` | java.util.List | [[cdk.support/lookup-entry]] | `:roles` |
-| `scope` | software.amazon.awscdk.services.auditmanager.CfnAssessment$ScopeProperty | [[cdk.support/lookup-entry]] | `:scope` |
+| `roles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:roles` |
+| `scope` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -226,13 +226,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `assessmentReportsDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:assessment-reports-destination` |
-| `awsAccount` | software.amazon.awscdk.services.auditmanager.CfnAssessment$AWSAccountProperty | [[cdk.support/lookup-entry]] | `:aws-account` |
-| `delegations` | java.util.List | [[cdk.support/lookup-entry]] | `:delegations` |
+| `assessmentReportsDestination` | software.amazon.awscdk.services.auditmanager.CfnAssessment$AssessmentReportsDestinationProperty | [[cdk.support/lookup-entry]] | `:assessment-reports-destination` |
+| `awsAccount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-account` |
+| `delegations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delegations` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `frameworkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `roles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:roles` |
+| `roles` | java.util.List | [[cdk.support/lookup-entry]] | `:roles` |
 | `scope` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -313,7 +313,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsAccounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-accounts` |
-| `awsServices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-services` |
+| `awsServices` | java.util.List | [[cdk.support/lookup-entry]] | `:aws-services` |
 "
   [^CfnAssessment$ScopeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-accounts)]

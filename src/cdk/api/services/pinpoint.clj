@@ -177,7 +177,7 @@
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
 | `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
 | `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
@@ -281,7 +281,7 @@
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
 | `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
 | `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
@@ -333,7 +333,7 @@
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
 | `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
 | `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
@@ -437,7 +437,7 @@
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
 | `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
 | `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
@@ -489,7 +489,7 @@
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
 | `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
 | `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
@@ -652,9 +652,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `campaignHook` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$CampaignHookProperty | [[cdk.support/lookup-entry]] | `:campaign-hook` |
+| `campaignHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:campaign-hook` |
 | `cloudWatchMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
-| `limits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:limits` |
+| `limits` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$LimitsProperty | [[cdk.support/lookup-entry]] | `:limits` |
 | `quietTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:quiet-time` |
 "
   [^CfnApplicationSettings$Builder builder id config]
@@ -764,9 +764,9 @@
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `campaignHook` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$CampaignHookProperty | [[cdk.support/lookup-entry]] | `:campaign-hook` |
-| `cloudWatchMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
-| `limits` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$LimitsProperty | [[cdk.support/lookup-entry]] | `:limits` |
-| `quietTime` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$QuietTimeProperty | [[cdk.support/lookup-entry]] | `:quiet-time` |
+| `cloudWatchMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
+| `limits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:limits` |
+| `quietTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:quiet-time` |
 "
   [^CfnApplicationSettingsProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-id)]
@@ -835,7 +835,7 @@
 |---|---|---|---|
 | `apiKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-key` |
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `secretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-key` |
 "
   [^CfnBaiduChannel$Builder builder id config]
@@ -872,7 +872,7 @@
 |---|---|---|---|
 | `apiKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-key` |
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `secretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-key` |
 "
   [^CfnBaiduChannelProps$Builder builder id config]
@@ -938,7 +938,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalTreatments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-treatments` |
+| `additionalTreatments` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-treatments` |
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `campaignHook` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignHookProperty | [[cdk.support/lookup-entry]] | `:campaign-hook` |
 | `customDeliveryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-delivery-configuration` |
@@ -946,10 +946,10 @@
 | `holdoutPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:holdout-percent` |
 | `isPaused` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-paused` |
 | `limits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:limits` |
-| `messageConfiguration` | software.amazon.awscdk.services.pinpoint.CfnCampaign$MessageConfigurationProperty | [[cdk.support/lookup-entry]] | `:message-configuration` |
+| `messageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
+| `schedule` | software.amazon.awscdk.services.pinpoint.CfnCampaign$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `segmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-id` |
 | `segmentVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-version` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1082,7 +1082,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `dimensions` | software.amazon.awscdk.services.pinpoint.CfnCampaign$EventDimensionsProperty | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `filterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-type` |
 "
   [^CfnCampaign$CampaignEventFilterProperty$Builder builder id config]
@@ -1147,7 +1147,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `content` | java.util.List | [[cdk.support/lookup-entry]] | `:content` |
+| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
 | `customConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:custom-config` |
 | `layout` | java.lang.String | [[cdk.support/lookup-entry]] | `:layout` |
 "
@@ -1299,7 +1299,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:attributes` |
-| `eventType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-type` |
+| `eventType` | software.amazon.awscdk.services.pinpoint.CfnCampaign$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:event-type` |
 | `metrics` | java.lang.Object | [[cdk.support/lookup-entry]] | `:metrics` |
 "
   [^CfnCampaign$EventDimensionsProperty$Builder builder id config]
@@ -1404,7 +1404,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backgroundColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:background-color` |
-| `bodyConfig` | software.amazon.awscdk.services.pinpoint.CfnCampaign$InAppMessageBodyConfigProperty | [[cdk.support/lookup-entry]] | `:body-config` |
+| `bodyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-config` |
 | `headerConfig` | software.amazon.awscdk.services.pinpoint.CfnCampaign$InAppMessageHeaderConfigProperty | [[cdk.support/lookup-entry]] | `:header-config` |
 | `imageUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-url` |
 | `primaryBtn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-btn` |
@@ -1527,7 +1527,7 @@
 | `defaultMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$MessageProperty | [[cdk.support/lookup-entry]] | `:default-message` |
 | `emailMessage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:email-message` |
 | `gcmMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$MessageProperty | [[cdk.support/lookup-entry]] | `:gcm-message` |
-| `inAppMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignInAppMessageProperty | [[cdk.support/lookup-entry]] | `:in-app-message` |
+| `inAppMessage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:in-app-message` |
 | `smsMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignSmsMessageProperty | [[cdk.support/lookup-entry]] | `:sms-message` |
 "
   [^CfnCampaign$MessageConfigurationProperty$Builder builder id config]
@@ -1695,22 +1695,22 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalTreatments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-treatments` |
+| `additionalTreatments` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-treatments` |
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `campaignHook` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignHookProperty | [[cdk.support/lookup-entry]] | `:campaign-hook` |
 | `customDeliveryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-delivery-configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `holdoutPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:holdout-percent` |
 | `isPaused` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-paused` |
-| `limits` | software.amazon.awscdk.services.pinpoint.CfnCampaign$LimitsProperty | [[cdk.support/lookup-entry]] | `:limits` |
+| `limits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:limits` |
 | `messageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
+| `schedule` | software.amazon.awscdk.services.pinpoint.CfnCampaign$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `segmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-id` |
 | `segmentVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-version` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `templateConfiguration` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateConfigurationProperty | [[cdk.support/lookup-entry]] | `:template-configuration` |
+| `templateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `treatmentDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-description` |
 | `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |
 "
@@ -1806,9 +1806,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `endTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-time` |
-| `eventFilter` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignEventFilterProperty | [[cdk.support/lookup-entry]] | `:event-filter` |
+| `eventFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-filter` |
 | `frequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:frequency` |
-| `isLocalTime` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-local-time` |
+| `isLocalTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-local-time` |
 | `quietTime` | software.amazon.awscdk.services.pinpoint.CfnCampaign$QuietTimeProperty | [[cdk.support/lookup-entry]] | `:quiet-time` |
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 | `timeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-zone` |
@@ -1884,7 +1884,7 @@
 |---|---|---|---|
 | `emailTemplate` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateProperty | [[cdk.support/lookup-entry]] | `:email-template` |
 | `pushTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:push-template` |
-| `smsTemplate` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateProperty | [[cdk.support/lookup-entry]] | `:sms-template` |
+| `smsTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sms-template` |
 | `voiceTemplate` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateProperty | [[cdk.support/lookup-entry]] | `:voice-template` |
 "
   [^CfnCampaign$TemplateConfigurationProperty$Builder builder id config]
@@ -1950,11 +1950,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customDeliveryConfiguration` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CustomDeliveryConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-delivery-configuration` |
+| `customDeliveryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-delivery-configuration` |
 | `messageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message-configuration` |
-| `schedule` | software.amazon.awscdk.services.pinpoint.CfnCampaign$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
+| `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
 | `sizePercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-percent` |
-| `templateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-configuration` |
+| `templateConfiguration` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateConfigurationProperty | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `treatmentDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-description` |
 | `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |
 "
@@ -2044,7 +2044,7 @@
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `configurationSet` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-set` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `fromAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:from-address` |
 | `identity` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity` |
 | `orchestrationSendingRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:orchestration-sending-role-arn` |
@@ -2406,7 +2406,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `android` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:android` |
-| `defaultConfig` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$DefaultButtonConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-config` |
+| `defaultConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-config` |
 | `ios` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ios` |
 | `web` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$OverrideButtonConfigurationProperty | [[cdk.support/lookup-entry]] | `:web` |
 "
@@ -2523,8 +2523,8 @@
 | `bodyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-config` |
 | `headerConfig` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$HeaderConfigProperty | [[cdk.support/lookup-entry]] | `:header-config` |
 | `imageUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-url` |
-| `primaryBtn` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$ButtonConfigProperty | [[cdk.support/lookup-entry]] | `:primary-btn` |
-| `secondaryBtn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-btn` |
+| `primaryBtn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-btn` |
+| `secondaryBtn` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$ButtonConfigProperty | [[cdk.support/lookup-entry]] | `:secondary-btn` |
 "
   [^CfnInAppTemplate$InAppMessageContentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -2593,7 +2593,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
+| `content` | java.util.List | [[cdk.support/lookup-entry]] | `:content` |
 | `customConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:custom-config` |
 | `layout` | java.lang.String | [[cdk.support/lookup-entry]] | `:layout` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
@@ -2732,7 +2732,7 @@
 | `apns` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$APNSPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:apns` |
 | `baidu` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:baidu` |
 | `defaultSubstitutions` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-substitutions` |
-| `defaultValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value` |
+| `defaultValue` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$DefaultPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:default-value` |
 | `gcm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gcm` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
@@ -2820,12 +2820,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `adm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:adm` |
-| `apns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:apns` |
-| `baidu` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$AndroidPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:baidu` |
+| `adm` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$AndroidPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:adm` |
+| `apns` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$APNSPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:apns` |
+| `baidu` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:baidu` |
 | `defaultSubstitutions` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-substitutions` |
-| `defaultValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value` |
-| `gcm` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$AndroidPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:gcm` |
+| `defaultValue` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$DefaultPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:default-value` |
+| `gcm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gcm` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
 | `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
@@ -2903,7 +2903,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `recency` | software.amazon.awscdk.services.pinpoint.CfnSegment$RecencyProperty | [[cdk.support/lookup-entry]] | `:recency` |
+| `recency` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recency` |
 "
   [^CfnSegment$BehaviorProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :recency)]
@@ -2932,9 +2932,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `dimensions` | software.amazon.awscdk.services.pinpoint.CfnSegment$SegmentDimensionsProperty | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `segmentGroups` | software.amazon.awscdk.services.pinpoint.CfnSegment$SegmentGroupsProperty | [[cdk.support/lookup-entry]] | `:segment-groups` |
+| `segmentGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:segment-groups` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSegment$Builder builder id config]
@@ -3002,9 +3002,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `appVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:app-version` |
+| `appVersion` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:app-version` |
 | `channel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:channel` |
-| `deviceType` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:device-type` |
+| `deviceType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-type` |
 | `make` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:make` |
 | `model` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:model` |
 | `platform` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:platform` |
@@ -3076,8 +3076,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
-| `sourceSegments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-segments` |
+| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `sourceSegments` | java.util.List | [[cdk.support/lookup-entry]] | `:source-segments` |
 | `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -3114,7 +3114,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `country` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:country` |
-| `gpsPoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gps-point` |
+| `gpsPoint` | software.amazon.awscdk.services.pinpoint.CfnSegment$GPSPointProperty | [[cdk.support/lookup-entry]] | `:gps-point` |
 "
   [^CfnSegment$LocationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :country)]
@@ -3145,9 +3145,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `dimensions` | software.amazon.awscdk.services.pinpoint.CfnSegment$SegmentDimensionsProperty | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `segmentGroups` | software.amazon.awscdk.services.pinpoint.CfnSegment$SegmentGroupsProperty | [[cdk.support/lookup-entry]] | `:segment-groups` |
+| `segmentGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:segment-groups` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSegmentProps$Builder builder id config]
@@ -3217,8 +3217,8 @@
 |---|---|---|---|
 | `attributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:attributes` |
 | `behavior` | software.amazon.awscdk.services.pinpoint.CfnSegment$BehaviorProperty | [[cdk.support/lookup-entry]] | `:behavior` |
-| `demographic` | software.amazon.awscdk.services.pinpoint.CfnSegment$DemographicProperty | [[cdk.support/lookup-entry]] | `:demographic` |
-| `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
+| `demographic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:demographic` |
+| `location` | software.amazon.awscdk.services.pinpoint.CfnSegment$LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 | `metrics` | java.lang.Object | [[cdk.support/lookup-entry]] | `:metrics` |
 | `userAttributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:user-attributes` |
 "
@@ -3537,7 +3537,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnVoiceChannelProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-id)]

@@ -1615,10 +1615,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributeAggregationFunction` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AttributeAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:attribute-aggregation-function` |
+| `attributeAggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-aggregation-function` |
 | `categoricalAggregationFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:categorical-aggregation-function` |
 | `dateAggregationFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-aggregation-function` |
-| `numericalAggregationFunction` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericalAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:numerical-aggregation-function` |
+| `numericalAggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numerical-aggregation-function` |
 "
   [^CfnAnalysis$AggregationFunctionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attribute-aggregation-function)]
@@ -1653,7 +1653,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `sortDirection` | java.lang.String | [[cdk.support/lookup-entry]] | `:sort-direction` |
 "
   [^CfnAnalysis$AggregationSortConfigurationProperty$Builder builder id config]
@@ -1686,7 +1686,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultNewSheetConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultNewSheetConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-new-sheet-configuration` |
+| `defaultNewSheetConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-new-sheet-configuration` |
 "
   [^CfnAnalysis$AnalysisDefaultsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-new-sheet-configuration)]
@@ -1715,7 +1715,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `analysisDefaults` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AnalysisDefaultsProperty | [[cdk.support/lookup-entry]] | `:analysis-defaults` |
-| `calculatedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:calculated-fields` |
+| `calculatedFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:calculated-fields` |
 | `columnConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:column-configurations` |
 | `dataSetIdentifierDeclarations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-set-identifier-declarations` |
 | `filterGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-groups` |
@@ -1826,7 +1826,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
-| `dataSetReferences` | java.util.List | [[cdk.support/lookup-entry]] | `:data-set-references` |
+| `dataSetReferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-set-references` |
 "
   [^CfnAnalysis$AnalysisSourceTemplateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arn)]
@@ -1887,7 +1887,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
+| `range` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ArcAxisDisplayRangeProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `reserveRange` | java.lang.Number | [[cdk.support/lookup-entry]] | `:reserve-range` |
 "
   [^CfnAnalysis$ArcAxisConfigurationProperty$Builder builder id config]
@@ -2071,7 +2071,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateAxisOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-axis-options` |
-| `numericAxisOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-axis-options` |
+| `numericAxisOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericAxisOptionsProperty | [[cdk.support/lookup-entry]] | `:numeric-axis-options` |
 "
   [^CfnAnalysis$AxisDataOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-axis-options)]
@@ -2134,10 +2134,10 @@
 |---|---|---|---|
 | `axisLineVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-line-visibility` |
 | `axisOffset` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-offset` |
-| `dataOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDataOptionsProperty | [[cdk.support/lookup-entry]] | `:data-options` |
+| `dataOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-options` |
 | `gridLineVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:grid-line-visibility` |
-| `scrollbarOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ScrollBarOptionsProperty | [[cdk.support/lookup-entry]] | `:scrollbar-options` |
-| `tickLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisTickLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:tick-label-options` |
+| `scrollbarOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scrollbar-options` |
+| `tickLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tick-label-options` |
 "
   [^CfnAnalysis$AxisDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-line-visibility)]
@@ -2206,9 +2206,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applyTo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:apply-to` |
+| `applyTo` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisLabelReferenceOptionsProperty | [[cdk.support/lookup-entry]] | `:apply-to` |
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
-| `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
+| `fontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font-configuration` |
 "
   [^CfnAnalysis$AxisLabelOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :apply-to)]
@@ -2240,7 +2240,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 "
   [^CfnAnalysis$AxisLabelReferenceOptionsProperty$Builder builder id config]
@@ -2331,7 +2331,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `linear` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisLinearScaleProperty | [[cdk.support/lookup-entry]] | `:linear` |
-| `logarithmic` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisLogarithmicScaleProperty | [[cdk.support/lookup-entry]] | `:logarithmic` |
+| `logarithmic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logarithmic` |
 "
   [^CfnAnalysis$AxisScaleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :linear)]
@@ -2394,8 +2394,8 @@
 |---|---|---|---|
 | `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `smallMultiples` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `smallMultiples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$BarChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -2432,19 +2432,19 @@
 | `barsArrangement` | java.lang.String | [[cdk.support/lookup-entry]] | `:bars-arrangement` |
 | `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
 | `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `colorLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-label-options` |
-| `contributionAnalysisDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
+| `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
+| `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BarChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `orientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:orientation` |
 | `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BarChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `smallMultiplesOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `valueAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-axis` |
-| `valueLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:value-label-options` |
-| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `valueLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-label-options` |
+| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnAnalysis$BarChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bars-arrangement)]
@@ -2535,7 +2535,7 @@
 | `colorItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit` |
 | `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
 | `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
-| `smallMultiplesSort` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
+| `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
   [^CfnAnalysis$BarChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit)]
@@ -2573,10 +2573,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BarChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -2676,9 +2676,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `content` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BodySectionContentProperty | [[cdk.support/lookup-entry]] | `:content` |
-| `pageBreakConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:page-break-configuration` |
+| `pageBreakConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionPageBreakConfigurationProperty | [[cdk.support/lookup-entry]] | `:page-break-configuration` |
 | `sectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:section-id` |
-| `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
+| `style` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionStyleProperty | [[cdk.support/lookup-entry]] | `:style` |
 "
   [^CfnAnalysis$BodySectionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :content)]
@@ -2712,7 +2712,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `layout` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:layout` |
+| `layout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layout` |
 "
   [^CfnAnalysis$BodySectionContentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :layout)]
@@ -2741,7 +2741,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `groupBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-by` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$BoxPlotAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :group-by)]
@@ -2772,16 +2772,16 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `boxPlotOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BoxPlotOptionsProperty | [[cdk.support/lookup-entry]] | `:box-plot-options` |
-| `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
+| `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
 | `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
 | `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
 | `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BoxPlotSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnAnalysis$BoxPlotChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :box-plot-options)]
@@ -2829,7 +2829,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `boxPlotAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BoxPlotAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:box-plot-aggregated-field-wells` |
+| `boxPlotAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:box-plot-aggregated-field-wells` |
 "
   [^CfnAnalysis$BoxPlotFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :box-plot-aggregated-field-wells)]
@@ -2859,7 +2859,7 @@
 |---|---|---|---|
 | `allDataPointsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:all-data-points-visibility` |
 | `outlierVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:outlier-visibility` |
-| `styleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style-options` |
+| `styleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BoxPlotStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:style-options` |
 "
   [^CfnAnalysis$BoxPlotOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :all-data-points-visibility)]
@@ -2950,11 +2950,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BoxPlotChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$BoxPlotVisualProperty$Builder builder id config]
@@ -2995,13 +2995,13 @@
 |---|---|---|---|
 | `analysisId` | java.lang.String | [[cdk.support/lookup-entry]] | `:analysis-id` |
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AnalysisDefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
 | `errors` | java.util.List | [[cdk.support/lookup-entry]] | `:errors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
-| `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
+| `parameters` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParametersProperty | [[cdk.support/lookup-entry]] | `:parameters` |
+| `permissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions` |
 | `sheets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sheets` |
-| `sourceEntity` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AnalysisSourceEntityProperty | [[cdk.support/lookup-entry]] | `:source-entity` |
+| `sourceEntity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-entity` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `themeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:theme-arn` |
@@ -3122,7 +3122,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sourceControls` | java.util.List | [[cdk.support/lookup-entry]] | `:source-controls` |
+| `sourceControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-controls` |
 "
   [^CfnAnalysis$CascadingControlConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :source-controls)]
@@ -3150,7 +3150,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-to-match` |
+| `columnToMatch` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column-to-match` |
 | `sourceSheetControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-sheet-control-id` |
 "
   [^CfnAnalysis$CascadingControlSourceProperty$Builder builder id config]
@@ -3181,9 +3181,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$StringFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnAnalysis$CategoricalDimensionFieldProperty$Builder builder id config]
@@ -3221,7 +3221,7 @@
 | `aggregationFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$StringFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnAnalysis$CategoricalMeasureFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-function)]
@@ -3286,9 +3286,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customFilterConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomFilterConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-filter-configuration` |
+| `customFilterConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-filter-configuration` |
 | `customFilterListConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomFilterListConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-filter-list-configuration` |
-| `filterListConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-list-configuration` |
+| `filterListConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterListConfigurationProperty | [[cdk.support/lookup-entry]] | `:filter-list-configuration` |
 "
   [^CfnAnalysis$CategoryFilterConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-filter-configuration)]
@@ -3320,9 +3320,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 "
   [^CfnAnalysis$CategoryFilterProperty$Builder builder id config]
@@ -3448,8 +3448,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `colorFillType` | java.lang.String | [[cdk.support/lookup-entry]] | `:color-fill-type` |
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
-| `nullValueColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataColorProperty | [[cdk.support/lookup-entry]] | `:null-value-color` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
+| `nullValueColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-color` |
 "
   [^CfnAnalysis$ColorScaleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color-fill-type)]
@@ -3509,8 +3509,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colorsConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColorsConfigurationProperty | [[cdk.support/lookup-entry]] | `:colors-configuration` |
-| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `colorsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors-configuration` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 "
@@ -3546,7 +3546,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimeHierarchy` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateTimeHierarchyProperty | [[cdk.support/lookup-entry]] | `:date-time-hierarchy` |
+| `dateTimeHierarchy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-hierarchy` |
 | `explicitHierarchy` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ExplicitHierarchyProperty | [[cdk.support/lookup-entry]] | `:explicit-hierarchy` |
 | `predefinedHierarchy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-hierarchy` |
 "
@@ -3613,7 +3613,7 @@
 |---|---|---|---|
 | `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `direction` | java.lang.String | [[cdk.support/lookup-entry]] | `:direction` |
-| `sortBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-by` |
+| `sortBy` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:sort-by` |
 "
   [^CfnAnalysis$ColumnSortProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-function)]
@@ -3683,9 +3683,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `barValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bar-values` |
-| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
-| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `lineValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-values` |
+| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `lineValues` | java.util.List | [[cdk.support/lookup-entry]] | `:line-values` |
 "
   [^CfnAnalysis$ComboChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bar-values)]
@@ -3722,17 +3722,17 @@
 | `barDataLabels` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:bar-data-labels` |
 | `barsArrangement` | java.lang.String | [[cdk.support/lookup-entry]] | `:bars-arrangement` |
 | `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
-| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ComboChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `lineDataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-data-labels` |
-| `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
 | `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
 | `secondaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
 | `secondaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ComboChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
@@ -3857,10 +3857,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ComboChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -3900,7 +3900,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `comparisonFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison-format` |
+| `comparisonFormat` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ComparisonFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison-format` |
 | `comparisonMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:comparison-method` |
 "
   [^CfnAnalysis$ComparisonConfigurationProperty$Builder builder id config]
@@ -3965,12 +3965,12 @@
 | `forecast` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast` |
 | `growthRate` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GrowthRateComputationProperty | [[cdk.support/lookup-entry]] | `:growth-rate` |
 | `maximumMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maximum-minimum` |
-| `metricComparison` | software.amazon.awscdk.services.quicksight.CfnAnalysis$MetricComparisonComputationProperty | [[cdk.support/lookup-entry]] | `:metric-comparison` |
-| `periodOverPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:period-over-period` |
+| `metricComparison` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-comparison` |
+| `periodOverPeriod` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PeriodOverPeriodComputationProperty | [[cdk.support/lookup-entry]] | `:period-over-period` |
 | `periodToDate` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PeriodToDateComputationProperty | [[cdk.support/lookup-entry]] | `:period-to-date` |
-| `topBottomMovers` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TopBottomMoversComputationProperty | [[cdk.support/lookup-entry]] | `:top-bottom-movers` |
-| `topBottomRanked` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TopBottomRankedComputationProperty | [[cdk.support/lookup-entry]] | `:top-bottom-ranked` |
-| `totalAggregation` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TotalAggregationComputationProperty | [[cdk.support/lookup-entry]] | `:total-aggregation` |
+| `topBottomMovers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-movers` |
+| `topBottomRanked` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-ranked` |
+| `totalAggregation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-aggregation` |
 | `uniqueValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$UniqueValuesComputationProperty | [[cdk.support/lookup-entry]] | `:unique-values` |
 "
   [^CfnAnalysis$ComputationProperty$Builder builder id config]
@@ -4051,7 +4051,7 @@
 | `color` | java.lang.String | [[cdk.support/lookup-entry]] | `:color` |
 | `displayConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-configuration` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
-| `iconOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingCustomIconOptionsProperty | [[cdk.support/lookup-entry]] | `:icon-options` |
+| `iconOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon-options` |
 "
   [^CfnAnalysis$ConditionalFormattingCustomIconConditionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color)]
@@ -4116,7 +4116,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `color` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color` |
+| `color` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GradientColorProperty | [[cdk.support/lookup-entry]] | `:color` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 "
   [^CfnAnalysis$ConditionalFormattingGradientColorProperty$Builder builder id config]
@@ -4175,8 +4175,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customCondition` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingCustomIconConditionProperty | [[cdk.support/lookup-entry]] | `:custom-condition` |
-| `iconSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon-set` |
+| `customCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-condition` |
+| `iconSet` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingIconSetProperty | [[cdk.support/lookup-entry]] | `:icon-set` |
 "
   [^CfnAnalysis$ConditionalFormattingIconProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-condition)]
@@ -4268,7 +4268,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contributorDimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contributor-dimensions` |
+| `contributorDimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:contributor-dimensions` |
 | `measureFieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-field-id` |
 "
   [^CfnAnalysis$ContributionAnalysisDefaultProperty$Builder builder id config]
@@ -4299,8 +4299,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decimalPlacesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
-| `negativeValueConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NegativeValueConfigurationProperty | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
+| `decimalPlacesConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DecimalPlacesConfigurationProperty | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
+| `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
 | `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `numberScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:number-scale` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
@@ -4348,8 +4348,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `selectedFieldsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-fields-configuration` |
-| `targetVisualsConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterOperationTargetVisualsConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-visuals-configuration` |
+| `selectedFieldsConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterOperationSelectedFieldsConfigurationProperty | [[cdk.support/lookup-entry]] | `:selected-fields-configuration` |
+| `targetVisualsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-visuals-configuration` |
 "
   [^CfnAnalysis$CustomActionFilterOperationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :selected-fields-configuration)]
@@ -4407,7 +4407,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `parameterValueConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-value-configurations` |
+| `parameterValueConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-value-configurations` |
 "
   [^CfnAnalysis$CustomActionSetParametersOperationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :parameter-value-configurations)]
@@ -4534,11 +4534,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomContentConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `dataSetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-identifier` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$CustomContentVisualProperty$Builder builder id config]
@@ -4683,8 +4683,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeValues` | java.util.List | [[cdk.support/lookup-entry]] | `:date-time-values` |
-| `decimalValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-values` |
-| `integerValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-values` |
+| `decimalValues` | java.util.List | [[cdk.support/lookup-entry]] | `:decimal-values` |
+| `integerValues` | java.util.List | [[cdk.support/lookup-entry]] | `:integer-values` |
 | `stringValues` | java.util.List | [[cdk.support/lookup-entry]] | `:string-values` |
 "
   [^CfnAnalysis$CustomParameterValuesProperty$Builder builder id config]
@@ -4719,8 +4719,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomParameterValuesProperty | [[cdk.support/lookup-entry]] | `:custom-values` |
-| `includeNullValue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-null-value` |
+| `customValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-values` |
+| `includeNullValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-null-value` |
 "
   [^CfnAnalysis$CustomValuesConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-values)]
@@ -4818,7 +4818,7 @@
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `fieldValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-value` |
-| `settings` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:settings` |
+| `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
 "
   [^CfnAnalysis$DataFieldSeriesItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -4853,7 +4853,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-label-visibility` |
-| `dataLabelTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-label-types` |
+| `dataLabelTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:data-label-types` |
 | `labelColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-color` |
 | `labelContent` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-content` |
 | `labelFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
@@ -4909,7 +4909,7 @@
 |---|---|---|---|
 | `dataPathLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-path-label-type` |
 | `fieldLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-label-type` |
-| `maximumLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maximum-label-type` |
+| `maximumLabelType` | software.amazon.awscdk.services.quicksight.CfnAnalysis$MaximumLabelTypeProperty | [[cdk.support/lookup-entry]] | `:maximum-label-type` |
 | `minimumLabelType` | software.amazon.awscdk.services.quicksight.CfnAnalysis$MinimumLabelTypeProperty | [[cdk.support/lookup-entry]] | `:minimum-label-type` |
 | `rangeEndsLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-ends-label-type` |
 "
@@ -4948,7 +4948,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `color` | java.lang.String | [[cdk.support/lookup-entry]] | `:color` |
-| `element` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:element` |
+| `element` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataPathValueProperty | [[cdk.support/lookup-entry]] | `:element` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 "
   [^CfnAnalysis$DataPathColorProperty$Builder builder id config]
@@ -5275,7 +5275,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamicValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DynamicDefaultValueProperty | [[cdk.support/lookup-entry]] | `:dynamic-value` |
+| `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
 | `rollingDate` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RollingDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:rolling-date` |
 | `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
@@ -5310,8 +5310,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
-| `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
-| `numericFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:numeric-format-configuration` |
+| `nullValueFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
+| `numericFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-format-configuration` |
 "
   [^CfnAnalysis$DateTimeFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format)]
@@ -5343,7 +5343,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `drillDownFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
+| `drillDownFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnAnalysis$DateTimeHierarchyProperty$Builder builder id config]
@@ -5374,8 +5374,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateTimeDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
-| `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
+| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `mappedDataSetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 | `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateTimeValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
@@ -5446,8 +5446,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
-| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnAnalysis$DateTimePickerControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format)]
@@ -5542,10 +5542,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DecimalDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
-| `mappedDataSetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
+| `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
-| `valueWhenUnset` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-when-unset` |
+| `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DecimalValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
 "
   [^CfnAnalysis$DecimalParameterDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-values)]
@@ -5582,7 +5582,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$DecimalParameterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -5671,7 +5671,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateTimePickerControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAnalysis$DefaultDateTimePickerControlOptionsProperty$Builder builder id config]
@@ -5702,7 +5702,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `controlOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:control-options` |
+| `controlOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultFilterControlOptionsProperty | [[cdk.support/lookup-entry]] | `:control-options` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnAnalysis$DefaultFilterControlConfigurationProperty$Builder builder id config]
@@ -5735,11 +5735,11 @@
 |---|---|---|---|
 | `defaultDateTimePickerOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-date-time-picker-options` |
 | `defaultDropdownOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-dropdown-options` |
-| `defaultListOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-list-options` |
-| `defaultRelativeDateTimeOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultRelativeDateTimeControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-relative-date-time-options` |
-| `defaultSliderOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-slider-options` |
+| `defaultListOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultFilterListControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-list-options` |
+| `defaultRelativeDateTimeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-relative-date-time-options` |
+| `defaultSliderOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultSliderControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-slider-options` |
 | `defaultTextAreaOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-text-area-options` |
-| `defaultTextFieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-text-field-options` |
+| `defaultTextFieldOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultTextFieldControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-text-field-options` |
 "
   [^CfnAnalysis$DefaultFilterControlOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-date-time-picker-options)]
@@ -5779,7 +5779,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DropDownControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `selectableValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -5813,7 +5813,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ListControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `selectableValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -5903,7 +5903,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeForm` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultFreeFormLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form` |
+| `freeForm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form` |
 | `grid` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultGridLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:grid` |
 "
   [^CfnAnalysis$DefaultInteractiveLayoutConfigurationProperty$Builder builder id config]
@@ -5968,7 +5968,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sectionBased` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultSectionBasedLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:section-based` |
+| `sectionBased` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section-based` |
 "
   [^CfnAnalysis$DefaultPaginatedLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :section-based)]
@@ -5996,7 +5996,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RelativeDateTimeControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 "
   [^CfnAnalysis$DefaultRelativeDateTimeControlOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :display-options)]
@@ -6024,7 +6024,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionBasedLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
 "
   [^CfnAnalysis$DefaultSectionBasedLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -6052,7 +6052,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SliderControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `maximumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-value` |
 | `minimumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-value` |
 | `stepSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:step-size` |
@@ -6123,7 +6123,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TextFieldControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 "
   [^CfnAnalysis$DefaultTextFieldControlOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :display-options)]
@@ -6151,9 +6151,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customValuesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-values-configuration` |
+| `customValuesConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomValuesConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-values-configuration` |
 | `selectAllValueOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:select-all-value-options` |
-| `sourceColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-column` |
+| `sourceColumn` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:source-column` |
 | `sourceField` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-field` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
 "
@@ -6191,8 +6191,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoricalDimensionField` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CategoricalDimensionFieldProperty | [[cdk.support/lookup-entry]] | `:categorical-dimension-field` |
-| `dateDimensionField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-dimension-field` |
+| `categoricalDimensionField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:categorical-dimension-field` |
+| `dateDimensionField` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateDimensionFieldProperty | [[cdk.support/lookup-entry]] | `:date-dimension-field` |
 | `numericalDimensionField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numerical-dimension-field` |
 "
   [^CfnAnalysis$DimensionFieldProperty$Builder builder id config]
@@ -6253,8 +6253,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `arcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:arc-options` |
-| `donutCenterOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DonutCenterOptionsProperty | [[cdk.support/lookup-entry]] | `:donut-center-options` |
+| `arcOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ArcOptionsProperty | [[cdk.support/lookup-entry]] | `:arc-options` |
+| `donutCenterOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:donut-center-options` |
 "
   [^CfnAnalysis$DonutOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arc-options)]
@@ -6284,9 +6284,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryFilter` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CategoryDrillDownFilterProperty | [[cdk.support/lookup-entry]] | `:category-filter` |
+| `categoryFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-filter` |
 | `numericEqualityFilter` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericEqualityDrillDownFilterProperty | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
-| `timeRangeFilter` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TimeRangeDrillDownFilterProperty | [[cdk.support/lookup-entry]] | `:time-range-filter` |
+| `timeRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-range-filter` |
 "
   [^CfnAnalysis$DrillDownFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-filter)]
@@ -6320,7 +6320,7 @@
 |---|---|---|---|
 | `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
 | `selectAllOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ListControlSelectAllOptionsProperty | [[cdk.support/lookup-entry]] | `:select-all-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnAnalysis$DropDownControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :info-icon-label-options)]
@@ -6353,7 +6353,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultValueColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value-column` |
-| `groupNameColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-name-column` |
+| `groupNameColumn` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:group-name-column` |
 | `userNameColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-name-column` |
 "
   [^CfnAnalysis$DynamicDefaultValueProperty$Builder builder id config]
@@ -6517,7 +6517,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregationVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation-visibility` |
-| `tooltipFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip-fields` |
+| `tooltipFields` | java.util.List | [[cdk.support/lookup-entry]] | `:tooltip-fields` |
 | `tooltipTitleType` | java.lang.String | [[cdk.support/lookup-entry]] | `:tooltip-title-type` |
 "
   [^CfnAnalysis$FieldBasedTooltipProperty$Builder builder id config]
@@ -6583,7 +6583,7 @@
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
+| `settings` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:settings` |
 "
   [^CfnAnalysis$FieldSeriesItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -6711,7 +6711,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `geospatial` | java.util.List | [[cdk.support/lookup-entry]] | `:geospatial` |
+| `geospatial` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$FilledMapAggregatedFieldWellsProperty$Builder builder id config]
@@ -6770,7 +6770,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnAnalysis$FilledMapConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -6798,12 +6798,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilledMapFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
-| `mapStyleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialMapStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:map-style-options` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `mapStyleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:map-style-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilledMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `windowOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialWindowOptionsProperty | [[cdk.support/lookup-entry]] | `:window-options` |
+| `windowOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:window-options` |
 "
   [^CfnAnalysis$FilledMapConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-wells)]
@@ -6928,12 +6928,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilledMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilledMapConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$FilledMapVisualProperty$Builder builder id config]
@@ -6976,10 +6976,10 @@
 |---|---|---|---|
 | `crossSheet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cross-sheet` |
 | `dateTimePicker` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterDateTimePickerControlProperty | [[cdk.support/lookup-entry]] | `:date-time-picker` |
-| `dropdown` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterDropDownControlProperty | [[cdk.support/lookup-entry]] | `:dropdown` |
-| `list` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:list` |
+| `dropdown` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dropdown` |
+| `list` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterListControlProperty | [[cdk.support/lookup-entry]] | `:list` |
 | `relativeDateTime` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterRelativeDateTimeControlProperty | [[cdk.support/lookup-entry]] | `:relative-date-time` |
-| `slider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slider` |
+| `slider` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterSliderControlProperty | [[cdk.support/lookup-entry]] | `:slider` |
 | `textArea` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterTextAreaControlProperty | [[cdk.support/lookup-entry]] | `:text-area` |
 | `textField` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterTextFieldControlProperty | [[cdk.support/lookup-entry]] | `:text-field` |
 "
@@ -7057,7 +7057,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateTimePickerControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -7097,10 +7097,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
-| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DropDownControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
-| `selectableValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectable-values` |
+| `selectableValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -7145,7 +7145,7 @@
 |---|---|---|---|
 | `crossDataset` | java.lang.String | [[cdk.support/lookup-entry]] | `:cross-dataset` |
 | `filterGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-group-id` |
-| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 | `scopeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope-configuration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
@@ -7220,10 +7220,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
-| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ListControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
-| `selectableValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectable-values` |
+| `selectableValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -7266,7 +7266,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `selectedColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:selected-columns` |
+| `selectedColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-columns` |
 | `selectedFieldOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-field-options` |
 | `selectedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:selected-fields` |
 "
@@ -7300,7 +7300,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sameSheetTargetVisualConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SameSheetTargetVisualConfigurationProperty | [[cdk.support/lookup-entry]] | `:same-sheet-target-visual-configuration` |
+| `sameSheetTargetVisualConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:same-sheet-target-visual-configuration` |
 "
   [^CfnAnalysis$FilterOperationTargetVisualsConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :same-sheet-target-visual-configuration)]
@@ -7328,7 +7328,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryFilter` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CategoryFilterProperty | [[cdk.support/lookup-entry]] | `:category-filter` |
+| `categoryFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-filter` |
 | `numericEqualityFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
 | `numericRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-range-filter` |
 | `relativeDatesFilter` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RelativeDatesFilterProperty | [[cdk.support/lookup-entry]] | `:relative-dates-filter` |
@@ -7412,7 +7412,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allSheets` | java.lang.Object | [[cdk.support/lookup-entry]] | `:all-sheets` |
-| `selectedSheets` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SelectedSheetsFilterScopeConfigurationProperty | [[cdk.support/lookup-entry]] | `:selected-sheets` |
+| `selectedSheets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-sheets` |
 "
   [^CfnAnalysis$FilterScopeConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :all-sheets)]
@@ -7700,7 +7700,7 @@
 | `periodsForward` | java.lang.Number | [[cdk.support/lookup-entry]] | `:periods-forward` |
 | `predictionInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:prediction-interval` |
 | `seasonality` | java.lang.String | [[cdk.support/lookup-entry]] | `:seasonality` |
-| `time` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
 | `upperBoundary` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-boundary` |
 | `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -7751,7 +7751,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `forecastProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast-properties` |
-| `scenario` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scenario` |
+| `scenario` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ForecastScenarioProperty | [[cdk.support/lookup-entry]] | `:scenario` |
 "
   [^CfnAnalysis$ForecastConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :forecast-properties)]
@@ -7781,7 +7781,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `whatIfPointScenario` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WhatIfPointScenarioProperty | [[cdk.support/lookup-entry]] | `:what-if-point-scenario` |
+| `whatIfPointScenario` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:what-if-point-scenario` |
 | `whatIfRangeScenario` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WhatIfRangeScenarioProperty | [[cdk.support/lookup-entry]] | `:what-if-range-scenario` |
 "
   [^CfnAnalysis$ForecastScenarioProperty$Builder builder id config]
@@ -7813,8 +7813,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-format-configuration` |
-| `numberFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:number-format-configuration` |
-| `stringFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-format-configuration` |
+| `numberFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumberFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:number-format-configuration` |
+| `stringFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$StringFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:string-format-configuration` |
 "
   [^CfnAnalysis$FormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format-configuration)]
@@ -7972,8 +7972,8 @@
 | `elementId` | java.lang.String | [[cdk.support/lookup-entry]] | `:element-id` |
 | `elementType` | java.lang.String | [[cdk.support/lookup-entry]] | `:element-type` |
 | `height` | java.lang.String | [[cdk.support/lookup-entry]] | `:height` |
-| `loadingAnimation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:loading-animation` |
-| `renderingRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-rules` |
+| `loadingAnimation` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LoadingAnimationProperty | [[cdk.support/lookup-entry]] | `:loading-animation` |
+| `renderingRules` | java.util.List | [[cdk.support/lookup-entry]] | `:rendering-rules` |
 | `selectedBorderStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FreeFormLayoutElementBorderStyleProperty | [[cdk.support/lookup-entry]] | `:selected-border-style` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 | `width` | java.lang.String | [[cdk.support/lookup-entry]] | `:width` |
@@ -8056,7 +8056,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `elements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elements` |
+| `elements` | java.util.List | [[cdk.support/lookup-entry]] | `:elements` |
 "
   [^CfnAnalysis$FreeFormSectionLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :elements)]
@@ -8085,7 +8085,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$FunnelChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -8116,12 +8116,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `dataLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FunnelChartDataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-label-options` |
+| `dataLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-label-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FunnelChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FunnelChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `valueLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-label-options` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnAnalysis$FunnelChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-label-options)]
@@ -8163,7 +8163,7 @@
 |---|---|---|---|
 | `categoryLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-label-visibility` |
 | `labelColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-color` |
-| `labelFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
+| `labelFontConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
 | `measureDataLabelStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-data-label-style` |
 | `measureLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-label-visibility` |
 | `position` | java.lang.String | [[cdk.support/lookup-entry]] | `:position` |
@@ -8235,7 +8235,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnAnalysis$FunnelChartSortConfigurationProperty$Builder builder id config]
@@ -8267,10 +8267,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FunnelChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$FunnelChartVisualProperty$Builder builder id config]
@@ -8338,7 +8338,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arc` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GaugeChartArcConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:arc` |
-| `primaryValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GaugeChartPrimaryValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:primary-value` |
+| `primaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value` |
 "
   [^CfnAnalysis$GaugeChartConditionalFormattingOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arc)]
@@ -8368,7 +8368,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnAnalysis$GaugeChartConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -8396,11 +8396,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `gaugeChartOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gauge-chart-options` |
 | `tooltipOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip-options` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnAnalysis$GaugeChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-labels)]
@@ -8436,8 +8436,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `targetValues` | java.util.List | [[cdk.support/lookup-entry]] | `:target-values` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `targetValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$GaugeChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-values)]
@@ -8469,7 +8469,7 @@
 |---|---|---|---|
 | `arc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:arc` |
 | `arcAxis` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ArcAxisConfigurationProperty | [[cdk.support/lookup-entry]] | `:arc-axis` |
-| `comparison` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison` |
+| `comparison` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ComparisonConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison` |
 | `primaryValueDisplayType` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-value-display-type` |
 | `primaryValueFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value-font-configuration` |
 "
@@ -8507,8 +8507,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `icon` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnAnalysis$GaugeChartPrimaryValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -8542,7 +8542,7 @@
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GaugeChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GaugeChartConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$GaugeChartVisualProperty$Builder builder id config]
@@ -8618,7 +8618,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
 "
   [^CfnAnalysis$GeospatialHeatmapColorScaleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -8646,7 +8646,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `heatmapColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialHeatmapColorScaleProperty | [[cdk.support/lookup-entry]] | `:heatmap-color` |
+| `heatmapColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heatmap-color` |
 "
   [^CfnAnalysis$GeospatialHeatmapConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :heatmap-color)]
@@ -8704,7 +8704,7 @@
 |---|---|---|---|
 | `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
 | `geospatial` | java.util.List | [[cdk.support/lookup-entry]] | `:geospatial` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$GeospatialMapAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -8737,11 +8737,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
+| `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `mapStyleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialMapStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:map-style-options` |
 | `pointStyleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialPointStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:point-style-options` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `windowOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialWindowOptionsProperty | [[cdk.support/lookup-entry]] | `:window-options` |
 "
   [^CfnAnalysis$GeospatialMapConfigurationProperty$Builder builder id config]
@@ -8782,7 +8782,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `geospatialMapAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialMapAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:geospatial-map-aggregated-field-wells` |
+| `geospatialMapAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial-map-aggregated-field-wells` |
 "
   [^CfnAnalysis$GeospatialMapFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :geospatial-map-aggregated-field-wells)]
@@ -8839,9 +8839,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -8882,7 +8882,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clusterMarkerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cluster-marker-configuration` |
-| `heatmapConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heatmap-configuration` |
+| `heatmapConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialHeatmapConfigurationProperty | [[cdk.support/lookup-entry]] | `:heatmap-configuration` |
 | `selectedPointStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-point-style` |
 "
   [^CfnAnalysis$GeospatialPointStyleOptionsProperty$Builder builder id config]
@@ -8915,7 +8915,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bounds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bounds` |
+| `bounds` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GeospatialCoordinateBoundsProperty | [[cdk.support/lookup-entry]] | `:bounds` |
 | `mapZoomMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:map-zoom-mode` |
 "
   [^CfnAnalysis$GeospatialWindowOptionsProperty$Builder builder id config]
@@ -8946,8 +8946,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sideSpecificBorder` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableSideBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:side-specific-border` |
-| `uniformBorder` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uniform-border` |
+| `sideSpecificBorder` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:side-specific-border` |
+| `uniformBorder` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:uniform-border` |
 "
   [^CfnAnalysis$GlobalTableBorderOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :side-specific-border)]
@@ -9039,7 +9039,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `screenCanvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GridLayoutScreenCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:screen-canvas-size-options` |
+| `screenCanvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:screen-canvas-size-options` |
 "
   [^CfnAnalysis$GridLayoutCanvasSizeOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :screen-canvas-size-options)]
@@ -9067,8 +9067,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
-| `elements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elements` |
+| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GridLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `elements` | java.util.List | [[cdk.support/lookup-entry]] | `:elements` |
 "
   [^CfnAnalysis$GridLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -9175,8 +9175,8 @@
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `periodSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period-size` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnAnalysis$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAnalysis$GrowthRateComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -9212,7 +9212,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `layout` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:layout` |
+| `layout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layout` |
 | `sectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:section-id` |
 | `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
 "
@@ -9282,11 +9282,11 @@
 |---|---|---|---|
 | `colorScale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-scale` |
 | `columnLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-label-options` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `rowLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-label-options` |
-| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HeatMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 "
   [^CfnAnalysis$HeatMapConfigurationProperty$Builder builder id config]
@@ -9329,7 +9329,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `heatMapAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HeatMapAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:heat-map-aggregated-field-wells` |
+| `heatMapAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-aggregated-field-wells` |
 "
   [^CfnAnalysis$HeatMapFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :heat-map-aggregated-field-wells)]
@@ -9357,9 +9357,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `heatMapColumnItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:heat-map-column-items-limit-configuration` |
+| `heatMapColumnItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-column-items-limit-configuration` |
 | `heatMapColumnSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-column-sort` |
-| `heatMapRowItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:heat-map-row-items-limit-configuration` |
+| `heatMapRowItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-row-items-limit-configuration` |
 | `heatMapRowSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-row-sort` |
 "
   [^CfnAnalysis$HeatMapSortConfigurationProperty$Builder builder id config]
@@ -9394,11 +9394,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HeatMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$HeatMapVisualProperty$Builder builder id config]
@@ -9465,7 +9465,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `binCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-count` |
+| `binCount` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BinCountOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-count` |
 | `binWidth` | software.amazon.awscdk.services.quicksight.CfnAnalysis$BinWidthOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-width` |
 | `selectedBinType` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-bin-type` |
 | `startValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-value` |
@@ -9502,14 +9502,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `binOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HistogramBinOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-options` |
-| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `binOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-options` |
+| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HistogramFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `tooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
-| `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
-| `xAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
-| `yAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
+| `xAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
+| `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
+| `yAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
 "
   [^CfnAnalysis$HistogramConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bin-options)]
@@ -9551,7 +9551,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `histogramAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HistogramAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:histogram-aggregated-field-wells` |
+| `histogramAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:histogram-aggregated-field-wells` |
 "
   [^CfnAnalysis$HistogramFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :histogram-aggregated-field-wells)]
@@ -9580,7 +9580,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HistogramConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
@@ -9619,8 +9619,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `computations` | java.util.List | [[cdk.support/lookup-entry]] | `:computations` |
-| `customNarrative` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-narrative` |
+| `computations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:computations` |
+| `customNarrative` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomNarrativeOptionsProperty | [[cdk.support/lookup-entry]] | `:custom-narrative` |
 "
   [^CfnAnalysis$InsightConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computations)]
@@ -9650,11 +9650,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
 | `dataSetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-identifier` |
-| `insightConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insight-configuration` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `insightConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$InsightConfigurationProperty | [[cdk.support/lookup-entry]] | `:insight-configuration` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$InsightVisualProperty$Builder builder id config]
@@ -9693,7 +9693,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamicValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DynamicDefaultValueProperty | [[cdk.support/lookup-entry]] | `:dynamic-value` |
+| `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
 | `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnAnalysis$IntegerDefaultValuesProperty$Builder builder id config]
@@ -9724,11 +9724,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$IntegerDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
-| `valueWhenUnset` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-when-unset` |
+| `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnAnalysis$IntegerValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
 "
   [^CfnAnalysis$IntegerParameterDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-values)]
@@ -9888,8 +9888,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `icon` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnAnalysis$KPIComparisonValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -9921,7 +9921,7 @@
 |---|---|---|---|
 | `actualValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIActualValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:actual-value` |
 | `comparisonValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison-value` |
-| `primaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value` |
+| `primaryValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIPrimaryValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:primary-value` |
 | `progressBar` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:progress-bar` |
 "
   [^CfnAnalysis$KPIConditionalFormattingOptionProperty$Builder builder id config]
@@ -9984,8 +9984,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `kpiOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kpi-options` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `kpiOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIOptionsProperty | [[cdk.support/lookup-entry]] | `:kpi-options` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 "
   [^CfnAnalysis$KPIConfigurationProperty$Builder builder id config]
@@ -10019,8 +10019,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-values` |
-| `trendGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trend-groups` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `trendGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:trend-groups` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$KPIFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :target-values)]
@@ -10054,8 +10054,8 @@
 |---|---|---|---|
 | `comparison` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ComparisonConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison` |
 | `primaryValueDisplayType` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-value-display-type` |
-| `primaryValueFontConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:primary-value-font-configuration` |
-| `progressBar` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:progress-bar` |
+| `primaryValueFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value-font-configuration` |
+| `progressBar` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ProgressBarOptionsProperty | [[cdk.support/lookup-entry]] | `:progress-bar` |
 | `secondaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-value` |
 | `secondaryValueFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-value-font-configuration` |
 | `sparkline` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sparkline` |
@@ -10104,8 +10104,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `icon` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnAnalysis$KPIPrimaryValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -10135,7 +10135,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `foregroundColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:foreground-color` |
+| `foregroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:foreground-color` |
 "
   [^CfnAnalysis$KPIProgressBarConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :foreground-color)]
@@ -10163,7 +10163,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `trendGroupSort` | java.util.List | [[cdk.support/lookup-entry]] | `:trend-group-sort` |
+| `trendGroupSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trend-group-sort` |
 "
   [^CfnAnalysis$KPISortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :trend-group-sort)]
@@ -10228,7 +10228,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `standardLayout` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIVisualStandardLayoutProperty | [[cdk.support/lookup-entry]] | `:standard-layout` |
+| `standardLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:standard-layout` |
 "
   [^CfnAnalysis$KPIVisualLayoutOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :standard-layout)]
@@ -10256,10 +10256,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `conditionalFormatting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
+| `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
@@ -10331,7 +10331,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
-| `fontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font-configuration` |
+| `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 "
   [^CfnAnalysis$LabelOptionsProperty$Builder builder id config]
@@ -10364,9 +10364,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeFormLayout` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FreeFormLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form-layout` |
+| `freeFormLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form-layout` |
 | `gridLayout` | software.amazon.awscdk.services.quicksight.CfnAnalysis$GridLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:grid-layout` |
-| `sectionBasedLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section-based-layout` |
+| `sectionBasedLayout` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionBasedLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:section-based-layout` |
 "
   [^CfnAnalysis$LayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :free-form-layout)]
@@ -10398,7 +10398,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 "
   [^CfnAnalysis$LayoutProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration)]
@@ -10466,10 +10466,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
 | `smallMultiples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$LineChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -10503,25 +10503,25 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `defaultSeriesSettings` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartDefaultSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:default-series-settings` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `forecastConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:forecast-configurations` |
-| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
-| `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineSeriesAxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
-| `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
+| `contributionAnalysisDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `defaultSeriesSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-series-settings` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `forecastConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast-configurations` |
+| `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
 | `secondaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineSeriesAxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
-| `secondaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
-| `series` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:series` |
-| `smallMultiplesOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
-| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `secondaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
+| `series` | java.util.List | [[cdk.support/lookup-entry]] | `:series` |
+| `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
+| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
-| `xAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
+| `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
 "
   [^CfnAnalysis$LineChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :contribution-analysis-defaults)]
@@ -10586,7 +10586,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
-| `lineStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-style-settings` |
+| `lineStyleSettings` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartLineStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:line-style-settings` |
 | `markerStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
 "
   [^CfnAnalysis$LineChartDefaultSeriesSettingsProperty$Builder builder id config]
@@ -10722,7 +10722,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `lineStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-style-settings` |
-| `markerStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
+| `markerStyleSettings` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartMarkerStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
 "
   [^CfnAnalysis$LineChartSeriesSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :line-style-settings)]
@@ -10754,9 +10754,9 @@
 |---|---|---|---|
 | `categoryItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit-configuration` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit-configuration` |
-| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
-| `smallMultiplesSort` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
+| `colorItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit-configuration` |
+| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
+| `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
   [^CfnAnalysis$LineChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit-configuration)]
@@ -10792,11 +10792,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$LineChartVisualProperty$Builder builder id config]
@@ -10835,7 +10835,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `axisOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:axis-options` |
+| `axisOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:axis-options` |
 | `missingDataConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:missing-data-configurations` |
 "
   [^CfnAnalysis$LineSeriesAxisDisplayOptionsProperty$Builder builder id config]
@@ -10866,10 +10866,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `searchOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ListControlSearchOptionsProperty | [[cdk.support/lookup-entry]] | `:search-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `searchOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:search-options` |
 | `selectAllOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ListControlSelectAllOptionsProperty | [[cdk.support/lookup-entry]] | `:select-all-options` |
-| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
+| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnAnalysis$ListControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :info-icon-label-options)]
@@ -11109,7 +11109,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `time` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnAnalysis$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAnalysis$MaximumMinimumComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -11147,7 +11147,7 @@
 |---|---|---|---|
 | `calculatedMeasureField` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CalculatedMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:calculated-measure-field` |
 | `categoricalMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:categorical-measure-field` |
-| `dateMeasureField` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:date-measure-field` |
+| `dateMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-measure-field` |
 | `numericalMeasureField` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericalMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:numerical-measure-field` |
 "
   [^CfnAnalysis$MeasureFieldProperty$Builder builder id config]
@@ -11183,7 +11183,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
-| `fromValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:from-value` |
+| `fromValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:from-value` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `targetValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-value` |
 | `time` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
@@ -11334,9 +11334,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decimalPlacesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
-| `negativeValueConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NegativeValueConfigurationProperty | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
-| `nullValueFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
+| `decimalPlacesConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DecimalPlacesConfigurationProperty | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
+| `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
+| `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `numberScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:number-scale` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `separatorConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericSeparatorConfigurationProperty | [[cdk.support/lookup-entry]] | `:separator-configuration` |
@@ -11409,7 +11409,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
-| `scale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scale` |
+| `scale` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisScaleProperty | [[cdk.support/lookup-entry]] | `:scale` |
 "
   [^CfnAnalysis$NumericAxisOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :range)]
@@ -11439,7 +11439,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAnalysis$NumericEqualityDrillDownFilterProperty$Builder builder id config]
@@ -11470,9 +11470,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `matchOperator` | java.lang.String | [[cdk.support/lookup-entry]] | `:match-operator` |
 | `nullOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:null-option` |
@@ -11556,15 +11556,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `includeMaximum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-maximum` |
 | `includeMinimum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-minimum` |
 | `nullOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:null-option` |
 | `rangeMaximum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-maximum` |
-| `rangeMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-minimum` |
+| `rangeMinimum` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericRangeFilterValueProperty | [[cdk.support/lookup-entry]] | `:range-minimum` |
 | `selectAllOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:select-all-options` |
 "
   [^CfnAnalysis$NumericRangeFilterProperty$Builder builder id config]
@@ -11704,9 +11704,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumberFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnAnalysis$NumericalDimensionFieldProperty$Builder builder id config]
@@ -11744,7 +11744,7 @@
 | `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericalAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumberFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnAnalysis$NumericalMeasureFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-function)]
@@ -11817,7 +11817,7 @@
 | `borderVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:border-visibility` |
 | `gutterSpacing` | java.lang.String | [[cdk.support/lookup-entry]] | `:gutter-spacing` |
 | `gutterVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:gutter-visibility` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PanelTitleOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnAnalysis$PanelConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -11897,10 +11897,10 @@
 |---|---|---|---|
 | `dateTimePicker` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParameterDateTimePickerControlProperty | [[cdk.support/lookup-entry]] | `:date-time-picker` |
 | `dropdown` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParameterDropDownControlProperty | [[cdk.support/lookup-entry]] | `:dropdown` |
-| `list` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:list` |
+| `list` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParameterListControlProperty | [[cdk.support/lookup-entry]] | `:list` |
 | `slider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slider` |
-| `textArea` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-area` |
-| `textField` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParameterTextFieldControlProperty | [[cdk.support/lookup-entry]] | `:text-field` |
+| `textArea` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParameterTextAreaControlProperty | [[cdk.support/lookup-entry]] | `:text-area` |
+| `textField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-field` |
 "
   [^CfnAnalysis$ParameterControlProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-picker)]
@@ -11976,8 +11976,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DateTimeParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:date-time-parameter-declaration` |
-| `decimalParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DecimalParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:decimal-parameter-declaration` |
-| `integerParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-parameter-declaration` |
+| `decimalParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-parameter-declaration` |
+| `integerParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$IntegerParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:integer-parameter-declaration` |
 | `stringParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-parameter-declaration` |
 "
   [^CfnAnalysis$ParameterDeclarationProperty$Builder builder id config]
@@ -12012,10 +12012,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
-| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DropDownControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
-| `selectableValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectable-values` |
+| `selectableValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParameterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -12104,7 +12104,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `linkToDataSetColumn` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:link-to-data-set-column` |
+| `linkToDataSetColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:link-to-data-set-column` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$ParameterSelectableValuesProperty$Builder builder id config]
@@ -12135,7 +12135,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SliderControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `maximumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-value` |
 | `minimumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-value` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
@@ -12182,7 +12182,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `delimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:delimiter` |
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TextAreaControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -12330,7 +12330,7 @@
 | `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
 | `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `separatorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:separator-configuration` |
+| `separatorConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$NumericSeparatorConfigurationProperty | [[cdk.support/lookup-entry]] | `:separator-configuration` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnAnalysis$PercentageDisplayFormatConfigurationProperty$Builder builder id config]
@@ -12437,8 +12437,8 @@
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `periodTimeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:period-time-granularity` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnAnalysis$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAnalysis$PeriodToDateComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -12508,17 +12508,17 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `contributionAnalysisDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `donutOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:donut-options` |
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PieChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `donutOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DonutOptionsProperty | [[cdk.support/lookup-entry]] | `:donut-options` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
-| `smallMultiplesOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
+| `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PieChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `valueLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:value-label-options` |
-| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnAnalysis$PieChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-label-options)]
@@ -12566,7 +12566,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pieChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PieChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:pie-chart-aggregated-field-wells` |
+| `pieChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pie-chart-aggregated-field-wells` |
 "
   [^CfnAnalysis$PieChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pie-chart-aggregated-field-wells)]
@@ -12595,9 +12595,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
-| `smallMultiplesSort` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
+| `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
   [^CfnAnalysis$PieChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit)]
@@ -12707,7 +12707,7 @@
 |---|---|---|---|
 | `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
 | `rows` | java.util.List | [[cdk.support/lookup-entry]] | `:rows` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$PivotTableAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :columns)]
@@ -12740,7 +12740,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `scope` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope` |
+| `scope` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableConditionalFormattingScopeProperty | [[cdk.support/lookup-entry]] | `:scope` |
 | `scopes` | java.util.List | [[cdk.support/lookup-entry]] | `:scopes` |
 | `textFormat` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TextConditionalFormatProperty | [[cdk.support/lookup-entry]] | `:text-format` |
 "
@@ -12804,7 +12804,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnAnalysis$PivotTableConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -12863,7 +12863,7 @@
 | `fieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `paginatedReportOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTablePaginatedReportOptionsProperty | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
-| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tableOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableOptionsProperty | [[cdk.support/lookup-entry]] | `:table-options` |
 | `totalOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableTotalOptionsProperty | [[cdk.support/lookup-entry]] | `:total-options` |
 "
@@ -12935,7 +12935,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `target` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target` |
+| `target` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableFieldCollapseStateTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnAnalysis$PivotTableFieldCollapseStateOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :state)]
@@ -12965,7 +12965,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldDataPathValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-data-path-values` |
+| `fieldDataPathValues` | java.util.List | [[cdk.support/lookup-entry]] | `:field-data-path-values` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 "
   [^CfnAnalysis$PivotTableFieldCollapseStateTargetProperty$Builder builder id config]
@@ -13092,7 +13092,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pivotTableAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:pivot-table-aggregated-field-wells` |
+| `pivotTableAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pivot-table-aggregated-field-wells` |
 "
   [^CfnAnalysis$PivotTableFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pivot-table-aggregated-field-wells)]
@@ -13126,8 +13126,8 @@
 | `columnNamesVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-names-visibility` |
 | `defaultCellWidth` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-cell-width` |
 | `metricPlacement` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-placement` |
-| `rowAlternateColorOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RowAlternateColorOptionsProperty | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
-| `rowFieldNamesStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:row-field-names-style` |
+| `rowAlternateColorOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
+| `rowFieldNamesStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-field-names-style` |
 | `rowHeaderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-header-style` |
 | `rowsLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rows-label-options` |
 | `rowsLayout` | java.lang.String | [[cdk.support/lookup-entry]] | `:rows-layout` |
@@ -13248,7 +13248,7 @@
 |---|---|---|---|
 | `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `dataPath` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataPathSortProperty | [[cdk.support/lookup-entry]] | `:data-path` |
-| `field` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FieldSortProperty | [[cdk.support/lookup-entry]] | `:field` |
+| `field` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field` |
 "
   [^CfnAnalysis$PivotTableSortByProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column)]
@@ -13308,7 +13308,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnSubtotalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-subtotal-options` |
+| `columnSubtotalOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SubtotalOptionsProperty | [[cdk.support/lookup-entry]] | `:column-subtotal-options` |
 | `columnTotalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-total-options` |
 | `rowSubtotalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-subtotal-options` |
 | `rowTotalOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTotalOptionsProperty | [[cdk.support/lookup-entry]] | `:row-total-options` |
@@ -13346,8 +13346,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `conditionalFormatting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
@@ -13392,8 +13392,8 @@
 | `metricHeaderCellStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:metric-header-cell-style` |
 | `placement` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement` |
 | `scrollStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:scroll-status` |
-| `totalAggregationOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:total-aggregation-options` |
-| `totalCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-cell-style` |
+| `totalAggregationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-aggregation-options` |
+| `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
 | `valueCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-cell-style` |
 "
@@ -13501,17 +13501,17 @@
 |---|---|---|---|
 | `analysisId` | java.lang.String | [[cdk.support/lookup-entry]] | `:analysis-id` |
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
-| `definition` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AnalysisDefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
 | `errors` | java.util.List | [[cdk.support/lookup-entry]] | `:errors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ParametersProperty | [[cdk.support/lookup-entry]] | `:parameters` |
 | `permissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions` |
 | `sheets` | java.util.List | [[cdk.support/lookup-entry]] | `:sheets` |
-| `sourceEntity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-entity` |
+| `sourceEntity` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AnalysisSourceEntityProperty | [[cdk.support/lookup-entry]] | `:source-entity` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `themeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:theme-arn` |
-| `validationStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-strategy` |
+| `validationStrategy` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ValidationStrategyProperty | [[cdk.support/lookup-entry]] | `:validation-strategy` |
 "
   [^CfnAnalysisProps$Builder builder id config]
   (when-some [data (lookup-entry config id :analysis-id)]
@@ -13563,9 +13563,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `color` | java.util.List | [[cdk.support/lookup-entry]] | `:color` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$RadarChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -13630,16 +13630,16 @@
 | `alternateBandOddColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:alternate-band-odd-color` |
 | `axesRangeScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:axes-range-scale` |
 | `baseSeriesSettings` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RadarChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:base-series-settings` |
-| `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
-| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
+| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `colorAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-axis` |
-| `colorLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-label-options` |
+| `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `shape` | java.lang.String | [[cdk.support/lookup-entry]] | `:shape` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `startAngle` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-angle` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnAnalysis$RadarChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :alternate-band-colors-visibility)]
@@ -13723,7 +13723,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `areaStyleSettings` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RadarChartAreaStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:area-style-settings` |
+| `areaStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:area-style-settings` |
 "
   [^CfnAnalysis$RadarChartSeriesSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :area-style-settings)]
@@ -13751,9 +13751,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `colorItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit` |
 | `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
 "
   [^CfnAnalysis$RadarChartSortConfigurationProperty$Builder builder id config]
@@ -13789,10 +13789,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RadarChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$RadarChartVisualProperty$Builder builder id config]
@@ -13888,7 +13888,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
-| `dynamicConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-configuration` |
+| `dynamicConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ReferenceLineDynamicDataConfigurationProperty | [[cdk.support/lookup-entry]] | `:dynamic-configuration` |
 | `seriesType` | java.lang.String | [[cdk.support/lookup-entry]] | `:series-type` |
 | `staticConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ReferenceLineStaticDataConfigurationProperty | [[cdk.support/lookup-entry]] | `:static-configuration` |
 "
@@ -14001,8 +14001,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ReferenceLineDataConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-configuration` |
-| `labelConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ReferenceLineLabelConfigurationProperty | [[cdk.support/lookup-entry]] | `:label-configuration` |
+| `dataConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-configuration` |
+| `labelConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-configuration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `styleConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ReferenceLineStyleConfigurationProperty | [[cdk.support/lookup-entry]] | `:style-configuration` |
 "
@@ -14129,8 +14129,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
-| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnAnalysis$RelativeDateTimeControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format)]
@@ -14163,9 +14163,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `anchorDateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anchor-date-configuration` |
-| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
-| `excludePeriodConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ExcludePeriodConfigurationProperty | [[cdk.support/lookup-entry]] | `:exclude-period-configuration` |
+| `excludePeriodConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-period-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `minimumGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:minimum-granularity` |
 | `nullOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:null-option` |
@@ -14351,8 +14351,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destination` | java.util.List | [[cdk.support/lookup-entry]] | `:destination` |
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
-| `weight` | java.util.List | [[cdk.support/lookup-entry]] | `:weight` |
+| `source` | java.util.List | [[cdk.support/lookup-entry]] | `:source` |
+| `weight` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnAnalysis$SankeyDiagramAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination)]
@@ -14386,7 +14386,7 @@
 |---|---|---|---|
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SankeyDiagramFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SankeyDiagramSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 "
   [^CfnAnalysis$SankeyDiagramChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-labels)]
@@ -14418,7 +14418,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sankeyDiagramAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SankeyDiagramAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:sankey-diagram-aggregated-field-wells` |
+| `sankeyDiagramAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sankey-diagram-aggregated-field-wells` |
 "
   [^CfnAnalysis$SankeyDiagramFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sankey-diagram-aggregated-field-wells)]
@@ -14446,9 +14446,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:destination-items-limit` |
+| `destinationItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-items-limit` |
 | `sourceItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-items-limit` |
-| `weightSort` | java.util.List | [[cdk.support/lookup-entry]] | `:weight-sort` |
+| `weightSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weight-sort` |
 "
   [^CfnAnalysis$SankeyDiagramSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination-items-limit)]
@@ -14480,10 +14480,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SankeyDiagramChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$SankeyDiagramVisualProperty$Builder builder id config]
@@ -14520,11 +14520,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `label` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label` |
-| `size` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size` |
-| `xAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis` |
-| `yAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis` |
+| `size` | java.util.List | [[cdk.support/lookup-entry]] | `:size` |
+| `xAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:x-axis` |
+| `yAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:y-axis` |
 "
   [^CfnAnalysis$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -14561,14 +14561,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataLabels` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ScatterPlotFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
-| `xAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
-| `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
+| `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
+| `xAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
 | `yAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
-| `yAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:y-axis-label-options` |
+| `yAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis-label-options` |
 "
   [^CfnAnalysis$ScatterPlotConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-labels)]
@@ -14613,7 +14613,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `scatterPlotCategoricallyAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scatter-plot-categorically-aggregated-field-wells` |
-| `scatterPlotUnaggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scatter-plot-unaggregated-field-wells` |
+| `scatterPlotUnaggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ScatterPlotUnaggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-unaggregated-field-wells` |
 "
   [^CfnAnalysis$ScatterPlotFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :scatter-plot-categorically-aggregated-field-wells)]
@@ -14643,7 +14643,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `label` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label` |
 | `size` | java.util.List | [[cdk.support/lookup-entry]] | `:size` |
 | `xAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:x-axis` |
@@ -14683,11 +14683,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ScatterPlotConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$ScatterPlotVisualProperty$Builder builder id config]
@@ -14813,7 +14813,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `paperCanvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionBasedLayoutPaperCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:paper-canvas-size-options` |
+| `paperCanvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paper-canvas-size-options` |
 "
   [^CfnAnalysis$SectionBasedLayoutCanvasSizeOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :paper-canvas-size-options)]
@@ -14841,10 +14841,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bodySections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-sections` |
+| `bodySections` | java.util.List | [[cdk.support/lookup-entry]] | `:body-sections` |
 | `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
-| `footerSections` | java.util.List | [[cdk.support/lookup-entry]] | `:footer-sections` |
-| `headerSections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-sections` |
+| `footerSections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:footer-sections` |
+| `headerSections` | java.util.List | [[cdk.support/lookup-entry]] | `:header-sections` |
 "
   [^CfnAnalysis$SectionBasedLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :body-sections)]
@@ -14878,7 +14878,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `paperMargin` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SpacingProperty | [[cdk.support/lookup-entry]] | `:paper-margin` |
+| `paperMargin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paper-margin` |
 | `paperOrientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:paper-orientation` |
 | `paperSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:paper-size` |
 "
@@ -14940,7 +14940,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `after` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:after` |
+| `after` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SectionAfterPageBreakProperty | [[cdk.support/lookup-entry]] | `:after` |
 "
   [^CfnAnalysis$SectionPageBreakConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :after)]
@@ -14969,7 +14969,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `height` | java.lang.String | [[cdk.support/lookup-entry]] | `:height` |
-| `padding` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SpacingProperty | [[cdk.support/lookup-entry]] | `:padding` |
+| `padding` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:padding` |
 "
   [^CfnAnalysis$SectionStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :height)]
@@ -14999,7 +14999,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sheetVisualScopingConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:sheet-visual-scoping-configurations` |
+| `sheetVisualScopingConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sheet-visual-scoping-configurations` |
 "
   [^CfnAnalysis$SelectedSheetsFilterScopeConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sheet-visual-scoping-configurations)]
@@ -15028,7 +15028,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataFieldSeriesItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-field-series-item` |
-| `fieldSeriesItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-series-item` |
+| `fieldSeriesItem` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FieldSeriesItemProperty | [[cdk.support/lookup-entry]] | `:field-series-item` |
 "
   [^CfnAnalysis$SeriesItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-field-series-item)]
@@ -15089,7 +15089,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backgroundColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:background-color` |
+| `backgroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-color` |
 "
   [^CfnAnalysis$ShapeConditionalFormatProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -15206,10 +15206,10 @@
 |---|---|---|---|
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `filterControls` | java.util.List | [[cdk.support/lookup-entry]] | `:filter-controls` |
-| `layouts` | java.util.List | [[cdk.support/lookup-entry]] | `:layouts` |
+| `filterControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-controls` |
+| `layouts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layouts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameterControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-controls` |
+| `parameterControls` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-controls` |
 | `sheetControlLayouts` | java.util.List | [[cdk.support/lookup-entry]] | `:sheet-control-layouts` |
 | `sheetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:sheet-id` |
 | `textBoxes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-boxes` |
@@ -15476,7 +15476,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
 | `titleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnAnalysis$SliderControlDisplayOptionsProperty$Builder builder id config]
@@ -15615,7 +15615,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
+| `dynamicValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DynamicDefaultValueProperty | [[cdk.support/lookup-entry]] | `:dynamic-value` |
 | `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnAnalysis$StringDefaultValuesProperty$Builder builder id config]
@@ -15678,7 +15678,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultValues` | software.amazon.awscdk.services.quicksight.CfnAnalysis$StringDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
-| `mappedDataSetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
+| `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
 | `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnAnalysis$StringValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
@@ -15783,10 +15783,10 @@
 | `fieldLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-level` |
 | `fieldLevelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-level-options` |
 | `metricHeaderCellStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:metric-header-cell-style` |
-| `styleTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style-targets` |
+| `styleTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:style-targets` |
 | `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
-| `valueCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-cell-style` |
+| `valueCellStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:value-cell-style` |
 "
   [^CfnAnalysis$SubtotalOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-label)]
@@ -15894,7 +15894,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `textFormat` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TextConditionalFormatProperty | [[cdk.support/lookup-entry]] | `:text-format` |
+| `textFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-format` |
 "
   [^CfnAnalysis$TableCellConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-id)]
@@ -16001,7 +16001,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cell` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cell` |
+| `cell` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:cell` |
 | `row` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row` |
 "
   [^CfnAnalysis$TableConditionalFormattingOptionProperty$Builder builder id config]
@@ -16060,12 +16060,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableFieldOptionsProperty | [[cdk.support/lookup-entry]] | `:field-options` |
+| `fieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `paginatedReportOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TablePaginatedReportOptionsProperty | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tableInlineVisualizations` | java.util.List | [[cdk.support/lookup-entry]] | `:table-inline-visualizations` |
-| `tableOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-options` |
+| `tableOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableOptionsProperty | [[cdk.support/lookup-entry]] | `:table-options` |
 | `totalOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TotalOptionsProperty | [[cdk.support/lookup-entry]] | `:total-options` |
 "
   [^CfnAnalysis$TableConfigurationProperty$Builder builder id config]
@@ -16165,7 +16165,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sizingOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellImageSizingConfigurationProperty | [[cdk.support/lookup-entry]] | `:sizing-options` |
+| `sizingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sizing-options` |
 "
   [^CfnAnalysis$TableFieldImageConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sizing-options)]
@@ -16193,7 +16193,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `content` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableFieldLinkContentConfigurationProperty | [[cdk.support/lookup-entry]] | `:content` |
+| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnAnalysis$TableFieldLinkConfigurationProperty$Builder builder id config]
@@ -16225,7 +16225,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customIconContent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-icon-content` |
-| `customTextContent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-text-content` |
+| `customTextContent` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableFieldCustomTextContentProperty | [[cdk.support/lookup-entry]] | `:custom-text-content` |
 "
   [^CfnAnalysis$TableFieldLinkContentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-icon-content)]
@@ -16257,7 +16257,7 @@
 |---|---|---|---|
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `urlStyling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:url-styling` |
+| `urlStyling` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableFieldURLConfigurationProperty | [[cdk.support/lookup-entry]] | `:url-styling` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 | `width` | java.lang.String | [[cdk.support/lookup-entry]] | `:width` |
 "
@@ -16360,8 +16360,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tableAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:table-aggregated-field-wells` |
-| `tableUnaggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-unaggregated-field-wells` |
+| `tableAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-aggregated-field-wells` |
+| `tableUnaggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableUnaggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:table-unaggregated-field-wells` |
 "
   [^CfnAnalysis$TableFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :table-aggregated-field-wells)]
@@ -16391,7 +16391,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataBars` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DataBarsOptionsProperty | [[cdk.support/lookup-entry]] | `:data-bars` |
+| `dataBars` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-bars` |
 "
   [^CfnAnalysis$TableInlineVisualizationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-bars)]
@@ -16419,7 +16419,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cellStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:cell-style` |
+| `cellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cell-style` |
 | `headerStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-style` |
 | `orientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:orientation` |
 | `rowAlternateColorOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
@@ -16550,7 +16550,7 @@
 | `innerHorizontal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inner-horizontal` |
 | `innerVertical` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:inner-vertical` |
 | `left` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:left` |
-| `right` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:right` |
+| `right` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:right` |
 | `top` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top` |
 "
   [^CfnAnalysis$TableSideBorderOptionsProperty$Builder builder id config]
@@ -16648,7 +16648,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$TableUnaggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :values)]
@@ -16680,7 +16680,7 @@
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$TableVisualProperty$Builder builder id config]
@@ -16753,9 +16753,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backgroundColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:background-color` |
-| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
+| `backgroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-color` |
+| `icon` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
+| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnAnalysis$TextConditionalFormatProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -16815,9 +16815,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `placeholderOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placeholder-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `placeholderOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TextControlPlaceholderOptionsProperty | [[cdk.support/lookup-entry]] | `:placeholder-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnAnalysis$TextFieldControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :info-icon-label-options)]
@@ -16923,11 +16923,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `parameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-name` |
-| `rollingDate` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RollingDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:rolling-date` |
+| `rollingDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rolling-date` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -16969,7 +16969,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `rangeMaximum` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-maximum` |
 | `rangeMinimum` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-minimum` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
@@ -17013,7 +17013,7 @@
 | `includeMaximum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-maximum` |
 | `includeMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-minimum` |
 | `nullOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:null-option` |
-| `rangeMaximumValue` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TimeRangeFilterValueProperty | [[cdk.support/lookup-entry]] | `:range-maximum-value` |
+| `rangeMaximumValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-maximum-value` |
 | `rangeMinimumValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-minimum-value` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 "
@@ -17095,8 +17095,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnTooltipItem` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnTooltipItemProperty | [[cdk.support/lookup-entry]] | `:column-tooltip-item` |
-| `fieldTooltipItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-tooltip-item` |
+| `columnTooltipItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-tooltip-item` |
+| `fieldTooltipItem` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FieldTooltipItemProperty | [[cdk.support/lookup-entry]] | `:field-tooltip-item` |
 "
   [^CfnAnalysis$TooltipItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column-tooltip-item)]
@@ -17126,7 +17126,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldBasedTooltip` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FieldBasedTooltipProperty | [[cdk.support/lookup-entry]] | `:field-based-tooltip` |
+| `fieldBasedTooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-based-tooltip` |
 | `selectedTooltipType` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-tooltip-type` |
 | `tooltipVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:tooltip-visibility` |
 "
@@ -17160,7 +17160,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationSortConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-sort-configurations` |
+| `aggregationSortConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:aggregation-sort-configurations` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
@@ -17206,7 +17206,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `moverSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:mover-size` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -17255,7 +17255,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.services.quicksight.CfnAnalysis$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resultSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:result-size` |
@@ -17395,7 +17395,7 @@
 | `placement` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement` |
 | `scrollStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:scroll-status` |
 | `totalAggregationOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:total-aggregation-options` |
-| `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
+| `totalCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
 "
   [^CfnAnalysis$TotalOptionsProperty$Builder builder id config]
@@ -17434,7 +17434,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
+| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
 | `sizes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sizes` |
 "
@@ -17469,13 +17469,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
-| `colorScale` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ColorScaleProperty | [[cdk.support/lookup-entry]] | `:color-scale` |
+| `colorScale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-scale` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TreeMapFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `groupLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-label-options` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `groupLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:group-label-options` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `sizeLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size-label-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TreeMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sizeLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:size-label-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 "
   [^CfnAnalysis$TreeMapConfigurationProperty$Builder builder id config]
@@ -17548,7 +17548,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `treeMapGroupItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tree-map-group-items-limit-configuration` |
+| `treeMapGroupItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:tree-map-group-items-limit-configuration` |
 | `treeMapSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tree-map-sort` |
 "
   [^CfnAnalysis$TreeMapSortConfigurationProperty$Builder builder id config]
@@ -17580,10 +17580,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TreeMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnAnalysis$TreeMapVisualProperty$Builder builder id config]
@@ -17652,7 +17652,7 @@
 |---|---|---|---|
 | `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnAnalysis$UnaggregatedFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column)]
@@ -17774,10 +17774,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filterOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-operation` |
+| `filterOperation` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomActionFilterOperationProperty | [[cdk.support/lookup-entry]] | `:filter-operation` |
 | `navigationOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:navigation-operation` |
-| `setParametersOperation` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomActionSetParametersOperationProperty | [[cdk.support/lookup-entry]] | `:set-parameters-operation` |
-| `urlOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:url-operation` |
+| `setParametersOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:set-parameters-operation` |
+| `urlOperation` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomActionURLOperationProperty | [[cdk.support/lookup-entry]] | `:url-operation` |
 "
   [^CfnAnalysis$VisualCustomActionOperationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :filter-operation)]
@@ -17811,7 +17811,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionOperations` | java.util.List | [[cdk.support/lookup-entry]] | `:action-operations` |
+| `actionOperations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-operations` |
 | `customActionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-action-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
@@ -17885,26 +17885,26 @@
 | `barChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bar-chart-visual` |
 | `boxPlotVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:box-plot-visual` |
 | `comboChartVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ComboChartVisualProperty | [[cdk.support/lookup-entry]] | `:combo-chart-visual` |
-| `customContentVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-content-visual` |
-| `emptyVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$EmptyVisualProperty | [[cdk.support/lookup-entry]] | `:empty-visual` |
-| `filledMapVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FilledMapVisualProperty | [[cdk.support/lookup-entry]] | `:filled-map-visual` |
+| `customContentVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$CustomContentVisualProperty | [[cdk.support/lookup-entry]] | `:custom-content-visual` |
+| `emptyVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:empty-visual` |
+| `filledMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filled-map-visual` |
 | `funnelChartVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$FunnelChartVisualProperty | [[cdk.support/lookup-entry]] | `:funnel-chart-visual` |
 | `gaugeChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gauge-chart-visual` |
 | `geospatialMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial-map-visual` |
 | `heatMapVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$HeatMapVisualProperty | [[cdk.support/lookup-entry]] | `:heat-map-visual` |
 | `histogramVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:histogram-visual` |
-| `insightVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insight-visual` |
-| `kpiVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kpi-visual` |
+| `insightVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$InsightVisualProperty | [[cdk.support/lookup-entry]] | `:insight-visual` |
+| `kpiVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$KPIVisualProperty | [[cdk.support/lookup-entry]] | `:kpi-visual` |
 | `lineChartVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LineChartVisualProperty | [[cdk.support/lookup-entry]] | `:line-chart-visual` |
 | `pieChartVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PieChartVisualProperty | [[cdk.support/lookup-entry]] | `:pie-chart-visual` |
-| `pivotTableVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pivot-table-visual` |
+| `pivotTableVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$PivotTableVisualProperty | [[cdk.support/lookup-entry]] | `:pivot-table-visual` |
 | `radarChartVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$RadarChartVisualProperty | [[cdk.support/lookup-entry]] | `:radar-chart-visual` |
-| `sankeyDiagramVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sankey-diagram-visual` |
-| `scatterPlotVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scatter-plot-visual` |
-| `tableVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-visual` |
+| `sankeyDiagramVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$SankeyDiagramVisualProperty | [[cdk.support/lookup-entry]] | `:sankey-diagram-visual` |
+| `scatterPlotVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ScatterPlotVisualProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-visual` |
+| `tableVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TableVisualProperty | [[cdk.support/lookup-entry]] | `:table-visual` |
 | `treeMapVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$TreeMapVisualProperty | [[cdk.support/lookup-entry]] | `:tree-map-visual` |
-| `waterfallVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:waterfall-visual` |
-| `wordCloudVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:word-cloud-visual` |
+| `waterfallVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WaterfallVisualProperty | [[cdk.support/lookup-entry]] | `:waterfall-visual` |
+| `wordCloudVisual` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WordCloudVisualProperty | [[cdk.support/lookup-entry]] | `:word-cloud-visual` |
 "
   [^CfnAnalysis$VisualProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bar-chart-visual)]
@@ -17976,7 +17976,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `formatText` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-text` |
+| `formatText` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LongFormatTextProperty | [[cdk.support/lookup-entry]] | `:format-text` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 "
   [^CfnAnalysis$VisualSubtitleLabelOptionsProperty$Builder builder id config]
@@ -18040,7 +18040,7 @@
 |---|---|---|---|
 | `breakdowns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:breakdowns` |
 | `categories` | java.util.List | [[cdk.support/lookup-entry]] | `:categories` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnAnalysis$WaterfallChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :breakdowns)]
@@ -18072,7 +18072,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `groupColorConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WaterfallChartGroupColorConfigurationProperty | [[cdk.support/lookup-entry]] | `:group-color-configuration` |
+| `groupColorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-color-configuration` |
 "
   [^CfnAnalysis$WaterfallChartColorConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :group-color-configuration)]
@@ -18100,17 +18100,17 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis-display-options` |
-| `categoryAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis-label-options` |
+| `categoryAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis-display-options` |
+| `categoryAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis-label-options` |
 | `colorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-configuration` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WaterfallChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnAnalysis$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
-| `waterfallChartOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WaterfallChartOptionsProperty | [[cdk.support/lookup-entry]] | `:waterfall-chart-options` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `waterfallChartOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:waterfall-chart-options` |
 "
   [^CfnAnalysis$WaterfallChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-axis-display-options)]
@@ -18248,8 +18248,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `breakdownItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:breakdown-items-limit` |
-| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `breakdownItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:breakdown-items-limit` |
+| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnAnalysis$WaterfallChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :breakdown-items-limit)]
@@ -18279,10 +18279,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WaterfallChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -18387,8 +18387,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `groupBy` | java.util.List | [[cdk.support/lookup-entry]] | `:group-by` |
-| `size` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size` |
+| `groupBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-by` |
+| `size` | java.util.List | [[cdk.support/lookup-entry]] | `:size` |
 "
   [^CfnAnalysis$WordCloudAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :group-by)]
@@ -18419,8 +18419,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WordCloudSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WordCloudFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `wordCloudOptions` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WordCloudOptionsProperty | [[cdk.support/lookup-entry]] | `:word-cloud-options` |
 "
   [^CfnAnalysis$WordCloudChartConfigurationProperty$Builder builder id config]
@@ -18526,7 +18526,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnAnalysis$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnAnalysis$WordCloudSortConfigurationProperty$Builder builder id config]
@@ -18557,8 +18557,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnAnalysis$WordCloudChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnAnalysis$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
@@ -18665,8 +18665,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnDashboard$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `sortDirection` | java.lang.String | [[cdk.support/lookup-entry]] | `:sort-direction` |
 "
   [^CfnDashboard$AggregationSortConfigurationProperty$Builder builder id config]
@@ -18699,7 +18699,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultNewSheetConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultNewSheetConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-new-sheet-configuration` |
+| `defaultNewSheetConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-new-sheet-configuration` |
 "
   [^CfnDashboard$AnalysisDefaultsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-new-sheet-configuration)]
@@ -18758,7 +18758,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
+| `range` | software.amazon.awscdk.services.quicksight.CfnDashboard$ArcAxisDisplayRangeProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `reserveRange` | java.lang.Number | [[cdk.support/lookup-entry]] | `:reserve-range` |
 "
   [^CfnDashboard$ArcAxisConfigurationProperty$Builder builder id config]
@@ -19079,7 +19079,7 @@
 |---|---|---|---|
 | `applyTo` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisLabelReferenceOptionsProperty | [[cdk.support/lookup-entry]] | `:apply-to` |
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
-| `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
+| `fontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font-configuration` |
 "
   [^CfnDashboard$AxisLabelOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :apply-to)]
@@ -19232,7 +19232,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `labelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-options` |
+| `labelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:label-options` |
 | `rotationAngle` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rotation-angle` |
 "
   [^CfnDashboard$AxisTickLabelOptionsProperty$Builder builder id config]
@@ -19263,9 +19263,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `smallMultiples` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples` |
+| `smallMultiples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$BarChartAggregatedFieldWellsProperty$Builder builder id config]
@@ -19301,21 +19301,21 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `barsArrangement` | java.lang.String | [[cdk.support/lookup-entry]] | `:bars-arrangement` |
-| `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
+| `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
 | `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
-| `contributionAnalysisDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
+| `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$BarChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `orientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:orientation` |
 | `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
+| `smallMultiplesOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `valueAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-axis` |
 | `valueLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-label-options` |
-| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnDashboard$BarChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bars-arrangement)]
@@ -19401,12 +19401,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit` |
-| `colorSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-sort` |
-| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
-| `smallMultiplesSort` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
+| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `colorItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit` |
+| `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
+| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
+| `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
   [^CfnDashboard$BarChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit)]
@@ -19445,9 +19445,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$BarChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -19549,7 +19549,7 @@
 | `content` | software.amazon.awscdk.services.quicksight.CfnDashboard$BodySectionContentProperty | [[cdk.support/lookup-entry]] | `:content` |
 | `pageBreakConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$SectionPageBreakConfigurationProperty | [[cdk.support/lookup-entry]] | `:page-break-configuration` |
 | `sectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:section-id` |
-| `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
+| `style` | software.amazon.awscdk.services.quicksight.CfnDashboard$SectionStyleProperty | [[cdk.support/lookup-entry]] | `:style` |
 "
   [^CfnDashboard$BodySectionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :content)]
@@ -19611,7 +19611,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `groupBy` | java.util.List | [[cdk.support/lookup-entry]] | `:group-by` |
+| `groupBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-by` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$BoxPlotAggregatedFieldWellsProperty$Builder builder id config]
@@ -19644,14 +19644,14 @@
 |---|---|---|---|
 | `boxPlotOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$BoxPlotOptionsProperty | [[cdk.support/lookup-entry]] | `:box-plot-options` |
 | `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
-| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
-| `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
+| `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
+| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$BoxPlotSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnDashboard$BoxPlotChartConfigurationProperty$Builder builder id config]
@@ -19700,7 +19700,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `boxPlotAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$BoxPlotAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:box-plot-aggregated-field-wells` |
+| `boxPlotAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:box-plot-aggregated-field-wells` |
 "
   [^CfnDashboard$BoxPlotFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :box-plot-aggregated-field-wells)]
@@ -19763,7 +19763,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `paginationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
+| `paginationConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$PaginationConfigurationProperty | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
 "
   [^CfnDashboard$BoxPlotSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-sort)]
@@ -19825,7 +19825,7 @@
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$BoxPlotChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$BoxPlotVisualProperty$Builder builder id config]
@@ -19876,7 +19876,7 @@
 | `sourceEntity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-entity` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `themeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:theme-arn` |
-| `validationStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-strategy` |
+| `validationStrategy` | software.amazon.awscdk.services.quicksight.CfnDashboard$ValidationStrategyProperty | [[cdk.support/lookup-entry]] | `:validation-strategy` |
 | `versionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-description` |
 "
   [^CfnDashboard$Builder builder id config]
@@ -20055,9 +20055,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$StringFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnDashboard$CategoricalDimensionFieldProperty$Builder builder id config]
@@ -20160,9 +20160,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customFilterConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomFilterConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-filter-configuration` |
+| `customFilterConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-filter-configuration` |
 | `customFilterListConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomFilterListConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-filter-list-configuration` |
-| `filterListConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-list-configuration` |
+| `filterListConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterListConfigurationProperty | [[cdk.support/lookup-entry]] | `:filter-list-configuration` |
 "
   [^CfnDashboard$CategoryFilterConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-filter-configuration)]
@@ -20194,9 +20194,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
-| `configuration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CategoryFilterConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 "
   [^CfnDashboard$CategoryFilterProperty$Builder builder id config]
@@ -20231,7 +20231,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `axisLabelOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:axis-label-options` |
+| `axisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:axis-label-options` |
 | `sortIconVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:sort-icon-visibility` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 "
@@ -20293,7 +20293,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `simpleClusterMarker` | software.amazon.awscdk.services.quicksight.CfnDashboard$SimpleClusterMarkerProperty | [[cdk.support/lookup-entry]] | `:simple-cluster-marker` |
+| `simpleClusterMarker` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:simple-cluster-marker` |
 "
   [^CfnDashboard$ClusterMarkerProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :simple-cluster-marker)]
@@ -20323,7 +20323,7 @@
 |---|---|---|---|
 | `colorFillType` | java.lang.String | [[cdk.support/lookup-entry]] | `:color-fill-type` |
 | `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `nullValueColor` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataColorProperty | [[cdk.support/lookup-entry]] | `:null-value-color` |
+| `nullValueColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-color` |
 "
   [^CfnDashboard$ColorScaleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color-fill-type)]
@@ -20420,7 +20420,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimeHierarchy` | software.amazon.awscdk.services.quicksight.CfnDashboard$DateTimeHierarchyProperty | [[cdk.support/lookup-entry]] | `:date-time-hierarchy` |
+| `dateTimeHierarchy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-hierarchy` |
 | `explicitHierarchy` | software.amazon.awscdk.services.quicksight.CfnDashboard$ExplicitHierarchyProperty | [[cdk.support/lookup-entry]] | `:explicit-hierarchy` |
 | `predefinedHierarchy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-hierarchy` |
 "
@@ -20485,7 +20485,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnDashboard$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `direction` | java.lang.String | [[cdk.support/lookup-entry]] | `:direction` |
 | `sortBy` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:sort-by` |
 "
@@ -20520,7 +20520,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregation` | software.amazon.awscdk.services.quicksight.CfnDashboard$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation` |
-| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 "
@@ -20556,10 +20556,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `barValues` | java.util.List | [[cdk.support/lookup-entry]] | `:bar-values` |
-| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
+| `barValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bar-values` |
+| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
 | `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
-| `lineValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-values` |
+| `lineValues` | java.util.List | [[cdk.support/lookup-entry]] | `:line-values` |
 "
   [^CfnDashboard$ComboChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bar-values)]
@@ -20593,22 +20593,22 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `barDataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bar-data-labels` |
+| `barDataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:bar-data-labels` |
 | `barsArrangement` | java.lang.String | [[cdk.support/lookup-entry]] | `:bars-arrangement` |
 | `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
 | `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `colorLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-label-options` |
+| `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$ComboChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `lineDataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-data-labels` |
 | `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
 | `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
-| `secondaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ComboChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
+| `secondaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnDashboard$ComboChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bar-data-labels)]
@@ -20695,9 +20695,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit` |
-| `colorSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-sort` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `colorItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit` |
+| `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
 "
   [^CfnDashboard$ComboChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit)]
@@ -20731,10 +20731,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ComboChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -20774,7 +20774,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `comparisonFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison-format` |
+| `comparisonFormat` | software.amazon.awscdk.services.quicksight.CfnDashboard$ComparisonFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison-format` |
 | `comparisonMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:comparison-method` |
 "
   [^CfnDashboard$ComparisonConfigurationProperty$Builder builder id config]
@@ -20805,8 +20805,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `numberDisplayFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumberDisplayFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:number-display-format-configuration` |
-| `percentageDisplayFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:percentage-display-format-configuration` |
+| `numberDisplayFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:number-display-format-configuration` |
+| `percentageDisplayFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$PercentageDisplayFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:percentage-display-format-configuration` |
 "
   [^CfnDashboard$ComparisonFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :number-display-format-configuration)]
@@ -20836,16 +20836,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `forecast` | software.amazon.awscdk.services.quicksight.CfnDashboard$ForecastComputationProperty | [[cdk.support/lookup-entry]] | `:forecast` |
-| `growthRate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:growth-rate` |
+| `forecast` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast` |
+| `growthRate` | software.amazon.awscdk.services.quicksight.CfnDashboard$GrowthRateComputationProperty | [[cdk.support/lookup-entry]] | `:growth-rate` |
 | `maximumMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maximum-minimum` |
-| `metricComparison` | software.amazon.awscdk.services.quicksight.CfnDashboard$MetricComparisonComputationProperty | [[cdk.support/lookup-entry]] | `:metric-comparison` |
-| `periodOverPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:period-over-period` |
+| `metricComparison` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-comparison` |
+| `periodOverPeriod` | software.amazon.awscdk.services.quicksight.CfnDashboard$PeriodOverPeriodComputationProperty | [[cdk.support/lookup-entry]] | `:period-over-period` |
 | `periodToDate` | software.amazon.awscdk.services.quicksight.CfnDashboard$PeriodToDateComputationProperty | [[cdk.support/lookup-entry]] | `:period-to-date` |
-| `topBottomMovers` | software.amazon.awscdk.services.quicksight.CfnDashboard$TopBottomMoversComputationProperty | [[cdk.support/lookup-entry]] | `:top-bottom-movers` |
-| `topBottomRanked` | software.amazon.awscdk.services.quicksight.CfnDashboard$TopBottomRankedComputationProperty | [[cdk.support/lookup-entry]] | `:top-bottom-ranked` |
+| `topBottomMovers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-movers` |
+| `topBottomRanked` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-ranked` |
 | `totalAggregation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-aggregation` |
-| `uniqueValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:unique-values` |
+| `uniqueValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$UniqueValuesComputationProperty | [[cdk.support/lookup-entry]] | `:unique-values` |
 "
   [^CfnDashboard$ComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :forecast)]
@@ -20923,9 +20923,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `color` | java.lang.String | [[cdk.support/lookup-entry]] | `:color` |
-| `displayConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingIconDisplayConfigurationProperty | [[cdk.support/lookup-entry]] | `:display-configuration` |
+| `displayConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-configuration` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
-| `iconOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingCustomIconOptionsProperty | [[cdk.support/lookup-entry]] | `:icon-options` |
+| `iconOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon-options` |
 "
   [^CfnDashboard$ConditionalFormattingCustomIconConditionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color)]
@@ -21049,8 +21049,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customCondition` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingCustomIconConditionProperty | [[cdk.support/lookup-entry]] | `:custom-condition` |
-| `iconSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon-set` |
+| `customCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-condition` |
+| `iconSet` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingIconSetProperty | [[cdk.support/lookup-entry]] | `:icon-set` |
 "
   [^CfnDashboard$ConditionalFormattingIconProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-condition)]
@@ -21142,7 +21142,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contributorDimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contributor-dimensions` |
+| `contributorDimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:contributor-dimensions` |
 | `measureFieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-field-id` |
 "
   [^CfnDashboard$ContributionAnalysisDefaultProperty$Builder builder id config]
@@ -21173,8 +21173,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decimalPlacesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
-| `negativeValueConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NegativeValueConfigurationProperty | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
+| `decimalPlacesConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DecimalPlacesConfigurationProperty | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
+| `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
 | `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `numberScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:number-scale` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
@@ -21222,7 +21222,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `selectedFieldsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-fields-configuration` |
+| `selectedFieldsConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterOperationSelectedFieldsConfigurationProperty | [[cdk.support/lookup-entry]] | `:selected-fields-configuration` |
 | `targetVisualsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-visuals-configuration` |
 "
   [^CfnDashboard$CustomActionFilterOperationProperty$Builder builder id config]
@@ -21411,7 +21411,7 @@
 | `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomContentConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `dataSetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-identifier` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -21593,7 +21593,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomParameterValuesProperty | [[cdk.support/lookup-entry]] | `:custom-values` |
+| `customValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-values` |
 | `includeNullValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-null-value` |
 "
   [^CfnDashboard$CustomValuesConfigurationProperty$Builder builder id config]
@@ -21658,16 +21658,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `adHocFilteringOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$AdHocFilteringOptionProperty | [[cdk.support/lookup-entry]] | `:ad-hoc-filtering-option` |
-| `dataPointDrillUpDownOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataPointDrillUpDownOptionProperty | [[cdk.support/lookup-entry]] | `:data-point-drill-up-down-option` |
-| `dataPointMenuLabelOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataPointMenuLabelOptionProperty | [[cdk.support/lookup-entry]] | `:data-point-menu-label-option` |
-| `dataPointTooltipOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-point-tooltip-option` |
-| `exportToCsvOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$ExportToCSVOptionProperty | [[cdk.support/lookup-entry]] | `:export-to-csv-option` |
-| `exportWithHiddenFieldsOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$ExportWithHiddenFieldsOptionProperty | [[cdk.support/lookup-entry]] | `:export-with-hidden-fields-option` |
+| `adHocFilteringOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ad-hoc-filtering-option` |
+| `dataPointDrillUpDownOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-point-drill-up-down-option` |
+| `dataPointMenuLabelOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-point-menu-label-option` |
+| `dataPointTooltipOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataPointTooltipOptionProperty | [[cdk.support/lookup-entry]] | `:data-point-tooltip-option` |
+| `exportToCsvOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:export-to-csv-option` |
+| `exportWithHiddenFieldsOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:export-with-hidden-fields-option` |
 | `sheetControlsOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$SheetControlsOptionProperty | [[cdk.support/lookup-entry]] | `:sheet-controls-option` |
 | `sheetLayoutElementMaximizationOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sheet-layout-element-maximization-option` |
 | `visualAxisSortOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-axis-sort-option` |
-| `visualMenuOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-menu-option` |
+| `visualMenuOption` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualMenuOptionProperty | [[cdk.support/lookup-entry]] | `:visual-menu-option` |
 | `visualPublishOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-publish-options` |
 "
   [^CfnDashboard$DashboardPublishOptionsProperty$Builder builder id config]
@@ -21716,7 +21716,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sourceTemplate` | software.amazon.awscdk.services.quicksight.CfnDashboard$DashboardSourceTemplateProperty | [[cdk.support/lookup-entry]] | `:source-template` |
+| `sourceTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-template` |
 "
   [^CfnDashboard$DashboardSourceEntityProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :source-template)]
@@ -21745,7 +21745,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
-| `dataSetReferences` | java.util.List | [[cdk.support/lookup-entry]] | `:data-set-references` |
+| `dataSetReferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-set-references` |
 "
   [^CfnDashboard$DashboardSourceTemplateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arn)]
@@ -21776,10 +21776,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `analysisDefaults` | software.amazon.awscdk.services.quicksight.CfnDashboard$AnalysisDefaultsProperty | [[cdk.support/lookup-entry]] | `:analysis-defaults` |
-| `calculatedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:calculated-fields` |
+| `calculatedFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:calculated-fields` |
 | `columnConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:column-configurations` |
 | `dataSetIdentifierDeclarations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-set-identifier-declarations` |
-| `filterGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:filter-groups` |
+| `filterGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-groups` |
 | `options` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:options` |
 | `parameterDeclarations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-declarations` |
 | `sheets` | java.util.List | [[cdk.support/lookup-entry]] | `:sheets` |
@@ -21828,7 +21828,7 @@
 | `createdTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:created-time` |
 | `dataSetArns` | java.util.List | [[cdk.support/lookup-entry]] | `:data-set-arns` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `errors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:errors` |
+| `errors` | java.util.List | [[cdk.support/lookup-entry]] | `:errors` |
 | `sheets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sheets` |
 | `sourceEntityArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-entity-arn` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
@@ -22010,7 +22010,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-label-visibility` |
-| `dataLabelTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-label-types` |
+| `dataLabelTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:data-label-types` |
 | `labelColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-color` |
 | `labelContent` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-content` |
 | `labelFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
@@ -22064,7 +22064,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataPathLabelType` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataPathLabelTypeProperty | [[cdk.support/lookup-entry]] | `:data-path-label-type` |
+| `dataPathLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-path-label-type` |
 | `fieldLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-label-type` |
 | `maximumLabelType` | software.amazon.awscdk.services.quicksight.CfnDashboard$MaximumLabelTypeProperty | [[cdk.support/lookup-entry]] | `:maximum-label-type` |
 | `minimumLabelType` | software.amazon.awscdk.services.quicksight.CfnDashboard$MinimumLabelTypeProperty | [[cdk.support/lookup-entry]] | `:minimum-label-type` |
@@ -22105,7 +22105,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `color` | java.lang.String | [[cdk.support/lookup-entry]] | `:color` |
-| `element` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:element` |
+| `element` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataPathValueProperty | [[cdk.support/lookup-entry]] | `:element` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 "
   [^CfnDashboard$DataPathColorProperty$Builder builder id config]
@@ -22231,7 +22231,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataPathType` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataPathTypeProperty | [[cdk.support/lookup-entry]] | `:data-path-type` |
+| `dataPathType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-path-type` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `fieldValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-value` |
 "
@@ -22439,7 +22439,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `dateGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-granularity` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
@@ -22482,7 +22482,7 @@
 | `aggregationFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DateTimeFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnDashboard$DateMeasureFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-function)]
@@ -22516,8 +22516,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamicValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$DynamicDefaultValueProperty | [[cdk.support/lookup-entry]] | `:dynamic-value` |
-| `rollingDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rolling-date` |
+| `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
+| `rollingDate` | software.amazon.awscdk.services.quicksight.CfnDashboard$RollingDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:rolling-date` |
 | `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnDashboard$DateTimeDefaultValuesProperty$Builder builder id config]
@@ -22551,7 +22551,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
-| `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
+| `nullValueFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `numericFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-format-configuration` |
 "
   [^CfnDashboard$DateTimeFormatConfigurationProperty$Builder builder id config]
@@ -22619,7 +22619,7 @@
 | `mappedDataSetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
-| `valueWhenUnset` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-when-unset` |
+| `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnDashboard$DateTimeValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
 "
   [^CfnDashboard$DateTimeParameterDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-values)]
@@ -22687,8 +22687,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
-| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnDashboard$DateTimePickerControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format)]
@@ -22751,7 +22751,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamicValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$DynamicDefaultValueProperty | [[cdk.support/lookup-entry]] | `:dynamic-value` |
+| `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
 | `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnDashboard$DecimalDefaultValuesProperty$Builder builder id config]
@@ -22782,8 +22782,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
-| `mappedDataSetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$DecimalDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
+| `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
 | `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnDashboard$DecimalValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
@@ -22823,7 +22823,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$DecimalParameterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -22943,7 +22943,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `controlOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:control-options` |
+| `controlOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFilterControlOptionsProperty | [[cdk.support/lookup-entry]] | `:control-options` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnDashboard$DefaultFilterControlConfigurationProperty$Builder builder id config]
@@ -22974,13 +22974,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultDateTimePickerOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultDateTimePickerControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-date-time-picker-options` |
+| `defaultDateTimePickerOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-date-time-picker-options` |
 | `defaultDropdownOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-dropdown-options` |
-| `defaultListOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-list-options` |
+| `defaultListOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFilterListControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-list-options` |
 | `defaultRelativeDateTimeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-relative-date-time-options` |
-| `defaultSliderOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-slider-options` |
+| `defaultSliderOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultSliderControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-slider-options` |
 | `defaultTextAreaOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-text-area-options` |
-| `defaultTextFieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-text-field-options` |
+| `defaultTextFieldOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultTextFieldControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-text-field-options` |
 "
   [^CfnDashboard$DefaultFilterControlOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-date-time-picker-options)]
@@ -23020,7 +23020,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DropDownControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `selectableValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -23088,7 +23088,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$FreeFormLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
 "
   [^CfnDashboard$DefaultFreeFormLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -23116,7 +23116,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$GridLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
 "
   [^CfnDashboard$DefaultGridLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -23144,7 +23144,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeForm` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFreeFormLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form` |
+| `freeForm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form` |
 | `grid` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultGridLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:grid` |
 "
   [^CfnDashboard$DefaultInteractiveLayoutConfigurationProperty$Builder builder id config]
@@ -23209,7 +23209,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sectionBased` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultSectionBasedLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:section-based` |
+| `sectionBased` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section-based` |
 "
   [^CfnDashboard$DefaultPaginatedLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :section-based)]
@@ -23364,7 +23364,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TextFieldControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 "
   [^CfnDashboard$DefaultTextFieldControlOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :display-options)]
@@ -23392,7 +23392,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customValuesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-values-configuration` |
+| `customValuesConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomValuesConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-values-configuration` |
 | `selectAllValueOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:select-all-value-options` |
 | `sourceColumn` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:source-column` |
 | `sourceField` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-field` |
@@ -23494,7 +23494,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `arcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:arc-options` |
+| `arcOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ArcOptionsProperty | [[cdk.support/lookup-entry]] | `:arc-options` |
 | `donutCenterOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:donut-center-options` |
 "
   [^CfnDashboard$DonutOptionsProperty$Builder builder id config]
@@ -23525,8 +23525,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryFilter` | software.amazon.awscdk.services.quicksight.CfnDashboard$CategoryDrillDownFilterProperty | [[cdk.support/lookup-entry]] | `:category-filter` |
-| `numericEqualityFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
+| `categoryFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-filter` |
+| `numericEqualityFilter` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericEqualityDrillDownFilterProperty | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
 | `timeRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-range-filter` |
 "
   [^CfnDashboard$DrillDownFilterProperty$Builder builder id config]
@@ -23560,8 +23560,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `selectAllOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:select-all-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `selectAllOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ListControlSelectAllOptionsProperty | [[cdk.support/lookup-entry]] | `:select-all-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnDashboard$DropDownControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :info-icon-label-options)]
@@ -23593,8 +23593,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValueColumn` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:default-value-column` |
-| `groupNameColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-name-column` |
+| `defaultValueColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value-column` |
+| `groupNameColumn` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:group-name-column` |
 | `userNameColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-name-column` |
 "
   [^CfnDashboard$DynamicDefaultValueProperty$Builder builder id config]
@@ -23723,8 +23723,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
-| `drillDownFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
+| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
+| `drillDownFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnDashboard$ExplicitHierarchyProperty$Builder builder id config]
@@ -23908,7 +23908,7 @@
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
+| `settings` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:settings` |
 "
   [^CfnDashboard$FieldSeriesItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -23941,7 +23941,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columnSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-sort` |
-| `fieldSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-sort` |
+| `fieldSort` | software.amazon.awscdk.services.quicksight.CfnDashboard$FieldSortProperty | [[cdk.support/lookup-entry]] | `:field-sort` |
 "
   [^CfnDashboard$FieldSortOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column-sort)]
@@ -24095,7 +24095,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnDashboard$FilledMapConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -24123,9 +24123,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilledMapFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
-| `mapStyleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$GeospatialMapStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:map-style-options` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `mapStyleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:map-style-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilledMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `windowOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:window-options` |
@@ -24225,7 +24225,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnDashboard$FilledMapSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-sort)]
@@ -24253,12 +24253,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `conditionalFormatting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilledMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilledMapConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$FilledMapVisualProperty$Builder builder id config]
@@ -24299,14 +24299,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `crossSheet` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterCrossSheetControlProperty | [[cdk.support/lookup-entry]] | `:cross-sheet` |
+| `crossSheet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cross-sheet` |
 | `dateTimePicker` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterDateTimePickerControlProperty | [[cdk.support/lookup-entry]] | `:date-time-picker` |
-| `dropdown` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterDropDownControlProperty | [[cdk.support/lookup-entry]] | `:dropdown` |
+| `dropdown` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dropdown` |
 | `list` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterListControlProperty | [[cdk.support/lookup-entry]] | `:list` |
-| `relativeDateTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relative-date-time` |
+| `relativeDateTime` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterRelativeDateTimeControlProperty | [[cdk.support/lookup-entry]] | `:relative-date-time` |
 | `slider` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterSliderControlProperty | [[cdk.support/lookup-entry]] | `:slider` |
-| `textArea` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-area` |
-| `textField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-field` |
+| `textArea` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterTextAreaControlProperty | [[cdk.support/lookup-entry]] | `:text-area` |
+| `textField` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterTextFieldControlProperty | [[cdk.support/lookup-entry]] | `:text-field` |
 "
   [^CfnDashboard$FilterControlProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cross-sheet)]
@@ -24471,7 +24471,7 @@
 | `crossDataset` | java.lang.String | [[cdk.support/lookup-entry]] | `:cross-dataset` |
 | `filterGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-group-id` |
 | `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
-| `scopeConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterScopeConfigurationProperty | [[cdk.support/lookup-entry]] | `:scope-configuration` |
+| `scopeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope-configuration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnDashboard$FilterGroupProperty$Builder builder id config]
@@ -24545,8 +24545,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
-| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ListControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `selectableValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
@@ -24591,7 +24591,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `selectedColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:selected-columns` |
+| `selectedColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-columns` |
 | `selectedFieldOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-field-options` |
 | `selectedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:selected-fields` |
 "
@@ -24654,12 +24654,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-filter` |
-| `numericEqualityFilter` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericEqualityFilterProperty | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
+| `numericEqualityFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
 | `numericRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-range-filter` |
-| `relativeDatesFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relative-dates-filter` |
+| `relativeDatesFilter` | software.amazon.awscdk.services.quicksight.CfnDashboard$RelativeDatesFilterProperty | [[cdk.support/lookup-entry]] | `:relative-dates-filter` |
 | `timeEqualityFilter` | software.amazon.awscdk.services.quicksight.CfnDashboard$TimeEqualityFilterProperty | [[cdk.support/lookup-entry]] | `:time-equality-filter` |
 | `timeRangeFilter` | software.amazon.awscdk.services.quicksight.CfnDashboard$TimeRangeFilterProperty | [[cdk.support/lookup-entry]] | `:time-range-filter` |
-| `topBottomFilter` | software.amazon.awscdk.services.quicksight.CfnDashboard$TopBottomFilterProperty | [[cdk.support/lookup-entry]] | `:top-bottom-filter` |
+| `topBottomFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-filter` |
 "
   [^CfnDashboard$FilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-filter)]
@@ -24699,7 +24699,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$RelativeDateTimeControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -24795,7 +24795,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$SliderControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `maximumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-value` |
 | `minimumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-value` |
@@ -24845,7 +24845,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `delimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:delimiter` |
-| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TextAreaControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -25027,7 +25027,7 @@
 | `seasonality` | java.lang.String | [[cdk.support/lookup-entry]] | `:seasonality` |
 | `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
 | `upperBoundary` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-boundary` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnDashboard$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDashboard$ForecastComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -25075,8 +25075,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `forecastProperties` | software.amazon.awscdk.services.quicksight.CfnDashboard$TimeBasedForecastPropertiesProperty | [[cdk.support/lookup-entry]] | `:forecast-properties` |
-| `scenario` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scenario` |
+| `forecastProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast-properties` |
+| `scenario` | software.amazon.awscdk.services.quicksight.CfnDashboard$ForecastScenarioProperty | [[cdk.support/lookup-entry]] | `:scenario` |
 "
   [^CfnDashboard$ForecastConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :forecast-properties)]
@@ -25138,8 +25138,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-format-configuration` |
-| `numberFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:number-format-configuration` |
-| `stringFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-format-configuration` |
+| `numberFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumberFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:number-format-configuration` |
+| `stringFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$StringFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:string-format-configuration` |
 "
   [^CfnDashboard$FormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format-configuration)]
@@ -25171,7 +25171,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `screenCanvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$FreeFormLayoutScreenCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:screen-canvas-size-options` |
+| `screenCanvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:screen-canvas-size-options` |
 "
   [^CfnDashboard$FreeFormLayoutCanvasSizeOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :screen-canvas-size-options)]
@@ -25292,14 +25292,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backgroundStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-style` |
-| `borderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:border-style` |
+| `backgroundStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$FreeFormLayoutElementBackgroundStyleProperty | [[cdk.support/lookup-entry]] | `:background-style` |
+| `borderStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$FreeFormLayoutElementBorderStyleProperty | [[cdk.support/lookup-entry]] | `:border-style` |
 | `elementId` | java.lang.String | [[cdk.support/lookup-entry]] | `:element-id` |
 | `elementType` | java.lang.String | [[cdk.support/lookup-entry]] | `:element-type` |
 | `height` | java.lang.String | [[cdk.support/lookup-entry]] | `:height` |
-| `loadingAnimation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:loading-animation` |
+| `loadingAnimation` | software.amazon.awscdk.services.quicksight.CfnDashboard$LoadingAnimationProperty | [[cdk.support/lookup-entry]] | `:loading-animation` |
 | `renderingRules` | java.util.List | [[cdk.support/lookup-entry]] | `:rendering-rules` |
-| `selectedBorderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-border-style` |
+| `selectedBorderStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$FreeFormLayoutElementBorderStyleProperty | [[cdk.support/lookup-entry]] | `:selected-border-style` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 | `width` | java.lang.String | [[cdk.support/lookup-entry]] | `:width` |
 | `xAxisLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:x-axis-location` |
@@ -25381,7 +25381,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `elements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elements` |
+| `elements` | java.util.List | [[cdk.support/lookup-entry]] | `:elements` |
 "
   [^CfnDashboard$FreeFormSectionLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :elements)]
@@ -25409,8 +25409,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$FunnelChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -25441,12 +25441,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `dataLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$FunnelChartDataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-label-options` |
+| `dataLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-label-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$FunnelChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FunnelChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `valueLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:value-label-options` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `valueLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-label-options` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnDashboard$FunnelChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-label-options)]
@@ -25488,7 +25488,7 @@
 |---|---|---|---|
 | `categoryLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-label-visibility` |
 | `labelColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-color` |
-| `labelFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
+| `labelFontConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
 | `measureDataLabelStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-data-label-style` |
 | `measureLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-label-visibility` |
 | `position` | java.lang.String | [[cdk.support/lookup-entry]] | `:position` |
@@ -25532,7 +25532,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `funnelChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$FunnelChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:funnel-chart-aggregated-field-wells` |
+| `funnelChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:funnel-chart-aggregated-field-wells` |
 "
   [^CfnDashboard$FunnelChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :funnel-chart-aggregated-field-wells)]
@@ -25560,7 +25560,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnDashboard$FunnelChartSortConfigurationProperty$Builder builder id config]
@@ -25593,9 +25593,9 @@
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FunnelChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$FunnelChartVisualProperty$Builder builder id config]
@@ -25663,7 +25663,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arc` | software.amazon.awscdk.services.quicksight.CfnDashboard$GaugeChartArcConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:arc` |
-| `primaryValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$GaugeChartPrimaryValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:primary-value` |
+| `primaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value` |
 "
   [^CfnDashboard$GaugeChartConditionalFormattingOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arc)]
@@ -25693,7 +25693,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnDashboard$GaugeChartConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -25721,11 +25721,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `gaugeChartOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gauge-chart-options` |
-| `tooltipOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip-options` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `tooltipOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip-options` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnDashboard$GaugeChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-labels)]
@@ -25761,7 +25761,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `targetValues` | java.util.List | [[cdk.support/lookup-entry]] | `:target-values` |
+| `targetValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-values` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$GaugeChartFieldWellsProperty$Builder builder id config]
@@ -25792,7 +25792,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `arc` | software.amazon.awscdk.services.quicksight.CfnDashboard$ArcConfigurationProperty | [[cdk.support/lookup-entry]] | `:arc` |
+| `arc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:arc` |
 | `arcAxis` | software.amazon.awscdk.services.quicksight.CfnDashboard$ArcAxisConfigurationProperty | [[cdk.support/lookup-entry]] | `:arc-axis` |
 | `comparison` | software.amazon.awscdk.services.quicksight.CfnDashboard$ComparisonConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison` |
 | `primaryValueDisplayType` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-value-display-type` |
@@ -25864,9 +25864,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `conditionalFormatting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$GaugeChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnDashboard$GaugeChartConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -25943,7 +25943,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
 "
   [^CfnDashboard$GeospatialHeatmapColorScaleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -26027,9 +26027,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
-| `geospatial` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
+| `geospatial` | java.util.List | [[cdk.support/lookup-entry]] | `:geospatial` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$GeospatialMapAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -26063,11 +26063,11 @@
 |---|---|---|---|
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `mapStyleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:map-style-options` |
+| `mapStyleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$GeospatialMapStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:map-style-options` |
 | `pointStyleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$GeospatialPointStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:point-style-options` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
-| `windowOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:window-options` |
+| `windowOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$GeospatialWindowOptionsProperty | [[cdk.support/lookup-entry]] | `:window-options` |
 "
   [^CfnDashboard$GeospatialMapConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-wells)]
@@ -26163,10 +26163,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$GeospatialMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -26206,7 +26206,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clusterMarkerConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ClusterMarkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:cluster-marker-configuration` |
+| `clusterMarkerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cluster-marker-configuration` |
 | `heatmapConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$GeospatialHeatmapConfigurationProperty | [[cdk.support/lookup-entry]] | `:heatmap-configuration` |
 | `selectedPointStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-point-style` |
 "
@@ -26272,7 +26272,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `sideSpecificBorder` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:side-specific-border` |
-| `uniformBorder` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uniform-border` |
+| `uniformBorder` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:uniform-border` |
 "
   [^CfnDashboard$GlobalTableBorderOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :side-specific-border)]
@@ -26364,7 +26364,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `screenCanvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$GridLayoutScreenCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:screen-canvas-size-options` |
+| `screenCanvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:screen-canvas-size-options` |
 "
   [^CfnDashboard$GridLayoutCanvasSizeOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :screen-canvas-size-options)]
@@ -26392,8 +26392,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
-| `elements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elements` |
+| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$GridLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `elements` | java.util.List | [[cdk.support/lookup-entry]] | `:elements` |
 "
   [^CfnDashboard$GridLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -26500,7 +26500,7 @@
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `periodSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period-size` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnDashboard$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDashboard$GrowthRateComputationProperty$Builder builder id config]
@@ -26537,9 +26537,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `layout` | software.amazon.awscdk.services.quicksight.CfnDashboard$SectionLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:layout` |
+| `layout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layout` |
 | `sectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:section-id` |
-| `style` | software.amazon.awscdk.services.quicksight.CfnDashboard$SectionStyleProperty | [[cdk.support/lookup-entry]] | `:style` |
+| `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
 "
   [^CfnDashboard$HeaderFooterSectionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :layout)]
@@ -26572,7 +26572,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
-| `rows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rows` |
+| `rows` | java.util.List | [[cdk.support/lookup-entry]] | `:rows` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$HeatMapAggregatedFieldWellsProperty$Builder builder id config]
@@ -26605,14 +26605,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colorScale` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColorScaleProperty | [[cdk.support/lookup-entry]] | `:color-scale` |
-| `columnLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:column-label-options` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$HeatMapFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `colorScale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-scale` |
+| `columnLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-label-options` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
-| `rowLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:row-label-options` |
+| `rowLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-label-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$HeatMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 "
   [^CfnDashboard$HeatMapConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color-scale)]
@@ -26654,7 +26654,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `heatMapAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$HeatMapAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:heat-map-aggregated-field-wells` |
+| `heatMapAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-aggregated-field-wells` |
 "
   [^CfnDashboard$HeatMapFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :heat-map-aggregated-field-wells)]
@@ -26682,10 +26682,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `heatMapColumnItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:heat-map-column-items-limit-configuration` |
-| `heatMapColumnSort` | java.util.List | [[cdk.support/lookup-entry]] | `:heat-map-column-sort` |
-| `heatMapRowItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:heat-map-row-items-limit-configuration` |
-| `heatMapRowSort` | java.util.List | [[cdk.support/lookup-entry]] | `:heat-map-row-sort` |
+| `heatMapColumnItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-column-items-limit-configuration` |
+| `heatMapColumnSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-column-sort` |
+| `heatMapRowItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-row-items-limit-configuration` |
+| `heatMapRowSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-row-sort` |
 "
   [^CfnDashboard$HeatMapSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :heat-map-column-items-limit-configuration)]
@@ -26719,11 +26719,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$HeatMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$HeatMapVisualProperty$Builder builder id config]
@@ -26762,7 +26762,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$HistogramAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :values)]
@@ -26790,8 +26790,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `binCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-count` |
-| `binWidth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-width` |
+| `binCount` | software.amazon.awscdk.services.quicksight.CfnDashboard$BinCountOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-count` |
+| `binWidth` | software.amazon.awscdk.services.quicksight.CfnDashboard$BinWidthOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-width` |
 | `selectedBinType` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-bin-type` |
 | `startValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-value` |
 "
@@ -26827,13 +26827,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `binOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$HistogramBinOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-options` |
+| `binOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-options` |
 | `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$HistogramFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
-| `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
-| `xAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
+| `xAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
+| `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
 | `yAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
 "
   [^CfnDashboard$HistogramConfigurationProperty$Builder builder id config]
@@ -26944,8 +26944,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `computations` | java.util.List | [[cdk.support/lookup-entry]] | `:computations` |
-| `customNarrative` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-narrative` |
+| `computations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:computations` |
+| `customNarrative` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomNarrativeOptionsProperty | [[cdk.support/lookup-entry]] | `:custom-narrative` |
 "
   [^CfnDashboard$InsightConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computations)]
@@ -26977,9 +26977,9 @@
 |---|---|---|---|
 | `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
 | `dataSetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-identifier` |
-| `insightConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insight-configuration` |
+| `insightConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$InsightConfigurationProperty | [[cdk.support/lookup-entry]] | `:insight-configuration` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$InsightVisualProperty$Builder builder id config]
@@ -27019,7 +27019,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
-| `staticValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-values` |
+| `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnDashboard$IntegerDefaultValuesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dynamic-value)]
@@ -27049,7 +27049,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$IntegerDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
@@ -27182,8 +27182,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `icon` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnDashboard$KPIActualValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -27245,9 +27245,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actualValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIActualValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:actual-value` |
-| `comparisonValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIComparisonValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:comparison-value` |
-| `primaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value` |
-| `progressBar` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIProgressBarConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:progress-bar` |
+| `comparisonValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison-value` |
+| `primaryValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIPrimaryValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:primary-value` |
+| `progressBar` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:progress-bar` |
 "
   [^CfnDashboard$KPIConditionalFormattingOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :actual-value)]
@@ -27281,7 +27281,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnDashboard$KPIConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -27310,8 +27310,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `kpiOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kpi-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPISortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `kpiOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIOptionsProperty | [[cdk.support/lookup-entry]] | `:kpi-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 "
   [^CfnDashboard$KPIConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-wells)]
@@ -27344,7 +27344,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-values` |
-| `trendGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trend-groups` |
+| `trendGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:trend-groups` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$KPIFieldWellsProperty$Builder builder id config]
@@ -27377,15 +27377,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `comparison` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison` |
+| `comparison` | software.amazon.awscdk.services.quicksight.CfnDashboard$ComparisonConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison` |
 | `primaryValueDisplayType` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-value-display-type` |
 | `primaryValueFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value-font-configuration` |
-| `progressBar` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:progress-bar` |
-| `secondaryValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$SecondaryValueOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-value` |
-| `secondaryValueFontConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:secondary-value-font-configuration` |
-| `sparkline` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPISparklineOptionsProperty | [[cdk.support/lookup-entry]] | `:sparkline` |
-| `trendArrows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trend-arrows` |
-| `visualLayoutOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-layout-options` |
+| `progressBar` | software.amazon.awscdk.services.quicksight.CfnDashboard$ProgressBarOptionsProperty | [[cdk.support/lookup-entry]] | `:progress-bar` |
+| `secondaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-value` |
+| `secondaryValueFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-value-font-configuration` |
+| `sparkline` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sparkline` |
+| `trendArrows` | software.amazon.awscdk.services.quicksight.CfnDashboard$TrendArrowOptionsProperty | [[cdk.support/lookup-entry]] | `:trend-arrows` |
+| `visualLayoutOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIVisualLayoutOptionsProperty | [[cdk.support/lookup-entry]] | `:visual-layout-options` |
 "
   [^CfnDashboard$KPIOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :comparison)]
@@ -27430,7 +27430,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnDashboard$KPIPrimaryValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -27488,7 +27488,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `trendGroupSort` | java.util.List | [[cdk.support/lookup-entry]] | `:trend-group-sort` |
+| `trendGroupSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trend-group-sort` |
 "
   [^CfnDashboard$KPISortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :trend-group-sort)]
@@ -27553,7 +27553,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `standardLayout` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIVisualStandardLayoutProperty | [[cdk.support/lookup-entry]] | `:standard-layout` |
+| `standardLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:standard-layout` |
 "
   [^CfnDashboard$KPIVisualLayoutOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :standard-layout)]
@@ -27581,11 +27581,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `conditionalFormatting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -27689,9 +27689,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeFormLayout` | software.amazon.awscdk.services.quicksight.CfnDashboard$FreeFormLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form-layout` |
+| `freeFormLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form-layout` |
 | `gridLayout` | software.amazon.awscdk.services.quicksight.CfnDashboard$GridLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:grid-layout` |
-| `sectionBasedLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section-based-layout` |
+| `sectionBasedLayout` | software.amazon.awscdk.services.quicksight.CfnDashboard$SectionBasedLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:section-based-layout` |
 "
   [^CfnDashboard$LayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :free-form-layout)]
@@ -27723,7 +27723,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.quicksight.CfnDashboard$LayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 "
   [^CfnDashboard$LayoutProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration)]
@@ -27791,9 +27791,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
-| `smallMultiples` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
+| `smallMultiples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$LineChartAggregatedFieldWellsProperty$Builder builder id config]
@@ -27829,24 +27829,24 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contributionAnalysisDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `defaultSeriesSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-series-settings` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `forecastConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:forecast-configurations` |
+| `forecastConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast-configurations` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
 | `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
-| `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
+| `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
+| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineSeriesAxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
 | `secondaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
 | `series` | java.util.List | [[cdk.support/lookup-entry]] | `:series` |
 | `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
-| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
-| `xAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
-| `xAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
+| `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
+| `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
 "
   [^CfnDashboard$LineChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :contribution-analysis-defaults)]
@@ -27912,7 +27912,7 @@
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
 | `lineStyleSettings` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartLineStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:line-style-settings` |
-| `markerStyleSettings` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartMarkerStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
+| `markerStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
 "
   [^CfnDashboard$LineChartDefaultSeriesSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -27944,7 +27944,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `lineChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:line-chart-aggregated-field-wells` |
+| `lineChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-chart-aggregated-field-wells` |
 "
   [^CfnDashboard$LineChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :line-chart-aggregated-field-wells)]
@@ -28046,8 +28046,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `lineStyleSettings` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartLineStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:line-style-settings` |
-| `markerStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
+| `lineStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-style-settings` |
+| `markerStyleSettings` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartMarkerStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
 "
   [^CfnDashboard$LineChartSeriesSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :line-style-settings)]
@@ -28079,7 +28079,7 @@
 |---|---|---|---|
 | `categoryItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit-configuration` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit-configuration` |
+| `colorItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit-configuration` |
 | `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
 | `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
@@ -28117,9 +28117,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
@@ -28220,7 +28220,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `searchOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ListControlSearchOptionsProperty | [[cdk.support/lookup-entry]] | `:search-options` |
+| `searchOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:search-options` |
 | `selectAllOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ListControlSelectAllOptionsProperty | [[cdk.support/lookup-entry]] | `:select-all-options` |
 | `titleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
 "
@@ -28498,9 +28498,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `calculatedMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:calculated-measure-field` |
+| `calculatedMeasureField` | software.amazon.awscdk.services.quicksight.CfnDashboard$CalculatedMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:calculated-measure-field` |
 | `categoricalMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:categorical-measure-field` |
-| `dateMeasureField` | software.amazon.awscdk.services.quicksight.CfnDashboard$DateMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:date-measure-field` |
+| `dateMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-measure-field` |
 | `numericalMeasureField` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericalMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:numerical-measure-field` |
 "
   [^CfnDashboard$MeasureFieldProperty$Builder builder id config]
@@ -28536,7 +28536,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
-| `fromValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:from-value` |
+| `fromValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:from-value` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `targetValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-value` |
 | `time` | software.amazon.awscdk.services.quicksight.CfnDashboard$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
@@ -28688,11 +28688,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `decimalPlacesConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DecimalPlacesConfigurationProperty | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
-| `negativeValueConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NegativeValueConfigurationProperty | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
-| `nullValueFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
+| `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
+| `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `numberScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:number-scale` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `separatorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:separator-configuration` |
+| `separatorConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericSeparatorConfigurationProperty | [[cdk.support/lookup-entry]] | `:separator-configuration` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnDashboard$NumberDisplayFormatConfigurationProperty$Builder builder id config]
@@ -28792,7 +28792,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDashboard$NumericEqualityDrillDownFilterProperty$Builder builder id config]
@@ -28823,7 +28823,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnDashboard$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
@@ -28875,7 +28875,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `currencyDisplayFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CurrencyDisplayFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:currency-display-format-configuration` |
+| `currencyDisplayFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:currency-display-format-configuration` |
 | `numberDisplayFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumberDisplayFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:number-display-format-configuration` |
 | `percentageDisplayFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:percentage-display-format-configuration` |
 "
@@ -28909,15 +28909,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnDashboard$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
-| `includeMaximum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-maximum` |
-| `includeMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-minimum` |
+| `includeMaximum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-maximum` |
+| `includeMinimum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-minimum` |
 | `nullOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:null-option` |
 | `rangeMaximum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-maximum` |
-| `rangeMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-minimum` |
+| `rangeMinimum` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericRangeFilterValueProperty | [[cdk.support/lookup-entry]] | `:range-minimum` |
 | `selectAllOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:select-all-options` |
 "
   [^CfnDashboard$NumericRangeFilterProperty$Builder builder id config]
@@ -29094,10 +29094,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericalAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumberFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnDashboard$NumericalMeasureFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-function)]
@@ -29170,7 +29170,7 @@
 | `borderVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:border-visibility` |
 | `gutterSpacing` | java.lang.String | [[cdk.support/lookup-entry]] | `:gutter-spacing` |
 | `gutterVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:gutter-visibility` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$PanelTitleOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnDashboard$PanelConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -29248,12 +29248,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimePicker` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-picker` |
-| `dropdown` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dropdown` |
+| `dateTimePicker` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterDateTimePickerControlProperty | [[cdk.support/lookup-entry]] | `:date-time-picker` |
+| `dropdown` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterDropDownControlProperty | [[cdk.support/lookup-entry]] | `:dropdown` |
 | `list` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterListControlProperty | [[cdk.support/lookup-entry]] | `:list` |
-| `slider` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterSliderControlProperty | [[cdk.support/lookup-entry]] | `:slider` |
+| `slider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slider` |
 | `textArea` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterTextAreaControlProperty | [[cdk.support/lookup-entry]] | `:text-area` |
-| `textField` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterTextFieldControlProperty | [[cdk.support/lookup-entry]] | `:text-field` |
+| `textField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-field` |
 "
   [^CfnDashboard$ParameterControlProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-picker)]
@@ -29328,10 +29328,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimeParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-parameter-declaration` |
+| `dateTimeParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DateTimeParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:date-time-parameter-declaration` |
 | `decimalParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-parameter-declaration` |
 | `integerParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnDashboard$IntegerParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:integer-parameter-declaration` |
-| `stringParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnDashboard$StringParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:string-parameter-declaration` |
+| `stringParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-parameter-declaration` |
 "
   [^CfnDashboard$ParameterDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-parameter-declaration)]
@@ -29365,10 +29365,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
 | `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DropDownControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
-| `selectableValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectable-values` |
+| `selectableValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -29411,10 +29411,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
 | `displayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ListControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
-| `selectableValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectable-values` |
+| `selectableValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$ParameterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -29612,8 +29612,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:date-time-parameters` |
-| `decimalParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:decimal-parameters` |
-| `integerParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:integer-parameters` |
+| `decimalParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-parameters` |
+| `integerParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-parameters` |
 | `stringParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:string-parameters` |
 "
   [^CfnDashboard$ParametersProperty$Builder builder id config]
@@ -29683,7 +29683,7 @@
 | `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
 | `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `separatorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:separator-configuration` |
+| `separatorConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericSeparatorConfigurationProperty | [[cdk.support/lookup-entry]] | `:separator-configuration` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnDashboard$PercentageDisplayFormatConfigurationProperty$Builder builder id config]
@@ -29752,7 +29752,7 @@
 |---|---|---|---|
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnDashboard$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `value` | software.amazon.awscdk.services.quicksight.CfnDashboard$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDashboard$PeriodOverPeriodComputationProperty$Builder builder id config]
@@ -29790,7 +29790,7 @@
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `periodTimeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:period-time-granularity` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnDashboard$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDashboard$PeriodToDateComputationProperty$Builder builder id config]
@@ -29828,7 +29828,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
-| `smallMultiples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples` |
+| `smallMultiples` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$PieChartAggregatedFieldWellsProperty$Builder builder id config]
@@ -29863,7 +29863,7 @@
 |---|---|---|---|
 | `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `donutOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$DonutOptionsProperty | [[cdk.support/lookup-entry]] | `:donut-options` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
@@ -29871,7 +29871,7 @@
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$PieChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `valueLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:value-label-options` |
-| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnDashboard$PieChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-label-options)]
@@ -29919,7 +29919,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pieChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$PieChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:pie-chart-aggregated-field-wells` |
+| `pieChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pie-chart-aggregated-field-wells` |
 "
   [^CfnDashboard$PieChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pie-chart-aggregated-field-wells)]
@@ -29948,9 +29948,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 | `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
-| `smallMultiplesSort` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
+| `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
   [^CfnDashboard$PieChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit)]
@@ -30058,7 +30058,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
 | `rows` | java.util.List | [[cdk.support/lookup-entry]] | `:rows` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
@@ -30094,7 +30094,7 @@
 |---|---|---|---|
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `scope` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableConditionalFormattingScopeProperty | [[cdk.support/lookup-entry]] | `:scope` |
-| `scopes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scopes` |
+| `scopes` | java.util.List | [[cdk.support/lookup-entry]] | `:scopes` |
 | `textFormat` | software.amazon.awscdk.services.quicksight.CfnDashboard$TextConditionalFormatProperty | [[cdk.support/lookup-entry]] | `:text-format` |
 "
   [^CfnDashboard$PivotTableCellConditionalFormattingProperty$Builder builder id config]
@@ -30157,7 +30157,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnDashboard$PivotTableConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -30215,9 +30215,9 @@
 |---|---|---|---|
 | `fieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `paginatedReportOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
+| `paginatedReportOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTablePaginatedReportOptionsProperty | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tableOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-options` |
+| `tableOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableOptionsProperty | [[cdk.support/lookup-entry]] | `:table-options` |
 | `totalOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableTotalOptionsProperty | [[cdk.support/lookup-entry]] | `:total-options` |
 "
   [^CfnDashboard$PivotTableConfigurationProperty$Builder builder id config]
@@ -30288,7 +30288,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `target` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target` |
+| `target` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableFieldCollapseStateTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnDashboard$PivotTableFieldCollapseStateOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :state)]
@@ -30318,7 +30318,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldDataPathValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-data-path-values` |
+| `fieldDataPathValues` | java.util.List | [[cdk.support/lookup-entry]] | `:field-data-path-values` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 "
   [^CfnDashboard$PivotTableFieldCollapseStateTargetProperty$Builder builder id config]
@@ -30383,9 +30383,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `collapseStateOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:collapse-state-options` |
-| `dataPathOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-path-options` |
-| `selectedFieldOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:selected-field-options` |
+| `collapseStateOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:collapse-state-options` |
+| `dataPathOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:data-path-options` |
+| `selectedFieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-field-options` |
 "
   [^CfnDashboard$PivotTableFieldOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :collapse-state-options)]
@@ -30445,7 +30445,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pivotTableAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:pivot-table-aggregated-field-wells` |
+| `pivotTableAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pivot-table-aggregated-field-wells` |
 "
   [^CfnDashboard$PivotTableFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pivot-table-aggregated-field-wells)]
@@ -30475,14 +30475,14 @@
 |---|---|---|---|
 | `cellStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:cell-style` |
 | `collapsedRowDimensionsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:collapsed-row-dimensions-visibility` |
-| `columnHeaderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-header-style` |
+| `columnHeaderStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:column-header-style` |
 | `columnNamesVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-names-visibility` |
 | `defaultCellWidth` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-cell-width` |
 | `metricPlacement` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-placement` |
-| `rowAlternateColorOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$RowAlternateColorOptionsProperty | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
-| `rowFieldNamesStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:row-field-names-style` |
-| `rowHeaderStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:row-header-style` |
-| `rowsLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableRowsLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:rows-label-options` |
+| `rowAlternateColorOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
+| `rowFieldNamesStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-field-names-style` |
+| `rowHeaderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-header-style` |
+| `rowsLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rows-label-options` |
 | `rowsLayout` | java.lang.String | [[cdk.support/lookup-entry]] | `:rows-layout` |
 | `singleMetricVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:single-metric-visibility` |
 | `toggleButtonsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:toggle-buttons-visibility` |
@@ -30599,8 +30599,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnSortProperty | [[cdk.support/lookup-entry]] | `:column` |
-| `dataPath` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-path` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `dataPath` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataPathSortProperty | [[cdk.support/lookup-entry]] | `:data-path` |
 | `field` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field` |
 "
   [^CfnDashboard$PivotTableSortByProperty$Builder builder id config]
@@ -30698,10 +30698,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -30748,7 +30748,7 @@
 | `totalAggregationOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-aggregation-options` |
 | `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
-| `valueCellStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:value-cell-style` |
+| `valueCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-cell-style` |
 "
   [^CfnDashboard$PivotTotalOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-label)]
@@ -30791,7 +30791,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
-| `drillDownFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
+| `drillDownFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnDashboard$PredefinedHierarchyProperty$Builder builder id config]
@@ -30855,7 +30855,7 @@
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
 | `dashboardId` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-id` |
 | `dashboardPublishOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dashboard-publish-options` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.quicksight.CfnDashboard$DashboardVersionDefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
 | `linkEntities` | java.util.List | [[cdk.support/lookup-entry]] | `:link-entities` |
 | `linkSharingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:link-sharing-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -30864,7 +30864,7 @@
 | `sourceEntity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-entity` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `themeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:theme-arn` |
-| `validationStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-strategy` |
+| `validationStrategy` | software.amazon.awscdk.services.quicksight.CfnDashboard$ValidationStrategyProperty | [[cdk.support/lookup-entry]] | `:validation-strategy` |
 | `versionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-description` |
 "
   [^CfnDashboardProps$Builder builder id config]
@@ -30919,9 +30919,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `color` | java.util.List | [[cdk.support/lookup-entry]] | `:color` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$RadarChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -30986,16 +30986,16 @@
 | `alternateBandOddColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:alternate-band-odd-color` |
 | `axesRangeScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:axes-range-scale` |
 | `baseSeriesSettings` | software.amazon.awscdk.services.quicksight.CfnDashboard$RadarChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:base-series-settings` |
-| `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
-| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `colorAxis` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:color-axis` |
-| `colorLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-label-options` |
+| `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
+| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `colorAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-axis` |
+| `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `shape` | java.lang.String | [[cdk.support/lookup-entry]] | `:shape` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `startAngle` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-angle` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnDashboard$RadarChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :alternate-band-colors-visibility)]
@@ -31107,10 +31107,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 | `colorItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit` |
-| `colorSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-sort` |
+| `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
 "
   [^CfnDashboard$RadarChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit)]
@@ -31144,10 +31144,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$RadarChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -31246,7 +31246,7 @@
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
 | `dynamicConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ReferenceLineDynamicDataConfigurationProperty | [[cdk.support/lookup-entry]] | `:dynamic-configuration` |
 | `seriesType` | java.lang.String | [[cdk.support/lookup-entry]] | `:series-type` |
-| `staticConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-configuration` |
+| `staticConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ReferenceLineStaticDataConfigurationProperty | [[cdk.support/lookup-entry]] | `:static-configuration` |
 "
   [^CfnDashboard$ReferenceLineDataConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -31280,9 +31280,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `calculation` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericalAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:calculation` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
-| `measureAggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:measure-aggregation-function` |
+| `calculation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:calculation` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `measureAggregationFunction` | software.amazon.awscdk.services.quicksight.CfnDashboard$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:measure-aggregation-function` |
 "
   [^CfnDashboard$ReferenceLineDynamicDataConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :calculation)]
@@ -31314,7 +31314,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customLabelConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ReferenceLineCustomLabelConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-label-configuration` |
+| `customLabelConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-label-configuration` |
 | `fontColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:font-color` |
 | `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
 | `horizontalPosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:horizontal-position` |
@@ -31358,9 +31358,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-configuration` |
-| `labelConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ReferenceLineLabelConfigurationProperty | [[cdk.support/lookup-entry]] | `:label-configuration` |
+| `labelConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-configuration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `styleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style-configuration` |
+| `styleConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ReferenceLineStyleConfigurationProperty | [[cdk.support/lookup-entry]] | `:style-configuration` |
 "
   [^CfnDashboard$ReferenceLineProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-configuration)]
@@ -31453,7 +31453,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `relativePosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:relative-position` |
 "
   [^CfnDashboard$ReferenceLineValueLabelConfigurationProperty$Builder builder id config]
@@ -31519,8 +31519,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `anchorDateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anchor-date-configuration` |
-| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `excludePeriodConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-period-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `minimumGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:minimum-granularity` |
@@ -31706,8 +31706,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
+| `destination` | java.util.List | [[cdk.support/lookup-entry]] | `:destination` |
+| `source` | java.util.List | [[cdk.support/lookup-entry]] | `:source` |
 | `weight` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnDashboard$SankeyDiagramAggregatedFieldWellsProperty$Builder builder id config]
@@ -31741,7 +31741,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$SankeyDiagramFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 "
   [^CfnDashboard$SankeyDiagramChartConfigurationProperty$Builder builder id config]
@@ -31774,7 +31774,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sankeyDiagramAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$SankeyDiagramAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:sankey-diagram-aggregated-field-wells` |
+| `sankeyDiagramAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sankey-diagram-aggregated-field-wells` |
 "
   [^CfnDashboard$SankeyDiagramFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sankey-diagram-aggregated-field-wells)]
@@ -31803,8 +31803,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-items-limit` |
-| `sourceItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-items-limit` |
-| `weightSort` | java.util.List | [[cdk.support/lookup-entry]] | `:weight-sort` |
+| `sourceItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-items-limit` |
+| `weightSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weight-sort` |
 "
   [^CfnDashboard$SankeyDiagramSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination-items-limit)]
@@ -31837,9 +31837,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$SankeyDiagramChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$SankeyDiagramVisualProperty$Builder builder id config]
@@ -31877,8 +31877,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
-| `label` | java.util.List | [[cdk.support/lookup-entry]] | `:label` |
-| `size` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size` |
+| `label` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label` |
+| `size` | java.util.List | [[cdk.support/lookup-entry]] | `:size` |
 | `xAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:x-axis` |
 | `yAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:y-axis` |
 "
@@ -31917,14 +31917,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$ScatterPlotFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
-| `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
-| `yAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
-| `yAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:y-axis-label-options` |
+| `xAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
+| `yAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
+| `yAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis-label-options` |
 "
   [^CfnDashboard$ScatterPlotConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-labels)]
@@ -31968,7 +31968,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `scatterPlotCategoricallyAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$ScatterPlotCategoricallyAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-categorically-aggregated-field-wells` |
+| `scatterPlotCategoricallyAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scatter-plot-categorically-aggregated-field-wells` |
 | `scatterPlotUnaggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$ScatterPlotUnaggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-unaggregated-field-wells` |
 "
   [^CfnDashboard$ScatterPlotFieldWellsProperty$Builder builder id config]
@@ -31999,11 +31999,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
-| `label` | java.util.List | [[cdk.support/lookup-entry]] | `:label` |
-| `size` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size` |
-| `xAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis` |
-| `yAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
+| `label` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label` |
+| `size` | java.util.List | [[cdk.support/lookup-entry]] | `:size` |
+| `xAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:x-axis` |
+| `yAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:y-axis` |
 "
   [^CfnDashboard$ScatterPlotUnaggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -32040,9 +32040,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ScatterPlotConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -32169,7 +32169,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `paperCanvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$SectionBasedLayoutPaperCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:paper-canvas-size-options` |
+| `paperCanvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paper-canvas-size-options` |
 "
   [^CfnDashboard$SectionBasedLayoutCanvasSizeOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :paper-canvas-size-options)]
@@ -32199,8 +32199,8 @@
 |---|---|---|---|
 | `bodySections` | java.util.List | [[cdk.support/lookup-entry]] | `:body-sections` |
 | `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
-| `footerSections` | java.util.List | [[cdk.support/lookup-entry]] | `:footer-sections` |
-| `headerSections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-sections` |
+| `footerSections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:footer-sections` |
+| `headerSections` | java.util.List | [[cdk.support/lookup-entry]] | `:header-sections` |
 "
   [^CfnDashboard$SectionBasedLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :body-sections)]
@@ -32268,7 +32268,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeFormLayout` | software.amazon.awscdk.services.quicksight.CfnDashboard$FreeFormSectionLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form-layout` |
+| `freeFormLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form-layout` |
 "
   [^CfnDashboard$SectionLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :free-form-layout)]
@@ -32296,7 +32296,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `after` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:after` |
+| `after` | software.amazon.awscdk.services.quicksight.CfnDashboard$SectionAfterPageBreakProperty | [[cdk.support/lookup-entry]] | `:after` |
 "
   [^CfnDashboard$SectionPageBreakConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :after)]
@@ -32325,7 +32325,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `height` | java.lang.String | [[cdk.support/lookup-entry]] | `:height` |
-| `padding` | software.amazon.awscdk.services.quicksight.CfnDashboard$SpacingProperty | [[cdk.support/lookup-entry]] | `:padding` |
+| `padding` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:padding` |
 "
   [^CfnDashboard$SectionStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :height)]
@@ -32445,7 +32445,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backgroundColor` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:background-color` |
+| `backgroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-color` |
 "
   [^CfnDashboard$ShapeConditionalFormatProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -32504,7 +32504,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `gridLayout` | software.amazon.awscdk.services.quicksight.CfnDashboard$GridLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:grid-layout` |
+| `gridLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grid-layout` |
 "
   [^CfnDashboard$SheetControlLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :grid-layout)]
@@ -32532,7 +32532,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.quicksight.CfnDashboard$SheetControlLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 "
   [^CfnDashboard$SheetControlLayoutProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration)]
@@ -32591,12 +32591,12 @@
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `filterControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-controls` |
-| `layouts` | java.util.List | [[cdk.support/lookup-entry]] | `:layouts` |
+| `layouts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layouts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameterControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-controls` |
-| `sheetControlLayouts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sheet-control-layouts` |
+| `parameterControls` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-controls` |
+| `sheetControlLayouts` | java.util.List | [[cdk.support/lookup-entry]] | `:sheet-control-layouts` |
 | `sheetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:sheet-id` |
-| `textBoxes` | java.util.List | [[cdk.support/lookup-entry]] | `:text-boxes` |
+| `textBoxes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-boxes` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `visuals` | java.util.List | [[cdk.support/lookup-entry]] | `:visuals` |
 "
@@ -32674,7 +32674,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configurationOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-overrides` |
+| `configurationOverrides` | software.amazon.awscdk.services.quicksight.CfnDashboard$SheetElementConfigurationOverridesProperty | [[cdk.support/lookup-entry]] | `:configuration-overrides` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 "
   [^CfnDashboard$SheetElementRenderingRuleProperty$Builder builder id config]
@@ -32888,7 +32888,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
 | `titleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnDashboard$SliderControlDisplayOptionsProperty$Builder builder id config]
@@ -33027,7 +33027,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
+| `dynamicValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$DynamicDefaultValueProperty | [[cdk.support/lookup-entry]] | `:dynamic-value` |
 | `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnDashboard$StringDefaultValuesProperty$Builder builder id config]
@@ -33058,8 +33058,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `nullValueFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
-| `numericFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NumericFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:numeric-format-configuration` |
+| `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
+| `numericFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-format-configuration` |
 "
   [^CfnDashboard$StringFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :null-value-format-configuration)]
@@ -33089,7 +33089,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnDashboard$StringDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
@@ -33196,7 +33196,7 @@
 | `fieldLevelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-level-options` |
 | `metricHeaderCellStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:metric-header-cell-style` |
 | `styleTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:style-targets` |
-| `totalCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-cell-style` |
+| `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
 | `valueCellStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:value-cell-style` |
 "
@@ -33240,7 +33240,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `groupBy` | java.util.List | [[cdk.support/lookup-entry]] | `:group-by` |
+| `groupBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-by` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnDashboard$TableAggregatedFieldWellsProperty$Builder builder id config]
@@ -33365,7 +33365,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backgroundColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:background-color` |
-| `border` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:border` |
+| `border` | software.amazon.awscdk.services.quicksight.CfnDashboard$GlobalTableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:border` |
 | `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
 | `horizontalTextAlignment` | java.lang.String | [[cdk.support/lookup-entry]] | `:horizontal-text-alignment` |
@@ -33444,7 +33444,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnDashboard$TableConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -33472,12 +33472,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableFieldOptionsProperty | [[cdk.support/lookup-entry]] | `:field-options` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-options` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `paginatedReportOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TablePaginatedReportOptionsProperty | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tableInlineVisualizations` | java.util.List | [[cdk.support/lookup-entry]] | `:table-inline-visualizations` |
-| `tableOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-options` |
+| `tableOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableOptionsProperty | [[cdk.support/lookup-entry]] | `:table-options` |
 | `totalOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TotalOptionsProperty | [[cdk.support/lookup-entry]] | `:total-options` |
 "
   [^CfnDashboard$TableConfigurationProperty$Builder builder id config]
@@ -33577,7 +33577,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sizingOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellImageSizingConfigurationProperty | [[cdk.support/lookup-entry]] | `:sizing-options` |
+| `sizingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sizing-options` |
 "
   [^CfnDashboard$TableFieldImageConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sizing-options)]
@@ -33636,7 +33636,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customIconContent` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableFieldCustomIconContentProperty | [[cdk.support/lookup-entry]] | `:custom-icon-content` |
+| `customIconContent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-icon-content` |
 | `customTextContent` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableFieldCustomTextContentProperty | [[cdk.support/lookup-entry]] | `:custom-text-content` |
 "
   [^CfnDashboard$TableFieldLinkContentConfigurationProperty$Builder builder id config]
@@ -33669,7 +33669,7 @@
 |---|---|---|---|
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `urlStyling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:url-styling` |
+| `urlStyling` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableFieldURLConfigurationProperty | [[cdk.support/lookup-entry]] | `:url-styling` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 | `width` | java.lang.String | [[cdk.support/lookup-entry]] | `:width` |
 "
@@ -33708,7 +33708,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `order` | java.util.List | [[cdk.support/lookup-entry]] | `:order` |
-| `pinnedFieldOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TablePinnedFieldOptionsProperty | [[cdk.support/lookup-entry]] | `:pinned-field-options` |
+| `pinnedFieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pinned-field-options` |
 | `selectedFieldOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:selected-field-options` |
 "
   [^CfnDashboard$TableFieldOptionsProperty$Builder builder id config]
@@ -33773,7 +33773,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `tableAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-aggregated-field-wells` |
-| `tableUnaggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-unaggregated-field-wells` |
+| `tableUnaggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableUnaggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:table-unaggregated-field-wells` |
 "
   [^CfnDashboard$TableFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :table-aggregated-field-wells)]
@@ -33803,7 +33803,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataBars` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataBarsOptionsProperty | [[cdk.support/lookup-entry]] | `:data-bars` |
+| `dataBars` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-bars` |
 "
   [^CfnDashboard$TableInlineVisualizationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-bars)]
@@ -33832,9 +33832,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cell-style` |
-| `headerStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:header-style` |
+| `headerStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-style` |
 | `orientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:orientation` |
-| `rowAlternateColorOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$RowAlternateColorOptionsProperty | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
+| `rowAlternateColorOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
 "
   [^CfnDashboard$TableOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cell-style)]
@@ -33960,9 +33960,9 @@
 |---|---|---|---|
 | `bottom` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bottom` |
 | `innerHorizontal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inner-horizontal` |
-| `innerVertical` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inner-vertical` |
+| `innerVertical` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:inner-vertical` |
 | `left` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:left` |
-| `right` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:right` |
+| `right` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:right` |
 | `top` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top` |
 "
   [^CfnDashboard$TableSideBorderOptionsProperty$Builder builder id config]
@@ -34001,7 +34001,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `paginationConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$PaginationConfigurationProperty | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
+| `paginationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
 | `rowSort` | java.util.List | [[cdk.support/lookup-entry]] | `:row-sort` |
 "
   [^CfnDashboard$TableSortConfigurationProperty$Builder builder id config]
@@ -34088,9 +34088,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `conditionalFormatting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
@@ -34132,8 +34132,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `placeholderOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placeholder-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `placeholderOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$TextControlPlaceholderOptionsProperty | [[cdk.support/lookup-entry]] | `:placeholder-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnDashboard$TextAreaControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :info-icon-label-options)]
@@ -34165,9 +34165,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backgroundColor` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:background-color` |
-| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
+| `backgroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-color` |
+| `icon` | software.amazon.awscdk.services.quicksight.CfnDashboard$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
+| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnDashboard$TextConditionalFormatProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -34381,7 +34381,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `rangeMaximum` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-maximum` |
 | `rangeMinimum` | java.lang.String | [[cdk.support/lookup-entry]] | `:range-minimum` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
@@ -34422,11 +34422,11 @@
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `excludePeriodConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-period-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
-| `includeMaximum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-maximum` |
+| `includeMaximum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-maximum` |
 | `includeMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-minimum` |
 | `nullOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:null-option` |
-| `rangeMaximumValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$TimeRangeFilterValueProperty | [[cdk.support/lookup-entry]] | `:range-maximum-value` |
-| `rangeMinimumValue` | software.amazon.awscdk.services.quicksight.CfnDashboard$TimeRangeFilterValueProperty | [[cdk.support/lookup-entry]] | `:range-minimum-value` |
+| `rangeMaximumValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-maximum-value` |
+| `rangeMinimumValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-minimum-value` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 "
   [^CfnDashboard$TimeRangeFilterProperty$Builder builder id config]
@@ -34474,7 +34474,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameter` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter` |
-| `rollingDate` | software.amazon.awscdk.services.quicksight.CfnDashboard$RollingDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:rolling-date` |
+| `rollingDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rolling-date` |
 | `staticValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:static-value` |
 "
   [^CfnDashboard$TimeRangeFilterValueProperty$Builder builder id config]
@@ -34507,7 +34507,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnTooltipItem` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnTooltipItemProperty | [[cdk.support/lookup-entry]] | `:column-tooltip-item` |
+| `columnTooltipItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-tooltip-item` |
 | `fieldTooltipItem` | software.amazon.awscdk.services.quicksight.CfnDashboard$FieldTooltipItemProperty | [[cdk.support/lookup-entry]] | `:field-tooltip-item` |
 "
   [^CfnDashboard$TooltipItemProperty$Builder builder id config]
@@ -34572,9 +34572,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationSortConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-sort-configurations` |
+| `aggregationSortConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:aggregation-sort-configurations` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `limit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:limit` |
 | `parameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-name` |
@@ -34625,7 +34625,7 @@
 | `sortOrder` | java.lang.String | [[cdk.support/lookup-entry]] | `:sort-order` |
 | `time` | software.amazon.awscdk.services.quicksight.CfnDashboard$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.services.quicksight.CfnDashboard$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDashboard$TopBottomMoversComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -34807,7 +34807,7 @@
 | `placement` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement` |
 | `scrollStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:scroll-status` |
 | `totalAggregationOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:total-aggregation-options` |
-| `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
+| `totalCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
 "
   [^CfnDashboard$TotalOptionsProperty$Builder builder id config]
@@ -34846,9 +34846,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `groups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:groups` |
-| `sizes` | java.util.List | [[cdk.support/lookup-entry]] | `:sizes` |
+| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
+| `sizes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sizes` |
 "
   [^CfnDashboard$TreeMapAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -34881,14 +34881,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
-| `colorScale` | software.amazon.awscdk.services.quicksight.CfnDashboard$ColorScaleProperty | [[cdk.support/lookup-entry]] | `:color-scale` |
+| `colorScale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-scale` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `groupLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-label-options` |
+| `groupLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:group-label-options` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `sizeLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size-label-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$TreeMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnDashboard$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `sizeLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:size-label-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 "
   [^CfnDashboard$TreeMapConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color-label-options)]
@@ -34961,7 +34961,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `treeMapGroupItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:tree-map-group-items-limit-configuration` |
-| `treeMapSort` | java.util.List | [[cdk.support/lookup-entry]] | `:tree-map-sort` |
+| `treeMapSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tree-map-sort` |
 "
   [^CfnDashboard$TreeMapSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :tree-map-group-items-limit-configuration)]
@@ -34991,10 +34991,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$TreeMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -35064,7 +35064,7 @@
 |---|---|---|---|
 | `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$FormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnDashboard$UnaggregatedFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column)]
@@ -35158,7 +35158,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `percentRange` | software.amazon.awscdk.services.quicksight.CfnDashboard$PercentVisibleRangeProperty | [[cdk.support/lookup-entry]] | `:percent-range` |
+| `percentRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:percent-range` |
 "
   [^CfnDashboard$VisibleRangeOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :percent-range)]
@@ -35214,9 +35214,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filterOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-operation` |
+| `filterOperation` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomActionFilterOperationProperty | [[cdk.support/lookup-entry]] | `:filter-operation` |
 | `navigationOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:navigation-operation` |
-| `setParametersOperation` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomActionSetParametersOperationProperty | [[cdk.support/lookup-entry]] | `:set-parameters-operation` |
+| `setParametersOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:set-parameters-operation` |
 | `urlOperation` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomActionURLOperationProperty | [[cdk.support/lookup-entry]] | `:url-operation` |
 "
   [^CfnDashboard$VisualCustomActionOperationProperty$Builder builder id config]
@@ -35320,7 +35320,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `chartColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:chart-color` |
-| `colorMap` | java.util.List | [[cdk.support/lookup-entry]] | `:color-map` |
+| `colorMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-map` |
 "
   [^CfnDashboard$VisualPaletteProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :chart-color)]
@@ -35351,24 +35351,24 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `barChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bar-chart-visual` |
-| `boxPlotVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$BoxPlotVisualProperty | [[cdk.support/lookup-entry]] | `:box-plot-visual` |
-| `comboChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:combo-chart-visual` |
+| `boxPlotVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:box-plot-visual` |
+| `comboChartVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$ComboChartVisualProperty | [[cdk.support/lookup-entry]] | `:combo-chart-visual` |
 | `customContentVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$CustomContentVisualProperty | [[cdk.support/lookup-entry]] | `:custom-content-visual` |
-| `emptyVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$EmptyVisualProperty | [[cdk.support/lookup-entry]] | `:empty-visual` |
-| `filledMapVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$FilledMapVisualProperty | [[cdk.support/lookup-entry]] | `:filled-map-visual` |
-| `funnelChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:funnel-chart-visual` |
+| `emptyVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:empty-visual` |
+| `filledMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filled-map-visual` |
+| `funnelChartVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$FunnelChartVisualProperty | [[cdk.support/lookup-entry]] | `:funnel-chart-visual` |
 | `gaugeChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gauge-chart-visual` |
 | `geospatialMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial-map-visual` |
-| `heatMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-visual` |
-| `histogramVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$HistogramVisualProperty | [[cdk.support/lookup-entry]] | `:histogram-visual` |
-| `insightVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insight-visual` |
-| `kpiVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kpi-visual` |
+| `heatMapVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$HeatMapVisualProperty | [[cdk.support/lookup-entry]] | `:heat-map-visual` |
+| `histogramVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:histogram-visual` |
+| `insightVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$InsightVisualProperty | [[cdk.support/lookup-entry]] | `:insight-visual` |
+| `kpiVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$KPIVisualProperty | [[cdk.support/lookup-entry]] | `:kpi-visual` |
 | `lineChartVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$LineChartVisualProperty | [[cdk.support/lookup-entry]] | `:line-chart-visual` |
-| `pieChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pie-chart-visual` |
+| `pieChartVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$PieChartVisualProperty | [[cdk.support/lookup-entry]] | `:pie-chart-visual` |
 | `pivotTableVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$PivotTableVisualProperty | [[cdk.support/lookup-entry]] | `:pivot-table-visual` |
 | `radarChartVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$RadarChartVisualProperty | [[cdk.support/lookup-entry]] | `:radar-chart-visual` |
-| `sankeyDiagramVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sankey-diagram-visual` |
-| `scatterPlotVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scatter-plot-visual` |
+| `sankeyDiagramVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$SankeyDiagramVisualProperty | [[cdk.support/lookup-entry]] | `:sankey-diagram-visual` |
+| `scatterPlotVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$ScatterPlotVisualProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-visual` |
 | `tableVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$TableVisualProperty | [[cdk.support/lookup-entry]] | `:table-visual` |
 | `treeMapVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$TreeMapVisualProperty | [[cdk.support/lookup-entry]] | `:tree-map-visual` |
 | `waterfallVisual` | software.amazon.awscdk.services.quicksight.CfnDashboard$WaterfallVisualProperty | [[cdk.support/lookup-entry]] | `:waterfall-visual` |
@@ -35506,7 +35506,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `breakdowns` | java.util.List | [[cdk.support/lookup-entry]] | `:breakdowns` |
+| `breakdowns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:breakdowns` |
 | `categories` | java.util.List | [[cdk.support/lookup-entry]] | `:categories` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
@@ -35569,13 +35569,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis-display-options` |
-| `categoryAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis-label-options` |
-| `colorConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$WaterfallChartColorConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-configuration` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnDashboard$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `categoryAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis-label-options` |
+| `colorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-configuration` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$WaterfallChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnDashboard$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `waterfallChartOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:waterfall-chart-options` |
@@ -35626,7 +35626,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `waterfallChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$WaterfallChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:waterfall-chart-aggregated-field-wells` |
+| `waterfallChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:waterfall-chart-aggregated-field-wells` |
 "
   [^CfnDashboard$WaterfallChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :waterfall-chart-aggregated-field-wells)]
@@ -35716,8 +35716,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `breakdownItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:breakdown-items-limit` |
-| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `breakdownItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:breakdown-items-limit` |
+| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnDashboard$WaterfallChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :breakdown-items-limit)]
@@ -35748,10 +35748,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$WaterfallChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$WaterfallVisualProperty$Builder builder id config]
@@ -35888,8 +35888,8 @@
 |---|---|---|---|
 | `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$WordCloudFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$WordCloudSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `wordCloudOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:word-cloud-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `wordCloudOptions` | software.amazon.awscdk.services.quicksight.CfnDashboard$WordCloudOptionsProperty | [[cdk.support/lookup-entry]] | `:word-cloud-options` |
 "
   [^CfnDashboard$WordCloudChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-label-options)]
@@ -35923,7 +35923,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `wordCloudAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnDashboard$WordCloudAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:word-cloud-aggregated-field-wells` |
+| `wordCloudAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:word-cloud-aggregated-field-wells` |
 "
   [^CfnDashboard$WordCloudFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :word-cloud-aggregated-field-wells)]
@@ -35995,7 +35995,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnDashboard$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnDashboard$WordCloudSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-items-limit)]
@@ -36026,10 +36026,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnDashboard$WordCloudChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnDashboard$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnDashboard$WordCloudVisualProperty$Builder builder id config]
@@ -36070,17 +36070,17 @@
 |---|---|---|---|
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
 | `columnGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:column-groups` |
-| `columnLevelPermissionRules` | java.util.List | [[cdk.support/lookup-entry]] | `:column-level-permission-rules` |
+| `columnLevelPermissionRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-level-permission-rules` |
 | `dataSetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-id` |
-| `dataSetRefreshProperties` | software.amazon.awscdk.services.quicksight.CfnDataSet$DataSetRefreshPropertiesProperty | [[cdk.support/lookup-entry]] | `:data-set-refresh-properties` |
+| `dataSetRefreshProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-set-refresh-properties` |
 | `dataSetUsageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-set-usage-configuration` |
-| `datasetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:dataset-parameters` |
+| `datasetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataset-parameters` |
 | `fieldFolders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-folders` |
 | `importMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:import-mode` |
-| `ingestionWaitPolicy` | software.amazon.awscdk.services.quicksight.CfnDataSet$IngestionWaitPolicyProperty | [[cdk.support/lookup-entry]] | `:ingestion-wait-policy` |
-| `logicalTableMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logical-table-map` |
+| `ingestionWaitPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingestion-wait-policy` |
+| `logicalTableMap` | java.util.Map | [[cdk.support/lookup-entry]] | `:logical-table-map` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
+| `permissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions` |
 | `physicalTableMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:physical-table-map` |
 | `rowLevelPermissionDataSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-level-permission-data-set` |
 | `rowLevelPermissionTagConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-level-permission-tag-configuration` |
@@ -36302,7 +36302,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnDescription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-description` |
+| `columnDescription` | software.amazon.awscdk.services.quicksight.CfnDataSet$ColumnDescriptionProperty | [[cdk.support/lookup-entry]] | `:column-description` |
 | `columnGeographicRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-geographic-role` |
 "
   [^CfnDataSet$ColumnTagProperty$Builder builder id config]
@@ -36333,7 +36333,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
 "
   [^CfnDataSet$CreateColumnsOperationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :columns)]
@@ -36361,7 +36361,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
 | `dataSourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-source-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `sqlQuery` | java.lang.String | [[cdk.support/lookup-entry]] | `:sql-query` |
@@ -36426,8 +36426,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `disableUseAsDirectQuerySource` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-use-as-direct-query-source` |
-| `disableUseAsImportedSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-use-as-imported-source` |
+| `disableUseAsDirectQuerySource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-use-as-direct-query-source` |
+| `disableUseAsImportedSource` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-use-as-imported-source` |
 "
   [^CfnDataSet$DataSetUsageConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :disable-use-as-direct-query-source)]
@@ -36460,7 +36460,7 @@
 | `dateTimeDatasetParameter` | software.amazon.awscdk.services.quicksight.CfnDataSet$DateTimeDatasetParameterProperty | [[cdk.support/lookup-entry]] | `:date-time-dataset-parameter` |
 | `decimalDatasetParameter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-dataset-parameter` |
 | `integerDatasetParameter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-dataset-parameter` |
-| `stringDatasetParameter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-dataset-parameter` |
+| `stringDatasetParameter` | software.amazon.awscdk.services.quicksight.CfnDataSet$StringDatasetParameterProperty | [[cdk.support/lookup-entry]] | `:string-dataset-parameter` |
 "
   [^CfnDataSet$DatasetParameterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-dataset-parameter)]
@@ -36562,7 +36562,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
+| `staticValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnDataSet$DecimalDatasetParameterDefaultValuesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :static-values)]
@@ -36590,7 +36590,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnDataSet$DecimalDatasetParameterDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `valueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-type` |
@@ -36841,7 +36841,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnDataSet$IntegerDatasetParameterDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `valueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-type` |
@@ -36921,7 +36921,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `uniqueKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:unique-key` |
+| `uniqueKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unique-key` |
 "
   [^CfnDataSet$JoinKeyPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :unique-key)]
@@ -36950,7 +36950,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alias` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias` |
-| `dataTransforms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-transforms` |
+| `dataTransforms` | java.util.List | [[cdk.support/lookup-entry]] | `:data-transforms` |
 | `source` | software.amazon.awscdk.services.quicksight.CfnDataSet$LogicalTableSourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnDataSet$LogicalTableProperty$Builder builder id config]
@@ -36984,7 +36984,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataSetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-arn` |
-| `joinInstruction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:join-instruction` |
+| `joinInstruction` | software.amazon.awscdk.services.quicksight.CfnDataSet$JoinInstructionProperty | [[cdk.support/lookup-entry]] | `:join-instruction` |
 | `physicalTableId` | java.lang.String | [[cdk.support/lookup-entry]] | `:physical-table-id` |
 "
   [^CfnDataSet$LogicalTableSourceProperty$Builder builder id config]
@@ -37052,8 +37052,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeStaticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:date-time-static-values` |
-| `decimalStaticValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-static-values` |
-| `integerStaticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:integer-static-values` |
+| `decimalStaticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:decimal-static-values` |
+| `integerStaticValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-static-values` |
 | `stringStaticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:string-static-values` |
 "
   [^CfnDataSet$NewDefaultValuesProperty$Builder builder id config]
@@ -37160,7 +37160,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customSql` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-sql` |
-| `relationalTable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relational-table` |
+| `relationalTable` | software.amazon.awscdk.services.quicksight.CfnDataSet$RelationalTableProperty | [[cdk.support/lookup-entry]] | `:relational-table` |
 | `s3Source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-source` |
 "
   [^CfnDataSet$PhysicalTableProperty$Builder builder id config]
@@ -37225,18 +37225,18 @@
 | `columnGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:column-groups` |
 | `columnLevelPermissionRules` | java.util.List | [[cdk.support/lookup-entry]] | `:column-level-permission-rules` |
 | `dataSetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-id` |
-| `dataSetRefreshProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-set-refresh-properties` |
+| `dataSetRefreshProperties` | software.amazon.awscdk.services.quicksight.CfnDataSet$DataSetRefreshPropertiesProperty | [[cdk.support/lookup-entry]] | `:data-set-refresh-properties` |
 | `dataSetUsageConfiguration` | software.amazon.awscdk.services.quicksight.CfnDataSet$DataSetUsageConfigurationProperty | [[cdk.support/lookup-entry]] | `:data-set-usage-configuration` |
 | `datasetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataset-parameters` |
-| `fieldFolders` | java.util.Map | [[cdk.support/lookup-entry]] | `:field-folders` |
+| `fieldFolders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-folders` |
 | `importMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:import-mode` |
-| `ingestionWaitPolicy` | software.amazon.awscdk.services.quicksight.CfnDataSet$IngestionWaitPolicyProperty | [[cdk.support/lookup-entry]] | `:ingestion-wait-policy` |
-| `logicalTableMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logical-table-map` |
+| `ingestionWaitPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingestion-wait-policy` |
+| `logicalTableMap` | java.util.Map | [[cdk.support/lookup-entry]] | `:logical-table-map` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions` |
-| `physicalTableMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:physical-table-map` |
-| `rowLevelPermissionDataSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-level-permission-data-set` |
-| `rowLevelPermissionTagConfiguration` | software.amazon.awscdk.services.quicksight.CfnDataSet$RowLevelPermissionTagConfigurationProperty | [[cdk.support/lookup-entry]] | `:row-level-permission-tag-configuration` |
+| `physicalTableMap` | java.util.Map | [[cdk.support/lookup-entry]] | `:physical-table-map` |
+| `rowLevelPermissionDataSet` | software.amazon.awscdk.services.quicksight.CfnDataSet$RowLevelPermissionDataSetProperty | [[cdk.support/lookup-entry]] | `:row-level-permission-data-set` |
+| `rowLevelPermissionTagConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-level-permission-tag-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataSetProps$Builder builder id config]
@@ -37297,7 +37297,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `incrementalRefresh` | software.amazon.awscdk.services.quicksight.CfnDataSet$IncrementalRefreshProperty | [[cdk.support/lookup-entry]] | `:incremental-refresh` |
+| `incrementalRefresh` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:incremental-refresh` |
 "
   [^CfnDataSet$RefreshConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :incremental-refresh)]
@@ -37327,7 +37327,7 @@
 |---|---|---|---|
 | `catalog` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog` |
 | `dataSourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-source-arn` |
-| `inputColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:input-columns` |
+| `inputColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-columns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `schema` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema` |
 "
@@ -37469,7 +37469,7 @@
 |---|---|---|---|
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tagRuleConfigurations` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tag-rule-configurations` |
-| `tagRules` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-rules` |
+| `tagRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-rules` |
 "
   [^CfnDataSet$RowLevelPermissionTagConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :status)]
@@ -37539,8 +37539,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataSourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-source-arn` |
-| `inputColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-columns` |
-| `uploadSettings` | software.amazon.awscdk.services.quicksight.CfnDataSet$UploadSettingsProperty | [[cdk.support/lookup-entry]] | `:upload-settings` |
+| `inputColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:input-columns` |
+| `uploadSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:upload-settings` |
 "
   [^CfnDataSet$S3SourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-source-arn)]
@@ -37600,7 +37600,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnDataSet$StringDatasetParameterDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `valueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-type` |
@@ -37668,14 +37668,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `castColumnTypeOperation` | software.amazon.awscdk.services.quicksight.CfnDataSet$CastColumnTypeOperationProperty | [[cdk.support/lookup-entry]] | `:cast-column-type-operation` |
+| `castColumnTypeOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cast-column-type-operation` |
 | `createColumnsOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-columns-operation` |
-| `filterOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-operation` |
+| `filterOperation` | software.amazon.awscdk.services.quicksight.CfnDataSet$FilterOperationProperty | [[cdk.support/lookup-entry]] | `:filter-operation` |
 | `overrideDatasetParameterOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:override-dataset-parameter-operation` |
 | `projectOperation` | software.amazon.awscdk.services.quicksight.CfnDataSet$ProjectOperationProperty | [[cdk.support/lookup-entry]] | `:project-operation` |
-| `renameColumnOperation` | software.amazon.awscdk.services.quicksight.CfnDataSet$RenameColumnOperationProperty | [[cdk.support/lookup-entry]] | `:rename-column-operation` |
+| `renameColumnOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rename-column-operation` |
 | `tagColumnOperation` | software.amazon.awscdk.services.quicksight.CfnDataSet$TagColumnOperationProperty | [[cdk.support/lookup-entry]] | `:tag-column-operation` |
-| `untagColumnOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:untag-column-operation` |
+| `untagColumnOperation` | software.amazon.awscdk.services.quicksight.CfnDataSet$UntagColumnOperationProperty | [[cdk.support/lookup-entry]] | `:untag-column-operation` |
 "
   [^CfnDataSet$TransformOperationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cast-column-type-operation)]
@@ -37947,14 +37947,14 @@
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
 | `credentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:credentials` |
 | `dataSourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-source-id` |
-| `dataSourceParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-source-parameters` |
+| `dataSourceParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$DataSourceParametersProperty | [[cdk.support/lookup-entry]] | `:data-source-parameters` |
 | `errorInfo` | software.amazon.awscdk.services.quicksight.CfnDataSource$DataSourceErrorInfoProperty | [[cdk.support/lookup-entry]] | `:error-info` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `permissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions` |
+| `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
 | `sslProperties` | software.amazon.awscdk.services.quicksight.CfnDataSource$SslPropertiesProperty | [[cdk.support/lookup-entry]] | `:ssl-properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `vpcConnectionProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-connection-properties` |
+| `vpcConnectionProperties` | software.amazon.awscdk.services.quicksight.CfnDataSource$VpcConnectionPropertiesProperty | [[cdk.support/lookup-entry]] | `:vpc-connection-properties` |
 "
   [^CfnDataSource$Builder builder id config]
   (when-some [data (lookup-entry config id :alternate-data-source-parameters)]
@@ -38004,7 +38004,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alternateDataSourceParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alternate-data-source-parameters` |
+| `alternateDataSourceParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:alternate-data-source-parameters` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
@@ -38039,7 +38039,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `copySourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:copy-source-arn` |
-| `credentialPair` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:credential-pair` |
+| `credentialPair` | software.amazon.awscdk.services.quicksight.CfnDataSource$CredentialPairProperty | [[cdk.support/lookup-entry]] | `:credential-pair` |
 | `secretArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-arn` |
 "
   [^CfnDataSource$DataSourceCredentialsProperty$Builder builder id config]
@@ -38104,24 +38104,24 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `amazonElasticsearchParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-elasticsearch-parameters` |
-| `amazonOpenSearchParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$AmazonOpenSearchParametersProperty | [[cdk.support/lookup-entry]] | `:amazon-open-search-parameters` |
+| `amazonOpenSearchParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-open-search-parameters` |
 | `athenaParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$AthenaParametersProperty | [[cdk.support/lookup-entry]] | `:athena-parameters` |
 | `auroraParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$AuroraParametersProperty | [[cdk.support/lookup-entry]] | `:aurora-parameters` |
 | `auroraPostgreSqlParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$AuroraPostgreSqlParametersProperty | [[cdk.support/lookup-entry]] | `:aurora-postgre-sql-parameters` |
-| `databricksParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:databricks-parameters` |
+| `databricksParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$DatabricksParametersProperty | [[cdk.support/lookup-entry]] | `:databricks-parameters` |
 | `mariaDbParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$MariaDbParametersProperty | [[cdk.support/lookup-entry]] | `:maria-db-parameters` |
-| `mySqlParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:my-sql-parameters` |
-| `oracleParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:oracle-parameters` |
+| `mySqlParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$MySqlParametersProperty | [[cdk.support/lookup-entry]] | `:my-sql-parameters` |
+| `oracleParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$OracleParametersProperty | [[cdk.support/lookup-entry]] | `:oracle-parameters` |
 | `postgreSqlParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$PostgreSqlParametersProperty | [[cdk.support/lookup-entry]] | `:postgre-sql-parameters` |
 | `prestoParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:presto-parameters` |
-| `rdsParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$RdsParametersProperty | [[cdk.support/lookup-entry]] | `:rds-parameters` |
+| `rdsParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rds-parameters` |
 | `redshiftParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$RedshiftParametersProperty | [[cdk.support/lookup-entry]] | `:redshift-parameters` |
 | `s3Parameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$S3ParametersProperty | [[cdk.support/lookup-entry]] | `:s3-parameters` |
-| `snowflakeParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snowflake-parameters` |
-| `sparkParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spark-parameters` |
-| `sqlServerParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sql-server-parameters` |
-| `starburstParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:starburst-parameters` |
-| `teradataParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:teradata-parameters` |
+| `snowflakeParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$SnowflakeParametersProperty | [[cdk.support/lookup-entry]] | `:snowflake-parameters` |
+| `sparkParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$SparkParametersProperty | [[cdk.support/lookup-entry]] | `:spark-parameters` |
+| `sqlServerParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$SqlServerParametersProperty | [[cdk.support/lookup-entry]] | `:sql-server-parameters` |
+| `starburstParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$StarburstParametersProperty | [[cdk.support/lookup-entry]] | `:starburst-parameters` |
+| `teradataParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$TeradataParametersProperty | [[cdk.support/lookup-entry]] | `:teradata-parameters` |
 | `trinoParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$TrinoParametersProperty | [[cdk.support/lookup-entry]] | `:trino-parameters` |
 "
   [^CfnDataSource$DataSourceParametersProperty$Builder builder id config]
@@ -38222,7 +38222,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableIdentityPropagation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-identity-propagation` |
+| `enableIdentityPropagation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-identity-propagation` |
 "
   [^CfnDataSource$IdentityCenterConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-identity-propagation)]
@@ -38451,18 +38451,18 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alternateDataSourceParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alternate-data-source-parameters` |
+| `alternateDataSourceParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:alternate-data-source-parameters` |
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
 | `credentials` | software.amazon.awscdk.services.quicksight.CfnDataSource$DataSourceCredentialsProperty | [[cdk.support/lookup-entry]] | `:credentials` |
 | `dataSourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-source-id` |
 | `dataSourceParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$DataSourceParametersProperty | [[cdk.support/lookup-entry]] | `:data-source-parameters` |
-| `errorInfo` | software.amazon.awscdk.services.quicksight.CfnDataSource$DataSourceErrorInfoProperty | [[cdk.support/lookup-entry]] | `:error-info` |
+| `errorInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:error-info` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
-| `sslProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssl-properties` |
+| `sslProperties` | software.amazon.awscdk.services.quicksight.CfnDataSource$SslPropertiesProperty | [[cdk.support/lookup-entry]] | `:ssl-properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `vpcConnectionProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-connection-properties` |
+| `vpcConnectionProperties` | software.amazon.awscdk.services.quicksight.CfnDataSource$VpcConnectionPropertiesProperty | [[cdk.support/lookup-entry]] | `:vpc-connection-properties` |
 "
   [^CfnDataSourceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :alternate-data-source-parameters)]
@@ -38543,7 +38543,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoCreateDatabaseUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-create-database-user` |
+| `autoCreateDatabaseUser` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-create-database-user` |
 | `databaseGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:database-groups` |
 | `databaseUser` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-user` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -38584,7 +38584,7 @@
 | `database` | java.lang.String | [[cdk.support/lookup-entry]] | `:database` |
 | `host` | java.lang.String | [[cdk.support/lookup-entry]] | `:host` |
 | `iamParameters` | software.amazon.awscdk.services.quicksight.CfnDataSource$RedshiftIAMParametersProperty | [[cdk.support/lookup-entry]] | `:iam-parameters` |
-| `identityCenterConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:identity-center-configuration` |
+| `identityCenterConfiguration` | software.amazon.awscdk.services.quicksight.CfnDataSource$IdentityCenterConfigurationProperty | [[cdk.support/lookup-entry]] | `:identity-center-configuration` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 "
   [^CfnDataSource$RedshiftParametersProperty$Builder builder id config]
@@ -38657,7 +38657,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `manifestFileLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manifest-file-location` |
+| `manifestFileLocation` | software.amazon.awscdk.services.quicksight.CfnDataSource$ManifestFileLocationProperty | [[cdk.support/lookup-entry]] | `:manifest-file-location` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDataSource$S3ParametersProperty$Builder builder id config]
@@ -38787,7 +38787,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `disableSsl` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-ssl` |
+| `disableSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-ssl` |
 "
   [^CfnDataSource$SslPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :disable-ssl)]
@@ -39121,10 +39121,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributeAggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$AttributeAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:attribute-aggregation-function` |
+| `attributeAggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-aggregation-function` |
 | `categoricalAggregationFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:categorical-aggregation-function` |
 | `dateAggregationFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-aggregation-function` |
-| `numericalAggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericalAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:numerical-aggregation-function` |
+| `numericalAggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numerical-aggregation-function` |
 "
   [^CfnTemplate$AggregationFunctionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attribute-aggregation-function)]
@@ -39158,8 +39158,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `sortDirection` | java.lang.String | [[cdk.support/lookup-entry]] | `:sort-direction` |
 "
   [^CfnTemplate$AggregationSortConfigurationProperty$Builder builder id config]
@@ -39251,7 +39251,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
+| `range` | software.amazon.awscdk.services.quicksight.CfnTemplate$ArcAxisDisplayRangeProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `reserveRange` | java.lang.Number | [[cdk.support/lookup-entry]] | `:reserve-range` |
 "
   [^CfnTemplate$ArcAxisConfigurationProperty$Builder builder id config]
@@ -39434,7 +39434,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateAxisOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateAxisOptionsProperty | [[cdk.support/lookup-entry]] | `:date-axis-options` |
+| `dateAxisOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-axis-options` |
 | `numericAxisOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericAxisOptionsProperty | [[cdk.support/lookup-entry]] | `:numeric-axis-options` |
 "
   [^CfnTemplate$AxisDataOptionsProperty$Builder builder id config]
@@ -39498,10 +39498,10 @@
 |---|---|---|---|
 | `axisLineVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-line-visibility` |
 | `axisOffset` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-offset` |
-| `dataOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDataOptionsProperty | [[cdk.support/lookup-entry]] | `:data-options` |
+| `dataOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-options` |
 | `gridLineVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:grid-line-visibility` |
-| `scrollbarOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ScrollBarOptionsProperty | [[cdk.support/lookup-entry]] | `:scrollbar-options` |
-| `tickLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisTickLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:tick-label-options` |
+| `scrollbarOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scrollbar-options` |
+| `tickLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tick-label-options` |
 "
   [^CfnTemplate$AxisDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-line-visibility)]
@@ -39572,7 +39572,7 @@
 |---|---|---|---|
 | `applyTo` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisLabelReferenceOptionsProperty | [[cdk.support/lookup-entry]] | `:apply-to` |
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
-| `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
+| `fontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font-configuration` |
 "
   [^CfnTemplate$AxisLabelOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :apply-to)]
@@ -39604,7 +39604,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 "
   [^CfnTemplate$AxisLabelReferenceOptionsProperty$Builder builder id config]
@@ -39695,7 +39695,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `linear` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisLinearScaleProperty | [[cdk.support/lookup-entry]] | `:linear` |
-| `logarithmic` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisLogarithmicScaleProperty | [[cdk.support/lookup-entry]] | `:logarithmic` |
+| `logarithmic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logarithmic` |
 "
   [^CfnTemplate$AxisScaleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :linear)]
@@ -39756,9 +39756,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `smallMultiples` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples` |
+| `smallMultiples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$BarChartAggregatedFieldWellsProperty$Builder builder id config]
@@ -39795,20 +39795,20 @@
 |---|---|---|---|
 | `barsArrangement` | java.lang.String | [[cdk.support/lookup-entry]] | `:bars-arrangement` |
 | `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
-| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
 | `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$BarChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
+| `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `orientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:orientation` |
-| `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$BarChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `valueAxis` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:value-axis` |
+| `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
+| `smallMultiplesOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `valueAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-axis` |
 | `valueLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-label-options` |
-| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnTemplate$BarChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bars-arrangement)]
@@ -39896,9 +39896,9 @@
 |---|---|---|---|
 | `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit` |
+| `colorItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit` |
 | `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
-| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
+| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
 | `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
   [^CfnTemplate$BarChartSortConfigurationProperty$Builder builder id config]
@@ -39937,10 +39937,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$BarChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -40039,10 +40039,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
+| `content` | software.amazon.awscdk.services.quicksight.CfnTemplate$BodySectionContentProperty | [[cdk.support/lookup-entry]] | `:content` |
 | `pageBreakConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$SectionPageBreakConfigurationProperty | [[cdk.support/lookup-entry]] | `:page-break-configuration` |
 | `sectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:section-id` |
-| `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
+| `style` | software.amazon.awscdk.services.quicksight.CfnTemplate$SectionStyleProperty | [[cdk.support/lookup-entry]] | `:style` |
 "
   [^CfnTemplate$BodySectionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :content)]
@@ -40076,7 +40076,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `layout` | software.amazon.awscdk.services.quicksight.CfnTemplate$SectionLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:layout` |
+| `layout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layout` |
 "
   [^CfnTemplate$BodySectionContentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :layout)]
@@ -40104,8 +40104,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `groupBy` | java.util.List | [[cdk.support/lookup-entry]] | `:group-by` |
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `groupBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-by` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$BoxPlotAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :group-by)]
@@ -40135,16 +40135,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `boxPlotOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:box-plot-options` |
+| `boxPlotOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$BoxPlotOptionsProperty | [[cdk.support/lookup-entry]] | `:box-plot-options` |
 | `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
 | `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$BoxPlotFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
-| `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$BoxPlotSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnTemplate$BoxPlotChartConfigurationProperty$Builder builder id config]
@@ -40193,7 +40193,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `boxPlotAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$BoxPlotAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:box-plot-aggregated-field-wells` |
+| `boxPlotAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:box-plot-aggregated-field-wells` |
 "
   [^CfnTemplate$BoxPlotFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :box-plot-aggregated-field-wells)]
@@ -40255,8 +40255,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `paginationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `paginationConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$PaginationConfigurationProperty | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
 "
   [^CfnTemplate$BoxPlotSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-sort)]
@@ -40317,7 +40317,7 @@
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$BoxPlotChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -40474,7 +40474,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sourceControls` | java.util.List | [[cdk.support/lookup-entry]] | `:source-controls` |
+| `sourceControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-controls` |
 "
   [^CfnTemplate$CascadingControlConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :source-controls)]
@@ -40502,7 +40502,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnToMatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-to-match` |
+| `columnToMatch` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column-to-match` |
 | `sourceSheetControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-sheet-control-id` |
 "
   [^CfnTemplate$CascadingControlSourceProperty$Builder builder id config]
@@ -40571,7 +40571,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregationFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$StringFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
@@ -40638,9 +40638,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customFilterConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomFilterConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-filter-configuration` |
+| `customFilterConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-filter-configuration` |
 | `customFilterListConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomFilterListConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-filter-list-configuration` |
-| `filterListConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-list-configuration` |
+| `filterListConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterListConfigurationProperty | [[cdk.support/lookup-entry]] | `:filter-list-configuration` |
 "
   [^CfnTemplate$CategoryFilterConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-filter-configuration)]
@@ -40672,8 +40672,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
-| `configuration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CategoryFilterConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 "
@@ -40800,7 +40800,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `colorFillType` | java.lang.String | [[cdk.support/lookup-entry]] | `:color-fill-type` |
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
 | `nullValueColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-color` |
 "
   [^CfnTemplate$ColorScaleProperty$Builder builder id config]
@@ -40861,7 +40861,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colorsConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColorsConfigurationProperty | [[cdk.support/lookup-entry]] | `:colors-configuration` |
+| `colorsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors-configuration` |
 | `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
@@ -40957,8 +40957,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimeHierarchy` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateTimeHierarchyProperty | [[cdk.support/lookup-entry]] | `:date-time-hierarchy` |
-| `explicitHierarchy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:explicit-hierarchy` |
+| `dateTimeHierarchy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-hierarchy` |
+| `explicitHierarchy` | software.amazon.awscdk.services.quicksight.CfnTemplate$ExplicitHierarchyProperty | [[cdk.support/lookup-entry]] | `:explicit-hierarchy` |
 | `predefinedHierarchy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-hierarchy` |
 "
   [^CfnTemplate$ColumnHierarchyProperty$Builder builder id config]
@@ -41056,7 +41056,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
 | `direction` | java.lang.String | [[cdk.support/lookup-entry]] | `:direction` |
 | `sortBy` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:sort-by` |
 "
@@ -41091,7 +41091,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregation` | software.amazon.awscdk.services.quicksight.CfnTemplate$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation` |
-| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 "
@@ -41127,7 +41127,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `barValues` | java.util.List | [[cdk.support/lookup-entry]] | `:bar-values` |
+| `barValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bar-values` |
 | `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
 | `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
 | `lineValues` | java.util.List | [[cdk.support/lookup-entry]] | `:line-values` |
@@ -41166,19 +41166,19 @@
 |---|---|---|---|
 | `barDataLabels` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:bar-data-labels` |
 | `barsArrangement` | java.lang.String | [[cdk.support/lookup-entry]] | `:bars-arrangement` |
-| `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
-| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
+| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$ComboChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
-| `lineDataLabels` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:line-data-labels` |
-| `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `lineDataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-data-labels` |
+| `primaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
 | `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
+| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
 | `secondaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnTemplate$ComboChartConfigurationProperty$Builder builder id config]
@@ -41237,7 +41237,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `comboChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$ComboChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:combo-chart-aggregated-field-wells` |
+| `comboChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:combo-chart-aggregated-field-wells` |
 "
   [^CfnTemplate$ComboChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :combo-chart-aggregated-field-wells)]
@@ -41265,9 +41265,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit` |
+| `colorItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit` |
 | `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
 "
   [^CfnTemplate$ComboChartSortConfigurationProperty$Builder builder id config]
@@ -41302,11 +41302,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ComboChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$ComboChartVisualProperty$Builder builder id config]
@@ -41345,7 +41345,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `comparisonFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison-format` |
+| `comparisonFormat` | software.amazon.awscdk.services.quicksight.CfnTemplate$ComparisonFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison-format` |
 | `comparisonMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:comparison-method` |
 "
   [^CfnTemplate$ComparisonConfigurationProperty$Builder builder id config]
@@ -41407,15 +41407,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `forecast` | software.amazon.awscdk.services.quicksight.CfnTemplate$ForecastComputationProperty | [[cdk.support/lookup-entry]] | `:forecast` |
-| `growthRate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:growth-rate` |
+| `forecast` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast` |
+| `growthRate` | software.amazon.awscdk.services.quicksight.CfnTemplate$GrowthRateComputationProperty | [[cdk.support/lookup-entry]] | `:growth-rate` |
 | `maximumMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maximum-minimum` |
 | `metricComparison` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-comparison` |
 | `periodOverPeriod` | software.amazon.awscdk.services.quicksight.CfnTemplate$PeriodOverPeriodComputationProperty | [[cdk.support/lookup-entry]] | `:period-over-period` |
 | `periodToDate` | software.amazon.awscdk.services.quicksight.CfnTemplate$PeriodToDateComputationProperty | [[cdk.support/lookup-entry]] | `:period-to-date` |
 | `topBottomMovers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-movers` |
-| `topBottomRanked` | software.amazon.awscdk.services.quicksight.CfnTemplate$TopBottomRankedComputationProperty | [[cdk.support/lookup-entry]] | `:top-bottom-ranked` |
-| `totalAggregation` | software.amazon.awscdk.services.quicksight.CfnTemplate$TotalAggregationComputationProperty | [[cdk.support/lookup-entry]] | `:total-aggregation` |
+| `topBottomRanked` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-ranked` |
+| `totalAggregation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-aggregation` |
 | `uniqueValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$UniqueValuesComputationProperty | [[cdk.support/lookup-entry]] | `:unique-values` |
 "
   [^CfnTemplate$ComputationProperty$Builder builder id config]
@@ -41462,8 +41462,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `gradient` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingGradientColorProperty | [[cdk.support/lookup-entry]] | `:gradient` |
-| `solid` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:solid` |
+| `gradient` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gradient` |
+| `solid` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingSolidColorProperty | [[cdk.support/lookup-entry]] | `:solid` |
 "
   [^CfnTemplate$ConditionalFormattingColorProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :gradient)]
@@ -41494,9 +41494,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `color` | java.lang.String | [[cdk.support/lookup-entry]] | `:color` |
-| `displayConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingIconDisplayConfigurationProperty | [[cdk.support/lookup-entry]] | `:display-configuration` |
+| `displayConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-configuration` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
-| `iconOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingCustomIconOptionsProperty | [[cdk.support/lookup-entry]] | `:icon-options` |
+| `iconOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon-options` |
 "
   [^CfnTemplate$ConditionalFormattingCustomIconConditionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color)]
@@ -41561,7 +41561,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `color` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color` |
+| `color` | software.amazon.awscdk.services.quicksight.CfnTemplate$GradientColorProperty | [[cdk.support/lookup-entry]] | `:color` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 "
   [^CfnTemplate$ConditionalFormattingGradientColorProperty$Builder builder id config]
@@ -41620,8 +41620,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customCondition` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingCustomIconConditionProperty | [[cdk.support/lookup-entry]] | `:custom-condition` |
-| `iconSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon-set` |
+| `customCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-condition` |
+| `iconSet` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingIconSetProperty | [[cdk.support/lookup-entry]] | `:icon-set` |
 "
   [^CfnTemplate$ConditionalFormattingIconProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-condition)]
@@ -41745,8 +41745,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `decimalPlacesConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DecimalPlacesConfigurationProperty | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
-| `negativeValueConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NegativeValueConfigurationProperty | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
-| `nullValueFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
+| `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
+| `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `numberScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:number-scale` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `separatorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:separator-configuration` |
@@ -41793,8 +41793,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `selectedFieldsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-fields-configuration` |
-| `targetVisualsConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterOperationTargetVisualsConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-visuals-configuration` |
+| `selectedFieldsConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterOperationSelectedFieldsConfigurationProperty | [[cdk.support/lookup-entry]] | `:selected-fields-configuration` |
+| `targetVisualsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-visuals-configuration` |
 "
   [^CfnTemplate$CustomActionFilterOperationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :selected-fields-configuration)]
@@ -42129,7 +42129,7 @@
 |---|---|---|---|
 | `dateTimeValues` | java.util.List | [[cdk.support/lookup-entry]] | `:date-time-values` |
 | `decimalValues` | java.util.List | [[cdk.support/lookup-entry]] | `:decimal-values` |
-| `integerValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-values` |
+| `integerValues` | java.util.List | [[cdk.support/lookup-entry]] | `:integer-values` |
 | `stringValues` | java.util.List | [[cdk.support/lookup-entry]] | `:string-values` |
 "
   [^CfnTemplate$CustomParameterValuesProperty$Builder builder id config]
@@ -42263,7 +42263,7 @@
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `fieldValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-value` |
-| `settings` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:settings` |
+| `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
 "
   [^CfnTemplate$DataFieldSeriesItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -42298,10 +42298,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-label-visibility` |
-| `dataLabelTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-label-types` |
+| `dataLabelTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:data-label-types` |
 | `labelColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-color` |
 | `labelContent` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-content` |
-| `labelFontConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
+| `labelFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
 | `measureLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-label-visibility` |
 | `overlap` | java.lang.String | [[cdk.support/lookup-entry]] | `:overlap` |
 | `position` | java.lang.String | [[cdk.support/lookup-entry]] | `:position` |
@@ -42352,11 +42352,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataPathLabelType` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataPathLabelTypeProperty | [[cdk.support/lookup-entry]] | `:data-path-label-type` |
+| `dataPathLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-path-label-type` |
 | `fieldLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-label-type` |
-| `maximumLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maximum-label-type` |
+| `maximumLabelType` | software.amazon.awscdk.services.quicksight.CfnTemplate$MaximumLabelTypeProperty | [[cdk.support/lookup-entry]] | `:maximum-label-type` |
 | `minimumLabelType` | software.amazon.awscdk.services.quicksight.CfnTemplate$MinimumLabelTypeProperty | [[cdk.support/lookup-entry]] | `:minimum-label-type` |
-| `rangeEndsLabelType` | software.amazon.awscdk.services.quicksight.CfnTemplate$RangeEndsLabelTypeProperty | [[cdk.support/lookup-entry]] | `:range-ends-label-type` |
+| `rangeEndsLabelType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-ends-label-type` |
 "
   [^CfnTemplate$DataLabelTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-path-label-type)]
@@ -42393,7 +42393,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `color` | java.lang.String | [[cdk.support/lookup-entry]] | `:color` |
-| `element` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:element` |
+| `element` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataPathValueProperty | [[cdk.support/lookup-entry]] | `:element` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 "
   [^CfnTemplate$DataPathColorProperty$Builder builder id config]
@@ -42461,7 +42461,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `direction` | java.lang.String | [[cdk.support/lookup-entry]] | `:direction` |
-| `sortPaths` | java.util.List | [[cdk.support/lookup-entry]] | `:sort-paths` |
+| `sortPaths` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-paths` |
 "
   [^CfnTemplate$DataPathSortProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :direction)]
@@ -42553,7 +42553,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnGroupSchemaList` | java.util.List | [[cdk.support/lookup-entry]] | `:column-group-schema-list` |
+| `columnGroupSchemaList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-group-schema-list` |
 | `dataSetSchema` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataSetSchemaProperty | [[cdk.support/lookup-entry]] | `:data-set-schema` |
 | `placeholder` | java.lang.String | [[cdk.support/lookup-entry]] | `:placeholder` |
 "
@@ -42674,7 +42674,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `dateGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-granularity` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
@@ -42752,7 +42752,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
-| `rollingDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rolling-date` |
+| `rollingDate` | software.amazon.awscdk.services.quicksight.CfnTemplate$RollingDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:rolling-date` |
 | `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnTemplate$DateTimeDefaultValuesProperty$Builder builder id config]
@@ -42787,7 +42787,7 @@
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
 | `nullValueFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
-| `numericFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:numeric-format-configuration` |
+| `numericFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-format-configuration` |
 "
   [^CfnTemplate$DateTimeFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format)]
@@ -42819,7 +42819,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `drillDownFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
+| `drillDownFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnTemplate$DateTimeHierarchyProperty$Builder builder id config]
@@ -42850,11 +42850,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateTimeDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
-| `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
+| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `mappedDataSetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
-| `valueWhenUnset` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-when-unset` |
+| `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateTimeValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
 "
   [^CfnTemplate$DateTimeParameterDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-values)]
@@ -42892,7 +42892,7 @@
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
 | `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnTemplate$DateTimePickerControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format)]
@@ -42956,7 +42956,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dynamicValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-value` |
-| `staticValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-values` |
+| `staticValues` | java.util.List | [[cdk.support/lookup-entry]] | `:static-values` |
 "
   [^CfnTemplate$DecimalDefaultValuesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dynamic-value)]
@@ -42986,11 +42986,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
-| `mappedDataSetParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$DecimalDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
+| `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
-| `valueWhenUnset` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-when-unset` |
+| `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnTemplate$DecimalValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
 "
   [^CfnTemplate$DecimalParameterDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-values)]
@@ -43148,11 +43148,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultDateTimePickerOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-date-time-picker-options` |
-| `defaultDropdownOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultFilterDropDownControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-dropdown-options` |
-| `defaultListOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-list-options` |
+| `defaultDropdownOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-dropdown-options` |
+| `defaultListOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultFilterListControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-list-options` |
 | `defaultRelativeDateTimeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-relative-date-time-options` |
-| `defaultSliderOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-slider-options` |
-| `defaultTextAreaOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultTextAreaControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-text-area-options` |
+| `defaultSliderOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultSliderControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-slider-options` |
+| `defaultTextAreaOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-text-area-options` |
 | `defaultTextFieldOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultTextFieldControlOptionsProperty | [[cdk.support/lookup-entry]] | `:default-text-field-options` |
 "
   [^CfnTemplate$DefaultFilterControlOptionsProperty$Builder builder id config]
@@ -43194,7 +43194,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
-| `selectableValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectable-values` |
+| `selectableValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnTemplate$DefaultFilterDropDownControlOptionsProperty$Builder builder id config]
@@ -43261,7 +43261,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$FreeFormLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
 "
   [^CfnTemplate$DefaultFreeFormLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -43289,7 +43289,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$GridLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
 "
   [^CfnTemplate$DefaultGridLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -43317,8 +43317,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeForm` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultFreeFormLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form` |
-| `grid` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grid` |
+| `freeForm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form` |
+| `grid` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultGridLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:grid` |
 "
   [^CfnTemplate$DefaultInteractiveLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :free-form)]
@@ -43349,7 +43349,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `interactiveLayoutConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:interactive-layout-configuration` |
-| `paginatedLayoutConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paginated-layout-configuration` |
+| `paginatedLayoutConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultPaginatedLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:paginated-layout-configuration` |
 | `sheetContentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sheet-content-type` |
 "
   [^CfnTemplate$DefaultNewSheetConfigurationProperty$Builder builder id config]
@@ -43382,7 +43382,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sectionBased` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultSectionBasedLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:section-based` |
+| `sectionBased` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section-based` |
 "
   [^CfnTemplate$DefaultPaginatedLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :section-based)]
@@ -43410,7 +43410,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$RelativeDateTimeControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 "
   [^CfnTemplate$DefaultRelativeDateTimeControlOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :display-options)]
@@ -43565,7 +43565,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customValuesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-values-configuration` |
+| `customValuesConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomValuesConfigurationProperty | [[cdk.support/lookup-entry]] | `:custom-values-configuration` |
 | `selectAllValueOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:select-all-value-options` |
 | `sourceColumn` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:source-column` |
 | `sourceField` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-field` |
@@ -43605,9 +43605,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoricalDimensionField` | software.amazon.awscdk.services.quicksight.CfnTemplate$CategoricalDimensionFieldProperty | [[cdk.support/lookup-entry]] | `:categorical-dimension-field` |
-| `dateDimensionField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-dimension-field` |
-| `numericalDimensionField` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericalDimensionFieldProperty | [[cdk.support/lookup-entry]] | `:numerical-dimension-field` |
+| `categoricalDimensionField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:categorical-dimension-field` |
+| `dateDimensionField` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateDimensionFieldProperty | [[cdk.support/lookup-entry]] | `:date-dimension-field` |
+| `numericalDimensionField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numerical-dimension-field` |
 "
   [^CfnTemplate$DimensionFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :categorical-dimension-field)]
@@ -43700,7 +43700,7 @@
 |---|---|---|---|
 | `categoryFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-filter` |
 | `numericEqualityFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericEqualityDrillDownFilterProperty | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
-| `timeRangeFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$TimeRangeDrillDownFilterProperty | [[cdk.support/lookup-entry]] | `:time-range-filter` |
+| `timeRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-range-filter` |
 "
   [^CfnTemplate$DrillDownFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-filter)]
@@ -43732,8 +43732,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `selectAllOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:select-all-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `selectAllOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ListControlSelectAllOptionsProperty | [[cdk.support/lookup-entry]] | `:select-all-options` |
 | `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnTemplate$DropDownControlDisplayOptionsProperty$Builder builder id config]
@@ -43768,7 +43768,7 @@
 |---|---|---|---|
 | `defaultValueColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value-column` |
 | `groupNameColumn` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:group-name-column` |
-| `userNameColumn` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:user-name-column` |
+| `userNameColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-name-column` |
 "
   [^CfnTemplate$DynamicDefaultValueProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-value-column)]
@@ -43897,7 +43897,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
-| `drillDownFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
+| `drillDownFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
   [^CfnTemplate$ExplicitHierarchyProperty$Builder builder id config]
@@ -43997,7 +43997,7 @@
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
+| `settings` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:settings` |
 "
   [^CfnTemplate$FieldSeriesItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -44030,7 +44030,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columnSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-sort` |
-| `fieldSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-sort` |
+| `fieldSort` | software.amazon.awscdk.services.quicksight.CfnTemplate$FieldSortProperty | [[cdk.support/lookup-entry]] | `:field-sort` |
 "
   [^CfnTemplate$FieldSortOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column-sort)]
@@ -44125,7 +44125,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `geospatial` | java.util.List | [[cdk.support/lookup-entry]] | `:geospatial` |
+| `geospatial` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$FilledMapAggregatedFieldWellsProperty$Builder builder id config]
@@ -44184,7 +44184,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnTemplate$FilledMapConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -44212,11 +44212,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilledMapFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `mapStyleOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialMapStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:map-style-options` |
+| `mapStyleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:map-style-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilledMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `windowOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:window-options` |
 "
   [^CfnTemplate$FilledMapConfigurationProperty$Builder builder id config]
@@ -44255,7 +44255,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filledMapAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilledMapAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:filled-map-aggregated-field-wells` |
+| `filledMapAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filled-map-aggregated-field-wells` |
 "
   [^CfnTemplate$FilledMapFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :filled-map-aggregated-field-wells)]
@@ -44284,7 +44284,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `format` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format` |
+| `format` | software.amazon.awscdk.services.quicksight.CfnTemplate$ShapeConditionalFormatProperty | [[cdk.support/lookup-entry]] | `:format` |
 "
   [^CfnTemplate$FilledMapShapeConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-id)]
@@ -44314,7 +44314,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnTemplate$FilledMapSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-sort)]
@@ -44342,12 +44342,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilledMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilledMapConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$FilledMapVisualProperty$Builder builder id config]
@@ -44388,14 +44388,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `crossSheet` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterCrossSheetControlProperty | [[cdk.support/lookup-entry]] | `:cross-sheet` |
+| `crossSheet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cross-sheet` |
 | `dateTimePicker` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterDateTimePickerControlProperty | [[cdk.support/lookup-entry]] | `:date-time-picker` |
-| `dropdown` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterDropDownControlProperty | [[cdk.support/lookup-entry]] | `:dropdown` |
-| `list` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:list` |
+| `dropdown` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dropdown` |
+| `list` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterListControlProperty | [[cdk.support/lookup-entry]] | `:list` |
 | `relativeDateTime` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterRelativeDateTimeControlProperty | [[cdk.support/lookup-entry]] | `:relative-date-time` |
-| `slider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slider` |
+| `slider` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterSliderControlProperty | [[cdk.support/lookup-entry]] | `:slider` |
 | `textArea` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterTextAreaControlProperty | [[cdk.support/lookup-entry]] | `:text-area` |
-| `textField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-field` |
+| `textField` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterTextFieldControlProperty | [[cdk.support/lookup-entry]] | `:text-field` |
 "
   [^CfnTemplate$FilterControlProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cross-sheet)]
@@ -44437,7 +44437,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 "
@@ -44511,7 +44511,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
 | `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DropDownControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `selectableValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
@@ -44559,8 +44559,8 @@
 |---|---|---|---|
 | `crossDataset` | java.lang.String | [[cdk.support/lookup-entry]] | `:cross-dataset` |
 | `filterGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-group-id` |
-| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
-| `scopeConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterScopeConfigurationProperty | [[cdk.support/lookup-entry]] | `:scope-configuration` |
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
+| `scopeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope-configuration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnTemplate$FilterGroupProperty$Builder builder id config]
@@ -44634,10 +44634,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
-| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ListControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
-| `selectableValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selectable-values` |
+| `selectableValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -44742,13 +44742,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$CategoryFilterProperty | [[cdk.support/lookup-entry]] | `:category-filter` |
+| `categoryFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-filter` |
 | `numericEqualityFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
-| `numericRangeFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericRangeFilterProperty | [[cdk.support/lookup-entry]] | `:numeric-range-filter` |
-| `relativeDatesFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relative-dates-filter` |
+| `numericRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-range-filter` |
+| `relativeDatesFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$RelativeDatesFilterProperty | [[cdk.support/lookup-entry]] | `:relative-dates-filter` |
 | `timeEqualityFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$TimeEqualityFilterProperty | [[cdk.support/lookup-entry]] | `:time-equality-filter` |
 | `timeRangeFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$TimeRangeFilterProperty | [[cdk.support/lookup-entry]] | `:time-range-filter` |
-| `topBottomFilter` | software.amazon.awscdk.services.quicksight.CfnTemplate$TopBottomFilterProperty | [[cdk.support/lookup-entry]] | `:top-bottom-filter` |
+| `topBottomFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top-bottom-filter` |
 "
   [^CfnTemplate$FilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-filter)]
@@ -44826,7 +44826,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allSheets` | java.lang.Object | [[cdk.support/lookup-entry]] | `:all-sheets` |
-| `selectedSheets` | software.amazon.awscdk.services.quicksight.CfnTemplate$SelectedSheetsFilterScopeConfigurationProperty | [[cdk.support/lookup-entry]] | `:selected-sheets` |
+| `selectedSheets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-sheets` |
 "
   [^CfnTemplate$FilterScopeConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :all-sheets)]
@@ -44884,7 +44884,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SliderControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `maximumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-value` |
 | `minimumValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-value` |
@@ -44973,7 +44973,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TextFieldControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `filterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-control-id` |
 | `sourceFilterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-filter-id` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -45012,7 +45012,7 @@
 |---|---|---|---|
 | `fontColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:font-color` |
 | `fontDecoration` | java.lang.String | [[cdk.support/lookup-entry]] | `:font-decoration` |
-| `fontSize` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font-size` |
+| `fontSize` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontSizeProperty | [[cdk.support/lookup-entry]] | `:font-size` |
 | `fontStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:font-style` |
 | `fontWeight` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontWeightProperty | [[cdk.support/lookup-entry]] | `:font-weight` |
 "
@@ -45116,7 +45116,7 @@
 | `seasonality` | java.lang.String | [[cdk.support/lookup-entry]] | `:seasonality` |
 | `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
 | `upperBoundary` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-boundary` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnTemplate$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTemplate$ForecastComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -45164,8 +45164,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `forecastProperties` | software.amazon.awscdk.services.quicksight.CfnTemplate$TimeBasedForecastPropertiesProperty | [[cdk.support/lookup-entry]] | `:forecast-properties` |
-| `scenario` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scenario` |
+| `forecastProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast-properties` |
+| `scenario` | software.amazon.awscdk.services.quicksight.CfnTemplate$ForecastScenarioProperty | [[cdk.support/lookup-entry]] | `:scenario` |
 "
   [^CfnTemplate$ForecastConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :forecast-properties)]
@@ -45195,7 +45195,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `whatIfPointScenario` | software.amazon.awscdk.services.quicksight.CfnTemplate$WhatIfPointScenarioProperty | [[cdk.support/lookup-entry]] | `:what-if-point-scenario` |
+| `whatIfPointScenario` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:what-if-point-scenario` |
 | `whatIfRangeScenario` | software.amazon.awscdk.services.quicksight.CfnTemplate$WhatIfRangeScenarioProperty | [[cdk.support/lookup-entry]] | `:what-if-range-scenario` |
 "
   [^CfnTemplate$ForecastScenarioProperty$Builder builder id config]
@@ -45226,7 +45226,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimeFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateTimeFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:date-time-format-configuration` |
+| `dateTimeFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-format-configuration` |
 | `numberFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumberFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:number-format-configuration` |
 | `stringFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$StringFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:string-format-configuration` |
 "
@@ -45289,7 +45289,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$FreeFormLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
-| `elements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elements` |
+| `elements` | java.util.List | [[cdk.support/lookup-entry]] | `:elements` |
 "
   [^CfnTemplate$FreeFormLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :canvas-size-options)]
@@ -45381,14 +45381,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backgroundStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-style` |
-| `borderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:border-style` |
+| `backgroundStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$FreeFormLayoutElementBackgroundStyleProperty | [[cdk.support/lookup-entry]] | `:background-style` |
+| `borderStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$FreeFormLayoutElementBorderStyleProperty | [[cdk.support/lookup-entry]] | `:border-style` |
 | `elementId` | java.lang.String | [[cdk.support/lookup-entry]] | `:element-id` |
 | `elementType` | java.lang.String | [[cdk.support/lookup-entry]] | `:element-type` |
 | `height` | java.lang.String | [[cdk.support/lookup-entry]] | `:height` |
 | `loadingAnimation` | software.amazon.awscdk.services.quicksight.CfnTemplate$LoadingAnimationProperty | [[cdk.support/lookup-entry]] | `:loading-animation` |
-| `renderingRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-rules` |
-| `selectedBorderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-border-style` |
+| `renderingRules` | java.util.List | [[cdk.support/lookup-entry]] | `:rendering-rules` |
+| `selectedBorderStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$FreeFormLayoutElementBorderStyleProperty | [[cdk.support/lookup-entry]] | `:selected-border-style` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 | `width` | java.lang.String | [[cdk.support/lookup-entry]] | `:width` |
 | `xAxisLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:x-axis-location` |
@@ -45470,7 +45470,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `elements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elements` |
+| `elements` | java.util.List | [[cdk.support/lookup-entry]] | `:elements` |
 "
   [^CfnTemplate$FreeFormSectionLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :elements)]
@@ -45529,12 +45529,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `dataLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-label-options` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FunnelChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `valueLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:value-label-options` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$FunnelChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `valueLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-label-options` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnTemplate$FunnelChartConfigurationProperty$Builder builder id config]
@@ -45577,7 +45577,7 @@
 |---|---|---|---|
 | `categoryLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-label-visibility` |
 | `labelColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-color` |
-| `labelFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
+| `labelFontConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:label-font-configuration` |
 | `measureDataLabelStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-data-label-style` |
 | `measureLabelVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:measure-label-visibility` |
 | `position` | java.lang.String | [[cdk.support/lookup-entry]] | `:position` |
@@ -45680,9 +45680,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FunnelChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
@@ -45752,7 +45752,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `arc` | software.amazon.awscdk.services.quicksight.CfnTemplate$GaugeChartArcConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:arc` |
-| `primaryValue` | software.amazon.awscdk.services.quicksight.CfnTemplate$GaugeChartPrimaryValueConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:primary-value` |
+| `primaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value` |
 "
   [^CfnTemplate$GaugeChartConditionalFormattingOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :arc)]
@@ -45782,7 +45782,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnTemplate$GaugeChartConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -45813,8 +45813,8 @@
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `gaugeChartOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gauge-chart-options` |
-| `tooltipOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip-options` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `tooltipOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip-options` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnTemplate$GaugeChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-labels)]
@@ -45881,7 +45881,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `arc` | software.amazon.awscdk.services.quicksight.CfnTemplate$ArcConfigurationProperty | [[cdk.support/lookup-entry]] | `:arc` |
+| `arc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:arc` |
 | `arcAxis` | software.amazon.awscdk.services.quicksight.CfnTemplate$ArcAxisConfigurationProperty | [[cdk.support/lookup-entry]] | `:arc-axis` |
 | `comparison` | software.amazon.awscdk.services.quicksight.CfnTemplate$ComparisonConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison` |
 | `primaryValueDisplayType` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-value-display-type` |
@@ -45955,7 +45955,7 @@
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$GaugeChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnTemplate$GaugeChartConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -46032,7 +46032,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
 "
   [^CfnTemplate$GeospatialHeatmapColorScaleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -46116,9 +46116,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
 | `geospatial` | java.util.List | [[cdk.support/lookup-entry]] | `:geospatial` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$GeospatialMapAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -46150,12 +46150,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialMapFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `mapStyleOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialMapStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:map-style-options` |
 | `pointStyleOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialPointStyleOptionsProperty | [[cdk.support/lookup-entry]] | `:point-style-options` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `windowOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialWindowOptionsProperty | [[cdk.support/lookup-entry]] | `:window-options` |
 "
   [^CfnTemplate$GeospatialMapConfigurationProperty$Builder builder id config]
@@ -46196,7 +46196,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `geospatialMapAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialMapAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:geospatial-map-aggregated-field-wells` |
+| `geospatialMapAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial-map-aggregated-field-wells` |
 "
   [^CfnTemplate$GeospatialMapFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :geospatial-map-aggregated-field-wells)]
@@ -46252,7 +46252,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
@@ -46295,8 +46295,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clusterMarkerConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ClusterMarkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:cluster-marker-configuration` |
-| `heatmapConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heatmap-configuration` |
+| `clusterMarkerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cluster-marker-configuration` |
+| `heatmapConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialHeatmapConfigurationProperty | [[cdk.support/lookup-entry]] | `:heatmap-configuration` |
 | `selectedPointStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-point-style` |
 "
   [^CfnTemplate$GeospatialPointStyleOptionsProperty$Builder builder id config]
@@ -46329,7 +46329,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bounds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bounds` |
+| `bounds` | software.amazon.awscdk.services.quicksight.CfnTemplate$GeospatialCoordinateBoundsProperty | [[cdk.support/lookup-entry]] | `:bounds` |
 | `mapZoomMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:map-zoom-mode` |
 "
   [^CfnTemplate$GeospatialWindowOptionsProperty$Builder builder id config]
@@ -46391,7 +46391,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `stops` | java.util.List | [[cdk.support/lookup-entry]] | `:stops` |
+| `stops` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stops` |
 "
   [^CfnTemplate$GradientColorProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :stops)]
@@ -46481,7 +46481,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$GridLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
 | `elements` | java.util.List | [[cdk.support/lookup-entry]] | `:elements` |
 "
   [^CfnTemplate$GridLayoutConfigurationProperty$Builder builder id config]
@@ -46590,7 +46590,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `periodSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period-size` |
 | `time` | software.amazon.awscdk.services.quicksight.CfnTemplate$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnTemplate$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTemplate$GrowthRateComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -46626,7 +46626,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `layout` | software.amazon.awscdk.services.quicksight.CfnTemplate$SectionLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:layout` |
+| `layout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layout` |
 | `sectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:section-id` |
 | `style` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style` |
 "
@@ -46660,9 +46660,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
 | `rows` | java.util.List | [[cdk.support/lookup-entry]] | `:rows` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$HeatMapAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :columns)]
@@ -46694,14 +46694,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colorScale` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColorScaleProperty | [[cdk.support/lookup-entry]] | `:color-scale` |
+| `colorScale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-scale` |
 | `columnLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-label-options` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$HeatMapFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `rowLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:row-label-options` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
+| `rowLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-label-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$HeatMapSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 "
   [^CfnTemplate$HeatMapConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :color-scale)]
@@ -46772,7 +46772,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `heatMapColumnItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-column-items-limit-configuration` |
-| `heatMapColumnSort` | java.util.List | [[cdk.support/lookup-entry]] | `:heat-map-column-sort` |
+| `heatMapColumnSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-column-sort` |
 | `heatMapRowItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-row-items-limit-configuration` |
 | `heatMapRowSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-row-sort` |
 "
@@ -46810,8 +46810,8 @@
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$HeatMapConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -46851,7 +46851,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$HistogramAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :values)]
@@ -46879,8 +46879,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `binCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-count` |
-| `binWidth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-width` |
+| `binCount` | software.amazon.awscdk.services.quicksight.CfnTemplate$BinCountOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-count` |
+| `binWidth` | software.amazon.awscdk.services.quicksight.CfnTemplate$BinWidthOptionsProperty | [[cdk.support/lookup-entry]] | `:bin-width` |
 | `selectedBinType` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-bin-type` |
 | `startValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-value` |
 "
@@ -46917,10 +46917,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `binOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bin-options` |
-| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$HistogramFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `xAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
 | `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
 | `yAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
@@ -46965,7 +46965,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `histogramAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$HistogramAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:histogram-aggregated-field-wells` |
+| `histogramAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:histogram-aggregated-field-wells` |
 "
   [^CfnTemplate$HistogramFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :histogram-aggregated-field-wells)]
@@ -46994,7 +46994,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$HistogramConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
@@ -47034,7 +47034,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:computations` |
-| `customNarrative` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-narrative` |
+| `customNarrative` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomNarrativeOptionsProperty | [[cdk.support/lookup-entry]] | `:custom-narrative` |
 "
   [^CfnTemplate$InsightConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computations)]
@@ -47066,9 +47066,9 @@
 |---|---|---|---|
 | `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
 | `dataSetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-set-identifier` |
-| `insightConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insight-configuration` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `insightConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$InsightConfigurationProperty | [[cdk.support/lookup-entry]] | `:insight-configuration` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$InsightVisualProperty$Builder builder id config]
@@ -47138,11 +47138,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$IntegerDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
-| `valueWhenUnset` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-when-unset` |
+| `valueWhenUnset` | software.amazon.awscdk.services.quicksight.CfnTemplate$IntegerValueWhenUnsetConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-when-unset` |
 "
   [^CfnTemplate$IntegerParameterDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-values)]
@@ -47241,7 +47241,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnTemplate$KPIActualValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -47272,7 +47272,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnTemplate$KPIComparisonValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -47435,13 +47435,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `comparison` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparison` |
+| `comparison` | software.amazon.awscdk.services.quicksight.CfnTemplate$ComparisonConfigurationProperty | [[cdk.support/lookup-entry]] | `:comparison` |
 | `primaryValueDisplayType` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-value-display-type` |
-| `primaryValueFontConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:primary-value-font-configuration` |
+| `primaryValueFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-value-font-configuration` |
 | `progressBar` | software.amazon.awscdk.services.quicksight.CfnTemplate$ProgressBarOptionsProperty | [[cdk.support/lookup-entry]] | `:progress-bar` |
-| `secondaryValue` | software.amazon.awscdk.services.quicksight.CfnTemplate$SecondaryValueOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-value` |
+| `secondaryValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-value` |
 | `secondaryValueFontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-value-font-configuration` |
-| `sparkline` | software.amazon.awscdk.services.quicksight.CfnTemplate$KPISparklineOptionsProperty | [[cdk.support/lookup-entry]] | `:sparkline` |
+| `sparkline` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sparkline` |
 | `trendArrows` | software.amazon.awscdk.services.quicksight.CfnTemplate$TrendArrowOptionsProperty | [[cdk.support/lookup-entry]] | `:trend-arrows` |
 | `visualLayoutOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$KPIVisualLayoutOptionsProperty | [[cdk.support/lookup-entry]] | `:visual-layout-options` |
 "
@@ -47487,8 +47487,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `icon` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnTemplate$KPIPrimaryValueConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :icon)]
@@ -47518,7 +47518,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `foregroundColor` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:foreground-color` |
+| `foregroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:foreground-color` |
 "
   [^CfnTemplate$KPIProgressBarConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :foreground-color)]
@@ -47546,7 +47546,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `trendGroupSort` | java.util.List | [[cdk.support/lookup-entry]] | `:trend-group-sort` |
+| `trendGroupSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trend-group-sort` |
 "
   [^CfnTemplate$KPISortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :trend-group-sort)]
@@ -47639,12 +47639,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$KPIConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnTemplate$KPIConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$KPIVisualProperty$Builder builder id config]
@@ -47714,7 +47714,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
-| `fontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font-configuration` |
+| `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 "
   [^CfnTemplate$LabelOptionsProperty$Builder builder id config]
@@ -47747,9 +47747,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeFormLayout` | software.amazon.awscdk.services.quicksight.CfnTemplate$FreeFormLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form-layout` |
-| `gridLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grid-layout` |
-| `sectionBasedLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:section-based-layout` |
+| `freeFormLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form-layout` |
+| `gridLayout` | software.amazon.awscdk.services.quicksight.CfnTemplate$GridLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:grid-layout` |
+| `sectionBasedLayout` | software.amazon.awscdk.services.quicksight.CfnTemplate$SectionBasedLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:section-based-layout` |
 "
   [^CfnTemplate$LayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :free-form-layout)]
@@ -47811,7 +47811,7 @@
 |---|---|---|---|
 | `height` | java.lang.String | [[cdk.support/lookup-entry]] | `:height` |
 | `position` | java.lang.String | [[cdk.support/lookup-entry]] | `:position` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 | `width` | java.lang.String | [[cdk.support/lookup-entry]] | `:width` |
 "
@@ -47849,9 +47849,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
 | `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `smallMultiples` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples` |
+| `smallMultiples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$LineChartAggregatedFieldWellsProperty$Builder builder id config]
@@ -47886,23 +47886,23 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
+| `contributionAnalysisDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `defaultSeriesSettings` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartDefaultSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:default-series-settings` |
+| `defaultSeriesSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-series-settings` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `forecastConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:forecast-configurations` |
+| `forecastConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forecast-configurations` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
 | `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
-| `referenceLines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-lines` |
-| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
-| `secondaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
+| `referenceLines` | java.util.List | [[cdk.support/lookup-entry]] | `:reference-lines` |
+| `secondaryYAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineSeriesAxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:secondary-y-axis-display-options` |
+| `secondaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-y-axis-label-options` |
 | `series` | java.util.List | [[cdk.support/lookup-entry]] | `:series` |
 | `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `visualPalette` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
+| `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
 | `xAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
 "
@@ -47969,7 +47969,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
-| `lineStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-style-settings` |
+| `lineStyleSettings` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartLineStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:line-style-settings` |
 | `markerStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:marker-style-settings` |
 "
   [^CfnTemplate$LineChartDefaultSeriesSettingsProperty$Builder builder id config]
@@ -48002,7 +48002,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `lineChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:line-chart-aggregated-field-wells` |
+| `lineChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line-chart-aggregated-field-wells` |
 "
   [^CfnTemplate$LineChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :line-chart-aggregated-field-wells)]
@@ -48136,9 +48136,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit-configuration` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
-| `colorItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:color-items-limit-configuration` |
-| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `colorItemsLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit-configuration` |
+| `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
 | `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
   [^CfnTemplate$LineChartSortConfigurationProperty$Builder builder id config]
@@ -48177,9 +48177,9 @@
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$LineChartVisualProperty$Builder builder id config]
@@ -48249,8 +48249,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `searchOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ListControlSearchOptionsProperty | [[cdk.support/lookup-entry]] | `:search-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `searchOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:search-options` |
 | `selectAllOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ListControlSelectAllOptionsProperty | [[cdk.support/lookup-entry]] | `:select-all-options` |
 | `titleOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
 "
@@ -48490,9 +48490,9 @@
 |---|---|---|---|
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnTemplate$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnTemplate$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTemplate$MaximumMinimumComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -48528,8 +48528,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `calculatedMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:calculated-measure-field` |
-| `categoricalMeasureField` | software.amazon.awscdk.services.quicksight.CfnTemplate$CategoricalMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:categorical-measure-field` |
+| `calculatedMeasureField` | software.amazon.awscdk.services.quicksight.CfnTemplate$CalculatedMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:calculated-measure-field` |
+| `categoricalMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:categorical-measure-field` |
 | `dateMeasureField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-measure-field` |
 | `numericalMeasureField` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericalMeasureFieldProperty | [[cdk.support/lookup-entry]] | `:numerical-measure-field` |
 "
@@ -48568,8 +48568,8 @@
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `fromValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:from-value` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `targetValue` | software.amazon.awscdk.services.quicksight.CfnTemplate$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:target-value` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `targetValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-value` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnTemplate$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 "
   [^CfnTemplate$MetricComparisonComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :computation-id)]
@@ -48717,12 +48717,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decimalPlacesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
-| `negativeValueConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NegativeValueConfigurationProperty | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
+| `decimalPlacesConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DecimalPlacesConfigurationProperty | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
+| `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
 | `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `numberScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:number-scale` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `separatorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:separator-configuration` |
+| `separatorConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericSeparatorConfigurationProperty | [[cdk.support/lookup-entry]] | `:separator-configuration` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnTemplate$NumberDisplayFormatConfigurationProperty$Builder builder id config]
@@ -48763,7 +48763,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnTemplate$NumberFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :format-configuration)]
@@ -48792,7 +48792,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
-| `scale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scale` |
+| `scale` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisScaleProperty | [[cdk.support/lookup-entry]] | `:scale` |
 "
   [^CfnTemplate$NumericAxisOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :range)]
@@ -48822,7 +48822,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTemplate$NumericEqualityDrillDownFilterProperty$Builder builder id config]
@@ -48854,7 +48854,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `matchOperator` | java.lang.String | [[cdk.support/lookup-entry]] | `:match-operator` |
@@ -48939,8 +48939,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `aggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `includeMaximum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-maximum` |
@@ -49026,7 +49026,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `decimalSeparator` | java.lang.String | [[cdk.support/lookup-entry]] | `:decimal-separator` |
-| `thousandsSeparator` | software.amazon.awscdk.services.quicksight.CfnTemplate$ThousandSeparatorOptionsProperty | [[cdk.support/lookup-entry]] | `:thousands-separator` |
+| `thousandsSeparator` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:thousands-separator` |
 "
   [^CfnTemplate$NumericSeparatorConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :decimal-separator)]
@@ -49087,7 +49087,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
 | `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
@@ -49125,9 +49125,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericalAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:aggregation-function` |
-| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumberFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 "
   [^CfnTemplate$NumericalMeasureFieldProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation-function)]
@@ -49278,9 +49278,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimePicker` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-picker` |
+| `dateTimePicker` | software.amazon.awscdk.services.quicksight.CfnTemplate$ParameterDateTimePickerControlProperty | [[cdk.support/lookup-entry]] | `:date-time-picker` |
 | `dropdown` | software.amazon.awscdk.services.quicksight.CfnTemplate$ParameterDropDownControlProperty | [[cdk.support/lookup-entry]] | `:dropdown` |
-| `list` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:list` |
+| `list` | software.amazon.awscdk.services.quicksight.CfnTemplate$ParameterListControlProperty | [[cdk.support/lookup-entry]] | `:list` |
 | `slider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slider` |
 | `textArea` | software.amazon.awscdk.services.quicksight.CfnTemplate$ParameterTextAreaControlProperty | [[cdk.support/lookup-entry]] | `:text-area` |
 | `textField` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-field` |
@@ -49321,7 +49321,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateTimePickerControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -49358,7 +49358,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dateTimeParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-time-parameter-declaration` |
+| `dateTimeParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DateTimeParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:date-time-parameter-declaration` |
 | `decimalParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-parameter-declaration` |
 | `integerParameterDeclaration` | software.amazon.awscdk.services.quicksight.CfnTemplate$IntegerParameterDeclarationProperty | [[cdk.support/lookup-entry]] | `:integer-parameter-declaration` |
 | `stringParameterDeclaration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-parameter-declaration` |
@@ -49441,8 +49441,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cascadingControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
-| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
+| `cascadingControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$CascadingControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:cascading-control-configuration` |
+| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ListControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
 | `selectableValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$ParameterSelectableValuesProperty | [[cdk.support/lookup-entry]] | `:selectable-values` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
@@ -49487,7 +49487,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `linkToDataSetColumn` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:link-to-data-set-column` |
+| `linkToDataSetColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:link-to-data-set-column` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$ParameterSelectableValuesProperty$Builder builder id config]
@@ -49565,7 +49565,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `delimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:delimiter` |
-| `displayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TextAreaControlDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:display-options` |
+| `displayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-options` |
 | `parameterControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-control-id` |
 | `sourceParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-parameter-name` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -49672,11 +49672,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decimalPlacesConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
+| `decimalPlacesConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DecimalPlacesConfigurationProperty | [[cdk.support/lookup-entry]] | `:decimal-places-configuration` |
 | `negativeValueConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-value-configuration` |
 | `nullValueFormatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NullValueFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:null-value-format-configuration` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `separatorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:separator-configuration` |
+| `separatorConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericSeparatorConfigurationProperty | [[cdk.support/lookup-entry]] | `:separator-configuration` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnTemplate$PercentageDisplayFormatConfigurationProperty$Builder builder id config]
@@ -49745,7 +49745,7 @@
 |---|---|---|---|
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnTemplate$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `value` | software.amazon.awscdk.services.quicksight.CfnTemplate$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTemplate$PeriodOverPeriodComputationProperty$Builder builder id config]
@@ -49783,7 +49783,7 @@
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `periodTimeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:period-time-granularity` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnTemplate$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTemplate$PeriodToDateComputationProperty$Builder builder id config]
@@ -49820,7 +49820,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
 | `smallMultiples` | java.util.List | [[cdk.support/lookup-entry]] | `:small-multiples` |
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
@@ -49857,13 +49857,13 @@
 | `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
 | `contributionAnalysisDefaults` | java.util.List | [[cdk.support/lookup-entry]] | `:contribution-analysis-defaults` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `donutOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:donut-options` |
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$PieChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `donutOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$DonutOptionsProperty | [[cdk.support/lookup-entry]] | `:donut-options` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `smallMultiplesOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SmallMultiplesOptionsProperty | [[cdk.support/lookup-entry]] | `:small-multiples-options` |
 | `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$PieChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
-| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
-| `valueLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-label-options` |
+| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `valueLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:value-label-options` |
 | `visualPalette` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualPaletteProperty | [[cdk.support/lookup-entry]] | `:visual-palette` |
 "
   [^CfnTemplate$PieChartConfigurationProperty$Builder builder id config]
@@ -49941,7 +49941,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
-| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 | `smallMultiplesLimitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-limit-configuration` |
 | `smallMultiplesSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:small-multiples-sort` |
 "
@@ -49977,10 +49977,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$PieChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -50021,7 +50021,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `sortBy` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableSortByProperty | [[cdk.support/lookup-entry]] | `:sort-by` |
+| `sortBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-by` |
 "
   [^CfnTemplate$PivotFieldSortOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-id)]
@@ -50086,8 +50086,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `scope` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scope` |
-| `scopes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scopes` |
+| `scope` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableConditionalFormattingScopeProperty | [[cdk.support/lookup-entry]] | `:scope` |
+| `scopes` | java.util.List | [[cdk.support/lookup-entry]] | `:scopes` |
 | `textFormat` | software.amazon.awscdk.services.quicksight.CfnTemplate$TextConditionalFormatProperty | [[cdk.support/lookup-entry]] | `:text-format` |
 "
   [^CfnTemplate$PivotTableCellConditionalFormattingProperty$Builder builder id config]
@@ -50122,7 +50122,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cell` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableCellConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:cell` |
+| `cell` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cell` |
 "
   [^CfnTemplate$PivotTableConditionalFormattingOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cell)]
@@ -50150,7 +50150,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnTemplate$PivotTableConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -50206,10 +50206,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableFieldOptionsProperty | [[cdk.support/lookup-entry]] | `:field-options` |
+| `fieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-options` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `paginatedReportOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
-| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `paginatedReportOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTablePaginatedReportOptionsProperty | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
+| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tableOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableOptionsProperty | [[cdk.support/lookup-entry]] | `:table-options` |
 | `totalOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableTotalOptionsProperty | [[cdk.support/lookup-entry]] | `:total-options` |
 "
@@ -50281,7 +50281,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `target` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target` |
+| `target` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableFieldCollapseStateTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnTemplate$PivotTableFieldCollapseStateOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :state)]
@@ -50438,7 +50438,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pivotTableAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:pivot-table-aggregated-field-wells` |
+| `pivotTableAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pivot-table-aggregated-field-wells` |
 "
   [^CfnTemplate$PivotTableFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pivot-table-aggregated-field-wells)]
@@ -50468,12 +50468,12 @@
 |---|---|---|---|
 | `cellStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:cell-style` |
 | `collapsedRowDimensionsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:collapsed-row-dimensions-visibility` |
-| `columnHeaderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-header-style` |
+| `columnHeaderStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:column-header-style` |
 | `columnNamesVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-names-visibility` |
 | `defaultCellWidth` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-cell-width` |
 | `metricPlacement` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-placement` |
-| `rowAlternateColorOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$RowAlternateColorOptionsProperty | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
-| `rowFieldNamesStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:row-field-names-style` |
+| `rowAlternateColorOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
+| `rowFieldNamesStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-field-names-style` |
 | `rowHeaderStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-header-style` |
 | `rowsLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rows-label-options` |
 | `rowsLayout` | java.lang.String | [[cdk.support/lookup-entry]] | `:rows-layout` |
@@ -50592,9 +50592,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnSortProperty | [[cdk.support/lookup-entry]] | `:column` |
+| `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `dataPath` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataPathSortProperty | [[cdk.support/lookup-entry]] | `:data-path` |
-| `field` | software.amazon.awscdk.services.quicksight.CfnTemplate$FieldSortProperty | [[cdk.support/lookup-entry]] | `:field` |
+| `field` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field` |
 "
   [^CfnTemplate$PivotTableSortByProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column)]
@@ -50626,7 +50626,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldSortOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:field-sort-options` |
+| `fieldSortOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-sort-options` |
 "
   [^CfnTemplate$PivotTableSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-sort-options)]
@@ -50654,8 +50654,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnSubtotalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-subtotal-options` |
-| `columnTotalOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTotalOptionsProperty | [[cdk.support/lookup-entry]] | `:column-total-options` |
+| `columnSubtotalOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SubtotalOptionsProperty | [[cdk.support/lookup-entry]] | `:column-subtotal-options` |
+| `columnTotalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-total-options` |
 | `rowSubtotalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-subtotal-options` |
 | `rowTotalOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTotalOptionsProperty | [[cdk.support/lookup-entry]] | `:row-total-options` |
 "
@@ -50694,7 +50694,7 @@
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -50783,7 +50783,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
 | `drillDownFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drill-down-filters` |
 | `hierarchyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hierarchy-id` |
 "
@@ -50846,10 +50846,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.quicksight.CfnTemplate$TemplateVersionDefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
-| `sourceEntity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-entity` |
+| `sourceEntity` | software.amazon.awscdk.services.quicksight.CfnTemplate$TemplateSourceEntityProperty | [[cdk.support/lookup-entry]] | `:source-entity` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-id` |
 | `validationStrategy` | software.amazon.awscdk.services.quicksight.CfnTemplate$ValidationStrategyProperty | [[cdk.support/lookup-entry]] | `:validation-strategy` |
@@ -50897,9 +50897,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
-| `color` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
+| `color` | java.util.List | [[cdk.support/lookup-entry]] | `:color` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$RadarChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -50963,12 +50963,12 @@
 | `alternateBandEvenColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:alternate-band-even-color` |
 | `alternateBandOddColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:alternate-band-odd-color` |
 | `axesRangeScale` | java.lang.String | [[cdk.support/lookup-entry]] | `:axes-range-scale` |
-| `baseSeriesSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:base-series-settings` |
-| `categoryAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis` |
-| `categoryLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `colorAxis` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:color-axis` |
+| `baseSeriesSettings` | software.amazon.awscdk.services.quicksight.CfnTemplate$RadarChartSeriesSettingsProperty | [[cdk.support/lookup-entry]] | `:base-series-settings` |
+| `categoryAxis` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis` |
+| `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
+| `colorAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-axis` |
 | `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
-| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$RadarChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
 | `shape` | java.lang.String | [[cdk.support/lookup-entry]] | `:shape` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
@@ -51029,7 +51029,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `radarChartAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$RadarChartAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:radar-chart-aggregated-field-wells` |
+| `radarChartAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:radar-chart-aggregated-field-wells` |
 "
   [^CfnTemplate$RadarChartFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :radar-chart-aggregated-field-wells)]
@@ -51057,7 +51057,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `areaStyleSettings` | software.amazon.awscdk.services.quicksight.CfnTemplate$RadarChartAreaStyleSettingsProperty | [[cdk.support/lookup-entry]] | `:area-style-settings` |
+| `areaStyleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:area-style-settings` |
 "
   [^CfnTemplate$RadarChartSeriesSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :area-style-settings)]
@@ -51085,7 +51085,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 | `colorItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-items-limit` |
 | `colorSort` | java.util.List | [[cdk.support/lookup-entry]] | `:color-sort` |
@@ -51123,10 +51123,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$RadarChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$RadarChartVisualProperty$Builder builder id config]
@@ -51222,9 +51222,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `axisBinding` | java.lang.String | [[cdk.support/lookup-entry]] | `:axis-binding` |
-| `dynamicConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-configuration` |
+| `dynamicConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ReferenceLineDynamicDataConfigurationProperty | [[cdk.support/lookup-entry]] | `:dynamic-configuration` |
 | `seriesType` | java.lang.String | [[cdk.support/lookup-entry]] | `:series-type` |
-| `staticConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-configuration` |
+| `staticConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ReferenceLineStaticDataConfigurationProperty | [[cdk.support/lookup-entry]] | `:static-configuration` |
 "
   [^CfnTemplate$ReferenceLineDataConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :axis-binding)]
@@ -51260,7 +51260,7 @@
 |---|---|---|---|
 | `calculation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:calculation` |
 | `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
-| `measureAggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:measure-aggregation-function` |
+| `measureAggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$AggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:measure-aggregation-function` |
 "
   [^CfnTemplate$ReferenceLineDynamicDataConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :calculation)]
@@ -51294,7 +51294,7 @@
 |---|---|---|---|
 | `customLabelConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-label-configuration` |
 | `fontColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:font-color` |
-| `fontConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:font-configuration` |
+| `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
 | `horizontalPosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:horizontal-position` |
 | `valueLabelConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ReferenceLineValueLabelConfigurationProperty | [[cdk.support/lookup-entry]] | `:value-label-configuration` |
 | `verticalPosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:vertical-position` |
@@ -51338,7 +51338,7 @@
 | `dataConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-configuration` |
 | `labelConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label-configuration` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `styleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:style-configuration` |
+| `styleConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ReferenceLineStyleConfigurationProperty | [[cdk.support/lookup-entry]] | `:style-configuration` |
 "
   [^CfnTemplate$ReferenceLineProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-configuration)]
@@ -51431,7 +51431,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `formatConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$NumericFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:format-configuration` |
+| `formatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:format-configuration` |
 | `relativePosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:relative-position` |
 "
   [^CfnTemplate$ReferenceLineValueLabelConfigurationProperty$Builder builder id config]
@@ -51463,8 +51463,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dateTimeFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:date-time-format` |
-| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `titleOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnTemplate$RelativeDateTimeControlDisplayOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :date-time-format)]
@@ -51496,7 +51496,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `anchorDateConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$AnchorDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:anchor-date-configuration` |
+| `anchorDateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anchor-date-configuration` |
 | `column` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column` |
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `excludePeriodConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-period-configuration` |
@@ -51684,7 +51684,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
+| `destination` | java.util.List | [[cdk.support/lookup-entry]] | `:destination` |
 | `source` | java.util.List | [[cdk.support/lookup-entry]] | `:source` |
 | `weight` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weight` |
 "
@@ -51718,9 +51718,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$SankeyDiagramFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$SankeyDiagramSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 "
   [^CfnTemplate$SankeyDiagramChartConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-labels)]
@@ -51752,7 +51752,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sankeyDiagramAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$SankeyDiagramAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:sankey-diagram-aggregated-field-wells` |
+| `sankeyDiagramAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sankey-diagram-aggregated-field-wells` |
 "
   [^CfnTemplate$SankeyDiagramFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sankey-diagram-aggregated-field-wells)]
@@ -51780,8 +51780,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:destination-items-limit` |
-| `sourceItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-items-limit` |
+| `destinationItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-items-limit` |
+| `sourceItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-items-limit` |
 | `weightSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weight-sort` |
 "
   [^CfnTemplate$SankeyDiagramSortConfigurationProperty$Builder builder id config]
@@ -51816,8 +51816,8 @@
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$SankeyDiagramChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
+| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$SankeyDiagramVisualProperty$Builder builder id config]
@@ -51854,11 +51854,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
-| `label` | java.util.List | [[cdk.support/lookup-entry]] | `:label` |
-| `size` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size` |
-| `xAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis` |
-| `yAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis` |
+| `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
+| `label` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label` |
+| `size` | java.util.List | [[cdk.support/lookup-entry]] | `:size` |
+| `xAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:x-axis` |
+| `yAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:y-axis` |
 "
   [^CfnTemplate$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -51895,13 +51895,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataLabels` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$ScatterPlotFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
-| `tooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$TooltipOptionsProperty | [[cdk.support/lookup-entry]] | `:tooltip` |
+| `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `xAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-display-options` |
 | `xAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:x-axis-label-options` |
-| `yAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
+| `yAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis-display-options` |
 | `yAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis-label-options` |
 "
   [^CfnTemplate$ScatterPlotConfigurationProperty$Builder builder id config]
@@ -51946,8 +51946,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `scatterPlotCategoricallyAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$ScatterPlotCategoricallyAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-categorically-aggregated-field-wells` |
-| `scatterPlotUnaggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scatter-plot-unaggregated-field-wells` |
+| `scatterPlotCategoricallyAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scatter-plot-categorically-aggregated-field-wells` |
+| `scatterPlotUnaggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$ScatterPlotUnaggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-unaggregated-field-wells` |
 "
   [^CfnTemplate$ScatterPlotFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :scatter-plot-categorically-aggregated-field-wells)]
@@ -51978,10 +51978,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `category` | java.util.List | [[cdk.support/lookup-entry]] | `:category` |
-| `label` | java.util.List | [[cdk.support/lookup-entry]] | `:label` |
+| `label` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:label` |
 | `size` | java.util.List | [[cdk.support/lookup-entry]] | `:size` |
-| `xAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x-axis` |
-| `yAxis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:y-axis` |
+| `xAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:x-axis` |
+| `yAxis` | java.util.List | [[cdk.support/lookup-entry]] | `:y-axis` |
 "
   [^CfnTemplate$ScatterPlotUnaggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -52017,11 +52017,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
-| `columnHierarchies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ScatterPlotConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$ScatterPlotVisualProperty$Builder builder id config]
@@ -52061,7 +52061,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
-| `visibleRange` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisibleRangeOptionsProperty | [[cdk.support/lookup-entry]] | `:visible-range` |
+| `visibleRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visible-range` |
 "
   [^CfnTemplate$ScrollBarOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :visibility)]
@@ -52147,7 +52147,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `paperCanvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SectionBasedLayoutPaperCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:paper-canvas-size-options` |
+| `paperCanvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paper-canvas-size-options` |
 "
   [^CfnTemplate$SectionBasedLayoutCanvasSizeOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :paper-canvas-size-options)]
@@ -52175,10 +52175,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bodySections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-sections` |
-| `canvasSizeOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SectionBasedLayoutCanvasSizeOptionsProperty | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
-| `footerSections` | java.util.List | [[cdk.support/lookup-entry]] | `:footer-sections` |
-| `headerSections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-sections` |
+| `bodySections` | java.util.List | [[cdk.support/lookup-entry]] | `:body-sections` |
+| `canvasSizeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canvas-size-options` |
+| `footerSections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:footer-sections` |
+| `headerSections` | java.util.List | [[cdk.support/lookup-entry]] | `:header-sections` |
 "
   [^CfnTemplate$SectionBasedLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :body-sections)]
@@ -52212,7 +52212,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `paperMargin` | software.amazon.awscdk.services.quicksight.CfnTemplate$SpacingProperty | [[cdk.support/lookup-entry]] | `:paper-margin` |
+| `paperMargin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:paper-margin` |
 | `paperOrientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:paper-orientation` |
 | `paperSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:paper-size` |
 "
@@ -52246,7 +52246,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `freeFormLayout` | software.amazon.awscdk.services.quicksight.CfnTemplate$FreeFormSectionLayoutConfigurationProperty | [[cdk.support/lookup-entry]] | `:free-form-layout` |
+| `freeFormLayout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-form-layout` |
 "
   [^CfnTemplate$SectionLayoutConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :free-form-layout)]
@@ -52303,7 +52303,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `height` | java.lang.String | [[cdk.support/lookup-entry]] | `:height` |
-| `padding` | software.amazon.awscdk.services.quicksight.CfnTemplate$SpacingProperty | [[cdk.support/lookup-entry]] | `:padding` |
+| `padding` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:padding` |
 "
   [^CfnTemplate$SectionStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :height)]
@@ -52361,8 +52361,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataFieldSeriesItem` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataFieldSeriesItemProperty | [[cdk.support/lookup-entry]] | `:data-field-series-item` |
-| `fieldSeriesItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-series-item` |
+| `dataFieldSeriesItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-field-series-item` |
+| `fieldSeriesItem` | software.amazon.awscdk.services.quicksight.CfnTemplate$FieldSeriesItemProperty | [[cdk.support/lookup-entry]] | `:field-series-item` |
 "
   [^CfnTemplate$SeriesItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-field-series-item)]
@@ -52543,7 +52543,7 @@
 | `filterControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-controls` |
 | `layouts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:layouts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameterControls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-controls` |
+| `parameterControls` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-controls` |
 | `sheetControlLayouts` | java.util.List | [[cdk.support/lookup-entry]] | `:sheet-control-layouts` |
 | `sheetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:sheet-id` |
 | `textBoxes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-boxes` |
@@ -52810,7 +52810,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
 | `titleOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$LabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnTemplate$SliderControlDisplayOptionsProperty$Builder builder id config]
@@ -53011,7 +53011,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-values` |
+| `defaultValues` | software.amazon.awscdk.services.quicksight.CfnTemplate$StringDefaultValuesProperty | [[cdk.support/lookup-entry]] | `:default-values` |
 | `mappedDataSetParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapped-data-set-parameters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameterValueType` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value-type` |
@@ -53087,7 +53087,7 @@
 | `fieldLevelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-level-options` |
 | `metricHeaderCellStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:metric-header-cell-style` |
 | `styleTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:style-targets` |
-| `totalCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-cell-style` |
+| `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
 | `valueCellStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:value-cell-style` |
 "
@@ -53256,7 +53256,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backgroundColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:background-color` |
-| `border` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:border` |
+| `border` | software.amazon.awscdk.services.quicksight.CfnTemplate$GlobalTableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:border` |
 | `fontConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$FontConfigurationProperty | [[cdk.support/lookup-entry]] | `:font-configuration` |
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
 | `horizontalTextAlignment` | java.lang.String | [[cdk.support/lookup-entry]] | `:horizontal-text-alignment` |
@@ -53305,7 +53305,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cell` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:cell` |
-| `row` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableRowConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:row` |
+| `row` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row` |
 "
   [^CfnTemplate$TableConditionalFormattingOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cell)]
@@ -53335,7 +53335,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conditionalFormattingOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
+| `conditionalFormattingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-formatting-options` |
 "
   [^CfnTemplate$TableConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-formatting-options)]
@@ -53364,12 +53364,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-options` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `paginatedReportOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TablePaginatedReportOptionsProperty | [[cdk.support/lookup-entry]] | `:paginated-report-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tableInlineVisualizations` | java.util.List | [[cdk.support/lookup-entry]] | `:table-inline-visualizations` |
 | `tableOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableOptionsProperty | [[cdk.support/lookup-entry]] | `:table-options` |
-| `totalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-options` |
+| `totalOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TotalOptionsProperty | [[cdk.support/lookup-entry]] | `:total-options` |
 "
   [^CfnTemplate$TableConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-options)]
@@ -53496,7 +53496,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `content` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableFieldLinkContentConfigurationProperty | [[cdk.support/lookup-entry]] | `:content` |
+| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnTemplate$TableFieldLinkConfigurationProperty$Builder builder id config]
@@ -53527,8 +53527,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customIconContent` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableFieldCustomIconContentProperty | [[cdk.support/lookup-entry]] | `:custom-icon-content` |
-| `customTextContent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-text-content` |
+| `customIconContent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-icon-content` |
+| `customTextContent` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableFieldCustomTextContentProperty | [[cdk.support/lookup-entry]] | `:custom-text-content` |
 "
   [^CfnTemplate$TableFieldLinkContentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-icon-content)]
@@ -53560,7 +53560,7 @@
 |---|---|---|---|
 | `customLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-label` |
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `urlStyling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:url-styling` |
+| `urlStyling` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableFieldURLConfigurationProperty | [[cdk.support/lookup-entry]] | `:url-styling` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
 | `width` | java.lang.String | [[cdk.support/lookup-entry]] | `:width` |
 "
@@ -53600,7 +53600,7 @@
 |---|---|---|---|
 | `order` | java.util.List | [[cdk.support/lookup-entry]] | `:order` |
 | `pinnedFieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pinned-field-options` |
-| `selectedFieldOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selected-field-options` |
+| `selectedFieldOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:selected-field-options` |
 "
   [^CfnTemplate$TableFieldOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :order)]
@@ -53633,7 +53633,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `imageConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableFieldImageConfigurationProperty | [[cdk.support/lookup-entry]] | `:image-configuration` |
-| `linkConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableFieldLinkConfigurationProperty | [[cdk.support/lookup-entry]] | `:link-configuration` |
+| `linkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:link-configuration` |
 "
   [^CfnTemplate$TableFieldURLConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :image-configuration)]
@@ -53663,8 +53663,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tableAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:table-aggregated-field-wells` |
-| `tableUnaggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-unaggregated-field-wells` |
+| `tableAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-aggregated-field-wells` |
+| `tableUnaggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableUnaggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:table-unaggregated-field-wells` |
 "
   [^CfnTemplate$TableFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :table-aggregated-field-wells)]
@@ -53694,7 +53694,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataBars` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataBarsOptionsProperty | [[cdk.support/lookup-entry]] | `:data-bars` |
+| `dataBars` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-bars` |
 "
   [^CfnTemplate$TableInlineVisualizationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-bars)]
@@ -53725,7 +53725,7 @@
 | `cellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cell-style` |
 | `headerStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-style` |
 | `orientation` | java.lang.String | [[cdk.support/lookup-entry]] | `:orientation` |
-| `rowAlternateColorOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$RowAlternateColorOptionsProperty | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
+| `rowAlternateColorOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:row-alternate-color-options` |
 "
   [^CfnTemplate$TableOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cell-style)]
@@ -53819,7 +53819,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backgroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-color` |
-| `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
+| `textColor` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingColorProperty | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnTemplate$TableRowConditionalFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :background-color)]
@@ -53850,11 +53850,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bottom` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bottom` |
-| `innerHorizontal` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:inner-horizontal` |
+| `innerHorizontal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inner-horizontal` |
 | `innerVertical` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:inner-vertical` |
-| `left` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:left` |
+| `left` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:left` |
 | `right` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:right` |
-| `top` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableBorderOptionsProperty | [[cdk.support/lookup-entry]] | `:top` |
+| `top` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:top` |
 "
   [^CfnTemplate$TableSideBorderOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bottom)]
@@ -53892,7 +53892,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `paginationConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$PaginationConfigurationProperty | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
+| `paginationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pagination-configuration` |
 | `rowSort` | java.util.List | [[cdk.support/lookup-entry]] | `:row-sort` |
 "
   [^CfnTemplate$TableSortConfigurationProperty$Builder builder id config]
@@ -53979,10 +53979,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `conditionalFormatting` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableConditionalFormattingProperty | [[cdk.support/lookup-entry]] | `:conditional-formatting` |
-| `subtitle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subtitle` |
+| `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
@@ -54087,7 +54087,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sourceAnalysis` | software.amazon.awscdk.services.quicksight.CfnTemplate$TemplateSourceAnalysisProperty | [[cdk.support/lookup-entry]] | `:source-analysis` |
+| `sourceAnalysis` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-analysis` |
 | `sourceTemplate` | software.amazon.awscdk.services.quicksight.CfnTemplate$TemplateSourceTemplateProperty | [[cdk.support/lookup-entry]] | `:source-template` |
 "
   [^CfnTemplate$TemplateSourceEntityProperty$Builder builder id config]
@@ -54146,9 +54146,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `analysisDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:analysis-defaults` |
-| `calculatedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:calculated-fields` |
-| `columnConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-configurations` |
+| `analysisDefaults` | software.amazon.awscdk.services.quicksight.CfnTemplate$AnalysisDefaultsProperty | [[cdk.support/lookup-entry]] | `:analysis-defaults` |
+| `calculatedFields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:calculated-fields` |
+| `columnConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:column-configurations` |
 | `dataSetConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:data-set-configurations` |
 | `filterGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-groups` |
 | `options` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:options` |
@@ -54247,8 +54247,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infoIconLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$SheetControlInfoIconLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `placeholderOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placeholder-options` |
+| `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
+| `placeholderOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TextControlPlaceholderOptionsProperty | [[cdk.support/lookup-entry]] | `:placeholder-options` |
 | `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnTemplate$TextAreaControlDisplayOptionsProperty$Builder builder id config]
@@ -54282,7 +54282,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backgroundColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:background-color` |
-| `icon` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon` |
+| `icon` | software.amazon.awscdk.services.quicksight.CfnTemplate$ConditionalFormattingIconProperty | [[cdk.support/lookup-entry]] | `:icon` |
 | `textColor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-color` |
 "
   [^CfnTemplate$TextConditionalFormatProperty$Builder builder id config]
@@ -54344,7 +54344,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `infoIconLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:info-icon-label-options` |
-| `placeholderOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placeholder-options` |
+| `placeholderOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$TextControlPlaceholderOptionsProperty | [[cdk.support/lookup-entry]] | `:placeholder-options` |
 | `titleOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title-options` |
 "
   [^CfnTemplate$TextFieldControlDisplayOptionsProperty$Builder builder id config]
@@ -54452,10 +54452,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `column` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnIdentifierProperty | [[cdk.support/lookup-entry]] | `:column` |
-| `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
+| `defaultFilterControlConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$DefaultFilterControlConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
 | `parameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-name` |
-| `rollingDate` | software.amazon.awscdk.services.quicksight.CfnTemplate$RollingDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:rolling-date` |
+| `rollingDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rolling-date` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -54538,7 +54538,7 @@
 | `defaultFilterControlConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-filter-control-configuration` |
 | `excludePeriodConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-period-configuration` |
 | `filterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-id` |
-| `includeMaximum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-maximum` |
+| `includeMaximum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-maximum` |
 | `includeMinimum` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-minimum` |
 | `nullOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:null-option` |
 | `rangeMaximumValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range-maximum-value` |
@@ -54590,7 +54590,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameter` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter` |
-| `rollingDate` | software.amazon.awscdk.services.quicksight.CfnTemplate$RollingDateConfigurationProperty | [[cdk.support/lookup-entry]] | `:rolling-date` |
+| `rollingDate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rolling-date` |
 | `staticValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:static-value` |
 "
   [^CfnTemplate$TimeRangeFilterValueProperty$Builder builder id config]
@@ -54623,8 +54623,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `columnTooltipItem` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColumnTooltipItemProperty | [[cdk.support/lookup-entry]] | `:column-tooltip-item` |
-| `fieldTooltipItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-tooltip-item` |
+| `columnTooltipItem` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-tooltip-item` |
+| `fieldTooltipItem` | software.amazon.awscdk.services.quicksight.CfnTemplate$FieldTooltipItemProperty | [[cdk.support/lookup-entry]] | `:field-tooltip-item` |
 "
   [^CfnTemplate$TooltipItemProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :column-tooltip-item)]
@@ -54654,7 +54654,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fieldBasedTooltip` | software.amazon.awscdk.services.quicksight.CfnTemplate$FieldBasedTooltipProperty | [[cdk.support/lookup-entry]] | `:field-based-tooltip` |
+| `fieldBasedTooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-based-tooltip` |
 | `selectedTooltipType` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-tooltip-type` |
 | `tooltipVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:tooltip-visibility` |
 "
@@ -54739,7 +54739,7 @@
 | `moverSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:mover-size` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `sortOrder` | java.lang.String | [[cdk.support/lookup-entry]] | `:sort-order` |
-| `time` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time` |
+| `time` | software.amazon.awscdk.services.quicksight.CfnTemplate$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:time` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `value` | software.amazon.awscdk.services.quicksight.CfnTemplate$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -54788,7 +54788,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resultSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:result-size` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `value` | software.amazon.awscdk.services.quicksight.CfnTemplate$MeasureFieldProperty | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTemplate$TopBottomRankedComputationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category)]
@@ -54889,7 +54889,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-id` |
-| `totalAggregationFunction` | software.amazon.awscdk.services.quicksight.CfnTemplate$TotalAggregationFunctionProperty | [[cdk.support/lookup-entry]] | `:total-aggregation-function` |
+| `totalAggregationFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-aggregation-function` |
 "
   [^CfnTemplate$TotalAggregationOptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :field-id)]
@@ -54923,7 +54923,7 @@
 | `placement` | java.lang.String | [[cdk.support/lookup-entry]] | `:placement` |
 | `scrollStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:scroll-status` |
 | `totalAggregationOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:total-aggregation-options` |
-| `totalCellStyle` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableCellStyleProperty | [[cdk.support/lookup-entry]] | `:total-cell-style` |
+| `totalCellStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:total-cell-style` |
 | `totalsVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:totals-visibility` |
 "
   [^CfnTemplate$TotalOptionsProperty$Builder builder id config]
@@ -54962,9 +54962,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:colors` |
-| `groups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:groups` |
-| `sizes` | java.util.List | [[cdk.support/lookup-entry]] | `:sizes` |
+| `colors` | java.util.List | [[cdk.support/lookup-entry]] | `:colors` |
+| `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
+| `sizes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sizes` |
 "
   [^CfnTemplate$TreeMapAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :colors)]
@@ -54996,13 +54996,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `colorLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-label-options` |
-| `colorScale` | software.amazon.awscdk.services.quicksight.CfnTemplate$ColorScaleProperty | [[cdk.support/lookup-entry]] | `:color-scale` |
+| `colorLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:color-label-options` |
+| `colorScale` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-scale` |
 | `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
-| `groupLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-label-options` |
-| `legend` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:legend` |
-| `sizeLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size-label-options` |
+| `groupLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:group-label-options` |
+| `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
+| `sizeLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:size-label-options` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `tooltip` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tooltip` |
 "
@@ -55077,7 +55077,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `treeMapGroupItemsLimitConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:tree-map-group-items-limit-configuration` |
-| `treeMapSort` | java.util.List | [[cdk.support/lookup-entry]] | `:tree-map-sort` |
+| `treeMapSort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tree-map-sort` |
 "
   [^CfnTemplate$TreeMapSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :tree-map-group-items-limit-configuration)]
@@ -55212,7 +55212,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `category` | software.amazon.awscdk.services.quicksight.CfnTemplate$DimensionFieldProperty | [[cdk.support/lookup-entry]] | `:category` |
+| `category` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category` |
 | `computationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:computation-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
@@ -55303,7 +55303,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `filterOperation` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomActionFilterOperationProperty | [[cdk.support/lookup-entry]] | `:filter-operation` |
-| `navigationOperation` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomActionNavigationOperationProperty | [[cdk.support/lookup-entry]] | `:navigation-operation` |
+| `navigationOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:navigation-operation` |
 | `setParametersOperation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:set-parameters-operation` |
 | `urlOperation` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomActionURLOperationProperty | [[cdk.support/lookup-entry]] | `:url-operation` |
 "
@@ -55380,7 +55380,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `chartColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:chart-color` |
-| `colorMap` | java.util.List | [[cdk.support/lookup-entry]] | `:color-map` |
+| `colorMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-map` |
 "
   [^CfnTemplate$VisualPaletteProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :chart-color)]
@@ -55413,26 +55413,26 @@
 | `barChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bar-chart-visual` |
 | `boxPlotVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:box-plot-visual` |
 | `comboChartVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$ComboChartVisualProperty | [[cdk.support/lookup-entry]] | `:combo-chart-visual` |
-| `customContentVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-content-visual` |
+| `customContentVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$CustomContentVisualProperty | [[cdk.support/lookup-entry]] | `:custom-content-visual` |
 | `emptyVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:empty-visual` |
-| `filledMapVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$FilledMapVisualProperty | [[cdk.support/lookup-entry]] | `:filled-map-visual` |
+| `filledMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filled-map-visual` |
 | `funnelChartVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$FunnelChartVisualProperty | [[cdk.support/lookup-entry]] | `:funnel-chart-visual` |
-| `gaugeChartVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$GaugeChartVisualProperty | [[cdk.support/lookup-entry]] | `:gauge-chart-visual` |
+| `gaugeChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gauge-chart-visual` |
 | `geospatialMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geospatial-map-visual` |
-| `heatMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:heat-map-visual` |
+| `heatMapVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$HeatMapVisualProperty | [[cdk.support/lookup-entry]] | `:heat-map-visual` |
 | `histogramVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:histogram-visual` |
-| `insightVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:insight-visual` |
+| `insightVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$InsightVisualProperty | [[cdk.support/lookup-entry]] | `:insight-visual` |
 | `kpiVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$KPIVisualProperty | [[cdk.support/lookup-entry]] | `:kpi-visual` |
 | `lineChartVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$LineChartVisualProperty | [[cdk.support/lookup-entry]] | `:line-chart-visual` |
 | `pieChartVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$PieChartVisualProperty | [[cdk.support/lookup-entry]] | `:pie-chart-visual` |
 | `pivotTableVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$PivotTableVisualProperty | [[cdk.support/lookup-entry]] | `:pivot-table-visual` |
-| `radarChartVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:radar-chart-visual` |
-| `sankeyDiagramVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sankey-diagram-visual` |
+| `radarChartVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$RadarChartVisualProperty | [[cdk.support/lookup-entry]] | `:radar-chart-visual` |
+| `sankeyDiagramVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$SankeyDiagramVisualProperty | [[cdk.support/lookup-entry]] | `:sankey-diagram-visual` |
 | `scatterPlotVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$ScatterPlotVisualProperty | [[cdk.support/lookup-entry]] | `:scatter-plot-visual` |
 | `tableVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$TableVisualProperty | [[cdk.support/lookup-entry]] | `:table-visual` |
-| `treeMapVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tree-map-visual` |
+| `treeMapVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$TreeMapVisualProperty | [[cdk.support/lookup-entry]] | `:tree-map-visual` |
 | `waterfallVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$WaterfallVisualProperty | [[cdk.support/lookup-entry]] | `:waterfall-visual` |
-| `wordCloudVisual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:word-cloud-visual` |
+| `wordCloudVisual` | software.amazon.awscdk.services.quicksight.CfnTemplate$WordCloudVisualProperty | [[cdk.support/lookup-entry]] | `:word-cloud-visual` |
 "
   [^CfnTemplate$VisualProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bar-chart-visual)]
@@ -55566,9 +55566,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `breakdowns` | java.util.List | [[cdk.support/lookup-entry]] | `:breakdowns` |
-| `categories` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:categories` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+| `breakdowns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:breakdowns` |
+| `categories` | java.util.List | [[cdk.support/lookup-entry]] | `:categories` |
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTemplate$WaterfallChartAggregatedFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :breakdowns)]
@@ -55629,14 +55629,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryAxisDisplayOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$AxisDisplayOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis-display-options` |
-| `categoryAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-axis-label-options` |
+| `categoryAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-axis-label-options` |
 | `colorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:color-configuration` |
-| `dataLabels` | software.amazon.awscdk.services.quicksight.CfnTemplate$DataLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:data-labels` |
+| `dataLabels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-labels` |
 | `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$WaterfallChartFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `legend` | software.amazon.awscdk.services.quicksight.CfnTemplate$LegendOptionsProperty | [[cdk.support/lookup-entry]] | `:legend` |
 | `primaryYAxisDisplayOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-display-options` |
-| `primaryYAxisLabelOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
-| `sortConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$WaterfallChartSortConfigurationProperty | [[cdk.support/lookup-entry]] | `:sort-configuration` |
+| `primaryYAxisLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:primary-y-axis-label-options` |
+| `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `visualPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-palette` |
 | `waterfallChartOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:waterfall-chart-options` |
 "
@@ -55777,7 +55777,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `breakdownItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:breakdown-items-limit` |
-| `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
+| `categorySort` | java.util.List | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnTemplate$WaterfallChartSortConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :breakdown-items-limit)]
@@ -55808,7 +55808,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$WaterfallChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
@@ -55947,7 +55947,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryLabelOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$ChartAxisLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:category-label-options` |
-| `fieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-wells` |
+| `fieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$WordCloudFieldWellsProperty | [[cdk.support/lookup-entry]] | `:field-wells` |
 | `sortConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-configuration` |
 | `wordCloudOptions` | software.amazon.awscdk.services.quicksight.CfnTemplate$WordCloudOptionsProperty | [[cdk.support/lookup-entry]] | `:word-cloud-options` |
 "
@@ -55983,7 +55983,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `wordCloudAggregatedFieldWells` | software.amazon.awscdk.services.quicksight.CfnTemplate$WordCloudAggregatedFieldWellsProperty | [[cdk.support/lookup-entry]] | `:word-cloud-aggregated-field-wells` |
+| `wordCloudAggregatedFieldWells` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:word-cloud-aggregated-field-wells` |
 "
   [^CfnTemplate$WordCloudFieldWellsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :word-cloud-aggregated-field-wells)]
@@ -56054,7 +56054,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoryItemsLimit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-items-limit` |
+| `categoryItemsLimit` | software.amazon.awscdk.services.quicksight.CfnTemplate$ItemsLimitConfigurationProperty | [[cdk.support/lookup-entry]] | `:category-items-limit` |
 | `categorySort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-sort` |
 "
   [^CfnTemplate$WordCloudSortConfigurationProperty$Builder builder id config]
@@ -56086,10 +56086,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `chartConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chart-configuration` |
+| `chartConfiguration` | software.amazon.awscdk.services.quicksight.CfnTemplate$WordCloudChartConfigurationProperty | [[cdk.support/lookup-entry]] | `:chart-configuration` |
 | `columnHierarchies` | java.util.List | [[cdk.support/lookup-entry]] | `:column-hierarchies` |
 | `subtitle` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualSubtitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:subtitle` |
-| `title` | software.amazon.awscdk.services.quicksight.CfnTemplate$VisualTitleLabelOptionsProperty | [[cdk.support/lookup-entry]] | `:title` |
+| `title` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:title` |
 | `visualId` | java.lang.String | [[cdk.support/lookup-entry]] | `:visual-id` |
 "
   [^CfnTemplate$WordCloudVisualProperty$Builder builder id config]
@@ -56128,7 +56128,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `show` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:show` |
+| `show` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show` |
 "
   [^CfnTheme$BorderStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :show)]
@@ -56158,7 +56158,7 @@
 |---|---|---|---|
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
 | `baseThemeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-theme-id` |
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.quicksight.CfnTheme$ThemeConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -56295,7 +56295,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `show` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:show` |
+| `show` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show` |
 "
   [^CfnTheme$MarginStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :show)]
@@ -56325,7 +56325,7 @@
 |---|---|---|---|
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
 | `baseThemeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-theme-id` |
-| `configuration` | software.amazon.awscdk.services.quicksight.CfnTheme$ThemeConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -56406,7 +56406,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tile` | software.amazon.awscdk.services.quicksight.CfnTheme$TileStyleProperty | [[cdk.support/lookup-entry]] | `:tile` |
+| `tile` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tile` |
 | `tileLayout` | software.amazon.awscdk.services.quicksight.CfnTheme$TileLayoutStyleProperty | [[cdk.support/lookup-entry]] | `:tile-layout` |
 "
   [^CfnTheme$SheetStyleProperty$Builder builder id config]
@@ -56437,8 +56437,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataColorPalette` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-color-palette` |
-| `sheet` | software.amazon.awscdk.services.quicksight.CfnTheme$SheetStyleProperty | [[cdk.support/lookup-entry]] | `:sheet` |
+| `dataColorPalette` | software.amazon.awscdk.services.quicksight.CfnTheme$DataColorPaletteProperty | [[cdk.support/lookup-entry]] | `:data-color-palette` |
+| `sheet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sheet` |
 | `typography` | software.amazon.awscdk.services.quicksight.CfnTheme$TypographyProperty | [[cdk.support/lookup-entry]] | `:typography` |
 | `uiColorPalette` | software.amazon.awscdk.services.quicksight.CfnTheme$UIColorPaletteProperty | [[cdk.support/lookup-entry]] | `:ui-color-palette` |
 "
@@ -56507,7 +56507,7 @@
 |---|---|---|---|
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 | `baseThemeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-theme-id` |
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.quicksight.CfnTheme$ThemeConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `createdTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:created-time` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `errors` | java.util.List | [[cdk.support/lookup-entry]] | `:errors` |
@@ -56554,8 +56554,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `gutter` | software.amazon.awscdk.services.quicksight.CfnTheme$GutterStyleProperty | [[cdk.support/lookup-entry]] | `:gutter` |
-| `margin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:margin` |
+| `gutter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gutter` |
+| `margin` | software.amazon.awscdk.services.quicksight.CfnTheme$MarginStyleProperty | [[cdk.support/lookup-entry]] | `:margin` |
 "
   [^CfnTheme$TileLayoutStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :gutter)]
@@ -56585,7 +56585,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `border` | software.amazon.awscdk.services.quicksight.CfnTheme$BorderStyleProperty | [[cdk.support/lookup-entry]] | `:border` |
+| `border` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:border` |
 "
   [^CfnTheme$TileStyleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :border)]
@@ -56715,7 +56715,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
-| `dataSets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-sets` |
+| `dataSets` | java.util.List | [[cdk.support/lookup-entry]] | `:data-sets` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `topicId` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-id` |
@@ -56882,12 +56882,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `calculatedFields` | java.util.List | [[cdk.support/lookup-entry]] | `:calculated-fields` |
-| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
 | `dataAggregation` | software.amazon.awscdk.services.quicksight.CfnTopic$DataAggregationProperty | [[cdk.support/lookup-entry]] | `:data-aggregation` |
 | `datasetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-arn` |
 | `datasetDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-description` |
 | `datasetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-name` |
-| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
+| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
 | `namedEntities` | java.util.List | [[cdk.support/lookup-entry]] | `:named-entities` |
 "
   [^CfnTopic$DatasetMetadataProperty$Builder builder id config]
@@ -56931,7 +56931,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `displayFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-format` |
-| `displayFormatOptions` | software.amazon.awscdk.services.quicksight.CfnTopic$DisplayFormatOptionsProperty | [[cdk.support/lookup-entry]] | `:display-format-options` |
+| `displayFormatOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:display-format-options` |
 "
   [^CfnTopic$DefaultFormattingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :display-format)]
@@ -56967,7 +56967,7 @@
 | `decimalSeparator` | java.lang.String | [[cdk.support/lookup-entry]] | `:decimal-separator` |
 | `fractionDigits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:fraction-digits` |
 | `groupingSeparator` | java.lang.String | [[cdk.support/lookup-entry]] | `:grouping-separator` |
-| `negativeFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:negative-format` |
+| `negativeFormat` | software.amazon.awscdk.services.quicksight.CfnTopic$NegativeFormatProperty | [[cdk.support/lookup-entry]] | `:negative-format` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 | `unitScaler` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit-scaler` |
@@ -57023,7 +57023,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregation` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation` |
-| `aggregationFunctionParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:aggregation-function-parameters` |
+| `aggregationFunctionParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-function-parameters` |
 "
   [^CfnTopic$NamedEntityDefinitionMetricProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation)]
@@ -57054,7 +57054,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-name` |
-| `metric` | software.amazon.awscdk.services.quicksight.CfnTopic$NamedEntityDefinitionMetricProperty | [[cdk.support/lookup-entry]] | `:metric` |
+| `metric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric` |
 | `propertyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-name` |
 | `propertyRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-role` |
 | `propertyUsage` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-usage` |
@@ -57125,7 +57125,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsAccountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-account-id` |
-| `dataSets` | java.util.List | [[cdk.support/lookup-entry]] | `:data-sets` |
+| `dataSets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-sets` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `topicId` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-id` |
@@ -57200,7 +57200,7 @@
 |---|---|---|---|
 | `subTypeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:sub-type-name` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
-| `typeParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:type-parameters` |
+| `typeParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:type-parameters` |
 "
   [^CfnTopic$SemanticEntityTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sub-type-name)]
@@ -57238,7 +57238,7 @@
 | `truthyCellValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:truthy-cell-value` |
 | `truthyCellValueSynonyms` | java.util.List | [[cdk.support/lookup-entry]] | `:truthy-cell-value-synonyms` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
-| `typeParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:type-parameters` |
+| `typeParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:type-parameters` |
 "
   [^CfnTopic$SemanticTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :falsey-cell-value)]
@@ -57283,11 +57283,11 @@
 | `calculatedFieldDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:calculated-field-description` |
 | `calculatedFieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:calculated-field-name` |
 | `calculatedFieldSynonyms` | java.util.List | [[cdk.support/lookup-entry]] | `:calculated-field-synonyms` |
-| `cellValueSynonyms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cell-value-synonyms` |
+| `cellValueSynonyms` | java.util.List | [[cdk.support/lookup-entry]] | `:cell-value-synonyms` |
 | `columnDataRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-data-role` |
-| `comparativeOrder` | software.amazon.awscdk.services.quicksight.CfnTopic$ComparativeOrderProperty | [[cdk.support/lookup-entry]] | `:comparative-order` |
-| `defaultFormatting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-formatting` |
-| `disableIndexing` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-indexing` |
+| `comparativeOrder` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparative-order` |
+| `defaultFormatting` | software.amazon.awscdk.services.quicksight.CfnTopic$DefaultFormattingProperty | [[cdk.support/lookup-entry]] | `:default-formatting` |
+| `disableIndexing` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-indexing` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 | `isIncludedInTopic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-included-in-topic` |
 | `neverAggregateInFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:never-aggregate-in-filter` |
@@ -57390,8 +57390,8 @@
 |---|---|---|---|
 | `categoryFilterFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-filter-function` |
 | `categoryFilterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:category-filter-type` |
-| `constant` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constant` |
-| `inverse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inverse` |
+| `constant` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicCategoryFilterConstantProperty | [[cdk.support/lookup-entry]] | `:constant` |
+| `inverse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inverse` |
 "
   [^CfnTopic$TopicCategoryFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :category-filter-function)]
@@ -57427,18 +57427,18 @@
 |---|---|---|---|
 | `aggregation` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation` |
 | `allowedAggregations` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-aggregations` |
-| `cellValueSynonyms` | java.util.List | [[cdk.support/lookup-entry]] | `:cell-value-synonyms` |
+| `cellValueSynonyms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cell-value-synonyms` |
 | `columnDataRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-data-role` |
 | `columnDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-description` |
 | `columnFriendlyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-friendly-name` |
 | `columnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-name` |
 | `columnSynonyms` | java.util.List | [[cdk.support/lookup-entry]] | `:column-synonyms` |
-| `comparativeOrder` | software.amazon.awscdk.services.quicksight.CfnTopic$ComparativeOrderProperty | [[cdk.support/lookup-entry]] | `:comparative-order` |
+| `comparativeOrder` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:comparative-order` |
 | `defaultFormatting` | software.amazon.awscdk.services.quicksight.CfnTopic$DefaultFormattingProperty | [[cdk.support/lookup-entry]] | `:default-formatting` |
-| `disableIndexing` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-indexing` |
+| `disableIndexing` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-indexing` |
 | `isIncludedInTopic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-included-in-topic` |
-| `neverAggregateInFilter` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:never-aggregate-in-filter` |
-| `nonAdditive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:non-additive` |
+| `neverAggregateInFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:never-aggregate-in-filter` |
+| `nonAdditive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:non-additive` |
 | `notAllowedAggregations` | java.util.List | [[cdk.support/lookup-entry]] | `:not-allowed-aggregations` |
 | `semanticType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:semantic-type` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
@@ -57502,7 +57502,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `constant` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicRangeFilterConstantProperty | [[cdk.support/lookup-entry]] | `:constant` |
-| `inclusive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inclusive` |
+| `inclusive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inclusive` |
 "
   [^CfnTopic$TopicDateRangeFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :constant)]
@@ -57533,14 +57533,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `categoryFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:category-filter` |
-| `dateRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:date-range-filter` |
+| `dateRangeFilter` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicDateRangeFilterProperty | [[cdk.support/lookup-entry]] | `:date-range-filter` |
 | `filterClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-class` |
 | `filterDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-description` |
 | `filterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-name` |
 | `filterSynonyms` | java.util.List | [[cdk.support/lookup-entry]] | `:filter-synonyms` |
 | `filterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-type` |
-| `numericEqualityFilter` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicNumericEqualityFilterProperty | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
-| `numericRangeFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-range-filter` |
+| `numericEqualityFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:numeric-equality-filter` |
+| `numericRangeFilter` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicNumericRangeFilterProperty | [[cdk.support/lookup-entry]] | `:numeric-range-filter` |
 | `operandFieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:operand-field-name` |
 | `relativeDateFilter` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicRelativeDateFilterProperty | [[cdk.support/lookup-entry]] | `:relative-date-filter` |
 "
@@ -57631,7 +57631,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregation` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation` |
-| `constant` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constant` |
+| `constant` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicSingularFilterConstantProperty | [[cdk.support/lookup-entry]] | `:constant` |
 "
   [^CfnTopic$TopicNumericEqualityFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation)]
@@ -57662,8 +57662,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregation` | java.lang.String | [[cdk.support/lookup-entry]] | `:aggregation` |
-| `constant` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constant` |
-| `inclusive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inclusive` |
+| `constant` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicRangeFilterConstantProperty | [[cdk.support/lookup-entry]] | `:constant` |
+| `inclusive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inclusive` |
 "
   [^CfnTopic$TopicNumericRangeFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aggregation)]
@@ -57726,7 +57726,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `constant` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constant` |
+| `constant` | software.amazon.awscdk.services.quicksight.CfnTopic$TopicSingularFilterConstantProperty | [[cdk.support/lookup-entry]] | `:constant` |
 | `relativeDateFilterFunction` | java.lang.String | [[cdk.support/lookup-entry]] | `:relative-date-filter-function` |
 | `timeGranularity` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-granularity` |
 "

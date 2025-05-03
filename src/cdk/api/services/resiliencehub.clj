@@ -28,7 +28,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionModel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permission-model` |
 | `resiliencyPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resiliency-policy-arn` |
-| `resourceMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-mappings` |
+| `resourceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-mappings` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApp$Builder builder id config]
@@ -181,7 +181,7 @@
 | `appAssessmentSchedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-assessment-schedule` |
 | `appTemplateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-template-body` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `eventSubscriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:event-subscriptions` |
+| `eventSubscriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-subscriptions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionModel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permission-model` |
 | `resiliencyPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resiliency-policy-arn` |

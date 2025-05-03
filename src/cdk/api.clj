@@ -2555,7 +2555,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `acceptTermsAndConditions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:accept-terms-and-conditions` |
+| `acceptTermsAndConditions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:accept-terms-and-conditions` |
 | `connectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-arn` |
 "
   [^CfnPublisherProps$Builder builder id config]
@@ -2974,7 +2974,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `notificationArns` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-arns` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-url` |
 | `timeoutInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-minutes` |
@@ -3122,16 +3122,16 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `administrationRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:administration-role-arn` |
-| `autoDeployment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-deployment` |
+| `autoDeployment` | software.amazon.awscdk.CfnStackSet$AutoDeploymentProperty | [[cdk.support/lookup-entry]] | `:auto-deployment` |
 | `callAs` | java.lang.String | [[cdk.support/lookup-entry]] | `:call-as` |
 | `capabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:capabilities` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `executionRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-name` |
 | `managedExecution` | java.lang.Object | [[cdk.support/lookup-entry]] | `:managed-execution` |
 | `operationPreferences` | software.amazon.awscdk.CfnStackSet$OperationPreferencesProperty | [[cdk.support/lookup-entry]] | `:operation-preferences` |
-| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 | `permissionModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission-model` |
-| `stackInstancesGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
+| `stackInstancesGroup` | java.util.List | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-body` |
@@ -3228,7 +3228,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `active` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active` |
+| `active` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:active` |
 "
   [^CfnStackSet$ManagedExecutionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :active)]
@@ -3331,7 +3331,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `administrationRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:administration-role-arn` |
-| `autoDeployment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-deployment` |
+| `autoDeployment` | software.amazon.awscdk.CfnStackSet$AutoDeploymentProperty | [[cdk.support/lookup-entry]] | `:auto-deployment` |
 | `callAs` | java.lang.String | [[cdk.support/lookup-entry]] | `:call-as` |
 | `capabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:capabilities` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -3340,7 +3340,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `operationPreferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:operation-preferences` |
 | `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 | `permissionModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission-model` |
-| `stackInstancesGroup` | java.util.List | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
+| `stackInstancesGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-body` |
@@ -3628,7 +3628,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `autoUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-update` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `loggingConfig` | software.amazon.awscdk.CfnTypeActivation$LoggingConfigProperty | [[cdk.support/lookup-entry]] | `:logging-config` |
+| `loggingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-config` |
 | `majorVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:major-version` |
 | `publicTypeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:public-type-arn` |
 | `publisherId` | java.lang.String | [[cdk.support/lookup-entry]] | `:publisher-id` |
@@ -5822,26 +5822,26 @@ __Create Form:__ ___[java.lang.Object]___
   "Creates a  `Stack$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ___[]___
-
-| Argument | DataType | Description |
-|---|---|---|
-
-| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| `config` | map | Data configuration |
-
-
 __Create Form:__ ___[software.constructs.Construct java.lang.String]___
 
 | Argument | DataType | Description |
 |---|---|---|
 | `scope` | software.constructs.Construct |  |
 | `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |
+
+
+__Create Form:__ ___[]___
+
+| Argument | DataType | Description |
+|---|---|---|
+
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | `config` | map | Data configuration |"
-  ([id config]
-   (stack-builder> (Stack$Builder/create) id config))
   ([^Construct scope id config]
-   (stack-builder> (Stack$Builder/create scope (name id)) id config)))
+   (stack-builder> (Stack$Builder/create scope (name id)) id config))
+  ([id config]
+   (stack-builder> (Stack$Builder/create) id config)))
 
 
 (defn stack-props-builder>
@@ -6128,16 +6128,6 @@ __Create Form:__ ___[java.lang.String java.lang.String]___
   "Creates a  `TagManager$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ___[software.amazon.awscdk.TagType java.lang.String]___
-
-| Argument | DataType | Description |
-|---|---|---|
-| `tag-type` | software.amazon.awscdk.TagType |  |
-| `resource-manager` | java.lang.String |  |
-| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| `config` | map | Data configuration |
-
-
 __Create Form:__ ___[software.amazon.awscdk.TagType java.lang.String java.lang.Object]___
 
 | Argument | DataType | Description |
@@ -6146,11 +6136,21 @@ __Create Form:__ ___[software.amazon.awscdk.TagType java.lang.String java.lang.O
 | `resource-manager` | java.lang.String |  |
 | `initial-tags` | java.lang.Object |  |
 | `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |
+
+
+__Create Form:__ ___[software.amazon.awscdk.TagType java.lang.String]___
+
+| Argument | DataType | Description |
+|---|---|---|
+| `tag-type` | software.amazon.awscdk.TagType |  |
+| `resource-manager` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | `config` | map | Data configuration |"
-  ([^TagType tag-type ^String resource-manager id config]
-   (tag-manager-builder> (TagManager$Builder/create tag-type resource-manager) id config))
   ([^TagType tag-type ^String resource-manager ^Object initial-tags id config]
-   (tag-manager-builder> (TagManager$Builder/create tag-type resource-manager initial-tags) id config)))
+   (tag-manager-builder> (TagManager$Builder/create tag-type resource-manager initial-tags) id config))
+  ([^TagType tag-type ^String resource-manager id config]
+   (tag-manager-builder> (TagManager$Builder/create tag-type resource-manager) id config)))
 
 
 (defn tag-manager-options-builder>

@@ -51,7 +51,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authenticationConfiguration` | software.amazon.awscdk.alexa.ask.CfnSkill$AuthenticationConfigurationProperty | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
+| `authenticationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
 | `skillPackage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:skill-package` |
 | `vendorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor-id` |
 "
@@ -147,7 +147,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `overrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:overrides` |
+| `overrides` | software.amazon.awscdk.alexa.ask.CfnSkill$OverridesProperty | [[cdk.support/lookup-entry]] | `:overrides` |
 | `s3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket` |
 | `s3BucketRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-role` |
 | `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |

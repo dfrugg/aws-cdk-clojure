@@ -138,7 +138,7 @@
 | `ec2InstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-instance-types` |
 | `maxSessionLengthInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-session-length-in-minutes` |
 | `maxStoppedSessionLengthInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-stopped-session-length-in-minutes` |
-| `sessionBackup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-backup` |
+| `sessionBackup` | software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile$StreamConfigurationSessionBackupProperty | [[cdk.support/lookup-entry]] | `:session-backup` |
 | `sessionPersistenceMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-persistence-mode` |
 | `sessionStorage` | software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile$StreamConfigurationSessionStorageProperty | [[cdk.support/lookup-entry]] | `:session-storage` |
 | `streamingImageIds` | java.util.List | [[cdk.support/lookup-entry]] | `:streaming-image-ids` |
@@ -220,7 +220,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mode` | java.util.List | [[cdk.support/lookup-entry]] | `:mode` |
-| `root` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:root` |
+| `root` | software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile$StreamingSessionStorageRootProperty | [[cdk.support/lookup-entry]] | `:root` |
 "
   [^CfnLaunchProfile$StreamConfigurationSessionStorageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mode)]
@@ -537,10 +537,10 @@
 | `configuration` | software.amazon.awscdk.services.nimblestudio.CfnStudioComponent$StudioComponentConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `ec2SecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-security-group-ids` |
-| `initializationScripts` | java.util.List | [[cdk.support/lookup-entry]] | `:initialization-scripts` |
+| `initializationScripts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initialization-scripts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `runtimeRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime-role-arn` |
-| `scriptParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:script-parameters` |
+| `scriptParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:script-parameters` |
 | `secureInitializationRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-initialization-role-arn` |
 | `studioId` | java.lang.String | [[cdk.support/lookup-entry]] | `:studio-id` |
 | `subtype` | java.lang.String | [[cdk.support/lookup-entry]] | `:subtype` |
@@ -657,7 +657,7 @@
 | `configuration` | software.amazon.awscdk.services.nimblestudio.CfnStudioComponent$StudioComponentConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `ec2SecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-security-group-ids` |
-| `initializationScripts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initialization-scripts` |
+| `initializationScripts` | java.util.List | [[cdk.support/lookup-entry]] | `:initialization-scripts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `runtimeRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime-role-arn` |
 | `scriptParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:script-parameters` |
@@ -786,10 +786,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activeDirectoryConfiguration` | software.amazon.awscdk.services.nimblestudio.CfnStudioComponent$ActiveDirectoryConfigurationProperty | [[cdk.support/lookup-entry]] | `:active-directory-configuration` |
+| `activeDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active-directory-configuration` |
 | `computeFarmConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compute-farm-configuration` |
 | `licenseServiceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:license-service-configuration` |
-| `sharedFileSystemConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:shared-file-system-configuration` |
+| `sharedFileSystemConfiguration` | software.amazon.awscdk.services.nimblestudio.CfnStudioComponent$SharedFileSystemConfigurationProperty | [[cdk.support/lookup-entry]] | `:shared-file-system-configuration` |
 "
   [^CfnStudioComponent$StudioComponentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :active-directory-configuration)]
@@ -862,7 +862,7 @@
 |---|---|---|---|
 | `adminRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:admin-role-arn` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
-| `studioEncryptionConfiguration` | software.amazon.awscdk.services.nimblestudio.CfnStudio$StudioEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:studio-encryption-configuration` |
+| `studioEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:studio-encryption-configuration` |
 | `studioName` | java.lang.String | [[cdk.support/lookup-entry]] | `:studio-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `userRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-role-arn` |

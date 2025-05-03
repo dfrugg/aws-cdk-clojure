@@ -151,7 +151,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addDefaultAuthorizerToCorsPreflight` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-default-authorizer-to-cors-preflight` |
+| `addDefaultAuthorizerToCorsPreflight` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:add-default-authorizer-to-cors-preflight` |
 | `authorizers` | java.lang.Object | [[cdk.support/lookup-entry]] | `:authorizers` |
 | `defaultAuthorizer` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authorizer` |
 "
@@ -185,22 +185,22 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLogSetting` | software.amazon.awscdk.services.sam.CfnApi$AccessLogSettingProperty | [[cdk.support/lookup-entry]] | `:access-log-setting` |
+| `accessLogSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log-setting` |
 | `alwaysDeploy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:always-deploy` |
 | `auth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auth` |
 | `binaryMediaTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:binary-media-types` |
-| `cacheClusterEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
+| `cacheClusterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
 | `cacheClusterSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-cluster-size` |
-| `canarySetting` | software.amazon.awscdk.services.sam.CfnApi$CanarySettingProperty | [[cdk.support/lookup-entry]] | `:canary-setting` |
-| `cors` | java.lang.String | [[cdk.support/lookup-entry]] | `:cors` |
+| `canarySetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canary-setting` |
+| `cors` | software.amazon.awscdk.services.sam.CfnApi$CorsConfigurationProperty | [[cdk.support/lookup-entry]] | `:cors` |
 | `definitionBody` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition-body` |
-| `definitionUri` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-uri` |
+| `definitionUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-uri` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `disableExecuteApiEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
-| `domain` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain` |
-| `endpointConfiguration` | software.amazon.awscdk.services.sam.CfnApi$EndpointConfigurationProperty | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
+| `disableExecuteApiEndpoint` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
+| `domain` | software.amazon.awscdk.services.sam.CfnApi$DomainConfigurationProperty | [[cdk.support/lookup-entry]] | `:domain` |
+| `endpointConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
 | `gatewayResponses` | java.lang.Object | [[cdk.support/lookup-entry]] | `:gateway-responses` |
-| `methodSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:method-settings` |
+| `methodSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:method-settings` |
 | `minimumCompressionSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-compression-size` |
 | `models` | java.lang.Object | [[cdk.support/lookup-entry]] | `:models` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -208,7 +208,7 @@
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `tracingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing-enabled` |
-| `variables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variables` |
+| `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnApi$Builder builder id config]
   (when-some [data (lookup-entry config id :access-log-setting)]
@@ -285,7 +285,7 @@
 | `deploymentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-id` |
 | `percentTraffic` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percent-traffic` |
 | `stageVariableOverrides` | java.util.Map | [[cdk.support/lookup-entry]] | `:stage-variable-overrides` |
-| `useStageCache` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
+| `useStageCache` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
 "
   [^CfnApi$CanarySettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :deployment-id)]
@@ -365,7 +365,7 @@
 | `endpointConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
 | `mutualTlsAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutual-tls-authentication` |
 | `ownershipVerificationCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ownership-verification-certificate-arn` |
-| `route53` | software.amazon.awscdk.services.sam.CfnApi$Route53ConfigurationProperty | [[cdk.support/lookup-entry]] | `:route53` |
+| `route53` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:route53` |
 | `securityPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-policy` |
 "
   [^CfnApi$DomainConfigurationProperty$Builder builder id config]
@@ -471,18 +471,18 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessLogSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log-setting` |
-| `alwaysDeploy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:always-deploy` |
+| `alwaysDeploy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:always-deploy` |
 | `auth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auth` |
 | `binaryMediaTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:binary-media-types` |
 | `cacheClusterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
 | `cacheClusterSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-cluster-size` |
 | `canarySetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canary-setting` |
-| `cors` | java.lang.String | [[cdk.support/lookup-entry]] | `:cors` |
+| `cors` | software.amazon.awscdk.services.sam.CfnApi$CorsConfigurationProperty | [[cdk.support/lookup-entry]] | `:cors` |
 | `definitionBody` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition-body` |
 | `definitionUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-uri` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `disableExecuteApiEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
-| `domain` | software.amazon.awscdk.services.sam.CfnApi$DomainConfigurationProperty | [[cdk.support/lookup-entry]] | `:domain` |
+| `disableExecuteApiEndpoint` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
+| `domain` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain` |
 | `endpointConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
 | `gatewayResponses` | java.lang.Object | [[cdk.support/lookup-entry]] | `:gateway-responses` |
 | `methodSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:method-settings` |
@@ -568,7 +568,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `distributedDomainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:distributed-domain-name` |
-| `evaluateTargetHealth` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:evaluate-target-health` |
+| `evaluateTargetHealth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:evaluate-target-health` |
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 | `hostedZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-name` |
 | `ipV6` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-v6` |
@@ -674,7 +674,7 @@
 |---|---|---|---|
 | `location` | software.amazon.awscdk.services.sam.CfnApplication$ApplicationLocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 | `notificationArns` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-arns` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeoutInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-minutes` |
 "
@@ -783,7 +783,7 @@
 | `auth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auth` |
 | `method` | java.lang.String | [[cdk.support/lookup-entry]] | `:method` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
-| `requestModel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-model` |
+| `requestModel` | software.amazon.awscdk.services.sam.CfnFunction$RequestModelProperty | [[cdk.support/lookup-entry]] | `:request-model` |
 | `requestParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:request-parameters` |
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
@@ -823,7 +823,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiKeyRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-key-required` |
+| `apiKeyRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:api-key-required` |
 | `authorizationScopes` | java.util.List | [[cdk.support/lookup-entry]] | `:authorization-scopes` |
 | `authorizer` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorizer` |
 | `resourcePolicy` | software.amazon.awscdk.services.sam.CfnFunction$AuthResourcePolicyProperty | [[cdk.support/lookup-entry]] | `:resource-policy` |
@@ -862,7 +862,7 @@
 |---|---|---|---|
 | `awsAccountBlacklist` | java.util.List | [[cdk.support/lookup-entry]] | `:aws-account-blacklist` |
 | `awsAccountWhitelist` | java.util.List | [[cdk.support/lookup-entry]] | `:aws-account-whitelist` |
-| `customStatements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-statements` |
+| `customStatements` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-statements` |
 | `intrinsicVpcBlacklist` | java.util.List | [[cdk.support/lookup-entry]] | `:intrinsic-vpc-blacklist` |
 | `intrinsicVpcWhitelist` | java.util.List | [[cdk.support/lookup-entry]] | `:intrinsic-vpc-whitelist` |
 | `intrinsicVpceBlacklist` | java.util.List | [[cdk.support/lookup-entry]] | `:intrinsic-vpce-blacklist` |
@@ -955,15 +955,15 @@
 | `deadLetterQueue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
 | `deploymentPreference` | software.amazon.awscdk.services.sam.CfnFunction$DeploymentPreferenceProperty | [[cdk.support/lookup-entry]] | `:deployment-preference` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `environment` | software.amazon.awscdk.services.sam.CfnFunction$FunctionEnvironmentProperty | [[cdk.support/lookup-entry]] | `:environment` |
+| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
 | `ephemeralStorage` | software.amazon.awscdk.services.sam.CfnFunction$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `eventInvokeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-invoke-config` |
-| `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
+| `events` | java.util.Map | [[cdk.support/lookup-entry]] | `:events` |
 | `fileSystemConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:file-system-configs` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
-| `functionUrlConfig` | software.amazon.awscdk.services.sam.CfnFunction$FunctionUrlConfigProperty | [[cdk.support/lookup-entry]] | `:function-url-config` |
+| `functionUrlConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:function-url-config` |
 | `handler` | java.lang.String | [[cdk.support/lookup-entry]] | `:handler` |
-| `imageConfig` | software.amazon.awscdk.services.sam.CfnFunction$ImageConfigProperty | [[cdk.support/lookup-entry]] | `:image-config` |
+| `imageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-config` |
 | `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |
 | `inlineCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:inline-code` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
@@ -980,7 +980,7 @@
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 | `tracing` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing` |
 | `versionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-description` |
-| `vpcConfig` | software.amazon.awscdk.services.sam.CfnFunction$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnFunction$Builder builder id config]
   (when-some [data (lookup-entry config id :architectures)]
@@ -1200,7 +1200,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowCredentials` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-credentials` |
+| `allowCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-credentials` |
 | `allowHeaders` | java.lang.String | [[cdk.support/lookup-entry]] | `:allow-headers` |
 | `allowMethods` | java.lang.String | [[cdk.support/lookup-entry]] | `:allow-methods` |
 | `allowOrigin` | java.lang.String | [[cdk.support/lookup-entry]] | `:allow-origin` |
@@ -1272,7 +1272,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alarms` | java.util.List | [[cdk.support/lookup-entry]] | `:alarms` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `hooks` | software.amazon.awscdk.services.sam.CfnFunction$HooksProperty | [[cdk.support/lookup-entry]] | `:hooks` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -1399,7 +1399,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
-| `bisectBatchOnFunctionError` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:bisect-batch-on-function-error` |
+| `bisectBatchOnFunctionError` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bisect-batch-on-function-error` |
 | `destinationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-config` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `maximumBatchingWindowInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-batching-window-in-seconds` |
@@ -1559,7 +1559,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `onFailure` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-failure` |
-| `onSuccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-success` |
+| `onSuccess` | software.amazon.awscdk.services.sam.CfnFunction$DestinationProperty | [[cdk.support/lookup-entry]] | `:on-success` |
 "
   [^CfnFunction$EventInvokeDestinationConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :on-failure)]
@@ -1651,7 +1651,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
+| `variables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnFunction$FunctionEnvironmentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :variables)]
@@ -1708,7 +1708,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authType` | java.lang.String | [[cdk.support/lookup-entry]] | `:auth-type` |
-| `cors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cors` |
+| `cors` | software.amazon.awscdk.services.sam.CfnFunction$CorsConfigurationProperty | [[cdk.support/lookup-entry]] | `:cors` |
 | `invokeMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:invoke-mode` |
 "
   [^CfnFunction$FunctionUrlConfigProperty$Builder builder id config]
@@ -1773,11 +1773,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `apiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-id` |
-| `auth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auth` |
+| `auth` | software.amazon.awscdk.services.sam.CfnFunction$HttpApiFunctionAuthProperty | [[cdk.support/lookup-entry]] | `:auth` |
 | `method` | java.lang.String | [[cdk.support/lookup-entry]] | `:method` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `payloadFormatVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-format-version` |
-| `routeSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:route-settings` |
+| `routeSettings` | software.amazon.awscdk.services.sam.CfnFunction$RouteSettingsProperty | [[cdk.support/lookup-entry]] | `:route-settings` |
 | `timeoutInMillis` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-millis` |
 "
   [^CfnFunction$HttpApiEventProperty$Builder builder id config]
@@ -2002,7 +2002,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `functionResponseTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:function-response-types` |
 | `startingPosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:starting-position` |
 | `stream` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream` |
@@ -2103,18 +2103,18 @@
 | `autoPublishCodeSha256` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-publish-code-sha256` |
 | `codeSigningConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:code-signing-config-arn` |
 | `codeUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:code-uri` |
-| `deadLetterQueue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
-| `deploymentPreference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-preference` |
+| `deadLetterQueue` | software.amazon.awscdk.services.sam.CfnFunction$DeadLetterQueueProperty | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
+| `deploymentPreference` | software.amazon.awscdk.services.sam.CfnFunction$DeploymentPreferenceProperty | [[cdk.support/lookup-entry]] | `:deployment-preference` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `environment` | software.amazon.awscdk.services.sam.CfnFunction$FunctionEnvironmentProperty | [[cdk.support/lookup-entry]] | `:environment` |
-| `ephemeralStorage` | software.amazon.awscdk.services.sam.CfnFunction$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
+| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
+| `ephemeralStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `eventInvokeConfig` | software.amazon.awscdk.services.sam.CfnFunction$EventInvokeConfigProperty | [[cdk.support/lookup-entry]] | `:event-invoke-config` |
 | `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
 | `fileSystemConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:file-system-configs` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `functionUrlConfig` | software.amazon.awscdk.services.sam.CfnFunction$FunctionUrlConfigProperty | [[cdk.support/lookup-entry]] | `:function-url-config` |
 | `handler` | java.lang.String | [[cdk.support/lookup-entry]] | `:handler` |
-| `imageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-config` |
+| `imageConfig` | software.amazon.awscdk.services.sam.CfnFunction$ImageConfigProperty | [[cdk.support/lookup-entry]] | `:image-config` |
 | `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |
 | `inlineCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:inline-code` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
@@ -2122,7 +2122,7 @@
 | `memorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-size` |
 | `packageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:package-type` |
 | `permissionsBoundary` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
-| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
 | `provisionedConcurrencyConfig` | software.amazon.awscdk.services.sam.CfnFunction$ProvisionedConcurrencyConfigProperty | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
 | `reservedConcurrentExecutions` | java.lang.Number | [[cdk.support/lookup-entry]] | `:reserved-concurrent-executions` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
@@ -2131,7 +2131,7 @@
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 | `tracing` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing` |
 | `versionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-description` |
-| `vpcConfig` | software.amazon.awscdk.services.sam.CfnFunction$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnFunctionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :architectures)]
@@ -2284,9 +2284,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `model` | java.lang.String | [[cdk.support/lookup-entry]] | `:model` |
-| `required` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:required` |
-| `validateBody` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:validate-body` |
-| `validateParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validate-parameters` |
+| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
+| `validateBody` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validate-body` |
+| `validateParameters` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:validate-parameters` |
 "
   [^CfnFunction$RequestModelProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :model)]
@@ -2320,8 +2320,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `caching` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:caching` |
-| `required` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:required` |
+| `caching` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:caching` |
+| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
 "
   [^CfnFunction$RequestParameterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :caching)]
@@ -2425,7 +2425,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnFunction$S3KeyFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :rules)]
@@ -2546,40 +2546,40 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amiDescribePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ami-describe-policy` |
+| `amiDescribePolicy` | software.amazon.awscdk.services.sam.CfnFunction$EmptySAMPTProperty | [[cdk.support/lookup-entry]] | `:ami-describe-policy` |
 | `awsSecretsManagerGetSecretValuePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-secrets-manager-get-secret-value-policy` |
 | `cloudFormationDescribeStacksPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-formation-describe-stacks-policy` |
 | `cloudWatchPutMetricPolicy` | software.amazon.awscdk.services.sam.CfnFunction$EmptySAMPTProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-put-metric-policy` |
-| `dynamoDbCrudPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-db-crud-policy` |
+| `dynamoDbCrudPolicy` | software.amazon.awscdk.services.sam.CfnFunction$TableSAMPTProperty | [[cdk.support/lookup-entry]] | `:dynamo-db-crud-policy` |
 | `dynamoDbReadPolicy` | software.amazon.awscdk.services.sam.CfnFunction$TableSAMPTProperty | [[cdk.support/lookup-entry]] | `:dynamo-db-read-policy` |
 | `dynamoDbStreamReadPolicy` | software.amazon.awscdk.services.sam.CfnFunction$TableStreamSAMPTProperty | [[cdk.support/lookup-entry]] | `:dynamo-db-stream-read-policy` |
 | `dynamoDbWritePolicy` | software.amazon.awscdk.services.sam.CfnFunction$TableSAMPTProperty | [[cdk.support/lookup-entry]] | `:dynamo-db-write-policy` |
 | `ec2DescribePolicy` | software.amazon.awscdk.services.sam.CfnFunction$EmptySAMPTProperty | [[cdk.support/lookup-entry]] | `:ec2-describe-policy` |
 | `elasticsearchHttpPostPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elasticsearch-http-post-policy` |
-| `filterLogEventsPolicy` | software.amazon.awscdk.services.sam.CfnFunction$LogGroupSAMPTProperty | [[cdk.support/lookup-entry]] | `:filter-log-events-policy` |
+| `filterLogEventsPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-log-events-policy` |
 | `kinesisCrudPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-crud-policy` |
-| `kinesisStreamReadPolicy` | software.amazon.awscdk.services.sam.CfnFunction$StreamSAMPTProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-read-policy` |
+| `kinesisStreamReadPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-stream-read-policy` |
 | `kmsDecryptPolicy` | software.amazon.awscdk.services.sam.CfnFunction$KeySAMPTProperty | [[cdk.support/lookup-entry]] | `:kms-decrypt-policy` |
-| `lambdaInvokePolicy` | software.amazon.awscdk.services.sam.CfnFunction$FunctionSAMPTProperty | [[cdk.support/lookup-entry]] | `:lambda-invoke-policy` |
+| `lambdaInvokePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-invoke-policy` |
 | `rekognitionDetectOnlyPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rekognition-detect-only-policy` |
-| `rekognitionLabelsPolicy` | software.amazon.awscdk.services.sam.CfnFunction$EmptySAMPTProperty | [[cdk.support/lookup-entry]] | `:rekognition-labels-policy` |
+| `rekognitionLabelsPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rekognition-labels-policy` |
 | `rekognitionNoDataAccessPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rekognition-no-data-access-policy` |
 | `rekognitionReadPolicy` | software.amazon.awscdk.services.sam.CfnFunction$CollectionSAMPTProperty | [[cdk.support/lookup-entry]] | `:rekognition-read-policy` |
-| `rekognitionWriteOnlyAccessPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rekognition-write-only-access-policy` |
-| `s3CrudPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-crud-policy` |
+| `rekognitionWriteOnlyAccessPolicy` | software.amazon.awscdk.services.sam.CfnFunction$CollectionSAMPTProperty | [[cdk.support/lookup-entry]] | `:rekognition-write-only-access-policy` |
+| `s3CrudPolicy` | software.amazon.awscdk.services.sam.CfnFunction$BucketSAMPTProperty | [[cdk.support/lookup-entry]] | `:s3-crud-policy` |
 | `s3ReadPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-read-policy` |
-| `s3WritePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-write-policy` |
+| `s3WritePolicy` | software.amazon.awscdk.services.sam.CfnFunction$BucketSAMPTProperty | [[cdk.support/lookup-entry]] | `:s3-write-policy` |
 | `sesBulkTemplatedCrudPolicy` | software.amazon.awscdk.services.sam.CfnFunction$IdentitySAMPTProperty | [[cdk.support/lookup-entry]] | `:ses-bulk-templated-crud-policy` |
-| `sesCrudPolicy` | software.amazon.awscdk.services.sam.CfnFunction$IdentitySAMPTProperty | [[cdk.support/lookup-entry]] | `:ses-crud-policy` |
-| `sesEmailTemplateCrudPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ses-email-template-crud-policy` |
+| `sesCrudPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ses-crud-policy` |
+| `sesEmailTemplateCrudPolicy` | software.amazon.awscdk.services.sam.CfnFunction$EmptySAMPTProperty | [[cdk.support/lookup-entry]] | `:ses-email-template-crud-policy` |
 | `sesSendBouncePolicy` | software.amazon.awscdk.services.sam.CfnFunction$IdentitySAMPTProperty | [[cdk.support/lookup-entry]] | `:ses-send-bounce-policy` |
-| `snsCrudPolicy` | software.amazon.awscdk.services.sam.CfnFunction$TopicSAMPTProperty | [[cdk.support/lookup-entry]] | `:sns-crud-policy` |
-| `snsPublishMessagePolicy` | software.amazon.awscdk.services.sam.CfnFunction$TopicSAMPTProperty | [[cdk.support/lookup-entry]] | `:sns-publish-message-policy` |
+| `snsCrudPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns-crud-policy` |
+| `snsPublishMessagePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns-publish-message-policy` |
 | `sqsPollerPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs-poller-policy` |
 | `sqsSendMessagePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs-send-message-policy` |
-| `ssmParameterReadPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-parameter-read-policy` |
+| `ssmParameterReadPolicy` | software.amazon.awscdk.services.sam.CfnFunction$ParameterNameSAMPTProperty | [[cdk.support/lookup-entry]] | `:ssm-parameter-read-policy` |
 | `stepFunctionsExecutionPolicy` | software.amazon.awscdk.services.sam.CfnFunction$StateMachineSAMPTProperty | [[cdk.support/lookup-entry]] | `:step-functions-execution-policy` |
-| `vpcAccessPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-access-policy` |
+| `vpcAccessPolicy` | software.amazon.awscdk.services.sam.CfnFunction$EmptySAMPTProperty | [[cdk.support/lookup-entry]] | `:vpc-access-policy` |
 "
   [^CfnFunction$SAMPolicyTemplateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ami-describe-policy)]
@@ -2674,7 +2674,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `input` | java.lang.String | [[cdk.support/lookup-entry]] | `:input` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `schedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule` |
@@ -2770,7 +2770,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
 "
   [^CfnFunction$SQSEventProperty$Builder builder id config]
@@ -3008,14 +3008,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLogSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log-setting` |
-| `auth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auth` |
-| `corsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cors-configuration` |
-| `defaultRouteSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-route-settings` |
+| `accessLogSetting` | software.amazon.awscdk.services.sam.CfnHttpApi$AccessLogSettingProperty | [[cdk.support/lookup-entry]] | `:access-log-setting` |
+| `auth` | software.amazon.awscdk.services.sam.CfnHttpApi$HttpApiAuthProperty | [[cdk.support/lookup-entry]] | `:auth` |
+| `corsConfiguration` | software.amazon.awscdk.services.sam.CfnHttpApi$CorsConfigurationObjectProperty | [[cdk.support/lookup-entry]] | `:cors-configuration` |
+| `defaultRouteSettings` | software.amazon.awscdk.services.sam.CfnHttpApi$RouteSettingsProperty | [[cdk.support/lookup-entry]] | `:default-route-settings` |
 | `definitionBody` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition-body` |
-| `definitionUri` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-uri` |
+| `definitionUri` | software.amazon.awscdk.services.sam.CfnHttpApi$S3LocationProperty | [[cdk.support/lookup-entry]] | `:definition-uri` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `disableExecuteApiEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
+| `disableExecuteApiEndpoint` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
 | `domain` | software.amazon.awscdk.services.sam.CfnHttpApi$HttpApiDomainConfigurationProperty | [[cdk.support/lookup-entry]] | `:domain` |
 | `failOnWarnings` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fail-on-warnings` |
 | `routeSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:route-settings` |
@@ -3154,7 +3154,7 @@
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `endpointConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
 | `mutualTlsAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutual-tls-authentication` |
-| `route53` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:route53` |
+| `route53` | software.amazon.awscdk.services.sam.CfnHttpApi$Route53ConfigurationProperty | [[cdk.support/lookup-entry]] | `:route53` |
 | `securityPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-policy` |
 "
   [^CfnHttpApi$HttpApiDomainConfigurationProperty$Builder builder id config]
@@ -3226,16 +3226,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLogSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log-setting` |
-| `auth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auth` |
+| `accessLogSetting` | software.amazon.awscdk.services.sam.CfnHttpApi$AccessLogSettingProperty | [[cdk.support/lookup-entry]] | `:access-log-setting` |
+| `auth` | software.amazon.awscdk.services.sam.CfnHttpApi$HttpApiAuthProperty | [[cdk.support/lookup-entry]] | `:auth` |
 | `corsConfiguration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cors-configuration` |
-| `defaultRouteSettings` | software.amazon.awscdk.services.sam.CfnHttpApi$RouteSettingsProperty | [[cdk.support/lookup-entry]] | `:default-route-settings` |
+| `defaultRouteSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-route-settings` |
 | `definitionBody` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition-body` |
-| `definitionUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-uri` |
+| `definitionUri` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-uri` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `disableExecuteApiEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
 | `domain` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain` |
-| `failOnWarnings` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fail-on-warnings` |
+| `failOnWarnings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fail-on-warnings` |
 | `routeSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:route-settings` |
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 | `stageVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stage-variables` |
@@ -3293,7 +3293,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataTraceEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-trace-enabled` |
+| `dataTraceEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-trace-enabled` |
 | `detailedMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:detailed-metrics-enabled` |
 | `loggingLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:logging-level` |
 | `throttlingBurstLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-burst-limit` |
@@ -3334,7 +3334,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `distributedDomainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:distributed-domain-name` |
-| `evaluateTargetHealth` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:evaluate-target-health` |
+| `evaluateTargetHealth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:evaluate-target-health` |
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 | `hostedZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-name` |
 | `ipV6` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-v6` |
@@ -3451,7 +3451,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `compatibleRuntimes` | java.util.List | [[cdk.support/lookup-entry]] | `:compatible-runtimes` |
-| `contentUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-uri` |
+| `contentUri` | software.amazon.awscdk.services.sam.CfnLayerVersion$S3LocationProperty | [[cdk.support/lookup-entry]] | `:content-uri` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `layerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:layer-name` |
 | `licenseInfo` | java.lang.String | [[cdk.support/lookup-entry]] | `:license-info` |
@@ -3527,9 +3527,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `primaryKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-key` |
-| `provisionedThroughput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
-| `sseSpecification` | software.amazon.awscdk.services.sam.CfnSimpleTable$SSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `primaryKey` | software.amazon.awscdk.services.sam.CfnSimpleTable$PrimaryKeyProperty | [[cdk.support/lookup-entry]] | `:primary-key` |
+| `provisionedThroughput` | software.amazon.awscdk.services.sam.CfnSimpleTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
+| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -3599,7 +3599,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `primaryKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-key` |
-| `provisionedThroughput` | software.amazon.awscdk.services.sam.CfnSimpleTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
+| `provisionedThroughput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
 | `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -3733,15 +3733,15 @@
 |---|---|---|---|
 | `definition` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition` |
 | `definitionSubstitutions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-substitutions` |
-| `definitionUri` | software.amazon.awscdk.services.sam.CfnStateMachine$S3LocationProperty | [[cdk.support/lookup-entry]] | `:definition-uri` |
-| `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
+| `definitionUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-uri` |
+| `events` | java.util.Map | [[cdk.support/lookup-entry]] | `:events` |
 | `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionsBoundaries` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundaries` |
 | `policies` | software.amazon.awscdk.services.sam.CfnStateMachine$IAMPolicyDocumentProperty | [[cdk.support/lookup-entry]] | `:policies` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `tracing` | software.amazon.awscdk.services.sam.CfnStateMachine$TracingConfigurationProperty | [[cdk.support/lookup-entry]] | `:tracing` |
+| `tracing` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnStateMachine$Builder builder id config]
@@ -3894,7 +3894,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `properties` | software.amazon.awscdk.services.sam.CfnStateMachine$ApiEventProperty | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.services.sam.CfnStateMachine$EventBridgeRuleEventProperty | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnStateMachine$EventSourceProperty$Builder builder id config]
@@ -4013,7 +4013,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
-| `includeExecutionData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-execution-data` |
+| `includeExecutionData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-execution-data` |
 | `level` | java.lang.String | [[cdk.support/lookup-entry]] | `:level` |
 "
   [^CfnStateMachine$LoggingConfigurationProperty$Builder builder id config]
@@ -4047,13 +4047,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `definition` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition` |
-| `definitionSubstitutions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-substitutions` |
-| `definitionUri` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-uri` |
-| `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
-| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
+| `definitionSubstitutions` | java.util.Map | [[cdk.support/lookup-entry]] | `:definition-substitutions` |
+| `definitionUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-uri` |
+| `events` | java.util.Map | [[cdk.support/lookup-entry]] | `:events` |
+| `logging` | software.amazon.awscdk.services.sam.CfnStateMachine$LoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:logging` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionsBoundaries` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundaries` |
-| `policies` | software.amazon.awscdk.services.sam.CfnStateMachine$IAMPolicyDocumentProperty | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `tracing` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing` |

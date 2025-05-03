@@ -31,7 +31,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `browserPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:browser-policy` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -142,7 +142,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `identityProviderDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:identity-provider-details` |
+| `identityProviderDetails` | java.util.Map | [[cdk.support/lookup-entry]] | `:identity-provider-details` |
 | `identityProviderName` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-provider-name` |
 | `identityProviderType` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-provider-type` |
 | `portalArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:portal-arn` |
@@ -179,7 +179,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
@@ -253,11 +253,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
-| `ipRules` | java.util.List | [[cdk.support/lookup-entry]] | `:ip-rules` |
+| `ipRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ip-rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIpAccessSettingsProps$Builder builder id config]
@@ -370,7 +370,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
 | `browserSettingsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:browser-settings-arn` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |
@@ -434,7 +434,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalEncryptionContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
+| `additionalEncryptionContext` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-encryption-context` |
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
 | `browserSettingsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:browser-settings-arn` |
 | `customerManagedKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-managed-key` |

@@ -30,7 +30,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `serviceRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role` |
-| `versionLifecycleConfig` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplication$ApplicationVersionLifecycleConfigProperty | [[cdk.support/lookup-entry]] | `:version-lifecycle-config` |
+| `versionLifecycleConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:version-lifecycle-config` |
 "
   [^CfnApplication$ApplicationResourceLifecycleConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :service-role)]
@@ -93,7 +93,7 @@
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `resourceLifecycleConfig` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplication$ApplicationResourceLifecycleConfigProperty | [[cdk.support/lookup-entry]] | `:resource-lifecycle-config` |
+| `resourceLifecycleConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-lifecycle-config` |
 "
   [^CfnApplication$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -126,7 +126,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deleteSourceFromS3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-source-from-s3` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `maxAgeInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-age-in-days` |
 "
   [^CfnApplication$MaxAgeRuleProperty$Builder builder id config]
@@ -160,7 +160,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deleteSourceFromS3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-source-from-s3` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `maxCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-count` |
 "
   [^CfnApplication$MaxCountRuleProperty$Builder builder id config]
@@ -195,7 +195,7 @@
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `resourceLifecycleConfig` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplication$ApplicationResourceLifecycleConfigProperty | [[cdk.support/lookup-entry]] | `:resource-lifecycle-config` |
+| `resourceLifecycleConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-lifecycle-config` |
 "
   [^CfnApplicationProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -229,7 +229,7 @@
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `sourceBundle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-bundle` |
+| `sourceBundle` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion$SourceBundleProperty | [[cdk.support/lookup-entry]] | `:source-bundle` |
 "
   [^CfnApplicationVersion$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -263,7 +263,7 @@
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `sourceBundle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-bundle` |
+| `sourceBundle` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion$SourceBundleProperty | [[cdk.support/lookup-entry]] | `:source-bundle` |
 "
   [^CfnApplicationVersionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -329,7 +329,7 @@
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `environmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-id` |
-| `optionSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:option-settings` |
+| `optionSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:option-settings` |
 | `platformArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-arn` |
 | `solutionStackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:solution-stack-name` |
 | `sourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-configuration` |
@@ -496,7 +496,7 @@
 | `solutionStackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:solution-stack-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
-| `tier` | software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment$TierProperty | [[cdk.support/lookup-entry]] | `:tier` |
+| `tier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tier` |
 | `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
 "
   [^CfnEnvironment$Builder builder id config]
@@ -589,12 +589,12 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
 | `operationsRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:operations-role` |
-| `optionSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:option-settings` |
+| `optionSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:option-settings` |
 | `platformArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-arn` |
 | `solutionStackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:solution-stack-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
-| `tier` | software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment$TierProperty | [[cdk.support/lookup-entry]] | `:tier` |
+| `tier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tier` |
 | `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
 "
   [^CfnEnvironmentProps$Builder builder id config]

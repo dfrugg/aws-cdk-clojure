@@ -93,8 +93,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aclName` | java.lang.String | [[cdk.support/lookup-entry]] | `:acl-name` |
-| `autoMinorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
-| `clusterEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cluster-endpoint` |
+| `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
+| `clusterEndpoint` | software.amazon.awscdk.services.memorydb.CfnCluster$EndpointProperty | [[cdk.support/lookup-entry]] | `:cluster-endpoint` |
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
 | `dataTiering` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-tiering` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -116,7 +116,7 @@
 | `snsTopicStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-status` |
 | `subnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-group-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tlsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls-enabled` |
+| `tlsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:tls-enabled` |
 "
   [^CfnCluster$Builder builder id config]
   (when-some [data (lookup-entry config id :acl-name)]
@@ -224,7 +224,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aclName` | java.lang.String | [[cdk.support/lookup-entry]] | `:acl-name` |
-| `autoMinorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
+| `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
 | `clusterEndpoint` | software.amazon.awscdk.services.memorydb.CfnCluster$EndpointProperty | [[cdk.support/lookup-entry]] | `:cluster-endpoint` |
 | `clusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-name` |
 | `dataTiering` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-tiering` |

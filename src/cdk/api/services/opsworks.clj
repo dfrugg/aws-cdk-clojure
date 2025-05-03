@@ -44,13 +44,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `appSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:app-source` |
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
-| `dataSources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-sources` |
+| `appSource` | software.amazon.awscdk.services.opsworks.CfnApp$SourceProperty | [[cdk.support/lookup-entry]] | `:app-source` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
+| `dataSources` | java.util.List | [[cdk.support/lookup-entry]] | `:data-sources` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `domains` | java.util.List | [[cdk.support/lookup-entry]] | `:domains` |
-| `enableSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ssl` |
-| `environment` | java.util.List | [[cdk.support/lookup-entry]] | `:environment` |
+| `enableSsl` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-ssl` |
+| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `shortname` | java.lang.String | [[cdk.support/lookup-entry]] | `:shortname` |
 | `sslConfiguration` | software.amazon.awscdk.services.opsworks.CfnApp$SslConfigurationProperty | [[cdk.support/lookup-entry]] | `:ssl-configuration` |
@@ -140,7 +140,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `secure` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:secure` |
+| `secure` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secure` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnApp$EnvironmentVariableProperty$Builder builder id config]
@@ -174,11 +174,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appSource` | software.amazon.awscdk.services.opsworks.CfnApp$SourceProperty | [[cdk.support/lookup-entry]] | `:app-source` |
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
-| `dataSources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-sources` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
+| `dataSources` | java.util.List | [[cdk.support/lookup-entry]] | `:data-sources` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `domains` | java.util.List | [[cdk.support/lookup-entry]] | `:domains` |
-| `enableSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ssl` |
+| `enableSsl` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-ssl` |
 | `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `shortname` | java.lang.String | [[cdk.support/lookup-entry]] | `:shortname` |
@@ -374,7 +374,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-name` |
-| `ebs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs` |
+| `ebs` | software.amazon.awscdk.services.opsworks.CfnInstance$EbsBlockDeviceProperty | [[cdk.support/lookup-entry]] | `:ebs` |
 | `noDevice` | java.lang.String | [[cdk.support/lookup-entry]] | `:no-device` |
 | `virtualName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-name` |
 "
@@ -415,8 +415,8 @@
 | `architecture` | java.lang.String | [[cdk.support/lookup-entry]] | `:architecture` |
 | `autoScalingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-type` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
-| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `blockDeviceMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `elasticIps` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-ips` |
 | `hostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname` |
 | `installUpdatesOnBoot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:install-updates-on-boot` |
@@ -428,7 +428,7 @@
 | `stackId` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-id` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 | `tenancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tenancy` |
-| `timeBasedAutoScaling` | software.amazon.awscdk.services.opsworks.CfnInstance$TimeBasedAutoScalingProperty | [[cdk.support/lookup-entry]] | `:time-based-auto-scaling` |
+| `timeBasedAutoScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-based-auto-scaling` |
 | `virtualizationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtualization-type` |
 | `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
 "
@@ -498,7 +498,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleteOnTermination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
+| `deleteOnTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-on-termination` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `snapshotId` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-id` |
 | `volumeSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:volume-size` |
@@ -543,8 +543,8 @@
 | `architecture` | java.lang.String | [[cdk.support/lookup-entry]] | `:architecture` |
 | `autoScalingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-type` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `blockDeviceMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
-| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+| `blockDeviceMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:block-device-mappings` |
+| `ebsOptimized` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 | `elasticIps` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-ips` |
 | `hostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname` |
 | `installUpdatesOnBoot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:install-updates-on-boot` |
@@ -627,12 +627,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `friday` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:friday` |
-| `monday` | java.util.Map | [[cdk.support/lookup-entry]] | `:monday` |
-| `saturday` | java.util.Map | [[cdk.support/lookup-entry]] | `:saturday` |
+| `monday` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monday` |
+| `saturday` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:saturday` |
 | `sunday` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sunday` |
-| `thursday` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:thursday` |
+| `thursday` | java.util.Map | [[cdk.support/lookup-entry]] | `:thursday` |
 | `tuesday` | java.util.Map | [[cdk.support/lookup-entry]] | `:tuesday` |
-| `wednesday` | java.util.Map | [[cdk.support/lookup-entry]] | `:wednesday` |
+| `wednesday` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:wednesday` |
 "
   [^CfnInstance$TimeBasedAutoScalingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :friday)]
@@ -715,17 +715,17 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
 | `autoAssignElasticIps` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-assign-elastic-ips` |
-| `autoAssignPublicIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-assign-public-ips` |
+| `autoAssignPublicIps` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-assign-public-ips` |
 | `customInstanceProfileArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-instance-profile-arn` |
 | `customJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:custom-json` |
-| `customRecipes` | software.amazon.awscdk.services.opsworks.CfnLayer$RecipesProperty | [[cdk.support/lookup-entry]] | `:custom-recipes` |
+| `customRecipes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-recipes` |
 | `customSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-security-group-ids` |
 | `enableAutoHealing` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-healing` |
-| `installUpdatesOnBoot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:install-updates-on-boot` |
+| `installUpdatesOnBoot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:install-updates-on-boot` |
 | `lifecycleEventConfiguration` | software.amazon.awscdk.services.opsworks.CfnLayer$LifecycleEventConfigurationProperty | [[cdk.support/lookup-entry]] | `:lifecycle-event-configuration` |
-| `loadBasedAutoScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:load-based-auto-scaling` |
+| `loadBasedAutoScaling` | software.amazon.awscdk.services.opsworks.CfnLayer$LoadBasedAutoScalingProperty | [[cdk.support/lookup-entry]] | `:load-based-auto-scaling` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `packages` | java.util.List | [[cdk.support/lookup-entry]] | `:packages` |
 | `shortname` | java.lang.String | [[cdk.support/lookup-entry]] | `:shortname` |
@@ -797,7 +797,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `shutdownEventConfiguration` | software.amazon.awscdk.services.opsworks.CfnLayer$ShutdownEventConfigurationProperty | [[cdk.support/lookup-entry]] | `:shutdown-event-configuration` |
+| `shutdownEventConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:shutdown-event-configuration` |
 "
   [^CfnLayer$LifecycleEventConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :shutdown-event-configuration)]
@@ -827,7 +827,7 @@
 |---|---|---|---|
 | `downScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:down-scaling` |
 | `enable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable` |
-| `upScaling` | software.amazon.awscdk.services.opsworks.CfnLayer$AutoScalingThresholdsProperty | [[cdk.support/lookup-entry]] | `:up-scaling` |
+| `upScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:up-scaling` |
 "
   [^CfnLayer$LoadBasedAutoScalingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :down-scaling)]
@@ -861,12 +861,12 @@
 |---|---|---|---|
 | `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
 | `autoAssignElasticIps` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-assign-elastic-ips` |
-| `autoAssignPublicIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-assign-public-ips` |
+| `autoAssignPublicIps` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-assign-public-ips` |
 | `customInstanceProfileArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-instance-profile-arn` |
 | `customJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:custom-json` |
 | `customRecipes` | software.amazon.awscdk.services.opsworks.CfnLayer$RecipesProperty | [[cdk.support/lookup-entry]] | `:custom-recipes` |
 | `customSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-security-group-ids` |
-| `enableAutoHealing` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-healing` |
+| `enableAutoHealing` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-auto-healing` |
 | `installUpdatesOnBoot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:install-updates-on-boot` |
 | `lifecycleEventConfiguration` | software.amazon.awscdk.services.opsworks.CfnLayer$LifecycleEventConfigurationProperty | [[cdk.support/lookup-entry]] | `:lifecycle-event-configuration` |
 | `loadBasedAutoScaling` | software.amazon.awscdk.services.opsworks.CfnLayer$LoadBasedAutoScalingProperty | [[cdk.support/lookup-entry]] | `:load-based-auto-scaling` |
@@ -876,7 +876,7 @@
 | `stackId` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `useEbsOptimizedInstances` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-ebs-optimized-instances` |
+| `useEbsOptimizedInstances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-ebs-optimized-instances` |
 | `volumeConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volume-configurations` |
 "
   [^CfnLayerProps$Builder builder id config]
@@ -1012,7 +1012,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `mountPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-point` |
 | `numberOfDisks` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-disks` |
@@ -1059,7 +1059,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `agentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-version` |
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
 | `chefConfiguration` | software.amazon.awscdk.services.opsworks.CfnStack$ChefConfigurationProperty | [[cdk.support/lookup-entry]] | `:chef-configuration` |
 | `cloneAppIds` | java.util.List | [[cdk.support/lookup-entry]] | `:clone-app-ids` |
 | `clonePermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:clone-permissions` |
@@ -1073,7 +1073,7 @@
 | `defaultSshKeyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-ssh-key-name` |
 | `defaultSubnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-subnet-id` |
 | `ecsClusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ecs-cluster-arn` |
-| `elasticIps` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-ips` |
+| `elasticIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elastic-ips` |
 | `hostnameTheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname-theme` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rdsDbInstances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rds-db-instances` |
@@ -1081,7 +1081,7 @@
 | `sourceStackId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-stack-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `useCustomCookbooks` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-custom-cookbooks` |
-| `useOpsworksSecurityGroups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-opsworks-security-groups` |
+| `useOpsworksSecurityGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-opsworks-security-groups` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnStack$Builder builder id config]
@@ -1159,7 +1159,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `berkshelfVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:berkshelf-version` |
-| `manageBerkshelf` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-berkshelf` |
+| `manageBerkshelf` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:manage-berkshelf` |
 "
   [^CfnStack$ChefConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :berkshelf-version)]
@@ -1221,12 +1221,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `agentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-version` |
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
-| `chefConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:chef-configuration` |
+| `attributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:attributes` |
+| `chefConfiguration` | software.amazon.awscdk.services.opsworks.CfnStack$ChefConfigurationProperty | [[cdk.support/lookup-entry]] | `:chef-configuration` |
 | `cloneAppIds` | java.util.List | [[cdk.support/lookup-entry]] | `:clone-app-ids` |
 | `clonePermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:clone-permissions` |
 | `configurationManager` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-manager` |
-| `customCookbooksSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-cookbooks-source` |
+| `customCookbooksSource` | software.amazon.awscdk.services.opsworks.CfnStack$SourceProperty | [[cdk.support/lookup-entry]] | `:custom-cookbooks-source` |
 | `customJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:custom-json` |
 | `defaultAvailabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-availability-zone` |
 | `defaultInstanceProfileArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-instance-profile-arn` |
@@ -1235,15 +1235,15 @@
 | `defaultSshKeyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-ssh-key-name` |
 | `defaultSubnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-subnet-id` |
 | `ecsClusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ecs-cluster-arn` |
-| `elasticIps` | java.util.List | [[cdk.support/lookup-entry]] | `:elastic-ips` |
+| `elasticIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elastic-ips` |
 | `hostnameTheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname-theme` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rdsDbInstances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rds-db-instances` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
 | `sourceStackId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-stack-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `useCustomCookbooks` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-custom-cookbooks` |
-| `useOpsworksSecurityGroups` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-opsworks-security-groups` |
+| `useCustomCookbooks` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-custom-cookbooks` |
+| `useOpsworksSecurityGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-opsworks-security-groups` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnStackProps$Builder builder id config]

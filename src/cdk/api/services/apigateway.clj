@@ -1073,7 +1073,7 @@ __Create Form:__ ___[java.lang.String]___
 | `customerId` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `generateDistinctId` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:generate-distinct-id` |
+| `generateDistinctId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:generate-distinct-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `stageKeys` | java.util.List | [[cdk.support/lookup-entry]] | `:stage-keys` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1124,7 +1124,7 @@ __Create Form:__ ___[java.lang.String]___
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `generateDistinctId` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:generate-distinct-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `stageKeys` | java.util.List | [[cdk.support/lookup-entry]] | `:stage-keys` |
+| `stageKeys` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stage-keys` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
@@ -1523,8 +1523,8 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `percentTraffic` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percent-traffic` |
-| `stageVariableOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stage-variable-overrides` |
-| `useStageCache` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
+| `stageVariableOverrides` | java.util.Map | [[cdk.support/lookup-entry]] | `:stage-variable-overrides` |
+| `useStageCache` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
 "
   [^CfnDeployment$CanarySettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :percent-traffic)]
@@ -1558,7 +1558,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `percentTraffic` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percent-traffic` |
 | `stageVariableOverrides` | java.util.Map | [[cdk.support/lookup-entry]] | `:stage-variable-overrides` |
-| `useStageCache` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
+| `useStageCache` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
 "
   [^CfnDeployment$DeploymentCanarySettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :percent-traffic)]
@@ -1590,13 +1590,13 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cacheDataEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cache-data-encrypted` |
+| `cacheDataEncrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-data-encrypted` |
 | `cacheTtlInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cache-ttl-in-seconds` |
 | `cachingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:caching-enabled` |
-| `dataTraceEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-trace-enabled` |
+| `dataTraceEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-trace-enabled` |
 | `httpMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-method` |
 | `loggingLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:logging-level` |
-| `metricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:metrics-enabled` |
+| `metricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metrics-enabled` |
 | `resourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-path` |
 | `throttlingBurstLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-burst-limit` |
 | `throttlingRateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-rate-limit` |
@@ -1648,7 +1648,7 @@ __Create Form:__ ___[java.lang.String]___
 | `deploymentCanarySettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-canary-settings` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
-| `stageDescription` | software.amazon.awscdk.services.apigateway.CfnDeployment$StageDescriptionProperty | [[cdk.support/lookup-entry]] | `:stage-description` |
+| `stageDescription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stage-description` |
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^CfnDeploymentProps$Builder builder id config]
@@ -1685,13 +1685,13 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLogSetting` | software.amazon.awscdk.services.apigateway.CfnDeployment$AccessLogSettingProperty | [[cdk.support/lookup-entry]] | `:access-log-setting` |
-| `cacheClusterEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
+| `accessLogSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log-setting` |
+| `cacheClusterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
 | `cacheClusterSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-cluster-size` |
-| `cacheDataEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cache-data-encrypted` |
+| `cacheDataEncrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-data-encrypted` |
 | `cacheTtlInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cache-ttl-in-seconds` |
-| `cachingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:caching-enabled` |
-| `canarySetting` | software.amazon.awscdk.services.apigateway.CfnDeployment$CanarySettingProperty | [[cdk.support/lookup-entry]] | `:canary-setting` |
+| `cachingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:caching-enabled` |
+| `canarySetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canary-setting` |
 | `clientCertificateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-certificate-id` |
 | `dataTraceEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-trace-enabled` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -1945,8 +1945,8 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `endpointConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
-| `mutualTlsAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutual-tls-authentication` |
+| `endpointConfiguration` | software.amazon.awscdk.services.apigateway.CfnDomainName$EndpointConfigurationProperty | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
+| `mutualTlsAuthentication` | software.amazon.awscdk.services.apigateway.CfnDomainName$MutualTlsAuthenticationProperty | [[cdk.support/lookup-entry]] | `:mutual-tls-authentication` |
 | `ownershipVerificationCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ownership-verification-certificate-arn` |
 | `regionalCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:regional-certificate-arn` |
 | `securityPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-policy` |
@@ -2053,8 +2053,8 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `endpointConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
-| `mutualTlsAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mutual-tls-authentication` |
+| `endpointConfiguration` | software.amazon.awscdk.services.apigateway.CfnDomainName$EndpointConfigurationProperty | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
+| `mutualTlsAuthentication` | software.amazon.awscdk.services.apigateway.CfnDomainName$MutualTlsAuthenticationProperty | [[cdk.support/lookup-entry]] | `:mutual-tls-authentication` |
 | `ownershipVerificationCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ownership-verification-certificate-arn` |
 | `regionalCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:regional-certificate-arn` |
 | `securityPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-policy` |
@@ -2101,7 +2101,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `responseParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:response-parameters` |
-| `responseTemplates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-templates` |
+| `responseTemplates` | java.util.Map | [[cdk.support/lookup-entry]] | `:response-templates` |
 | `responseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:response-type` |
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
@@ -2141,7 +2141,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `responseParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-parameters` |
-| `responseTemplates` | java.util.Map | [[cdk.support/lookup-entry]] | `:response-templates` |
+| `responseTemplates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-templates` |
 | `responseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:response-type` |
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
@@ -2180,7 +2180,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiKeyRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-key-required` |
+| `apiKeyRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:api-key-required` |
 | `authorizationScopes` | java.util.List | [[cdk.support/lookup-entry]] | `:authorization-scopes` |
 | `authorizationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorization-type` |
 | `authorizerId` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorizer-id` |
@@ -2189,7 +2189,7 @@ __Create Form:__ ___[java.lang.String]___
 | `methodResponses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:method-responses` |
 | `operationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:operation-name` |
 | `requestModels` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-models` |
-| `requestParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-parameters` |
+| `requestParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-parameters` |
 | `requestValidatorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:request-validator-id` |
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
@@ -2251,10 +2251,10 @@ __Create Form:__ ___[java.lang.String]___
 | `contentHandling` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-handling` |
 | `credentials` | java.lang.String | [[cdk.support/lookup-entry]] | `:credentials` |
 | `integrationHttpMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:integration-http-method` |
-| `integrationResponses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integration-responses` |
+| `integrationResponses` | java.util.List | [[cdk.support/lookup-entry]] | `:integration-responses` |
 | `passthroughBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:passthrough-behavior` |
 | `requestParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-parameters` |
-| `requestTemplates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-templates` |
+| `requestTemplates` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-templates` |
 | `timeoutInMillis` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-millis` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
@@ -2313,7 +2313,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `contentHandling` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-handling` |
 | `responseParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-parameters` |
-| `responseTemplates` | java.util.Map | [[cdk.support/lookup-entry]] | `:response-templates` |
+| `responseTemplates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-templates` |
 | `selectionPattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:selection-pattern` |
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
@@ -2351,8 +2351,8 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `responseModels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-models` |
-| `responseParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:response-parameters` |
+| `responseModels` | java.util.Map | [[cdk.support/lookup-entry]] | `:response-models` |
+| `responseParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-parameters` |
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnMethod$MethodResponseProperty$Builder builder id config]
@@ -2391,9 +2391,9 @@ __Create Form:__ ___[java.lang.String]___
 | `authorizerId` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorizer-id` |
 | `httpMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-method` |
 | `integration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integration` |
-| `methodResponses` | java.util.List | [[cdk.support/lookup-entry]] | `:method-responses` |
+| `methodResponses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:method-responses` |
 | `operationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:operation-name` |
-| `requestModels` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-models` |
+| `requestModels` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-models` |
 | `requestParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:request-parameters` |
 | `requestValidatorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:request-validator-id` |
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
@@ -2568,7 +2568,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
-| `validateRequestBody` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:validate-request-body` |
+| `validateRequestBody` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validate-request-body` |
 | `validateRequestParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validate-request-parameters` |
 "
   [^CfnRequestValidatorProps$Builder builder id config]
@@ -2674,12 +2674,12 @@ __Create Form:__ ___[java.lang.String]___
 | `apiKeySourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-key-source-type` |
 | `binaryMediaTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:binary-media-types` |
 | `body` | java.lang.Object | [[cdk.support/lookup-entry]] | `:body` |
-| `bodyS3Location` | software.amazon.awscdk.services.apigateway.CfnRestApi$S3LocationProperty | [[cdk.support/lookup-entry]] | `:body-s3-location` |
+| `bodyS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-s3-location` |
 | `cloneFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:clone-from` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `disableExecuteApiEndpoint` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
-| `endpointConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
-| `failOnWarnings` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fail-on-warnings` |
+| `endpointConfiguration` | software.amazon.awscdk.services.apigateway.CfnRestApi$EndpointConfigurationProperty | [[cdk.support/lookup-entry]] | `:endpoint-configuration` |
+| `failOnWarnings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fail-on-warnings` |
 | `minimumCompressionSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-compression-size` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -2775,7 +2775,7 @@ __Create Form:__ ___[java.lang.String]___
 | `apiKeySourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-key-source-type` |
 | `binaryMediaTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:binary-media-types` |
 | `body` | java.lang.Object | [[cdk.support/lookup-entry]] | `:body` |
-| `bodyS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-s3-location` |
+| `bodyS3Location` | software.amazon.awscdk.services.apigateway.CfnRestApi$S3LocationProperty | [[cdk.support/lookup-entry]] | `:body-s3-location` |
 | `cloneFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:clone-from` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `disableExecuteApiEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-execute-api-endpoint` |
@@ -2784,7 +2784,7 @@ __Create Form:__ ___[java.lang.String]___
 | `minimumCompressionSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-compression-size` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 | `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2910,20 +2910,20 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLogSetting` | software.amazon.awscdk.services.apigateway.CfnStage$AccessLogSettingProperty | [[cdk.support/lookup-entry]] | `:access-log-setting` |
-| `cacheClusterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
+| `accessLogSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log-setting` |
+| `cacheClusterEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
 | `cacheClusterSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-cluster-size` |
-| `canarySetting` | software.amazon.awscdk.services.apigateway.CfnStage$CanarySettingProperty | [[cdk.support/lookup-entry]] | `:canary-setting` |
+| `canarySetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canary-setting` |
 | `clientCertificateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-certificate-id` |
 | `deploymentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `documentationVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:documentation-version` |
-| `methodSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:method-settings` |
+| `methodSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:method-settings` |
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tracingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing-enabled` |
-| `variables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variables` |
+| `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnStage$Builder builder id config]
   (when-some [data (lookup-entry config id :access-log-setting)]
@@ -2979,8 +2979,8 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `deploymentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-id` |
 | `percentTraffic` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percent-traffic` |
-| `stageVariableOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stage-variable-overrides` |
-| `useStageCache` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
+| `stageVariableOverrides` | java.util.Map | [[cdk.support/lookup-entry]] | `:stage-variable-overrides` |
+| `useStageCache` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
 "
   [^CfnStage$CanarySettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :deployment-id)]
@@ -3014,13 +3014,13 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cacheDataEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cache-data-encrypted` |
+| `cacheDataEncrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-data-encrypted` |
 | `cacheTtlInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cache-ttl-in-seconds` |
 | `cachingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:caching-enabled` |
 | `dataTraceEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-trace-enabled` |
 | `httpMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-method` |
 | `loggingLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:logging-level` |
-| `metricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:metrics-enabled` |
+| `metricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metrics-enabled` |
 | `resourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-path` |
 | `throttlingBurstLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-burst-limit` |
 | `throttlingRateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-rate-limit` |
@@ -3069,7 +3069,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLogSetting` | software.amazon.awscdk.services.apigateway.CfnStage$AccessLogSettingProperty | [[cdk.support/lookup-entry]] | `:access-log-setting` |
+| `accessLogSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log-setting` |
 | `cacheClusterEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-cluster-enabled` |
 | `cacheClusterSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-cluster-size` |
 | `canarySetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canary-setting` |
@@ -3081,7 +3081,7 @@ __Create Form:__ ___[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tracingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:tracing-enabled` |
+| `tracingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing-enabled` |
 | `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnStageProps$Builder builder id config]
@@ -3138,7 +3138,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `apiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-id` |
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
-| `throttle` | java.util.Map | [[cdk.support/lookup-entry]] | `:throttle` |
+| `throttle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:throttle` |
 "
   [^CfnUsagePlan$ApiStageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :api-id)]
@@ -3170,7 +3170,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiStages` | java.util.List | [[cdk.support/lookup-entry]] | `:api-stages` |
+| `apiStages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-stages` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `quota` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:quota` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -3285,7 +3285,7 @@ __Create Form:__ ___[java.lang.String]___
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `quota` | software.amazon.awscdk.services.apigateway.CfnUsagePlan$QuotaSettingsProperty | [[cdk.support/lookup-entry]] | `:quota` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `throttle` | software.amazon.awscdk.services.apigateway.CfnUsagePlan$ThrottleSettingsProperty | [[cdk.support/lookup-entry]] | `:throttle` |
+| `throttle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:throttle` |
 | `usagePlanName` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-plan-name` |
 "
   [^CfnUsagePlanProps$Builder builder id config]
@@ -4265,10 +4265,10 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `additionalItems` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-items` |
-| `additionalProperties` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:additional-properties` |
+| `additionalProperties` | software.amazon.awscdk.services.apigateway.JsonSchema | [[cdk.support/lookup-entry]] | `:additional-properties` |
 | `allOf` | java.util.List | [[cdk.support/lookup-entry]] | `:all-of` |
 | `anyOf` | java.util.List | [[cdk.support/lookup-entry]] | `:any-of` |
-| `contains` | java.util.List | [[cdk.support/lookup-entry]] | `:contains` |
+| `contains` | software.amazon.awscdk.services.apigateway.JsonSchema | [[cdk.support/lookup-entry]] | `:contains` |
 | `defaultValue` | java.lang.Object | [[cdk.support/lookup-entry]] | `:default-value` |
 | `definitions` | java.util.Map | [[cdk.support/lookup-entry]] | `:definitions` |
 | `dependencies` | java.util.Map | [[cdk.support/lookup-entry]] | `:dependencies` |
@@ -4278,7 +4278,7 @@ __Create Form:__ ___[java.lang.String]___
 | `exclusiveMinimum` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclusive-minimum` |
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `items` | java.util.List | [[cdk.support/lookup-entry]] | `:items` |
+| `items` | software.amazon.awscdk.services.apigateway.JsonSchema | [[cdk.support/lookup-entry]] | `:items` |
 | `maxItems` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-items` |
 | `maxLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-length` |
 | `maxProperties` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-properties` |
@@ -4298,7 +4298,7 @@ __Create Form:__ ___[java.lang.String]___
 | `required` | java.util.List | [[cdk.support/lookup-entry]] | `:required` |
 | `schema` | software.amazon.awscdk.services.apigateway.JsonSchemaVersion | [[cdk.api.services.apigateway/json-schema-version]] | `:schema` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `type` | java.util.List | [[cdk.support/lookup-entry]] | `:type` |
+| `type` | software.amazon.awscdk.services.apigateway.JsonSchemaType | [[cdk.api.services.apigateway/json-schema-type]] | `:type` |
 | `uniqueItems` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unique-items` |
 "
   [^JsonSchema$Builder builder id config]
@@ -4370,7 +4370,7 @@ __Create Form:__ ___[java.lang.String]___
     (. builder schema data))
   (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-some [data (lookup-entry config id :type)]
+  (when-some [data (json-schema-type config id :type)]
     (. builder type data))
   (when-some [data (lookup-entry config id :unique-items)]
     (. builder uniqueItems data))

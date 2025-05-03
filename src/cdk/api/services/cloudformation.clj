@@ -321,7 +321,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `loggingConfig` | software.amazon.awscdk.services.cloudformation.CfnHookVersion$LoggingConfigProperty | [[cdk.support/lookup-entry]] | `:logging-config` |
+| `loggingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-config` |
 | `schemaHandlerPackage` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-handler-package` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
 "
@@ -846,7 +846,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `loggingConfig` | software.amazon.awscdk.services.cloudformation.CfnResourceVersion$LoggingConfigProperty | [[cdk.support/lookup-entry]] | `:logging-config` |
+| `loggingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-config` |
 | `schemaHandlerPackage` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-handler-package` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
 "
@@ -960,7 +960,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `notificationArns` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-arns` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-url` |
 | `timeoutInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-minutes` |
@@ -999,7 +999,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `retainStacksOnAccountRemoval` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-stacks-on-account-removal` |
 "
   [^CfnStackSet$AutoDeploymentProperty$Builder builder id config]
@@ -1031,16 +1031,16 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `administrationRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:administration-role-arn` |
-| `autoDeployment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-deployment` |
+| `autoDeployment` | software.amazon.awscdk.services.cloudformation.CfnStackSet$AutoDeploymentProperty | [[cdk.support/lookup-entry]] | `:auto-deployment` |
 | `callAs` | java.lang.String | [[cdk.support/lookup-entry]] | `:call-as` |
 | `capabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:capabilities` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `executionRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-name` |
 | `managedExecution` | java.lang.Object | [[cdk.support/lookup-entry]] | `:managed-execution` |
 | `operationPreferences` | software.amazon.awscdk.services.cloudformation.CfnStackSet$OperationPreferencesProperty | [[cdk.support/lookup-entry]] | `:operation-preferences` |
-| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 | `permissionModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission-model` |
-| `stackInstancesGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
+| `stackInstancesGroup` | java.util.List | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-body` |
@@ -1249,7 +1249,7 @@
 | `operationPreferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:operation-preferences` |
 | `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 | `permissionModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission-model` |
-| `stackInstancesGroup` | java.util.List | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
+| `stackInstancesGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stack-instances-group` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-body` |
@@ -1310,7 +1310,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deploymentTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-targets` |
-| `parameterOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-overrides` |
+| `parameterOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-overrides` |
 | `regions` | java.util.List | [[cdk.support/lookup-entry]] | `:regions` |
 "
   [^CfnStackSet$StackInstancesProperty$Builder builder id config]
@@ -1343,9 +1343,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-update` |
+| `autoUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-update` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `loggingConfig` | software.amazon.awscdk.services.cloudformation.CfnTypeActivation$LoggingConfigProperty | [[cdk.support/lookup-entry]] | `:logging-config` |
+| `loggingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-config` |
 | `majorVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:major-version` |
 | `publicTypeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:public-type-arn` |
 | `publisherId` | java.lang.String | [[cdk.support/lookup-entry]] | `:publisher-id` |
@@ -1429,7 +1429,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-update` |
+| `autoUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-update` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `loggingConfig` | software.amazon.awscdk.services.cloudformation.CfnTypeActivation$LoggingConfigProperty | [[cdk.support/lookup-entry]] | `:logging-config` |
 | `majorVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:major-version` |

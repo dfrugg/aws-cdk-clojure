@@ -177,7 +177,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | software.amazon.awscdk.services.deadline.CfnFleet$FleetConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `farmId` | java.lang.String | [[cdk.support/lookup-entry]] | `:farm-id` |
@@ -225,7 +225,7 @@
 |---|---|---|---|
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 | `storageProfileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-profile-id` |
-| `workerCapabilities` | software.amazon.awscdk.services.deadline.CfnFleet$CustomerManagedWorkerCapabilitiesProperty | [[cdk.support/lookup-entry]] | `:worker-capabilities` |
+| `workerCapabilities` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:worker-capabilities` |
 "
   [^CfnFleet$CustomerManagedFleetConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mode)]
@@ -257,15 +257,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `acceleratorCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:accelerator-count` |
+| `acceleratorCount` | software.amazon.awscdk.services.deadline.CfnFleet$AcceleratorCountRangeProperty | [[cdk.support/lookup-entry]] | `:accelerator-count` |
 | `acceleratorTotalMemoryMiB` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:accelerator-total-memory-mi-b` |
 | `acceleratorTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:accelerator-types` |
 | `cpuArchitectureType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cpu-architecture-type` |
-| `customAmounts` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-amounts` |
+| `customAmounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-amounts` |
 | `customAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `memoryMiB` | software.amazon.awscdk.services.deadline.CfnFleet$MemoryMiBRangeProperty | [[cdk.support/lookup-entry]] | `:memory-mi-b` |
 | `osFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:os-family` |
-| `vCpuCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
+| `vCpuCount` | software.amazon.awscdk.services.deadline.CfnFleet$VCpuCountRangeProperty | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
 "
   [^CfnFleet$CustomerManagedWorkerCapabilitiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :accelerator-count)]
@@ -408,7 +408,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amounts` |
+| `amounts` | java.util.List | [[cdk.support/lookup-entry]] | `:amounts` |
 | `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
 "
   [^CfnFleet$FleetCapabilitiesProperty$Builder builder id config]
@@ -439,7 +439,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManaged` | software.amazon.awscdk.services.deadline.CfnFleet$CustomerManagedFleetConfigurationProperty | [[cdk.support/lookup-entry]] | `:customer-managed` |
+| `customerManaged` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed` |
 | `serviceManagedEc2` | software.amazon.awscdk.services.deadline.CfnFleet$ServiceManagedEc2FleetConfigurationProperty | [[cdk.support/lookup-entry]] | `:service-managed-ec2` |
 "
   [^CfnFleet$FleetConfigurationProperty$Builder builder id config]
@@ -547,8 +547,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `instanceCapabilities` | software.amazon.awscdk.services.deadline.CfnFleet$ServiceManagedEc2InstanceCapabilitiesProperty | [[cdk.support/lookup-entry]] | `:instance-capabilities` |
-| `instanceMarketOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-market-options` |
+| `instanceCapabilities` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-capabilities` |
+| `instanceMarketOptions` | software.amazon.awscdk.services.deadline.CfnFleet$ServiceManagedEc2InstanceMarketOptionsProperty | [[cdk.support/lookup-entry]] | `:instance-market-options` |
 "
   [^CfnFleet$ServiceManagedEc2FleetConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :instance-capabilities)]
@@ -580,13 +580,13 @@
 |---|---|---|---|
 | `allowedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-instance-types` |
 | `cpuArchitectureType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cpu-architecture-type` |
-| `customAmounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-amounts` |
-| `customAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-attributes` |
+| `customAmounts` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-amounts` |
+| `customAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `excludedInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-instance-types` |
 | `memoryMiB` | software.amazon.awscdk.services.deadline.CfnFleet$MemoryMiBRangeProperty | [[cdk.support/lookup-entry]] | `:memory-mi-b` |
 | `osFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:os-family` |
-| `rootEbsVolume` | software.amazon.awscdk.services.deadline.CfnFleet$Ec2EbsVolumeProperty | [[cdk.support/lookup-entry]] | `:root-ebs-volume` |
-| `vCpuCount` | software.amazon.awscdk.services.deadline.CfnFleet$VCpuCountRangeProperty | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
+| `rootEbsVolume` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:root-ebs-volume` |
+| `vCpuCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
 "
   [^CfnFleet$ServiceManagedEc2InstanceCapabilitiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allowed-instance-types)]
@@ -842,7 +842,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `farmId` | java.lang.String | [[cdk.support/lookup-entry]] | `:farm-id` |
-| `jobAttachmentSettings` | software.amazon.awscdk.services.deadline.CfnQueue$JobAttachmentSettingsProperty | [[cdk.support/lookup-entry]] | `:job-attachment-settings` |
+| `jobAttachmentSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-attachment-settings` |
 | `jobRunAsUser` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-run-as-user` |
 | `requiredFileSystemLocationNames` | java.util.List | [[cdk.support/lookup-entry]] | `:required-file-system-location-names` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -1138,7 +1138,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `farmId` | java.lang.String | [[cdk.support/lookup-entry]] | `:farm-id` |
-| `jobAttachmentSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-attachment-settings` |
+| `jobAttachmentSettings` | software.amazon.awscdk.services.deadline.CfnQueue$JobAttachmentSettingsProperty | [[cdk.support/lookup-entry]] | `:job-attachment-settings` |
 | `jobRunAsUser` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-run-as-user` |
 | `requiredFileSystemLocationNames` | java.util.List | [[cdk.support/lookup-entry]] | `:required-file-system-location-names` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -1289,7 +1289,7 @@
 |---|---|---|---|
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `farmId` | java.lang.String | [[cdk.support/lookup-entry]] | `:farm-id` |
-| `fileSystemLocations` | java.util.List | [[cdk.support/lookup-entry]] | `:file-system-locations` |
+| `fileSystemLocations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file-system-locations` |
 | `osFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:os-family` |
 "
   [^CfnStorageProfileProps$Builder builder id config]

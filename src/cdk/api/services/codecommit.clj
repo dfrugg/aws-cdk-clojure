@@ -86,12 +86,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `code` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code` |
+| `code` | software.amazon.awscdk.services.codecommit.CfnRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |
+| `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |
 "
   [^CfnRepository$Builder builder id config]
   (when-some [data (lookup-entry config id :code)]
@@ -160,7 +160,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `code` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code` |
+| `code` | software.amazon.awscdk.services.codecommit.CfnRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |

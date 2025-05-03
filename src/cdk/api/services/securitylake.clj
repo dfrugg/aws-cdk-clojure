@@ -102,7 +102,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
-| `lifecycleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle-configuration` |
+| `lifecycleConfiguration` | software.amazon.awscdk.services.securitylake.CfnDataLake$LifecycleConfigurationProperty | [[cdk.support/lookup-entry]] | `:lifecycle-configuration` |
 | `metaStoreManagerRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:meta-store-manager-role-arn` |
 | `replicationConfiguration` | software.amazon.awscdk.services.securitylake.CfnDataLake$ReplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:replication-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -231,7 +231,7 @@
 | `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `lifecycleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle-configuration` |
 | `metaStoreManagerRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:meta-store-manager-role-arn` |
-| `replicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replication-configuration` |
+| `replicationConfiguration` | software.amazon.awscdk.services.securitylake.CfnDataLake$ReplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:replication-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataLakeProps$Builder builder id config]
@@ -440,9 +440,9 @@
 |---|---|---|---|
 | `accessTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:access-types` |
 | `dataLakeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-lake-arn` |
-| `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
+| `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
 | `subscriberDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscriber-description` |
-| `subscriberIdentity` | software.amazon.awscdk.services.securitylake.CfnSubscriber$SubscriberIdentityProperty | [[cdk.support/lookup-entry]] | `:subscriber-identity` |
+| `subscriberIdentity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscriber-identity` |
 | `subscriberName` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscriber-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -485,7 +485,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsLogSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-log-source` |
-| `customLogSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-log-source` |
+| `customLogSource` | software.amazon.awscdk.services.securitylake.CfnSubscriber$CustomLogSourceProperty | [[cdk.support/lookup-entry]] | `:custom-log-source` |
 "
   [^CfnSubscriber$SourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-log-source)]

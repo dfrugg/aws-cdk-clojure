@@ -278,7 +278,7 @@
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `containerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `hlsManifests` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-manifests` |
+| `hlsManifests` | java.util.List | [[cdk.support/lookup-entry]] | `:hls-manifests` |
 | `lowLatencyHlsManifests` | java.util.List | [[cdk.support/lookup-entry]] | `:low-latency-hls-manifests` |
 | `originEndpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-endpoint-name` |
 | `segment` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$SegmentProperty | [[cdk.support/lookup-entry]] | `:segment` |
@@ -394,7 +394,7 @@
 | `constantInitializationVector` | java.lang.String | [[cdk.support/lookup-entry]] | `:constant-initialization-vector` |
 | `encryptionMethod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-method` |
 | `keyRotationIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:key-rotation-interval-seconds` |
-| `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
+| `spekeKeyProvider` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnOriginEndpoint$EncryptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :constant-initialization-vector)]
@@ -470,7 +470,7 @@
 | `manifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-name` |
 | `manifestWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:manifest-window-seconds` |
 | `programDateTimeIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:program-date-time-interval-seconds` |
-| `scteHls` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$ScteHlsProperty | [[cdk.support/lookup-entry]] | `:scte-hls` |
+| `scteHls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scte-hls` |
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder builder id config]
@@ -512,11 +512,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `childManifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:child-manifest-name` |
-| `filterConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-configuration` |
+| `filterConfiguration` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$FilterConfigurationProperty | [[cdk.support/lookup-entry]] | `:filter-configuration` |
 | `manifestName` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-name` |
 | `manifestWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:manifest-window-seconds` |
 | `programDateTimeIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:program-date-time-interval-seconds` |
-| `scteHls` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$ScteHlsProperty | [[cdk.support/lookup-entry]] | `:scte-hls` |
+| `scteHls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scte-hls` |
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder builder id config]
@@ -635,10 +635,10 @@
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `containerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `hlsManifests` | java.util.List | [[cdk.support/lookup-entry]] | `:hls-manifests` |
-| `lowLatencyHlsManifests` | java.util.List | [[cdk.support/lookup-entry]] | `:low-latency-hls-manifests` |
+| `hlsManifests` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hls-manifests` |
+| `lowLatencyHlsManifests` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:low-latency-hls-manifests` |
 | `originEndpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-endpoint-name` |
-| `segment` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$SegmentProperty | [[cdk.support/lookup-entry]] | `:segment` |
+| `segment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:segment` |
 | `startoverWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:startover-window-seconds` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -743,11 +743,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption` |
-| `includeIframeOnlyStreams` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-iframe-only-streams` |
-| `scte` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$ScteProperty | [[cdk.support/lookup-entry]] | `:scte` |
+| `includeIframeOnlyStreams` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-iframe-only-streams` |
+| `scte` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scte` |
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 | `segmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-name` |
-| `tsIncludeDvbSubtitles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ts-include-dvb-subtitles` |
+| `tsIncludeDvbSubtitles` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ts-include-dvb-subtitles` |
 | `tsUseAudioRenditionGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ts-use-audio-rendition-group` |
 "
   [^CfnOriginEndpoint$SegmentProperty$Builder builder id config]

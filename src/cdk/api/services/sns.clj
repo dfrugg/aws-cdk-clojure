@@ -171,7 +171,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `filterPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:filter-policy` |
 | `filterPolicyScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-policy-scope` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
-| `rawMessageDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
+| `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
 | `redrivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-policy` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `replayPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:replay-policy` |
@@ -229,7 +229,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `filterPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:filter-policy` |
 | `filterPolicyScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-policy-scope` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
-| `rawMessageDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
+| `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
 | `redrivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-policy` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `replayPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:replay-policy` |
@@ -290,7 +290,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `fifoTopic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fifo-topic` |
 | `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |
 | `signatureVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:signature-version` |
-| `subscription` | java.util.List | [[cdk.support/lookup-entry]] | `:subscription` |
+| `subscription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscription` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
 | `tracingConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing-config` |
@@ -505,11 +505,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `archivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:archive-policy` |
-| `contentBasedDeduplication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
+| `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
 | `dataProtectionPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:data-protection-policy` |
-| `deliveryStatusLogging` | java.util.List | [[cdk.support/lookup-entry]] | `:delivery-status-logging` |
+| `deliveryStatusLogging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delivery-status-logging` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
-| `fifoTopic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fifo-topic` |
+| `fifoTopic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fifo-topic` |
 | `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |
 | `signatureVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:signature-version` |
 | `subscription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscription` |

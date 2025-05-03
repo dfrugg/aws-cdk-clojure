@@ -348,7 +348,7 @@
 | `appName` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-name` |
 | `appType` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-type` |
 | `domainId` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-id` |
-| `resourceSpec` | software.amazon.awscdk.services.sagemaker.CfnApp$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:resource-spec` |
+| `resourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-profile-name` |
 "
@@ -389,9 +389,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appImageConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-image-config-name` |
-| `codeEditorAppImageConfig` | software.amazon.awscdk.services.sagemaker.CfnAppImageConfig$CodeEditorAppImageConfigProperty | [[cdk.support/lookup-entry]] | `:code-editor-app-image-config` |
-| `jupyterLabAppImageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-image-config` |
-| `kernelGatewayImageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kernel-gateway-image-config` |
+| `codeEditorAppImageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-editor-app-image-config` |
+| `jupyterLabAppImageConfig` | software.amazon.awscdk.services.sagemaker.CfnAppImageConfig$JupyterLabAppImageConfigProperty | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-image-config` |
+| `kernelGatewayImageConfig` | software.amazon.awscdk.services.sagemaker.CfnAppImageConfig$KernelGatewayImageConfigProperty | [[cdk.support/lookup-entry]] | `:kernel-gateway-image-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAppImageConfig$Builder builder id config]
@@ -458,7 +458,7 @@
 |---|---|---|---|
 | `containerArguments` | java.util.List | [[cdk.support/lookup-entry]] | `:container-arguments` |
 | `containerEntrypoint` | java.util.List | [[cdk.support/lookup-entry]] | `:container-entrypoint` |
-| `containerEnvironmentVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-environment-variables` |
+| `containerEnvironmentVariables` | java.util.List | [[cdk.support/lookup-entry]] | `:container-environment-variables` |
 "
   [^CfnAppImageConfig$ContainerConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :container-arguments)]
@@ -647,7 +647,7 @@
 |---|---|---|---|
 | `appImageConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-image-config-name` |
 | `codeEditorAppImageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-editor-app-image-config` |
-| `jupyterLabAppImageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-image-config` |
+| `jupyterLabAppImageConfig` | software.amazon.awscdk.services.sagemaker.CfnAppImageConfig$JupyterLabAppImageConfigProperty | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-image-config` |
 | `kernelGatewayImageConfig` | software.amazon.awscdk.services.sagemaker.CfnAppImageConfig$KernelGatewayImageConfigProperty | [[cdk.support/lookup-entry]] | `:kernel-gateway-image-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -831,7 +831,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `codeRepositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:code-repository-name` |
-| `gitConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:git-config` |
+| `gitConfig` | software.amazon.awscdk.services.sagemaker.CfnCodeRepository$GitConfigProperty | [[cdk.support/lookup-entry]] | `:git-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCodeRepositoryProps$Builder builder id config]
@@ -865,7 +865,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataCapturedDestinationS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-captured-destination-s3-uri` |
-| `datasetFormat` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$DatasetFormatProperty | [[cdk.support/lookup-entry]] | `:dataset-format` |
+| `datasetFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataset-format` |
 | `excludeFeaturesAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:exclude-features-attribute` |
 | `localPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:local-path` |
 | `s3DataDistributionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-data-distribution-type` |
@@ -909,8 +909,8 @@
 |---|---|---|---|
 | `dataQualityAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$DataQualityAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:data-quality-app-specification` |
 | `dataQualityBaselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-quality-baseline-config` |
-| `dataQualityJobInput` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$DataQualityJobInputProperty | [[cdk.support/lookup-entry]] | `:data-quality-job-input` |
-| `dataQualityJobOutputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-quality-job-output-config` |
+| `dataQualityJobInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-quality-job-input` |
+| `dataQualityJobOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:data-quality-job-output-config` |
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
 | `jobResources` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$MonitoringResourcesProperty | [[cdk.support/lookup-entry]] | `:job-resources` |
@@ -1030,7 +1030,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `header` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header` |
+| `header` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:header` |
 "
   [^CfnDataQualityJobDefinition$CsvProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :header)]
@@ -1103,7 +1103,7 @@
 |---|---|---|---|
 | `baseliningJobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:baselining-job-name` |
 | `constraintsResource` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$ConstraintsResourceProperty | [[cdk.support/lookup-entry]] | `:constraints-resource` |
-| `statisticsResource` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$StatisticsResourceProperty | [[cdk.support/lookup-entry]] | `:statistics-resource` |
+| `statisticsResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statistics-resource` |
 "
   [^CfnDataQualityJobDefinition$DataQualityBaselineConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :baselining-job-name)]
@@ -1167,7 +1167,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
-| `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
+| `json` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$JsonProperty | [[cdk.support/lookup-entry]] | `:json` |
 | `parquet` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:parquet` |
 "
   [^CfnDataQualityJobDefinition$DatasetFormatProperty$Builder builder id config]
@@ -1327,7 +1327,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clusterConfig` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$ClusterConfigProperty | [[cdk.support/lookup-entry]] | `:cluster-config` |
+| `clusterConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cluster-config` |
 "
   [^CfnDataQualityJobDefinition$MonitoringResourcesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cluster-config)]
@@ -1355,9 +1355,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableInterContainerTrafficEncryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-inter-container-traffic-encryption` |
+| `enableInterContainerTrafficEncryption` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-inter-container-traffic-encryption` |
 | `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnDataQualityJobDefinition$NetworkConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-inter-container-traffic-encryption)]
@@ -1389,16 +1389,16 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataQualityAppSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-quality-app-specification` |
-| `dataQualityBaselineConfig` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$DataQualityBaselineConfigProperty | [[cdk.support/lookup-entry]] | `:data-quality-baseline-config` |
-| `dataQualityJobInput` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$DataQualityJobInputProperty | [[cdk.support/lookup-entry]] | `:data-quality-job-input` |
-| `dataQualityJobOutputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-quality-job-output-config` |
+| `dataQualityAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$DataQualityAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:data-quality-app-specification` |
+| `dataQualityBaselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-quality-baseline-config` |
+| `dataQualityJobInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-quality-job-input` |
+| `dataQualityJobOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:data-quality-job-output-config` |
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
 | `jobResources` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$MonitoringResourcesProperty | [[cdk.support/lookup-entry]] | `:job-resources` |
 | `networkConfig` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$NetworkConfigProperty | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stoppingCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stopping-condition` |
+| `stoppingCondition` | software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition$StoppingConditionProperty | [[cdk.support/lookup-entry]] | `:stopping-condition` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataQualityJobDefinitionProps$Builder builder id config]
@@ -1568,7 +1568,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `device` | software.amazon.awscdk.services.sagemaker.CfnDevice$DeviceProperty | [[cdk.support/lookup-entry]] | `:device` |
+| `device` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device` |
 | `deviceFleetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-fleet-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1784,10 +1784,10 @@
 | `appNetworkAccessType` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-network-access-type` |
 | `appSecurityGroupManagement` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-security-group-management` |
 | `authMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:auth-mode` |
-| `defaultSpaceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-space-settings` |
+| `defaultSpaceSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DefaultSpaceSettingsProperty | [[cdk.support/lookup-entry]] | `:default-space-settings` |
 | `defaultUserSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$UserSettingsProperty | [[cdk.support/lookup-entry]] | `:default-user-settings` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `domainSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DomainSettingsProperty | [[cdk.support/lookup-entry]] | `:domain-settings` |
+| `domainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain-settings` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -2025,14 +2025,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customFileSystemConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-file-system-configs` |
+| `customFileSystemConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-file-system-configs` |
 | `customPosixUserConfig` | software.amazon.awscdk.services.sagemaker.CfnDomain$CustomPosixUserConfigProperty | [[cdk.support/lookup-entry]] | `:custom-posix-user-config` |
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `jupyterLabAppSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$JupyterLabAppSettingsProperty | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-settings` |
 | `jupyterServerAppSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$JupyterServerAppSettingsProperty | [[cdk.support/lookup-entry]] | `:jupyter-server-app-settings` |
 | `kernelGatewayAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kernel-gateway-app-settings` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
-| `spaceStorageSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:space-storage-settings` |
+| `spaceStorageSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DefaultSpaceStorageSettingsProperty | [[cdk.support/lookup-entry]] | `:space-storage-settings` |
 "
   [^CfnDomain$DefaultSpaceSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-file-system-configs)]
@@ -2074,7 +2074,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultEbsStorageSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DefaultEbsStorageSettingsProperty | [[cdk.support/lookup-entry]] | `:default-ebs-storage-settings` |
+| `defaultEbsStorageSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-ebs-storage-settings` |
 "
   [^CfnDomain$DefaultSpaceStorageSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-ebs-storage-settings)]
@@ -2133,8 +2133,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dockerSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DockerSettingsProperty | [[cdk.support/lookup-entry]] | `:docker-settings` |
-| `rStudioServerProDomainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:r-studio-server-pro-domain-settings` |
+| `dockerSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:docker-settings` |
+| `rStudioServerProDomainSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$RStudioServerProDomainSettingsProperty | [[cdk.support/lookup-entry]] | `:r-studio-server-pro-domain-settings` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 "
   [^CfnDomain$DomainSettingsProperty$Builder builder id config]
@@ -2198,9 +2198,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `codeRepositories` | java.util.List | [[cdk.support/lookup-entry]] | `:code-repositories` |
+| `codeRepositories` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-repositories` |
 | `customImages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-images` |
-| `defaultResourceSpec` | software.amazon.awscdk.services.sagemaker.CfnDomain$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
+| `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 | `lifecycleConfigArns` | java.util.List | [[cdk.support/lookup-entry]] | `:lifecycle-config-arns` |
 "
   [^CfnDomain$JupyterLabAppSettingsProperty$Builder builder id config]
@@ -2263,8 +2263,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customImages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-images` |
-| `defaultResourceSpec` | software.amazon.awscdk.services.sagemaker.CfnDomain$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
+| `customImages` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-images` |
+| `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 "
   [^CfnDomain$KernelGatewayAppSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-images)]
@@ -2297,10 +2297,10 @@
 | `appNetworkAccessType` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-network-access-type` |
 | `appSecurityGroupManagement` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-security-group-management` |
 | `authMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:auth-mode` |
-| `defaultSpaceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-space-settings` |
-| `defaultUserSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-user-settings` |
+| `defaultSpaceSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DefaultSpaceSettingsProperty | [[cdk.support/lookup-entry]] | `:default-space-settings` |
+| `defaultUserSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$UserSettingsProperty | [[cdk.support/lookup-entry]] | `:default-user-settings` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `domainSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DomainSettingsProperty | [[cdk.support/lookup-entry]] | `:domain-settings` |
+| `domainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain-settings` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -2352,7 +2352,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customImages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-images` |
+| `customImages` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-images` |
 | `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 "
   [^CfnDomain$RSessionAppSettingsProperty$Builder builder id config]
@@ -2414,7 +2414,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultResourceSpec` | software.amazon.awscdk.services.sagemaker.CfnDomain$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
+| `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 | `domainExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-execution-role-arn` |
 | `rStudioConnectUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:r-studio-connect-url` |
 | `rStudioPackageManagerUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:r-studio-package-manager-url` |
@@ -2534,7 +2534,7 @@
 | `rStudioServerProAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:r-studio-server-pro-app-settings` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `sharingSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$SharingSettingsProperty | [[cdk.support/lookup-entry]] | `:sharing-settings` |
-| `spaceStorageSettings` | software.amazon.awscdk.services.sagemaker.CfnDomain$DefaultSpaceStorageSettingsProperty | [[cdk.support/lookup-entry]] | `:space-storage-settings` |
+| `spaceStorageSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:space-storage-settings` |
 | `studioWebPortal` | java.lang.String | [[cdk.support/lookup-entry]] | `:studio-web-portal` |
 "
   [^CfnDomain$UserSettingsProperty$Builder builder id config]
@@ -2679,12 +2679,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deploymentConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpoint$DeploymentConfigProperty | [[cdk.support/lookup-entry]] | `:deployment-config` |
+| `deploymentConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-config` |
 | `endpointConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-config-name` |
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
-| `excludeRetainedVariantProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-retained-variant-properties` |
-| `retainAllVariantProperties` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-all-variant-properties` |
-| `retainDeploymentConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-deployment-config` |
+| `excludeRetainedVariantProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-retained-variant-properties` |
+| `retainAllVariantProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-all-variant-properties` |
+| `retainDeploymentConfig` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployment-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEndpoint$Builder builder id config]
@@ -2850,7 +2850,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `notificationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-config` |
+| `notificationConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$AsyncInferenceNotificationConfigProperty | [[cdk.support/lookup-entry]] | `:notification-config` |
 | `s3FailurePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-failure-path` |
 | `s3OutputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-output-path` |
 "
@@ -2891,12 +2891,12 @@
 | `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
 | `endpointConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-config-name` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `explainerConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$ExplainerConfigProperty | [[cdk.support/lookup-entry]] | `:explainer-config` |
+| `explainerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:explainer-config` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `productionVariants` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:production-variants` |
 | `shadowProductionVariants` | java.util.List | [[cdk.support/lookup-entry]] | `:shadow-production-variants` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnEndpointConfig$Builder builder id config]
   (when-some [data (lookup-entry config id :async-inference-config)]
@@ -3133,7 +3133,7 @@
 | `seed` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seed` |
 | `shapBaselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:shap-baseline-config` |
 | `textConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-config` |
-| `useLogit` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-logit` |
+| `useLogit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-logit` |
 "
   [^CfnEndpointConfig$ClarifyShapConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :number-of-samples)]
@@ -3203,7 +3203,7 @@
 | `captureContentTypeHeader` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$CaptureContentTypeHeaderProperty | [[cdk.support/lookup-entry]] | `:capture-content-type-header` |
 | `captureOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capture-options` |
 | `destinationS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-s3-uri` |
-| `enableCapture` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-capture` |
+| `enableCapture` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-capture` |
 | `initialSamplingPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:initial-sampling-percentage` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
@@ -3243,7 +3243,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clarifyExplainerConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$ClarifyExplainerConfigProperty | [[cdk.support/lookup-entry]] | `:clarify-explainer-config` |
+| `clarifyExplainerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:clarify-explainer-config` |
 "
   [^CfnEndpointConfig$ExplainerConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :clarify-explainer-config)]
@@ -3307,14 +3307,14 @@
 |---|---|---|---|
 | `acceleratorType` | java.lang.String | [[cdk.support/lookup-entry]] | `:accelerator-type` |
 | `containerStartupHealthCheckTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:container-startup-health-check-timeout-in-seconds` |
-| `enableSsmAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ssm-access` |
+| `enableSsmAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-ssm-access` |
 | `initialInstanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:initial-instance-count` |
 | `initialVariantWeight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:initial-variant-weight` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
-| `managedInstanceScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:managed-instance-scaling` |
+| `managedInstanceScaling` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$ManagedInstanceScalingProperty | [[cdk.support/lookup-entry]] | `:managed-instance-scaling` |
 | `modelDataDownloadTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:model-data-download-timeout-in-seconds` |
 | `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
-| `routingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-config` |
+| `routingConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$RoutingConfigProperty | [[cdk.support/lookup-entry]] | `:routing-config` |
 | `serverlessConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:serverless-config` |
 | `variantName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variant-name` |
 | `volumeSizeInGb` | java.lang.Number | [[cdk.support/lookup-entry]] | `:volume-size-in-gb` |
@@ -3374,12 +3374,12 @@
 | `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
 | `endpointConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-config-name` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `explainerConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$ExplainerConfigProperty | [[cdk.support/lookup-entry]] | `:explainer-config` |
+| `explainerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:explainer-config` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `productionVariants` | java.util.List | [[cdk.support/lookup-entry]] | `:production-variants` |
+| `productionVariants` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:production-variants` |
 | `shadowProductionVariants` | java.util.List | [[cdk.support/lookup-entry]] | `:shadow-production-variants` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.services.sagemaker.CfnEndpointConfig$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnEndpointConfigProps$Builder builder id config]
   (when-some [data (lookup-entry config id :async-inference-config)]
@@ -3520,9 +3520,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoRollbackConfiguration` | software.amazon.awscdk.services.sagemaker.CfnEndpoint$AutoRollbackConfigProperty | [[cdk.support/lookup-entry]] | `:auto-rollback-configuration` |
+| `autoRollbackConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-rollback-configuration` |
 | `blueGreenUpdatePolicy` | software.amazon.awscdk.services.sagemaker.CfnEndpoint$BlueGreenUpdatePolicyProperty | [[cdk.support/lookup-entry]] | `:blue-green-update-policy` |
-| `rollingUpdatePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rolling-update-policy` |
+| `rollingUpdatePolicy` | software.amazon.awscdk.services.sagemaker.CfnEndpoint$RollingUpdatePolicyProperty | [[cdk.support/lookup-entry]] | `:rolling-update-policy` |
 "
   [^CfnEndpoint$DeploymentConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-rollback-configuration)]
@@ -3558,7 +3558,7 @@
 | `endpointConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-config-name` |
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `excludeRetainedVariantProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-retained-variant-properties` |
-| `retainAllVariantProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-all-variant-properties` |
+| `retainAllVariantProperties` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-all-variant-properties` |
 | `retainDeploymentConfig` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployment-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -3600,7 +3600,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maximumBatchSize` | software.amazon.awscdk.services.sagemaker.CfnEndpoint$CapacitySizeProperty | [[cdk.support/lookup-entry]] | `:maximum-batch-size` |
+| `maximumBatchSize` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maximum-batch-size` |
 | `maximumExecutionTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-execution-timeout-in-seconds` |
 | `rollbackMaximumBatchSize` | software.amazon.awscdk.services.sagemaker.CfnEndpoint$CapacitySizeProperty | [[cdk.support/lookup-entry]] | `:rollback-maximum-batch-size` |
 | `waitIntervalInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-interval-in-seconds` |
@@ -3638,7 +3638,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `canarySize` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:canary-size` |
-| `linearStepSize` | software.amazon.awscdk.services.sagemaker.CfnEndpoint$CapacitySizeProperty | [[cdk.support/lookup-entry]] | `:linear-step-size` |
+| `linearStepSize` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:linear-step-size` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `waitIntervalInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-interval-in-seconds` |
 "
@@ -3704,14 +3704,14 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `eventTimeFeatureName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-time-feature-name` |
-| `featureDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:feature-definitions` |
+| `featureDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:feature-definitions` |
 | `featureGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:feature-group-name` |
 | `offlineStoreConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:offline-store-config` |
 | `onlineStoreConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:online-store-config` |
 | `recordIdentifierFeatureName` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-identifier-feature-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `throughputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:throughput-config` |
+| `throughputConfig` | software.amazon.awscdk.services.sagemaker.CfnFeatureGroup$ThroughputConfigProperty | [[cdk.support/lookup-entry]] | `:throughput-config` |
 "
   [^CfnFeatureGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -3822,9 +3822,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dataCatalogConfig` | software.amazon.awscdk.services.sagemaker.CfnFeatureGroup$DataCatalogConfigProperty | [[cdk.support/lookup-entry]] | `:data-catalog-config` |
+| `dataCatalogConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-catalog-config` |
 | `disableGlueTableCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-glue-table-creation` |
-| `s3StorageConfig` | software.amazon.awscdk.services.sagemaker.CfnFeatureGroup$S3StorageConfigProperty | [[cdk.support/lookup-entry]] | `:s3-storage-config` |
+| `s3StorageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-storage-config` |
 | `tableFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-format` |
 "
   [^CfnFeatureGroup$OfflineStoreConfigProperty$Builder builder id config]
@@ -3860,7 +3860,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enableOnlineStore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-online-store` |
-| `securityConfig` | software.amazon.awscdk.services.sagemaker.CfnFeatureGroup$OnlineStoreSecurityConfigProperty | [[cdk.support/lookup-entry]] | `:security-config` |
+| `securityConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-config` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `ttlDuration` | software.amazon.awscdk.services.sagemaker.CfnFeatureGroup$TtlDurationProperty | [[cdk.support/lookup-entry]] | `:ttl-duration` |
 "
@@ -4459,8 +4459,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `computeResourceRequirements` | software.amazon.awscdk.services.sagemaker.CfnInferenceComponent$InferenceComponentComputeResourceRequirementsProperty | [[cdk.support/lookup-entry]] | `:compute-resource-requirements` |
-| `container` | software.amazon.awscdk.services.sagemaker.CfnInferenceComponent$InferenceComponentContainerSpecificationProperty | [[cdk.support/lookup-entry]] | `:container` |
+| `computeResourceRequirements` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compute-resource-requirements` |
+| `container` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container` |
 | `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
 | `startupParameters` | software.amazon.awscdk.services.sagemaker.CfnInferenceComponent$InferenceComponentStartupParametersProperty | [[cdk.support/lookup-entry]] | `:startup-parameters` |
 "
@@ -4530,7 +4530,7 @@
 | `endpointArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-arn` |
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `inferenceComponentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:inference-component-name` |
-| `runtimeConfig` | software.amazon.awscdk.services.sagemaker.CfnInferenceComponent$InferenceComponentRuntimeConfigProperty | [[cdk.support/lookup-entry]] | `:runtime-config` |
+| `runtimeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-config` |
 | `specification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `variantName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variant-name` |
@@ -4582,7 +4582,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
-| `shadowModeConfig` | software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment$ShadowModeConfigProperty | [[cdk.support/lookup-entry]] | `:shadow-mode-config` |
+| `shadowModeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:shadow-mode-config` |
 | `statusReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-reason` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -4798,7 +4798,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `infrastructureConfig` | software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment$ModelInfrastructureConfigProperty | [[cdk.support/lookup-entry]] | `:infrastructure-config` |
+| `infrastructureConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:infrastructure-config` |
 | `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
 | `variantName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variant-name` |
 "
@@ -4837,7 +4837,7 @@
 | `desiredState` | java.lang.String | [[cdk.support/lookup-entry]] | `:desired-state` |
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
-| `modelVariants` | java.util.List | [[cdk.support/lookup-entry]] | `:model-variants` |
+| `modelVariants` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-variants` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
@@ -5050,9 +5050,9 @@
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
 | `jobResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-resources` |
-| `modelBiasAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$ModelBiasAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:model-bias-app-specification` |
-| `modelBiasBaselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-bias-baseline-config` |
-| `modelBiasJobInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-bias-job-input` |
+| `modelBiasAppSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-bias-app-specification` |
+| `modelBiasBaselineConfig` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$ModelBiasBaselineConfigProperty | [[cdk.support/lookup-entry]] | `:model-bias-baseline-config` |
+| `modelBiasJobInput` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$ModelBiasJobInputProperty | [[cdk.support/lookup-entry]] | `:model-bias-job-input` |
 | `modelBiasJobOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:model-bias-job-output-config` |
 | `networkConfig` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$NetworkConfigProperty | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -5170,7 +5170,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `header` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header` |
+| `header` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:header` |
 "
   [^CfnModelBiasJobDefinition$CsvProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :header)]
@@ -5198,9 +5198,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csv` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$CsvProperty | [[cdk.support/lookup-entry]] | `:csv` |
+| `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
 | `json` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$JsonProperty | [[cdk.support/lookup-entry]] | `:json` |
-| `parquet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet` |
+| `parquet` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:parquet` |
 "
   [^CfnModelBiasJobDefinition$DatasetFormatProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv)]
@@ -5380,9 +5380,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `batchTransformInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:batch-transform-input` |
-| `endpointInput` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$EndpointInputProperty | [[cdk.support/lookup-entry]] | `:endpoint-input` |
-| `groundTruthS3Input` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$MonitoringGroundTruthS3InputProperty | [[cdk.support/lookup-entry]] | `:ground-truth-s3-input` |
+| `batchTransformInput` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$BatchTransformInputProperty | [[cdk.support/lookup-entry]] | `:batch-transform-input` |
+| `endpointInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-input` |
+| `groundTruthS3Input` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ground-truth-s3-input` |
 "
   [^CfnModelBiasJobDefinition$ModelBiasJobInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :batch-transform-input)]
@@ -5530,8 +5530,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enableInterContainerTrafficEncryption` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-inter-container-traffic-encryption` |
-| `enableNetworkIsolation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
+| `vpcConfig` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnModelBiasJobDefinition$NetworkConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-inter-container-traffic-encryption)]
@@ -5567,12 +5567,12 @@
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
 | `jobResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-resources` |
 | `modelBiasAppSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-bias-app-specification` |
-| `modelBiasBaselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-bias-baseline-config` |
+| `modelBiasBaselineConfig` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$ModelBiasBaselineConfigProperty | [[cdk.support/lookup-entry]] | `:model-bias-baseline-config` |
 | `modelBiasJobInput` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$ModelBiasJobInputProperty | [[cdk.support/lookup-entry]] | `:model-bias-job-input` |
 | `modelBiasJobOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:model-bias-job-output-config` |
 | `networkConfig` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$NetworkConfigProperty | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stoppingCondition` | software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition$StoppingConditionProperty | [[cdk.support/lookup-entry]] | `:stopping-condition` |
+| `stoppingCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stopping-condition` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnModelBiasJobDefinitionProps$Builder builder id config]
@@ -5717,7 +5717,7 @@
 | `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
 | `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `inferenceExecutionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inference-execution-config` |
+| `inferenceExecutionConfig` | software.amazon.awscdk.services.sagemaker.CfnModel$InferenceExecutionConfigProperty | [[cdk.support/lookup-entry]] | `:inference-execution-config` |
 | `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
 | `primaryContainer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-container` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -5797,9 +5797,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `content` | software.amazon.awscdk.services.sagemaker.CfnModelCard$ContentProperty | [[cdk.support/lookup-entry]] | `:content` |
+| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
 | `createdBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:created-by` |
-| `lastModifiedBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:last-modified-by` |
+| `lastModifiedBy` | software.amazon.awscdk.services.sagemaker.CfnModelCard$UserContextProperty | [[cdk.support/lookup-entry]] | `:last-modified-by` |
 | `modelCardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-card-name` |
 | `modelCardStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-card-status` |
 | `securityConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-config` |
@@ -5914,9 +5914,9 @@
 | `additionalInformation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-information` |
 | `businessDetails` | software.amazon.awscdk.services.sagemaker.CfnModelCard$BusinessDetailsProperty | [[cdk.support/lookup-entry]] | `:business-details` |
 | `evaluationDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:evaluation-details` |
-| `intendedUses` | software.amazon.awscdk.services.sagemaker.CfnModelCard$IntendedUsesProperty | [[cdk.support/lookup-entry]] | `:intended-uses` |
+| `intendedUses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:intended-uses` |
 | `modelOverview` | software.amazon.awscdk.services.sagemaker.CfnModelCard$ModelOverviewProperty | [[cdk.support/lookup-entry]] | `:model-overview` |
-| `modelPackageDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-package-details` |
+| `modelPackageDetails` | software.amazon.awscdk.services.sagemaker.CfnModelCard$ModelPackageDetailsProperty | [[cdk.support/lookup-entry]] | `:model-package-details` |
 | `trainingDetails` | software.amazon.awscdk.services.sagemaker.CfnModelCard$TrainingDetailsProperty | [[cdk.support/lookup-entry]] | `:training-details` |
 "
   [^CfnModelCard$ContentProperty$Builder builder id config]
@@ -5960,8 +5960,8 @@
 | `datasets` | java.util.List | [[cdk.support/lookup-entry]] | `:datasets` |
 | `evaluationJobArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:evaluation-job-arn` |
 | `evaluationObservation` | java.lang.String | [[cdk.support/lookup-entry]] | `:evaluation-observation` |
-| `metadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metadata` |
-| `metricGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-groups` |
+| `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
+| `metricGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-groups` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnModelCard$EvaluationDetailProperty$Builder builder id config]
@@ -6062,7 +6062,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
+| `containers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:containers` |
 "
   [^CfnModelCard$InferenceSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :containers)]
@@ -6173,7 +6173,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metricData` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-data` |
+| `metricData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-data` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnModelCard$MetricGroupProperty$Builder builder id config]
@@ -6382,12 +6382,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `content` | software.amazon.awscdk.services.sagemaker.CfnModelCard$ContentProperty | [[cdk.support/lookup-entry]] | `:content` |
-| `createdBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:created-by` |
-| `lastModifiedBy` | software.amazon.awscdk.services.sagemaker.CfnModelCard$UserContextProperty | [[cdk.support/lookup-entry]] | `:last-modified-by` |
+| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
+| `createdBy` | software.amazon.awscdk.services.sagemaker.CfnModelCard$UserContextProperty | [[cdk.support/lookup-entry]] | `:created-by` |
+| `lastModifiedBy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:last-modified-by` |
 | `modelCardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-card-name` |
 | `modelCardStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-card-status` |
-| `securityConfig` | software.amazon.awscdk.services.sagemaker.CfnModelCard$SecurityConfigProperty | [[cdk.support/lookup-entry]] | `:security-config` |
+| `securityConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnModelCardProps$Builder builder id config]
@@ -6488,7 +6488,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `objectiveFunction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:objective-function` |
-| `trainingJobDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:training-job-details` |
+| `trainingJobDetails` | software.amazon.awscdk.services.sagemaker.CfnModelCard$TrainingJobDetailsProperty | [[cdk.support/lookup-entry]] | `:training-job-details` |
 | `trainingObservations` | java.lang.String | [[cdk.support/lookup-entry]] | `:training-observations` |
 "
   [^CfnModelCard$TrainingDetailsProperty$Builder builder id config]
@@ -6580,12 +6580,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hyperParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hyper-parameters` |
+| `hyperParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:hyper-parameters` |
 | `trainingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:training-arn` |
 | `trainingDatasets` | java.util.List | [[cdk.support/lookup-entry]] | `:training-datasets` |
-| `trainingEnvironment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:training-environment` |
-| `trainingMetrics` | java.util.List | [[cdk.support/lookup-entry]] | `:training-metrics` |
-| `userProvidedHyperParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:user-provided-hyper-parameters` |
+| `trainingEnvironment` | software.amazon.awscdk.services.sagemaker.CfnModelCard$TrainingEnvironmentProperty | [[cdk.support/lookup-entry]] | `:training-environment` |
+| `trainingMetrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:training-metrics` |
+| `userProvidedHyperParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-provided-hyper-parameters` |
 | `userProvidedTrainingMetrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-provided-training-metrics` |
 "
   [^CfnModelCard$TrainingJobDetailsProperty$Builder builder id config]
@@ -6697,10 +6697,10 @@
 | `containerHostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-hostname` |
 | `environment` | java.lang.Object | [[cdk.support/lookup-entry]] | `:environment` |
 | `image` | java.lang.String | [[cdk.support/lookup-entry]] | `:image` |
-| `imageConfig` | software.amazon.awscdk.services.sagemaker.CfnModel$ImageConfigProperty | [[cdk.support/lookup-entry]] | `:image-config` |
+| `imageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-config` |
 | `inferenceSpecificationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:inference-specification-name` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
-| `modelDataSource` | software.amazon.awscdk.services.sagemaker.CfnModel$ModelDataSourceProperty | [[cdk.support/lookup-entry]] | `:model-data-source` |
+| `modelDataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-data-source` |
 | `modelDataUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-data-url` |
 | `modelPackageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-name` |
 | `multiModelConfig` | software.amazon.awscdk.services.sagemaker.CfnModel$MultiModelConfigProperty | [[cdk.support/lookup-entry]] | `:multi-model-config` |
@@ -6800,10 +6800,10 @@
 |---|---|---|---|
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `jobResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-resources` |
-| `modelExplainabilityAppSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-explainability-app-specification` |
+| `jobResources` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$MonitoringResourcesProperty | [[cdk.support/lookup-entry]] | `:job-resources` |
+| `modelExplainabilityAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$ModelExplainabilityAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:model-explainability-app-specification` |
 | `modelExplainabilityBaselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-explainability-baseline-config` |
-| `modelExplainabilityJobInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-explainability-job-input` |
+| `modelExplainabilityJobInput` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$ModelExplainabilityJobInputProperty | [[cdk.support/lookup-entry]] | `:model-explainability-job-input` |
 | `modelExplainabilityJobOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:model-explainability-job-output-config` |
 | `networkConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -6951,7 +6951,7 @@
 |---|---|---|---|
 | `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
 | `json` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$JsonProperty | [[cdk.support/lookup-entry]] | `:json` |
-| `parquet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet` |
+| `parquet` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:parquet` |
 "
   [^CfnModelExplainabilityJobDefinition$DatasetFormatProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv)]
@@ -7122,7 +7122,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `batchTransformInput` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$BatchTransformInputProperty | [[cdk.support/lookup-entry]] | `:batch-transform-input` |
+| `batchTransformInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:batch-transform-input` |
 | `endpointInput` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$EndpointInputProperty | [[cdk.support/lookup-entry]] | `:endpoint-input` |
 "
   [^CfnModelExplainabilityJobDefinition$ModelExplainabilityJobInputProperty$Builder builder id config]
@@ -7240,9 +7240,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableInterContainerTrafficEncryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-inter-container-traffic-encryption` |
-| `enableNetworkIsolation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `enableInterContainerTrafficEncryption` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-inter-container-traffic-encryption` |
+| `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
+| `vpcConfig` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnModelExplainabilityJobDefinition$NetworkConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-inter-container-traffic-encryption)]
@@ -7276,11 +7276,11 @@
 |---|---|---|---|
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `jobResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-resources` |
+| `jobResources` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$MonitoringResourcesProperty | [[cdk.support/lookup-entry]] | `:job-resources` |
 | `modelExplainabilityAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$ModelExplainabilityAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:model-explainability-app-specification` |
-| `modelExplainabilityBaselineConfig` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$ModelExplainabilityBaselineConfigProperty | [[cdk.support/lookup-entry]] | `:model-explainability-baseline-config` |
+| `modelExplainabilityBaselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-explainability-baseline-config` |
 | `modelExplainabilityJobInput` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$ModelExplainabilityJobInputProperty | [[cdk.support/lookup-entry]] | `:model-explainability-job-input` |
-| `modelExplainabilityJobOutputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-explainability-job-output-config` |
+| `modelExplainabilityJobOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:model-explainability-job-output-config` |
 | `networkConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `stoppingCondition` | software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition$StoppingConditionProperty | [[cdk.support/lookup-entry]] | `:stopping-condition` |
@@ -7426,7 +7426,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `repositoryAccessMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-access-mode` |
-| `repositoryAuthConfig` | software.amazon.awscdk.services.sagemaker.CfnModel$RepositoryAuthConfigProperty | [[cdk.support/lookup-entry]] | `:repository-auth-config` |
+| `repositoryAuthConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:repository-auth-config` |
 "
   [^CfnModel$ImageConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :repository-access-mode)]
@@ -7512,7 +7512,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3DataSource` | software.amazon.awscdk.services.sagemaker.CfnModel$S3DataSourceProperty | [[cdk.support/lookup-entry]] | `:s3-data-source` |
+| `s3DataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-data-source` |
 "
   [^CfnModel$ModelDataSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-data-source)]
@@ -7616,7 +7616,7 @@
 |---|---|---|---|
 | `postTrainingReport` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:post-training-report` |
 | `preTrainingReport` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:pre-training-report` |
-| `report` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:report` |
+| `report` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:report` |
 "
   [^CfnModelPackage$BiasProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :post-training-report)]
@@ -7648,19 +7648,19 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalInferenceSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-inference-specifications` |
-| `additionalInferenceSpecificationsToAdd` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-inference-specifications-to-add` |
+| `additionalInferenceSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-inference-specifications` |
+| `additionalInferenceSpecificationsToAdd` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-inference-specifications-to-add` |
 | `approvalDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:approval-description` |
 | `certifyForMarketplace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:certify-for-marketplace` |
 | `clientToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-token` |
-| `customerMetadataProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:customer-metadata-properties` |
+| `customerMetadataProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-metadata-properties` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
-| `driftCheckBaselines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drift-check-baselines` |
-| `inferenceSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$InferenceSpecificationProperty | [[cdk.support/lookup-entry]] | `:inference-specification` |
+| `driftCheckBaselines` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$DriftCheckBaselinesProperty | [[cdk.support/lookup-entry]] | `:drift-check-baselines` |
+| `inferenceSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inference-specification` |
 | `lastModifiedTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:last-modified-time` |
 | `metadataProperties` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetadataPropertiesProperty | [[cdk.support/lookup-entry]] | `:metadata-properties` |
 | `modelApprovalStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-approval-status` |
-| `modelMetrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-metrics` |
+| `modelMetrics` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$ModelMetricsProperty | [[cdk.support/lookup-entry]] | `:model-metrics` |
 | `modelPackageDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-description` |
 | `modelPackageGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-group-name` |
 | `modelPackageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-name` |
@@ -7668,10 +7668,10 @@
 | `modelPackageVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:model-package-version` |
 | `samplePayloadUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:sample-payload-url` |
 | `skipModelValidation` | java.lang.String | [[cdk.support/lookup-entry]] | `:skip-model-validation` |
-| `sourceAlgorithmSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$SourceAlgorithmSpecificationProperty | [[cdk.support/lookup-entry]] | `:source-algorithm-specification` |
+| `sourceAlgorithmSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-algorithm-specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `task` | java.lang.String | [[cdk.support/lookup-entry]] | `:task` |
-| `validationSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$ValidationSpecificationProperty | [[cdk.support/lookup-entry]] | `:validation-specification` |
+| `validationSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-specification` |
 "
   [^CfnModelPackage$Builder builder id config]
   (when-some [data (lookup-entry config id :additional-inference-specifications)]
@@ -7773,7 +7773,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bias` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bias` |
+| `bias` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$DriftCheckBiasProperty | [[cdk.support/lookup-entry]] | `:bias` |
 | `explainability` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:explainability` |
 | `modelDataQuality` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$DriftCheckModelDataQualityProperty | [[cdk.support/lookup-entry]] | `:model-data-quality` |
 | `modelQuality` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-quality` |
@@ -7811,7 +7811,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `configFile` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config-file` |
-| `postTrainingConstraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:post-training-constraints` |
+| `postTrainingConstraints` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:post-training-constraints` |
 | `preTrainingConstraints` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:pre-training-constraints` |
 "
   [^CfnModelPackage$DriftCheckBiasProperty$Builder builder id config]
@@ -7844,7 +7844,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configFile` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config-file` |
+| `configFile` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$FileSourceProperty | [[cdk.support/lookup-entry]] | `:config-file` |
 | `constraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constraints` |
 "
   [^CfnModelPackage$DriftCheckExplainabilityProperty$Builder builder id config]
@@ -7937,7 +7937,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `report` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:report` |
+| `report` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:report` |
 "
   [^CfnModelPackage$ExplainabilityProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :report)]
@@ -8073,7 +8073,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
+| `containers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:containers` |
 | `supportedContentTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:supported-content-types` |
 | `supportedRealtimeInferenceInstanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:supported-realtime-inference-instance-types` |
 | `supportedResponseMimeTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:supported-response-mime-types` |
@@ -8184,7 +8184,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `constraints` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:constraints` |
+| `constraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constraints` |
 | `statistics` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:statistics` |
 "
   [^CfnModelPackage$ModelDataQualityProperty$Builder builder id config]
@@ -8245,8 +8245,8 @@
 |---|---|---|---|
 | `bias` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$BiasProperty | [[cdk.support/lookup-entry]] | `:bias` |
 | `explainability` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:explainability` |
-| `modelDataQuality` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-data-quality` |
-| `modelQuality` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$ModelQualityProperty | [[cdk.support/lookup-entry]] | `:model-quality` |
+| `modelDataQuality` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$ModelDataQualityProperty | [[cdk.support/lookup-entry]] | `:model-data-quality` |
+| `modelQuality` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-quality` |
 "
   [^CfnModelPackage$ModelMetricsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :bias)]
@@ -8332,7 +8332,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `validationStatuses` | java.util.List | [[cdk.support/lookup-entry]] | `:validation-statuses` |
+| `validationStatuses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-statuses` |
 "
   [^CfnModelPackage$ModelPackageStatusDetailsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :validation-statuses)]
@@ -8394,7 +8394,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `constraints` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:constraints` |
+| `constraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constraints` |
 | `statistics` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetricsSourceProperty | [[cdk.support/lookup-entry]] | `:statistics` |
 "
   [^CfnModelPackage$ModelQualityProperty$Builder builder id config]
@@ -8425,17 +8425,17 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalInferenceSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-inference-specifications` |
-| `additionalInferenceSpecificationsToAdd` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-inference-specifications-to-add` |
+| `additionalInferenceSpecifications` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-inference-specifications` |
+| `additionalInferenceSpecificationsToAdd` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-inference-specifications-to-add` |
 | `approvalDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:approval-description` |
-| `certifyForMarketplace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:certify-for-marketplace` |
+| `certifyForMarketplace` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certify-for-marketplace` |
 | `clientToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-token` |
 | `customerMetadataProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:customer-metadata-properties` |
 | `domain` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain` |
-| `driftCheckBaselines` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:drift-check-baselines` |
+| `driftCheckBaselines` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$DriftCheckBaselinesProperty | [[cdk.support/lookup-entry]] | `:drift-check-baselines` |
 | `inferenceSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inference-specification` |
 | `lastModifiedTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:last-modified-time` |
-| `metadataProperties` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$MetadataPropertiesProperty | [[cdk.support/lookup-entry]] | `:metadata-properties` |
+| `metadataProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metadata-properties` |
 | `modelApprovalStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-approval-status` |
 | `modelMetrics` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$ModelMetricsProperty | [[cdk.support/lookup-entry]] | `:model-metrics` |
 | `modelPackageDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-description` |
@@ -8445,7 +8445,7 @@
 | `modelPackageVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:model-package-version` |
 | `samplePayloadUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:sample-payload-url` |
 | `skipModelValidation` | java.lang.String | [[cdk.support/lookup-entry]] | `:skip-model-validation` |
-| `sourceAlgorithmSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-algorithm-specification` |
+| `sourceAlgorithmSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$SourceAlgorithmSpecificationProperty | [[cdk.support/lookup-entry]] | `:source-algorithm-specification` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `task` | java.lang.String | [[cdk.support/lookup-entry]] | `:task` |
 | `validationSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-specification` |
@@ -8650,11 +8650,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:batch-strategy` |
-| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
+| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
 | `maxConcurrentTransforms` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-concurrent-transforms` |
 | `maxPayloadInMb` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-payload-in-mb` |
 | `transformInput` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$TransformInputProperty | [[cdk.support/lookup-entry]] | `:transform-input` |
-| `transformOutput` | software.amazon.awscdk.services.sagemaker.CfnModelPackage$TransformOutputProperty | [[cdk.support/lookup-entry]] | `:transform-output` |
+| `transformOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transform-output` |
 | `transformResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transform-resources` |
 "
   [^CfnModelPackage$TransformJobDefinitionProperty$Builder builder id config]
@@ -8797,7 +8797,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `validationProfiles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-profiles` |
+| `validationProfiles` | java.util.List | [[cdk.support/lookup-entry]] | `:validation-profiles` |
 | `validationRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-role` |
 "
   [^CfnModelPackage$ValidationSpecificationProperty$Builder builder id config]
@@ -8829,13 +8829,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:containers` |
-| `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
+| `enableNetworkIsolation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `inferenceExecutionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inference-execution-config` |
+| `inferenceExecutionConfig` | software.amazon.awscdk.services.sagemaker.CfnModel$InferenceExecutionConfigProperty | [[cdk.support/lookup-entry]] | `:inference-execution-config` |
 | `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
-| `primaryContainer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-container` |
+| `primaryContainer` | software.amazon.awscdk.services.sagemaker.CfnModel$ContainerDefinitionProperty | [[cdk.support/lookup-entry]] | `:primary-container` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.services.sagemaker.CfnModel$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnModelProps$Builder builder id config]
   (when-some [data (lookup-entry config id :containers)]
@@ -8878,7 +8878,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataCapturedDestinationS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-captured-destination-s3-uri` |
-| `datasetFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataset-format` |
+| `datasetFormat` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$DatasetFormatProperty | [[cdk.support/lookup-entry]] | `:dataset-format` |
 | `endTimeOffset` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-time-offset` |
 | `inferenceAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:inference-attribute` |
 | `localPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:local-path` |
@@ -8934,14 +8934,14 @@
 |---|---|---|---|
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `jobResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-resources` |
-| `modelQualityAppSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-quality-app-specification` |
+| `jobResources` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$MonitoringResourcesProperty | [[cdk.support/lookup-entry]] | `:job-resources` |
+| `modelQualityAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$ModelQualityAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:model-quality-app-specification` |
 | `modelQualityBaselineConfig` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$ModelQualityBaselineConfigProperty | [[cdk.support/lookup-entry]] | `:model-quality-baseline-config` |
-| `modelQualityJobInput` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$ModelQualityJobInputProperty | [[cdk.support/lookup-entry]] | `:model-quality-job-input` |
+| `modelQualityJobInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-quality-job-input` |
 | `modelQualityJobOutputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-quality-job-output-config` |
 | `networkConfig` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$NetworkConfigProperty | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stoppingCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stopping-condition` |
+| `stoppingCondition` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$StoppingConditionProperty | [[cdk.support/lookup-entry]] | `:stopping-condition` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnModelQualityJobDefinition$Builder builder id config]
@@ -9084,8 +9084,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
-| `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
-| `parquet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet` |
+| `json` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$JsonProperty | [[cdk.support/lookup-entry]] | `:json` |
+| `parquet` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:parquet` |
 "
   [^CfnModelQualityJobDefinition$DatasetFormatProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv)]
@@ -9169,7 +9169,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `line` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:line` |
+| `line` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line` |
 "
   [^CfnModelQualityJobDefinition$JsonProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :line)]
@@ -9275,7 +9275,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchTransformInput` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$BatchTransformInputProperty | [[cdk.support/lookup-entry]] | `:batch-transform-input` |
-| `endpointInput` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$EndpointInputProperty | [[cdk.support/lookup-entry]] | `:endpoint-input` |
+| `endpointInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-input` |
 | `groundTruthS3Input` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ground-truth-s3-input` |
 "
   [^CfnModelQualityJobDefinition$ModelQualityJobInputProperty$Builder builder id config]
@@ -9337,7 +9337,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `monitoringOutputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-outputs` |
+| `monitoringOutputs` | java.util.List | [[cdk.support/lookup-entry]] | `:monitoring-outputs` |
 "
   [^CfnModelQualityJobDefinition$MonitoringOutputConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :kms-key-id)]
@@ -9367,7 +9367,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Output` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$S3OutputProperty | [[cdk.support/lookup-entry]] | `:s3-output` |
+| `s3Output` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-output` |
 "
   [^CfnModelQualityJobDefinition$MonitoringOutputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-output)]
@@ -9463,10 +9463,10 @@
 | `modelQualityAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$ModelQualityAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:model-quality-app-specification` |
 | `modelQualityBaselineConfig` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$ModelQualityBaselineConfigProperty | [[cdk.support/lookup-entry]] | `:model-quality-baseline-config` |
 | `modelQualityJobInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-quality-job-input` |
-| `modelQualityJobOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:model-quality-job-output-config` |
+| `modelQualityJobOutputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:model-quality-job-output-config` |
 | `networkConfig` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$NetworkConfigProperty | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stoppingCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stopping-condition` |
+| `stoppingCondition` | software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition$StoppingConditionProperty | [[cdk.support/lookup-entry]] | `:stopping-condition` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnModelQualityJobDefinitionProps$Builder builder id config]
@@ -9704,7 +9704,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `constraintsResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:constraints-resource` |
+| `constraintsResource` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$ConstraintsResourceProperty | [[cdk.support/lookup-entry]] | `:constraints-resource` |
 | `statisticsResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statistics-resource` |
 "
   [^CfnMonitoringSchedule$BaselineConfigProperty$Builder builder id config]
@@ -9736,7 +9736,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataCapturedDestinationS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-captured-destination-s3-uri` |
-| `datasetFormat` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$DatasetFormatProperty | [[cdk.support/lookup-entry]] | `:dataset-format` |
+| `datasetFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataset-format` |
 | `excludeFeaturesAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:exclude-features-attribute` |
 | `localPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:local-path` |
 | `s3DataDistributionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-data-distribution-type` |
@@ -9917,8 +9917,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csv` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$CsvProperty | [[cdk.support/lookup-entry]] | `:csv` |
-| `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
+| `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
+| `json` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$JsonProperty | [[cdk.support/lookup-entry]] | `:json` |
 | `parquet` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:parquet` |
 "
   [^CfnMonitoringSchedule$DatasetFormatProperty$Builder builder id config]
@@ -9991,7 +9991,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `line` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:line` |
+| `line` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:line` |
 "
   [^CfnMonitoringSchedule$JsonProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :line)]
@@ -10109,7 +10109,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchTransformInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:batch-transform-input` |
-| `endpointInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-input` |
+| `endpointInput` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$EndpointInputProperty | [[cdk.support/lookup-entry]] | `:endpoint-input` |
 "
   [^CfnMonitoringSchedule$MonitoringInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :batch-transform-input)]
@@ -10140,14 +10140,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `baselineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:baseline-config` |
-| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
+| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
 | `monitoringAppSpecification` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$MonitoringAppSpecificationProperty | [[cdk.support/lookup-entry]] | `:monitoring-app-specification` |
-| `monitoringInputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-inputs` |
-| `monitoringOutputConfig` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$MonitoringOutputConfigProperty | [[cdk.support/lookup-entry]] | `:monitoring-output-config` |
+| `monitoringInputs` | java.util.List | [[cdk.support/lookup-entry]] | `:monitoring-inputs` |
+| `monitoringOutputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-output-config` |
 | `monitoringResources` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$MonitoringResourcesProperty | [[cdk.support/lookup-entry]] | `:monitoring-resources` |
 | `networkConfig` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$NetworkConfigProperty | [[cdk.support/lookup-entry]] | `:network-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stoppingCondition` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$StoppingConditionProperty | [[cdk.support/lookup-entry]] | `:stopping-condition` |
+| `stoppingCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stopping-condition` |
 "
   [^CfnMonitoringSchedule$MonitoringJobDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :baseline-config)]
@@ -10192,7 +10192,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `monitoringOutputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-outputs` |
+| `monitoringOutputs` | java.util.List | [[cdk.support/lookup-entry]] | `:monitoring-outputs` |
 "
   [^CfnMonitoringSchedule$MonitoringOutputConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :kms-key-id)]
@@ -10222,7 +10222,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Output` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$S3OutputProperty | [[cdk.support/lookup-entry]] | `:s3-output` |
+| `s3Output` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-output` |
 "
   [^CfnMonitoringSchedule$MonitoringOutputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-output)]
@@ -10278,7 +10278,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `monitoringJobDefinition` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$MonitoringJobDefinitionProperty | [[cdk.support/lookup-entry]] | `:monitoring-job-definition` |
+| `monitoringJobDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-job-definition` |
 | `monitoringJobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitoring-job-definition-name` |
 | `monitoringType` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitoring-type` |
 | `scheduleConfig` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$ScheduleConfigProperty | [[cdk.support/lookup-entry]] | `:schedule-config` |
@@ -10315,9 +10315,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableInterContainerTrafficEncryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-inter-container-traffic-encryption` |
-| `enableNetworkIsolation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `enableInterContainerTrafficEncryption` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-inter-container-traffic-encryption` |
+| `enableNetworkIsolation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-network-isolation` |
+| `vpcConfig` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnMonitoringSchedule$NetworkConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enable-inter-container-traffic-encryption)]
@@ -10352,7 +10352,7 @@
 | `endpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-name` |
 | `failureReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:failure-reason` |
 | `lastMonitoringExecutionSummary` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:last-monitoring-execution-summary` |
-| `monitoringScheduleConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-schedule-config` |
+| `monitoringScheduleConfig` | software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule$MonitoringScheduleConfigProperty | [[cdk.support/lookup-entry]] | `:monitoring-schedule-config` |
 | `monitoringScheduleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitoring-schedule-name` |
 | `monitoringScheduleStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitoring-schedule-status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -10652,8 +10652,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `notebookInstanceLifecycleConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notebook-instance-lifecycle-config-name` |
-| `onCreate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-create` |
-| `onStart` | java.util.List | [[cdk.support/lookup-entry]] | `:on-start` |
+| `onCreate` | java.util.List | [[cdk.support/lookup-entry]] | `:on-create` |
+| `onStart` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-start` |
 "
   [^CfnNotebookInstanceLifecycleConfig$Builder builder id config]
   (when-some [data (lookup-entry config id :notebook-instance-lifecycle-config-name)]
@@ -10714,8 +10714,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `notebookInstanceLifecycleConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notebook-instance-lifecycle-config-name` |
-| `onCreate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-create` |
-| `onStart` | java.util.List | [[cdk.support/lookup-entry]] | `:on-start` |
+| `onCreate` | java.util.List | [[cdk.support/lookup-entry]] | `:on-create` |
+| `onStart` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-start` |
 "
   [^CfnNotebookInstanceLifecycleConfigProps$Builder builder id config]
   (when-some [data (lookup-entry config id :notebook-instance-lifecycle-config-name)]
@@ -10895,7 +10895,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `pipelineDefinitionBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-definition-body` |
-| `pipelineDefinitionS3Location` | software.amazon.awscdk.services.sagemaker.CfnPipeline$S3LocationProperty | [[cdk.support/lookup-entry]] | `:pipeline-definition-s3-location` |
+| `pipelineDefinitionS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-definition-s3-location` |
 "
   [^CfnPipeline$PipelineDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pipeline-definition-body)]
@@ -11153,7 +11153,7 @@
 | `pathId` | java.lang.String | [[cdk.support/lookup-entry]] | `:path-id` |
 | `productId` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-id` |
 | `provisioningArtifactId` | java.lang.String | [[cdk.support/lookup-entry]] | `:provisioning-artifact-id` |
-| `provisioningParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:provisioning-parameters` |
+| `provisioningParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioning-parameters` |
 "
   [^CfnProject$ServiceCatalogProvisioningDetailsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :path-id)]
@@ -11379,7 +11379,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultResourceSpec` | software.amazon.awscdk.services.sagemaker.CfnSpace$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
+| `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 "
   [^CfnSpace$JupyterServerAppSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-resource-spec)]
@@ -11407,7 +11407,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customImages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-images` |
+| `customImages` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-images` |
 | `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 "
   [^CfnSpace$KernelGatewayAppSettingsProperty$Builder builder id config]
@@ -11467,11 +11467,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `domainId` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-id` |
-| `ownershipSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ownership-settings` |
+| `ownershipSettings` | software.amazon.awscdk.services.sagemaker.CfnSpace$OwnershipSettingsProperty | [[cdk.support/lookup-entry]] | `:ownership-settings` |
 | `spaceDisplayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:space-display-name` |
 | `spaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:space-name` |
-| `spaceSettings` | software.amazon.awscdk.services.sagemaker.CfnSpace$SpaceSettingsProperty | [[cdk.support/lookup-entry]] | `:space-settings` |
-| `spaceSharingSettings` | software.amazon.awscdk.services.sagemaker.CfnSpace$SpaceSharingSettingsProperty | [[cdk.support/lookup-entry]] | `:space-sharing-settings` |
+| `spaceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:space-settings` |
+| `spaceSharingSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:space-sharing-settings` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSpaceProps$Builder builder id config]
@@ -11546,7 +11546,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultResourceSpec` | software.amazon.awscdk.services.sagemaker.CfnSpace$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
+| `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 "
   [^CfnSpace$SpaceCodeEditorAppSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-resource-spec)]
@@ -11606,10 +11606,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appType` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-type` |
-| `codeEditorAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-editor-app-settings` |
-| `customFileSystems` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-file-systems` |
-| `jupyterLabAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-settings` |
-| `jupyterServerAppSettings` | software.amazon.awscdk.services.sagemaker.CfnSpace$JupyterServerAppSettingsProperty | [[cdk.support/lookup-entry]] | `:jupyter-server-app-settings` |
+| `codeEditorAppSettings` | software.amazon.awscdk.services.sagemaker.CfnSpace$SpaceCodeEditorAppSettingsProperty | [[cdk.support/lookup-entry]] | `:code-editor-app-settings` |
+| `customFileSystems` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-file-systems` |
+| `jupyterLabAppSettings` | software.amazon.awscdk.services.sagemaker.CfnSpace$SpaceJupyterLabAppSettingsProperty | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-settings` |
+| `jupyterServerAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:jupyter-server-app-settings` |
 | `kernelGatewayAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kernel-gateway-app-settings` |
 | `spaceStorageSettings` | software.amazon.awscdk.services.sagemaker.CfnSpace$SpaceStorageSettingsProperty | [[cdk.support/lookup-entry]] | `:space-storage-settings` |
 "
@@ -11712,7 +11712,7 @@
 | `singleSignOnUserValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:single-sign-on-user-value` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-profile-name` |
-| `userSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-settings` |
+| `userSettings` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$UserSettingsProperty | [[cdk.support/lookup-entry]] | `:user-settings` |
 "
   [^CfnUserProfile$Builder builder id config]
   (when-some [data (lookup-entry config id :domain-id)]
@@ -11750,7 +11750,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customImages` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-images` |
+| `customImages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-images` |
 | `defaultResourceSpec` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 | `lifecycleConfigArns` | java.util.List | [[cdk.support/lookup-entry]] | `:lifecycle-config-arns` |
 "
@@ -12032,7 +12032,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultResourceSpec` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$ResourceSpecProperty | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
+| `defaultResourceSpec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-resource-spec` |
 "
   [^CfnUserProfile$JupyterServerAppSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-resource-spec)]
@@ -12233,17 +12233,17 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `codeEditorAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-editor-app-settings` |
+| `codeEditorAppSettings` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$CodeEditorAppSettingsProperty | [[cdk.support/lookup-entry]] | `:code-editor-app-settings` |
 | `customFileSystemConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-file-system-configs` |
-| `customPosixUserConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-posix-user-config` |
+| `customPosixUserConfig` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$CustomPosixUserConfigProperty | [[cdk.support/lookup-entry]] | `:custom-posix-user-config` |
 | `defaultLandingUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-landing-uri` |
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `jupyterLabAppSettings` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$JupyterLabAppSettingsProperty | [[cdk.support/lookup-entry]] | `:jupyter-lab-app-settings` |
-| `jupyterServerAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:jupyter-server-app-settings` |
-| `kernelGatewayAppSettings` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$KernelGatewayAppSettingsProperty | [[cdk.support/lookup-entry]] | `:kernel-gateway-app-settings` |
+| `jupyterServerAppSettings` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$JupyterServerAppSettingsProperty | [[cdk.support/lookup-entry]] | `:jupyter-server-app-settings` |
+| `kernelGatewayAppSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kernel-gateway-app-settings` |
 | `rStudioServerProAppSettings` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$RStudioServerProAppSettingsProperty | [[cdk.support/lookup-entry]] | `:r-studio-server-pro-app-settings` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
-| `sharingSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sharing-settings` |
+| `sharingSettings` | software.amazon.awscdk.services.sagemaker.CfnUserProfile$SharingSettingsProperty | [[cdk.support/lookup-entry]] | `:sharing-settings` |
 | `spaceStorageSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:space-storage-settings` |
 | `studioWebPortal` | java.lang.String | [[cdk.support/lookup-entry]] | `:studio-web-portal` |
 "
@@ -12298,7 +12298,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `memberDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:member-definitions` |
+| `memberDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:member-definitions` |
 | `notificationConfiguration` | software.amazon.awscdk.services.sagemaker.CfnWorkteam$NotificationConfigurationProperty | [[cdk.support/lookup-entry]] | `:notification-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `workforceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workforce-name` |
@@ -12375,7 +12375,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cognitoMemberDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cognito-member-definition` |
-| `oidcMemberDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:oidc-member-definition` |
+| `oidcMemberDefinition` | software.amazon.awscdk.services.sagemaker.CfnWorkteam$OidcMemberDefinitionProperty | [[cdk.support/lookup-entry]] | `:oidc-member-definition` |
 "
   [^CfnWorkteam$MemberDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cognito-member-definition)]

@@ -49,7 +49,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
+| `autoMinorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
 | `azMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:az-mode` |
 | `cacheNodeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-node-type` |
 | `cacheParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-parameter-group-name` |
@@ -59,7 +59,7 @@
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `ipDiscovery` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-discovery` |
-| `logDeliveryConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
+| `logDeliveryConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
 | `networkType` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-type` |
 | `notificationTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-topic-arn` |
 | `numCacheNodes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-cache-nodes` |
@@ -177,7 +177,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogsDetails` | software.amazon.awscdk.services.elasticache.CfnCacheCluster$CloudWatchLogsDestinationDetailsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-details` |
+| `cloudWatchLogsDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-details` |
 | `kinesisFirehoseDetails` | software.amazon.awscdk.services.elasticache.CfnCacheCluster$KinesisFirehoseDestinationDetailsProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-details` |
 "
   [^CfnCacheCluster$DestinationDetailsProperty$Builder builder id config]
@@ -283,7 +283,7 @@
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `ipDiscovery` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-discovery` |
-| `logDeliveryConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
+| `logDeliveryConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
 | `networkType` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-type` |
 | `notificationTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-topic-arn` |
 | `numCacheNodes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-cache-nodes` |
@@ -296,7 +296,7 @@
 | `snapshotRetentionLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:snapshot-retention-limit` |
 | `snapshotWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-window` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `transitEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transit-encryption-enabled` |
+| `transitEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transit-encryption-enabled` |
 | `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
 "
   [^CfnCacheClusterProps$Builder builder id config]
@@ -380,8 +380,8 @@
 | `globalNodeGroupCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:global-node-group-count` |
 | `globalReplicationGroupDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-replication-group-description` |
 | `globalReplicationGroupIdSuffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-replication-group-id-suffix` |
-| `members` | java.util.List | [[cdk.support/lookup-entry]] | `:members` |
-| `regionalConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regional-configurations` |
+| `members` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:members` |
+| `regionalConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:regional-configurations` |
 "
   [^CfnGlobalReplicationGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :automatic-failover-enabled)]
@@ -459,7 +459,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `automaticFailoverEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:automatic-failover-enabled` |
+| `automaticFailoverEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:automatic-failover-enabled` |
 | `cacheNodeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-node-type` |
 | `cacheParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-parameter-group-name` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
@@ -467,7 +467,7 @@
 | `globalReplicationGroupDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-replication-group-description` |
 | `globalReplicationGroupIdSuffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-replication-group-id-suffix` |
 | `members` | java.util.List | [[cdk.support/lookup-entry]] | `:members` |
-| `regionalConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regional-configurations` |
+| `regionalConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:regional-configurations` |
 "
   [^CfnGlobalReplicationGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :automatic-failover-enabled)]
@@ -513,7 +513,7 @@
 |---|---|---|---|
 | `replicationGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:replication-group-id` |
 | `replicationGroupRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:replication-group-region` |
-| `reshardingConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resharding-configurations` |
+| `reshardingConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:resharding-configurations` |
 "
   [^CfnGlobalReplicationGroup$RegionalConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :replication-group-id)]
@@ -650,25 +650,25 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `atRestEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:at-rest-encryption-enabled` |
+| `atRestEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:at-rest-encryption-enabled` |
 | `authToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:auth-token` |
 | `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
-| `automaticFailoverEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:automatic-failover-enabled` |
+| `automaticFailoverEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:automatic-failover-enabled` |
 | `cacheNodeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-node-type` |
 | `cacheParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-parameter-group-name` |
 | `cacheSecurityGroupNames` | java.util.List | [[cdk.support/lookup-entry]] | `:cache-security-group-names` |
 | `cacheSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-subnet-group-name` |
 | `clusterMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-mode` |
-| `dataTieringEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-tiering-enabled` |
+| `dataTieringEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-tiering-enabled` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `globalReplicationGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-replication-group-id` |
 | `ipDiscovery` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-discovery` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `logDeliveryConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
+| `logDeliveryConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
 | `multiAzEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-az-enabled` |
 | `networkType` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-type` |
-| `nodeGroupConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:node-group-configuration` |
+| `nodeGroupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-group-configuration` |
 | `notificationTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-topic-arn` |
 | `numCacheClusters` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-cache-clusters` |
 | `numNodeGroups` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-node-groups` |
@@ -820,8 +820,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogsDetails` | software.amazon.awscdk.services.elasticache.CfnReplicationGroup$CloudWatchLogsDestinationDetailsProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-details` |
-| `kinesisFirehoseDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-firehose-details` |
+| `cloudWatchLogsDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-details` |
+| `kinesisFirehoseDetails` | software.amazon.awscdk.services.elasticache.CfnReplicationGroup$KinesisFirehoseDestinationDetailsProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-details` |
 "
   [^CfnReplicationGroup$DestinationDetailsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-logs-details)]
@@ -879,7 +879,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-details` |
+| `destinationDetails` | software.amazon.awscdk.services.elasticache.CfnReplicationGroup$DestinationDetailsProperty | [[cdk.support/lookup-entry]] | `:destination-details` |
 | `destinationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-type` |
 | `logFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-format` |
 | `logType` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-type` |
@@ -959,22 +959,22 @@
 | `atRestEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:at-rest-encryption-enabled` |
 | `authToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:auth-token` |
 | `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
-| `automaticFailoverEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:automatic-failover-enabled` |
+| `automaticFailoverEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:automatic-failover-enabled` |
 | `cacheNodeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-node-type` |
 | `cacheParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-parameter-group-name` |
 | `cacheSecurityGroupNames` | java.util.List | [[cdk.support/lookup-entry]] | `:cache-security-group-names` |
 | `cacheSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cache-subnet-group-name` |
 | `clusterMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-mode` |
-| `dataTieringEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:data-tiering-enabled` |
+| `dataTieringEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-tiering-enabled` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `engineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `globalReplicationGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:global-replication-group-id` |
 | `ipDiscovery` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-discovery` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `logDeliveryConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
-| `multiAzEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-az-enabled` |
+| `logDeliveryConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-delivery-configurations` |
+| `multiAzEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-az-enabled` |
 | `networkType` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-type` |
-| `nodeGroupConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:node-group-configuration` |
+| `nodeGroupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-group-configuration` |
 | `notificationTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-topic-arn` |
 | `numCacheClusters` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-cache-clusters` |
 | `numNodeGroups` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-node-groups` |
@@ -992,7 +992,7 @@
 | `snapshotWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-window` |
 | `snapshottingClusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshotting-cluster-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `transitEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transit-encryption-enabled` |
+| `transitEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transit-encryption-enabled` |
 | `transitEncryptionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-encryption-mode` |
 | `userGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:user-group-ids` |
 "
@@ -1302,7 +1302,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-storage` |
-| `ecpuPerSecond` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecpu-per-second` |
+| `ecpuPerSecond` | software.amazon.awscdk.services.elasticache.CfnServerlessCache$ECPUPerSecondProperty | [[cdk.support/lookup-entry]] | `:ecpu-per-second` |
 "
   [^CfnServerlessCache$CacheUsageLimitsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-storage)]
@@ -1431,12 +1431,12 @@
 | `cacheUsageLimits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-usage-limits` |
 | `dailySnapshotTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:daily-snapshot-time` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `endpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint` |
+| `endpoint` | software.amazon.awscdk.services.elasticache.CfnServerlessCache$EndpointProperty | [[cdk.support/lookup-entry]] | `:endpoint` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
 | `finalSnapshotName` | java.lang.String | [[cdk.support/lookup-entry]] | `:final-snapshot-name` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `majorEngineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:major-engine-version` |
-| `readerEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reader-endpoint` |
+| `readerEndpoint` | software.amazon.awscdk.services.elasticache.CfnServerlessCache$EndpointProperty | [[cdk.support/lookup-entry]] | `:reader-endpoint` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `serverlessCacheName` | java.lang.String | [[cdk.support/lookup-entry]] | `:serverless-cache-name` |
 | `snapshotArnsToRestore` | java.util.List | [[cdk.support/lookup-entry]] | `:snapshot-arns-to-restore` |
@@ -1609,7 +1609,7 @@
 | `accessString` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-string` |
 | `authenticationMode` | java.lang.Object | [[cdk.support/lookup-entry]] | `:authentication-mode` |
 | `engine` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine` |
-| `noPasswordRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-password-required` |
+| `noPasswordRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-password-required` |
 | `passwords` | java.util.List | [[cdk.support/lookup-entry]] | `:passwords` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-id` |

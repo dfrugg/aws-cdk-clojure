@@ -94,7 +94,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `retainRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ArchiveRetainRuleProperty | [[cdk.support/lookup-entry]] | `:retain-rule` |
+| `retainRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-rule` |
 "
   [^CfnLifecyclePolicy$ArchiveRuleProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :retain-rule)]
@@ -122,15 +122,15 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `copyTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags` |
+| `copyTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags` |
 | `createInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:create-interval` |
 | `crossRegionCopyTargets` | java.lang.Object | [[cdk.support/lookup-entry]] | `:cross-region-copy-targets` |
 | `defaultPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-policy` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `exclusions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclusions` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
-| `extendDeletion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:extend-deletion` |
-| `policyDetails` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$PolicyDetailsProperty | [[cdk.support/lookup-entry]] | `:policy-details` |
+| `extendDeletion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:extend-deletion` |
+| `policyDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policy-details` |
 | `retainInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retain-interval` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -187,7 +187,7 @@
 | `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
-| `scripts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scripts` |
+| `scripts` | java.util.List | [[cdk.support/lookup-entry]] | `:scripts` |
 | `times` | java.util.List | [[cdk.support/lookup-entry]] | `:times` |
 "
   [^CfnLifecyclePolicy$CreateRuleProperty$Builder builder id config]
@@ -226,8 +226,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `encryptionConfiguration` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$EncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
-| `retainRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-rule` |
+| `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
+| `retainRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty | [[cdk.support/lookup-entry]] | `:retain-rule` |
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder builder id config]
@@ -323,10 +323,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cmkArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cmk-arn` |
-| `copyTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags` |
-| `deprecateRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty | [[cdk.support/lookup-entry]] | `:deprecate-rule` |
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
-| `retainRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-rule` |
+| `copyTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags` |
+| `deprecateRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deprecate-rule` |
+| `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
+| `retainRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty | [[cdk.support/lookup-entry]] | `:retain-rule` |
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 | `targetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-region` |
 "
@@ -498,7 +498,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludeBootVolumes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-boot-volumes` |
+| `excludeBootVolumes` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-boot-volumes` |
 | `excludeTags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:exclude-tags` |
 | `excludeVolumeTypes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:exclude-volume-types` |
 "
@@ -569,9 +569,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludeBootVolume` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-boot-volume` |
-| `excludeDataVolumeTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-data-volume-tags` |
-| `noReboot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-reboot` |
+| `excludeBootVolume` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-boot-volume` |
+| `excludeDataVolumeTags` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-data-volume-tags` |
+| `noReboot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:no-reboot` |
 "
   [^CfnLifecyclePolicy$ParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :exclude-boot-volume)]
@@ -604,12 +604,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `copyTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags` |
+| `copyTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags` |
 | `createInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:create-interval` |
 | `crossRegionCopyTargets` | java.lang.Object | [[cdk.support/lookup-entry]] | `:cross-region-copy-targets` |
 | `eventSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-source` |
-| `exclusions` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ExclusionsProperty | [[cdk.support/lookup-entry]] | `:exclusions` |
-| `extendDeletion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:extend-deletion` |
+| `exclusions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclusions` |
+| `extendDeletion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:extend-deletion` |
 | `parameters` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ParametersProperty | [[cdk.support/lookup-entry]] | `:parameters` |
 | `policyLanguage` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-language` |
 | `policyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-type` |
@@ -617,7 +617,7 @@
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
 | `retainInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retain-interval` |
-| `schedules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedules` |
+| `schedules` | java.util.List | [[cdk.support/lookup-entry]] | `:schedules` |
 | `targetTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tags` |
 "
   [^CfnLifecyclePolicy$PolicyDetailsProperty$Builder builder id config]
@@ -676,12 +676,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `copyTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags` |
+| `copyTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:copy-tags` |
 | `createInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:create-interval` |
 | `crossRegionCopyTargets` | java.lang.Object | [[cdk.support/lookup-entry]] | `:cross-region-copy-targets` |
 | `defaultPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-policy` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `exclusions` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ExclusionsProperty | [[cdk.support/lookup-entry]] | `:exclusions` |
+| `exclusions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclusions` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `extendDeletion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:extend-deletion` |
 | `policyDetails` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$PolicyDetailsProperty | [[cdk.support/lookup-entry]] | `:policy-details` |
@@ -805,12 +805,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `archiveRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:archive-rule` |
+| `archiveRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ArchiveRuleProperty | [[cdk.support/lookup-entry]] | `:archive-rule` |
 | `copyTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-tags` |
 | `createRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$CreateRuleProperty | [[cdk.support/lookup-entry]] | `:create-rule` |
-| `crossRegionCopyRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cross-region-copy-rules` |
+| `crossRegionCopyRules` | java.util.List | [[cdk.support/lookup-entry]] | `:cross-region-copy-rules` |
 | `deprecateRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$DeprecateRuleProperty | [[cdk.support/lookup-entry]] | `:deprecate-rule` |
-| `fastRestoreRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$FastRestoreRuleProperty | [[cdk.support/lookup-entry]] | `:fast-restore-rule` |
+| `fastRestoreRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fast-restore-rule` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `retainRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-rule` |
 | `shareRules` | java.util.List | [[cdk.support/lookup-entry]] | `:share-rules` |

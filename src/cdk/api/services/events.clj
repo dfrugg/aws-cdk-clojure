@@ -548,8 +548,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `apiKeyAuthParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:api-key-auth-parameters` |
-| `basicAuthParameters` | software.amazon.awscdk.services.events.CfnConnection$BasicAuthParametersProperty | [[cdk.support/lookup-entry]] | `:basic-auth-parameters` |
+| `apiKeyAuthParameters` | software.amazon.awscdk.services.events.CfnConnection$ApiKeyAuthParametersProperty | [[cdk.support/lookup-entry]] | `:api-key-auth-parameters` |
+| `basicAuthParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:basic-auth-parameters` |
 | `invocationHttpParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:invocation-http-parameters` |
 | `oAuthParameters` | software.amazon.awscdk.services.events.CfnConnection$OAuthParametersProperty | [[cdk.support/lookup-entry]] | `:o-auth-parameters` |
 "
@@ -684,9 +684,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `bodyParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:body-parameters` |
-| `headerParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-parameters` |
-| `queryStringParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-string-parameters` |
+| `bodyParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:body-parameters` |
+| `headerParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:header-parameters` |
+| `queryStringParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-string-parameters` |
 "
   [^CfnConnection$ConnectionHttpParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :body-parameters)]
@@ -719,7 +719,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authorizationEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:authorization-endpoint` |
-| `clientParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-parameters` |
+| `clientParameters` | software.amazon.awscdk.services.events.CfnConnection$ClientParametersProperty | [[cdk.support/lookup-entry]] | `:client-parameters` |
 | `httpMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-method` |
 | `oAuthHttpParameters` | software.amazon.awscdk.services.events.CfnConnection$ConnectionHttpParametersProperty | [[cdk.support/lookup-entry]] | `:o-auth-http-parameters` |
 "
@@ -897,8 +897,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `primary` | software.amazon.awscdk.services.events.CfnEndpoint$PrimaryProperty | [[cdk.support/lookup-entry]] | `:primary` |
-| `secondary` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary` |
+| `primary` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary` |
+| `secondary` | software.amazon.awscdk.services.events.CfnEndpoint$SecondaryProperty | [[cdk.support/lookup-entry]] | `:secondary` |
 "
   [^CfnEndpoint$FailoverConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :primary)]
@@ -957,11 +957,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `eventBuses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-buses` |
+| `eventBuses` | java.util.List | [[cdk.support/lookup-entry]] | `:event-buses` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `replicationConfig` | software.amazon.awscdk.services.events.CfnEndpoint$ReplicationConfigProperty | [[cdk.support/lookup-entry]] | `:replication-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `routingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-config` |
+| `routingConfig` | software.amazon.awscdk.services.events.CfnEndpoint$RoutingConfigProperty | [[cdk.support/lookup-entry]] | `:routing-config` |
 "
   [^CfnEndpointProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -1027,7 +1027,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `failoverConfig` | software.amazon.awscdk.services.events.CfnEndpoint$FailoverConfigProperty | [[cdk.support/lookup-entry]] | `:failover-config` |
+| `failoverConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failover-config` |
 "
   [^CfnEndpoint$RoutingConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :failover-config)]
@@ -1083,7 +1083,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deadLetterConfig` | software.amazon.awscdk.services.events.CfnEventBus$DeadLetterConfigProperty | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
+| `deadLetterConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `eventSourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-source-name` |
 | `kmsKeyIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-identifier` |
@@ -1413,7 +1413,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `arrayProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:array-properties` |
+| `arrayProperties` | software.amazon.awscdk.services.events.CfnRule$BatchArrayPropertiesProperty | [[cdk.support/lookup-entry]] | `:array-properties` |
 | `jobDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition` |
 | `jobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-name` |
 | `retryStrategy` | software.amazon.awscdk.services.events.CfnRule$BatchRetryStrategyProperty | [[cdk.support/lookup-entry]] | `:retry-strategy` |
@@ -1590,17 +1590,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `capacityProviderStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-provider-strategy` |
-| `enableEcsManagedTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
+| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
 | `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
 | `group` | java.lang.String | [[cdk.support/lookup-entry]] | `:group` |
 | `launchType` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-type` |
 | `networkConfiguration` | software.amazon.awscdk.services.events.CfnRule$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
-| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+| `placementConstraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-constraints` |
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
 | `propagateTags` | java.lang.String | [[cdk.support/lookup-entry]] | `:propagate-tags` |
 | `referenceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:reference-id` |
-| `tagList` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-list` |
+| `tagList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-list` |
 | `taskCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:task-count` |
 | `taskDefinitionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition-arn` |
 "
@@ -1656,7 +1656,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `headerParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:header-parameters` |
+| `headerParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header-parameters` |
 | `pathParameterValues` | java.util.List | [[cdk.support/lookup-entry]] | `:path-parameter-values` |
 | `queryStringParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-string-parameters` |
 "
@@ -1846,7 +1846,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnRuleProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -2055,7 +2055,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pipelineParameterList` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-parameter-list` |
+| `pipelineParameterList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-parameter-list` |
 "
   [^CfnRule$SageMakerPipelineParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pipeline-parameter-list)]
@@ -2146,18 +2146,18 @@ function on the data with the provided namespace id and item-key.  The found val
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 | `batchParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:batch-parameters` |
 | `deadLetterConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
-| `ecsParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecs-parameters` |
+| `ecsParameters` | software.amazon.awscdk.services.events.CfnRule$EcsParametersProperty | [[cdk.support/lookup-entry]] | `:ecs-parameters` |
 | `httpParameters` | software.amazon.awscdk.services.events.CfnRule$HttpParametersProperty | [[cdk.support/lookup-entry]] | `:http-parameters` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `input` | java.lang.String | [[cdk.support/lookup-entry]] | `:input` |
 | `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `inputTransformer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-transformer` |
-| `kinesisParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-parameters` |
+| `inputTransformer` | software.amazon.awscdk.services.events.CfnRule$InputTransformerProperty | [[cdk.support/lookup-entry]] | `:input-transformer` |
+| `kinesisParameters` | software.amazon.awscdk.services.events.CfnRule$KinesisParametersProperty | [[cdk.support/lookup-entry]] | `:kinesis-parameters` |
 | `redshiftDataParameters` | software.amazon.awscdk.services.events.CfnRule$RedshiftDataParametersProperty | [[cdk.support/lookup-entry]] | `:redshift-data-parameters` |
-| `retryPolicy` | software.amazon.awscdk.services.events.CfnRule$RetryPolicyProperty | [[cdk.support/lookup-entry]] | `:retry-policy` |
+| `retryPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-policy` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `runCommandParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-command-parameters` |
-| `sageMakerPipelineParameters` | software.amazon.awscdk.services.events.CfnRule$SageMakerPipelineParametersProperty | [[cdk.support/lookup-entry]] | `:sage-maker-pipeline-parameters` |
+| `sageMakerPipelineParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sage-maker-pipeline-parameters` |
 | `sqsParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs-parameters` |
 "
   [^CfnRule$TargetProperty$Builder builder id config]

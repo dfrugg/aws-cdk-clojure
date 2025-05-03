@@ -415,7 +415,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
-| `scheduledActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
+| `scheduledActions` | java.util.List | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
 | `suspendedState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suspended-state` |
 "
@@ -464,9 +464,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
-| `scheduledActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
+| `scheduledActions` | java.util.List | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
-| `suspendedState` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$SuspendedStateProperty | [[cdk.support/lookup-entry]] | `:suspended-state` |
+| `suspendedState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suspended-state` |
 "
   [^CfnScalableTargetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :max-capacity)]
@@ -539,7 +539,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `endTime` | java.time.Instant | [[cdk.support/lookup-entry]] | `:end-time` |
+| `endTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:end-time` |
 | `scalableTargetAction` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$ScalableTargetActionProperty | [[cdk.support/lookup-entry]] | `:scalable-target-action` |
 | `schedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule` |
 | `scheduledActionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-action-name` |
@@ -582,8 +582,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamicScalingInSuspended` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-scaling-in-suspended` |
-| `dynamicScalingOutSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dynamic-scaling-out-suspended` |
+| `dynamicScalingInSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dynamic-scaling-in-suspended` |
+| `dynamicScalingOutSuspended` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-scaling-out-suspended` |
 | `scheduledScalingSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:scheduled-scaling-suspended` |
 "
   [^CfnScalableTarget$SuspendedStateProperty$Builder builder id config]
@@ -622,7 +622,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
 | `scalingTargetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:scaling-target-id` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
-| `stepScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-scaling-policy-configuration` |
+| `stepScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$StepScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:step-scaling-policy-configuration` |
 | `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
 "
   [^CfnScalingPolicy$Builder builder id config]
@@ -667,7 +667,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
-| `metrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metrics` |
+| `metrics` | java.util.List | [[cdk.support/lookup-entry]] | `:metrics` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
@@ -964,7 +964,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
@@ -998,7 +998,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric` |
+| `metric` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingMetricProperty | [[cdk.support/lookup-entry]] | `:metric` |
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "

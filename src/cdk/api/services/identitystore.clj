@@ -115,7 +115,7 @@
 |---|---|---|---|
 | `groupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-id` |
 | `identityStoreId` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-store-id` |
-| `memberId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:member-id` |
+| `memberId` | software.amazon.awscdk.services.identitystore.CfnGroupMembership$MemberIdProperty | [[cdk.support/lookup-entry]] | `:member-id` |
 "
   [^CfnGroupMembershipProps$Builder builder id config]
   (when-some [data (lookup-entry config id :group-id)]

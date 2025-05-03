@@ -72,8 +72,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `decodeConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$DecodeConfigProperty | [[cdk.support/lookup-entry]] | `:decode-config` |
-| `demodulationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:demodulation-config` |
+| `decodeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:decode-config` |
+| `demodulationConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$DemodulationConfigProperty | [[cdk.support/lookup-entry]] | `:demodulation-config` |
 | `spectrumConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spectrum-config` |
 "
   [^CfnConfig$AntennaDownlinkDemodDecodeConfigProperty$Builder builder id config]
@@ -106,9 +106,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `spectrumConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$UplinkSpectrumConfigProperty | [[cdk.support/lookup-entry]] | `:spectrum-config` |
-| `targetEirp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-eirp` |
-| `transmitDisabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transmit-disabled` |
+| `spectrumConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spectrum-config` |
+| `targetEirp` | software.amazon.awscdk.services.groundstation.CfnConfig$EirpProperty | [[cdk.support/lookup-entry]] | `:target-eirp` |
+| `transmitDisabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transmit-disabled` |
 "
   [^CfnConfig$AntennaUplinkConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :spectrum-config)]
@@ -140,7 +140,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configData` | software.amazon.awscdk.services.groundstation.CfnConfig$ConfigDataProperty | [[cdk.support/lookup-entry]] | `:config-data` |
+| `configData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config-data` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -175,12 +175,12 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `antennaDownlinkConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$AntennaDownlinkConfigProperty | [[cdk.support/lookup-entry]] | `:antenna-downlink-config` |
-| `antennaDownlinkDemodDecodeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:antenna-downlink-demod-decode-config` |
+| `antennaDownlinkDemodDecodeConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$AntennaDownlinkDemodDecodeConfigProperty | [[cdk.support/lookup-entry]] | `:antenna-downlink-demod-decode-config` |
 | `antennaUplinkConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:antenna-uplink-config` |
-| `dataflowEndpointConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$DataflowEndpointConfigProperty | [[cdk.support/lookup-entry]] | `:dataflow-endpoint-config` |
-| `s3RecordingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-recording-config` |
+| `dataflowEndpointConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataflow-endpoint-config` |
+| `s3RecordingConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$S3RecordingConfigProperty | [[cdk.support/lookup-entry]] | `:s3-recording-config` |
 | `trackingConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$TrackingConfigProperty | [[cdk.support/lookup-entry]] | `:tracking-config` |
-| `uplinkEchoConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uplink-echo-config` |
+| `uplinkEchoConfig` | software.amazon.awscdk.services.groundstation.CfnConfig$UplinkEchoConfigProperty | [[cdk.support/lookup-entry]] | `:uplink-echo-config` |
 "
   [^CfnConfig$ConfigDataProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :antenna-downlink-config)]
@@ -531,7 +531,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `antennaUplinkConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:antenna-uplink-config-arn` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnConfig$UplinkEchoConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :antenna-uplink-config-arn)]
@@ -594,8 +594,8 @@
 |---|---|---|---|
 | `agentStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:agent-status` |
 | `auditResults` | java.lang.String | [[cdk.support/lookup-entry]] | `:audit-results` |
-| `egressAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress-address` |
-| `ingressAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ingress-address` |
+| `egressAddress` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$ConnectionDetailsProperty | [[cdk.support/lookup-entry]] | `:egress-address` |
+| `ingressAddress` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$RangedConnectionDetailsProperty | [[cdk.support/lookup-entry]] | `:ingress-address` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnDataflowEndpointGroup$AwsGroundStationAgentEndpointProperty$Builder builder id config]
@@ -634,7 +634,7 @@
 |---|---|---|---|
 | `contactPostPassDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:contact-post-pass-duration-seconds` |
 | `contactPrePassDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:contact-pre-pass-duration-seconds` |
-| `endpointDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:endpoint-details` |
+| `endpointDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-details` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataflowEndpointGroup$Builder builder id config]
@@ -670,7 +670,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mtu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:mtu` |
-| `socketAddress` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$SocketAddressProperty | [[cdk.support/lookup-entry]] | `:socket-address` |
+| `socketAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:socket-address` |
 "
   [^CfnDataflowEndpointGroup$ConnectionDetailsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mtu)]
@@ -700,7 +700,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `address` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$SocketAddressProperty | [[cdk.support/lookup-entry]] | `:address` |
+| `address` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:address` |
 | `mtu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:mtu` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
@@ -736,7 +736,7 @@
 |---|---|---|---|
 | `awsGroundStationAgentEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-ground-station-agent-endpoint` |
 | `endpoint` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$DataflowEndpointProperty | [[cdk.support/lookup-entry]] | `:endpoint` |
-| `securityDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-details` |
+| `securityDetails` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$SecurityDetailsProperty | [[cdk.support/lookup-entry]] | `:security-details` |
 "
   [^CfnDataflowEndpointGroup$EndpointDetailsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-ground-station-agent-endpoint)]
@@ -801,7 +801,7 @@
 |---|---|---|---|
 | `contactPostPassDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:contact-post-pass-duration-seconds` |
 | `contactPrePassDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:contact-pre-pass-duration-seconds` |
-| `endpointDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-details` |
+| `endpointDetails` | java.util.List | [[cdk.support/lookup-entry]] | `:endpoint-details` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataflowEndpointGroupProps$Builder builder id config]
@@ -837,7 +837,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mtu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:mtu` |
-| `socketAddress` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$RangedSocketAddressProperty | [[cdk.support/lookup-entry]] | `:socket-address` |
+| `socketAddress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:socket-address` |
 "
   [^CfnDataflowEndpointGroup$RangedConnectionDetailsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :mtu)]
@@ -965,10 +965,10 @@
 |---|---|---|---|
 | `contactPostPassDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:contact-post-pass-duration-seconds` |
 | `contactPrePassDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:contact-pre-pass-duration-seconds` |
-| `dataflowEdges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataflow-edges` |
+| `dataflowEdges` | java.util.List | [[cdk.support/lookup-entry]] | `:dataflow-edges` |
 | `minimumViableContactDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-viable-contact-duration-seconds` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `streamsKmsKey` | software.amazon.awscdk.services.groundstation.CfnMissionProfile$StreamsKmsKeyProperty | [[cdk.support/lookup-entry]] | `:streams-kms-key` |
+| `streamsKmsKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:streams-kms-key` |
 | `streamsKmsRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:streams-kms-role` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `trackingConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracking-config-arn` |
@@ -1051,7 +1051,7 @@
 | `dataflowEdges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataflow-edges` |
 | `minimumViableContactDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum-viable-contact-duration-seconds` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `streamsKmsKey` | software.amazon.awscdk.services.groundstation.CfnMissionProfile$StreamsKmsKeyProperty | [[cdk.support/lookup-entry]] | `:streams-kms-key` |
+| `streamsKmsKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:streams-kms-key` |
 | `streamsKmsRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:streams-kms-role` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `trackingConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracking-config-arn` |

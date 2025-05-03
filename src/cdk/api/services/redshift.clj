@@ -44,9 +44,9 @@
 | `aquaConfigurationStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:aqua-configuration-status` |
 | `automatedSnapshotRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:automated-snapshot-retention-period` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `availabilityZoneRelocation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:availability-zone-relocation` |
+| `availabilityZoneRelocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:availability-zone-relocation` |
 | `availabilityZoneRelocationStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone-relocation-status` |
-| `classic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:classic` |
+| `classic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:classic` |
 | `clusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-identifier` |
 | `clusterParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-parameter-group-name` |
 | `clusterSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:cluster-security-groups` |
@@ -54,7 +54,7 @@
 | `clusterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-type` |
 | `clusterVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-version` |
 | `dbName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-name` |
-| `deferMaintenance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:defer-maintenance` |
+| `deferMaintenance` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:defer-maintenance` |
 | `deferMaintenanceDuration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:defer-maintenance-duration` |
 | `deferMaintenanceEndTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:defer-maintenance-end-time` |
 | `deferMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:defer-maintenance-start-time` |
@@ -67,7 +67,7 @@
 | `hsmConfigurationIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:hsm-configuration-identifier` |
 | `iamRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:iam-roles` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `loggingProperties` | software.amazon.awscdk.services.redshift.CfnCluster$LoggingPropertiesProperty | [[cdk.support/lookup-entry]] | `:logging-properties` |
+| `loggingProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-properties` |
 | `maintenanceTrackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:maintenance-track-name` |
 | `manageMasterPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-master-password` |
 | `manualSnapshotRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:manual-snapshot-retention-period` |
@@ -283,7 +283,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `parameterGroupFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-group-family` |
 | `parameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-group-name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnClusterParameterGroup$Builder builder id config]
@@ -354,7 +354,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `parameterGroupFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-group-family` |
 | `parameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-group-name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnClusterParameterGroupProps$Builder builder id config]
@@ -395,9 +395,9 @@
 | `aquaConfigurationStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:aqua-configuration-status` |
 | `automatedSnapshotRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:automated-snapshot-retention-period` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `availabilityZoneRelocation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:availability-zone-relocation` |
+| `availabilityZoneRelocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:availability-zone-relocation` |
 | `availabilityZoneRelocationStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone-relocation-status` |
-| `classic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:classic` |
+| `classic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:classic` |
 | `clusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-identifier` |
 | `clusterParameterGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-parameter-group-name` |
 | `clusterSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:cluster-security-groups` |
@@ -405,26 +405,26 @@
 | `clusterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-type` |
 | `clusterVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-version` |
 | `dbName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-name` |
-| `deferMaintenance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:defer-maintenance` |
+| `deferMaintenance` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:defer-maintenance` |
 | `deferMaintenanceDuration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:defer-maintenance-duration` |
 | `deferMaintenanceEndTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:defer-maintenance-end-time` |
 | `deferMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:defer-maintenance-start-time` |
 | `destinationRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-region` |
 | `elasticIp` | java.lang.String | [[cdk.support/lookup-entry]] | `:elastic-ip` |
 | `encrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:encrypted` |
-| `endpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint` |
-| `enhancedVpcRouting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
+| `endpoint` | software.amazon.awscdk.services.redshift.CfnCluster$EndpointProperty | [[cdk.support/lookup-entry]] | `:endpoint` |
+| `enhancedVpcRouting` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enhanced-vpc-routing` |
 | `hsmClientCertificateIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:hsm-client-certificate-identifier` |
 | `hsmConfigurationIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:hsm-configuration-identifier` |
 | `iamRoles` | java.util.List | [[cdk.support/lookup-entry]] | `:iam-roles` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `loggingProperties` | software.amazon.awscdk.services.redshift.CfnCluster$LoggingPropertiesProperty | [[cdk.support/lookup-entry]] | `:logging-properties` |
+| `loggingProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-properties` |
 | `maintenanceTrackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:maintenance-track-name` |
-| `manageMasterPassword` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:manage-master-password` |
+| `manageMasterPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manage-master-password` |
 | `manualSnapshotRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:manual-snapshot-retention-period` |
 | `masterUserPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-user-password` |
 | `masterUsername` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-username` |
-| `multiAz` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-az` |
+| `multiAz` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-az` |
 | `namespaceResourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:namespace-resource-policy` |
 | `nodeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:node-type` |
 | `numberOfNodes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-nodes` |
@@ -434,10 +434,10 @@
 | `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `resourceAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-action` |
 | `revisionTarget` | java.lang.String | [[cdk.support/lookup-entry]] | `:revision-target` |
-| `rotateEncryptionKey` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-encryption-key` |
+| `rotateEncryptionKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rotate-encryption-key` |
 | `snapshotClusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-cluster-identifier` |
 | `snapshotCopyGrantName` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-copy-grant-name` |
-| `snapshotCopyManual` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:snapshot-copy-manual` |
+| `snapshotCopyManual` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-copy-manual` |
 | `snapshotCopyRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:snapshot-copy-retention-period` |
 | `snapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-identifier` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -890,7 +890,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `networkInterfaces` | java.util.List | [[cdk.support/lookup-entry]] | `:network-interfaces` |
+| `networkInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-interfaces` |
 | `vpcEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-endpoint-id` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
@@ -957,7 +957,7 @@
 |---|---|---|---|
 | `account` | java.lang.String | [[cdk.support/lookup-entry]] | `:account` |
 | `clusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-identifier` |
-| `force` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:force` |
+| `force` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:force` |
 | `vpcIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-ids` |
 "
   [^CfnEndpointAuthorization$Builder builder id config]
@@ -1127,7 +1127,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable` |
+| `enable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable` |
 | `endTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-time` |
 | `iamRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-role` |
 | `schedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule` |
@@ -1211,7 +1211,7 @@
 | `scheduledActionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-action-description` |
 | `scheduledActionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-action-name` |
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
-| `targetAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-action` |
+| `targetAction` | software.amazon.awscdk.services.redshift.CfnScheduledAction$ScheduledActionTypeProperty | [[cdk.support/lookup-entry]] | `:target-action` |
 "
   [^CfnScheduledActionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :enable)]
@@ -1253,7 +1253,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `classic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:classic` |
+| `classic` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:classic` |
 | `clusterIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-identifier` |
 | `clusterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-type` |
 | `nodeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:node-type` |
@@ -1321,9 +1321,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pauseCluster` | software.amazon.awscdk.services.redshift.CfnScheduledAction$PauseClusterMessageProperty | [[cdk.support/lookup-entry]] | `:pause-cluster` |
+| `pauseCluster` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pause-cluster` |
 | `resizeCluster` | software.amazon.awscdk.services.redshift.CfnScheduledAction$ResizeClusterMessageProperty | [[cdk.support/lookup-entry]] | `:resize-cluster` |
-| `resumeCluster` | software.amazon.awscdk.services.redshift.CfnScheduledAction$ResumeClusterMessageProperty | [[cdk.support/lookup-entry]] | `:resume-cluster` |
+| `resumeCluster` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resume-cluster` |
 "
   [^CfnScheduledAction$ScheduledActionTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pause-cluster)]

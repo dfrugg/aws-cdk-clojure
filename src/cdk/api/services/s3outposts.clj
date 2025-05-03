@@ -32,7 +32,7 @@
 | `bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
-| `vpcConfiguration` | software.amazon.awscdk.services.s3outposts.CfnAccessPoint$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnAccessPoint$Builder builder id config]
   (when-some [data (lookup-entry config id :bucket)]
@@ -160,7 +160,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
-| `lifecycleConfiguration` | software.amazon.awscdk.services.s3outposts.CfnBucket$LifecycleConfigurationProperty | [[cdk.support/lookup-entry]] | `:lifecycle-configuration` |
+| `lifecycleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle-configuration` |
 | `outpostId` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -227,7 +227,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `andOperator` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:and-operator` |
+| `andOperator` | software.amazon.awscdk.services.s3outposts.CfnBucket$FilterAndOperatorProperty | [[cdk.support/lookup-entry]] | `:and-operator` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `tag` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag` |
 "
@@ -292,7 +292,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnBucket$LifecycleConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :rules)]
@@ -383,7 +383,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
-| `lifecycleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle-configuration` |
+| `lifecycleConfiguration` | software.amazon.awscdk.services.s3outposts.CfnBucket$LifecycleConfigurationProperty | [[cdk.support/lookup-entry]] | `:lifecycle-configuration` |
 | `outpostId` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -419,7 +419,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `abortIncompleteMultipartUpload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:abort-incomplete-multipart-upload` |
+| `abortIncompleteMultipartUpload` | software.amazon.awscdk.services.s3outposts.CfnBucket$AbortIncompleteMultipartUploadProperty | [[cdk.support/lookup-entry]] | `:abort-incomplete-multipart-upload` |
 | `expirationDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:expiration-date` |
 | `expirationInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:expiration-in-days` |
 | `filter` | java.lang.Object | [[cdk.support/lookup-entry]] | `:filter` |
@@ -566,7 +566,7 @@
 |---|---|---|---|
 | `accessType` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-type` |
 | `customerOwnedIpv4Pool` | java.lang.String | [[cdk.support/lookup-entry]] | `:customer-owned-ipv4-pool` |
-| `failedReason` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failed-reason` |
+| `failedReason` | software.amazon.awscdk.services.s3outposts.CfnEndpoint$FailedReasonProperty | [[cdk.support/lookup-entry]] | `:failed-reason` |
 | `outpostId` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-id` |
 | `securityGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-group-id` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |

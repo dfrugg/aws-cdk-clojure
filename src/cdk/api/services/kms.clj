@@ -253,11 +253,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `bypassPolicyLockoutSafetyCheck` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bypass-policy-lockout-safety-check` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `enableKeyRotation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-key-rotation` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `keyPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:key-policy` |
 | `keySpec` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-spec` |
 | `keyUsage` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-usage` |
-| `multiRegion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-region` |
+| `multiRegion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-region` |
 | `origin` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin` |
 | `pendingWindowInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pending-window-in-days` |
 | `rotationPeriodInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rotation-period-in-days` |
@@ -313,7 +313,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `bypassPolicyLockoutSafetyCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:bypass-policy-lockout-safety-check` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enableKeyRotation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-key-rotation` |
+| `enableKeyRotation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-key-rotation` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `keyPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:key-policy` |
 | `keySpec` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-spec` |
@@ -416,7 +416,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `keyPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:key-policy` |
 | `pendingWindowInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pending-window-in-days` |
 | `primaryKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-key-arn` |

@@ -777,7 +777,7 @@ __Create Form:__ ___[java.lang.String]___
 | `apiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-id` |
 | `atRestEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:at-rest-encryption-enabled` |
 | `healthMetricsConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-metrics-config` |
-| `transitEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transit-encryption-enabled` |
+| `transitEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transit-encryption-enabled` |
 | `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -821,7 +821,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `apiCachingBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-caching-behavior` |
 | `apiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-id` |
-| `atRestEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:at-rest-encryption-enabled` |
+| `atRestEncryptionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:at-rest-encryption-enabled` |
 | `healthMetricsConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-metrics-config` |
 | `transitEncryptionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transit-encryption-enabled` |
 | `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
@@ -998,8 +998,8 @@ __Create Form:__ ___[java.lang.String]___
 | `apiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `dynamoDbConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-db-config` |
-| `elasticsearchConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elasticsearch-config` |
-| `eventBridgeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-bridge-config` |
+| `elasticsearchConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$ElasticsearchConfigProperty | [[cdk.support/lookup-entry]] | `:elasticsearch-config` |
+| `eventBridgeConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$EventBridgeConfigProperty | [[cdk.support/lookup-entry]] | `:event-bridge-config` |
 | `httpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-config` |
 | `lambdaConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-config` |
 | `metricsConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:metrics-config` |
@@ -1094,9 +1094,9 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:aws-region` |
-| `deltaSyncConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$DeltaSyncConfigProperty | [[cdk.support/lookup-entry]] | `:delta-sync-config` |
+| `deltaSyncConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delta-sync-config` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `useCallerCredentials` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-caller-credentials` |
+| `useCallerCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-caller-credentials` |
 | `versioned` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:versioned` |
 "
   [^CfnDataSource$DynamoDBConfigProperty$Builder builder id config]
@@ -1284,15 +1284,15 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `apiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-id` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `dynamoDbConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$DynamoDBConfigProperty | [[cdk.support/lookup-entry]] | `:dynamo-db-config` |
+| `dynamoDbConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-db-config` |
 | `elasticsearchConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$ElasticsearchConfigProperty | [[cdk.support/lookup-entry]] | `:elasticsearch-config` |
-| `eventBridgeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-bridge-config` |
-| `httpConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$HttpConfigProperty | [[cdk.support/lookup-entry]] | `:http-config` |
-| `lambdaConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$LambdaConfigProperty | [[cdk.support/lookup-entry]] | `:lambda-config` |
+| `eventBridgeConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$EventBridgeConfigProperty | [[cdk.support/lookup-entry]] | `:event-bridge-config` |
+| `httpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-config` |
+| `lambdaConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-config` |
 | `metricsConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:metrics-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `openSearchServiceConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$OpenSearchServiceConfigProperty | [[cdk.support/lookup-entry]] | `:open-search-service-config` |
-| `relationalDatabaseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relational-database-config` |
+| `relationalDatabaseConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$RelationalDatabaseConfigProperty | [[cdk.support/lookup-entry]] | `:relational-database-config` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -1386,7 +1386,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `rdsHttpEndpointConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$RdsHttpEndpointConfigProperty | [[cdk.support/lookup-entry]] | `:rds-http-endpoint-config` |
+| `rdsHttpEndpointConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rds-http-endpoint-config` |
 | `relationalDatabaseSourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:relational-database-source-type` |
 "
   [^CfnDataSource$RelationalDatabaseConfigProperty$Builder builder id config]
@@ -1811,14 +1811,14 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalAuthenticationProviders` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-authentication-providers` |
+| `additionalAuthenticationProviders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-authentication-providers` |
 | `apiType` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-type` |
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
 | `enhancedMetricsConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$EnhancedMetricsConfigProperty | [[cdk.support/lookup-entry]] | `:enhanced-metrics-config` |
 | `environmentVariables` | java.lang.Object | [[cdk.support/lookup-entry]] | `:environment-variables` |
 | `introspectionConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:introspection-config` |
-| `lambdaAuthorizerConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$LambdaAuthorizerConfigProperty | [[cdk.support/lookup-entry]] | `:lambda-authorizer-config` |
-| `logConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$LogConfigProperty | [[cdk.support/lookup-entry]] | `:log-config` |
+| `lambdaAuthorizerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-authorizer-config` |
+| `logConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-config` |
 | `mergedApiExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:merged-api-execution-role-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `openIdConnectConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-id-connect-config` |
@@ -1993,7 +1993,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cloudWatchLogsRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-role-arn` |
-| `excludeVerboseContent` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-verbose-content` |
+| `excludeVerboseContent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-verbose-content` |
 | `fieldLogLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-log-level` |
 "
   [^CfnGraphQLApi$LogConfigProperty$Builder builder id config]
@@ -2063,14 +2063,14 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `additionalAuthenticationProviders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:additional-authentication-providers` |
+| `additionalAuthenticationProviders` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-authentication-providers` |
 | `apiType` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-type` |
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
 | `enhancedMetricsConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$EnhancedMetricsConfigProperty | [[cdk.support/lookup-entry]] | `:enhanced-metrics-config` |
 | `environmentVariables` | java.lang.Object | [[cdk.support/lookup-entry]] | `:environment-variables` |
 | `introspectionConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:introspection-config` |
-| `lambdaAuthorizerConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$LambdaAuthorizerConfigProperty | [[cdk.support/lookup-entry]] | `:lambda-authorizer-config` |
-| `logConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-config` |
+| `lambdaAuthorizerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-authorizer-config` |
+| `logConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$LogConfigProperty | [[cdk.support/lookup-entry]] | `:log-config` |
 | `mergedApiExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:merged-api-execution-role-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `openIdConnectConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$OpenIDConnectConfigProperty | [[cdk.support/lookup-entry]] | `:open-id-connect-config` |
@@ -2080,7 +2080,7 @@ __Create Form:__ ___[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userPoolConfig` | software.amazon.awscdk.services.appsync.CfnGraphQLApi$UserPoolConfigProperty | [[cdk.support/lookup-entry]] | `:user-pool-config` |
 | `visibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:visibility` |
-| `xrayEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xray-enabled` |
+| `xrayEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:xray-enabled` |
 "
   [^CfnGraphQLApiProps$Builder builder id config]
   (when-some [data (lookup-entry config id :additional-authentication-providers)]
@@ -2450,7 +2450,7 @@ __Create Form:__ ___[java.lang.String]___
 | `kind` | java.lang.String | [[cdk.support/lookup-entry]] | `:kind` |
 | `maxBatchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-batch-size` |
 | `metricsConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:metrics-config` |
-| `pipelineConfig` | software.amazon.awscdk.services.appsync.CfnResolver$PipelineConfigProperty | [[cdk.support/lookup-entry]] | `:pipeline-config` |
+| `pipelineConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-config` |
 | `requestMappingTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:request-mapping-template` |
 | `requestMappingTemplateS3Location` | java.lang.String | [[cdk.support/lookup-entry]] | `:request-mapping-template-s3-location` |
 | `responseMappingTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:response-mapping-template` |
@@ -2519,7 +2519,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `conflictDetection` | java.lang.String | [[cdk.support/lookup-entry]] | `:conflict-detection` |
 | `conflictHandler` | java.lang.String | [[cdk.support/lookup-entry]] | `:conflict-handler` |
-| `lambdaConflictHandlerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-conflict-handler-config` |
+| `lambdaConflictHandlerConfig` | software.amazon.awscdk.services.appsync.CfnResolver$LambdaConflictHandlerConfigProperty | [[cdk.support/lookup-entry]] | `:lambda-conflict-handler-config` |
 "
   [^CfnResolver$SyncConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conflict-detection)]
@@ -2553,7 +2553,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `mergedApiIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:merged-api-identifier` |
-| `sourceApiAssociationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-api-association-config` |
+| `sourceApiAssociationConfig` | software.amazon.awscdk.services.appsync.CfnSourceApiAssociation$SourceApiAssociationConfigProperty | [[cdk.support/lookup-entry]] | `:source-api-association-config` |
 | `sourceApiIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-api-identifier` |
 "
   [^CfnSourceApiAssociation$Builder builder id config]
@@ -2590,7 +2590,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `mergedApiIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:merged-api-identifier` |
-| `sourceApiAssociationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-api-association-config` |
+| `sourceApiAssociationConfig` | software.amazon.awscdk.services.appsync.CfnSourceApiAssociation$SourceApiAssociationConfigProperty | [[cdk.support/lookup-entry]] | `:source-api-association-config` |
 | `sourceApiIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-api-identifier` |
 "
   [^CfnSourceApiAssociationProps$Builder builder id config]
@@ -2918,13 +2918,13 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dynamoDbConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamo-db-config` |
-| `elasticsearchConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$ElasticsearchConfigProperty | [[cdk.support/lookup-entry]] | `:elasticsearch-config` |
-| `eventBridgeConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-bridge-config` |
-| `httpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-config` |
+| `dynamoDbConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$DynamoDBConfigProperty | [[cdk.support/lookup-entry]] | `:dynamo-db-config` |
+| `elasticsearchConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elasticsearch-config` |
+| `eventBridgeConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$EventBridgeConfigProperty | [[cdk.support/lookup-entry]] | `:event-bridge-config` |
+| `httpConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$HttpConfigProperty | [[cdk.support/lookup-entry]] | `:http-config` |
 | `lambdaConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$LambdaConfigProperty | [[cdk.support/lookup-entry]] | `:lambda-config` |
-| `openSearchServiceConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$OpenSearchServiceConfigProperty | [[cdk.support/lookup-entry]] | `:open-search-service-config` |
-| `relationalDatabaseConfig` | software.amazon.awscdk.services.appsync.CfnDataSource$RelationalDatabaseConfigProperty | [[cdk.support/lookup-entry]] | `:relational-database-config` |
+| `openSearchServiceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-search-service-config` |
+| `relationalDatabaseConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relational-database-config` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^ExtendedDataSourceProps$Builder builder id config]
@@ -3412,7 +3412,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `excludeVerboseContent` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:exclude-verbose-content` |
+| `excludeVerboseContent` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-verbose-content` |
 | `fieldLogLevel` | software.amazon.awscdk.services.appsync.FieldLogLevel | [[cdk.api.services.appsync/field-log-level]] | `:field-log-level` |
 | `retention` | software.amazon.awscdk.services.logs.RetentionDays | [[cdk.api.services.logs/retention-days]] | `:retention` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |

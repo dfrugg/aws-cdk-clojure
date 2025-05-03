@@ -66,7 +66,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deleteProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-protection` |
+| `deleteProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-protection` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `firewallName` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-name` |
 | `firewallPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-policy-arn` |
@@ -147,7 +147,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `firewallPolicy` | software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy$FirewallPolicyProperty | [[cdk.support/lookup-entry]] | `:firewall-policy` |
+| `firewallPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firewall-policy` |
 | `firewallPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-policy-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -242,10 +242,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `policyVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policy-variables` |
+| `policyVariables` | software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy$PolicyVariablesProperty | [[cdk.support/lookup-entry]] | `:policy-variables` |
 | `statefulDefaultActions` | java.util.List | [[cdk.support/lookup-entry]] | `:stateful-default-actions` |
 | `statefulEngineOptions` | software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy$StatefulEngineOptionsProperty | [[cdk.support/lookup-entry]] | `:stateful-engine-options` |
-| `statefulRuleGroupReferences` | java.util.List | [[cdk.support/lookup-entry]] | `:stateful-rule-group-references` |
+| `statefulRuleGroupReferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stateful-rule-group-references` |
 | `statelessCustomActions` | java.util.List | [[cdk.support/lookup-entry]] | `:stateless-custom-actions` |
 | `statelessDefaultActions` | java.util.List | [[cdk.support/lookup-entry]] | `:stateless-default-actions` |
 | `statelessFragmentDefaultActions` | java.util.List | [[cdk.support/lookup-entry]] | `:stateless-fragment-default-actions` |
@@ -322,7 +322,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ruleVariables` | java.util.Map | [[cdk.support/lookup-entry]] | `:rule-variables` |
+| `ruleVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-variables` |
 "
   [^CfnFirewallPolicy$PolicyVariablesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :rule-variables)]
@@ -387,7 +387,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 "
   [^CfnFirewallPolicy$PublishMetricActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dimensions)]
@@ -544,8 +544,8 @@
 | `firewallName` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-name` |
 | `firewallPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-policy-arn` |
 | `firewallPolicyChangeProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:firewall-policy-change-protection` |
-| `subnetChangeProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:subnet-change-protection` |
-| `subnetMappings` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-mappings` |
+| `subnetChangeProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subnet-change-protection` |
+| `subnetMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subnet-mappings` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
@@ -752,7 +752,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `publishMetricAction` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$PublishMetricActionProperty | [[cdk.support/lookup-entry]] | `:publish-metric-action` |
+| `publishMetricAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publish-metric-action` |
 "
   [^CfnRuleGroup$ActionDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :publish-metric-action)]
@@ -851,7 +851,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-definition` |
+| `actionDefinition` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$ActionDefinitionProperty | [[cdk.support/lookup-entry]] | `:action-definition` |
 | `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
 "
   [^CfnRuleGroup$CustomActionProperty$Builder builder id config]
@@ -1011,7 +1011,7 @@
 |---|---|---|---|
 | `destinationPorts` | java.util.List | [[cdk.support/lookup-entry]] | `:destination-ports` |
 | `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
-| `protocols` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:protocols` |
+| `protocols` | java.util.List | [[cdk.support/lookup-entry]] | `:protocols` |
 | `sourcePorts` | java.util.List | [[cdk.support/lookup-entry]] | `:source-ports` |
 | `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
 | `tcpFlags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp-flags` |
@@ -1113,7 +1113,7 @@
 |---|---|---|---|
 | `capacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:capacity` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `ruleGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-group` |
+| `ruleGroup` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$RuleGroupProperty | [[cdk.support/lookup-entry]] | `:rule-group` |
 | `ruleGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-group-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -1154,7 +1154,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 "
   [^CfnRuleGroup$PublishMetricActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dimensions)]
@@ -1211,7 +1211,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `matchAttributes` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$MatchAttributesProperty | [[cdk.support/lookup-entry]] | `:match-attributes` |
+| `matchAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match-attributes` |
 "
   [^CfnRuleGroup$RuleDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :actions)]
@@ -1242,7 +1242,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `referenceSets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-sets` |
-| `ruleVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-variables` |
+| `ruleVariables` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$RuleVariablesProperty | [[cdk.support/lookup-entry]] | `:rule-variables` |
 | `rulesSource` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$RulesSourceProperty | [[cdk.support/lookup-entry]] | `:rules-source` |
 | `statefulRuleOptions` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$StatefulRuleOptionsProperty | [[cdk.support/lookup-entry]] | `:stateful-rule-options` |
 "
@@ -1374,7 +1374,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `rulesSourceList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules-source-list` |
+| `rulesSourceList` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$RulesSourceListProperty | [[cdk.support/lookup-entry]] | `:rules-source-list` |
 | `rulesString` | java.lang.String | [[cdk.support/lookup-entry]] | `:rules-string` |
 | `statefulRules` | java.util.List | [[cdk.support/lookup-entry]] | `:stateful-rules` |
 | `statelessRulesAndCustomActions` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$StatelessRulesAndCustomActionsProperty | [[cdk.support/lookup-entry]] | `:stateless-rules-and-custom-actions` |
@@ -1440,7 +1440,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
-| `header` | software.amazon.awscdk.services.networkfirewall.CfnRuleGroup$HeaderProperty | [[cdk.support/lookup-entry]] | `:header` |
+| `header` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:header` |
 | `ruleOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:rule-options` |
 "
   [^CfnRuleGroup$StatefulRuleProperty$Builder builder id config]
@@ -1505,7 +1505,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customActions` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-actions` |
-| `statelessRules` | java.util.List | [[cdk.support/lookup-entry]] | `:stateless-rules` |
+| `statelessRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stateless-rules` |
 "
   [^CfnRuleGroup$StatelessRulesAndCustomActionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-actions)]
@@ -1732,8 +1732,8 @@
 |---|---|---|---|
 | `certificateAuthorityArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-authority-arn` |
 | `checkCertificateRevocationStatus` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:check-certificate-revocation-status` |
-| `scopes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scopes` |
-| `serverCertificates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-certificates` |
+| `scopes` | java.util.List | [[cdk.support/lookup-entry]] | `:scopes` |
+| `serverCertificates` | java.util.List | [[cdk.support/lookup-entry]] | `:server-certificates` |
 "
   [^CfnTLSInspectionConfiguration$ServerCertificateConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate-authority-arn)]
@@ -1795,11 +1795,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationPorts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-ports` |
+| `destinationPorts` | java.util.List | [[cdk.support/lookup-entry]] | `:destination-ports` |
 | `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
 | `protocols` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:protocols` |
-| `sourcePorts` | java.util.List | [[cdk.support/lookup-entry]] | `:source-ports` |
-| `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
+| `sourcePorts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-ports` |
+| `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
 "
   [^CfnTLSInspectionConfiguration$ServerCertificateScopeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination-ports)]
@@ -1835,7 +1835,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `serverCertificateConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:server-certificate-configurations` |
+| `serverCertificateConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-certificate-configurations` |
 "
   [^CfnTLSInspectionConfiguration$TLSInspectionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :server-certificate-configurations)]

@@ -86,7 +86,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `idMappingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:id-mapping-type` |
-| `providerProperties` | software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow$ProviderPropertiesProperty | [[cdk.support/lookup-entry]] | `:provider-properties` |
+| `providerProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider-properties` |
 "
   [^CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :id-mapping-type)]
@@ -210,9 +210,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `idMappingTechniques` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:id-mapping-techniques` |
+| `idMappingTechniques` | software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow$IdMappingTechniquesProperty | [[cdk.support/lookup-entry]] | `:id-mapping-techniques` |
 | `inputSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-source-config` |
-| `outputSourceConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:output-source-config` |
+| `outputSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-source-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
@@ -397,7 +397,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `providerConfiguration` | java.util.Map | [[cdk.support/lookup-entry]] | `:provider-configuration` |
+| `providerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider-configuration` |
 | `providerServiceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-service-arn` |
 "
   [^CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder builder id config]
@@ -429,7 +429,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `idMappingWorkflowProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:id-mapping-workflow-properties` |
+| `idMappingWorkflowProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:id-mapping-workflow-properties` |
 | `idNamespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:id-namespace-name` |
 | `inputSourceConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:input-source-config` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
@@ -477,7 +477,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `inputSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-source-config` |
 | `outputSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-source-config` |
-| `resolutionTechniques` | software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow$ResolutionTechniquesProperty | [[cdk.support/lookup-entry]] | `:resolution-techniques` |
+| `resolutionTechniques` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resolution-techniques` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
@@ -582,7 +582,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hashed` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hashed` |
+| `hashed` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:hashed` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnMatchingWorkflow$OutputAttributeProperty$Builder builder id config]
@@ -613,9 +613,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applyNormalization` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:apply-normalization` |
+| `applyNormalization` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:apply-normalization` |
 | `kmsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-arn` |
-| `output` | java.util.List | [[cdk.support/lookup-entry]] | `:output` |
+| `output` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output` |
 | `outputS3Path` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-s3-path` |
 "
   [^CfnMatchingWorkflow$OutputSourceProperty$Builder builder id config]
@@ -651,9 +651,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `inputSourceConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:input-source-config` |
-| `outputSourceConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:output-source-config` |
-| `resolutionTechniques` | software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow$ResolutionTechniquesProperty | [[cdk.support/lookup-entry]] | `:resolution-techniques` |
+| `inputSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-source-config` |
+| `outputSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-source-config` |
+| `resolutionTechniques` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resolution-techniques` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
@@ -696,7 +696,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `intermediateSourceConfiguration` | software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow$IntermediateSourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:intermediate-source-configuration` |
+| `intermediateSourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:intermediate-source-configuration` |
 | `providerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider-configuration` |
 | `providerServiceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-service-arn` |
 "
@@ -730,7 +730,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `providerProperties` | software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow$ProviderPropertiesProperty | [[cdk.support/lookup-entry]] | `:provider-properties` |
+| `providerProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider-properties` |
 | `resolutionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolution-type` |
 | `ruleBasedProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-based-properties` |
 "

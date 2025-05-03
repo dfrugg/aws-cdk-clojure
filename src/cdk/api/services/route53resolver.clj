@@ -197,7 +197,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `firewallRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firewall-rules` |
+| `firewallRules` | java.util.List | [[cdk.support/lookup-entry]] | `:firewall-rules` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -893,7 +893,7 @@
 | `resolverEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-endpoint-id` |
 | `ruleType` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-ips` |
+| `targetIps` | java.util.List | [[cdk.support/lookup-entry]] | `:target-ips` |
 "
   [^CfnResolverRuleProps$Builder builder id config]
   (when-some [data (lookup-entry config id :domain-name)]

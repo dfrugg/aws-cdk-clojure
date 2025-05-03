@@ -368,18 +368,18 @@ __Create Form:__ ___[java.lang.String]___
 | `artifactConfig` | software.amazon.awscdk.services.synthetics.CfnCanary$ArtifactConfigProperty | [[cdk.support/lookup-entry]] | `:artifact-config` |
 | `artifactS3Location` | java.lang.String | [[cdk.support/lookup-entry]] | `:artifact-s3-location` |
 | `code` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code` |
-| `deleteLambdaResourcesOnCanaryDeletion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-lambda-resources-on-canary-deletion` |
+| `deleteLambdaResourcesOnCanaryDeletion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-lambda-resources-on-canary-deletion` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `failureRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-retention-period` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `runConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-config` |
 | `runtimeVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime-version` |
 | `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
-| `startCanaryAfterCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:start-canary-after-creation` |
+| `startCanaryAfterCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:start-canary-after-creation` |
 | `successRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:success-retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `visualReference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:visual-reference` |
-| `vpcConfig` | software.amazon.awscdk.services.synthetics.CfnCanary$VPCConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `visualReference` | software.amazon.awscdk.services.synthetics.CfnCanary$VisualReferenceProperty | [[cdk.support/lookup-entry]] | `:visual-reference` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnCanary$Builder builder id config]
   (when-some [data (lookup-entry config id :artifact-config)]
@@ -481,11 +481,11 @@ __Create Form:__ ___[java.lang.String]___
 | `artifactConfig` | software.amazon.awscdk.services.synthetics.CfnCanary$ArtifactConfigProperty | [[cdk.support/lookup-entry]] | `:artifact-config` |
 | `artifactS3Location` | java.lang.String | [[cdk.support/lookup-entry]] | `:artifact-s3-location` |
 | `code` | software.amazon.awscdk.services.synthetics.CfnCanary$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
-| `deleteLambdaResourcesOnCanaryDeletion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-lambda-resources-on-canary-deletion` |
+| `deleteLambdaResourcesOnCanaryDeletion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-lambda-resources-on-canary-deletion` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `failureRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-retention-period` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `runConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-config` |
+| `runConfig` | software.amazon.awscdk.services.synthetics.CfnCanary$RunConfigProperty | [[cdk.support/lookup-entry]] | `:run-config` |
 | `runtimeVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime-version` |
 | `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
 | `startCanaryAfterCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:start-canary-after-creation` |
@@ -648,7 +648,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `baseCanaryRunId` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-canary-run-id` |
-| `baseScreenshots` | java.util.List | [[cdk.support/lookup-entry]] | `:base-screenshots` |
+| `baseScreenshots` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:base-screenshots` |
 "
   [^CfnCanary$VisualReferenceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :base-canary-run-id)]

@@ -85,7 +85,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `emergencyContactList` | java.util.List | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
+| `emergencyContactList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
 | `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |
 "
   [^CfnProactiveEngagement$Builder builder id config]
@@ -150,7 +150,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `emergencyContactList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
+| `emergencyContactList` | java.util.List | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
 | `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |
 "
   [^CfnProactiveEngagementProps$Builder builder id config]
@@ -212,7 +212,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
+| `action` | software.amazon.awscdk.services.shield.CfnProtection$ActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder builder id config]
@@ -243,7 +243,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applicationLayerAutomaticResponseConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-layer-automatic-response-configuration` |
+| `applicationLayerAutomaticResponseConfiguration` | software.amazon.awscdk.services.shield.CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty | [[cdk.support/lookup-entry]] | `:application-layer-automatic-response-configuration` |
 | `healthCheckArns` | java.util.List | [[cdk.support/lookup-entry]] | `:health-check-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
@@ -369,7 +369,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applicationLayerAutomaticResponseConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-layer-automatic-response-configuration` |
+| `applicationLayerAutomaticResponseConfiguration` | software.amazon.awscdk.services.shield.CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty | [[cdk.support/lookup-entry]] | `:application-layer-automatic-response-configuration` |
 | `healthCheckArns` | java.util.List | [[cdk.support/lookup-entry]] | `:health-check-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |

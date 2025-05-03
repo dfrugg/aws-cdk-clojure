@@ -827,7 +827,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-value` |
-| `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
+| `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `metricNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-namespace` |
 | `metricValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-value` |
@@ -872,7 +872,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `filterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-name` |
 | `filterPattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-pattern` |
 | `logGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-name` |
-| `metricTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-transformations` |
+| `metricTransformations` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-transformations` |
 "
   [^CfnMetricFilterProps$Builder builder id config]
   (when-some [data (lookup-entry config id :filter-name)]

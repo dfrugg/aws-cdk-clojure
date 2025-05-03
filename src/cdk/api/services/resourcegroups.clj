@@ -22,7 +22,7 @@
 | `configuration` | java.util.List | [[cdk.support/lookup-entry]] | `:configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `resourceQuery` | software.amazon.awscdk.services.resourcegroups.CfnGroup$ResourceQueryProperty | [[cdk.support/lookup-entry]] | `:resource-query` |
+| `resourceQuery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-query` |
 | `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -124,7 +124,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | java.util.List | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resourceQuery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-query` |

@@ -358,7 +358,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-config-name` |
 | `minimumHealthyHosts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:minimum-healthy-hosts` |
 | `trafficRoutingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:traffic-routing-config` |
-| `zonalConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zonal-config` |
+| `zonalConfig` | software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig$ZonalConfigProperty | [[cdk.support/lookup-entry]] | `:zonal-config` |
 "
   [^CfnDeploymentConfig$Builder builder id config]
   (when-some [data (lookup-entry config id :compute-platform)]
@@ -458,7 +458,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `computePlatform` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-platform` |
 | `deploymentConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-config-name` |
-| `minimumHealthyHosts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:minimum-healthy-hosts` |
+| `minimumHealthyHosts` | software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig$MinimumHealthyHostsProperty | [[cdk.support/lookup-entry]] | `:minimum-healthy-hosts` |
 | `trafficRoutingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:traffic-routing-config` |
 | `zonalConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zonal-config` |
 "
@@ -626,9 +626,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alarms` | java.util.List | [[cdk.support/lookup-entry]] | `:alarms` |
+| `alarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarms` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `ignorePollAlarmFailure` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ignore-poll-alarm-failure` |
+| `ignorePollAlarmFailure` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ignore-poll-alarm-failure` |
 "
   [^CfnDeploymentGroup$AlarmConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :alarms)]
@@ -720,7 +720,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deploymentReadyOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-ready-option` |
-| `greenFleetProvisioningOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:green-fleet-provisioning-option` |
+| `greenFleetProvisioningOption` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$GreenFleetProvisioningOptionProperty | [[cdk.support/lookup-entry]] | `:green-fleet-provisioning-option` |
 | `terminateBlueInstancesOnDeploymentSuccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:terminate-blue-instances-on-deployment-success` |
 "
   [^CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty$Builder builder id config]
@@ -788,21 +788,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 | `autoRollbackConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-rollback-configuration` |
 | `autoScalingGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:auto-scaling-groups` |
-| `blueGreenDeploymentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blue-green-deployment-configuration` |
+| `blueGreenDeploymentConfiguration` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:blue-green-deployment-configuration` |
 | `deployment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment` |
 | `deploymentConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-config-name` |
 | `deploymentGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-group-name` |
-| `deploymentStyle` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$DeploymentStyleProperty | [[cdk.support/lookup-entry]] | `:deployment-style` |
-| `ec2TagFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-tag-filters` |
-| `ec2TagSet` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$EC2TagSetProperty | [[cdk.support/lookup-entry]] | `:ec2-tag-set` |
-| `ecsServices` | java.util.List | [[cdk.support/lookup-entry]] | `:ecs-services` |
-| `loadBalancerInfo` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$LoadBalancerInfoProperty | [[cdk.support/lookup-entry]] | `:load-balancer-info` |
-| `onPremisesInstanceTagFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-premises-instance-tag-filters` |
-| `onPremisesTagSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-premises-tag-set` |
+| `deploymentStyle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-style` |
+| `ec2TagFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-tag-filters` |
+| `ec2TagSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-tag-set` |
+| `ecsServices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecs-services` |
+| `loadBalancerInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:load-balancer-info` |
+| `onPremisesInstanceTagFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:on-premises-instance-tag-filters` |
+| `onPremisesTagSet` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$OnPremisesTagSetProperty | [[cdk.support/lookup-entry]] | `:on-premises-tag-set` |
 | `outdatedInstancesStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:outdated-instances-strategy` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `terminationHookEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:termination-hook-enabled` |
+| `terminationHookEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-hook-enabled` |
 | `triggerConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:trigger-configurations` |
 "
   [^CfnDeploymentGroup$Builder builder id config]
@@ -870,8 +870,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `ignoreApplicationStopFailures` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ignore-application-stop-failures` |
-| `revision` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$RevisionLocationProperty | [[cdk.support/lookup-entry]] | `:revision` |
+| `ignoreApplicationStopFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ignore-application-stop-failures` |
+| `revision` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:revision` |
 "
   [^CfnDeploymentGroup$DeploymentProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -1027,7 +1027,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ec2TagSetList` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-tag-set-list` |
+| `ec2TagSetList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-tag-set-list` |
 "
   [^CfnDeploymentGroup$EC2TagSetProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ec2-tag-set-list)]
@@ -1173,8 +1173,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `elbInfoList` | java.util.List | [[cdk.support/lookup-entry]] | `:elb-info-list` |
-| `targetGroupInfoList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-group-info-list` |
+| `elbInfoList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elb-info-list` |
+| `targetGroupInfoList` | java.util.List | [[cdk.support/lookup-entry]] | `:target-group-info-list` |
 | `targetGroupPairInfoList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-group-pair-info-list` |
 "
   [^CfnDeploymentGroup$LoadBalancerInfoProperty$Builder builder id config]
@@ -1207,7 +1207,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `onPremisesTagGroup` | java.util.List | [[cdk.support/lookup-entry]] | `:on-premises-tag-group` |
+| `onPremisesTagGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-premises-tag-group` |
 "
   [^CfnDeploymentGroup$OnPremisesTagSetListObjectProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :on-premises-tag-group)]
@@ -1265,23 +1265,23 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `alarmConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-configuration` |
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `autoRollbackConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-rollback-configuration` |
+| `autoRollbackConfiguration` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$AutoRollbackConfigurationProperty | [[cdk.support/lookup-entry]] | `:auto-rollback-configuration` |
 | `autoScalingGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:auto-scaling-groups` |
-| `blueGreenDeploymentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blue-green-deployment-configuration` |
-| `deployment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment` |
+| `blueGreenDeploymentConfiguration` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:blue-green-deployment-configuration` |
+| `deployment` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$DeploymentProperty | [[cdk.support/lookup-entry]] | `:deployment` |
 | `deploymentConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-config-name` |
 | `deploymentGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-group-name` |
 | `deploymentStyle` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$DeploymentStyleProperty | [[cdk.support/lookup-entry]] | `:deployment-style` |
-| `ec2TagFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-tag-filters` |
+| `ec2TagFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-tag-filters` |
 | `ec2TagSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-tag-set` |
 | `ecsServices` | java.util.List | [[cdk.support/lookup-entry]] | `:ecs-services` |
-| `loadBalancerInfo` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$LoadBalancerInfoProperty | [[cdk.support/lookup-entry]] | `:load-balancer-info` |
+| `loadBalancerInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:load-balancer-info` |
 | `onPremisesInstanceTagFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-premises-instance-tag-filters` |
 | `onPremisesTagSet` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-premises-tag-set` |
 | `outdatedInstancesStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:outdated-instances-strategy` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `terminationHookEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-hook-enabled` |
+| `terminationHookEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:termination-hook-enabled` |
 | `triggerConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trigger-configurations` |
 "
   [^CfnDeploymentGroupProps$Builder builder id config]
@@ -1485,8 +1485,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `prodTrafficRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prod-traffic-route` |
-| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
-| `testTrafficRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:test-traffic-route` |
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `testTrafficRoute` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$TrafficRouteProperty | [[cdk.support/lookup-entry]] | `:test-traffic-route` |
 "
   [^CfnDeploymentGroup$TargetGroupPairInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :prod-traffic-route)]

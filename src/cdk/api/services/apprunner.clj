@@ -122,7 +122,7 @@
 |---|---|---|---|
 | `observabilityConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:observability-configuration-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `traceConfiguration` | software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration$TraceConfigurationProperty | [[cdk.support/lookup-entry]] | `:trace-configuration` |
+| `traceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trace-configuration` |
 "
   [^CfnObservabilityConfiguration$Builder builder id config]
   (when-some [data (lookup-entry config id :observability-configuration-name)]
@@ -156,7 +156,7 @@
 |---|---|---|---|
 | `observabilityConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:observability-configuration-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `traceConfiguration` | software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration$TraceConfigurationProperty | [[cdk.support/lookup-entry]] | `:trace-configuration` |
+| `traceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trace-configuration` |
 "
   [^CfnObservabilityConfigurationProps$Builder builder id config]
   (when-some [data (lookup-entry config id :observability-configuration-name)]
@@ -249,12 +249,12 @@
 |---|---|---|---|
 | `autoScalingConfigurationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-configuration-arn` |
 | `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
-| `healthCheckConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$HealthCheckConfigurationProperty | [[cdk.support/lookup-entry]] | `:health-check-configuration` |
-| `instanceConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$InstanceConfigurationProperty | [[cdk.support/lookup-entry]] | `:instance-configuration` |
+| `healthCheckConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-configuration` |
+| `instanceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-configuration` |
 | `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
-| `observabilityConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$ServiceObservabilityConfigurationProperty | [[cdk.support/lookup-entry]] | `:observability-configuration` |
+| `observabilityConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:observability-configuration` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
-| `sourceConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$SourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-configuration` |
+| `sourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnService$Builder builder id config]
@@ -333,8 +333,8 @@
 | `buildCommand` | java.lang.String | [[cdk.support/lookup-entry]] | `:build-command` |
 | `port` | java.lang.String | [[cdk.support/lookup-entry]] | `:port` |
 | `runtime` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime` |
-| `runtimeEnvironmentSecrets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-environment-secrets` |
-| `runtimeEnvironmentVariables` | java.util.List | [[cdk.support/lookup-entry]] | `:runtime-environment-variables` |
+| `runtimeEnvironmentSecrets` | java.util.List | [[cdk.support/lookup-entry]] | `:runtime-environment-secrets` |
+| `runtimeEnvironmentVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-environment-variables` |
 | `startCommand` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-command` |
 "
   [^CfnService$CodeConfigurationValuesProperty$Builder builder id config]
@@ -375,7 +375,7 @@
 |---|---|---|---|
 | `codeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-configuration` |
 | `repositoryUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-url` |
-| `sourceCodeVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-code-version` |
+| `sourceCodeVersion` | software.amazon.awscdk.services.apprunner.CfnService$SourceCodeVersionProperty | [[cdk.support/lookup-entry]] | `:source-code-version` |
 | `sourceDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-directory` |
 "
   [^CfnService$CodeRepositoryProperty$Builder builder id config]
@@ -513,7 +513,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.String | [[cdk.support/lookup-entry]] | `:port` |
-| `runtimeEnvironmentSecrets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:runtime-environment-secrets` |
+| `runtimeEnvironmentSecrets` | java.util.List | [[cdk.support/lookup-entry]] | `:runtime-environment-secrets` |
 | `runtimeEnvironmentVariables` | java.util.List | [[cdk.support/lookup-entry]] | `:runtime-environment-variables` |
 | `startCommand` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-command` |
 "
@@ -583,7 +583,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `isPubliclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-publicly-accessible` |
+| `isPubliclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-publicly-accessible` |
 "
   [^CfnService$IngressConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :is-publicly-accessible)]
@@ -676,7 +676,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `egressConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$EgressConfigurationProperty | [[cdk.support/lookup-entry]] | `:egress-configuration` |
+| `egressConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:egress-configuration` |
 | `ingressConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$IngressConfigurationProperty | [[cdk.support/lookup-entry]] | `:ingress-configuration` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
 "
@@ -711,7 +711,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoScalingConfigurationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:auto-scaling-configuration-arn` |
-| `encryptionConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$EncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
+| `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `healthCheckConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-configuration` |
 | `instanceConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$InstanceConfigurationProperty | [[cdk.support/lookup-entry]] | `:instance-configuration` |
 | `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
@@ -763,7 +763,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `observabilityConfigurationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:observability-configuration-arn` |
-| `observabilityEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:observability-enabled` |
+| `observabilityEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:observability-enabled` |
 "
   [^CfnService$ServiceObservabilityConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :observability-configuration-arn)]
@@ -824,7 +824,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `authenticationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
+| `authenticationConfiguration` | software.amazon.awscdk.services.apprunner.CfnService$AuthenticationConfigurationProperty | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
 | `autoDeploymentsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-deployments-enabled` |
 | `codeRepository` | software.amazon.awscdk.services.apprunner.CfnService$CodeRepositoryProperty | [[cdk.support/lookup-entry]] | `:code-repository` |
 | `imageRepository` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-repository` |

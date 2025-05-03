@@ -73,7 +73,7 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `versionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-name` |
 | `volumeKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-kms-key-id` |
-| `vpcConfig` | software.amazon.awscdk.services.comprehend.CfnDocumentClassifier$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnDocumentClassifier$Builder builder id config]
   (when-some [data (lookup-entry config id :data-access-role-arn)]
@@ -158,7 +158,7 @@
 | `dataFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-format` |
 | `documentReaderConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-reader-config` |
 | `documentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-type` |
-| `documents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:documents` |
+| `documents` | software.amazon.awscdk.services.comprehend.CfnDocumentClassifier$DocumentClassifierDocumentsProperty | [[cdk.support/lookup-entry]] | `:documents` |
 | `labelDelimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:label-delimiter` |
 | `s3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-uri` |
 | `testS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:test-s3-uri` |
@@ -275,7 +275,7 @@
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 | `modelKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-kms-key-id` |
 | `modelPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-policy` |
-| `outputDataConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-data-config` |
+| `outputDataConfig` | software.amazon.awscdk.services.comprehend.CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty | [[cdk.support/lookup-entry]] | `:output-data-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `versionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-name` |
 | `volumeKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-kms-key-id` |
@@ -367,7 +367,7 @@
 | `flywheelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:flywheel-name` |
 | `modelType` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `taskConfig` | software.amazon.awscdk.services.comprehend.CfnFlywheel$TaskConfigProperty | [[cdk.support/lookup-entry]] | `:task-config` |
+| `taskConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-config` |
 "
   [^CfnFlywheel$Builder builder id config]
   (when-some [data (lookup-entry config id :active-model-arn)]
@@ -412,7 +412,7 @@
 | `dataLakeKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-lake-kms-key-id` |
 | `modelKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-kms-key-id` |
 | `volumeKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-kms-key-id` |
-| `vpcConfig` | software.amazon.awscdk.services.comprehend.CfnFlywheel$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnFlywheel$DataSecurityConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :data-lake-kms-key-id)]
@@ -536,7 +536,7 @@
 | `activeModelArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:active-model-arn` |
 | `dataAccessRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-access-role-arn` |
 | `dataLakeS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-lake-s3-uri` |
-| `dataSecurityConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-security-config` |
+| `dataSecurityConfig` | software.amazon.awscdk.services.comprehend.CfnFlywheel$DataSecurityConfigProperty | [[cdk.support/lookup-entry]] | `:data-security-config` |
 | `flywheelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:flywheel-name` |
 | `modelType` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -583,7 +583,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `documentClassificationConfig` | software.amazon.awscdk.services.comprehend.CfnFlywheel$DocumentClassificationConfigProperty | [[cdk.support/lookup-entry]] | `:document-classification-config` |
-| `entityRecognitionConfig` | software.amazon.awscdk.services.comprehend.CfnFlywheel$EntityRecognitionConfigProperty | [[cdk.support/lookup-entry]] | `:entity-recognition-config` |
+| `entityRecognitionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:entity-recognition-config` |
 | `languageCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-code` |
 "
   [^CfnFlywheel$TaskConfigProperty$Builder builder id config]

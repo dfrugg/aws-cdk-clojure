@@ -71,7 +71,7 @@
 | `evaluationPeriods` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-periods` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `monitoredResourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitored-resource-name` |
-| `notificationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notification-enabled` |
+| `notificationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-enabled` |
 | `notificationTriggers` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-triggers` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
 | `treatMissingData` | java.lang.String | [[cdk.support/lookup-entry]] | `:treat-missing-data` |
@@ -129,7 +129,7 @@
 | `evaluationPeriods` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-periods` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `monitoredResourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:monitored-resource-name` |
-| `notificationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:notification-enabled` |
+| `notificationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-enabled` |
 | `notificationTriggers` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-triggers` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
 | `treatMissingData` | java.lang.String | [[cdk.support/lookup-entry]] | `:treat-missing-data` |
@@ -180,7 +180,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowPublicOverrides` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-public-overrides` |
+| `allowPublicOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-public-overrides` |
 | `objectAccess` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-access` |
 "
   [^CfnBucket$AccessRulesProperty$Builder builder id config]
@@ -211,7 +211,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessRules` | software.amazon.awscdk.services.lightsail.CfnBucket$AccessRulesProperty | [[cdk.support/lookup-entry]] | `:access-rules` |
+| `accessRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-rules` |
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
 | `objectVersioning` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:object-versioning` |
@@ -260,7 +260,7 @@
 | `accessRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-rules` |
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
-| `objectVersioning` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:object-versioning` |
+| `objectVersioning` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-versioning` |
 | `readOnlyAccessAccounts` | java.util.List | [[cdk.support/lookup-entry]] | `:read-only-access-accounts` |
 | `resourcesReceivingAccess` | java.util.List | [[cdk.support/lookup-entry]] | `:resources-receiving-access` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -378,9 +378,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerServiceDeployment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-service-deployment` |
-| `isDisabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-disabled` |
+| `isDisabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-disabled` |
 | `power` | java.lang.String | [[cdk.support/lookup-entry]] | `:power` |
-| `privateRegistryAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-registry-access` |
+| `privateRegistryAccess` | software.amazon.awscdk.services.lightsail.CfnContainer$PrivateRegistryAccessProperty | [[cdk.support/lookup-entry]] | `:private-registry-access` |
 | `publicDomainNames` | java.util.List | [[cdk.support/lookup-entry]] | `:public-domain-names` |
 | `scale` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
@@ -466,7 +466,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:containers` |
+| `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
 | `publicEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:public-endpoint` |
 "
   [^CfnContainer$ContainerServiceDeploymentProperty$Builder builder id config]
@@ -497,7 +497,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `isActive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-active` |
+| `isActive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-active` |
 | `principalArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:principal-arn` |
 "
   [^CfnContainer$EcrImagePullerRoleProperty$Builder builder id config]
@@ -633,7 +633,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ecrImagePullerRole` | software.amazon.awscdk.services.lightsail.CfnContainer$EcrImagePullerRoleProperty | [[cdk.support/lookup-entry]] | `:ecr-image-puller-role` |
+| `ecrImagePullerRole` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ecr-image-puller-role` |
 "
   [^CfnContainer$PrivateRegistryAccessProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :ecr-image-puller-role)]
@@ -661,11 +661,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `containerServiceDeployment` | software.amazon.awscdk.services.lightsail.CfnContainer$ContainerServiceDeploymentProperty | [[cdk.support/lookup-entry]] | `:container-service-deployment` |
-| `isDisabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-disabled` |
+| `containerServiceDeployment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-service-deployment` |
+| `isDisabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-disabled` |
 | `power` | java.lang.String | [[cdk.support/lookup-entry]] | `:power` |
-| `privateRegistryAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:private-registry-access` |
-| `publicDomainNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:public-domain-names` |
+| `privateRegistryAccess` | software.amazon.awscdk.services.lightsail.CfnContainer$PrivateRegistryAccessProperty | [[cdk.support/lookup-entry]] | `:private-registry-access` |
+| `publicDomainNames` | java.util.List | [[cdk.support/lookup-entry]] | `:public-domain-names` |
 | `scale` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -743,7 +743,7 @@
 |---|---|---|---|
 | `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
 | `containerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:container-port` |
-| `healthCheckConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-config` |
+| `healthCheckConfig` | software.amazon.awscdk.services.lightsail.CfnContainer$HealthCheckConfigProperty | [[cdk.support/lookup-entry]] | `:health-check-config` |
 "
   [^CfnContainer$PublicEndpointProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :container-name)]
@@ -776,19 +776,19 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `backupRetention` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backup-retention` |
+| `backupRetention` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:backup-retention` |
 | `caCertificateIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificate-identifier` |
 | `masterDatabaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-database-name` |
 | `masterUserPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-user-password` |
 | `masterUsername` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-username` |
 | `preferredBackupWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-backup-window` |
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
-| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `relationalDatabaseBlueprintId` | java.lang.String | [[cdk.support/lookup-entry]] | `:relational-database-blueprint-id` |
 | `relationalDatabaseBundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:relational-database-bundle-id` |
 | `relationalDatabaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:relational-database-name` |
 | `relationalDatabaseParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:relational-database-parameters` |
-| `rotateMasterUserPassword` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rotate-master-user-password` |
+| `rotateMasterUserPassword` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-master-user-password` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatabase$Builder builder id config]
@@ -965,7 +965,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `addOnType` | java.lang.String | [[cdk.support/lookup-entry]] | `:add-on-type` |
-| `autoSnapshotAddOnRequest` | software.amazon.awscdk.services.lightsail.CfnDisk$AutoSnapshotAddOnProperty | [[cdk.support/lookup-entry]] | `:auto-snapshot-add-on-request` |
+| `autoSnapshotAddOnRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-snapshot-add-on-request` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnDisk$AddOnProperty$Builder builder id config]
@@ -1103,7 +1103,7 @@
 | `addOns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:add-ons` |
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `diskName` | java.lang.String | [[cdk.support/lookup-entry]] | `:disk-name` |
-| `location` | software.amazon.awscdk.services.lightsail.CfnDisk$LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
+| `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
 | `sizeInGb` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-gb` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1144,14 +1144,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
-| `cacheBehaviorSettings` | software.amazon.awscdk.services.lightsail.CfnDistribution$CacheSettingsProperty | [[cdk.support/lookup-entry]] | `:cache-behavior-settings` |
+| `cacheBehaviorSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-behavior-settings` |
 | `cacheBehaviors` | java.util.List | [[cdk.support/lookup-entry]] | `:cache-behaviors` |
 | `certificateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-name` |
 | `defaultCacheBehavior` | software.amazon.awscdk.services.lightsail.CfnDistribution$CacheBehaviorProperty | [[cdk.support/lookup-entry]] | `:default-cache-behavior` |
 | `distributionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:distribution-name` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
-| `isEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-enabled` |
-| `origin` | software.amazon.awscdk.services.lightsail.CfnDistribution$InputOriginProperty | [[cdk.support/lookup-entry]] | `:origin` |
+| `isEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-enabled` |
+| `origin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDistribution$Builder builder id config]
@@ -1403,13 +1403,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
-| `cacheBehaviorSettings` | software.amazon.awscdk.services.lightsail.CfnDistribution$CacheSettingsProperty | [[cdk.support/lookup-entry]] | `:cache-behavior-settings` |
+| `cacheBehaviorSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-behavior-settings` |
 | `cacheBehaviors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-behaviors` |
 | `certificateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-name` |
-| `defaultCacheBehavior` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-cache-behavior` |
+| `defaultCacheBehavior` | software.amazon.awscdk.services.lightsail.CfnDistribution$CacheBehaviorProperty | [[cdk.support/lookup-entry]] | `:default-cache-behavior` |
 | `distributionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:distribution-name` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
-| `isEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-enabled` |
+| `isEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-enabled` |
 | `origin` | software.amazon.awscdk.services.lightsail.CfnDistribution$InputOriginProperty | [[cdk.support/lookup-entry]] | `:origin` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1489,7 +1489,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `addOnType` | java.lang.String | [[cdk.support/lookup-entry]] | `:add-on-type` |
-| `autoSnapshotAddOnRequest` | software.amazon.awscdk.services.lightsail.CfnInstance$AutoSnapshotAddOnProperty | [[cdk.support/lookup-entry]] | `:auto-snapshot-add-on-request` |
+| `autoSnapshotAddOnRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-snapshot-add-on-request` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnInstance$AddOnProperty$Builder builder id config]
@@ -1554,12 +1554,12 @@
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `blueprintId` | java.lang.String | [[cdk.support/lookup-entry]] | `:blueprint-id` |
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
-| `hardware` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hardware` |
+| `hardware` | software.amazon.awscdk.services.lightsail.CfnInstance$HardwareProperty | [[cdk.support/lookup-entry]] | `:hardware` |
 | `instanceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-name` |
 | `keyPairName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-pair-name` |
 | `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
-| `networking` | software.amazon.awscdk.services.lightsail.CfnInstance$NetworkingProperty | [[cdk.support/lookup-entry]] | `:networking` |
-| `state` | software.amazon.awscdk.services.lightsail.CfnInstance$StateProperty | [[cdk.support/lookup-entry]] | `:state` |
+| `networking` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:networking` |
+| `state` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:state` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userData` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-data` |
 "
@@ -1615,7 +1615,7 @@
 | `attachmentState` | java.lang.String | [[cdk.support/lookup-entry]] | `:attachment-state` |
 | `diskName` | java.lang.String | [[cdk.support/lookup-entry]] | `:disk-name` |
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
-| `isSystemDisk` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-system-disk` |
+| `isSystemDisk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-system-disk` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `sizeInGb` | java.lang.String | [[cdk.support/lookup-entry]] | `:size-in-gb` |
 "
@@ -1750,8 +1750,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `monthlyTransfer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monthly-transfer` |
-| `ports` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ports` |
+| `monthlyTransfer` | software.amazon.awscdk.services.lightsail.CfnInstance$MonthlyTransferProperty | [[cdk.support/lookup-entry]] | `:monthly-transfer` |
+| `ports` | java.util.List | [[cdk.support/lookup-entry]] | `:ports` |
 "
   [^CfnInstance$NetworkingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :monthly-transfer)]
@@ -1840,7 +1840,7 @@
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `blueprintId` | java.lang.String | [[cdk.support/lookup-entry]] | `:blueprint-id` |
 | `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
-| `hardware` | software.amazon.awscdk.services.lightsail.CfnInstance$HardwareProperty | [[cdk.support/lookup-entry]] | `:hardware` |
+| `hardware` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hardware` |
 | `instanceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-name` |
 | `keyPairName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-pair-name` |
 | `location` | software.amazon.awscdk.services.lightsail.CfnInstance$LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
@@ -1933,7 +1933,7 @@
 | `instancePort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-port` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
-| `sessionStickinessEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-stickiness-enabled` |
+| `sessionStickinessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:session-stickiness-enabled` |
 | `sessionStickinessLbCookieDurationSeconds` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-stickiness-lb-cookie-duration-seconds` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tlsPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:tls-policy-name` |
@@ -1985,7 +1985,7 @@
 | `instancePort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-port` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
-| `sessionStickinessEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-stickiness-enabled` |
+| `sessionStickinessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:session-stickiness-enabled` |
 | `sessionStickinessLbCookieDurationSeconds` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-stickiness-lb-cookie-duration-seconds` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `tlsPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:tls-policy-name` |
@@ -2035,7 +2035,7 @@
 | `certificateAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-alternative-names` |
 | `certificateDomainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-domain-name` |
 | `certificateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-name` |
-| `httpsRedirectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:https-redirection-enabled` |
+| `httpsRedirectionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:https-redirection-enabled` |
 | `isAttached` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-attached` |
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
 "

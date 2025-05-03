@@ -20,11 +20,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `activate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:activate` |
+| `activate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:activate` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameterObjects` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-objects` |
-| `parameterValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-values` |
+| `parameterObjects` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-objects` |
+| `parameterValues` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-values` |
 | `pipelineObjects` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-objects` |
 | `pipelineTags` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-tags` |
 "
@@ -131,7 +131,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 "
   [^CfnPipeline$ParameterObjectProperty$Builder builder id config]
@@ -193,7 +193,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `fields` | java.util.List | [[cdk.support/lookup-entry]] | `:fields` |
+| `fields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fields` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
@@ -261,8 +261,8 @@
 | `activate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:activate` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameterObjects` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-objects` |
-| `parameterValues` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-values` |
+| `parameterObjects` | java.util.List | [[cdk.support/lookup-entry]] | `:parameter-objects` |
+| `parameterValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameter-values` |
 | `pipelineObjects` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pipeline-objects` |
 | `pipelineTags` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-tags` |
 "

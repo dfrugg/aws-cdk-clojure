@@ -423,11 +423,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `category` | java.lang.String | [[cdk.support/lookup-entry]] | `:category` |
-| `configurationProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-properties` |
+| `configurationProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:configuration-properties` |
 | `inputArtifactDetails` | software.amazon.awscdk.services.codepipeline.CfnCustomActionType$ArtifactDetailsProperty | [[cdk.support/lookup-entry]] | `:input-artifact-details` |
-| `outputArtifactDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-artifact-details` |
+| `outputArtifactDetails` | software.amazon.awscdk.services.codepipeline.CfnCustomActionType$ArtifactDetailsProperty | [[cdk.support/lookup-entry]] | `:output-artifact-details` |
 | `provider` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider` |
-| `settings` | software.amazon.awscdk.services.codepipeline.CfnCustomActionType$SettingsProperty | [[cdk.support/lookup-entry]] | `:settings` |
+| `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
@@ -472,11 +472,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `key` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:key` |
+| `key` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `queryable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:queryable` |
-| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
-| `secret` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:secret` |
+| `required` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:required` |
+| `secret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secret` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnCustomActionType$ConfigurationPropertiesProperty$Builder builder id config]
@@ -518,9 +518,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `category` | java.lang.String | [[cdk.support/lookup-entry]] | `:category` |
-| `configurationProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:configuration-properties` |
-| `inputArtifactDetails` | software.amazon.awscdk.services.codepipeline.CfnCustomActionType$ArtifactDetailsProperty | [[cdk.support/lookup-entry]] | `:input-artifact-details` |
-| `outputArtifactDetails` | software.amazon.awscdk.services.codepipeline.CfnCustomActionType$ArtifactDetailsProperty | [[cdk.support/lookup-entry]] | `:output-artifact-details` |
+| `configurationProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration-properties` |
+| `inputArtifactDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-artifact-details` |
+| `outputArtifactDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-artifact-details` |
 | `provider` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider` |
 | `settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:settings` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -603,12 +603,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actionTypeId` | software.amazon.awscdk.services.codepipeline.CfnPipeline$ActionTypeIdProperty | [[cdk.support/lookup-entry]] | `:action-type-id` |
+| `actionTypeId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action-type-id` |
 | `configuration` | java.lang.Object | [[cdk.support/lookup-entry]] | `:configuration` |
-| `inputArtifacts` | java.util.List | [[cdk.support/lookup-entry]] | `:input-artifacts` |
+| `inputArtifacts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-artifacts` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
-| `outputArtifacts` | java.util.List | [[cdk.support/lookup-entry]] | `:output-artifacts` |
+| `outputArtifacts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-artifacts` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
@@ -695,7 +695,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `artifactStore` | software.amazon.awscdk.services.codepipeline.CfnPipeline$ArtifactStoreProperty | [[cdk.support/lookup-entry]] | `:artifact-store` |
+| `artifactStore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:artifact-store` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^CfnPipeline$ArtifactStoreMapProperty$Builder builder id config]
@@ -726,7 +726,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `encryptionKey` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-key` |
+| `encryptionKey` | software.amazon.awscdk.services.codepipeline.CfnPipeline$EncryptionKeyProperty | [[cdk.support/lookup-entry]] | `:encryption-key` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -791,17 +791,17 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `artifactStore` | software.amazon.awscdk.services.codepipeline.CfnPipeline$ArtifactStoreProperty | [[cdk.support/lookup-entry]] | `:artifact-store` |
-| `artifactStores` | java.util.List | [[cdk.support/lookup-entry]] | `:artifact-stores` |
-| `disableInboundStageTransitions` | java.util.List | [[cdk.support/lookup-entry]] | `:disable-inbound-stage-transitions` |
+| `artifactStore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:artifact-store` |
+| `artifactStores` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:artifact-stores` |
+| `disableInboundStageTransitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-inbound-stage-transitions` |
 | `executionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-mode` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `pipelineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-type` |
 | `restartExecutionOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:restart-execution-on-update` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stages` | java.util.List | [[cdk.support/lookup-entry]] | `:stages` |
+| `stages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stages` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |
+| `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |
 | `variables` | java.util.List | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnPipeline$Builder builder id config]
@@ -942,8 +942,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pullRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pull-request` |
-| `push` | java.util.List | [[cdk.support/lookup-entry]] | `:push` |
+| `pullRequest` | java.util.List | [[cdk.support/lookup-entry]] | `:pull-request` |
+| `push` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:push` |
 | `sourceActionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-action-name` |
 "
   [^CfnPipeline$GitConfigurationProperty$Builder builder id config]
@@ -1009,7 +1009,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `branches` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:branches` |
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `filePaths` | software.amazon.awscdk.services.codepipeline.CfnPipeline$GitFilePathFilterCriteriaProperty | [[cdk.support/lookup-entry]] | `:file-paths` |
+| `filePaths` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file-paths` |
 "
   [^CfnPipeline$GitPullRequestFilterProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :branches)]
@@ -1162,7 +1162,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `gitConfiguration` | software.amazon.awscdk.services.codepipeline.CfnPipeline$GitConfigurationProperty | [[cdk.support/lookup-entry]] | `:git-configuration` |
+| `gitConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:git-configuration` |
 | `providerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-type` |
 "
   [^CfnPipeline$PipelineTriggerDeclarationProperty$Builder builder id config]
@@ -1194,12 +1194,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `artifactStore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:artifact-store` |
-| `artifactStores` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:artifact-stores` |
+| `artifactStores` | java.util.List | [[cdk.support/lookup-entry]] | `:artifact-stores` |
 | `disableInboundStageTransitions` | java.util.List | [[cdk.support/lookup-entry]] | `:disable-inbound-stage-transitions` |
 | `executionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-mode` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `pipelineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-type` |
-| `restartExecutionOnUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restart-execution-on-update` |
+| `restartExecutionOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:restart-execution-on-update` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `stages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stages` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1257,7 +1257,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `blockers` | java.util.List | [[cdk.support/lookup-entry]] | `:blockers` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `onFailure` | software.amazon.awscdk.services.codepipeline.CfnPipeline$FailureConditionsProperty | [[cdk.support/lookup-entry]] | `:on-failure` |
+| `onFailure` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-failure` |
 "
   [^CfnPipeline$StageDeclarationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :actions)]
@@ -1357,10 +1357,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authentication` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication` |
-| `authenticationConfiguration` | software.amazon.awscdk.services.codepipeline.CfnWebhook$WebhookAuthConfigurationProperty | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
-| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
+| `authenticationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `registerWithThirdParty` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:register-with-third-party` |
+| `registerWithThirdParty` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:register-with-third-party` |
 | `targetAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-action` |
 | `targetPipeline` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-pipeline` |
 | `targetPipelineVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-pipeline-version` |
@@ -1409,7 +1409,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `authenticationConfiguration` | software.amazon.awscdk.services.codepipeline.CfnWebhook$WebhookAuthConfigurationProperty | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
 | `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `registerWithThirdParty` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:register-with-third-party` |
+| `registerWithThirdParty` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:register-with-third-party` |
 | `targetAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-action` |
 | `targetPipeline` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-pipeline` |
 | `targetPipelineVersion` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-pipeline-version` |

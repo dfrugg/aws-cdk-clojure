@@ -168,7 +168,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `serverSideEncryptionConfiguration` | software.amazon.awscdk.services.wisdom.CfnAssistant$ServerSideEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
+| `serverSideEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -268,7 +268,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `knowledgeBaseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:knowledge-base-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `renderingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-configuration` |
+| `renderingConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$RenderingConfigurationProperty | [[cdk.support/lookup-entry]] | `:rendering-configuration` |
 | `serverSideEncryptionConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `sourceConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$SourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -314,8 +314,8 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `knowledgeBaseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:knowledge-base-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `renderingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-configuration` |
-| `serverSideEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
+| `renderingConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$RenderingConfigurationProperty | [[cdk.support/lookup-entry]] | `:rendering-configuration` |
+| `serverSideEncryptionConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `sourceConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$SourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -413,7 +413,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `appIntegrations` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$AppIntegrationsConfigurationProperty | [[cdk.support/lookup-entry]] | `:app-integrations` |
+| `appIntegrations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:app-integrations` |
 "
   [^CfnKnowledgeBase$SourceConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :app-integrations)]

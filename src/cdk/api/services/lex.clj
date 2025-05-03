@@ -202,7 +202,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `botAliasLocaleSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-alias-locale-setting` |
+| `botAliasLocaleSetting` | software.amazon.awscdk.services.lex.CfnBotAlias$BotAliasLocaleSettingsProperty | [[cdk.support/lookup-entry]] | `:bot-alias-locale-setting` |
 | `localeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:locale-id` |
 "
   [^CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder builder id config]
@@ -266,10 +266,10 @@
 |---|---|---|---|
 | `botAliasLocaleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-alias-locale-settings` |
 | `botAliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-alias-name` |
-| `botAliasTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-alias-tags` |
+| `botAliasTags` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-alias-tags` |
 | `botId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-id` |
 | `botVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-version` |
-| `conversationLogSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conversation-log-settings` |
+| `conversationLogSettings` | software.amazon.awscdk.services.lex.CfnBotAlias$ConversationLogSettingsProperty | [[cdk.support/lookup-entry]] | `:conversation-log-settings` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `sentimentAnalysisSettings` | java.lang.Object | [[cdk.support/lookup-entry]] | `:sentiment-analysis-settings` |
 "
@@ -344,7 +344,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `lambdaCodeHook` | software.amazon.awscdk.services.lex.CfnBotAlias$LambdaCodeHookProperty | [[cdk.support/lookup-entry]] | `:lambda-code-hook` |
+| `lambdaCodeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-code-hook` |
 "
   [^CfnBotAlias$CodeHookSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :lambda-code-hook)]
@@ -436,7 +436,7 @@
 |---|---|---|---|
 | `botAliasLocaleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-alias-locale-settings` |
 | `botAliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-alias-name` |
-| `botAliasTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-alias-tags` |
+| `botAliasTags` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-alias-tags` |
 | `botId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-id` |
 | `botVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-version` |
 | `conversationLogSettings` | software.amazon.awscdk.services.lex.CfnBotAlias$ConversationLogSettingsProperty | [[cdk.support/lookup-entry]] | `:conversation-log-settings` |
@@ -517,7 +517,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `detectSentiment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:detect-sentiment` |
+| `detectSentiment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:detect-sentiment` |
 "
   [^CfnBotAlias$SentimentAnalysisSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :detect-sentiment)]
@@ -545,7 +545,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatch` | software.amazon.awscdk.services.lex.CfnBotAlias$CloudWatchLogGroupLogDestinationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch` |
+| `cloudWatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch` |
 "
   [^CfnBotAlias$TextLogDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch)]
@@ -574,7 +574,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destination` | software.amazon.awscdk.services.lex.CfnBotAlias$TextLogDestinationProperty | [[cdk.support/lookup-entry]] | `:destination` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBotAlias$TextLogSettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :destination)]
@@ -604,8 +604,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowAudioInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-audio-input` |
-| `allowDtmfInput` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-dtmf-input` |
+| `allowAudioInput` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-audio-input` |
+| `allowDtmfInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-dtmf-input` |
 "
   [^CfnBot$AllowedInputTypesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allow-audio-input)]
@@ -635,7 +635,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `audioSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-specification` |
+| `audioSpecification` | software.amazon.awscdk.services.lex.CfnBot$AudioSpecificationProperty | [[cdk.support/lookup-entry]] | `:audio-specification` |
 | `dtmfSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dtmf-specification` |
 | `startTimeoutMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-timeout-ms` |
 "
@@ -759,7 +759,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `botAliasLocaleSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-alias-locale-setting` |
+| `botAliasLocaleSetting` | software.amazon.awscdk.services.lex.CfnBot$BotAliasLocaleSettingsProperty | [[cdk.support/lookup-entry]] | `:bot-alias-locale-setting` |
 | `localeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:locale-id` |
 "
   [^CfnBot$BotAliasLocaleSettingsItemProperty$Builder builder id config]
@@ -790,7 +790,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `codeHookSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-hook-specification` |
+| `codeHookSpecification` | software.amazon.awscdk.services.lex.CfnBot$CodeHookSpecificationProperty | [[cdk.support/lookup-entry]] | `:code-hook-specification` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBot$BotAliasLocaleSettingsProperty$Builder builder id config]
@@ -868,8 +868,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoBuildBotLocales` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-build-bot-locales` |
-| `botFileS3Location` | software.amazon.awscdk.services.lex.CfnBot$S3LocationProperty | [[cdk.support/lookup-entry]] | `:bot-file-s3-location` |
-| `botLocales` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-locales` |
+| `botFileS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-file-s3-location` |
+| `botLocales` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-locales` |
 | `botTags` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-tags` |
 | `dataPrivacy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:data-privacy` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -877,7 +877,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `testBotAliasSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:test-bot-alias-settings` |
-| `testBotAliasTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:test-bot-alias-tags` |
+| `testBotAliasTags` | java.util.List | [[cdk.support/lookup-entry]] | `:test-bot-alias-tags` |
 "
   [^CfnBot$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-build-bot-locales)]
@@ -1045,7 +1045,7 @@
 |---|---|---|---|
 | `condition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:condition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `nextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:next-step` |
+| `nextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:next-step` |
 | `response` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:response` |
 "
   [^CfnBot$ConditionalBranchProperty$Builder builder id config]
@@ -1081,8 +1081,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `conditionalBranches` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional-branches` |
-| `defaultBranch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-branch` |
-| `isActive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-active` |
+| `defaultBranch` | software.amazon.awscdk.services.lex.CfnBot$DefaultConditionalBranchProperty | [[cdk.support/lookup-entry]] | `:default-branch` |
+| `isActive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-active` |
 "
   [^CfnBot$ConditionalSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :conditional-branches)]
@@ -1114,8 +1114,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `audioLogSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:audio-log-settings` |
-| `textLogSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-log-settings` |
+| `audioLogSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-log-settings` |
+| `textLogSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:text-log-settings` |
 "
   [^CfnBot$ConversationLogSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :audio-log-settings)]
@@ -1207,7 +1207,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customVocabularyItems` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-vocabulary-items` |
+| `customVocabularyItems` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-vocabulary-items` |
 "
   [^CfnBot$CustomVocabularyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-vocabulary-items)]
@@ -1235,7 +1235,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `childDirected` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:child-directed` |
+| `childDirected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:child-directed` |
 "
   [^CfnBot$DataPrivacyProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :child-directed)]
@@ -1264,7 +1264,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `nextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:next-step` |
-| `response` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:response` |
+| `response` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response` |
 "
   [^CfnBot$DefaultConditionalBranchProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :next-step)]
@@ -1365,7 +1365,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBot$DialogCodeHookSettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -1393,9 +1393,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dialogAction` | software.amazon.awscdk.services.lex.CfnBot$DialogActionProperty | [[cdk.support/lookup-entry]] | `:dialog-action` |
+| `dialogAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dialog-action` |
 | `intent` | software.amazon.awscdk.services.lex.CfnBot$IntentOverrideProperty | [[cdk.support/lookup-entry]] | `:intent` |
-| `sessionAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-attributes` |
+| `sessionAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:session-attributes` |
 "
   [^CfnBot$DialogStateProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dialog-action)]
@@ -1464,7 +1464,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableCodeHookInvocation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-code-hook-invocation` |
+| `enableCodeHookInvocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-code-hook-invocation` |
 | `invocationLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:invocation-label` |
 "
   [^CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder builder id config]
@@ -1523,9 +1523,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `fulfillmentUpdatesSpecification` | software.amazon.awscdk.services.lex.CfnBot$FulfillmentUpdatesSpecificationProperty | [[cdk.support/lookup-entry]] | `:fulfillment-updates-specification` |
-| `isActive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-active` |
+| `isActive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-active` |
 | `postFulfillmentStatusSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:post-fulfillment-status-specification` |
 "
   [^CfnBot$FulfillmentCodeHookSettingProperty$Builder builder id config]
@@ -1560,7 +1560,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowInterrupt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-interrupt` |
+| `allowInterrupt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-interrupt` |
 | `delayInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:delay-in-seconds` |
 | `messageGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:message-groups` |
 "
@@ -1596,7 +1596,7 @@
 |---|---|---|---|
 | `allowInterrupt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-interrupt` |
 | `frequencyInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:frequency-in-seconds` |
-| `messageGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message-groups` |
+| `messageGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:message-groups` |
 "
   [^CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allow-interrupt)]
@@ -1628,7 +1628,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `active` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:active` |
+| `active` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:active` |
 | `startResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:start-response` |
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 | `updateResponse` | software.amazon.awscdk.services.lex.CfnBot$FulfillmentUpdateResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:update-response` |
@@ -1665,7 +1665,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
+| `source` | software.amazon.awscdk.services.lex.CfnBot$GrammarSlotTypeSourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnBot$GrammarSlotTypeSettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :source)]
@@ -1727,7 +1727,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `buttons` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:buttons` |
+| `buttons` | java.util.List | [[cdk.support/lookup-entry]] | `:buttons` |
 | `imageUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-url` |
 | `subtitle` | java.lang.String | [[cdk.support/lookup-entry]] | `:subtitle` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
@@ -1764,9 +1764,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `codeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-hook` |
-| `conditional` | software.amazon.awscdk.services.lex.CfnBot$ConditionalSpecificationProperty | [[cdk.support/lookup-entry]] | `:conditional` |
-| `initialResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-response` |
+| `codeHook` | software.amazon.awscdk.services.lex.CfnBot$DialogCodeHookInvocationSettingProperty | [[cdk.support/lookup-entry]] | `:code-hook` |
+| `conditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional` |
+| `initialResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:initial-response` |
 | `nextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:next-step` |
 "
   [^CfnBot$InitialResponseSettingProperty$Builder builder id config]
@@ -1832,7 +1832,7 @@
 | `closingResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:closing-response` |
 | `conditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditional` |
 | `isActive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-active` |
-| `nextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:next-step` |
+| `nextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:next-step` |
 "
   [^CfnBot$IntentClosingSettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :closing-response)]
@@ -1866,19 +1866,19 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `codeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-hook` |
+| `codeHook` | software.amazon.awscdk.services.lex.CfnBot$DialogCodeHookInvocationSettingProperty | [[cdk.support/lookup-entry]] | `:code-hook` |
 | `confirmationConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:confirmation-conditional` |
-| `confirmationNextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:confirmation-next-step` |
+| `confirmationNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:confirmation-next-step` |
 | `confirmationResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:confirmation-response` |
 | `declinationConditional` | software.amazon.awscdk.services.lex.CfnBot$ConditionalSpecificationProperty | [[cdk.support/lookup-entry]] | `:declination-conditional` |
-| `declinationNextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:declination-next-step` |
-| `declinationResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:declination-response` |
+| `declinationNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:declination-next-step` |
+| `declinationResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:declination-response` |
 | `elicitationCodeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elicitation-code-hook` |
-| `failureConditional` | software.amazon.awscdk.services.lex.CfnBot$ConditionalSpecificationProperty | [[cdk.support/lookup-entry]] | `:failure-conditional` |
+| `failureConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-conditional` |
 | `failureNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:failure-next-step` |
-| `failureResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:failure-response` |
-| `isActive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-active` |
-| `promptSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prompt-specification` |
+| `failureResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-response` |
+| `isActive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-active` |
+| `promptSpecification` | software.amazon.awscdk.services.lex.CfnBot$PromptSpecificationProperty | [[cdk.support/lookup-entry]] | `:prompt-specification` |
 "
   [^CfnBot$IntentConfirmationSettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :code-hook)]
@@ -1962,15 +1962,15 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `dialogCodeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dialog-code-hook` |
+| `dialogCodeHook` | software.amazon.awscdk.services.lex.CfnBot$DialogCodeHookSettingProperty | [[cdk.support/lookup-entry]] | `:dialog-code-hook` |
 | `fulfillmentCodeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fulfillment-code-hook` |
-| `initialResponseSetting` | software.amazon.awscdk.services.lex.CfnBot$InitialResponseSettingProperty | [[cdk.support/lookup-entry]] | `:initial-response-setting` |
-| `inputContexts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-contexts` |
+| `initialResponseSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:initial-response-setting` |
+| `inputContexts` | java.util.List | [[cdk.support/lookup-entry]] | `:input-contexts` |
 | `intentClosingSetting` | software.amazon.awscdk.services.lex.CfnBot$IntentClosingSettingProperty | [[cdk.support/lookup-entry]] | `:intent-closing-setting` |
 | `intentConfirmationSetting` | software.amazon.awscdk.services.lex.CfnBot$IntentConfirmationSettingProperty | [[cdk.support/lookup-entry]] | `:intent-confirmation-setting` |
-| `kendraConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kendra-configuration` |
+| `kendraConfiguration` | software.amazon.awscdk.services.lex.CfnBot$KendraConfigurationProperty | [[cdk.support/lookup-entry]] | `:kendra-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outputContexts` | java.util.List | [[cdk.support/lookup-entry]] | `:output-contexts` |
+| `outputContexts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-contexts` |
 | `parentIntentSignature` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-intent-signature` |
 | `sampleUtterances` | java.util.List | [[cdk.support/lookup-entry]] | `:sample-utterances` |
 | `slotPriorities` | java.util.List | [[cdk.support/lookup-entry]] | `:slot-priorities` |
@@ -2030,7 +2030,7 @@
 |---|---|---|---|
 | `kendraIndex` | java.lang.String | [[cdk.support/lookup-entry]] | `:kendra-index` |
 | `queryFilterString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-filter-string` |
-| `queryFilterStringEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:query-filter-string-enabled` |
+| `queryFilterStringEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-filter-string-enabled` |
 "
   [^CfnBot$KendraConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :kendra-index)]
@@ -2093,7 +2093,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `message` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message` |
+| `message` | software.amazon.awscdk.services.lex.CfnBot$MessageProperty | [[cdk.support/lookup-entry]] | `:message` |
 | `variations` | java.util.List | [[cdk.support/lookup-entry]] | `:variations` |
 "
   [^CfnBot$MessageGroupProperty$Builder builder id config]
@@ -2124,10 +2124,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customPayload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-payload` |
-| `imageResponseCard` | software.amazon.awscdk.services.lex.CfnBot$ImageResponseCardProperty | [[cdk.support/lookup-entry]] | `:image-response-card` |
+| `customPayload` | software.amazon.awscdk.services.lex.CfnBot$CustomPayloadProperty | [[cdk.support/lookup-entry]] | `:custom-payload` |
+| `imageResponseCard` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-response-card` |
 | `plainTextMessage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:plain-text-message` |
-| `ssmlMessage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssml-message` |
+| `ssmlMessage` | software.amazon.awscdk.services.lex.CfnBot$SSMLMessageProperty | [[cdk.support/lookup-entry]] | `:ssml-message` |
 "
   [^CfnBot$MessageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :custom-payload)]
@@ -2161,7 +2161,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowMultipleValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-multiple-values` |
+| `allowMultipleValues` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-multiple-values` |
 "
   [^CfnBot$MultipleValuesSettingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allow-multiple-values)]
@@ -2280,14 +2280,14 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `failureConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-conditional` |
-| `failureNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:failure-next-step` |
+| `failureNextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-next-step` |
 | `failureResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-response` |
 | `successConditional` | software.amazon.awscdk.services.lex.CfnBot$ConditionalSpecificationProperty | [[cdk.support/lookup-entry]] | `:success-conditional` |
 | `successNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:success-next-step` |
-| `successResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:success-response` |
-| `timeoutConditional` | software.amazon.awscdk.services.lex.CfnBot$ConditionalSpecificationProperty | [[cdk.support/lookup-entry]] | `:timeout-conditional` |
-| `timeoutNextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-next-step` |
-| `timeoutResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-response` |
+| `successResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:success-response` |
+| `timeoutConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-conditional` |
+| `timeoutNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:timeout-next-step` |
+| `timeoutResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:timeout-response` |
 "
   [^CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :failure-conditional)]
@@ -2333,13 +2333,13 @@
 |---|---|---|---|
 | `failureConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-conditional` |
 | `failureNextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-next-step` |
-| `failureResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:failure-response` |
+| `failureResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-response` |
 | `successConditional` | software.amazon.awscdk.services.lex.CfnBot$ConditionalSpecificationProperty | [[cdk.support/lookup-entry]] | `:success-conditional` |
 | `successNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:success-next-step` |
-| `successResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:success-response` |
+| `successResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:success-response` |
 | `timeoutConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-conditional` |
-| `timeoutNextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-next-step` |
-| `timeoutResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-response` |
+| `timeoutNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:timeout-next-step` |
+| `timeoutResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:timeout-response` |
 "
   [^CfnBot$PostFulfillmentStatusSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :failure-conditional)]
@@ -2384,8 +2384,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowInterrupt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-interrupt` |
-| `allowedInputTypes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowed-input-types` |
-| `audioAndDtmfInputSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audio-and-dtmf-input-specification` |
+| `allowedInputTypes` | software.amazon.awscdk.services.lex.CfnBot$AllowedInputTypesProperty | [[cdk.support/lookup-entry]] | `:allowed-input-types` |
+| `audioAndDtmfInputSpecification` | software.amazon.awscdk.services.lex.CfnBot$AudioAndDTMFInputSpecificationProperty | [[cdk.support/lookup-entry]] | `:audio-and-dtmf-input-specification` |
 | `textInputSpecification` | software.amazon.awscdk.services.lex.CfnBot$TextInputSpecificationProperty | [[cdk.support/lookup-entry]] | `:text-input-specification` |
 "
   [^CfnBot$PromptAttemptSpecificationProperty$Builder builder id config]
@@ -2424,7 +2424,7 @@
 | `maxRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-retries` |
 | `messageGroupsList` | java.util.List | [[cdk.support/lookup-entry]] | `:message-groups-list` |
 | `messageSelectionStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-selection-strategy` |
-| `promptAttemptsSpecification` | java.util.Map | [[cdk.support/lookup-entry]] | `:prompt-attempts-specification` |
+| `promptAttemptsSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prompt-attempts-specification` |
 "
   [^CfnBot$PromptSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allow-interrupt)]
@@ -2461,8 +2461,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoBuildBotLocales` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-build-bot-locales` |
-| `botFileS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-file-s3-location` |
-| `botLocales` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-locales` |
+| `botFileS3Location` | software.amazon.awscdk.services.lex.CfnBot$S3LocationProperty | [[cdk.support/lookup-entry]] | `:bot-file-s3-location` |
+| `botLocales` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-locales` |
 | `botTags` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-tags` |
 | `dataPrivacy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:data-privacy` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -2519,7 +2519,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowInterrupt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-interrupt` |
-| `messageGroupsList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message-groups-list` |
+| `messageGroupsList` | java.util.List | [[cdk.support/lookup-entry]] | `:message-groups-list` |
 "
   [^CfnBot$ResponseSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allow-interrupt)]
@@ -2673,7 +2673,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `detectSentiment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:detect-sentiment` |
+| `detectSentiment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:detect-sentiment` |
 "
   [^CfnBot$SentimentAnalysisSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :detect-sentiment)]
@@ -2733,10 +2733,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `captureConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capture-conditional` |
-| `captureNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:capture-next-step` |
+| `captureNextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capture-next-step` |
 | `captureResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:capture-response` |
-| `codeHook` | software.amazon.awscdk.services.lex.CfnBot$DialogCodeHookInvocationSettingProperty | [[cdk.support/lookup-entry]] | `:code-hook` |
-| `elicitationCodeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elicitation-code-hook` |
+| `codeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-hook` |
+| `elicitationCodeHook` | software.amazon.awscdk.services.lex.CfnBot$ElicitationCodeHookInvocationSettingProperty | [[cdk.support/lookup-entry]] | `:elicitation-code-hook` |
 | `failureConditional` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failure-conditional` |
 | `failureNextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:failure-next-step` |
 | `failureResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:failure-response` |
@@ -2809,7 +2809,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValueList` | java.util.List | [[cdk.support/lookup-entry]] | `:default-value-list` |
+| `defaultValueList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value-list` |
 "
   [^CfnBot$SlotDefaultValueSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :default-value-list)]
@@ -2912,10 +2912,10 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `externalSourceSetting` | software.amazon.awscdk.services.lex.CfnBot$ExternalSourceSettingProperty | [[cdk.support/lookup-entry]] | `:external-source-setting` |
+| `externalSourceSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:external-source-setting` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parentSlotTypeSignature` | java.lang.String | [[cdk.support/lookup-entry]] | `:parent-slot-type-signature` |
-| `slotTypeValues` | java.util.List | [[cdk.support/lookup-entry]] | `:slot-type-values` |
+| `slotTypeValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slot-type-values` |
 | `valueSelectionSetting` | software.amazon.awscdk.services.lex.CfnBot$SlotValueSelectionSettingProperty | [[cdk.support/lookup-entry]] | `:value-selection-setting` |
 "
   [^CfnBot$SlotTypeProperty$Builder builder id config]
@@ -2954,8 +2954,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sampleValue` | software.amazon.awscdk.services.lex.CfnBot$SampleValueProperty | [[cdk.support/lookup-entry]] | `:sample-value` |
-| `synonyms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:synonyms` |
+| `sampleValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sample-value` |
+| `synonyms` | java.util.List | [[cdk.support/lookup-entry]] | `:synonyms` |
 "
   [^CfnBot$SlotTypeValueProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :sample-value)]
@@ -2985,8 +2985,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultValueSpecification` | software.amazon.awscdk.services.lex.CfnBot$SlotDefaultValueSpecificationProperty | [[cdk.support/lookup-entry]] | `:default-value-specification` |
-| `promptSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prompt-specification` |
+| `defaultValueSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-value-specification` |
+| `promptSpecification` | software.amazon.awscdk.services.lex.CfnBot$PromptSpecificationProperty | [[cdk.support/lookup-entry]] | `:prompt-specification` |
 | `sampleUtterances` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sample-utterances` |
 | `slotCaptureSetting` | software.amazon.awscdk.services.lex.CfnBot$SlotCaptureSettingProperty | [[cdk.support/lookup-entry]] | `:slot-capture-setting` |
 | `slotConstraint` | java.lang.String | [[cdk.support/lookup-entry]] | `:slot-constraint` |
@@ -3060,7 +3060,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `shape` | java.lang.String | [[cdk.support/lookup-entry]] | `:shape` |
-| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.services.lex.CfnBot$SlotValueProperty | [[cdk.support/lookup-entry]] | `:value` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnBot$SlotValueOverrideProperty$Builder builder id config]
@@ -3150,7 +3150,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `advancedRecognitionSetting` | software.amazon.awscdk.services.lex.CfnBot$AdvancedRecognitionSettingProperty | [[cdk.support/lookup-entry]] | `:advanced-recognition-setting` |
-| `regexFilter` | software.amazon.awscdk.services.lex.CfnBot$SlotValueRegexFilterProperty | [[cdk.support/lookup-entry]] | `:regex-filter` |
+| `regexFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regex-filter` |
 | `resolutionStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolution-strategy` |
 "
   [^CfnBot$SlotValueSelectionSettingProperty$Builder builder id config]
@@ -3211,7 +3211,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowInterrupt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-interrupt` |
+| `allowInterrupt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-interrupt` |
 | `frequencyInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:frequency-in-seconds` |
 | `messageGroupsList` | java.util.List | [[cdk.support/lookup-entry]] | `:message-groups-list` |
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
@@ -3248,8 +3248,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `botAliasLocaleSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-alias-locale-settings` |
-| `conversationLogSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conversation-log-settings` |
+| `botAliasLocaleSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-alias-locale-settings` |
+| `conversationLogSettings` | software.amazon.awscdk.services.lex.CfnBot$ConversationLogSettingsProperty | [[cdk.support/lookup-entry]] | `:conversation-log-settings` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `sentimentAnalysisSettings` | java.lang.Object | [[cdk.support/lookup-entry]] | `:sentiment-analysis-settings` |
 "
@@ -3341,7 +3341,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
+| `destination` | software.amazon.awscdk.services.lex.CfnBot$TextLogDestinationProperty | [[cdk.support/lookup-entry]] | `:destination` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBot$TextLogSettingProperty$Builder builder id config]
@@ -3432,7 +3432,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `botId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-id` |
-| `botVersionLocaleSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-version-locale-specification` |
+| `botVersionLocaleSpecification` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-version-locale-specification` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnBotVersion$Builder builder id config]
@@ -3466,7 +3466,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `botId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bot-id` |
-| `botVersionLocaleSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bot-version-locale-specification` |
+| `botVersionLocaleSpecification` | java.util.List | [[cdk.support/lookup-entry]] | `:bot-version-locale-specification` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnBotVersionProps$Builder builder id config]
@@ -3530,10 +3530,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `continueResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:continue-response` |
+| `continueResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:continue-response` |
 | `isActive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-active` |
 | `stillWaitingResponse` | software.amazon.awscdk.services.lex.CfnBot$StillWaitingResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:still-waiting-response` |
-| `waitingResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:waiting-response` |
+| `waitingResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:waiting-response` |
 "
   [^CfnBot$WaitAndContinueSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :continue-response)]

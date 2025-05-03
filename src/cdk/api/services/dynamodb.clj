@@ -399,12 +399,12 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `attributeDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:attribute-definitions` |
 | `billingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-mode` |
-| `globalSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
-| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `globalSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
+| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
 | `localSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:local-secondary-indexes` |
-| `replicas` | java.util.List | [[cdk.support/lookup-entry]] | `:replicas` |
-| `sseSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$SSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
-| `streamSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$StreamSpecificationProperty | [[cdk.support/lookup-entry]] | `:stream-specification` |
+| `replicas` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replicas` |
+| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `streamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-specification` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `timeToLiveSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$TimeToLiveSpecificationProperty | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
 | `writeOnDemandThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-on-demand-throughput-settings` |
@@ -461,7 +461,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 | `seedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seed-capacity` |
-| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
+| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
 "
   [^CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :max-capacity)]
@@ -495,7 +495,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]
@@ -524,10 +524,10 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
-| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
 | `projection` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ProjectionProperty | [[cdk.support/lookup-entry]] | `:projection` |
-| `writeOnDemandThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$WriteOnDemandThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:write-on-demand-throughput-settings` |
-| `writeProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$WriteProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
+| `writeOnDemandThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-on-demand-throughput-settings` |
+| `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
 "
   [^CfnGlobalTable$GlobalSecondaryIndexProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :index-name)]
@@ -626,8 +626,8 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
-| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
-| `projection` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ProjectionProperty | [[cdk.support/lookup-entry]] | `:projection` |
+| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `projection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:projection` |
 "
   [^CfnGlobalTable$LocalSecondaryIndexProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :index-name)]
@@ -718,16 +718,16 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributeDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-definitions` |
+| `attributeDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:attribute-definitions` |
 | `billingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-mode` |
-| `globalSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
-| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
-| `localSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:local-secondary-indexes` |
-| `replicas` | java.util.List | [[cdk.support/lookup-entry]] | `:replicas` |
-| `sseSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$SSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
-| `streamSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$StreamSpecificationProperty | [[cdk.support/lookup-entry]] | `:stream-specification` |
+| `globalSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
+| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `localSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:local-secondary-indexes` |
+| `replicas` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replicas` |
+| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `streamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-specification` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
+| `timeToLiveSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$TimeToLiveSpecificationProperty | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
 | `writeOnDemandThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-on-demand-throughput-settings` |
 | `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
 "
@@ -807,7 +807,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `readCapacityAutoScalingSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$CapacityAutoScalingSettingsProperty | [[cdk.support/lookup-entry]] | `:read-capacity-auto-scaling-settings` |
+| `readCapacityAutoScalingSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:read-capacity-auto-scaling-settings` |
 | `readCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:read-capacity-units` |
 "
   [^CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder builder id config]
@@ -878,12 +878,12 @@ function on the data with the provided namespace id and item-key.  The found val
 | `contributorInsightsSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ContributorInsightsSpecificationProperty | [[cdk.support/lookup-entry]] | `:contributor-insights-specification` |
 | `deletionProtectionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection-enabled` |
 | `globalSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
-| `kinesisStreamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-stream-specification` |
+| `kinesisStreamSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$KinesisStreamSpecificationProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-specification` |
 | `pointInTimeRecoverySpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-specification` |
 | `readOnDemandThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReadOnDemandThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:read-on-demand-throughput-settings` |
 | `readProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReadProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:read-provisioned-throughput-settings` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `replicaStreamSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReplicaStreamSpecificationProperty | [[cdk.support/lookup-entry]] | `:replica-stream-specification` |
+| `replicaStreamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replica-stream-specification` |
 | `resourcePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-policy` |
 | `sseSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReplicaSSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tableClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-class` |
@@ -1023,7 +1023,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sse-enabled` |
+| `sseEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-enabled` |
 | `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |
 "
   [^CfnGlobalTable$SSESpecificationProperty$Builder builder id config]
@@ -1082,7 +1082,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `disableScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
+| `disableScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
 | `scaleInCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
@@ -1178,7 +1178,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `writeCapacityAutoScalingSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$CapacityAutoScalingSettingsProperty | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling-settings` |
+| `writeCapacityAutoScalingSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling-settings` |
 "
   [^CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :write-capacity-auto-scaling-settings)]
@@ -1239,18 +1239,18 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `attributeDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-definitions` |
 | `billingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-mode` |
-| `contributorInsightsSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contributor-insights-specification` |
-| `deletionProtectionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection-enabled` |
-| `globalSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
-| `importSourceSpecification` | software.amazon.awscdk.services.dynamodb.CfnTable$ImportSourceSpecificationProperty | [[cdk.support/lookup-entry]] | `:import-source-specification` |
-| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
-| `kinesisStreamSpecification` | software.amazon.awscdk.services.dynamodb.CfnTable$KinesisStreamSpecificationProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-specification` |
-| `localSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:local-secondary-indexes` |
+| `contributorInsightsSpecification` | software.amazon.awscdk.services.dynamodb.CfnTable$ContributorInsightsSpecificationProperty | [[cdk.support/lookup-entry]] | `:contributor-insights-specification` |
+| `deletionProtectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection-enabled` |
+| `globalSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
+| `importSourceSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:import-source-specification` |
+| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `kinesisStreamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-stream-specification` |
+| `localSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:local-secondary-indexes` |
 | `onDemandThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$OnDemandThroughputProperty | [[cdk.support/lookup-entry]] | `:on-demand-throughput` |
 | `pointInTimeRecoverySpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-specification` |
-| `provisionedThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
+| `provisionedThroughput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
 | `resourcePolicy` | software.amazon.awscdk.services.dynamodb.CfnTable$ResourcePolicyProperty | [[cdk.support/lookup-entry]] | `:resource-policy` |
-| `sseSpecification` | software.amazon.awscdk.services.dynamodb.CfnTable$SSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
+| `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `streamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-specification` |
 | `tableClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-class` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
@@ -1380,7 +1380,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `contributorInsightsSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contributor-insights-specification` |
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
-| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
 | `onDemandThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$OnDemandThroughputProperty | [[cdk.support/lookup-entry]] | `:on-demand-throughput` |
 | `projection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:projection` |
 | `provisionedThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
@@ -1424,7 +1424,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `inputCompressionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-compression-type` |
 | `inputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-format` |
 | `inputFormatOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-format-options` |
-| `s3BucketSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-bucket-source` |
+| `s3BucketSource` | software.amazon.awscdk.services.dynamodb.CfnTable$S3BucketSourceProperty | [[cdk.support/lookup-entry]] | `:s3-bucket-source` |
 "
   [^CfnTable$ImportSourceSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :input-compression-type)]
@@ -1458,7 +1458,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csv` | software.amazon.awscdk.services.dynamodb.CfnTable$CsvProperty | [[cdk.support/lookup-entry]] | `:csv` |
+| `csv` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv` |
 "
   [^CfnTable$InputFormatOptionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv)]
@@ -1549,7 +1549,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
-| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
 | `projection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:projection` |
 "
   [^CfnTable$LocalSecondaryIndexProperty$Builder builder id config]
@@ -1674,19 +1674,19 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `attributeDefinitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-definitions` |
 | `billingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:billing-mode` |
-| `contributorInsightsSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contributor-insights-specification` |
+| `contributorInsightsSpecification` | software.amazon.awscdk.services.dynamodb.CfnTable$ContributorInsightsSpecificationProperty | [[cdk.support/lookup-entry]] | `:contributor-insights-specification` |
 | `deletionProtectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection-enabled` |
-| `globalSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
+| `globalSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:global-secondary-indexes` |
 | `importSourceSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:import-source-specification` |
-| `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
+| `keySchema` | java.util.List | [[cdk.support/lookup-entry]] | `:key-schema` |
 | `kinesisStreamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-stream-specification` |
-| `localSecondaryIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:local-secondary-indexes` |
-| `onDemandThroughput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-demand-throughput` |
+| `localSecondaryIndexes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:local-secondary-indexes` |
+| `onDemandThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$OnDemandThroughputProperty | [[cdk.support/lookup-entry]] | `:on-demand-throughput` |
 | `pointInTimeRecoverySpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-specification` |
 | `provisionedThroughput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
-| `resourcePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-policy` |
+| `resourcePolicy` | software.amazon.awscdk.services.dynamodb.CfnTable$ResourcePolicyProperty | [[cdk.support/lookup-entry]] | `:resource-policy` |
 | `sseSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-specification` |
-| `streamSpecification` | software.amazon.awscdk.services.dynamodb.CfnTable$StreamSpecificationProperty | [[cdk.support/lookup-entry]] | `:stream-specification` |
+| `streamSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-specification` |
 | `tableClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-class` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1848,7 +1848,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |
-| `sseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sse-enabled` |
+| `sseEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sse-enabled` |
 | `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |
 "
   [^CfnTable$SSESpecificationProperty$Builder builder id config]
@@ -1913,7 +1913,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnTable$TimeToLiveSpecificationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :attribute-name)]

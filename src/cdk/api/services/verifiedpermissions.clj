@@ -30,7 +30,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `configuration` | software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource$IdentitySourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
 | `policyStoreId` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-store-id` |
 | `principalEntityType` | java.lang.String | [[cdk.support/lookup-entry]] | `:principal-entity-type` |
 "
@@ -93,7 +93,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clientIds` | java.util.List | [[cdk.support/lookup-entry]] | `:client-ids` |
-| `groupConfiguration` | software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource$CognitoGroupConfigurationProperty | [[cdk.support/lookup-entry]] | `:group-configuration` |
+| `groupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:group-configuration` |
 | `userPoolArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-arn` |
 "
   [^CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder builder id config]
@@ -126,7 +126,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cognitoUserPoolConfiguration` | software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource$CognitoUserPoolConfigurationProperty | [[cdk.support/lookup-entry]] | `:cognito-user-pool-configuration` |
+| `cognitoUserPoolConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cognito-user-pool-configuration` |
 "
   [^CfnIdentitySource$IdentitySourceConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cognito-user-pool-configuration)]
@@ -287,7 +287,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `staticValue` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicy$StaticPolicyDefinitionProperty | [[cdk.support/lookup-entry]] | `:static-value` |
+| `staticValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-value` |
 | `templateLinked` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicy$TemplateLinkedPolicyDefinitionProperty | [[cdk.support/lookup-entry]] | `:template-linked` |
 "
   [^CfnPolicy$PolicyDefinitionProperty$Builder builder id config]
@@ -318,7 +318,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `definition` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicy$PolicyDefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
 | `policyStoreId` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-store-id` |
 "
   [^CfnPolicyProps$Builder builder id config]
@@ -381,8 +381,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `schema` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore$SchemaDefinitionProperty | [[cdk.support/lookup-entry]] | `:schema` |
-| `validationSettings` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore$ValidationSettingsProperty | [[cdk.support/lookup-entry]] | `:validation-settings` |
+| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
+| `validationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-settings` |
 "
   [^CfnPolicyStore$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -415,8 +415,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `schema` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore$SchemaDefinitionProperty | [[cdk.support/lookup-entry]] | `:schema` |
-| `validationSettings` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore$ValidationSettingsProperty | [[cdk.support/lookup-entry]] | `:validation-settings` |
+| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
+| `validationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-settings` |
 "
   [^CfnPolicyStoreProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -539,8 +539,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policyTemplateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-template-id` |
-| `principal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:principal` |
-| `resource` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicy$EntityIdentifierProperty | [[cdk.support/lookup-entry]] | `:resource` |
+| `principal` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicy$EntityIdentifierProperty | [[cdk.support/lookup-entry]] | `:principal` |
+| `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :policy-template-id)]

@@ -24,7 +24,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cloudFormationStackArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-formation-stack-arn` |
-| `tagFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-filters` |
+| `tagFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag-filters` |
 "
   [^CfnScalingPlan$ApplicationSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-formation-stack-arn)]
@@ -293,7 +293,7 @@
 | `disableDynamicScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-dynamic-scaling` |
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
-| `predefinedLoadMetricSpecification` | software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan$PredefinedLoadMetricSpecificationProperty | [[cdk.support/lookup-entry]] | `:predefined-load-metric-specification` |
+| `predefinedLoadMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-load-metric-specification` |
 | `predictiveScalingMaxCapacityBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:predictive-scaling-max-capacity-behavior` |
 | `predictiveScalingMaxCapacityBuffer` | java.lang.Number | [[cdk.support/lookup-entry]] | `:predictive-scaling-max-capacity-buffer` |
 | `predictiveScalingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:predictive-scaling-mode` |
@@ -390,7 +390,7 @@
 | `customizedScalingMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customized-scaling-metric-specification` |
 | `disableScaleIn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
 | `estimatedInstanceWarmup` | java.lang.Number | [[cdk.support/lookup-entry]] | `:estimated-instance-warmup` |
-| `predefinedScalingMetricSpecification` | software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan$PredefinedScalingMetricSpecificationProperty | [[cdk.support/lookup-entry]] | `:predefined-scaling-metric-specification` |
+| `predefinedScalingMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-scaling-metric-specification` |
 | `scaleInCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |

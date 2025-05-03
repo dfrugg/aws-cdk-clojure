@@ -93,9 +93,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `code` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code` |
+| `code` | software.amazon.awscdk.services.codestar.CfnGitHubRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
 | `connectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-arn` |
-| `enableIssues` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-issues` |
+| `enableIssues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-issues` |
 | `isPrivate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-private` |
 | `repositoryAccessToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-access-token` |
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |

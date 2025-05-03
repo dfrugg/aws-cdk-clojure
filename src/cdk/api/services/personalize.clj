@@ -321,8 +321,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `categoricalHyperParameterRanges` | java.util.List | [[cdk.support/lookup-entry]] | `:categorical-hyper-parameter-ranges` |
-| `continuousHyperParameterRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:continuous-hyper-parameter-ranges` |
+| `categoricalHyperParameterRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:categorical-hyper-parameter-ranges` |
+| `continuousHyperParameterRanges` | java.util.List | [[cdk.support/lookup-entry]] | `:continuous-hyper-parameter-ranges` |
 | `integerHyperParameterRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-hyper-parameter-ranges` |
 "
   [^CfnSolution$AlgorithmHyperParameterRangesProperty$Builder builder id config]
@@ -389,10 +389,10 @@
 | `datasetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-group-arn` |
 | `eventType` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `performAutoMl` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:perform-auto-ml` |
-| `performHpo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:perform-hpo` |
+| `performAutoMl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:perform-auto-ml` |
+| `performHpo` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:perform-hpo` |
 | `recipeArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:recipe-arn` |
-| `solutionConfig` | software.amazon.awscdk.services.personalize.CfnSolution$SolutionConfigProperty | [[cdk.support/lookup-entry]] | `:solution-config` |
+| `solutionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:solution-config` |
 "
   [^CfnSolution$Builder builder id config]
   (when-some [data (lookup-entry config id :dataset-group-arn)]
@@ -497,7 +497,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `algorithmHyperParameterRanges` | software.amazon.awscdk.services.personalize.CfnSolution$AlgorithmHyperParameterRangesProperty | [[cdk.support/lookup-entry]] | `:algorithm-hyper-parameter-ranges` |
+| `algorithmHyperParameterRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:algorithm-hyper-parameter-ranges` |
 | `hpoObjective` | software.amazon.awscdk.services.personalize.CfnSolution$HpoObjectiveProperty | [[cdk.support/lookup-entry]] | `:hpo-objective` |
 | `hpoResourceConfig` | software.amazon.awscdk.services.personalize.CfnSolution$HpoResourceConfigProperty | [[cdk.support/lookup-entry]] | `:hpo-resource-config` |
 "
@@ -676,10 +676,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `algorithmHyperParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:algorithm-hyper-parameters` |
+| `algorithmHyperParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:algorithm-hyper-parameters` |
 | `autoMlConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:auto-ml-config` |
 | `eventValueThreshold` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-value-threshold` |
-| `featureTransformationParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:feature-transformation-parameters` |
+| `featureTransformationParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:feature-transformation-parameters` |
 | `hpoConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:hpo-config` |
 "
   [^CfnSolution$SolutionConfigProperty$Builder builder id config]

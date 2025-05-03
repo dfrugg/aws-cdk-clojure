@@ -28,7 +28,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authenticationStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-strategy` |
-| `autoMinorVersionUpgrade` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
+| `autoMinorVersionUpgrade` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-minor-version-upgrade` |
 | `brokerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:broker-name` |
 | `configuration` | software.amazon.awscdk.services.amazonmq.CfnBroker$ConfigurationIdProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 | `dataReplicationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-replication-mode` |
@@ -40,7 +40,7 @@
 | `hostInstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-instance-type` |
 | `ldapServerMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ldap-server-metadata` |
 | `logs` | software.amazon.awscdk.services.amazonmq.CfnBroker$LogListProperty | [[cdk.support/lookup-entry]] | `:logs` |
-| `maintenanceWindowStartTime` | software.amazon.awscdk.services.amazonmq.CfnBroker$MaintenanceWindowProperty | [[cdk.support/lookup-entry]] | `:maintenance-window-start-time` |
+| `maintenanceWindowStartTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-window-start-time` |
 | `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
@@ -232,7 +232,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `audit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:audit` |
+| `audit` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:audit` |
 | `general` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:general` |
 "
   [^CfnBroker$LogListProperty$Builder builder id config]
@@ -311,12 +311,12 @@
 | `ldapServerMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ldap-server-metadata` |
 | `logs` | software.amazon.awscdk.services.amazonmq.CfnBroker$LogListProperty | [[cdk.support/lookup-entry]] | `:logs` |
 | `maintenanceWindowStartTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-window-start-time` |
-| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
+| `users` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnBrokerProps$Builder builder id config]
   (when-some [data (lookup-entry config id :authentication-strategy)]
@@ -416,7 +416,7 @@
 | `consoleAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:console-access` |
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
-| `replicationUser` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replication-user` |
+| `replicationUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:replication-user` |
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnBroker$UserProperty$Builder builder id config]
@@ -454,7 +454,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `broker` | java.lang.String | [[cdk.support/lookup-entry]] | `:broker` |
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation$ConfigurationIdProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 "
   [^CfnConfigurationAssociation$Builder builder id config]
   (when-some [data (lookup-entry config id :broker)]
@@ -516,7 +516,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `broker` | java.lang.String | [[cdk.support/lookup-entry]] | `:broker` |
-| `configuration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:configuration` |
+| `configuration` | software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation$ConfigurationIdProperty | [[cdk.support/lookup-entry]] | `:configuration` |
 "
   [^CfnConfigurationAssociationProps$Builder builder id config]
   (when-some [data (lookup-entry config id :broker)]

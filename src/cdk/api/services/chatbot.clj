@@ -50,7 +50,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `teamsChannelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:teams-channel-id` |
 | `teamsTenantId` | java.lang.String | [[cdk.support/lookup-entry]] | `:teams-tenant-id` |
-| `userRoleRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-role-required` |
+| `userRoleRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-role-required` |
 "
   [^CfnMicrosoftTeamsChannelConfiguration$Builder builder id config]
   (when-some [data (lookup-entry config id :configuration-name)]

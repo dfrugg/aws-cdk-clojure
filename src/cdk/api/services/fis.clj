@@ -29,7 +29,7 @@
 | `experimentOptions` | software.amazon.awscdk.services.fis.CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty | [[cdk.support/lookup-entry]] | `:experiment-options` |
 | `logConfiguration` | software.amazon.awscdk.services.fis.CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stopConditions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stop-conditions` |
+| `stopConditions` | java.util.List | [[cdk.support/lookup-entry]] | `:stop-conditions` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `targets` | java.util.Map | [[cdk.support/lookup-entry]] | `:targets` |
 "
@@ -268,8 +268,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `resourceArns` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-arns` |
 | `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
@@ -311,12 +311,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.Map | [[cdk.support/lookup-entry]] | `:actions` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `experimentOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:experiment-options` |
+| `experimentOptions` | software.amazon.awscdk.services.fis.CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty | [[cdk.support/lookup-entry]] | `:experiment-options` |
 | `logConfiguration` | software.amazon.awscdk.services.fis.CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty | [[cdk.support/lookup-entry]] | `:log-configuration` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `stopConditions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stop-conditions` |
+| `stopConditions` | java.util.List | [[cdk.support/lookup-entry]] | `:stop-conditions` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `targets` | java.util.Map | [[cdk.support/lookup-entry]] | `:targets` |
 "

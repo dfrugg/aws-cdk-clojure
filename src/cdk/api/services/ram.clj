@@ -90,7 +90,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowExternalPrincipals` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-external-principals` |
+| `allowExternalPrincipals` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-external-principals` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionArns` | java.util.List | [[cdk.support/lookup-entry]] | `:permission-arns` |
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
@@ -136,7 +136,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowExternalPrincipals` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-external-principals` |
+| `allowExternalPrincipals` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-external-principals` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionArns` | java.util.List | [[cdk.support/lookup-entry]] | `:permission-arns` |
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |

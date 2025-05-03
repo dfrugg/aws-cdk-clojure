@@ -22,7 +22,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `crlData` | java.lang.String | [[cdk.support/lookup-entry]] | `:crl-data` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `trustAnchorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-anchor-arn` |
@@ -102,7 +102,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `requireInstanceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
@@ -151,7 +151,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `requireInstanceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
@@ -201,8 +201,8 @@
 |---|---|---|---|
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `notificationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-settings` |
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
+| `notificationSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-settings` |
+| `source` | software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTrustAnchor$Builder builder id config]
@@ -276,10 +276,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `notificationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-settings` |
-| `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
+| `source` | software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTrustAnchorProps$Builder builder id config]

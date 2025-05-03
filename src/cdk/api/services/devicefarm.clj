@@ -74,7 +74,7 @@
 | `maxDevices` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-devices` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `projectArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-arn` |
-| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDevicePoolProps$Builder builder id config]
@@ -151,7 +151,7 @@
 | `excludeAppPackagesFromCleanup` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-app-packages-from-cleanup` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `packageCleanup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:package-cleanup` |
-| `rebootAfterUse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
+| `rebootAfterUse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInstanceProfile$Builder builder id config]
@@ -194,7 +194,7 @@
 | `excludeAppPackagesFromCleanup` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-app-packages-from-cleanup` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `packageCleanup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:package-cleanup` |
-| `rebootAfterUse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
+| `rebootAfterUse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInstanceProfileProps$Builder builder id config]
@@ -395,7 +395,7 @@
 | `defaultJobTimeoutMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-job-timeout-minutes` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnProjectProps$Builder builder id config]
   (when-some [data (lookup-entry config id :default-job-timeout-minutes)]
@@ -503,7 +503,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnTestGridProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnTestGridProjectProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]

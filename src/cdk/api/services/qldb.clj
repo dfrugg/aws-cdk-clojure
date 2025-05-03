@@ -17,7 +17,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deletionProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:deletion-protection` |
+| `deletionProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protection` |
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `permissionsMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-mode` |
@@ -143,7 +143,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aggregationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:aggregation-enabled` |
+| `aggregationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aggregation-enabled` |
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^CfnStream$KinesisConfigurationProperty$Builder builder id config]

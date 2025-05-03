@@ -109,7 +109,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^AssetManifestArtifact$Builder builder id config]
@@ -309,7 +309,7 @@ __Create Form:__ ___[]___
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^CloudFormationStackArtifact$Builder builder id config]
@@ -714,7 +714,7 @@ __Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `metadata` | java.util.Map | [[cdk.support/lookup-entry]] | `:metadata` |
-| `properties` | software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties | [[cdk.support/lookup-entry]] | `:properties` |
+| `properties` | software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties | [[cdk.support/lookup-entry]] | `:properties` |
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^TreeCloudArtifact$Builder builder id config]

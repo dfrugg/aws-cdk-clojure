@@ -19,7 +19,7 @@
 | `desktopArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:desktop-arn` |
 | `desktopEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:desktop-endpoint` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
-| `maintenanceWindow` | software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment$MaintenanceWindowProperty | [[cdk.support/lookup-entry]] | `:maintenance-window` |
+| `maintenanceWindow` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maintenance-window` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `softwareSetUpdateMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:software-set-update-mode` |
 | `softwareSetUpdateSchedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:software-set-update-schedule` |

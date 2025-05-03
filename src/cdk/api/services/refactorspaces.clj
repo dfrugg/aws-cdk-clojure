@@ -222,7 +222,7 @@
 | `routeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-type` |
 | `serviceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-identifier` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `uriPathRoute` | software.amazon.awscdk.services.refactorspaces.CfnRoute$UriPathRouteInputProperty | [[cdk.support/lookup-entry]] | `:uri-path-route` |
+| `uriPathRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uri-path-route` |
 "
   [^CfnRoute$Builder builder id config]
   (when-some [data (lookup-entry config id :application-identifier)]
@@ -296,7 +296,7 @@
 | `routeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-type` |
 | `serviceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-identifier` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `uriPathRoute` | software.amazon.awscdk.services.refactorspaces.CfnRoute$UriPathRouteInputProperty | [[cdk.support/lookup-entry]] | `:uri-path-route` |
+| `uriPathRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uri-path-route` |
 "
   [^CfnRouteProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-identifier)]
@@ -337,7 +337,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `activationState` | java.lang.String | [[cdk.support/lookup-entry]] | `:activation-state` |
-| `appendSourcePath` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:append-source-path` |
+| `appendSourcePath` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:append-source-path` |
 | `includeChildPaths` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-child-paths` |
 | `methods` | java.util.List | [[cdk.support/lookup-entry]] | `:methods` |
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
@@ -380,7 +380,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `endpointType` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-type` |
 | `environmentIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-identifier` |
-| `lambdaEndpoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-endpoint` |
+| `lambdaEndpoint` | software.amazon.awscdk.services.refactorspaces.CfnService$LambdaEndpointInputProperty | [[cdk.support/lookup-entry]] | `:lambda-endpoint` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `urlEndpoint` | software.amazon.awscdk.services.refactorspaces.CfnService$UrlEndpointInputProperty | [[cdk.support/lookup-entry]] | `:url-endpoint` |

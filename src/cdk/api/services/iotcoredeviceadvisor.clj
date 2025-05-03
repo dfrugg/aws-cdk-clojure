@@ -111,7 +111,7 @@
 |---|---|---|---|
 | `devicePermissionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-permission-role-arn` |
 | `devices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:devices` |
-| `intendedForQualification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:intended-for-qualification` |
+| `intendedForQualification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:intended-for-qualification` |
 | `rootGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-group` |
 | `suiteDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:suite-definition-name` |
 "

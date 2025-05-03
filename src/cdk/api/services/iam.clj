@@ -819,7 +819,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxSessionDuration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-session-duration` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `permissionsBoundary` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
-| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
 | `roleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1239,7 +1239,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
-| `loginProfile` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:login-profile` |
+| `loginProfile` | software.amazon.awscdk.services.iam.CfnUser$LoginProfileProperty | [[cdk.support/lookup-entry]] | `:login-profile` |
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `permissionsBoundary` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
@@ -1422,7 +1422,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `managedPolicyArns` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policy-arns` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `permissionsBoundary` | java.lang.String | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
-| `policies` | java.util.List | [[cdk.support/lookup-entry]] | `:policies` |
+| `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "

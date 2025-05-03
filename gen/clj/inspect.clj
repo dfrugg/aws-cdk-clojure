@@ -1,11 +1,12 @@
 (ns inspect
   "Responsible for inspecting found Java classes to analyze and save in context."
   (:require [model :refer [java-class-info]]
-            [reflect :refer [reflect-enum]]
-            [util :refer [constant-keyword
-                          camel->kebab-case
+            [reflect :refer [reflect-builder
+                             reflect-enum]]
+            [util :refer [camel->kebab-case
                           package>namespace]]
             [clojure.reflect :as ref]))
+
 
 (comment
   ;The packages atom should be a map that has the following shape
@@ -89,9 +90,6 @@
            (mapv #(assoc % :init-type :construct))))))
 
 
-
-;; Start New Stuff
-
 (defn describe-package
   "Initializes a package-data with it's package name, the source namespace, and test namespace.."
   [package-name {:keys [base-package base-package-namespace]}]
@@ -146,22 +144,56 @@
           (:enums classpath-info)))
 
 
+(defn decorate-creates
+  [{:keys [package-name class-name]} {:keys [inits]} methods]
+  (if-let [hints (and (seq methods) (get-in inits [package-name class-name]))]
+    (reduce (fn [v m]
+              (let [hint (get hints (:parameter-types m))]
+                (cond
+                  (nil? hint) (conj v m)
+                  (:discard? hint) v
+                  :else (conj v (assoc m :hint hint)))))
+            []
+            methods)
+    methods))
+
+
+(defn describe-inits
+  [builder-data config {:keys [creates constructors]}]
+  (if (seq creates)
+    (->> creates
+         (mapv #(assoc % :init-type :create))
+         (decorate-creates builder-data config))
+    (->> constructors
+         (mapv #(assoc % :init-type :construct)))))
+
+
+(def resolvable
+  (symbol "software.amazon.awscdk.IResolvable"))
+
+
+(defn resolvable?
+  "Check if a parameter type is a resolveable"
+  [param]
+  (= param resolvable))
+
+
 (defn describe-methods
   "Describes the constructors and methods on the builder class"
   [{^Class builder-class :class :as builder-data} config]
-  (let [methods (public-methods builder-class)
-        inits (determine-inits builder-data config methods)
+  (let [descriptor (reflect-builder builder-class)
+        ;methods (public-methods builder-class)
+        ;inits (determine-inits builder-data config methods)
+        inits (describe-inits builder-data config descriptor)
         methods (->> (reduce (fn [field-map {field-name :name :as field}]
-                               (if (or (get field-map field-name)
-                                       (ignored-builder-methods field-name)
-                                       (not= 1 (count (:parameter-types field))))
-                                 field-map
-                                 (let [param (first (:parameter-types field))]
+                               (let [param (first (:parameter-types field))]
+                                 (if (and (resolvable? param) (get field-name field-map))
+                                   field-map
                                    (assoc field-map field-name {:method field-name
-                                                                :method-arg param
+                                                                :method-arg (first (:parameter-types field))
                                                                 :method-key (camel->kebab-case field-name)}))))
                              {}
-                             methods)
+                             (:methods descriptor))
                      vals
                      (sort-by :method)
                      vec)]

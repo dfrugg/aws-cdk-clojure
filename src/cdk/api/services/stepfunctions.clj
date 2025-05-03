@@ -484,7 +484,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentPreference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-preference` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `routingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-configuration` |
+| `routingConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:routing-configuration` |
 "
   [^CfnStateMachineAlias$Builder builder id config]
   (when-some [data (lookup-entry config id :deployment-preference)]
@@ -558,10 +558,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deploymentPreference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deployment-preference` |
+| `deploymentPreference` | software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias$DeploymentPreferenceProperty | [[cdk.support/lookup-entry]] | `:deployment-preference` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `routingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-configuration` |
+| `routingConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:routing-configuration` |
 "
   [^CfnStateMachineAliasProps$Builder builder id config]
   (when-some [data (lookup-entry config id :deployment-preference)]
@@ -627,15 +627,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `definition` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition` |
-| `definitionS3Location` | software.amazon.awscdk.services.stepfunctions.CfnStateMachine$S3LocationProperty | [[cdk.support/lookup-entry]] | `:definition-s3-location` |
+| `definitionS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-s3-location` |
 | `definitionString` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-string` |
-| `definitionSubstitutions` | java.util.Map | [[cdk.support/lookup-entry]] | `:definition-substitutions` |
+| `definitionSubstitutions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-substitutions` |
 | `loggingConfiguration` | software.amazon.awscdk.services.stepfunctions.CfnStateMachine$LoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:logging-configuration` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `stateMachineName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-machine-name` |
 | `stateMachineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-machine-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tracingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing-configuration` |
+| `tracingConfiguration` | software.amazon.awscdk.services.stepfunctions.CfnStateMachine$TracingConfigurationProperty | [[cdk.support/lookup-entry]] | `:tracing-configuration` |
 "
   [^CfnStateMachine$Builder builder id config]
   (when-some [data (lookup-entry config id :definition)]
@@ -709,7 +709,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchLogsLogGroup` | software.amazon.awscdk.services.stepfunctions.CfnStateMachine$CloudWatchLogsLogGroupProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-log-group` |
+| `cloudWatchLogsLogGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-log-group` |
 "
   [^CfnStateMachine$LogDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-logs-log-group)]
@@ -738,7 +738,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
-| `includeExecutionData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-execution-data` |
+| `includeExecutionData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-execution-data` |
 | `level` | java.lang.String | [[cdk.support/lookup-entry]] | `:level` |
 "
   [^CfnStateMachine$LoggingConfigurationProperty$Builder builder id config]
@@ -772,7 +772,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `definition` | java.lang.Object | [[cdk.support/lookup-entry]] | `:definition` |
-| `definitionS3Location` | software.amazon.awscdk.services.stepfunctions.CfnStateMachine$S3LocationProperty | [[cdk.support/lookup-entry]] | `:definition-s3-location` |
+| `definitionS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-s3-location` |
 | `definitionString` | java.lang.String | [[cdk.support/lookup-entry]] | `:definition-string` |
 | `definitionSubstitutions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition-substitutions` |
 | `loggingConfiguration` | software.amazon.awscdk.services.stepfunctions.CfnStateMachine$LoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:logging-configuration` |
@@ -780,7 +780,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stateMachineName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-machine-name` |
 | `stateMachineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-machine-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `tracingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing-configuration` |
+| `tracingConfiguration` | software.amazon.awscdk.services.stepfunctions.CfnStateMachine$TracingConfigurationProperty | [[cdk.support/lookup-entry]] | `:tracing-configuration` |
 "
   [^CfnStateMachineProps$Builder builder id config]
   (when-some [data (lookup-entry config id :definition)]
@@ -891,7 +891,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnStateMachine$TracingConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :enabled)]

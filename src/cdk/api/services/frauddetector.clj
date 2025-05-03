@@ -135,8 +135,8 @@
 | `createdTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:created-time` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `entityTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:entity-types` |
-| `eventVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-variables` |
-| `inline` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inline` |
+| `eventVariables` | java.util.List | [[cdk.support/lookup-entry]] | `:event-variables` |
+| `inline` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inline` |
 | `labels` | java.util.List | [[cdk.support/lookup-entry]] | `:labels` |
 | `lastUpdatedTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:last-updated-time` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -321,7 +321,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 | `createdTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:created-time` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `inline` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inline` |
+| `inline` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inline` |
 | `lastUpdatedTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:last-updated-time` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -370,7 +370,7 @@
 | `detectorVersionStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:detector-version-status` |
 | `eventType` | software.amazon.awscdk.services.frauddetector.CfnDetector$EventTypeProperty | [[cdk.support/lookup-entry]] | `:event-type` |
 | `ruleExecutionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-execution-mode` |
-| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
+| `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetectorProps$Builder builder id config]
@@ -420,7 +420,7 @@
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 | `language` | java.lang.String | [[cdk.support/lookup-entry]] | `:language` |
 | `lastUpdatedTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:last-updated-time` |
-| `outcomes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outcomes` |
+| `outcomes` | java.util.List | [[cdk.support/lookup-entry]] | `:outcomes` |
 | `ruleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-id` |
 | `ruleVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-version` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -634,7 +634,7 @@
 | `dataType` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-type` |
 | `defaultValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-value` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `inline` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inline` |
+| `inline` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:inline` |
 | `lastUpdatedTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:last-updated-time` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

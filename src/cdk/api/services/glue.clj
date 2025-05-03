@@ -121,10 +121,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csvClassifier` | software.amazon.awscdk.services.glue.CfnClassifier$CsvClassifierProperty | [[cdk.support/lookup-entry]] | `:csv-classifier` |
-| `grokClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grok-classifier` |
-| `jsonClassifier` | software.amazon.awscdk.services.glue.CfnClassifier$JsonClassifierProperty | [[cdk.support/lookup-entry]] | `:json-classifier` |
-| `xmlClassifier` | software.amazon.awscdk.services.glue.CfnClassifier$XMLClassifierProperty | [[cdk.support/lookup-entry]] | `:xml-classifier` |
+| `csvClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv-classifier` |
+| `grokClassifier` | software.amazon.awscdk.services.glue.CfnClassifier$GrokClassifierProperty | [[cdk.support/lookup-entry]] | `:grok-classifier` |
+| `jsonClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json-classifier` |
+| `xmlClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xml-classifier` |
 "
   [^CfnClassifier$Builder builder id config]
   (when-some [data (lookup-entry config id :csv-classifier)]
@@ -158,7 +158,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowSingleColumn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-single-column` |
+| `allowSingleColumn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-single-column` |
 | `containsCustomDatatype` | java.util.List | [[cdk.support/lookup-entry]] | `:contains-custom-datatype` |
 | `containsHeader` | java.lang.String | [[cdk.support/lookup-entry]] | `:contains-header` |
 | `customDatatypeConfigured` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-datatype-configured` |
@@ -278,10 +278,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csvClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv-classifier` |
-| `grokClassifier` | software.amazon.awscdk.services.glue.CfnClassifier$GrokClassifierProperty | [[cdk.support/lookup-entry]] | `:grok-classifier` |
+| `csvClassifier` | software.amazon.awscdk.services.glue.CfnClassifier$CsvClassifierProperty | [[cdk.support/lookup-entry]] | `:csv-classifier` |
+| `grokClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grok-classifier` |
 | `jsonClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json-classifier` |
-| `xmlClassifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xml-classifier` |
+| `xmlClassifier` | software.amazon.awscdk.services.glue.CfnClassifier$XMLClassifierProperty | [[cdk.support/lookup-entry]] | `:xml-classifier` |
 "
   [^CfnClassifierProps$Builder builder id config]
   (when-some [data (lookup-entry config id :csv-classifier)]
@@ -350,7 +350,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
-| `connectionInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-input` |
+| `connectionInput` | software.amazon.awscdk.services.glue.CfnConnection$ConnectionInputProperty | [[cdk.support/lookup-entry]] | `:connection-input` |
 "
   [^CfnConnection$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -458,7 +458,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
-| `connectionInput` | software.amazon.awscdk.services.glue.CfnConnection$ConnectionInputProperty | [[cdk.support/lookup-entry]] | `:connection-input` |
+| `connectionInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-input` |
 "
   [^CfnConnectionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -495,13 +495,13 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `lakeFormationConfiguration` | software.amazon.awscdk.services.glue.CfnCrawler$LakeFormationConfigurationProperty | [[cdk.support/lookup-entry]] | `:lake-formation-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `recrawlPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recrawl-policy` |
+| `recrawlPolicy` | software.amazon.awscdk.services.glue.CfnCrawler$RecrawlPolicyProperty | [[cdk.support/lookup-entry]] | `:recrawl-policy` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
-| `schedule` | software.amazon.awscdk.services.glue.CfnCrawler$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
+| `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
 | `schemaChangePolicy` | software.amazon.awscdk.services.glue.CfnCrawler$SchemaChangePolicyProperty | [[cdk.support/lookup-entry]] | `:schema-change-policy` |
 | `tablePrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-prefix` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `targets` | software.amazon.awscdk.services.glue.CfnCrawler$TargetsProperty | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnCrawler$Builder builder id config]
   (when-some [data (lookup-entry config id :classifiers)]
@@ -596,9 +596,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-name` |
-| `createNativeDeltaTable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:create-native-delta-table` |
+| `createNativeDeltaTable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-native-delta-table` |
 | `deltaTables` | java.util.List | [[cdk.support/lookup-entry]] | `:delta-tables` |
-| `writeManifest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-manifest` |
+| `writeManifest` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:write-manifest` |
 "
   [^CfnCrawler$DeltaTargetProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connection-name)]
@@ -732,7 +732,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
-| `useLakeFormationCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-lake-formation-credentials` |
+| `useLakeFormationCredentials` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-lake-formation-credentials` |
 "
   [^CfnCrawler$LakeFormationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :account-id)]
@@ -798,15 +798,15 @@
 | `crawlerSecurityConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:crawler-security-configuration` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `lakeFormationConfiguration` | software.amazon.awscdk.services.glue.CfnCrawler$LakeFormationConfigurationProperty | [[cdk.support/lookup-entry]] | `:lake-formation-configuration` |
+| `lakeFormationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lake-formation-configuration` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `recrawlPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recrawl-policy` |
+| `recrawlPolicy` | software.amazon.awscdk.services.glue.CfnCrawler$RecrawlPolicyProperty | [[cdk.support/lookup-entry]] | `:recrawl-policy` |
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 | `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
-| `schemaChangePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema-change-policy` |
+| `schemaChangePolicy` | software.amazon.awscdk.services.glue.CfnCrawler$SchemaChangePolicyProperty | [[cdk.support/lookup-entry]] | `:schema-change-policy` |
 | `tablePrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-prefix` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `targets` | software.amazon.awscdk.services.glue.CfnCrawler$TargetsProperty | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnCrawlerProps$Builder builder id config]
   (when-some [data (lookup-entry config id :classifiers)]
@@ -991,11 +991,11 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:catalog-targets` |
-| `deltaTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delta-targets` |
+| `deltaTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:delta-targets` |
 | `dynamoDbTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:dynamo-db-targets` |
-| `icebergTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iceberg-targets` |
+| `icebergTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:iceberg-targets` |
 | `jdbcTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:jdbc-targets` |
-| `mongoDbTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mongo-db-targets` |
+| `mongoDbTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:mongo-db-targets` |
 | `s3Targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-targets` |
 "
   [^CfnCrawler$TargetsProperty$Builder builder id config]
@@ -1111,7 +1111,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
-| `dataCatalogEncryptionSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-catalog-encryption-settings` |
+| `dataCatalogEncryptionSettings` | software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings$DataCatalogEncryptionSettingsProperty | [[cdk.support/lookup-entry]] | `:data-catalog-encryption-settings` |
 "
   [^CfnDataCatalogEncryptionSettings$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -1173,7 +1173,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionPasswordEncryption` | software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings$ConnectionPasswordEncryptionProperty | [[cdk.support/lookup-entry]] | `:connection-password-encryption` |
-| `encryptionAtRest` | software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings$EncryptionAtRestProperty | [[cdk.support/lookup-entry]] | `:encryption-at-rest` |
+| `encryptionAtRest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-at-rest` |
 "
   [^CfnDataCatalogEncryptionSettings$DataCatalogEncryptionSettingsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connection-password-encryption)]
@@ -1238,7 +1238,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
-| `dataCatalogEncryptionSettings` | software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings$DataCatalogEncryptionSettingsProperty | [[cdk.support/lookup-entry]] | `:data-catalog-encryption-settings` |
+| `dataCatalogEncryptionSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-catalog-encryption-settings` |
 "
   [^CfnDataCatalogEncryptionSettingsProps$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -1273,7 +1273,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `ruleset` | java.lang.String | [[cdk.support/lookup-entry]] | `:ruleset` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetTable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-table` |
+| `targetTable` | software.amazon.awscdk.services.glue.CfnDataQualityRuleset$DataQualityTargetTableProperty | [[cdk.support/lookup-entry]] | `:target-table` |
 "
   [^CfnDataQualityRuleset$Builder builder id config]
   (when-some [data (lookup-entry config id :client-token)]
@@ -1478,9 +1478,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `createTableDefaultPermissions` | java.util.List | [[cdk.support/lookup-entry]] | `:create-table-default-permissions` |
+| `createTableDefaultPermissions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:create-table-default-permissions` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `federatedDatabase` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:federated-database` |
+| `federatedDatabase` | software.amazon.awscdk.services.glue.CfnDatabase$FederatedDatabaseProperty | [[cdk.support/lookup-entry]] | `:federated-database` |
 | `locationUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-uri` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
@@ -1556,7 +1556,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
-| `principal` | software.amazon.awscdk.services.glue.CfnDatabase$DataLakePrincipalProperty | [[cdk.support/lookup-entry]] | `:principal` |
+| `principal` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:principal` |
 "
   [^CfnDatabase$PrincipalPrivilegesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :permissions)]
@@ -1587,7 +1587,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
-| `databaseInput` | software.amazon.awscdk.services.glue.CfnDatabase$DatabaseInputProperty | [[cdk.support/lookup-entry]] | `:database-input` |
+| `databaseInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:database-input` |
 "
   [^CfnDatabaseProps$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-id)]
@@ -1759,7 +1759,7 @@
 |---|---|---|---|
 | `allocatedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:allocated-capacity` |
 | `command` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:command` |
-| `connections` | software.amazon.awscdk.services.glue.CfnJob$ConnectionsListProperty | [[cdk.support/lookup-entry]] | `:connections` |
+| `connections` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connections` |
 | `defaultArguments` | java.lang.Object | [[cdk.support/lookup-entry]] | `:default-arguments` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `executionClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-class` |
@@ -2065,7 +2065,7 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 | `transformEncryption` | software.amazon.awscdk.services.glue.CfnMLTransform$TransformEncryptionProperty | [[cdk.support/lookup-entry]] | `:transform-encryption` |
-| `transformParameters` | software.amazon.awscdk.services.glue.CfnMLTransform$TransformParametersProperty | [[cdk.support/lookup-entry]] | `:transform-parameters` |
+| `transformParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transform-parameters` |
 | `workerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:worker-type` |
 "
   [^CfnMLTransform$Builder builder id config]
@@ -2192,7 +2192,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `glueTables` | java.util.List | [[cdk.support/lookup-entry]] | `:glue-tables` |
+| `glueTables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue-tables` |
 "
   [^CfnMLTransform$InputRecordTablesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :glue-tables)]
@@ -2262,7 +2262,7 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 | `transformEncryption` | software.amazon.awscdk.services.glue.CfnMLTransform$TransformEncryptionProperty | [[cdk.support/lookup-entry]] | `:transform-encryption` |
-| `transformParameters` | software.amazon.awscdk.services.glue.CfnMLTransform$TransformParametersProperty | [[cdk.support/lookup-entry]] | `:transform-parameters` |
+| `transformParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transform-parameters` |
 | `workerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:worker-type` |
 "
   [^CfnMLTransformProps$Builder builder id config]
@@ -2480,7 +2480,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
-| `storageDescriptor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-descriptor` |
+| `storageDescriptor` | software.amazon.awscdk.services.glue.CfnPartition$StorageDescriptorProperty | [[cdk.support/lookup-entry]] | `:storage-descriptor` |
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnPartition$PartitionInputProperty$Builder builder id config]
@@ -2515,7 +2515,7 @@
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
-| `partitionInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:partition-input` |
+| `partitionInput` | software.amazon.awscdk.services.glue.CfnPartition$PartitionInputProperty | [[cdk.support/lookup-entry]] | `:partition-input` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnPartitionProps$Builder builder id config]
@@ -2687,7 +2687,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:bucket-columns` |
-| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
 | `compressed` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:compressed` |
 | `inputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-format` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
@@ -2695,9 +2695,9 @@
 | `outputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-format` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `schemaReference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema-reference` |
-| `serdeInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:serde-info` |
+| `serdeInfo` | software.amazon.awscdk.services.glue.CfnPartition$SerdeInfoProperty | [[cdk.support/lookup-entry]] | `:serde-info` |
 | `skewedInfo` | software.amazon.awscdk.services.glue.CfnPartition$SkewedInfoProperty | [[cdk.support/lookup-entry]] | `:skewed-info` |
-| `sortColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-columns` |
+| `sortColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:sort-columns` |
 | `storedAsSubDirectories` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:stored-as-sub-directories` |
 "
   [^CfnPartition$StorageDescriptorProperty$Builder builder id config]
@@ -2818,12 +2818,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `checkpointVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:checkpoint-version` |
+| `checkpointVersion` | software.amazon.awscdk.services.glue.CfnSchema$SchemaVersionProperty | [[cdk.support/lookup-entry]] | `:checkpoint-version` |
 | `compatibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:compatibility` |
 | `dataFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-format` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `registry` | software.amazon.awscdk.services.glue.CfnSchema$RegistryProperty | [[cdk.support/lookup-entry]] | `:registry` |
+| `registry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:registry` |
 | `schemaDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-definition` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2872,7 +2872,7 @@
 | `dataFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-format` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `registry` | software.amazon.awscdk.services.glue.CfnSchema$RegistryProperty | [[cdk.support/lookup-entry]] | `:registry` |
+| `registry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:registry` |
 | `schemaDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-definition` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -2947,7 +2947,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `isLatest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-latest` |
+| `isLatest` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-latest` |
 | `versionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:version-number` |
 "
   [^CfnSchema$SchemaVersionProperty$Builder builder id config]
@@ -3077,7 +3077,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `schema` | software.amazon.awscdk.services.glue.CfnSchemaVersion$SchemaProperty | [[cdk.support/lookup-entry]] | `:schema` |
+| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
 | `schemaDefinition` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-definition` |
 "
   [^CfnSchemaVersionProps$Builder builder id config]
@@ -3204,9 +3204,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchEncryption` | software.amazon.awscdk.services.glue.CfnSecurityConfiguration$CloudWatchEncryptionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-encryption` |
+| `cloudWatchEncryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-encryption` |
 | `jobBookmarksEncryption` | software.amazon.awscdk.services.glue.CfnSecurityConfiguration$JobBookmarksEncryptionProperty | [[cdk.support/lookup-entry]] | `:job-bookmarks-encryption` |
-| `s3Encryptions` | java.util.List | [[cdk.support/lookup-entry]] | `:s3-encryptions` |
+| `s3Encryptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-encryptions` |
 "
   [^CfnSecurityConfiguration$EncryptionConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cloud-watch-encryption)]
@@ -3333,7 +3333,7 @@
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
-| `openTableFormatInput` | software.amazon.awscdk.services.glue.CfnTable$OpenTableFormatInputProperty | [[cdk.support/lookup-entry]] | `:open-table-format-input` |
+| `openTableFormatInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-table-format-input` |
 | `tableInput` | software.amazon.awscdk.services.glue.CfnTable$TableInputProperty | [[cdk.support/lookup-entry]] | `:table-input` |
 "
   [^CfnTable$Builder builder id config]
@@ -3433,7 +3433,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `icebergInput` | software.amazon.awscdk.services.glue.CfnTable$IcebergInputProperty | [[cdk.support/lookup-entry]] | `:iceberg-input` |
+| `icebergInput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iceberg-input` |
 "
   [^CfnTable$OpenTableFormatInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :iceberg-input)]
@@ -3504,7 +3504,7 @@
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `tableOptimizerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-optimizer-configuration` |
+| `tableOptimizerConfiguration` | software.amazon.awscdk.services.glue.CfnTableOptimizer$TableOptimizerConfigurationProperty | [[cdk.support/lookup-entry]] | `:table-optimizer-configuration` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnTableOptimizerProps$Builder builder id config]
@@ -3541,7 +3541,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnTableOptimizer$TableOptimizerConfigurationProperty$Builder builder id config]
@@ -3777,7 +3777,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:bucket-columns` |
-| `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
+| `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
 | `compressed` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:compressed` |
 | `inputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-format` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
@@ -3786,8 +3786,8 @@
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 | `schemaReference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema-reference` |
 | `serdeInfo` | software.amazon.awscdk.services.glue.CfnTable$SerdeInfoProperty | [[cdk.support/lookup-entry]] | `:serde-info` |
-| `skewedInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:skewed-info` |
-| `sortColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort-columns` |
+| `skewedInfo` | software.amazon.awscdk.services.glue.CfnTable$SkewedInfoProperty | [[cdk.support/lookup-entry]] | `:skewed-info` |
+| `sortColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:sort-columns` |
 | `storedAsSubDirectories` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:stored-as-sub-directories` |
 "
   [^CfnTable$StorageDescriptorProperty$Builder builder id config]
@@ -3885,7 +3885,7 @@
 | `retention` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retention` |
 | `storageDescriptor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-descriptor` |
 | `tableType` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-type` |
-| `targetTable` | software.amazon.awscdk.services.glue.CfnTable$TableIdentifierProperty | [[cdk.support/lookup-entry]] | `:target-table` |
+| `targetTable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-table` |
 | `viewExpandedText` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-expanded-text` |
 | `viewOriginalText` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-original-text` |
 "
@@ -3982,9 +3982,9 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `eventBatchingCondition` | software.amazon.awscdk.services.glue.CfnTrigger$EventBatchingConditionProperty | [[cdk.support/lookup-entry]] | `:event-batching-condition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `predicate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predicate` |
+| `predicate` | software.amazon.awscdk.services.glue.CfnTrigger$PredicateProperty | [[cdk.support/lookup-entry]] | `:predicate` |
 | `schedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule` |
-| `startOnCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:start-on-creation` |
+| `startOnCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:start-on-creation` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
@@ -4165,11 +4165,11 @@
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `eventBatchingCondition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-batching-condition` |
+| `eventBatchingCondition` | software.amazon.awscdk.services.glue.CfnTrigger$EventBatchingConditionProperty | [[cdk.support/lookup-entry]] | `:event-batching-condition` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `predicate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predicate` |
+| `predicate` | software.amazon.awscdk.services.glue.CfnTrigger$PredicateProperty | [[cdk.support/lookup-entry]] | `:predicate` |
 | `schedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule` |
-| `startOnCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:start-on-creation` |
+| `startOnCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:start-on-creation` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |

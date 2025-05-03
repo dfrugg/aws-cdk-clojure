@@ -70,8 +70,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
-| `channelStorage` | software.amazon.awscdk.services.iotanalytics.CfnChannel$ChannelStorageProperty | [[cdk.support/lookup-entry]] | `:channel-storage` |
-| `retentionPeriod` | software.amazon.awscdk.services.iotanalytics.CfnChannel$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:retention-period` |
+| `channelStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:channel-storage` |
+| `retentionPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnChannel$Builder builder id config]
@@ -172,8 +172,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
-| `channelStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:channel-storage` |
-| `retentionPeriod` | software.amazon.awscdk.services.iotanalytics.CfnChannel$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:retention-period` |
+| `channelStorage` | software.amazon.awscdk.services.iotanalytics.CfnChannel$ChannelStorageProperty | [[cdk.support/lookup-entry]] | `:channel-storage` |
+| `retentionPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnChannelProps$Builder builder id config]
@@ -209,7 +209,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `numberOfDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-days` |
-| `unlimited` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:unlimited` |
+| `unlimited` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unlimited` |
 "
   [^CfnChannel$RetentionPeriodProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :number-of-days)]
@@ -241,7 +241,7 @@
 |---|---|---|---|
 | `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
 | `containerAction` | software.amazon.awscdk.services.iotanalytics.CfnDataset$ContainerActionProperty | [[cdk.support/lookup-entry]] | `:container-action` |
-| `queryAction` | software.amazon.awscdk.services.iotanalytics.CfnDataset$QueryActionProperty | [[cdk.support/lookup-entry]] | `:query-action` |
+| `queryAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-action` |
 "
   [^CfnDataset$ActionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :action-name)]
@@ -273,7 +273,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
 | `contentDeliveryRules` | java.util.List | [[cdk.support/lookup-entry]] | `:content-delivery-rules` |
 | `datasetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-name` |
 | `lateDataRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:late-data-rules` |
@@ -359,8 +359,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `iotEventsDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:iot-events-destination-configuration` |
-| `s3DestinationConfiguration` | software.amazon.awscdk.services.iotanalytics.CfnDataset$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
+| `iotEventsDestinationConfiguration` | software.amazon.awscdk.services.iotanalytics.CfnDataset$IotEventsDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:iot-events-destination-configuration` |
+| `s3DestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
 "
   [^CfnDataset$DatasetContentDeliveryRuleDestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :iot-events-destination-configuration)]
@@ -626,7 +626,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ruleConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-configuration` |
+| `ruleConfiguration` | software.amazon.awscdk.services.iotanalytics.CfnDataset$LateDataRuleConfigurationProperty | [[cdk.support/lookup-entry]] | `:rule-configuration` |
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 "
   [^CfnDataset$LateDataRuleProperty$Builder builder id config]
@@ -686,13 +686,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `contentDeliveryRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-delivery-rules` |
+| `contentDeliveryRules` | java.util.List | [[cdk.support/lookup-entry]] | `:content-delivery-rules` |
 | `datasetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataset-name` |
-| `lateDataRules` | java.util.List | [[cdk.support/lookup-entry]] | `:late-data-rules` |
+| `lateDataRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:late-data-rules` |
 | `retentionPeriod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |
-| `versioningConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:versioning-configuration` |
+| `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |
+| `versioningConfiguration` | software.amazon.awscdk.services.iotanalytics.CfnDataset$VersioningConfigurationProperty | [[cdk.support/lookup-entry]] | `:versioning-configuration` |
 "
   [^CfnDatasetProps$Builder builder id config]
   (when-some [data (lookup-entry config id :actions)]
@@ -892,7 +892,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `schedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedule` |
+| `schedule` | software.amazon.awscdk.services.iotanalytics.CfnDataset$ScheduleProperty | [[cdk.support/lookup-entry]] | `:schedule` |
 | `triggeringDataset` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggering-dataset` |
 "
   [^CfnDataset$TriggerProperty$Builder builder id config]
@@ -951,9 +951,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `datasetContentVersionValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dataset-content-version-value` |
+| `datasetContentVersionValue` | software.amazon.awscdk.services.iotanalytics.CfnDataset$DatasetContentVersionValueProperty | [[cdk.support/lookup-entry]] | `:dataset-content-version-value` |
 | `doubleValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:double-value` |
-| `outputFileUriValue` | software.amazon.awscdk.services.iotanalytics.CfnDataset$OutputFileUriValueProperty | [[cdk.support/lookup-entry]] | `:output-file-uri-value` |
+| `outputFileUriValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-file-uri-value` |
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
 | `variableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-name` |
 "
@@ -992,7 +992,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxVersions` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-versions` |
-| `unlimited` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:unlimited` |
+| `unlimited` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unlimited` |
 "
   [^CfnDataset$VersioningConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :max-versions)]
@@ -1023,8 +1023,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `datastoreName` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-name` |
-| `datastorePartitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datastore-partitions` |
-| `datastoreStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datastore-storage` |
+| `datastorePartitions` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$DatastorePartitionsProperty | [[cdk.support/lookup-entry]] | `:datastore-partitions` |
+| `datastoreStorage` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$DatastoreStorageProperty | [[cdk.support/lookup-entry]] | `:datastore-storage` |
 | `fileFormatConfiguration` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$FileFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:file-format-configuration` |
 | `retentionPeriod` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -1220,7 +1220,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedS3` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$CustomerManagedS3Property | [[cdk.support/lookup-entry]] | `:customer-managed-s3` |
+| `customerManagedS3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-s3` |
 | `iotSiteWiseMultiLayerStorage` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$IotSiteWiseMultiLayerStorageProperty | [[cdk.support/lookup-entry]] | `:iot-site-wise-multi-layer-storage` |
 | `serviceManagedS3` | java.lang.Object | [[cdk.support/lookup-entry]] | `:service-managed-s3` |
 "
@@ -1255,7 +1255,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `jsonConfiguration` | java.lang.Object | [[cdk.support/lookup-entry]] | `:json-configuration` |
-| `parquetConfiguration` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$ParquetConfigurationProperty | [[cdk.support/lookup-entry]] | `:parquet-configuration` |
+| `parquetConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet-configuration` |
 "
   [^CfnDatastore$FileFormatConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :json-configuration)]
@@ -1285,7 +1285,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedS3Storage` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$CustomerManagedS3StorageProperty | [[cdk.support/lookup-entry]] | `:customer-managed-s3-storage` |
+| `customerManagedS3Storage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-s3-storage` |
 "
   [^CfnDatastore$IotSiteWiseMultiLayerStorageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :customer-managed-s3-storage)]
@@ -1313,7 +1313,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `schemaDefinition` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$SchemaDefinitionProperty | [[cdk.support/lookup-entry]] | `:schema-definition` |
+| `schemaDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema-definition` |
 "
   [^CfnDatastore$ParquetConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :schema-definition)]
@@ -1370,9 +1370,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `datastoreName` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-name` |
-| `datastorePartitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datastore-partitions` |
+| `datastorePartitions` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$DatastorePartitionsProperty | [[cdk.support/lookup-entry]] | `:datastore-partitions` |
 | `datastoreStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datastore-storage` |
-| `fileFormatConfiguration` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$FileFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:file-format-configuration` |
+| `fileFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file-format-configuration` |
 | `retentionPeriod` | software.amazon.awscdk.services.iotanalytics.CfnDatastore$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -1502,14 +1502,14 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addAttributes` | software.amazon.awscdk.services.iotanalytics.CfnPipeline$AddAttributesProperty | [[cdk.support/lookup-entry]] | `:add-attributes` |
+| `addAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:add-attributes` |
 | `channel` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:channel` |
-| `datastore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:datastore` |
+| `datastore` | software.amazon.awscdk.services.iotanalytics.CfnPipeline$DatastoreProperty | [[cdk.support/lookup-entry]] | `:datastore` |
 | `deviceRegistryEnrich` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-registry-enrich` |
-| `deviceShadowEnrich` | software.amazon.awscdk.services.iotanalytics.CfnPipeline$DeviceShadowEnrichProperty | [[cdk.support/lookup-entry]] | `:device-shadow-enrich` |
-| `filter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter` |
-| `lambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda` |
-| `math` | software.amazon.awscdk.services.iotanalytics.CfnPipeline$MathProperty | [[cdk.support/lookup-entry]] | `:math` |
+| `deviceShadowEnrich` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-shadow-enrich` |
+| `filter` | software.amazon.awscdk.services.iotanalytics.CfnPipeline$FilterProperty | [[cdk.support/lookup-entry]] | `:filter` |
+| `lambda` | software.amazon.awscdk.services.iotanalytics.CfnPipeline$LambdaProperty | [[cdk.support/lookup-entry]] | `:lambda` |
+| `math` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:math` |
 | `removeAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-attributes` |
 | `selectAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:select-attributes` |
 "

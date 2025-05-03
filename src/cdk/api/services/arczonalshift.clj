@@ -16,7 +16,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `practiceRunConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:practice-run-configuration` |
+| `practiceRunConfiguration` | software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty | [[cdk.support/lookup-entry]] | `:practice-run-configuration` |
 | `resourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-identifier` |
 | `zonalAutoshiftStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:zonal-autoshift-status` |
 "
@@ -83,7 +83,7 @@
 |---|---|---|---|
 | `blockedDates` | java.util.List | [[cdk.support/lookup-entry]] | `:blocked-dates` |
 | `blockedWindows` | java.util.List | [[cdk.support/lookup-entry]] | `:blocked-windows` |
-| `blockingAlarms` | java.util.List | [[cdk.support/lookup-entry]] | `:blocking-alarms` |
+| `blockingAlarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:blocking-alarms` |
 | `outcomeAlarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outcome-alarms` |
 "
   [^CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder builder id config]

@@ -233,7 +233,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
 | `ipAddresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ip-addresses` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -315,7 +315,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
-| `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
+| `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCrossAccountAttachment$Builder builder id config]
@@ -352,7 +352,7 @@ function on the data with the provided namespace id and item-key.  The found val
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
-| `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
+| `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCrossAccountAttachmentProps$Builder builder id config]
@@ -418,14 +418,14 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `endpointConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:endpoint-configurations` |
+| `endpointConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoint-configurations` |
 | `endpointGroupRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-group-region` |
 | `healthCheckIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-interval-seconds` |
 | `healthCheckPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-check-path` |
 | `healthCheckPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-port` |
 | `healthCheckProtocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-check-protocol` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
-| `portOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:port-overrides` |
+| `portOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-overrides` |
 | `thresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold-count` |
 | `trafficDialPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-dial-percentage` |
 "
@@ -474,7 +474,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attachmentArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:attachment-arn` |
-| `clientIpPreservationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:client-ip-preservation-enabled` |
+| `clientIpPreservationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-ip-preservation-enabled` |
 | `endpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint-id` |
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
@@ -548,7 +548,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `healthCheckPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-check-port` |
 | `healthCheckProtocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-check-protocol` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
-| `portOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:port-overrides` |
+| `portOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-overrides` |
 | `thresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold-count` |
 | `trafficDialPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-dial-percentage` |
 "

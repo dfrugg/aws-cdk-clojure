@@ -138,7 +138,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:access-endpoints` |
+| `accessEndpoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-endpoints` |
 | `appBlockArns` | java.util.List | [[cdk.support/lookup-entry]] | `:app-block-arns` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
@@ -148,7 +148,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `platform` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.services.appstream.CfnAppBlockBuilder$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnAppBlockBuilder$Builder builder id config]
   (when-some [data (lookup-entry config id :access-endpoints)]
@@ -289,9 +289,9 @@
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `packagingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:packaging-type` |
-| `postSetupScriptDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:post-setup-script-details` |
+| `postSetupScriptDetails` | software.amazon.awscdk.services.appstream.CfnAppBlock$ScriptDetailsProperty | [[cdk.support/lookup-entry]] | `:post-setup-script-details` |
 | `setupScriptDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:setup-script-details` |
-| `sourceS3Location` | software.amazon.awscdk.services.appstream.CfnAppBlock$S3LocationProperty | [[cdk.support/lookup-entry]] | `:source-s3-location` |
+| `sourceS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-s3-location` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAppBlockProps$Builder builder id config]
@@ -406,7 +406,7 @@
 | `attributesToDelete` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes-to-delete` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
-| `iconS3Location` | software.amazon.awscdk.services.appstream.CfnApplication$S3LocationProperty | [[cdk.support/lookup-entry]] | `:icon-s3-location` |
+| `iconS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:icon-s3-location` |
 | `instanceFamilies` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-families` |
 | `launchParameters` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-parameters` |
 | `launchPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-path` |
@@ -685,7 +685,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateBasedAuthProperties` | software.amazon.awscdk.services.appstream.CfnDirectoryConfig$CertificateBasedAuthPropertiesProperty | [[cdk.support/lookup-entry]] | `:certificate-based-auth-properties` |
+| `certificateBasedAuthProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-based-auth-properties` |
 | `directoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-name` |
 | `organizationalUnitDistinguishedNames` | java.util.List | [[cdk.support/lookup-entry]] | `:organizational-unit-distinguished-names` |
 | `serviceAccountCredentials` | software.amazon.awscdk.services.appstream.CfnDirectoryConfig$ServiceAccountCredentialsProperty | [[cdk.support/lookup-entry]] | `:service-account-credentials` |
@@ -753,10 +753,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateBasedAuthProperties` | software.amazon.awscdk.services.appstream.CfnDirectoryConfig$CertificateBasedAuthPropertiesProperty | [[cdk.support/lookup-entry]] | `:certificate-based-auth-properties` |
+| `certificateBasedAuthProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-based-auth-properties` |
 | `directoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-name` |
 | `organizationalUnitDistinguishedNames` | java.util.List | [[cdk.support/lookup-entry]] | `:organizational-unit-distinguished-names` |
-| `serviceAccountCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-account-credentials` |
+| `serviceAccountCredentials` | software.amazon.awscdk.services.appstream.CfnDirectoryConfig$ServiceAccountCredentialsProperty | [[cdk.support/lookup-entry]] | `:service-account-credentials` |
 "
   [^CfnDirectoryConfigProps$Builder builder id config]
   (when-some [data (lookup-entry config id :certificate-based-auth-properties)]
@@ -853,7 +853,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appVisibility` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-visibility` |
-| `attributes` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
@@ -936,8 +936,8 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `disconnectTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:disconnect-timeout-in-seconds` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
-| `domainJoinInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:domain-join-info` |
-| `enableDefaultInternetAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-default-internet-access` |
+| `domainJoinInfo` | software.amazon.awscdk.services.appstream.CfnFleet$DomainJoinInfoProperty | [[cdk.support/lookup-entry]] | `:domain-join-info` |
+| `enableDefaultInternetAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-default-internet-access` |
 | `fleetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:fleet-type` |
 | `iamRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-role-arn` |
 | `idleDisconnectTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-disconnect-timeout-in-seconds` |
@@ -1085,12 +1085,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `computeCapacity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compute-capacity` |
+| `computeCapacity` | software.amazon.awscdk.services.appstream.CfnFleet$ComputeCapacityProperty | [[cdk.support/lookup-entry]] | `:compute-capacity` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `disconnectTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:disconnect-timeout-in-seconds` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `domainJoinInfo` | software.amazon.awscdk.services.appstream.CfnFleet$DomainJoinInfoProperty | [[cdk.support/lookup-entry]] | `:domain-join-info` |
-| `enableDefaultInternetAccess` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-default-internet-access` |
+| `enableDefaultInternetAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-default-internet-access` |
 | `fleetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:fleet-type` |
 | `iamRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-role-arn` |
 | `idleDisconnectTimeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-disconnect-timeout-in-seconds` |
@@ -1269,7 +1269,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:access-endpoints` |
+| `accessEndpoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-endpoints` |
 | `appstreamAgentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:appstream-agent-version` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
@@ -1281,7 +1281,7 @@
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.services.appstream.CfnImageBuilder$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnImageBuilder$Builder builder id config]
   (when-some [data (lookup-entry config id :access-endpoints)]
@@ -1490,7 +1490,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `settingsGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:settings-group` |
 "
   [^CfnStack$ApplicationSettingsProperty$Builder builder id config]
@@ -1522,7 +1522,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessEndpoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-endpoints` |
-| `applicationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-settings` |
+| `applicationSettings` | software.amazon.awscdk.services.appstream.CfnStack$ApplicationSettingsProperty | [[cdk.support/lookup-entry]] | `:application-settings` |
 | `attributesToDelete` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes-to-delete` |
 | `deleteStorageConnectors` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-storage-connectors` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -1534,7 +1534,7 @@
 | `storageConnectors` | java.util.List | [[cdk.support/lookup-entry]] | `:storage-connectors` |
 | `streamingExperienceSettings` | software.amazon.awscdk.services.appstream.CfnStack$StreamingExperienceSettingsProperty | [[cdk.support/lookup-entry]] | `:streaming-experience-settings` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `userSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-settings` |
+| `userSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:user-settings` |
 "
   [^CfnStack$Builder builder id config]
   (when-some [data (lookup-entry config id :access-endpoints)]
@@ -1653,15 +1653,15 @@
 | `accessEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:access-endpoints` |
 | `applicationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-settings` |
 | `attributesToDelete` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes-to-delete` |
-| `deleteStorageConnectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:delete-storage-connectors` |
+| `deleteStorageConnectors` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:delete-storage-connectors` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `embedHostDomains` | java.util.List | [[cdk.support/lookup-entry]] | `:embed-host-domains` |
 | `feedbackUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:feedback-url` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `redirectUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:redirect-url` |
-| `storageConnectors` | java.util.List | [[cdk.support/lookup-entry]] | `:storage-connectors` |
-| `streamingExperienceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:streaming-experience-settings` |
+| `storageConnectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-connectors` |
+| `streamingExperienceSettings` | software.amazon.awscdk.services.appstream.CfnStack$StreamingExperienceSettingsProperty | [[cdk.support/lookup-entry]] | `:streaming-experience-settings` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `userSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-settings` |
 "
@@ -1780,7 +1780,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
-| `sendEmailNotification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:send-email-notification` |
+| `sendEmailNotification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:send-email-notification` |
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
@@ -1817,7 +1817,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:authentication-type` |
-| `sendEmailNotification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:send-email-notification` |
+| `sendEmailNotification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:send-email-notification` |
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "

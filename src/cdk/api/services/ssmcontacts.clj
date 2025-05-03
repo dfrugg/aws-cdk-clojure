@@ -74,7 +74,7 @@
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `channelType` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-type` |
 | `contactId` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-id` |
-| `deferActivation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:defer-activation` |
+| `deferActivation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:defer-activation` |
 "
   [^CfnContactChannel$Builder builder id config]
   (when-some [data (lookup-entry config id :channel-address)]
@@ -114,7 +114,7 @@
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `channelType` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-type` |
 | `contactId` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-id` |
-| `deferActivation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:defer-activation` |
+| `deferActivation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:defer-activation` |
 "
   [^CfnContactChannelProps$Builder builder id config]
   (when-some [data (lookup-entry config id :channel-address)]
@@ -182,7 +182,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contactId` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-id` |
-| `isEssential` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-essential` |
+| `isEssential` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-essential` |
 "
   [^CfnContact$ContactTargetInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :contact-id)]
@@ -251,7 +251,7 @@
 |---|---|---|---|
 | `durationInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-minutes` |
 | `rotationIds` | java.util.List | [[cdk.support/lookup-entry]] | `:rotation-ids` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnContact$StageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :duration-in-minutes)]
@@ -284,7 +284,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelTargetInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:channel-target-info` |
-| `contactTargetInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contact-target-info` |
+| `contactTargetInfo` | software.amazon.awscdk.services.ssmcontacts.CfnContact$ContactTargetInfoProperty | [[cdk.support/lookup-entry]] | `:contact-target-info` |
 "
   [^CfnContact$TargetsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :channel-target-info)]
@@ -316,7 +316,7 @@
 |---|---|---|---|
 | `contactId` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-id` |
 | `rotationIds` | java.util.List | [[cdk.support/lookup-entry]] | `:rotation-ids` |
-| `stages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stages` |
+| `stages` | java.util.List | [[cdk.support/lookup-entry]] | `:stages` |
 "
   [^CfnPlan$Builder builder id config]
   (when-some [data (lookup-entry config id :contact-id)]
@@ -380,7 +380,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contactId` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-id` |
-| `isEssential` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-essential` |
+| `isEssential` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-essential` |
 "
   [^CfnPlan$ContactTargetInfoProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :contact-id)]
@@ -445,7 +445,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `durationInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-minutes` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnPlan$StageProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :duration-in-minutes)]
@@ -476,7 +476,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelTargetInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:channel-target-info` |
-| `contactTargetInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contact-target-info` |
+| `contactTargetInfo` | software.amazon.awscdk.services.ssmcontacts.CfnPlan$ContactTargetInfoProperty | [[cdk.support/lookup-entry]] | `:contact-target-info` |
 "
   [^CfnPlan$TargetsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :channel-target-info)]
@@ -508,7 +508,7 @@
 |---|---|---|---|
 | `contactIds` | java.util.List | [[cdk.support/lookup-entry]] | `:contact-ids` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `recurrence` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recurrence` |
+| `recurrence` | software.amazon.awscdk.services.ssmcontacts.CfnRotation$RecurrenceSettingsProperty | [[cdk.support/lookup-entry]] | `:recurrence` |
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-zone-id` |
@@ -655,7 +655,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dailySettings` | java.util.List | [[cdk.support/lookup-entry]] | `:daily-settings` |
-| `monthlySettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monthly-settings` |
+| `monthlySettings` | java.util.List | [[cdk.support/lookup-entry]] | `:monthly-settings` |
 | `numberOfOnCalls` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-on-calls` |
 | `recurrenceMultiplier` | java.lang.Number | [[cdk.support/lookup-entry]] | `:recurrence-multiplier` |
 | `shiftCoverages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:shift-coverages` |
@@ -697,7 +697,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `coverageTimes` | java.util.List | [[cdk.support/lookup-entry]] | `:coverage-times` |
+| `coverageTimes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:coverage-times` |
 | `dayOfWeek` | java.lang.String | [[cdk.support/lookup-entry]] | `:day-of-week` |
 "
   [^CfnRotation$ShiftCoverageProperty$Builder builder id config]

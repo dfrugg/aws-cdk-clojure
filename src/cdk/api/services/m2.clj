@@ -21,7 +21,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.m2.CfnApplication$DefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `engineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-type` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
@@ -98,7 +98,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
+| `definition` | software.amazon.awscdk.services.m2.CfnApplication$DefinitionProperty | [[cdk.support/lookup-entry]] | `:definition` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `engineType` | java.lang.String | [[cdk.support/lookup-entry]] | `:engine-type` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
@@ -154,7 +154,7 @@
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
 | `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `storageConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-configurations` |
+| `storageConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:storage-configurations` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -306,7 +306,7 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
-| `publiclyAccessible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
+| `publiclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publicly-accessible` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `storageConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:storage-configurations` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
@@ -362,8 +362,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `efs` | software.amazon.awscdk.services.m2.CfnEnvironment$EfsStorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:efs` |
-| `fsx` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fsx` |
+| `efs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:efs` |
+| `fsx` | software.amazon.awscdk.services.m2.CfnEnvironment$FsxStorageConfigurationProperty | [[cdk.support/lookup-entry]] | `:fsx` |
 "
   [^CfnEnvironment$StorageConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :efs)]

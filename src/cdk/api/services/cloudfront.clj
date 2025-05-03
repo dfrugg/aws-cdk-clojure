@@ -990,10 +990,10 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cookiesConfig` | software.amazon.awscdk.services.cloudfront.CfnCachePolicy$CookiesConfigProperty | [[cdk.support/lookup-entry]] | `:cookies-config` |
+| `cookiesConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookies-config` |
 | `enableAcceptEncodingBrotli` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-accept-encoding-brotli` |
 | `enableAcceptEncodingGzip` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-accept-encoding-gzip` |
-| `headersConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:headers-config` |
+| `headersConfig` | software.amazon.awscdk.services.cloudfront.CfnCachePolicy$HeadersConfigProperty | [[cdk.support/lookup-entry]] | `:headers-config` |
 | `queryStringsConfig` | software.amazon.awscdk.services.cloudfront.CfnCachePolicy$QueryStringsConfigProperty | [[cdk.support/lookup-entry]] | `:query-strings-config` |
 "
   [^CfnCachePolicy$ParametersInCacheKeyAndForwardedToOriginProperty$Builder builder id config]
@@ -1030,7 +1030,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cachePolicyConfig` | software.amazon.awscdk.services.cloudfront.CfnCachePolicy$CachePolicyConfigProperty | [[cdk.support/lookup-entry]] | `:cache-policy-config` |
+| `cachePolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cache-policy-config` |
 "
   [^CfnCachePolicyProps$Builder builder id config]
   (when-some [data (lookup-entry config id :cache-policy-config)]
@@ -1201,9 +1201,9 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `singleHeaderPolicyConfig` | software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy$SingleHeaderPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:single-header-policy-config` |
-| `singleWeightPolicyConfig` | software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:single-weight-policy-config` |
+| `singleWeightPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:single-weight-policy-config` |
 | `stagingDistributionDnsNames` | java.util.List | [[cdk.support/lookup-entry]] | `:staging-distribution-dns-names` |
 | `trafficConfig` | software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy$TrafficConfigProperty | [[cdk.support/lookup-entry]] | `:traffic-config` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
@@ -1365,7 +1365,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sessionStickinessConfig` | software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty | [[cdk.support/lookup-entry]] | `:session-stickiness-config` |
+| `sessionStickinessConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-stickiness-config` |
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder builder id config]
@@ -1396,7 +1396,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sessionStickinessConfig` | software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty | [[cdk.support/lookup-entry]] | `:session-stickiness-config` |
+| `sessionStickinessConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-stickiness-config` |
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder builder id config]
@@ -1427,8 +1427,8 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `singleHeaderConfig` | software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty | [[cdk.support/lookup-entry]] | `:single-header-config` |
-| `singleWeightConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:single-weight-config` |
+| `singleHeaderConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:single-header-config` |
+| `singleWeightConfig` | software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy$SingleWeightConfigProperty | [[cdk.support/lookup-entry]] | `:single-weight-config` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnContinuousDeploymentPolicy$TrafficConfigProperty$Builder builder id config]
@@ -1461,7 +1461,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `distributionConfig` | software.amazon.awscdk.services.cloudfront.CfnDistribution$DistributionConfigProperty | [[cdk.support/lookup-entry]] | `:distribution-config` |
+| `distributionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:distribution-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDistribution$Builder builder id config]
@@ -1499,8 +1499,8 @@ __Create Form:__ ___[java.lang.String]___
 | `defaultTtl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-ttl` |
 | `fieldLevelEncryptionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-level-encryption-id` |
 | `forwardedValues` | software.amazon.awscdk.services.cloudfront.CfnDistribution$ForwardedValuesProperty | [[cdk.support/lookup-entry]] | `:forwarded-values` |
-| `functionAssociations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:function-associations` |
-| `lambdaFunctionAssociations` | java.util.List | [[cdk.support/lookup-entry]] | `:lambda-function-associations` |
+| `functionAssociations` | java.util.List | [[cdk.support/lookup-entry]] | `:function-associations` |
+| `lambdaFunctionAssociations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-function-associations` |
 | `maxTtl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-ttl` |
 | `minTtl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-ttl` |
 | `originRequestPolicyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-request-policy-id` |
@@ -1694,8 +1694,8 @@ __Create Form:__ ___[java.lang.String]___
 | `compress` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:compress` |
 | `defaultTtl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-ttl` |
 | `fieldLevelEncryptionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:field-level-encryption-id` |
-| `forwardedValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:forwarded-values` |
-| `functionAssociations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:function-associations` |
+| `forwardedValues` | software.amazon.awscdk.services.cloudfront.CfnDistribution$ForwardedValuesProperty | [[cdk.support/lookup-entry]] | `:forwarded-values` |
+| `functionAssociations` | java.util.List | [[cdk.support/lookup-entry]] | `:function-associations` |
 | `lambdaFunctionAssociations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-function-associations` |
 | `maxTtl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-ttl` |
 | `minTtl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-ttl` |
@@ -1776,20 +1776,20 @@ __Create Form:__ ___[java.lang.String]___
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 | `continuousDeploymentPolicyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:continuous-deployment-policy-id` |
 | `customErrorResponses` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-error-responses` |
-| `customOrigin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-origin` |
+| `customOrigin` | software.amazon.awscdk.services.cloudfront.CfnDistribution$LegacyCustomOriginProperty | [[cdk.support/lookup-entry]] | `:custom-origin` |
 | `defaultCacheBehavior` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-cache-behavior` |
 | `defaultRootObject` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-root-object` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `httpVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-version` |
 | `ipv6Enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ipv6-enabled` |
-| `logging` | software.amazon.awscdk.services.cloudfront.CfnDistribution$LoggingProperty | [[cdk.support/lookup-entry]] | `:logging` |
+| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
 | `originGroups` | software.amazon.awscdk.services.cloudfront.CfnDistribution$OriginGroupsProperty | [[cdk.support/lookup-entry]] | `:origin-groups` |
 | `origins` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origins` |
 | `priceClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:price-class` |
-| `restrictions` | software.amazon.awscdk.services.cloudfront.CfnDistribution$RestrictionsProperty | [[cdk.support/lookup-entry]] | `:restrictions` |
-| `s3Origin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-origin` |
+| `restrictions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrictions` |
+| `s3Origin` | software.amazon.awscdk.services.cloudfront.CfnDistribution$LegacyS3OriginProperty | [[cdk.support/lookup-entry]] | `:s3-origin` |
 | `staging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:staging` |
-| `viewerCertificate` | software.amazon.awscdk.services.cloudfront.CfnDistribution$ViewerCertificateProperty | [[cdk.support/lookup-entry]] | `:viewer-certificate` |
+| `viewerCertificate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:viewer-certificate` |
 | `webAclId` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-acl-id` |
 "
   [^CfnDistribution$DistributionConfigProperty$Builder builder id config]
@@ -1860,7 +1860,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `cookies` | software.amazon.awscdk.services.cloudfront.CfnDistribution$CookiesProperty | [[cdk.support/lookup-entry]] | `:cookies` |
 | `headers` | java.util.List | [[cdk.support/lookup-entry]] | `:headers` |
-| `queryString` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-string` |
+| `queryString` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:query-string` |
 | `queryStringCacheKeys` | java.util.List | [[cdk.support/lookup-entry]] | `:query-string-cache-keys` |
 "
   [^CfnDistribution$ForwardedValuesProperty$Builder builder id config]
@@ -2183,7 +2183,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `items` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:items` |
+| `items` | java.util.List | [[cdk.support/lookup-entry]] | `:items` |
 | `quantity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:quantity` |
 "
   [^CfnDistribution$OriginGroupMembersProperty$Builder builder id config]
@@ -2248,7 +2248,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `items` | java.util.List | [[cdk.support/lookup-entry]] | `:items` |
+| `items` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:items` |
 | `quantity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:quantity` |
 "
   [^CfnDistribution$OriginGroupsProperty$Builder builder id config]
@@ -2285,10 +2285,10 @@ __Create Form:__ ___[java.lang.String]___
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `originAccessControlId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-access-control-id` |
-| `originCustomHeaders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-custom-headers` |
+| `originCustomHeaders` | java.util.List | [[cdk.support/lookup-entry]] | `:origin-custom-headers` |
 | `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
-| `originShield` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-shield` |
-| `s3OriginConfig` | software.amazon.awscdk.services.cloudfront.CfnDistribution$S3OriginConfigProperty | [[cdk.support/lookup-entry]] | `:s3-origin-config` |
+| `originShield` | software.amazon.awscdk.services.cloudfront.CfnDistribution$OriginShieldProperty | [[cdk.support/lookup-entry]] | `:origin-shield` |
+| `s3OriginConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-origin-config` |
 "
   [^CfnDistribution$OriginProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connection-attempts)]
@@ -2334,7 +2334,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
 "
   [^CfnDistribution$OriginShieldProperty$Builder builder id config]
@@ -2365,7 +2365,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `distributionConfig` | software.amazon.awscdk.services.cloudfront.CfnDistribution$DistributionConfigProperty | [[cdk.support/lookup-entry]] | `:distribution-config` |
+| `distributionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:distribution-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDistributionProps$Builder builder id config]
@@ -2523,7 +2523,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoPublish` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-publish` |
+| `autoPublish` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-publish` |
 | `functionCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-code` |
 | `functionConfig` | software.amazon.awscdk.services.cloudfront.CfnFunction$FunctionConfigProperty | [[cdk.support/lookup-entry]] | `:function-config` |
 | `functionMetadata` | software.amazon.awscdk.services.cloudfront.CfnFunction$FunctionMetadataProperty | [[cdk.support/lookup-entry]] | `:function-metadata` |
@@ -2564,7 +2564,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `keyValueStoreAssociations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-value-store-associations` |
+| `keyValueStoreAssociations` | java.util.List | [[cdk.support/lookup-entry]] | `:key-value-store-associations` |
 | `runtime` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime` |
 "
   [^CfnFunction$FunctionConfigProperty$Builder builder id config]
@@ -2655,8 +2655,8 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `autoPublish` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-publish` |
 | `functionCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-code` |
-| `functionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:function-config` |
-| `functionMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:function-metadata` |
+| `functionConfig` | software.amazon.awscdk.services.cloudfront.CfnFunction$FunctionConfigProperty | [[cdk.support/lookup-entry]] | `:function-config` |
+| `functionMetadata` | software.amazon.awscdk.services.cloudfront.CfnFunction$FunctionMetadataProperty | [[cdk.support/lookup-entry]] | `:function-metadata` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnFunctionProps$Builder builder id config]
@@ -2693,7 +2693,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `keyGroupConfig` | software.amazon.awscdk.services.cloudfront.CfnKeyGroup$KeyGroupConfigProperty | [[cdk.support/lookup-entry]] | `:key-group-config` |
+| `keyGroupConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-group-config` |
 "
   [^CfnKeyGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :key-group-config)]
@@ -2755,7 +2755,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `keyGroupConfig` | software.amazon.awscdk.services.cloudfront.CfnKeyGroup$KeyGroupConfigProperty | [[cdk.support/lookup-entry]] | `:key-group-config` |
+| `keyGroupConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-group-config` |
 "
   [^CfnKeyGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :key-group-config)]
@@ -2883,7 +2883,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `distributionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:distribution-id` |
-| `monitoringSubscription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-subscription` |
+| `monitoringSubscription` | software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription$MonitoringSubscriptionProperty | [[cdk.support/lookup-entry]] | `:monitoring-subscription` |
 "
   [^CfnMonitoringSubscription$Builder builder id config]
   (when-some [data (lookup-entry config id :distribution-id)]
@@ -2913,7 +2913,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `realtimeMetricsSubscriptionConfig` | software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty | [[cdk.support/lookup-entry]] | `:realtime-metrics-subscription-config` |
+| `realtimeMetricsSubscriptionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:realtime-metrics-subscription-config` |
 "
   [^CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :realtime-metrics-subscription-config)]
@@ -2942,7 +2942,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `distributionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:distribution-id` |
-| `monitoringSubscription` | software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription$MonitoringSubscriptionProperty | [[cdk.support/lookup-entry]] | `:monitoring-subscription` |
+| `monitoringSubscription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-subscription` |
 "
   [^CfnMonitoringSubscriptionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :distribution-id)]
@@ -3000,7 +3000,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `originAccessControlConfig` | software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl$OriginAccessControlConfigProperty | [[cdk.support/lookup-entry]] | `:origin-access-control-config` |
+| `originAccessControlConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-access-control-config` |
 "
   [^CfnOriginAccessControl$Builder builder id config]
   (when-some [data (lookup-entry config id :origin-access-control-config)]
@@ -3068,7 +3068,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `originAccessControlConfig` | software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl$OriginAccessControlConfigProperty | [[cdk.support/lookup-entry]] | `:origin-access-control-config` |
+| `originAccessControlConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-access-control-config` |
 "
   [^CfnOriginAccessControlProps$Builder builder id config]
   (when-some [data (lookup-entry config id :origin-access-control-config)]
@@ -3096,7 +3096,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `originRequestPolicyConfig` | software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:origin-request-policy-config` |
+| `originRequestPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-request-policy-config` |
 "
   [^CfnOriginRequestPolicy$Builder builder id config]
   (when-some [data (lookup-entry config id :origin-request-policy-config)]
@@ -3187,10 +3187,10 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `cookiesConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cookies-config` |
+| `cookiesConfig` | software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy$CookiesConfigProperty | [[cdk.support/lookup-entry]] | `:cookies-config` |
 | `headersConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:headers-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `queryStringsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-strings-config` |
+| `queryStringsConfig` | software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy$QueryStringsConfigProperty | [[cdk.support/lookup-entry]] | `:query-strings-config` |
 "
   [^CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :comment)]
@@ -3226,7 +3226,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `originRequestPolicyConfig` | software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:origin-request-policy-config` |
+| `originRequestPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-request-policy-config` |
 "
   [^CfnOriginRequestPolicyProps$Builder builder id config]
   (when-some [data (lookup-entry config id :origin-request-policy-config)]
@@ -3285,7 +3285,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `publicKeyConfig` | software.amazon.awscdk.services.cloudfront.CfnPublicKey$PublicKeyConfigProperty | [[cdk.support/lookup-entry]] | `:public-key-config` |
+| `publicKeyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:public-key-config` |
 "
   [^CfnPublicKey$Builder builder id config]
   (when-some [data (lookup-entry config id :public-key-config)]
@@ -3415,7 +3415,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `kinesisStreamConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-stream-config` |
+| `kinesisStreamConfig` | software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig$KinesisStreamConfigProperty | [[cdk.support/lookup-entry]] | `:kinesis-stream-config` |
 | `streamType` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-type` |
 "
   [^CfnRealtimeLogConfig$EndPointProperty$Builder builder id config]
@@ -3714,9 +3714,9 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessControlAllowCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-control-allow-credentials` |
-| `accessControlAllowHeaders` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty | [[cdk.support/lookup-entry]] | `:access-control-allow-headers` |
+| `accessControlAllowHeaders` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-control-allow-headers` |
 | `accessControlAllowMethods` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$AccessControlAllowMethodsProperty | [[cdk.support/lookup-entry]] | `:access-control-allow-methods` |
-| `accessControlAllowOrigins` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-control-allow-origins` |
+| `accessControlAllowOrigins` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty | [[cdk.support/lookup-entry]] | `:access-control-allow-origins` |
 | `accessControlExposeHeaders` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$AccessControlExposeHeadersProperty | [[cdk.support/lookup-entry]] | `:access-control-expose-headers` |
 | `accessControlMaxAgeSec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:access-control-max-age-sec` |
 | `originOverride` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:origin-override` |
@@ -3760,7 +3760,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `header` | java.lang.String | [[cdk.support/lookup-entry]] | `:header` |
-| `override` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:override` |
+| `override` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:override` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnResponseHeadersPolicy$CustomHeaderProperty$Builder builder id config]
@@ -3793,7 +3793,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `items` | java.util.List | [[cdk.support/lookup-entry]] | `:items` |
+| `items` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:items` |
 "
   [^CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :items)]
@@ -3852,7 +3852,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `responseHeadersPolicyConfig` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty | [[cdk.support/lookup-entry]] | `:response-headers-policy-config` |
+| `responseHeadersPolicyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:response-headers-policy-config` |
 "
   [^CfnResponseHeadersPolicyProps$Builder builder id config]
   (when-some [data (lookup-entry config id :response-headers-policy-config)]
@@ -3968,12 +3968,12 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `corsConfig` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$CorsConfigProperty | [[cdk.support/lookup-entry]] | `:cors-config` |
-| `customHeadersConfig` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$CustomHeadersConfigProperty | [[cdk.support/lookup-entry]] | `:custom-headers-config` |
+| `corsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cors-config` |
+| `customHeadersConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-headers-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `removeHeadersConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-headers-config` |
+| `removeHeadersConfig` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$RemoveHeadersConfigProperty | [[cdk.support/lookup-entry]] | `:remove-headers-config` |
 | `securityHeadersConfig` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$SecurityHeadersConfigProperty | [[cdk.support/lookup-entry]] | `:security-headers-config` |
-| `serverTimingHeadersConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-timing-headers-config` |
+| `serverTimingHeadersConfig` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty | [[cdk.support/lookup-entry]] | `:server-timing-headers-config` |
 "
   [^CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :comment)]
@@ -4014,11 +4014,11 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contentSecurityPolicy` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$ContentSecurityPolicyProperty | [[cdk.support/lookup-entry]] | `:content-security-policy` |
-| `contentTypeOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-type-options` |
+| `contentTypeOptions` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$ContentTypeOptionsProperty | [[cdk.support/lookup-entry]] | `:content-type-options` |
 | `frameOptions` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$FrameOptionsProperty | [[cdk.support/lookup-entry]] | `:frame-options` |
 | `referrerPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:referrer-policy` |
-| `strictTransportSecurity` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$StrictTransportSecurityProperty | [[cdk.support/lookup-entry]] | `:strict-transport-security` |
-| `xssProtection` | software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy$XSSProtectionProperty | [[cdk.support/lookup-entry]] | `:xss-protection` |
+| `strictTransportSecurity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:strict-transport-security` |
+| `xssProtection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xss-protection` |
 "
   [^CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :content-security-policy)]
@@ -4056,7 +4056,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `samplingRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sampling-rate` |
 "
   [^CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder builder id config]
@@ -4089,8 +4089,8 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `accessControlMaxAgeSec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:access-control-max-age-sec` |
 | `includeSubdomains` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-subdomains` |
-| `override` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:override` |
-| `preload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preload` |
+| `override` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:override` |
+| `preload` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preload` |
 "
   [^CfnResponseHeadersPolicy$StrictTransportSecurityProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-control-max-age-sec)]
@@ -4124,8 +4124,8 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `modeBlock` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mode-block` |
-| `override` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:override` |
+| `modeBlock` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:mode-block` |
+| `override` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:override` |
 | `protection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:protection` |
 | `reportUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:report-uri` |
 "
@@ -4161,7 +4161,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `streamingDistributionConfig` | software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution$StreamingDistributionConfigProperty | [[cdk.support/lookup-entry]] | `:streaming-distribution-config` |
+| `streamingDistributionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:streaming-distribution-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamingDistribution$Builder builder id config]
@@ -4291,10 +4291,10 @@ __Create Form:__ ___[java.lang.String]___
 | `aliases` | java.util.List | [[cdk.support/lookup-entry]] | `:aliases` |
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `logging` | software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution$LoggingProperty | [[cdk.support/lookup-entry]] | `:logging` |
+| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
 | `priceClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:price-class` |
-| `s3Origin` | software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution$S3OriginProperty | [[cdk.support/lookup-entry]] | `:s3-origin` |
-| `trustedSigners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trusted-signers` |
+| `s3Origin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-origin` |
+| `trustedSigners` | software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution$TrustedSignersProperty | [[cdk.support/lookup-entry]] | `:trusted-signers` |
 "
   [^CfnStreamingDistribution$StreamingDistributionConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aliases)]
@@ -4335,7 +4335,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsAccountNumbers` | java.util.List | [[cdk.support/lookup-entry]] | `:aws-account-numbers` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnStreamingDistribution$TrustedSignersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :aws-account-numbers)]

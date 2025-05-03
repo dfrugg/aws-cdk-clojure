@@ -128,7 +128,7 @@
 |---|---|---|---|
 | `alias` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias` |
 | `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
-| `scrapeConfiguration` | software.amazon.awscdk.services.aps.CfnScraper$ScrapeConfigurationProperty | [[cdk.support/lookup-entry]] | `:scrape-configuration` |
+| `scrapeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scrape-configuration` |
 | `source` | software.amazon.awscdk.services.aps.CfnScraper$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -166,7 +166,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ampConfiguration` | software.amazon.awscdk.services.aps.CfnScraper$AmpConfigurationProperty | [[cdk.support/lookup-entry]] | `:amp-configuration` |
+| `ampConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amp-configuration` |
 "
   [^CfnScraper$DestinationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :amp-configuration)]
@@ -230,7 +230,7 @@
 |---|---|---|---|
 | `alias` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias` |
 | `destination` | software.amazon.awscdk.services.aps.CfnScraper$DestinationProperty | [[cdk.support/lookup-entry]] | `:destination` |
-| `scrapeConfiguration` | software.amazon.awscdk.services.aps.CfnScraper$ScrapeConfigurationProperty | [[cdk.support/lookup-entry]] | `:scrape-configuration` |
+| `scrapeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scrape-configuration` |
 | `source` | software.amazon.awscdk.services.aps.CfnScraper$SourceProperty | [[cdk.support/lookup-entry]] | `:source` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -296,7 +296,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `eksConfiguration` | software.amazon.awscdk.services.aps.CfnScraper$EksConfigurationProperty | [[cdk.support/lookup-entry]] | `:eks-configuration` |
+| `eksConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eks-configuration` |
 "
   [^CfnScraper$SourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :eks-configuration)]

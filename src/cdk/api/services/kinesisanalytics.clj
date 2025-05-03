@@ -140,7 +140,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `cloudWatchLoggingOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-option` |
+| `cloudWatchLoggingOption` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2$CloudWatchLoggingOptionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-option` |
 "
   [^CfnApplicationCloudWatchLoggingOptionV2$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -347,7 +347,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `inputParallelism` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-parallelism` |
+| `inputParallelism` | software.amazon.awscdk.services.kinesisanalytics.CfnApplication$InputParallelismProperty | [[cdk.support/lookup-entry]] | `:input-parallelism` |
 | `inputProcessingConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplication$InputProcessingConfigurationProperty | [[cdk.support/lookup-entry]] | `:input-processing-configuration` |
 | `inputSchema` | software.amazon.awscdk.services.kinesisanalytics.CfnApplication$InputSchemaProperty | [[cdk.support/lookup-entry]] | `:input-schema` |
 | `kinesisFirehoseInput` | software.amazon.awscdk.services.kinesisanalytics.CfnApplication$KinesisFirehoseInputProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-input` |
@@ -514,8 +514,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csvMappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplication$CSVMappingParametersProperty | [[cdk.support/lookup-entry]] | `:csv-mapping-parameters` |
-| `jsonMappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
+| `csvMappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv-mapping-parameters` |
+| `jsonMappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplication$JSONMappingParametersProperty | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
 "
   [^CfnApplication$MappingParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv-mapping-parameters)]
@@ -698,7 +698,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationSchema` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput$DestinationSchemaProperty | [[cdk.support/lookup-entry]] | `:destination-schema` |
-| `kinesisFirehoseOutput` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput$KinesisFirehoseOutputProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-output` |
+| `kinesisFirehoseOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-firehose-output` |
 | `kinesisStreamsOutput` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput$KinesisStreamsOutputProperty | [[cdk.support/lookup-entry]] | `:kinesis-streams-output` |
 | `lambdaOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-output` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -912,7 +912,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationSchema` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2$DestinationSchemaProperty | [[cdk.support/lookup-entry]] | `:destination-schema` |
-| `kinesisFirehoseOutput` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2$KinesisFirehoseOutputProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-output` |
+| `kinesisFirehoseOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kinesis-firehose-output` |
 | `kinesisStreamsOutput` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2$KinesisStreamsOutputProperty | [[cdk.support/lookup-entry]] | `:kinesis-streams-output` |
 | `lambdaOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-output` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
@@ -952,7 +952,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `output` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2$OutputProperty | [[cdk.support/lookup-entry]] | `:output` |
+| `output` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output` |
 "
   [^CfnApplicationOutputV2Props$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -985,7 +985,7 @@
 | `applicationCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-code` |
 | `applicationDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-description` |
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `inputs` | java.util.List | [[cdk.support/lookup-entry]] | `:inputs` |
+| `inputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inputs` |
 "
   [^CfnApplicationProps$Builder builder id config]
   (when-some [data (lookup-entry config id :application-code)]
@@ -1053,7 +1053,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `mappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplication$MappingParametersProperty | [[cdk.support/lookup-entry]] | `:mapping-parameters` |
+| `mappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapping-parameters` |
 | `recordFormatType` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-format-type` |
 "
   [^CfnApplication$RecordFormatProperty$Builder builder id config]
@@ -1175,7 +1175,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `csvMappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv-mapping-parameters` |
-| `jsonMappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
+| `jsonMappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource$JSONMappingParametersProperty | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
 "
   [^CfnApplicationReferenceDataSource$MappingParametersProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :csv-mapping-parameters)]
@@ -1302,7 +1302,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `referenceSchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-schema` |
-| `s3ReferenceDataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-reference-data-source` |
+| `s3ReferenceDataSource` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource$S3ReferenceDataSourceProperty | [[cdk.support/lookup-entry]] | `:s3-reference-data-source` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnApplicationReferenceDataSource$ReferenceDataSourceProperty$Builder builder id config]
@@ -1404,7 +1404,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `referenceDataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-data-source` |
+| `referenceDataSource` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2$ReferenceDataSourceProperty | [[cdk.support/lookup-entry]] | `:reference-data-source` |
 "
   [^CfnApplicationReferenceDataSourceV2$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -1493,7 +1493,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csvMappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2$CSVMappingParametersProperty | [[cdk.support/lookup-entry]] | `:csv-mapping-parameters` |
+| `csvMappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv-mapping-parameters` |
 | `jsonMappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2$JSONMappingParametersProperty | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
 "
   [^CfnApplicationReferenceDataSourceV2$MappingParametersProperty$Builder builder id config]
@@ -1525,7 +1525,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `referenceDataSource` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2$ReferenceDataSourceProperty | [[cdk.support/lookup-entry]] | `:reference-data-source` |
+| `referenceDataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-data-source` |
 "
   [^CfnApplicationReferenceDataSourceV2Props$Builder builder id config]
   (when-some [data (lookup-entry config id :application-name)]
@@ -1589,7 +1589,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `mappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2$MappingParametersProperty | [[cdk.support/lookup-entry]] | `:mapping-parameters` |
+| `mappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapping-parameters` |
 | `recordFormatType` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-format-type` |
 "
   [^CfnApplicationReferenceDataSourceV2$RecordFormatProperty$Builder builder id config]
@@ -1621,7 +1621,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `referenceSchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reference-schema` |
-| `s3ReferenceDataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-reference-data-source` |
+| `s3ReferenceDataSource` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2$S3ReferenceDataSourceProperty | [[cdk.support/lookup-entry]] | `:s3-reference-data-source` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnApplicationReferenceDataSourceV2$ReferenceDataSourceProperty$Builder builder id config]
@@ -1654,9 +1654,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `recordColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-columns` |
+| `recordColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:record-columns` |
 | `recordEncoding` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-encoding` |
-| `recordFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-format` |
+| `recordFormat` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2$RecordFormatProperty | [[cdk.support/lookup-entry]] | `:record-format` |
 "
   [^CfnApplicationReferenceDataSourceV2$ReferenceSchemaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :record-columns)]
@@ -1752,9 +1752,9 @@
 |---|---|---|---|
 | `applicationCodeConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$ApplicationCodeConfigurationProperty | [[cdk.support/lookup-entry]] | `:application-code-configuration` |
 | `applicationSnapshotConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$ApplicationSnapshotConfigurationProperty | [[cdk.support/lookup-entry]] | `:application-snapshot-configuration` |
-| `environmentProperties` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$EnvironmentPropertiesProperty | [[cdk.support/lookup-entry]] | `:environment-properties` |
+| `environmentProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment-properties` |
 | `flinkApplicationConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$FlinkApplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:flink-application-configuration` |
-| `sqlApplicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sql-application-configuration` |
+| `sqlApplicationConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$SqlApplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:sql-application-configuration` |
 | `vpcConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configurations` |
 | `zeppelinApplicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zeppelin-application-configuration` |
 "
@@ -1855,7 +1855,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `snapshotsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshots-enabled` |
+| `snapshotsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:snapshots-enabled` |
 "
   [^CfnApplicationV2$ApplicationSnapshotConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :snapshots-enabled)]
@@ -1935,7 +1935,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `glueDataCatalogConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$GlueDataCatalogConfigurationProperty | [[cdk.support/lookup-entry]] | `:glue-data-catalog-configuration` |
+| `glueDataCatalogConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue-data-catalog-configuration` |
 "
   [^CfnApplicationV2$CatalogConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :glue-data-catalog-configuration)]
@@ -1964,7 +1964,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `checkpointInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:checkpoint-interval` |
-| `checkpointingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:checkpointing-enabled` |
+| `checkpointingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:checkpointing-enabled` |
 | `configurationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-type` |
 | `minPauseBetweenCheckpoints` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-pause-between-checkpoints` |
 "
@@ -2000,7 +2000,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3ContentLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-content-location` |
+| `s3ContentLocation` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$S3ContentLocationProperty | [[cdk.support/lookup-entry]] | `:s3-content-location` |
 | `textContent` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-content` |
 | `zipFileContent` | java.lang.String | [[cdk.support/lookup-entry]] | `:zip-file-content` |
 "
@@ -2066,7 +2066,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `artifactType` | java.lang.String | [[cdk.support/lookup-entry]] | `:artifact-type` |
-| `mavenReference` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:maven-reference` |
+| `mavenReference` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$MavenReferenceProperty | [[cdk.support/lookup-entry]] | `:maven-reference` |
 | `s3ContentLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-content-location` |
 "
   [^CfnApplicationV2$CustomArtifactConfigurationProperty$Builder builder id config]
@@ -2099,7 +2099,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3ContentLocation` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$S3ContentBaseLocationProperty | [[cdk.support/lookup-entry]] | `:s3-content-location` |
+| `s3ContentLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-content-location` |
 "
   [^CfnApplicationV2$DeployAsApplicationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-content-location)]
@@ -2127,7 +2127,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `propertyGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:property-groups` |
+| `propertyGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-groups` |
 "
   [^CfnApplicationV2$EnvironmentPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :property-groups)]
@@ -2155,9 +2155,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `checkpointConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$CheckpointConfigurationProperty | [[cdk.support/lookup-entry]] | `:checkpoint-configuration` |
+| `checkpointConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:checkpoint-configuration` |
 | `monitoringConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$MonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:monitoring-configuration` |
-| `parallelismConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$ParallelismConfigurationProperty | [[cdk.support/lookup-entry]] | `:parallelism-configuration` |
+| `parallelismConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parallelism-configuration` |
 "
   [^CfnApplicationV2$FlinkApplicationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :checkpoint-configuration)]
@@ -2189,7 +2189,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowNonRestoredState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-non-restored-state` |
+| `allowNonRestoredState` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-non-restored-state` |
 "
   [^CfnApplicationV2$FlinkRunConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allow-non-restored-state)]
@@ -2301,7 +2301,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `inputLambdaProcessor` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$InputLambdaProcessorProperty | [[cdk.support/lookup-entry]] | `:input-lambda-processor` |
+| `inputLambdaProcessor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-lambda-processor` |
 "
   [^CfnApplicationV2$InputProcessingConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :input-lambda-processor)]
@@ -2330,7 +2330,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `inputParallelism` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$InputParallelismProperty | [[cdk.support/lookup-entry]] | `:input-parallelism` |
-| `inputProcessingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-processing-configuration` |
+| `inputProcessingConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$InputProcessingConfigurationProperty | [[cdk.support/lookup-entry]] | `:input-processing-configuration` |
 | `inputSchema` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$InputSchemaProperty | [[cdk.support/lookup-entry]] | `:input-schema` |
 | `kinesisFirehoseInput` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$KinesisFirehoseInputProperty | [[cdk.support/lookup-entry]] | `:kinesis-firehose-input` |
 | `kinesisStreamsInput` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$KinesisStreamsInputProperty | [[cdk.support/lookup-entry]] | `:kinesis-streams-input` |
@@ -2374,7 +2374,7 @@
 |---|---|---|---|
 | `recordColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:record-columns` |
 | `recordEncoding` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-encoding` |
-| `recordFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-format` |
+| `recordFormat` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$RecordFormatProperty | [[cdk.support/lookup-entry]] | `:record-format` |
 "
   [^CfnApplicationV2$InputSchemaProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :record-columns)]
@@ -2490,7 +2490,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csvMappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$CSVMappingParametersProperty | [[cdk.support/lookup-entry]] | `:csv-mapping-parameters` |
+| `csvMappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:csv-mapping-parameters` |
 | `jsonMappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$JSONMappingParametersProperty | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
 "
   [^CfnApplicationV2$MappingParametersProperty$Builder builder id config]
@@ -2589,7 +2589,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScalingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-scaling-enabled` |
+| `autoScalingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling-enabled` |
 | `configurationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-type` |
 | `parallelism` | java.lang.Number | [[cdk.support/lookup-entry]] | `:parallelism` |
 | `parallelismPerKpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:parallelism-per-kpu` |
@@ -2657,12 +2657,12 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `applicationConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$ApplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:application-configuration` |
+| `applicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-configuration` |
 | `applicationDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-description` |
 | `applicationMaintenanceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:application-maintenance-configuration` |
 | `applicationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-mode` |
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `runConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-configuration` |
+| `runConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$RunConfigurationProperty | [[cdk.support/lookup-entry]] | `:run-configuration` |
 | `runtimeEnvironment` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime-environment` |
 | `serviceExecutionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-execution-role` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -2743,7 +2743,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `mappingParameters` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$MappingParametersProperty | [[cdk.support/lookup-entry]] | `:mapping-parameters` |
+| `mappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mapping-parameters` |
 | `recordFormatType` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-format-type` |
 "
   [^CfnApplicationV2$RecordFormatProperty$Builder builder id config]
@@ -2870,7 +2870,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `inputs` | java.util.List | [[cdk.support/lookup-entry]] | `:inputs` |
+| `inputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inputs` |
 "
   [^CfnApplicationV2$SqlApplicationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :inputs)]
@@ -2929,10 +2929,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `catalogConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:catalog-configuration` |
+| `catalogConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$CatalogConfigurationProperty | [[cdk.support/lookup-entry]] | `:catalog-configuration` |
 | `customArtifactsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-artifacts-configuration` |
-| `deployAsApplicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deploy-as-application-configuration` |
-| `monitoringConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitoring-configuration` |
+| `deployAsApplicationConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$DeployAsApplicationConfigurationProperty | [[cdk.support/lookup-entry]] | `:deploy-as-application-configuration` |
+| `monitoringConfiguration` | software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2$ZeppelinMonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:monitoring-configuration` |
 "
   [^CfnApplicationV2$ZeppelinApplicationConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :catalog-configuration)]

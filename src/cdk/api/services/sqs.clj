@@ -112,7 +112,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
+| `contentBasedDeduplication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
 | `deduplicationScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:deduplication-scope` |
 | `delaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:delay-seconds` |
 | `fifoQueue` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fifo-queue` |
@@ -125,7 +125,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `receiveMessageWaitTimeSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:receive-message-wait-time-seconds` |
 | `redriveAllowPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-allow-policy` |
 | `redrivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-policy` |
-| `sqsManagedSseEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs-managed-sse-enabled` |
+| `sqsManagedSseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sqs-managed-sse-enabled` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `visibilityTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
 "
@@ -309,7 +309,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
+| `contentBasedDeduplication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
 | `deduplicationScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:deduplication-scope` |
 | `delaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:delay-seconds` |
 | `fifoQueue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fifo-queue` |

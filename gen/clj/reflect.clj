@@ -1,7 +1,8 @@
 (ns reflect
   "Reflects on classes in a way that works this project."
   (:refer-clojure :exclude [methods])
-  (:require [util :refer [constant-keyword
+  (:require [util :refer [class-symbol
+                          constant-keyword
                           deep-conj]]
             [clojure.string :as str])
   (:import [java.lang.reflect Constructor
@@ -11,6 +12,9 @@
             ParameterizedType
             TypeVariable
             WildcardType]))
+
+
+(def name-converter class-symbol)
 
 
 (defprotocol TypeConverter
@@ -26,12 +30,7 @@
 
 (extend java.lang.Class
   TypeConverter
-  {:as-data identity})
-
-
-(extend java.lang.Class
-  TypeConverter
-  {:as-data identity})
+  {:as-data name-converter})
 
 
 (extend ParameterizedType
@@ -39,13 +38,15 @@
   {:as-data (fn [^ParameterizedType t]
               (comment {:type (.getRawType t)
                         :of (map-as-data (.getActualTypeArguments t))})
-              (.getRawType t))})
+              (as-data (.getRawType t)))})
+
 
 (extend GenericArrayType
   TypeConverter
   {:as-data (fn [^GenericArrayType t]
               {:type :array
-               :of ((.getGenericComponentType t))})})
+               :of (as-data (.getGenericComponentType t))})})
+
 
 (extend TypeVariable
   TypeConverter
@@ -55,6 +56,7 @@
                :actual (.getBounds t)
                :owner (.getGenericDeclaration t)
                :raw (.getAnnotatedBounds t)})})
+
 
 (extend WildcardType
   TypeConverter
@@ -89,7 +91,8 @@
 (defn constructor
   "Converts a constructor to the data structure we need."
   [^Constructor c]
-  {:flags (modifiers (.getModifiers c))})
+  {:flags (modifiers (.getModifiers c))
+   :parameter-types (map-as-data (.getGenericParameterTypes c))})
 
 
 (defn constructor-reducer
@@ -112,7 +115,7 @@
 (defn method
   "Converts a java reflect method to our useable data structure."
   [^Method m]
-  {:name (.getName m)
+  {:name (symbol (.getName m))
    :flags (modifiers (.getModifiers m))
    :parameter-types (map-as-data (.getGenericParameterTypes m))})
 
@@ -131,7 +134,7 @@
 
       ; Add Creates
       (and (static? modifiers) (= "create" method-name))
-      (deep-conj c :methods (method m))
+      (deep-conj c :creates (method m))
       :else
       (deep-conj c :methods (method m)))))
 

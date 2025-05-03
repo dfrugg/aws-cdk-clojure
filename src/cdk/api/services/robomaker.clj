@@ -95,8 +95,8 @@
 | `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `robotSoftwareSuite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
-| `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
+| `robotSoftwareSuite` | software.amazon.awscdk.services.robomaker.CfnRobotApplication$RobotSoftwareSuiteProperty | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
+| `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRobotApplication$Builder builder id config]
@@ -388,9 +388,9 @@
 | `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `renderingEngine` | software.amazon.awscdk.services.robomaker.CfnSimulationApplication$RenderingEngineProperty | [[cdk.support/lookup-entry]] | `:rendering-engine` |
-| `robotSoftwareSuite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
-| `simulationSoftwareSuite` | software.amazon.awscdk.services.robomaker.CfnSimulationApplication$SimulationSoftwareSuiteProperty | [[cdk.support/lookup-entry]] | `:simulation-software-suite` |
+| `renderingEngine` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-engine` |
+| `robotSoftwareSuite` | software.amazon.awscdk.services.robomaker.CfnSimulationApplication$RobotSoftwareSuiteProperty | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
+| `simulationSoftwareSuite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:simulation-software-suite` |
 | `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -437,10 +437,10 @@
 | `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
 | `environment` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `renderingEngine` | software.amazon.awscdk.services.robomaker.CfnSimulationApplication$RenderingEngineProperty | [[cdk.support/lookup-entry]] | `:rendering-engine` |
+| `renderingEngine` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-engine` |
 | `robotSoftwareSuite` | software.amazon.awscdk.services.robomaker.CfnSimulationApplication$RobotSoftwareSuiteProperty | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
 | `simulationSoftwareSuite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:simulation-software-suite` |
-| `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
+| `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSimulationApplicationProps$Builder builder id config]

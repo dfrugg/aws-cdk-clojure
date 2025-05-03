@@ -73,8 +73,8 @@
 | `maxWorkerCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-worker-count` |
 | `mcuCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:mcu-count` |
 | `minWorkerCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-worker-count` |
-| `scaleInPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scale-in-policy` |
-| `scaleOutPolicy` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$ScaleOutPolicyProperty | [[cdk.support/lookup-entry]] | `:scale-out-policy` |
+| `scaleInPolicy` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$ScaleInPolicyProperty | [[cdk.support/lookup-entry]] | `:scale-in-policy` |
+| `scaleOutPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scale-out-policy` |
 "
   [^CfnConnector$AutoScalingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :max-worker-count)]
@@ -110,19 +110,19 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacity` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$CapacityProperty | [[cdk.support/lookup-entry]] | `:capacity` |
-| `connectorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-configuration` |
+| `capacity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity` |
+| `connectorConfiguration` | java.util.Map | [[cdk.support/lookup-entry]] | `:connector-configuration` |
 | `connectorDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-description` |
 | `connectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-name` |
-| `kafkaCluster` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$KafkaClusterProperty | [[cdk.support/lookup-entry]] | `:kafka-cluster` |
+| `kafkaCluster` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka-cluster` |
 | `kafkaClusterClientAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka-cluster-client-authentication` |
-| `kafkaClusterEncryptionInTransit` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$KafkaClusterEncryptionInTransitProperty | [[cdk.support/lookup-entry]] | `:kafka-cluster-encryption-in-transit` |
+| `kafkaClusterEncryptionInTransit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka-cluster-encryption-in-transit` |
 | `kafkaConnectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:kafka-connect-version` |
 | `logDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-delivery` |
-| `plugins` | java.util.List | [[cdk.support/lookup-entry]] | `:plugins` |
+| `plugins` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:plugins` |
 | `serviceExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-execution-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `workerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:worker-configuration` |
+| `workerConfiguration` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |
 "
   [^CfnConnector$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity)]
@@ -174,7 +174,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoScaling` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$AutoScalingProperty | [[cdk.support/lookup-entry]] | `:auto-scaling` |
+| `autoScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-scaling` |
 | `provisionedCapacity` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$ProvisionedCapacityProperty | [[cdk.support/lookup-entry]] | `:provisioned-capacity` |
 "
   [^CfnConnector$CapacityProperty$Builder builder id config]
@@ -205,7 +205,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |
 "
   [^CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder builder id config]
@@ -382,7 +382,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `workerLogDelivery` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$WorkerLogDeliveryProperty | [[cdk.support/lookup-entry]] | `:worker-log-delivery` |
+| `workerLogDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:worker-log-delivery` |
 "
   [^CfnConnector$LogDeliveryProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :worker-log-delivery)]
@@ -438,19 +438,19 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity` |
+| `capacity` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$CapacityProperty | [[cdk.support/lookup-entry]] | `:capacity` |
 | `connectorConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-configuration` |
 | `connectorDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-description` |
 | `connectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-name` |
 | `kafkaCluster` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka-cluster` |
-| `kafkaClusterClientAuthentication` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka-cluster-client-authentication` |
-| `kafkaClusterEncryptionInTransit` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:kafka-cluster-encryption-in-transit` |
+| `kafkaClusterClientAuthentication` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$KafkaClusterClientAuthenticationProperty | [[cdk.support/lookup-entry]] | `:kafka-cluster-client-authentication` |
+| `kafkaClusterEncryptionInTransit` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$KafkaClusterEncryptionInTransitProperty | [[cdk.support/lookup-entry]] | `:kafka-cluster-encryption-in-transit` |
 | `kafkaConnectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:kafka-connect-version` |
-| `logDelivery` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$LogDeliveryProperty | [[cdk.support/lookup-entry]] | `:log-delivery` |
+| `logDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-delivery` |
 | `plugins` | java.util.List | [[cdk.support/lookup-entry]] | `:plugins` |
 | `serviceExecutionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-execution-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `workerConfiguration` | software.amazon.awscdk.services.kafkaconnect.CfnConnector$WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |
+| `workerConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:worker-configuration` |
 "
   [^CfnConnectorProps$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity)]
@@ -534,7 +534,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnConnector$S3LogDeliveryProperty$Builder builder id config]
@@ -790,7 +790,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Location` | software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin$S3LocationProperty | [[cdk.support/lookup-entry]] | `:s3-location` |
+| `s3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^CfnCustomPlugin$CustomPluginLocationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-location)]
@@ -820,7 +820,7 @@
 |---|---|---|---|
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
+| `location` | software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin$CustomPluginLocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "

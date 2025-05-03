@@ -18,7 +18,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoEnableMembers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-enable-members` |
+| `autoEnableMembers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:auto-enable-members` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGraph$Builder builder id config]
@@ -120,7 +120,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `disableEmailNotification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
+| `disableEmailNotification` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-email-notification` |
 | `graphArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:graph-arn` |
 | `memberEmailAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:member-email-address` |
 | `memberId` | java.lang.String | [[cdk.support/lookup-entry]] | `:member-id` |

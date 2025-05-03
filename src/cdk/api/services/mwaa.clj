@@ -30,7 +30,7 @@
 | `minWebservers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-webservers` |
 | `minWorkers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-workers` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `networkConfiguration` | software.amazon.awscdk.services.mwaa.CfnEnvironment$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `pluginsS3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:plugins-s3-object-version` |
 | `pluginsS3Path` | java.lang.String | [[cdk.support/lookup-entry]] | `:plugins-s3-path` |
 | `requirementsS3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:requirements-s3-object-version` |
@@ -117,11 +117,11 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dagProcessingLogs` | software.amazon.awscdk.services.mwaa.CfnEnvironment$ModuleLoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:dag-processing-logs` |
+| `dagProcessingLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dag-processing-logs` |
 | `schedulerLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduler-logs` |
-| `taskLogs` | software.amazon.awscdk.services.mwaa.CfnEnvironment$ModuleLoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:task-logs` |
+| `taskLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-logs` |
 | `webserverLogs` | software.amazon.awscdk.services.mwaa.CfnEnvironment$ModuleLoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:webserver-logs` |
-| `workerLogs` | software.amazon.awscdk.services.mwaa.CfnEnvironment$ModuleLoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-logs` |
+| `workerLogs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:worker-logs` |
 "
   [^CfnEnvironment$LoggingConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :dag-processing-logs)]
@@ -229,13 +229,13 @@
 | `environmentClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-class` |
 | `executionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-arn` |
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
-| `loggingConfiguration` | software.amazon.awscdk.services.mwaa.CfnEnvironment$LoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:logging-configuration` |
+| `loggingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-configuration` |
 | `maxWebservers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-webservers` |
 | `maxWorkers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-workers` |
 | `minWebservers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-webservers` |
 | `minWorkers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-workers` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `networkConfiguration` | software.amazon.awscdk.services.mwaa.CfnEnvironment$NetworkConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-configuration` |
+| `networkConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-configuration` |
 | `pluginsS3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:plugins-s3-object-version` |
 | `pluginsS3Path` | java.lang.String | [[cdk.support/lookup-entry]] | `:plugins-s3-path` |
 | `requirementsS3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:requirements-s3-object-version` |

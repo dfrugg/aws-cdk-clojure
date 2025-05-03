@@ -376,28 +376,28 @@ __Create Form:__ ___[java.lang.String software.constructs.Construct]___
 | `config` | map | Data configuration |
 
 
-__Create Form:__ ___[java.lang.String]___
-
-| Argument | DataType | Description |
-|---|---|---|
-| `resource` | java.lang.String |  |
-| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| `config` | map | Data configuration |
-
-
 __Create Form:__ ___[]___
 
 | Argument | DataType | Description |
 |---|---|---|
 
 | `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |
+
+
+__Create Form:__ ___[java.lang.String]___
+
+| Argument | DataType | Description |
+|---|---|---|
+| `resource` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | `config` | map | Data configuration |"
   ([^String resource ^Construct construct id config]
    (backup-resource-builder> (BackupResource$Builder/create resource construct) id config))
-  ([^String resource id config]
-   (backup-resource-builder> (BackupResource$Builder/create resource) id config))
   ([id config]
-   (backup-resource-builder> (BackupResource$Builder/create) id config)))
+   (backup-resource-builder> (BackupResource$Builder/create) id config))
+  ([^String resource id config]
+   (backup-resource-builder> (BackupResource$Builder/create resource) id config)))
 
 
 (defn backup-selection-builder>
@@ -664,7 +664,7 @@ __Create Form:__ ___[]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `advancedBackupSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:advanced-backup-settings` |
+| `advancedBackupSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-backup-settings` |
 | `backupPlanName` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-plan-name` |
 | `backupPlanRule` | java.util.List | [[cdk.support/lookup-entry]] | `:backup-plan-rule` |
 "
@@ -700,9 +700,9 @@ __Create Form:__ ___[]___
 |---|---|---|---|
 | `completionWindowMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:completion-window-minutes` |
 | `copyActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:copy-actions` |
-| `enableContinuousBackup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-continuous-backup` |
-| `lifecycle` | software.amazon.awscdk.services.backup.CfnBackupPlan$LifecycleResourceTypeProperty | [[cdk.support/lookup-entry]] | `:lifecycle` |
-| `recoveryPointTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recovery-point-tags` |
+| `enableContinuousBackup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-continuous-backup` |
+| `lifecycle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle` |
+| `recoveryPointTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:recovery-point-tags` |
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 | `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
 | `scheduleExpressionTimezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression-timezone` |
@@ -753,7 +753,7 @@ __Create Form:__ ___[]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `backupPlan` | software.amazon.awscdk.services.backup.CfnBackupPlan$BackupPlanResourceTypeProperty | [[cdk.support/lookup-entry]] | `:backup-plan` |
+| `backupPlan` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backup-plan` |
 | `backupPlanTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:backup-plan-tags` |
 "
   [^CfnBackupPlan$Builder builder id config]
@@ -817,7 +817,7 @@ __Create Form:__ ___[]___
 |---|---|---|---|
 | `deleteAfterDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:delete-after-days` |
 | `moveToColdStorageAfterDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:move-to-cold-storage-after-days` |
-| `optInToArchiveForSupportedResources` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:opt-in-to-archive-for-supported-resources` |
+| `optInToArchiveForSupportedResources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:opt-in-to-archive-for-supported-resources` |
 "
   [^CfnBackupPlan$LifecycleResourceTypeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :delete-after-days)]
@@ -924,7 +924,7 @@ __Create Form:__ ___[]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backupPlanId` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-plan-id` |
-| `backupSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backup-selection` |
+| `backupSelection` | software.amazon.awscdk.services.backup.CfnBackupSelection$BackupSelectionResourceTypeProperty | [[cdk.support/lookup-entry]] | `:backup-selection` |
 "
   [^CfnBackupSelection$Builder builder id config]
   (when-some [data (lookup-entry config id :backup-plan-id)]
@@ -1091,7 +1091,7 @@ __Create Form:__ ___[]___
 | `backupVaultName` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-vault-name` |
 | `backupVaultTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:backup-vault-tags` |
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
-| `lockConfiguration` | software.amazon.awscdk.services.backup.CfnBackupVault$LockConfigurationTypeProperty | [[cdk.support/lookup-entry]] | `:lock-configuration` |
+| `lockConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lock-configuration` |
 | `notifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notifications` |
 "
   [^CfnBackupVault$Builder builder id config]
@@ -1200,7 +1200,7 @@ __Create Form:__ ___[]___
 | `backupVaultTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:backup-vault-tags` |
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 | `lockConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lock-configuration` |
-| `notifications` | software.amazon.awscdk.services.backup.CfnBackupVault$NotificationObjectTypeProperty | [[cdk.support/lookup-entry]] | `:notifications` |
+| `notifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notifications` |
 "
   [^CfnBackupVaultProps$Builder builder id config]
   (when-some [data (lookup-entry config id :access-policy)]
@@ -1565,7 +1565,7 @@ __Create Form:__ ___[]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `recoveryPointSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recovery-point-selection` |
+| `recoveryPointSelection` | software.amazon.awscdk.services.backup.CfnRestoreTestingPlan$RestoreTestingRecoveryPointSelectionProperty | [[cdk.support/lookup-entry]] | `:recovery-point-selection` |
 | `restoreTestingPlanName` | java.lang.String | [[cdk.support/lookup-entry]] | `:restore-testing-plan-name` |
 | `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
 | `scheduleExpressionTimezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression-timezone` |
@@ -1693,9 +1693,9 @@ __Create Form:__ ___[]___
 |---|---|---|---|
 | `iamRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-role-arn` |
 | `protectedResourceArns` | java.util.List | [[cdk.support/lookup-entry]] | `:protected-resource-arns` |
-| `protectedResourceConditions` | software.amazon.awscdk.services.backup.CfnRestoreTestingSelection$ProtectedResourceConditionsProperty | [[cdk.support/lookup-entry]] | `:protected-resource-conditions` |
+| `protectedResourceConditions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:protected-resource-conditions` |
 | `protectedResourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:protected-resource-type` |
-| `restoreMetadataOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restore-metadata-overrides` |
+| `restoreMetadataOverrides` | java.util.Map | [[cdk.support/lookup-entry]] | `:restore-metadata-overrides` |
 | `restoreTestingPlanName` | java.lang.String | [[cdk.support/lookup-entry]] | `:restore-testing-plan-name` |
 | `restoreTestingSelectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:restore-testing-selection-name` |
 | `validationWindowHours` | java.lang.Number | [[cdk.support/lookup-entry]] | `:validation-window-hours` |

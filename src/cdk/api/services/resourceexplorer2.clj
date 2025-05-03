@@ -139,7 +139,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
+| `filters` | software.amazon.awscdk.services.resourceexplorer2.CfnView$FiltersProperty | [[cdk.support/lookup-entry]] | `:filters` |
 | `includedProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:included-properties` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
@@ -235,8 +235,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filters` |
-| `includedProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:included-properties` |
+| `filters` | software.amazon.awscdk.services.resourceexplorer2.CfnView$FiltersProperty | [[cdk.support/lookup-entry]] | `:filters` |
+| `includedProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:included-properties` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `viewName` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-name` |

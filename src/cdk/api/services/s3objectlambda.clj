@@ -86,7 +86,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `objectLambdaConfiguration` | software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint$ObjectLambdaConfigurationProperty | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
+| `objectLambdaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
 "
   [^CfnAccessPoint$Builder builder id config]
   (when-some [data (lookup-entry config id :name)]
@@ -145,9 +145,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowedFeatures` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-features` |
-| `cloudWatchMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
+| `cloudWatchMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
 | `supportingAccessPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:supporting-access-point` |
-| `transformationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:transformation-configurations` |
+| `transformationConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transformation-configurations` |
 "
   [^CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :allowed-features)]
@@ -302,7 +302,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `blockPublicAcls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-acls` |
+| `blockPublicAcls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:block-public-acls` |
 | `blockPublicPolicy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-policy` |
 | `ignorePublicAcls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ignore-public-acls` |
 | `restrictPublicBuckets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrict-public-buckets` |

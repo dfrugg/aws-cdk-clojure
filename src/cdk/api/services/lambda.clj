@@ -979,7 +979,7 @@ __Create Form:__ ___[java.lang.String]___
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `functionVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `provisionedConcurrencyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
+| `provisionedConcurrencyConfig` | software.amazon.awscdk.services.lambda.CfnAlias$ProvisionedConcurrencyConfigurationProperty | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
 | `routingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-config` |
 "
   [^CfnAlias$Builder builder id config]
@@ -1022,8 +1022,8 @@ __Create Form:__ ___[java.lang.String]___
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `functionVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `provisionedConcurrencyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
-| `routingConfig` | software.amazon.awscdk.services.lambda.CfnAlias$AliasRoutingConfigurationProperty | [[cdk.support/lookup-entry]] | `:routing-config` |
+| `provisionedConcurrencyConfig` | software.amazon.awscdk.services.lambda.CfnAlias$ProvisionedConcurrencyConfigurationProperty | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
+| `routingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-config` |
 "
   [^CfnAliasProps$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -1148,8 +1148,8 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowedPublishers` | software.amazon.awscdk.services.lambda.CfnCodeSigningConfig$AllowedPublishersProperty | [[cdk.support/lookup-entry]] | `:allowed-publishers` |
-| `codeSigningPolicies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code-signing-policies` |
+| `allowedPublishers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowed-publishers` |
+| `codeSigningPolicies` | software.amazon.awscdk.services.lambda.CfnCodeSigningConfig$CodeSigningPoliciesProperty | [[cdk.support/lookup-entry]] | `:code-signing-policies` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnCodeSigningConfig$Builder builder id config]
@@ -1210,7 +1210,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowedPublishers` | software.amazon.awscdk.services.lambda.CfnCodeSigningConfig$AllowedPublishersProperty | [[cdk.support/lookup-entry]] | `:allowed-publishers` |
+| `allowedPublishers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allowed-publishers` |
 | `codeSigningPolicies` | software.amazon.awscdk.services.lambda.CfnCodeSigningConfig$CodeSigningPoliciesProperty | [[cdk.support/lookup-entry]] | `:code-signing-policies` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
@@ -1285,7 +1285,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `onFailure` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-failure` |
-| `onSuccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-success` |
+| `onSuccess` | software.amazon.awscdk.services.lambda.CfnEventInvokeConfig$OnSuccessProperty | [[cdk.support/lookup-entry]] | `:on-success` |
 "
   [^CfnEventInvokeConfig$DestinationConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :on-failure)]
@@ -1371,7 +1371,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `destinationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-config` |
+| `destinationConfig` | software.amazon.awscdk.services.lambda.CfnEventInvokeConfig$DestinationConfigProperty | [[cdk.support/lookup-entry]] | `:destination-config` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `maximumEventAgeInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-event-age-in-seconds` |
 | `maximumRetryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-retry-attempts` |
@@ -1441,10 +1441,10 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `amazonManagedKafkaEventSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-managed-kafka-event-source-config` |
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
-| `bisectBatchOnFunctionError` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bisect-batch-on-function-error` |
-| `destinationConfig` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$DestinationConfigProperty | [[cdk.support/lookup-entry]] | `:destination-config` |
-| `documentDbEventSourceConfig` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$DocumentDBEventSourceConfigProperty | [[cdk.support/lookup-entry]] | `:document-db-event-source-config` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `bisectBatchOnFunctionError` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:bisect-batch-on-function-error` |
+| `destinationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-config` |
+| `documentDbEventSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-db-event-source-config` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `eventSourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-source-arn` |
 | `filterCriteria` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-criteria` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
@@ -1455,9 +1455,9 @@ __Create Form:__ ___[java.lang.String]___
 | `parallelizationFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:parallelization-factor` |
 | `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
 | `scalingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scaling-config` |
-| `selfManagedEventSource` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$SelfManagedEventSourceProperty | [[cdk.support/lookup-entry]] | `:self-managed-event-source` |
+| `selfManagedEventSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-event-source` |
 | `selfManagedKafkaEventSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-kafka-event-source-config` |
-| `sourceAccessConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:source-access-configurations` |
+| `sourceAccessConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-access-configurations` |
 | `startingPosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:starting-position` |
 | `startingPositionTimestamp` | java.lang.Number | [[cdk.support/lookup-entry]] | `:starting-position-timestamp` |
 | `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
@@ -1707,11 +1707,11 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `amazonManagedKafkaEventSourceConfig` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$AmazonManagedKafkaEventSourceConfigProperty | [[cdk.support/lookup-entry]] | `:amazon-managed-kafka-event-source-config` |
+| `amazonManagedKafkaEventSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:amazon-managed-kafka-event-source-config` |
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
-| `bisectBatchOnFunctionError` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:bisect-batch-on-function-error` |
+| `bisectBatchOnFunctionError` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:bisect-batch-on-function-error` |
 | `destinationConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-config` |
-| `documentDbEventSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:document-db-event-source-config` |
+| `documentDbEventSourceConfig` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$DocumentDBEventSourceConfigProperty | [[cdk.support/lookup-entry]] | `:document-db-event-source-config` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `eventSourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-source-arn` |
 | `filterCriteria` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter-criteria` |
@@ -1722,9 +1722,9 @@ __Create Form:__ ___[java.lang.String]___
 | `maximumRetryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-retry-attempts` |
 | `parallelizationFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:parallelization-factor` |
 | `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
-| `scalingConfig` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$ScalingConfigProperty | [[cdk.support/lookup-entry]] | `:scaling-config` |
+| `scalingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scaling-config` |
 | `selfManagedEventSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-event-source` |
-| `selfManagedKafkaEventSourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-kafka-event-source-config` |
+| `selfManagedKafkaEventSourceConfig` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$SelfManagedKafkaEventSourceConfigProperty | [[cdk.support/lookup-entry]] | `:self-managed-kafka-event-source-config` |
 | `sourceAccessConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:source-access-configurations` |
 | `startingPosition` | java.lang.String | [[cdk.support/lookup-entry]] | `:starting-position` |
 | `startingPositionTimestamp` | java.lang.Number | [[cdk.support/lookup-entry]] | `:starting-position-timestamp` |
@@ -1829,7 +1829,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `endpoints` | software.amazon.awscdk.services.lambda.CfnEventSourceMapping$EndpointsProperty | [[cdk.support/lookup-entry]] | `:endpoints` |
+| `endpoints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:endpoints` |
 "
   [^CfnEventSourceMapping$SelfManagedEventSourceProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :endpoints)]
@@ -1917,19 +1917,19 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `architectures` | java.util.List | [[cdk.support/lookup-entry]] | `:architectures` |
-| `code` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code` |
+| `code` | software.amazon.awscdk.services.lambda.CfnFunction$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
 | `codeSigningConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:code-signing-config-arn` |
-| `deadLetterConfig` | software.amazon.awscdk.services.lambda.CfnFunction$DeadLetterConfigProperty | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
+| `deadLetterConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `environment` | software.amazon.awscdk.services.lambda.CfnFunction$EnvironmentProperty | [[cdk.support/lookup-entry]] | `:environment` |
 | `ephemeralStorage` | software.amazon.awscdk.services.lambda.CfnFunction$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
 | `fileSystemConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:file-system-configs` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `handler` | java.lang.String | [[cdk.support/lookup-entry]] | `:handler` |
-| `imageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-config` |
+| `imageConfig` | software.amazon.awscdk.services.lambda.CfnFunction$ImageConfigProperty | [[cdk.support/lookup-entry]] | `:image-config` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 | `layers` | java.util.List | [[cdk.support/lookup-entry]] | `:layers` |
-| `loggingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-config` |
+| `loggingConfig` | software.amazon.awscdk.services.lambda.CfnFunction$LoggingConfigProperty | [[cdk.support/lookup-entry]] | `:logging-config` |
 | `memorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-size` |
 | `packageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:package-type` |
 | `reservedConcurrentExecutions` | java.lang.Number | [[cdk.support/lookup-entry]] | `:reserved-concurrent-executions` |
@@ -1939,8 +1939,8 @@ __Create Form:__ ___[java.lang.String]___
 | `snapStart` | software.amazon.awscdk.services.lambda.CfnFunction$SnapStartProperty | [[cdk.support/lookup-entry]] | `:snap-start` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tracingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracing-config` |
-| `vpcConfig` | software.amazon.awscdk.services.lambda.CfnFunction$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `tracingConfig` | software.amazon.awscdk.services.lambda.CfnFunction$TracingConfigProperty | [[cdk.support/lookup-entry]] | `:tracing-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnFunction$Builder builder id config]
   (when-some [data (lookup-entry config id :architectures)]
@@ -2245,17 +2245,17 @@ __Create Form:__ ___[java.lang.String]___
 | `architectures` | java.util.List | [[cdk.support/lookup-entry]] | `:architectures` |
 | `code` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:code` |
 | `codeSigningConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:code-signing-config-arn` |
-| `deadLetterConfig` | software.amazon.awscdk.services.lambda.CfnFunction$DeadLetterConfigProperty | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
+| `deadLetterConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dead-letter-config` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `environment` | software.amazon.awscdk.services.lambda.CfnFunction$EnvironmentProperty | [[cdk.support/lookup-entry]] | `:environment` |
-| `ephemeralStorage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
-| `fileSystemConfigs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file-system-configs` |
+| `environment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment` |
+| `ephemeralStorage` | software.amazon.awscdk.services.lambda.CfnFunction$EphemeralStorageProperty | [[cdk.support/lookup-entry]] | `:ephemeral-storage` |
+| `fileSystemConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:file-system-configs` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `handler` | java.lang.String | [[cdk.support/lookup-entry]] | `:handler` |
-| `imageConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-config` |
+| `imageConfig` | software.amazon.awscdk.services.lambda.CfnFunction$ImageConfigProperty | [[cdk.support/lookup-entry]] | `:image-config` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 | `layers` | java.util.List | [[cdk.support/lookup-entry]] | `:layers` |
-| `loggingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging-config` |
+| `loggingConfig` | software.amazon.awscdk.services.lambda.CfnFunction$LoggingConfigProperty | [[cdk.support/lookup-entry]] | `:logging-config` |
 | `memorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-size` |
 | `packageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:package-type` |
 | `reservedConcurrentExecutions` | java.lang.Number | [[cdk.support/lookup-entry]] | `:reserved-concurrent-executions` |
@@ -2266,7 +2266,7 @@ __Create Form:__ ___[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 | `tracingConfig` | software.amazon.awscdk.services.lambda.CfnFunction$TracingConfigProperty | [[cdk.support/lookup-entry]] | `:tracing-config` |
-| `vpcConfig` | software.amazon.awscdk.services.lambda.CfnFunction$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnFunctionProps$Builder builder id config]
   (when-some [data (lookup-entry config id :architectures)]
@@ -2496,7 +2496,7 @@ __Create Form:__ ___[java.lang.String]___
 |---|---|---|---|
 | `compatibleArchitectures` | java.util.List | [[cdk.support/lookup-entry]] | `:compatible-architectures` |
 | `compatibleRuntimes` | java.util.List | [[cdk.support/lookup-entry]] | `:compatible-runtimes` |
-| `content` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:content` |
+| `content` | software.amazon.awscdk.services.lambda.CfnLayerVersion$ContentProperty | [[cdk.support/lookup-entry]] | `:content` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `layerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:layer-name` |
 | `licenseInfo` | java.lang.String | [[cdk.support/lookup-entry]] | `:license-info` |
@@ -2888,7 +2888,7 @@ __Create Form:__ ___[java.lang.String]___
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-credentials` |
+| `allowCredentials` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-credentials` |
 | `allowHeaders` | java.util.List | [[cdk.support/lookup-entry]] | `:allow-headers` |
 | `allowMethods` | java.util.List | [[cdk.support/lookup-entry]] | `:allow-methods` |
 | `allowOrigins` | java.util.List | [[cdk.support/lookup-entry]] | `:allow-origins` |
@@ -2932,7 +2932,7 @@ __Create Form:__ ___[java.lang.String]___
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authType` | java.lang.String | [[cdk.support/lookup-entry]] | `:auth-type` |
-| `cors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cors` |
+| `cors` | software.amazon.awscdk.services.lambda.CfnUrl$CorsProperty | [[cdk.support/lookup-entry]] | `:cors` |
 | `invokeMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:invoke-mode` |
 | `qualifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:qualifier` |
 | `targetFunctionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-function-arn` |
@@ -2975,7 +2975,7 @@ __Create Form:__ ___[java.lang.String]___
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
-| `provisionedConcurrencyConfig` | software.amazon.awscdk.services.lambda.CfnVersion$ProvisionedConcurrencyConfigurationProperty | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
+| `provisionedConcurrencyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
 | `runtimePolicy` | software.amazon.awscdk.services.lambda.CfnVersion$RuntimePolicyProperty | [[cdk.support/lookup-entry]] | `:runtime-policy` |
 "
   [^CfnVersion$Builder builder id config]
@@ -3018,7 +3018,7 @@ __Create Form:__ ___[java.lang.String]___
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
-| `provisionedConcurrencyConfig` | software.amazon.awscdk.services.lambda.CfnVersion$ProvisionedConcurrencyConfigurationProperty | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
+| `provisionedConcurrencyConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisioned-concurrency-config` |
 | `runtimePolicy` | software.amazon.awscdk.services.lambda.CfnVersion$RuntimePolicyProperty | [[cdk.support/lookup-entry]] | `:runtime-policy` |
 "
   [^CfnVersionProps$Builder builder id config]
@@ -5442,15 +5442,6 @@ __Create Form:__ ___[software.amazon.awscdk.services.ecr.IRepository]___
   "Creates a  `Runtime$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ___[java.lang.String]___
-
-| Argument | DataType | Description |
-|---|---|---|
-| `runtime-name` | java.lang.String |  |
-| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| `config` | map | Data configuration |
-
-
 __Create Form:__ ___[java.lang.String software.amazon.awscdk.services.lambda.RuntimeFamily]___
 
 | Argument | DataType | Description |
@@ -5458,11 +5449,20 @@ __Create Form:__ ___[java.lang.String software.amazon.awscdk.services.lambda.Run
 | `runtime-name` | java.lang.String |  |
 | `runtime-family` | software.amazon.awscdk.services.lambda.RuntimeFamily |  |
 | `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |
+
+
+__Create Form:__ ___[java.lang.String]___
+
+| Argument | DataType | Description |
+|---|---|---|
+| `runtime-name` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | `config` | map | Data configuration |"
-  ([^String runtime-name id config]
-   (runtime-builder> (Runtime$Builder/create runtime-name) id config))
   ([^String runtime-name ^RuntimeFamily runtime-family id config]
-   (runtime-builder> (Runtime$Builder/create runtime-name runtime-family) id config)))
+   (runtime-builder> (Runtime$Builder/create runtime-name runtime-family) id config))
+  ([^String runtime-name id config]
+   (runtime-builder> (Runtime$Builder/create runtime-name) id config)))
 
 
 (defn singleton-function-builder>

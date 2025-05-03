@@ -852,7 +852,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `locations` | java.util.List | [[cdk.support/lookup-entry]] | `:locations` |
+| `locations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:locations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnCidrCollectionProps$Builder builder id config]
@@ -1001,9 +1001,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alarmIdentifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alarm-identifier` |
+| `alarmIdentifier` | software.amazon.awscdk.services.route53.CfnHealthCheck$AlarmIdentifierProperty | [[cdk.support/lookup-entry]] | `:alarm-identifier` |
 | `childHealthChecks` | java.util.List | [[cdk.support/lookup-entry]] | `:child-health-checks` |
-| `enableSni` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-sni` |
+| `enableSni` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-sni` |
 | `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |
 | `fullyQualifiedDomainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:fully-qualified-domain-name` |
 | `healthThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-threshold` |
@@ -1108,8 +1108,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `healthCheckConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-config` |
-| `healthCheckTags` | java.util.List | [[cdk.support/lookup-entry]] | `:health-check-tags` |
+| `healthCheckConfig` | software.amazon.awscdk.services.route53.CfnHealthCheck$HealthCheckConfigProperty | [[cdk.support/lookup-entry]] | `:health-check-config` |
+| `healthCheckTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-tags` |
 "
   [^CfnHealthCheckProps$Builder builder id config]
   (when-some [data (lookup-entry config id :health-check-config)]
@@ -1238,11 +1238,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hostedZoneConfig` | software.amazon.awscdk.services.route53.CfnHostedZone$HostedZoneConfigProperty | [[cdk.support/lookup-entry]] | `:hosted-zone-config` |
+| `hostedZoneConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hosted-zone-config` |
 | `hostedZoneTags` | java.util.List | [[cdk.support/lookup-entry]] | `:hosted-zone-tags` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `queryLoggingConfig` | software.amazon.awscdk.services.route53.CfnHostedZone$QueryLoggingConfigProperty | [[cdk.support/lookup-entry]] | `:query-logging-config` |
-| `vpcs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpcs` |
+| `queryLoggingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-logging-config` |
+| `vpcs` | java.util.List | [[cdk.support/lookup-entry]] | `:vpcs` |
 "
   [^CfnHostedZoneProps$Builder builder id config]
   (when-some [data (lookup-entry config id :hosted-zone-config)]
@@ -1445,8 +1445,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aliasTarget` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alias-target` |
-| `cidrRoutingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cidr-routing-config` |
+| `aliasTarget` | software.amazon.awscdk.services.route53.CfnRecordSet$AliasTargetProperty | [[cdk.support/lookup-entry]] | `:alias-target` |
+| `cidrRoutingConfig` | software.amazon.awscdk.services.route53.CfnRecordSet$CidrRoutingConfigProperty | [[cdk.support/lookup-entry]] | `:cidr-routing-config` |
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 | `failover` | java.lang.String | [[cdk.support/lookup-entry]] | `:failover` |
 | `geoLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geo-location` |
@@ -1691,7 +1691,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 | `hostedZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-name` |
-| `recordSets` | java.util.List | [[cdk.support/lookup-entry]] | `:record-sets` |
+| `recordSets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-sets` |
 "
   [^CfnRecordSetGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :comment)]
@@ -1861,7 +1861,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 | `hostedZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-name` |
-| `recordSets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-sets` |
+| `recordSets` | java.util.List | [[cdk.support/lookup-entry]] | `:record-sets` |
 "
   [^CfnRecordSetGroupProps$Builder builder id config]
   (when-some [data (lookup-entry config id :comment)]
@@ -1895,15 +1895,15 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aliasTarget` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alias-target` |
+| `aliasTarget` | software.amazon.awscdk.services.route53.CfnRecordSetGroup$AliasTargetProperty | [[cdk.support/lookup-entry]] | `:alias-target` |
 | `cidrRoutingConfig` | software.amazon.awscdk.services.route53.CfnRecordSetGroup$CidrRoutingConfigProperty | [[cdk.support/lookup-entry]] | `:cidr-routing-config` |
 | `failover` | java.lang.String | [[cdk.support/lookup-entry]] | `:failover` |
-| `geoLocation` | software.amazon.awscdk.services.route53.CfnRecordSetGroup$GeoLocationProperty | [[cdk.support/lookup-entry]] | `:geo-location` |
+| `geoLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geo-location` |
 | `geoProximityLocation` | software.amazon.awscdk.services.route53.CfnRecordSetGroup$GeoProximityLocationProperty | [[cdk.support/lookup-entry]] | `:geo-proximity-location` |
 | `healthCheckId` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-check-id` |
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 | `hostedZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-name` |
-| `multiValueAnswer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-value-answer` |
+| `multiValueAnswer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-value-answer` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `resourceRecords` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-records` |
@@ -1968,16 +1968,16 @@ function on the data with the provided namespace id and item-key.  The found val
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `aliasTarget` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:alias-target` |
-| `cidrRoutingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cidr-routing-config` |
+| `aliasTarget` | software.amazon.awscdk.services.route53.CfnRecordSet$AliasTargetProperty | [[cdk.support/lookup-entry]] | `:alias-target` |
+| `cidrRoutingConfig` | software.amazon.awscdk.services.route53.CfnRecordSet$CidrRoutingConfigProperty | [[cdk.support/lookup-entry]] | `:cidr-routing-config` |
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 | `failover` | java.lang.String | [[cdk.support/lookup-entry]] | `:failover` |
-| `geoLocation` | software.amazon.awscdk.services.route53.CfnRecordSet$GeoLocationProperty | [[cdk.support/lookup-entry]] | `:geo-location` |
+| `geoLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geo-location` |
 | `geoProximityLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:geo-proximity-location` |
 | `healthCheckId` | java.lang.String | [[cdk.support/lookup-entry]] | `:health-check-id` |
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 | `hostedZoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-name` |
-| `multiValueAnswer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:multi-value-answer` |
+| `multiValueAnswer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-value-answer` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `resourceRecords` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-records` |

@@ -59,7 +59,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
+| `attributes` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes` |
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 "
   [^CfnCalculatedAttributeDefinition$AttributeDetailsProperty$Builder builder id config]
@@ -118,7 +118,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attributeDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-details` |
+| `attributeDetails` | software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition$AttributeDetailsProperty | [[cdk.support/lookup-entry]] | `:attribute-details` |
 | `calculatedAttributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:calculated-attribute-name` |
 | `conditions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditions` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
@@ -168,8 +168,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `objectCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:object-count` |
-| `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
-| `threshold` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:threshold` |
+| `range` | software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition$RangeProperty | [[cdk.support/lookup-entry]] | `:range` |
+| `threshold` | software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition$ThresholdProperty | [[cdk.support/lookup-entry]] | `:threshold` |
 "
   [^CfnCalculatedAttributeDefinition$ConditionsProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :object-count)]
@@ -349,8 +349,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `conflictResolution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conflict-resolution` |
-| `consolidation` | software.amazon.awscdk.services.customerprofiles.CfnDomain$ConsolidationProperty | [[cdk.support/lookup-entry]] | `:consolidation` |
+| `conflictResolution` | software.amazon.awscdk.services.customerprofiles.CfnDomain$ConflictResolutionProperty | [[cdk.support/lookup-entry]] | `:conflict-resolution` |
+| `consolidation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:consolidation` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `minAllowedConfidenceScoreForMerging` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-allowed-confidence-score-for-merging` |
 "
@@ -390,8 +390,8 @@
 | `defaultEncryptionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-encryption-key` |
 | `defaultExpirationDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-expiration-days` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `matching` | software.amazon.awscdk.services.customerprofiles.CfnDomain$MatchingProperty | [[cdk.support/lookup-entry]] | `:matching` |
-| `ruleBasedMatching` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-based-matching` |
+| `matching` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:matching` |
+| `ruleBasedMatching` | software.amazon.awscdk.services.customerprofiles.CfnDomain$RuleBasedMatchingProperty | [[cdk.support/lookup-entry]] | `:rule-based-matching` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDomain$Builder builder id config]
@@ -463,7 +463,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `matchingAttributesList` | java.util.List | [[cdk.support/lookup-entry]] | `:matching-attributes-list` |
+| `matchingAttributesList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:matching-attributes-list` |
 "
   [^CfnDomain$ConsolidationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :matching-attributes-list)]
@@ -528,7 +528,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Exporting` | software.amazon.awscdk.services.customerprofiles.CfnDomain$S3ExportingConfigProperty | [[cdk.support/lookup-entry]] | `:s3-exporting` |
+| `s3Exporting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-exporting` |
 "
   [^CfnDomain$ExportingConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :s3-exporting)]
@@ -588,9 +588,9 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoMerging` | software.amazon.awscdk.services.customerprofiles.CfnDomain$AutoMergingProperty | [[cdk.support/lookup-entry]] | `:auto-merging` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `exportingConfig` | software.amazon.awscdk.services.customerprofiles.CfnDomain$ExportingConfigProperty | [[cdk.support/lookup-entry]] | `:exporting-config` |
-| `jobSchedule` | software.amazon.awscdk.services.customerprofiles.CfnDomain$JobScheduleProperty | [[cdk.support/lookup-entry]] | `:job-schedule` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `exportingConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exporting-config` |
+| `jobSchedule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:job-schedule` |
 "
   [^CfnDomain$MatchingProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :auto-merging)]
@@ -656,7 +656,7 @@
 | `defaultEncryptionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-encryption-key` |
 | `defaultExpirationDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-expiration-days` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `matching` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:matching` |
+| `matching` | software.amazon.awscdk.services.customerprofiles.CfnDomain$MatchingProperty | [[cdk.support/lookup-entry]] | `:matching` |
 | `ruleBasedMatching` | software.amazon.awscdk.services.customerprofiles.CfnDomain$RuleBasedMatchingProperty | [[cdk.support/lookup-entry]] | `:rule-based-matching` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -699,8 +699,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeTypesSelector` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attribute-types-selector` |
-| `conflictResolution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conflict-resolution` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `conflictResolution` | software.amazon.awscdk.services.customerprofiles.CfnDomain$ConflictResolutionProperty | [[cdk.support/lookup-entry]] | `:conflict-resolution` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `exportingConfig` | software.amazon.awscdk.services.customerprofiles.CfnDomain$ExportingConfigProperty | [[cdk.support/lookup-entry]] | `:exporting-config` |
 | `matchingRules` | java.util.List | [[cdk.support/lookup-entry]] | `:matching-rules` |
 | `maxAllowedRuleLevelForMatching` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-allowed-rule-level-for-matching` |
@@ -969,8 +969,8 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `flowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-name` |
 | `kmsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-arn` |
-| `sourceFlowConfig` | software.amazon.awscdk.services.customerprofiles.CfnIntegration$SourceFlowConfigProperty | [[cdk.support/lookup-entry]] | `:source-flow-config` |
-| `tasks` | java.util.List | [[cdk.support/lookup-entry]] | `:tasks` |
+| `sourceFlowConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-flow-config` |
+| `tasks` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tasks` |
 | `triggerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trigger-config` |
 "
   [^CfnIntegration$FlowDefinitionProperty$Builder builder id config]
@@ -1099,7 +1099,7 @@
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `flowDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:flow-definition` |
 | `objectTypeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-type-name` |
-| `objectTypeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:object-type-names` |
+| `objectTypeNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-type-names` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
 "
@@ -1170,7 +1170,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enableDynamicFieldUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-dynamic-field-update` |
+| `enableDynamicFieldUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-dynamic-field-update` |
 | `includeDeletedRecords` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:include-deleted-records` |
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
@@ -1282,7 +1282,7 @@
 | `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
 | `salesforce` | software.amazon.awscdk.services.customerprofiles.CfnIntegration$SalesforceSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:salesforce` |
 | `serviceNow` | software.amazon.awscdk.services.customerprofiles.CfnIntegration$ServiceNowSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:service-now` |
-| `zendesk` | software.amazon.awscdk.services.customerprofiles.CfnIntegration$ZendeskSourcePropertiesProperty | [[cdk.support/lookup-entry]] | `:zendesk` |
+| `zendesk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnIntegration$SourceConnectorPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :marketo)]
@@ -1320,8 +1320,8 @@
 |---|---|---|---|
 | `connectorProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-profile-name` |
 | `connectorType` | java.lang.String | [[cdk.support/lookup-entry]] | `:connector-type` |
-| `incrementalPullConfig` | software.amazon.awscdk.services.customerprofiles.CfnIntegration$IncrementalPullConfigProperty | [[cdk.support/lookup-entry]] | `:incremental-pull-config` |
-| `sourceConnectorProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-connector-properties` |
+| `incrementalPullConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:incremental-pull-config` |
+| `sourceConnectorProperties` | software.amazon.awscdk.services.customerprofiles.CfnIntegration$SourceConnectorPropertiesProperty | [[cdk.support/lookup-entry]] | `:source-connector-properties` |
 "
   [^CfnIntegration$SourceFlowConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :connector-profile-name)]
@@ -1457,7 +1457,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `scheduled` | software.amazon.awscdk.services.customerprofiles.CfnIntegration$ScheduledTriggerPropertiesProperty | [[cdk.support/lookup-entry]] | `:scheduled` |
+| `scheduled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduled` |
 "
   [^CfnIntegration$TriggerPropertiesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :scheduled)]
@@ -1513,13 +1513,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allowProfileCreation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-profile-creation` |
+| `allowProfileCreation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-profile-creation` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `encryptionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key` |
 | `expirationDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:expiration-days` |
-| `fields` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fields` |
-| `keys` | java.util.List | [[cdk.support/lookup-entry]] | `:keys` |
+| `fields` | java.util.List | [[cdk.support/lookup-entry]] | `:fields` |
+| `keys` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:keys` |
 | `objectTypeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-type-name` |
 | `sourceLastUpdatedTimestampFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-last-updated-timestamp-format` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

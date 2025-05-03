@@ -69,7 +69,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `capacityAssignments` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-assignments` |
+| `capacityAssignments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:capacity-assignments` |
 "
   [^CfnCapacityReservation$CapacityAssignmentConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :capacity-assignments)]
@@ -204,7 +204,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
@@ -426,11 +426,11 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `recursiveDeleteOption` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:recursive-delete-option` |
+| `recursiveDeleteOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recursive-delete-option` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `workGroupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:work-group-configuration` |
-| `workGroupConfigurationUpdates` | software.amazon.awscdk.services.athena.CfnWorkGroup$WorkGroupConfigurationUpdatesProperty | [[cdk.support/lookup-entry]] | `:work-group-configuration-updates` |
+| `workGroupConfiguration` | software.amazon.awscdk.services.athena.CfnWorkGroup$WorkGroupConfigurationProperty | [[cdk.support/lookup-entry]] | `:work-group-configuration` |
+| `workGroupConfigurationUpdates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:work-group-configuration-updates` |
 "
   [^CfnWorkGroup$Builder builder id config]
   (when-some [data (lookup-entry config id :description)]
@@ -562,7 +562,7 @@
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `recursiveDeleteOption` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:recursive-delete-option` |
+| `recursiveDeleteOption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recursive-delete-option` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `workGroupConfiguration` | software.amazon.awscdk.services.athena.CfnWorkGroup$WorkGroupConfigurationProperty | [[cdk.support/lookup-entry]] | `:work-group-configuration` |
@@ -607,7 +607,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aclConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:acl-configuration` |
-| `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
+| `encryptionConfiguration` | software.amazon.awscdk.services.athena.CfnWorkGroup$EncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `expectedBucketOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:expected-bucket-owner` |
 | `outputLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-location` |
 "
@@ -644,13 +644,13 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aclConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:acl-configuration` |
-| `encryptionConfiguration` | software.amazon.awscdk.services.athena.CfnWorkGroup$EncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
+| `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `expectedBucketOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:expected-bucket-owner` |
 | `outputLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-location` |
-| `removeAclConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-acl-configuration` |
+| `removeAclConfiguration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-acl-configuration` |
 | `removeEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-encryption-configuration` |
 | `removeExpectedBucketOwner` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-expected-bucket-owner` |
-| `removeOutputLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-output-location` |
+| `removeOutputLocation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-output-location` |
 "
   [^CfnWorkGroup$ResultConfigurationUpdatesProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :acl-configuration)]
@@ -694,13 +694,13 @@
 |---|---|---|---|
 | `additionalConfiguration` | java.lang.String | [[cdk.support/lookup-entry]] | `:additional-configuration` |
 | `bytesScannedCutoffPerQuery` | java.lang.Number | [[cdk.support/lookup-entry]] | `:bytes-scanned-cutoff-per-query` |
-| `customerContentEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-content-encryption-configuration` |
+| `customerContentEncryptionConfiguration` | software.amazon.awscdk.services.athena.CfnWorkGroup$CustomerContentEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:customer-content-encryption-configuration` |
 | `enforceWorkGroupConfiguration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-work-group-configuration` |
-| `engineVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:engine-version` |
+| `engineVersion` | software.amazon.awscdk.services.athena.CfnWorkGroup$EngineVersionProperty | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
-| `publishCloudWatchMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publish-cloud-watch-metrics-enabled` |
-| `requesterPaysEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:requester-pays-enabled` |
-| `resultConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:result-configuration` |
+| `publishCloudWatchMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publish-cloud-watch-metrics-enabled` |
+| `requesterPaysEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:requester-pays-enabled` |
+| `resultConfiguration` | software.amazon.awscdk.services.athena.CfnWorkGroup$ResultConfigurationProperty | [[cdk.support/lookup-entry]] | `:result-configuration` |
 "
   [^CfnWorkGroup$WorkGroupConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :additional-configuration)]
@@ -748,7 +748,7 @@
 | `bytesScannedCutoffPerQuery` | java.lang.Number | [[cdk.support/lookup-entry]] | `:bytes-scanned-cutoff-per-query` |
 | `customerContentEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-content-encryption-configuration` |
 | `enforceWorkGroupConfiguration` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-work-group-configuration` |
-| `engineVersion` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:engine-version` |
+| `engineVersion` | software.amazon.awscdk.services.athena.CfnWorkGroup$EngineVersionProperty | [[cdk.support/lookup-entry]] | `:engine-version` |
 | `executionRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `publishCloudWatchMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:publish-cloud-watch-metrics-enabled` |
 | `removeBytesScannedCutoffPerQuery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-bytes-scanned-cutoff-per-query` |

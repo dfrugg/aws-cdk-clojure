@@ -21,7 +21,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-id` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDevice$Builder builder id config]
   (when-some [data (lookup-entry config id :device-id)]
@@ -52,7 +52,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-id` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDeviceProps$Builder builder id config]
   (when-some [data (lookup-entry config id :device-id)]
@@ -253,7 +253,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `placementTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:placement-template` |
+| `placementTemplate` | software.amazon.awscdk.services.iot1click.CfnProject$PlacementTemplateProperty | [[cdk.support/lookup-entry]] | `:placement-template` |
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnProjectProps$Builder builder id config]

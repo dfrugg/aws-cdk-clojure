@@ -48,8 +48,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awaitAnswerMachinePrompt` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:await-answer-machine-prompt` |
-| `enableAnswerMachineDetection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-answer-machine-detection` |
+| `awaitAnswerMachinePrompt` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:await-answer-machine-prompt` |
+| `enableAnswerMachineDetection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-answer-machine-detection` |
 "
   [^CfnCampaign$AnswerMachineDetectionConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :await-answer-machine-prompt)]
@@ -119,9 +119,9 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `agentlessDialerConfig` | software.amazon.awscdk.services.connectcampaigns.CfnCampaign$AgentlessDialerConfigProperty | [[cdk.support/lookup-entry]] | `:agentless-dialer-config` |
-| `predictiveDialerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predictive-dialer-config` |
-| `progressiveDialerConfig` | software.amazon.awscdk.services.connectcampaigns.CfnCampaign$ProgressiveDialerConfigProperty | [[cdk.support/lookup-entry]] | `:progressive-dialer-config` |
+| `agentlessDialerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:agentless-dialer-config` |
+| `predictiveDialerConfig` | software.amazon.awscdk.services.connectcampaigns.CfnCampaign$PredictiveDialerConfigProperty | [[cdk.support/lookup-entry]] | `:predictive-dialer-config` |
+| `progressiveDialerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:progressive-dialer-config` |
 "
   [^CfnCampaign$DialerConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :agentless-dialer-config)]
@@ -153,7 +153,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `answerMachineDetectionConfig` | software.amazon.awscdk.services.connectcampaigns.CfnCampaign$AnswerMachineDetectionConfigProperty | [[cdk.support/lookup-entry]] | `:answer-machine-detection-config` |
+| `answerMachineDetectionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:answer-machine-detection-config` |
 | `connectContactFlowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connect-contact-flow-arn` |
 | `connectQueueArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connect-queue-arn` |
 | `connectSourcePhoneNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:connect-source-phone-number` |
@@ -253,7 +253,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectInstanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connect-instance-arn` |
-| `dialerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dialer-config` |
+| `dialerConfig` | software.amazon.awscdk.services.connectcampaigns.CfnCampaign$DialerConfigProperty | [[cdk.support/lookup-entry]] | `:dialer-config` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outboundCallConfig` | software.amazon.awscdk.services.connectcampaigns.CfnCampaign$OutboundCallConfigProperty | [[cdk.support/lookup-entry]] | `:outbound-call-config` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

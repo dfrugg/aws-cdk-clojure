@@ -24,7 +24,7 @@
 | `applicationInstanceIdToReplace` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-instance-id-to-replace` |
 | `defaultRuntimeContextDevice` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-runtime-context-device` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `manifestOverridesPayload` | software.amazon.awscdk.services.panorama.CfnApplicationInstance$ManifestOverridesPayloadProperty | [[cdk.support/lookup-entry]] | `:manifest-overrides-payload` |
+| `manifestOverridesPayload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manifest-overrides-payload` |
 | `manifestPayload` | software.amazon.awscdk.services.panorama.CfnApplicationInstance$ManifestPayloadProperty | [[cdk.support/lookup-entry]] | `:manifest-payload` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `runtimeRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime-role-arn` |
@@ -129,7 +129,7 @@
 | `applicationInstanceIdToReplace` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-instance-id-to-replace` |
 | `defaultRuntimeContextDevice` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-runtime-context-device` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `manifestOverridesPayload` | software.amazon.awscdk.services.panorama.CfnApplicationInstance$ManifestOverridesPayloadProperty | [[cdk.support/lookup-entry]] | `:manifest-overrides-payload` |
+| `manifestOverridesPayload` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:manifest-overrides-payload` |
 | `manifestPayload` | software.amazon.awscdk.services.panorama.CfnApplicationInstance$ManifestPayloadProperty | [[cdk.support/lookup-entry]] | `:manifest-payload` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `runtimeRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:runtime-role-arn` |
@@ -210,7 +210,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `packageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:package-name` |
-| `storageLocation` | software.amazon.awscdk.services.panorama.CfnPackage$StorageLocationProperty | [[cdk.support/lookup-entry]] | `:storage-location` |
+| `storageLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:storage-location` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackageProps$Builder builder id config]
@@ -283,7 +283,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `markLatest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mark-latest` |
+| `markLatest` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:mark-latest` |
 | `ownerAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner-account` |
 | `packageId` | java.lang.String | [[cdk.support/lookup-entry]] | `:package-id` |
 | `packageVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:package-version` |

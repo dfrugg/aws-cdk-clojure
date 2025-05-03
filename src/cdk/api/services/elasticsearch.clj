@@ -27,10 +27,10 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `anonymousAuthEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:anonymous-auth-enabled` |
+| `anonymousAuthEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anonymous-auth-enabled` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `internalUserDatabaseEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:internal-user-database-enabled` |
-| `masterUserOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:master-user-options` |
+| `masterUserOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$MasterUserOptionsProperty | [[cdk.support/lookup-entry]] | `:master-user-options` |
 "
   [^CfnDomain$AdvancedSecurityOptionsInputProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :anonymous-auth-enabled)]
@@ -66,20 +66,20 @@
 |---|---|---|---|
 | `accessPolicies` | java.lang.Object | [[cdk.support/lookup-entry]] | `:access-policies` |
 | `advancedOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:advanced-options` |
-| `advancedSecurityOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$AdvancedSecurityOptionsInputProperty | [[cdk.support/lookup-entry]] | `:advanced-security-options` |
+| `advancedSecurityOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-security-options` |
 | `cognitoOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cognito-options` |
 | `domainArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-arn` |
 | `domainEndpointOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$DomainEndpointOptionsProperty | [[cdk.support/lookup-entry]] | `:domain-endpoint-options` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `ebsOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ebs-options` |
-| `elasticsearchClusterConfig` | software.amazon.awscdk.services.elasticsearch.CfnDomain$ElasticsearchClusterConfigProperty | [[cdk.support/lookup-entry]] | `:elasticsearch-cluster-config` |
+| `ebsOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$EBSOptionsProperty | [[cdk.support/lookup-entry]] | `:ebs-options` |
+| `elasticsearchClusterConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:elasticsearch-cluster-config` |
 | `elasticsearchVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:elasticsearch-version` |
-| `encryptionAtRestOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
-| `logPublishingOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
-| `nodeToNodeEncryptionOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$NodeToNodeEncryptionOptionsProperty | [[cdk.support/lookup-entry]] | `:node-to-node-encryption-options` |
-| `snapshotOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-options` |
+| `encryptionAtRestOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$EncryptionAtRestOptionsProperty | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
+| `logPublishingOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
+| `nodeToNodeEncryptionOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-to-node-encryption-options` |
+| `snapshotOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$SnapshotOptionsProperty | [[cdk.support/lookup-entry]] | `:snapshot-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
+| `vpcOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$VPCOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnDomain$Builder builder id config]
   (when-some [data (lookup-entry config id :access-policies)]
@@ -137,7 +137,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `identityPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-pool-id` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
@@ -204,8 +204,8 @@
 |---|---|---|---|
 | `customEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-endpoint` |
 | `customEndpointCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-endpoint-certificate-arn` |
-| `customEndpointEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-endpoint-enabled` |
-| `enforceHttps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enforce-https` |
+| `customEndpointEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:custom-endpoint-enabled` |
+| `enforceHttps` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-https` |
 | `tlsSecurityPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tls-security-policy` |
 "
   [^CfnDomain$DomainEndpointOptionsProperty$Builder builder id config]
@@ -281,15 +281,15 @@
 |---|---|---|---|
 | `coldStorageOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$ColdStorageOptionsProperty | [[cdk.support/lookup-entry]] | `:cold-storage-options` |
 | `dedicatedMasterCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dedicated-master-count` |
-| `dedicatedMasterEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dedicated-master-enabled` |
+| `dedicatedMasterEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dedicated-master-enabled` |
 | `dedicatedMasterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:dedicated-master-type` |
 | `instanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-count` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `warmCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:warm-count` |
-| `warmEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:warm-enabled` |
+| `warmEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:warm-enabled` |
 | `warmType` | java.lang.String | [[cdk.support/lookup-entry]] | `:warm-type` |
 | `zoneAwarenessConfig` | software.amazon.awscdk.services.elasticsearch.CfnDomain$ZoneAwarenessConfigProperty | [[cdk.support/lookup-entry]] | `:zone-awareness-config` |
-| `zoneAwarenessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:zone-awareness-enabled` |
+| `zoneAwarenessEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zone-awareness-enabled` |
 "
   [^CfnDomain$ElasticsearchClusterConfigProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :cold-storage-options)]
@@ -337,7 +337,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
   [^CfnDomain$EncryptionAtRestOptionsProperty$Builder builder id config]
@@ -462,8 +462,8 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessPolicies` | java.lang.Object | [[cdk.support/lookup-entry]] | `:access-policies` |
-| `advancedOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:advanced-options` |
-| `advancedSecurityOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-security-options` |
+| `advancedOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:advanced-options` |
+| `advancedSecurityOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$AdvancedSecurityOptionsInputProperty | [[cdk.support/lookup-entry]] | `:advanced-security-options` |
 | `cognitoOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cognito-options` |
 | `domainArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-arn` |
 | `domainEndpointOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$DomainEndpointOptionsProperty | [[cdk.support/lookup-entry]] | `:domain-endpoint-options` |
@@ -473,10 +473,10 @@
 | `elasticsearchVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:elasticsearch-version` |
 | `encryptionAtRestOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-at-rest-options` |
 | `logPublishingOptions` | java.util.Map | [[cdk.support/lookup-entry]] | `:log-publishing-options` |
-| `nodeToNodeEncryptionOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$NodeToNodeEncryptionOptionsProperty | [[cdk.support/lookup-entry]] | `:node-to-node-encryption-options` |
-| `snapshotOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-options` |
+| `nodeToNodeEncryptionOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-to-node-encryption-options` |
+| `snapshotOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$SnapshotOptionsProperty | [[cdk.support/lookup-entry]] | `:snapshot-options` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
+| `vpcOptions` | software.amazon.awscdk.services.elasticsearch.CfnDomain$VPCOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnDomainProps$Builder builder id config]
   (when-some [data (lookup-entry config id :access-policies)]

@@ -103,7 +103,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `portalOptions` | software.amazon.awscdk.services.sso.CfnApplication$PortalOptionsConfigurationProperty | [[cdk.support/lookup-entry]] | `:portal-options` |
+| `portalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:portal-options` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -180,7 +180,7 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `portalOptions` | software.amazon.awscdk.services.sso.CfnApplication$PortalOptionsConfigurationProperty | [[cdk.support/lookup-entry]] | `:portal-options` |
+| `portalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:portal-options` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -340,7 +340,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
+| `value` | software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :key)]
@@ -398,8 +398,8 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessControlAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
-| `instanceAccessControlAttributeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-access-control-attribute-configuration` |
+| `accessControlAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
+| `instanceAccessControlAttributeConfiguration` | software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty | [[cdk.support/lookup-entry]] | `:instance-access-control-attribute-configuration` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 "
   [^CfnInstanceAccessControlAttributeConfiguration$Builder builder id config]
@@ -432,7 +432,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessControlAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
+| `accessControlAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
 "
   [^CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :access-control-attributes)]
@@ -461,7 +461,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessControlAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:access-control-attributes` |
-| `instanceAccessControlAttributeConfiguration` | software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty | [[cdk.support/lookup-entry]] | `:instance-access-control-attribute-configuration` |
+| `instanceAccessControlAttributeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-access-control-attribute-configuration` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 "
   [^CfnInstanceAccessControlAttributeConfigurationProps$Builder builder id config]
@@ -562,7 +562,7 @@
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `managedPolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policies` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `permissionsBoundary` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
+| `permissionsBoundary` | software.amazon.awscdk.services.sso.CfnPermissionSet$PermissionsBoundaryProperty | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
 | `relayStateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:relay-state-type` |
 | `sessionDuration` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-duration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
@@ -673,13 +673,13 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customerManagedPolicyReferences` | java.util.List | [[cdk.support/lookup-entry]] | `:customer-managed-policy-references` |
+| `customerManagedPolicyReferences` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:customer-managed-policy-references` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `inlinePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:inline-policy` |
 | `instanceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-arn` |
 | `managedPolicies` | java.util.List | [[cdk.support/lookup-entry]] | `:managed-policies` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `permissionsBoundary` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
+| `permissionsBoundary` | software.amazon.awscdk.services.sso.CfnPermissionSet$PermissionsBoundaryProperty | [[cdk.support/lookup-entry]] | `:permissions-boundary` |
 | `relayStateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:relay-state-type` |
 | `sessionDuration` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-duration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |

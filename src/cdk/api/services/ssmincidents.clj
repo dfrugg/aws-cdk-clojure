@@ -64,7 +64,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deletionProtected` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:deletion-protected` |
-| `regions` | java.util.List | [[cdk.support/lookup-entry]] | `:regions` |
+| `regions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:regions` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReplicationSetProps$Builder builder id config]
@@ -125,7 +125,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `regionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:region-configuration` |
+| `regionConfiguration` | software.amazon.awscdk.services.ssmincidents.CfnReplicationSet$RegionConfigurationProperty | [[cdk.support/lookup-entry]] | `:region-configuration` |
 | `regionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:region-name` |
 "
   [^CfnReplicationSet$ReplicationRegionProperty$Builder builder id config]
@@ -189,7 +189,7 @@
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `engagements` | java.util.List | [[cdk.support/lookup-entry]] | `:engagements` |
 | `incidentTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:incident-template` |
-| `integrations` | java.util.List | [[cdk.support/lookup-entry]] | `:integrations` |
+| `integrations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integrations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -323,7 +323,7 @@
 | `dedupeString` | java.lang.String | [[cdk.support/lookup-entry]] | `:dedupe-string` |
 | `impact` | java.lang.Number | [[cdk.support/lookup-entry]] | `:impact` |
 | `incidentTags` | java.util.List | [[cdk.support/lookup-entry]] | `:incident-tags` |
-| `notificationTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-targets` |
+| `notificationTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:notification-targets` |
 | `summary` | java.lang.String | [[cdk.support/lookup-entry]] | `:summary` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 "
@@ -363,7 +363,7 @@
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pagerDutyConfiguration` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$PagerDutyConfigurationProperty | [[cdk.support/lookup-entry]] | `:pager-duty-configuration` |
+| `pagerDutyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pager-duty-configuration` |
 "
   [^CfnResponsePlan$IntegrationProperty$Builder builder id config]
   (when-some [data (lookup-entry config id :pager-duty-configuration)]
@@ -420,7 +420,7 @@
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `pagerDutyIncidentConfiguration` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$PagerDutyIncidentConfigurationProperty | [[cdk.support/lookup-entry]] | `:pager-duty-incident-configuration` |
+| `pagerDutyIncidentConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:pager-duty-incident-configuration` |
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnResponsePlan$PagerDutyConfigurationProperty$Builder builder id config]
@@ -486,7 +486,7 @@
 | `displayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:display-name` |
 | `engagements` | java.util.List | [[cdk.support/lookup-entry]] | `:engagements` |
 | `incidentTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:incident-template` |
-| `integrations` | java.util.List | [[cdk.support/lookup-entry]] | `:integrations` |
+| `integrations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integrations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
@@ -532,8 +532,8 @@
 |---|---|---|---|
 | `documentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-name` |
 | `documentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-version` |
-| `dynamicParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-parameters` |
-| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
+| `dynamicParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:dynamic-parameters` |
+| `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `targetAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-account` |
 "
